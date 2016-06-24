@@ -38,7 +38,7 @@ De plus, chaque carte, indépendamment de son type, possède un coût. Celui d'un t
 
 Dans un nouveau projet nommé Magic, implémentez une hiérarchie de classes permettant de représenter des cartes de différents types.
 
-Chaque classe aura un constructeur permettant de spécifier la/les valeurs de ses attributs. De plus, chaque constructeur devra afficher le type de la carte.
+Chaque classe aura un constructeur permettant de spécifier la/les valeurs de ses attributs.
 
 Le programme doit utiliser la conception orientée objet et ne doit pas comporter de duplication de code.
 
