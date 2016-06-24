@@ -69,10 +69,6 @@ Par exemple la méthode main pourrait ressembler à quelque chose comme cela  :
 
 qui produirait quelque chose comme :
 
-	On change de main
-	Un nouveau terrain.
-	Une nouvelle créature.
-	Un sortilège de plus.
 	Là, j'ai en stock :
 	Un terrain bleu
 	Une créature Golem 4/6
