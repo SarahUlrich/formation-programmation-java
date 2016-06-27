@@ -30,10 +30,166 @@ Ce cours est open source et est disponible en ligne : https://github.com/ltearno
 
 === Programme `HelloWorld`
 
+Créez un projet vide et un fichier `HelloWorld.java` dedans avec le contenu suivant :
+
+[source,language="java"]
+----
+public class HelloWorld
+{
+	public static void main( String[] args ) <1>
+	{
+		System.out.println( "Bonjour tout le monde !" ); <2>
+	}
+}
+----
+<1> Méthode principale du programme.
+<2> Appel qui permet d'afficher "Bonjour tout le monde !" à l'écran.
+
+Compiler ce code avec la commande
+
+`javac HelloWorld.java`
+
+Ceci produit un fichier `HelloWorld.class` contenant le byte-code issue de la compilation du code source.
+
+Exécutez ce programme avec la commande :
+
+`java HelloWorld`
+
+Le programme écrit "Bonjour tout le monde !" sur la console.
+
+=== Variables
+
+Variable:: un emplacement en mémoire avec un _nom_ et un _type_.
+
+==== Déclaration
+
+Ceci déclare une variable nommée `i` de type `int`.
+
+[source,language="java"]
+----
+int i;
+----
+
+==== Affectation
+
+Ici nous affectons la valeur `42` à la variable `i`.
+
+[source,language="java"]
+----
+int i; <1>
+i = 42; <2>
+----
+<1> Déclaration
+<2> Affectation
+
+==== Utilisation
+
+Pour utiliser la valeur contenue dans la variable, il suffit de mentionner son nom :
+
+[source,language="java"]
+----
+int v = i; <1>
+
+System.out.println( "La valeur de v est : " + v ); <2>
+----
+<1> Lecture de `i` pour affecter la variable ``v`
+<2> Lecture de `v` pour construire la chaine qui va s'afficher dans la console.
+
+=== Les types primitifs
+
+Il existe en Java deux familles de type : les types primitifs et les types objet.
+
+Les types primitifs portent des valeurs, en voici la liste : 
+
+- valeur booléenne : `boolean`,
+- valeurs entières : `byte`, `short`, `int`, `long`,
+- valeurs flottantes : `float` et `short`,
+- valeur caractère (unicode, 16 bits) : `char`.
+
+=== Structures de controle
+
 === Ecrire une classe
 
-- un fichier une classe
-- Fully Qualified Name, import
+==== Un fichier, une classe
+
+Une classe java est écrite dans un fichier nommé par le même nom (et même casse) auquel on donne l'extension `.java`.
+
+Ce fichier .java sera situé dans un sous-répertoire du répertoire `src/` du projet, et qui correspondra au chemin jusqu'au _package_ de la classe.
+
+NOTE: Il est néanmoins possible de déclarer plusieurs classes dans un même fichier *.java*. Nous reviendrons sur ces cas plus tard dans le cours.
+
+==== Déclaration d'une classe
+
+Pour créer une classe, on utilise le code suivant :
+
+[source,language="java"]
+----
+[public] class NomDeLaClasse
+{
+	// Corps de la classe (attributs et méthodes)
+}
+----
+
+NOTE: Par convention les noms de classes commencent par une majuscule comme par exemple `NomDeLaClasse`.
+
+==== Fully Qualified Name
+
+Le véritable nom complet d'une classe s'appelle le _Fully Qualified Name_. Il est composé du _nom de package_ dans lequel se trouve la classe ainsi que du _nom de la classe_ lui-même.
+
+Ainsi pour une classe déclarée ainsi :
+
+[source,language="java"]
+----
+package fr.lteconsulting;
+
+class MaClasse
+{
+	// ...
+}
+----
+
+Le _FQN_ de cette classe est `fr.lteconsulting.MaClasse`.
+
+NOTE: Par convention les noms de package sont tout en minuscule, comme par exemple : `fr.lteconsulting`.
+
+==== Importation avec `import`
+
+Lorsque l'on souhaite utiliser une classe qui n'est pas située dans le même package que celle qui l'utilise, on peut l'importer, de façon à ne pas avoir à rappeler le _FQN_ complet à chaque utilisation.
+
+Ainsi, à la place de ceci :
+
+[source,language="java"]
+----
+package fr.lteconsulting;
+
+class MaClasse
+{
+	MaClasse()
+	{
+		fr.lteconsulting.outils.MonOutil outil;
+		outil = new fr.lteconsulting.outils.MonOutil();
+	}
+}
+----
+
+On pourra écrire ceci :
+
+[source,language="java"]
+----
+package fr.lteconsulting;
+
+import fr.lteconsulting.outils.MonOutil;
+
+class MaClasse
+{
+	MaClasse()
+	{
+		MonOutil outil;
+		outil = new MonOutil();
+	}
+}
+----
+
 - écrire attribut
 - écrire méthode
 - constructeur

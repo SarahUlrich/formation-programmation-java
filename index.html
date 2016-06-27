@@ -449,6 +449,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_présentation_de_java_et_jvm">Présentation de Java et JVM</a></li>
 <li><a href="#_principes">Principes</a></li>
 <li><a href="#_programme_code_helloworld_code">Programme <code>HelloWorld</code></a></li>
+<li><a href="#_variables">Variables</a></li>
+<li><a href="#_les_types_primitifs">Les types primitifs</a></li>
+<li><a href="#_structures_de_controle">Structures de controle</a></li>
 <li><a href="#_ecrire_une_classe">Ecrire une classe</a></li>
 <li><a href="#_classes_abstraites">Classes abstraites</a></li>
 <li><a href="#_classes_finales">Classes finales</a></li>
@@ -514,18 +517,271 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_programme_code_helloworld_code">Programme <code>HelloWorld</code></h3>
+<div class="paragraph">
+<p>Créez un projet vide et un fichier <code>HelloWorld.java</code> dedans avec le contenu suivant :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public class HelloWorld
+{
+	public static void main( String[] args ) <b class="conum">(1)</b>
+	{
+		System.out.println( "Bonjour tout le monde !" ); <b class="conum">(2)</b>
+	}
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Méthode principale du programme.</p>
+</li>
+<li>
+<p>Appel qui permet d&#8217;afficher "Bonjour tout le monde !" à l&#8217;écran.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Compiler ce code avec la commande</p>
+</div>
+<div class="paragraph">
+<p><code>javac HelloWorld.java</code></p>
+</div>
+<div class="paragraph">
+<p>Ceci produit un fichier <code>HelloWorld.class</code> contenant le byte-code issue de la compilation du code source.</p>
+</div>
+<div class="paragraph">
+<p>Exécutez ce programme avec la commande :</p>
+</div>
+<div class="paragraph">
+<p><code>java HelloWorld</code></p>
+</div>
+<div class="paragraph">
+<p>Le programme écrit "Bonjour tout le monde !" sur la console.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_variables">Variables</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Variable</dt>
+<dd>
+<p>un emplacement en mémoire avec un <em>nom</em> et un <em>type</em>.</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="_déclaration">Déclaration</h4>
+<div class="paragraph">
+<p>Ceci déclare une variable nommée <code>i</code> de type <code>int</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">int i;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_affectation">Affectation</h4>
+<div class="paragraph">
+<p>Ici nous affectons la valeur <code>42</code> à la variable <code>i</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">int i; <b class="conum">(1)</b>
+i = 42; <b class="conum">(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Déclaration</p>
+</li>
+<li>
+<p>Affectation</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_utilisation">Utilisation</h4>
+<div class="paragraph">
+<p>Pour utiliser la valeur contenue dans la variable, il suffit de mentionner son nom :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">int v = i; <b class="conum">(1)</b>
+
+System.out.println( "La valeur de v est : " + v ); <b class="conum">(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Lecture de <code>i</code> pour affecter la variable <code>`v</code></p>
+</li>
+<li>
+<p>Lecture de <code>v</code> pour construire la chaine qui va s&#8217;afficher dans la console.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_les_types_primitifs">Les types primitifs</h3>
+<div class="paragraph">
+<p>Il existe en Java deux familles de type : les types primitifs et les types objet.</p>
+</div>
+<div class="paragraph">
+<p>Les types primitifs portent des valeurs, en voici la liste :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>valeur booléenne : <code>boolean</code>,</p>
+</li>
+<li>
+<p>valeurs entières : <code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>,</p>
+</li>
+<li>
+<p>valeurs flottantes : <code>float</code> et <code>short</code>,</p>
+</li>
+<li>
+<p>valeur caractère (unicode, 16 bits) : <code>char</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_structures_de_controle">Structures de controle</h3>
 
 </div>
 <div class="sect2">
 <h3 id="_ecrire_une_classe">Ecrire une classe</h3>
+<div class="sect3">
+<h4 id="_un_fichier_une_classe">Un fichier, une classe</h4>
+<div class="paragraph">
+<p>Une classe java est écrite dans un fichier nommé par le même nom (et même casse) auquel on donne l&#8217;extension <code>.java</code>.</p>
+</div>
+<div class="paragraph">
+<p>Ce fichier .java sera situé dans un sous-répertoire du répertoire <code>src/</code> du projet, et qui correspondra au chemin jusqu&#8217;au <em>package</em> de la classe.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Il est néanmoins possible de déclarer plusieurs classes dans un même fichier <strong>.java</strong>. Nous reviendrons sur ces cas plus tard dans le cours.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_déclaration_d_une_classe">Déclaration d&#8217;une classe</h4>
+<div class="paragraph">
+<p>Pour créer une classe, on utilise le code suivant :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">[public] class NomDeLaClasse
+{
+	// Corps de la classe (attributs et méthodes)
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Par convention les noms de classes commencent par une majuscule comme par exemple <code>NomDeLaClasse</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fully_qualified_name">Fully Qualified Name</h4>
+<div class="paragraph">
+<p>Le véritable nom complet d&#8217;une classe s&#8217;appelle le <em>Fully Qualified Name</em>. Il est composé du <em>nom de package</em> dans lequel se trouve la classe ainsi que du <em>nom de la classe</em> lui-même.</p>
+</div>
+<div class="paragraph">
+<p>Ainsi pour une classe déclarée ainsi :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package fr.lteconsulting;
+
+class MaClasse
+{
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Le <em>FQN</em> de cette classe est <code>fr.lteconsulting.MaClasse</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Par convention les noms de package sont tout en minuscule, comme par exemple : <code>fr.lteconsulting</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_importation_avec_code_import_code">Importation avec <code>import</code></h4>
+<div class="paragraph">
+<p>Lorsque l&#8217;on souhaite utiliser une classe qui n&#8217;est pas située dans le même package que celle qui l&#8217;utilise, on peut l&#8217;importer, de façon à ne pas avoir à rappeler le <em>FQN</em> complet à chaque utilisation.</p>
+</div>
+<div class="paragraph">
+<p>Ainsi, à la place de ceci :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package fr.lteconsulting;
+
+class MaClasse
+{
+	MaClasse()
+	{
+		fr.lteconsulting.outils.MonOutil outil;
+		outil = new fr.lteconsulting.outils.MonOutil();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On pourra écrire ceci :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package fr.lteconsulting;
+
+import fr.lteconsulting.outils.MonOutil;
+
+class MaClasse
+{
+	MaClasse()
+	{
+		MonOutil outil;
+		outil = new MonOutil();
+	}
+}</code></pre>
+</div>
+</div>
 <div class="ulist">
 <ul>
-<li>
-<p>un fichier une classe</p>
-</li>
-<li>
-<p>Fully Qualified Name, import</p>
-</li>
 <li>
 <p>écrire attribut</p>
 </li>
@@ -536,6 +792,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>constructeur&#8201;&#8212;&#8201;délégation&#8201;&#8212;&#8201;this et super</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -565,7 +822,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h3 id="_héritage">Héritage</h3>
 <div class="sect3">
 <h4 id="_conversion_de_type_code_instanceof_code_et_transtypage">Conversion de type (<code>instanceof</code> et transtypage)</h4>
-
+<div class="paragraph">
+<p>Le système de typage de Java n&#8217;est pas unifié.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -724,7 +983,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-27 10:16:52 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-06-27 12:53:32 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 </body>
