@@ -54,6 +54,8 @@ Attribut d'instance:: chaque objet a SA propre valeur pour cet attribut
 
 ==== Conversion de type (`instanceof` et transtypage)
 
+Le système de typage de Java n'est pas unifié.
+
 === La classe `Object`
 
 ==== `equals()` et `hashCode()`
