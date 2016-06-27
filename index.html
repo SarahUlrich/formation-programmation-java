@@ -473,7 +473,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="paragraph">
-<p>Ce cours est open source et est disponible en ligne : <a href="https://github.com/ltearno/formation-programmation-java">github.com/ltearno/formation-programmation-java</a></p>
+<p>Ce cours est Open Source et est disponible en ligne : <a href="https://github.com/ltearno/formation-programmation-java">github.com/ltearno/formation-programmation-java</a></p>
 </div>
 </div>
 </div>
@@ -522,7 +522,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class HelloWorld
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public class HelloWorld
 {
 	public static void main( String[] args ) <b class="conum">(1)</b>
 	{
@@ -577,7 +577,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">int i;</code></pre>
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">int i;</code></pre>
 </div>
 </div>
 </div>
@@ -588,7 +588,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">int i; <b class="conum">(1)</b>
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">int i; <b class="conum">(1)</b>
 i = 42; <b class="conum">(2)</b></code></pre>
 </div>
 </div>
@@ -610,7 +610,7 @@ i = 42; <b class="conum">(2)</b></code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">int v = i; <b class="conum">(1)</b>
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">int v = i; <b class="conum">(1)</b>
 
 System.out.println( "La valeur de v est : " + v ); <b class="conum">(2)</b></code></pre>
 </div>
@@ -686,7 +686,7 @@ Il est néanmoins possible de déclarer plusieurs classes dans un même fichier 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">[public] class NomDeLaClasse
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">[public] class NomDeLaClasse
 {
 	// Corps de la classe (attributs et méthodes)
 }</code></pre>
@@ -715,7 +715,7 @@ Par convention les noms de classes commencent par une majuscule comme par exempl
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package fr.lteconsulting;
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">package fr.lteconsulting;
 
 class MaClasse
 {
@@ -749,7 +749,7 @@ Par convention les noms de package sont tout en minuscule, comme par exemple : <
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package fr.lteconsulting;
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">package fr.lteconsulting;
 
 class MaClasse
 {
@@ -766,7 +766,7 @@ class MaClasse
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package fr.lteconsulting;
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">package fr.lteconsulting;
 
 import fr.lteconsulting.outils.MonOutil;
 
@@ -830,16 +830,50 @@ class MaClasse
 <div class="sect2">
 <h3 id="_la_classe_code_object_code">La classe <code>Object</code></h3>
 <div class="sect3">
-<h4 id="__code_equals_code_et_code_hashcode_code"><code>equals()</code> et <code>hashCode()</code></h4>
-
+<h4 id="__code_boolean_equals_object_other_code_et_code_int_hashcode_code"><code>boolean equals( Object other )</code> et <code>int hashCode()</code></h4>
+<div class="paragraph">
+<p>Ces deux méthodes fonctionnent main dans la main et répondent à ces questions :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>equals</code> doit retourner <code>true</code> si l&#8217;objet passé en paramètre peut être considéré comme identique (au sens de l&#8217;application) à l&#8217;objet sur lequel cette méthode est appelée.</p>
+</li>
+<li>
+<p><code>hashCode</code> doit retourner le même résultat pour deux objets considérés identiques (donc retournant <code>true</code> si appelés sur <code>equals</code>).</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+Il est important que ces deux méthodes soient implémentées de façon à garder leur résultat cohérents. De nombreuses structures de données dépendent de cette cohérence&#8230;&#8203;
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect3">
-<h4 id="__code_tostring_code"><code>toString()</code></h4>
-
+<h4 id="__code_string_tostring_code"><code>String toString()</code></h4>
+<div class="paragraph">
+<p>Renvoie une représentation textuelle de l&#8217;objet sur lequel on appelle cette méthode.</p>
+</div>
+<div class="paragraph">
+<p>Il est en général utile de réimplémenter cette méthode de façon à obtenir un résultat <em>humain</em> lorsque l&#8217;on combine une chaine de caractère avec un objet.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;implémentation de cette méthode dans la classe <code>Object</code> consiste à indiquer un code correspondant au type de l&#8217;objet suivi de l&#8217;adresse mémoire à laquelle cet objet est stocké.</p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="__code_getclass_code"><code>getClass()</code></h4>
-
+<h4 id="__code_class_getclass_code"><code>Class&lt;?&gt; getClass()</code></h4>
+<div class="paragraph">
+<p>Renvoie un objet représentant la classe de l&#8217;objet sur lequel on appelle cette méthode.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -863,6 +897,70 @@ class MaClasse
 </div>
 <div class="paragraph">
 <p><strong>Exercice</strong> : recoder l&#8217;exercice du jeu de cartes, en créant une interface <code>ICarte</code>, une classe de base <code>AbstractBaseCarte</code> qui contient le champ <code>protected</code> <code>cout</code>. Seules <code>Sortilege</code> et <code>Creature</code> héritent de <code>AbstractBaseCarte</code>. Les trois classes de cartes implémentent <code>ICarte</code>. Ceci nous montre comment bien séparer implémentation et contrat d&#8217;utilisation.</p>
+</div>
+<div class="sect3">
+<h4 id="_exemple">Exemple</h4>
+<div class="paragraph">
+<p>Soit le code suivant :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">interface IContrat {
+  void commencer();
+  void terminer();
+}
+
+interface ICommencable {
+  void commencer();
+}
+
+interface IMangeable {
+  void manger();
+}
+
+interface IConsommable extends IMangeable {
+  void digerer();
+}
+
+class Base {
+  void manger() {
+    System.out.println( "Manger" );
+  }
+}
+
+abstract class ImplPartielle extends Base implements IContrat {
+  @Override
+  public abstract void commencer();
+
+  @Override
+  public void terminer() {
+    System.exit( 0 );
+  }
+}
+
+class Implementation extends ImplPartielle implements IConsommable, IMangeable {
+  @Override
+  public void commencer() {
+    System.out.println( "Implementation::commencer()" );
+  }
+
+  @Override
+  public void terminer() {
+    System.out.println( "Terminer" );
+
+	super.terminer();
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Voici le diagramme de classe correspondant :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="java-images/exemple-interface-uml.jpg" alt="exemple interface uml">
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -983,8 +1081,11 @@ class MaClasse
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-27 12:53:32 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-06-27 15:15:47 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
 </body>
 </html>

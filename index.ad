@@ -3,12 +3,14 @@
 :email: ltearno@gmail.com
 :toc: macro
 :toc-title: Cours de programmation orientée objet avec Java
+:imagesdir: java-images
+:source-highlighter: highlightjs
 
 LTE Consulting (C) - 2016
 
 toc::[]
 
-Ce cours est open source et est disponible en ligne : https://github.com/ltearno/formation-programmation-java[github.com/ltearno/formation-programmation-java]
+Ce cours est Open Source et est disponible en ligne : https://github.com/ltearno/formation-programmation-java[github.com/ltearno/formation-programmation-java]
 
 == Enjeux et Etat de l'art
 
@@ -214,11 +216,26 @@ Le système de typage de Java n'est pas unifié.
 
 === La classe `Object`
 
-==== `equals()` et `hashCode()`
+==== `boolean equals( Object other )` et `int hashCode()`
 
-==== `toString()`
+Ces deux méthodes fonctionnent main dans la main et répondent à ces questions :
 
-==== `getClass()`
+- `equals` doit retourner `true` si l'objet passé en paramètre peut être considéré comme identique (au sens de l'application) à l'objet sur lequel cette méthode est appelée.
+- `hashCode` doit retourner le même résultat pour deux objets considérés identiques (donc retournant `true` si appelés sur `equals`).
+
+IMPORTANT: Il est important que ces deux méthodes soient implémentées de façon à garder leur résultat cohérents. De nombreuses structures de données dépendent de cette cohérence...
+
+==== `String toString()`
+
+Renvoie une représentation textuelle de l'objet sur lequel on appelle cette méthode.
+
+Il est en général utile de réimplémenter cette méthode de façon à obtenir un résultat _humain_ lorsque l'on combine une chaine de caractère avec un objet.
+
+L'implémentation de cette méthode dans la classe `Object` consiste à indiquer un code correspondant au type de l'objet suivi de l'adresse mémoire à laquelle cet objet est stocké.
+
+==== `Class<?> getClass()`
+
+Renvoie un objet représentant la classe de l'objet sur lequel on appelle cette méthode.
 
 === Annotations introduction : @Deprecated, @Override
 
@@ -229,6 +246,64 @@ Le système de typage de Java n'est pas unifié.
 - implémenter une interface
 
 *Exercice* : recoder l'exercice du jeu de cartes, en créant une interface `ICarte`, une classe de base `AbstractBaseCarte` qui contient le champ `protected` `cout`. Seules `Sortilege` et `Creature` héritent de `AbstractBaseCarte`. Les trois classes de cartes implémentent `ICarte`. Ceci nous montre comment bien séparer implémentation et contrat d'utilisation.
+
+==== Exemple
+
+Soit le code suivant :
+
+[source,language="java"]
+----
+interface IContrat {
+  void commencer();
+  void terminer();
+}
+
+interface ICommencable {
+  void commencer();
+}
+
+interface IMangeable {
+  void manger();
+}
+
+interface IConsommable extends IMangeable {
+  void digerer();
+}
+
+class Base {
+  void manger() {
+    System.out.println( "Manger" );
+  }
+}
+
+abstract class ImplPartielle extends Base implements IContrat {
+  @Override
+  public abstract void commencer();
+  
+  @Override
+  public void terminer() {
+    System.exit( 0 );
+  }
+}
+
+class Implementation extends ImplPartielle implements IConsommable, IMangeable {
+  @Override
+  public void commencer() {
+    System.out.println( "Implementation::commencer()" );
+  }
+  
+  @Override
+  public void terminer() {
+    System.out.println( "Terminer" );
+	
+	super.terminer();
+  }
+}
+----
+
+Voici le diagramme de classe correspondant :
+
+image::exemple-interface-uml.jpg[]
 
 === Les génériques
 
