@@ -1,0 +1,130 @@
+= Cours de programmation orientée objet avec Java
+:author: Arnaud Tournier
+:email: ltearno@gmail.com
+:toc: macro
+:toc-title: Cours de programmation orientée objet avec Java
+
+LTE Consulting (C) - 2016
+
+toc::[]
+
+Ce cours est open source et est disponible en ligne : https://github.com/ltearno/formation-programmation-java[github.com/ltearno/formation-programmation-java]
+
+== Enjeux et Etat de l'art
+
+== UML - conception objet
+
+=== Modélisation objet
+
+=== Diagramme de cas d'utilisation
+
+=== Diagramme de classe
+
+=== Diagramme de séquence
+
+== Java - Les fondamentaux
+
+=== Présentation de Java et JVM
+
+=== Principes
+
+=== Programme `HelloWorld`
+
+=== Ecrire une classe
+
+- un fichier une classe
+- Fully Qualified Name, import
+- écrire attribut
+- écrire méthode
+- constructeur
+-- délégation
+-- this et super
+
+=== Classes abstraites
+
+=== Classes finales
+
+=== Champs et méthodes statiques
+
+Attribut statique:: un attribut partagé par toutes les instances d'une classe.
+
+Attribut d'instance:: chaque objet a SA propre valeur pour cet attribut
+
+=== Héritage
+
+==== Conversion de type (`instanceof` et transtypage)
+
+=== La classe `Object`
+
+==== `equals()` et `hashCode()`
+
+==== `toString()`
+
+==== `getClass()`
+
+=== Annotations introduction : @Deprecated, @Override
+
+=== Interfaces
+
+- séparer le contrat de l'implémentation
+- écrire une interface
+- implémenter une interface
+
+*Exercice* : recoder l'exercice du jeu de cartes, en créant une interface `ICarte`, une classe de base `AbstractBaseCarte` qui contient le champ `protected` `cout`. Seules `Sortilege` et `Creature` héritent de `AbstractBaseCarte`. Les trois classes de cartes implémentent `ICarte`. Ceci nous montre comment bien séparer implémentation et contrat d'utilisation.
+
+=== Les génériques
+
+==== Classes génériques
+
+==== Méthodes génériques
+
+==== Spécifier des contraintes sur le type générique (ex: `<T extends ICarte>`...)
+
+==== Problème de la covariance
+
+*Exercice* : implémenter une classe `TableauDynamique<T>` permettant de stocker un nombre variable d'éléments de type `T`. La classe aura au moins les méthodes `T get(int index)`, `void set(int index, T value)` et `int size()`.
+
+*Exercice* : utiliser la classe `TableauDynamique<ICarte>` dans le projet de cartes...
+
+*Exercice* : refaire l'alogrithme du tri avec les génériques (interface `Triable` plus `<T extends Triable> T[] trier( T[] data )`). Attention, le tri ne fonctionnera plus sur les types primitifs (auto-boxing).
+
+*Exercice* : si on implémente l'algorithme de tri en prenant des données triables (`<T extends Triable>`), par fois la hierarchie des classes ne permet pas de modifier celle-ci. On définit donc une interface `Comparateur<T>` dont on demande une instance dans la nouvelle méthode `trier` : `<T> T[] trier( T[] data, Comparateur<T> comparateur)`. Vérifier que la méthode `trier(...)` a bien été implémentée deux fois. Bien comprendre que la contrainte de type permet de garantir la correspondance entre les types d'entrée et de sortie.
+
+=== Classes imbriquées
+
+==== Classes imbriquées statiques
+
+===  Classes imbriquées
+
+=== Classes anonymes
+
+=== Quelques classes du SDK : `Iterable<T>` et la boucle for, `Comparable<T>`, `ArrayList<>`, `List<>`, `StringBuilder`, ...
+
+*Exercice* : implémenter `Iterable<T>` dans TableauDynamique et utiliser la forme _foreach_ de la boucle `for` dans le projet des cartes.
+
+=== Les exceptions
+
+=== Communication entre objets (patterns de communication)
+
+== A suivre...
+
+- Java EE - Architectures distribuées
+- Java EE - Servlets, JSP, EJB
+- Design patterns
+- Spring IOC et TDD
+- XML, DTD, XSL, XSLT
+- SOA - Approche orientée services
+- RIA - Rich internet applications
+
+- Java : file system, threads, ...
+- Tests unitaires
+- Maven
+- GWT
+- Spring Boot -> les indispensables : JPA, IOC, conf discovery, ...
+- Docker
+- HTML5 CSS3 Javascript, Typescript
+
+TOTAL = 8 semaines.
+
+
+

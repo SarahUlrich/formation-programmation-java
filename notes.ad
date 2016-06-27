@@ -1,7 +1,0 @@
-Attribut statique :
-
-un attribut partagé par toutes les instances d'une classe.
-
-Attribut d'instance :
-
-chaque objet a SA propre valeur pour cet attribut

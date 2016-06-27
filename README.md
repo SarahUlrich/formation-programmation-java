@@ -6,6 +6,10 @@ Les projets sont dans le répertoire `projets`.
 
 ## Exercices
 
+Mercredi 22 juin :
+
+- implanter l'algorithme de tri naïf et l'algorithme de tri fusion sur un tableau d'entiers.
+
 Voici un lien[https://www.infres.telecom-paristech.fr/people/charon/coursJava/exercices/chifoumi.html] vers différents exercices.
 
 Je vous propose de les réaliser dans l'ordre suivant :
