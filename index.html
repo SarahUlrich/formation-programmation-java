@@ -451,6 +451,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_programme_code_helloworld_code">Programme <code>HelloWorld</code></a></li>
 <li><a href="#_variables">Variables</a></li>
 <li><a href="#_les_types_primitifs">Les types primitifs</a></li>
+<li><a href="#_les_tableaux">Les tableaux</a></li>
 <li><a href="#_structures_de_controle">Structures de controle</a></li>
 <li><a href="#_ecrire_une_classe">Ecrire une classe</a></li>
 <li><a href="#_classes_abstraites">Classes abstraites</a></li>
@@ -650,6 +651,21 @@ System.out.println( "La valeur de v est : " + v ); <b class="conum">(2)</b></cod
 <p>valeur caractère (unicode, 16 bits) : <code>char</code>.</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_les_tableaux">Les tableaux</h3>
+<div class="paragraph">
+<p>Une ou plusieurs dimension.</p>
+</div>
+<div class="paragraph">
+<p>Indices démarrent de zéro.</p>
+</div>
+<div class="paragraph">
+<p>Un tableau stocke la classe des éléments qu&#8217;il stocke. Il provoque une exception <code>java.lang.ArrayStoreException</code> si un objet du mauvais type est inséré dans le tableau.</p>
+</div>
+<div class="paragraph">
+<p><code>IndexOutOfBoundsExeption</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -895,8 +911,46 @@ Il est important que ces deux méthodes soient implémentées de façon à garde
 </li>
 </ul>
 </div>
+<div class="sect3">
+<h4 id="_définir_une_interface">Définir une interface</h4>
+<div class="paragraph">
+<p>Nous définissons ici l&#8217;interface <code>IMonInterface</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public interface IMonInterface {
+	// le mot clé public est facultatif car implicite
+	[public] void afficher();
+
+	void autreMéthode();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Et ensuite cette interface est <em>implémentée</em> par la classe <code>UneClasse</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public class UneClasse implements IMonInterface {
+	// attributs, méthodes, ...
+
+	@Override
+	public void afficher() {
+		// .. <b class="conum">(1)</b>
+	}
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Implémentation de la méthode <code>afficher()</code>.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><strong>Exercice</strong> : recoder l&#8217;exercice du jeu de cartes, en créant une interface <code>ICarte</code>, une classe de base <code>AbstractBaseCarte</code> qui contient le champ <code>protected</code> <code>cout</code>. Seules <code>Sortilege</code> et <code>Creature</code> héritent de <code>AbstractBaseCarte</code>. Les trois classes de cartes implémentent <code>ICarte</code>. Ceci nous montre comment bien séparer implémentation et contrat d&#8217;utilisation.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_exemple">Exemple</h4>
@@ -965,9 +1019,98 @@ class Implementation extends ImplPartielle implements IConsommable, IMangeable {
 </div>
 <div class="sect2">
 <h3 id="_les_génériques">Les génériques</h3>
+<div class="paragraph">
+<p>Qu&#8217;est-ce qui peut être <em>générique</em> en java ?</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>les classes,</p>
+</li>
+<li>
+<p>les interfaces,</p>
+</li>
+<li>
+<p>les méthodes.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type générique</dt>
+<dd>
+<p>La classe/interface/méthode dont l&#8217;implémentation est écrite sans connaitre à l&#8217;avance l&#8217;intégralité des types sur lesquels elle s&#8217;appuie.</p>
+</dd>
+<dt class="hdlist1">Paramètre de type</dt>
+<dd>
+<p>Le nom que l&#8217;on donne au type(s) inconnu(s) au sein de l&#8217;implémentation d&#8217;un type générique.</p>
+</dd>
+<dt class="hdlist1">Type argument</dt>
+<dd>
+<p>Le type (réel) qui remplace le paramètre de type au moment de l&#8217;utilisation d&#8217;une classe/interface/méthode générique.</p>
+</dd>
+<dt class="hdlist1">Contrainte</dt>
+<dd>
+<p>Condition(s) que l&#8217;on impose au type argument d&#8217;un type générique.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
 <div class="sect3">
 <h4 id="_classes_génériques">Classes génériques</h4>
+<div class="paragraph">
+<p>Voici un exemple de définition d&#8217;une classe générique <code>Tableau</code> travaillant sur un paramètre de type <code>T</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">class Tableau&lt;T&gt; { <b class="conum">(1)</b>
+	private T tableau; <b class="conum">(2)</b>
 
+	Tableau( int taille ) {
+		tableau = (T[]) new Object[taille]; <b class="conum">(3)</b>
+	}
+
+	T get( int index ) { <b class="conum">(4)</b>
+		return tableau[index];
+	}
+
+	void set( int index, T valeur ) {
+		tableau[index] = valeur;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Définition du paramètre de type <code>T</code>.</p>
+</li>
+<li>
+<p>L&#8217;attribut <code>tableau</code> est un tableau de <code>T</code>.</p>
+</li>
+<li>
+<p>Ce transtypage est obligatoire. On verra plus tard comment faire mieux.</p>
+</li>
+<li>
+<p>On retourne un élément de type <code>T</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Voici un exemple de code utilisant la classe générique <code>Tableau</code> définie juste au dessus :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">Tableau&lt;String&gt; tableau;
+
+// Syntaxe jusqu'à Java 6
+tableau = new Tableau&lt;String&gt;();
+
+// Syntaxe à partir de Java 7
+tableau = new Tableau&lt;&gt;();
+
+tableau.set( 4, "Une chaine de caractère" );</code></pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_méthodes_génériques">Méthodes génériques</h4>
@@ -1081,7 +1224,7 @@ class Implementation extends ImplPartielle implements IConsommable, IMangeable {
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-27 15:15:47 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-06-28 07:25:38 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">

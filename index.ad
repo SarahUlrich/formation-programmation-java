@@ -108,6 +108,16 @@ Les types primitifs portent des valeurs, en voici la liste :
 - valeurs flottantes : `float` et `short`,
 - valeur caractère (unicode, 16 bits) : `char`.
 
+=== Les tableaux
+
+Une ou plusieurs dimension.
+
+Indices démarrent de zéro.
+
+Un tableau stocke la classe des éléments qu'il stocke. Il provoque une exception `java.lang.ArrayStoreException` si un objet du mauvais type est inséré dans le tableau.
+
+`IndexOutOfBoundsExeption`
+
 === Structures de controle
 
 === Ecrire une classe
@@ -245,6 +255,35 @@ Renvoie un objet représentant la classe de l'objet sur lequel on appelle cette 
 - écrire une interface
 - implémenter une interface
 
+==== Définir une interface
+
+Nous définissons ici l'interface `IMonInterface` :
+
+[source,language="java"]
+----
+public interface IMonInterface {
+	// le mot clé public est facultatif car implicite
+	[public] void afficher();
+	
+	void autreMéthode();
+}
+----
+
+Et ensuite cette interface est _implémentée_ par la classe `UneClasse`.
+
+[source,language="java"]
+----
+public class UneClasse implements IMonInterface {
+	// attributs, méthodes, ...
+	
+	@Override
+	public void afficher() {
+		// .. <1>
+	}
+}
+----
+<1> Implémentation de la méthode `afficher()`.
+
 *Exercice* : recoder l'exercice du jeu de cartes, en créant une interface `ICarte`, une classe de base `AbstractBaseCarte` qui contient le champ `protected` `cout`. Seules `Sortilege` et `Creature` héritent de `AbstractBaseCarte`. Les trois classes de cartes implémentent `ICarte`. Ceci nous montre comment bien séparer implémentation et contrat d'utilisation.
 
 ==== Exemple
@@ -307,7 +346,61 @@ image::exemple-interface-uml.jpg[]
 
 === Les génériques
 
+Qu'est-ce qui peut être _générique_ en java ?
+
+- les classes,
+- les interfaces,
+- les méthodes.
+
+Type générique:: La classe/interface/méthode dont l'implémentation est écrite sans connaitre à l'avance l'intégralité des types sur lesquels elle s'appuie.
+
+Paramètre de type:: Le nom que l'on donne au type(s) inconnu(s) au sein de l'implémentation d'un type générique.
+
+Type argument:: Le type (réel) qui remplace le paramètre de type au moment de l'utilisation d'une classe/interface/méthode générique.
+
+Contrainte:: Condition(s) que l'on impose au type argument d'un type générique.
+
 ==== Classes génériques
+
+Voici un exemple de définition d'une classe générique `Tableau` travaillant sur un paramètre de type `T` :
+
+[source,language="java"]
+----
+class Tableau<T> { <1>
+	private T tableau; <2>
+	
+	Tableau( int taille ) {
+		tableau = (T[]) new Object[taille]; <3>
+	}
+	
+	T get( int index ) { <4>
+		return tableau[index];
+	}
+	
+	void set( int index, T valeur ) {
+		tableau[index] = valeur;
+	}
+}
+----
+<1> Définition du paramètre de type `T`.
+<2> L'attribut `tableau` est un tableau de `T`.
+<3> Ce transtypage est obligatoire. On verra plus tard comment faire mieux.
+<4> On retourne un élément de type `T`.
+
+Voici un exemple de code utilisant la classe générique `Tableau` définie juste au dessus :
+
+[source,language="java"]
+----
+Tableau<String> tableau;
+
+// Syntaxe jusqu'à Java 6
+tableau = new Tableau<String>();
+
+// Syntaxe à partir de Java 7
+tableau = new Tableau<>();
+
+tableau.set( 4, "Une chaine de caractère" );
+----
 
 ==== Méthodes génériques
 
