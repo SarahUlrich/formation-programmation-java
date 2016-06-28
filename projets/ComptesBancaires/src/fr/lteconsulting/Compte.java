@@ -30,6 +30,7 @@ public class Compte
 	public void debiter( double montant )
 	{
 		System.out.println( "-> débit de " + montant + " sur compte " + numeroDeCompte );
+		
 		solde -= montant;
 	}
 
@@ -39,3 +40,18 @@ public class Compte
 		solde += montant;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

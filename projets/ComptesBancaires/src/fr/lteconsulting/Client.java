@@ -3,8 +3,6 @@ package fr.lteconsulting;
 public class Client
 {
 	private String nom;
-
-	// TODO : plusieurs comptes avec ArrayList<>
 	private Compte compte;
 
 	public Client( String nom, Compte compte )
@@ -26,6 +24,20 @@ public class Client
 	public void afficher()
 	{
 		System.out.println( "Client '" + nom + "'" );
+		
 		compte.afficher();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

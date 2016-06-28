@@ -7,6 +7,7 @@ public class CompteRemunere extends Compte
 	public CompteRemunere( String numeroDeCompte, int soldeInitial, double tauxInteret )
 	{
 		super( numeroDeCompte, soldeInitial );
+		
 		this.tauxInteret = tauxInteret;
 	}
 
@@ -19,6 +20,18 @@ public class CompteRemunere extends Compte
 	public void afficher()
 	{
 		super.afficher();
+		
 		System.out.println( "Taux d'interet : " + tauxInteret );
 	}
 }
+
+
+
+
+
+
+
+
+
+
+

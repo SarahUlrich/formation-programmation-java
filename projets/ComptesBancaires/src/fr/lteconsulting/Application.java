@@ -6,29 +6,32 @@ public class Application
 	{
 		System.out.println( "=== INITIALISATION ===" );
 
-		Compte ccp = new Compte( "87 166 33 K 202", 2000 );
-		Client client1 = new Client( "Jean Boulle", ccp );
+		Compte compte1 = new Compte( "ABC", 3000 );
+		Client clt1 = new Client( "Toto", compte1 );
 
-		Compte livretA = new CompteRemunere( "99 654 44 Z 661", 3000, 0.2 );
-		Client client2 = new Client( "Biloutte Dupond", livretA );
+		Compte compte2 = new CompteRemunere( "XYZ", 3000, 0.2 );
+		Client clt2 = new Client( "Titi", compte2 );
 
-		client1.afficher();
-		client2.afficher();
+		Banque banque = new Banque();
+
+		clt1.afficher();
+		clt2.afficher();
 
 		System.out.println( "=== TRANSFERT BANCAIRE ===" );
 
-		Banque banque = new Banque();
-		banque.transferer( client1, client2, 123 );
+		banque.transferer( clt1, clt2, 123 );
 
 		System.out.println( "=== APRES TRANSFERT ===" );
 
-		client1.afficher();
-		client2.afficher();
+		clt1.afficher();
+		clt2.afficher();
 
-		System.out.println( "=== VERSEMENT DES INTERETS ===" );
+		System.out.println( "=== A LA FIN DE L'ANNEE, VERSEMENT DES INTERETS ===" );
 
-		// A la fin de l'année on verse les interets...
-		banque.verserInterets( ccp );
-		banque.verserInterets( livretA );
+		banque.verserInterets( compte1 );
+		banque.verserInterets( compte2 );
+		
+		clt1.afficher();
+		clt2.afficher();
 	}
 }

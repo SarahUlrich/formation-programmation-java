@@ -13,6 +13,7 @@ public class Banque
 		}
 
 		debiteur.getCompte().debiter( montant );
+		
 		crediteur.getCompte().crediter( montant );
 	}
 
@@ -21,6 +22,7 @@ public class Banque
 		if( compte instanceof CompteRemunere )
 		{
 			CompteRemunere compteRemunere = (CompteRemunere) compte;
+			
 			double interets = compteRemunere.getTauxInteret() * compte.getSolde();
 
 			System.out.println( "Les intérets s'élèvent à " + interets + " pour l'année" );
@@ -33,3 +35,8 @@ public class Banque
 		}
 	}
 }
+
+
+
+
+
