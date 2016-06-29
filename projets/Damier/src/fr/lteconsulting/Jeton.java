@@ -21,4 +21,9 @@ public class Jeton extends Piece
 		}
 		return '?';
 	}
+
+	public CouleurPuissance4 getCouleur()
+	{
+		return couleur;
+	}
 }

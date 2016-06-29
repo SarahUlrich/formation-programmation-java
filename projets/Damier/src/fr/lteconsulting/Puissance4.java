@@ -51,7 +51,85 @@ public class Puissance4
 
 	private boolean aucunGagnant()
 	{
+		for( int x = 0; x < 7; x++ )
+			for( int y = 0; y < 6; y++ )
+				if( positionVictorieuse( new Coordonnee( x, y ) ) )
+					return false;
+
 		return true;
+	}
+
+	private boolean positionVictorieuse( Coordonnee origine )
+	{
+		Piece piece = plateau.getPieceAt( origine );
+		if( piece == null )
+			return false;
+
+		// TODO : ce transtypage c'est pas juste, il y a une meilleure façon de faire en java ...
+		Jeton jeton = (Jeton) piece;
+
+		CouleurPuissance4 couleur = jeton.getCouleur();
+
+		// combien à gauche du meme ?
+		// combien à droite du meme ?
+		if( combien( origine, couleur, -1, 0 ) + combien( origine, couleur, 1, 0 ) >= 3 )
+			return true;
+
+		// combien en haut du même ?
+		// combien en bas du même ?
+		if( combien( origine, couleur, 0, -1 ) + combien( origine, couleur, 0, 1 ) >= 3 )
+			return true;
+
+		// combien HG du meme
+		// combien BD du meme
+		if( combien( origine, couleur, -1, -1 ) + combien( origine, couleur, 1, 1 ) >= 3 )
+			return true;
+
+		// combien BG
+		// combien HD
+		if( combien( origine, couleur, 1, -1 ) + combien( origine, couleur, -1, 1 ) >= 3 )
+			return true;
+
+		return false;
+	}
+
+	/**
+	 * Combien y a-t-il de piece consécutives de la couleur spécifiée à partir de la coordonnée (exclue) ?
+	 * 
+	 * @param origine
+	 * @param couleur
+	 * @param pasHorizontal
+	 * @param pasVertical
+	 * @return
+	 */
+	private int combien( Coordonnee origine, CouleurPuissance4 couleur, int pasHorizontal, int pasVertical )
+	{
+		int x = origine.getX();
+		int y = origine.getY();
+
+		int nb = 0;
+
+		do
+		{
+			x += pasHorizontal;
+			y += pasVertical;
+
+			if( (x < 0) || (x > 6) || (y < 0) || (y > 5) )
+				break;
+
+			Piece piece = plateau.getPieceAt( new Coordonnee( x, y ) );
+
+			// TODO : ce transtypage c'est pas juste, il y a une meilleure façon de faire en java ...
+			Jeton jeton = (Jeton) piece;
+
+			// condition d'arrêt
+			if( piece == null || jeton.getCouleur() != couleur )
+				break;
+
+		}
+		while( true );
+
+		return nb;
 	}
 
 	private int getPremiereLigneVide( int colonne )
