@@ -423,6 +423,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
+<h2 id="_créer_une_bibliothèque">Créer une bibliothèque</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Une classe <code>Plateau</code></p>
+</div>
+<div class="paragraph">
+<p>Une classe abstraite ou interface <code>Piece</code></p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_jeu_bidon_sur_plateau">Jeu bidon sur Plateau</h2>
 <div class="sectionbody">
 <div class="sect2">
@@ -482,10 +493,80 @@ Si la réponse est OUI :
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_jeu_de_puissance_4">Jeu de Puissance 4</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_etape_1_création_des_classes">Etape 1 : création des classes</h3>
+<div class="paragraph">
+<p>Créer une énumération <code>CouleurPuissance4</code> possédant deux valeurs : <code>Rouge</code> et <code>Jaune</code>. Cet enum représentera la couleur des jetons</p>
+</div>
+<div class="paragraph">
+<p>Créer une classe <code>Jeton</code> avec :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>un attribut <strong>privé</strong> <code>nom</code> de type <code>String</code></p>
+</li>
+<li>
+<p>un attribut <strong>privé</strong> <code>couleur</code> de type <code>CouleurPuissance4</code></p>
+</li>
+<li>
+<p>le constructeur et les deux <em>getters</em> des attributs <code>nom</code> et <code>couleur</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Créer une classe <code>Puissance4</code> avec :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>un attribut <strong>privé</strong> <code>plateau</code> de type <code>Plateau</code>,</p>
+</li>
+<li>
+<p>une méthode <strong>public</strong> <code>jouer()</code>,</p>
+</li>
+<li>
+<p>une méthode <strong>privée</strong> <code>getPremiereLigneVide( int colonne )</code> qui retourne -1 si aucune cellule n&#8217;est vide dans la colonne passée en paramètre, et qui retourne l&#8217;index de la ligne à laquelle il <em>faudrait</em> insérer le jeton.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_etape_2_implémentation_de_l_algorithme">Etape 2 : implémentation de l&#8217;algorithme</h3>
+<div class="paragraph">
+<p>Dans la méthode <code>jouer()</code> de la classe <code>Puissance4</code>, implémenter l&#8217;algorithme suivant :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Saisir le nom du joueur 1
+Saisir la couleur du joueur 1
+Saisir le nom du joueur 2
+Créer les deux instances de `Joueur` correspondants aux deux joueurs
+TANT QUE (personne n'a gagné) ET QUE (le plateau n'est pas complètement rempli -&gt; penser à implémenter une méthode Plateau.estPlein())
+	Alterner le joueur
+	Déclarer une variable `int ligneSaisie`
+	FAIRE (correspond à une boucle do...while)
+		Saisir la colonne d'insertion, stocker le résultat dans `ligneSaisie`
+		SI ligneSaisie &lt; 0
+			AFFICHER MESSAGE : "La colonne est pleine, choisis-en une autre !"
+		FIN SI
+	TANT QUE( ligneSaisie &lt; 0 )
+	Placer la pièce
+	Afficher le terrain
+FIN TANT QUE
+AFFICHER Math nul ou le gagnant</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-29 12:14:22 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-06-29 15:20:35 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 </body>

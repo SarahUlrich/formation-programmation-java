@@ -1,5 +1,11 @@
 = Exercices Programmation Java
 
+== Créer une bibliothèque
+
+Une classe `Plateau`
+
+Une classe abstraite ou interface `Piece`
+
 == Jeu bidon sur Plateau
 
 === Première étape
@@ -40,3 +46,44 @@ Permettre à l'utilisateur de saisir "5;3".
 
 Permettre à l'utilisateur de saisir la couleur de la pièce à ajouter.
 
+== Jeu de Puissance 4
+
+=== Etape 1 : création des classes
+
+Créer une énumération `CouleurPuissance4` possédant deux valeurs : `Rouge` et `Jaune`. Cet enum représentera la couleur des jetons
+
+Créer une classe `Jeton` avec :
+
+- un attribut *privé* `nom` de type `String`
+- un attribut *privé* `couleur` de type `CouleurPuissance4`
+- le constructeur et les deux _getters_ des attributs `nom` et `couleur`.
+
+Créer une classe `Puissance4` avec :
+
+- un attribut *privé* `plateau` de type `Plateau`,
+- une méthode *public* `jouer()`,
+- une méthode *privée* `getPremiereLigneVide( int colonne )` qui retourne -1 si aucune cellule n'est vide dans la colonne passée en paramètre, et qui retourne l'index de la ligne à laquelle il _faudrait_ insérer le jeton.
+
+=== Etape 2 : implémentation de l'algorithme
+
+Dans la méthode `jouer()` de la classe `Puissance4`, implémenter l'algorithme suivant :
+
+----
+Saisir le nom du joueur 1
+Saisir la couleur du joueur 1
+Saisir le nom du joueur 2
+Créer les deux instances de `Joueur` correspondants aux deux joueurs
+TANT QUE (personne n'a gagné) ET QUE (le plateau n'est pas complètement rempli -> penser à implémenter une méthode Plateau.estPlein())
+	Alterner le joueur
+	Déclarer une variable `int ligneSaisie`
+	FAIRE (correspond à une boucle do...while)
+		Saisir la colonne d'insertion, stocker le résultat dans `ligneSaisie`
+		SI ligneSaisie < 0
+			AFFICHER MESSAGE : "La colonne est pleine, choisis-en une autre !"
+		FIN SI
+	TANT QUE( ligneSaisie < 0 )
+	Placer la pièce
+	Afficher le terrain
+FIN TANT QUE
+AFFICHER Math nul ou le gagnant
+----
