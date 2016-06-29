@@ -120,6 +120,8 @@ Un tableau stocke la classe des éléments qu'il stocke. Il provoque une excepti
 
 === La classe `String`
 
+Voir surtout la https://docs.oracle.com/javase/7/docs/api/java/lang/String.html[Javadoc] de la class String...
+
 La classe `String` sert à représenter des chaînes de caractères (qui ont le plus souvent comme objectif d'être affichées à un moment où un autre à l'utilisateur).
 
 Voici quelques méthodes de la classe `String` que vous pourrez trouver utiles :

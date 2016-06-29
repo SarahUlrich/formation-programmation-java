@@ -1,0 +1,42 @@
+= Exercices Programmation Java
+
+== Jeu bidon sur Plateau
+
+=== Première étape
+
+Créer une classe JeuBidon :
+
+- un attribut *privé* `plateau` de type `Plateau`
+- une méthode *public* `jouer()`
+
+Dans la méthode main, écrire
+
+[source,language="java"]
+----
+JeuBidon jeu = new JeuBidon();
+jeu.jouer();
+----
+
+=== Deuxième étape
+
+Implémenter l'algorithme basique :
+
+----
+Poser la question : "Voulez-vous ajouter une pièce ?"
+Si réponse est NON, fin de la méthode `jouer` (donc on fait return)
+Si la réponse est OUI :
+	Poser la question : "Quelle est l'abscisse ?"
+	Poser la question : "Quelle est l'ordonnée ?"
+	Placer une nouvelle pièce sur le plateau à l'endroit choisi par l'utilisateur.
+	Afficher le tableau
+	Recommencer
+----
+
+=== Etapes suivantes
+
+Implémenter une méthode `Coordonnee saisieCoordonnee( String message )` qui renvoie directement un objet de type `Coordonnee`.
+
+Permettre à l'utilisateur de saisir "5;3".
+
+Permettre à l'utilisateur de saisir la couleur de la pièce à ajouter.
+

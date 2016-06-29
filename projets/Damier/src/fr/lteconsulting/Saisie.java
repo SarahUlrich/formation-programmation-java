@@ -29,4 +29,19 @@ public class Saisie
 
 		return Integer.parseInt( result );
 	}
+
+	public static Coordonnee saisieCoordonnee( String message )
+	{
+		String reponse = saisie( message );
+
+		// dans réponse on a : "5556;3332"
+
+		String[] parts = reponse.split( ";" );
+
+		int abscisse = Integer.parseInt( parts[0] );
+		int ordonnee = Integer.parseInt( parts[1] );
+
+		return new Coordonnee( abscisse - 1, ordonnee - 1 );
+	}
+
 }

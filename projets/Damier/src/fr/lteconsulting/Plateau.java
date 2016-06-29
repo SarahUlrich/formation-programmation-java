@@ -15,17 +15,8 @@ public class Plateau
 	public Plateau( int largeur, int hauteur )
 	{
 		this.largeur = largeur;
-		
+
 		damier = new Piece[hauteur][largeur];
-		
-		String s = "5;6";
-		String[] parts = s.split( ";" );
-		
-		// affiche "5"
-		System.out.println( parts[0] );
-		
-		// affiche "6"
-		System.out.println( parts[1] );
 	}
 
 	public void afficher()
