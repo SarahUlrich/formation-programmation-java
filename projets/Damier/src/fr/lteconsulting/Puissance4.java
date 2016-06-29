@@ -22,7 +22,7 @@ public class Puissance4
 
 		int tour = 0;
 
-		while( true )
+		while( plateau.possedeCasesVides() && aucunGagnant() )
 		{
 			plateau.afficher();
 
@@ -49,6 +49,11 @@ public class Puissance4
 		}
 	}
 
+	private boolean aucunGagnant()
+	{
+		return true;
+	}
+
 	private int getPremiereLigneVide( int colonne )
 	{
 		for( int ligne = 5; ligne >= 0; ligne-- )
@@ -58,7 +63,7 @@ public class Puissance4
 				return ligne;
 			}
 		}
-		
+
 		return -1;
 	}
 }

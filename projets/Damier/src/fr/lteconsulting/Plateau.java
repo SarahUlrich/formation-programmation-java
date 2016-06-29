@@ -64,6 +64,21 @@ public class Plateau
 		return damier[coordonnee.getY()][coordonnee.getX()];
 	}
 
+	public boolean estPlein()
+	{
+		for( Piece[] ligne : damier )
+			for( Piece piece : ligne )
+				if( piece == null )
+					return false;
+		
+		return true;
+	}
+	
+	public boolean possedeCasesVides()
+	{
+		return ! estPlein();
+	}
+
 	public Coordonnee getCoordonneesDePiece( Piece piece )
 	{
 		for( int indexLigne = 0; indexLigne < damier.length; indexLigne++ )
