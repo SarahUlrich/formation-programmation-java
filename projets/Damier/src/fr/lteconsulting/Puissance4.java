@@ -10,14 +10,6 @@ public class Puissance4
 		plateau = new Plateau<>( 7, 6 );
 	}
 
-	public void tester()
-	{
-		for( int i = 0; i < 4; i++ )
-			plateau.placer( new Jeton( CouleurPuissance4.Jaune ), new Coordonnee( 0, i ) );
-
-		System.out.println( aucunGagnant() );
-	}
-
 	public void jouer()
 	{
 		String nomRouge = Saisie.saisie( "Nom du joueur Rouge" );
@@ -30,8 +22,9 @@ public class Puissance4
 		System.out.println( "C'est parti !" );
 
 		int tour = 0;
+		JoueurPuissance4 joueurGagnant = null;
 
-		while( plateau.possedeCasesVides() && aucunGagnant() )
+		while( plateau.possedeCasesVides() )
 		{
 			plateau.afficher();
 
@@ -52,47 +45,48 @@ public class Puissance4
 			}
 			while( ligneInsertion < 0 );
 
-			plateau.placer( new Jeton( joueur.getCouleur() ), new Coordonnee( colonneInsertion, ligneInsertion ) );
+			Coordonnee coordonneeInsertion = new Coordonnee( colonneInsertion, ligneInsertion );
+			plateau.placer( new Jeton( joueur.getCouleur() ), coordonneeInsertion );
+
+			if( estPositionGagnante( coordonneeInsertion, joueur.getCouleur() ) )
+			{
+				joueurGagnant = joueur;
+				break;
+			}
 
 			tour += 1;
 		}
+
+		System.out.println();
+
+		if( joueurGagnant == null )
+			System.out.println( "Match nul !" );
+		else
+			System.out.printf( "Bravo à %s, la partie est gagné en %d tours !", joueurGagnant.getNom(), tour );
 	}
 
-	private boolean aucunGagnant()
+	/**
+	 * Indique si la position est gagnante pour une couleur
+	 * 
+	 * @param origine
+	 * @param couleur
+	 * @return
+	 */
+	private boolean estPositionGagnante( Coordonnee origine, CouleurPuissance4 couleur )
 	{
-		for( int x = 0; x < 7; x++ )
-			for( int y = 0; y < 6; y++ )
-				if( positionVictorieuse( new Coordonnee( x, y ) ) )
-					return false;
-
-		return true;
-	}
-
-	private boolean positionVictorieuse( Coordonnee origine )
-	{
-		Jeton jeton = plateau.getPieceAt( origine );
-		if( jeton == null )
-			return false;
-
-		CouleurPuissance4 couleur = jeton.getCouleur();
-
-		// combien à gauche du meme ?
-		// combien à droite du meme ?
+		// combien à gauche et à droite du meme ?
 		if( combien( origine, couleur, -1, 0 ) + combien( origine, couleur, 1, 0 ) >= 3 )
 			return true;
 
-		// combien en haut du même ?
-		// combien en bas du même ?
+		// combien en haut et en bas du même ?
 		if( combien( origine, couleur, 0, -1 ) + combien( origine, couleur, 0, 1 ) >= 3 )
 			return true;
 
-		// combien HG du meme
-		// combien BD du meme
+		// combien HG et BD du meme
 		if( combien( origine, couleur, -1, -1 ) + combien( origine, couleur, 1, 1 ) >= 3 )
 			return true;
 
-		// combien BG
-		// combien HD
+		// combien BG et HD
 		if( combien( origine, couleur, 1, -1 ) + combien( origine, couleur, -1, 1 ) >= 3 )
 			return true;
 
@@ -128,7 +122,7 @@ public class Puissance4
 			// condition d'arrêt
 			if( jeton == null || jeton.getCouleur() != couleur )
 				break;
-			
+
 			nb++;
 
 		}
