@@ -1,6 +1,6 @@
 package fr.lteconsulting;
 
-public abstract class Piece
+public interface Piece
 {
-	public abstract char getDisplayChar();
+	char getDisplayChar();
 }

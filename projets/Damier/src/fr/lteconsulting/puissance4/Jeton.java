@@ -2,7 +2,7 @@ package fr.lteconsulting.puissance4;
 
 import fr.lteconsulting.Piece;
 
-public class Jeton extends Piece
+public class Jeton implements Piece
 {
 	private CouleurPuissance4 couleur;
 

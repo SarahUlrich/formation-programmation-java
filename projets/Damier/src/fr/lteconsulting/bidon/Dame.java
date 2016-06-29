@@ -2,7 +2,7 @@ package fr.lteconsulting.bidon;
 
 import fr.lteconsulting.Piece;
 
-public class Dame extends Piece
+public class Dame implements Piece
 {
 	private CouleurNB couleur;
 
