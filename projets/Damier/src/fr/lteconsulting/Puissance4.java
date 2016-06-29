@@ -10,6 +10,14 @@ public class Puissance4
 		plateau = new Plateau<>( 7, 6 );
 	}
 
+	public void tester()
+	{
+		for( int i = 0; i < 4; i++ )
+			plateau.placer( new Jeton( CouleurPuissance4.Jaune ), new Coordonnee( 0, i ) );
+
+		System.out.println( aucunGagnant() );
+	}
+
 	public void jouer()
 	{
 		String nomRouge = Saisie.saisie( "Nom du joueur Rouge" );
@@ -120,6 +128,8 @@ public class Puissance4
 			// condition d'arrêt
 			if( jeton == null || jeton.getCouleur() != couleur )
 				break;
+			
+			nb++;
 
 		}
 		while( true );
