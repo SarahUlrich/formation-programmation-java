@@ -3,12 +3,12 @@ package fr.lteconsulting;
 /**
  * Un plateau est une grille (à deux dimensions) contenant des {@link Piece}.
  */
-public class Plateau
+public class Plateau<T>
 {
 	/**
 	 * La première dimension représente les ordonnées et la deuxième les abscisses
 	 */
-	private Piece[][] damier;
+	private T[][] damier;
 
 	private int largeur;
 
@@ -16,7 +16,7 @@ public class Plateau
 	{
 		this.largeur = largeur;
 
-		damier = new Piece[hauteur][largeur];
+		damier = (T[][]) new Object[hauteur][largeur];
 	}
 
 	public void afficher()
@@ -29,14 +29,14 @@ public class Plateau
 
 		for( int l = 0; l < damier.length; l++ )
 		{
-			Piece[] ligne = damier[l];
+			T[] ligne = damier[l];
 
 			System.out.print( "| " );
 
 			int numeroLigne = l + 1;
 			System.out.printf( "%2d ", numeroLigne );
 
-			for( Piece piece : ligne )
+			for( T piece : ligne )
 			{
 				if( piece == null )
 					System.out.print( "." );
@@ -54,20 +54,20 @@ public class Plateau
 		afficherBordBas();
 	}
 
-	public void placer( Piece piece, Coordonnee coordonnee )
+	public void placer( T piece, Coordonnee coordonnee )
 	{
 		damier[coordonnee.getY()][coordonnee.getX()] = piece;
 	}
 
-	public Piece getPieceAt( Coordonnee coordonnee )
+	public T getPieceAt( Coordonnee coordonnee )
 	{
 		return damier[coordonnee.getY()][coordonnee.getX()];
 	}
 
 	public boolean estPlein()
 	{
-		for( Piece[] ligne : damier )
-			for( Piece piece : ligne )
+		for( T[] ligne : damier )
+			for( T piece : ligne )
 				if( piece == null )
 					return false;
 		
@@ -83,10 +83,10 @@ public class Plateau
 	{
 		for( int indexLigne = 0; indexLigne < damier.length; indexLigne++ )
 		{
-			Piece[] ligne = damier[indexLigne];
+			T[] ligne = damier[indexLigne];
 			for( int indexColonne = 0; indexColonne < ligne.length; indexColonne++ )
 			{
-				Piece p = ligne[indexColonne];
+				T p = ligne[indexColonne];
 				if( p == piece )
 					return new Coordonnee( indexColonne, indexColonne );
 			}

@@ -1,5 +1,6 @@
 package fr.lteconsulting;
 
+// TODO : exercice supplémentaire : rendre variable le nombre de lignes et de colonnes
 public class Puissance4
 {
 	private Plateau plateau;
