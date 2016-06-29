@@ -44,4 +44,27 @@ public class Saisie
 		return new Coordonnee( abscisse - 1, ordonnee - 1 );
 	}
 
+	public static CouleurNB saisieCouleurNB( String message )
+	{
+		message += " (";
+		for( CouleurNB valeurPossible : CouleurNB.values() )
+			message += valeurPossible + " ";
+		message += " )";
+		
+		String saisieUtilisateur = saisie( message );
+		return CouleurNB.valueOf( saisieUtilisateur );
+	}
+
+	public static boolean estNumerique( String s )
+	{
+		for( int i = 0; i < s.length(); i++ )
+		{
+			char c = s.charAt( i );
+			if( !Character.isDigit( c ) )
+				return false;
+		}
+
+		return true;
+	}
+
 }

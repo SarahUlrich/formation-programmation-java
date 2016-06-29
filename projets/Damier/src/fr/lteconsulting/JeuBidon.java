@@ -26,8 +26,10 @@ public class JeuBidon
 				// Si la réponse est OUI :
 				Coordonnee coordonnee = Saisie.saisieCoordonnee( "A quelle coordonnée ? (abscisse;ordonnee)" );
 
+				CouleurNB couleur = Saisie.saisieCouleurNB( "De quelle couleur ?" );
+
 				// Placer une nouvelle pièce sur le plateau à l'endroit choisi par l'utilisateur.
-				plateau.placer( new Dame( CouleurNB.Blanc ), coordonnee );
+				plateau.placer( new Dame( couleur ), coordonnee );
 
 				// Afficher le tableau
 				plateau.afficher();
