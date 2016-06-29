@@ -49,8 +49,8 @@ public class Saisie
 		message += " (";
 		for( CouleurNB valeurPossible : CouleurNB.values() )
 			message += valeurPossible + " ";
-		message += " )";
-		
+		 message += " )";
+
 		String saisieUtilisateur = saisie( message );
 		return CouleurNB.valueOf( saisieUtilisateur );
 	}

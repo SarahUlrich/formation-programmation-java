@@ -13,28 +13,22 @@ public class JeuBidon
 	{
 		while( true )
 		{
-			// Poser la question : "Voulez-vous ajouter une pièce ?"
 			String reponseAjoutPiece = Saisie.saisie( "Voulez-vous ajouter une pièce ? (oui/non)" );
 
-			if( !"oui".equalsIgnoreCase( reponseAjoutPiece ) )
+			if( "oui".equalsIgnoreCase( reponseAjoutPiece ) )
 			{
-				System.out.println( "Bravo tu as bien joué, à bientôt..." );
-				return;
+				Coordonnee coordonnee = Saisie.saisieCoordonnee( "A quelle coordonnée ? (abscisse;ordonnee)" );
+				
+				CouleurNB couleur = Saisie.saisieCouleurNB( "De quelle couleur ?" );
+				
+				plateau.placer( new Dame( couleur ), coordonnee );
+				
+				plateau.afficher();
 			}
 			else
 			{
-				// Si la réponse est OUI :
-				Coordonnee coordonnee = Saisie.saisieCoordonnee( "A quelle coordonnée ? (abscisse;ordonnee)" );
-
-				CouleurNB couleur = Saisie.saisieCouleurNB( "De quelle couleur ?" );
-
-				// Placer une nouvelle pièce sur le plateau à l'endroit choisi par l'utilisateur.
-				plateau.placer( new Dame( couleur ), coordonnee );
-
-				// Afficher le tableau
-				plateau.afficher();
-
-				// Recommencer
+				System.out.println( "Bravo tu as bien joué, à bientôt..." );
+				return;
 			}
 		}
 	}

@@ -4,10 +4,17 @@ public class TestPlateau
 {
 	public static void main( String[] args )
 	{
-		testJeuBidon();
+		testPuissance4();
+		// testJeuBidon();
 		// testSaisie();
 		// testDames();
 		// testDeBase();
+	}
+
+	private static void testPuissance4()
+	{
+		Puissance4 jeu = new Puissance4();
+		jeu.jouer();
 	}
 
 	private static void testJeuBidon()

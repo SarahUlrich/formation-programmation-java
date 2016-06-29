@@ -12,15 +12,7 @@ public class Dame extends Piece
 	@Override
 	public char getDisplayChar()
 	{
-		switch( couleur )
-		{
-			case Noir:
-				return 'N';
-			case Blanc:
-				return 'B';
-		}
-
-		return '?';
+		return couleur.getDisplayChar();
 	}
 
 }

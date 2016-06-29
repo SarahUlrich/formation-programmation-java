@@ -87,14 +87,15 @@ Créer les deux instances de `Joueur` correspondants aux deux joueurs
 TANT QUE (personne n'a gagné) ET QUE (le plateau n'est pas complètement rempli -> penser à implémenter une méthode Plateau.estPlein())
 	Alterner le joueur
 	Déclarer une variable `int ligneInsertion`
+	Déclarer une variable `int colonneInsertion`
 	FAIRE (correspond à une boucle do...while)
-		Saisir la colonne d'insertion, stocker le résultat dans une variable `colonneSaisie`
-		ligneInsertion = getPremiereLigneVide( colonneSaisie )
+		Saisir la colonne d'insertion, stocker le résultat dans une variable `colonneInsertion`
+		ligneInsertion = getPremiereLigneVide( colonneInsertion )
 		SI ligneInsertion < 0
 			AFFICHER MESSAGE : "La colonne est pleine, choisis-en une autre !"
 		FIN SI
 	TANT QUE( ligneInsertion < 0 )
-	Placer la pièce
+	Placer la pièce à la coordonnée [colonneInsertion;ligneInsertion]
 	Afficher le terrain
 FIN TANT QUE
 AFFICHER Math nul ou le gagnant
