@@ -118,6 +118,79 @@ Un tableau stocke la classe des éléments qu'il stocke. Il provoque une excepti
 
 `IndexOutOfBoundsExeption`
 
+=== La classe `String`
+
+La classe `String` sert à représenter des chaînes de caractères (qui ont le plus souvent comme objectif d'être affichées à un moment où un autre à l'utilisateur).
+
+Voici quelques méthodes de la classe `String` que vous pourrez trouver utiles :
+
+==== `boolean startsWith( String other )`, `boolean endsWith( String other )`
+
+Permet de savoir si une chaîne commence par une autre (ou termine pour la méthode `endsWith()`).
+
+==== `String[] split( String splitter )`
+
+Permet de découper une chaîne de caractère en morceaux séparés par la chaine `splitter`.
+
+Exemple :
+
+[source,language="java"]
+----
+String s = "5;6";
+
+// partage la chaine "5;6" en utilisant ';' comme séparateur
+String[] parts = s.split( ";" );
+
+// affiche "2"
+System.out.println( parts.length );
+
+// affiche "5"
+System.out.println( parts[0] );
+
+// affiche "6"
+System.out.println( parts[1] );
+----
+
+==== `String trim()`
+
+Renvoie la chaine sans les espaces de début et de fin.
+
+Par exemple appeller cette méthode sur la chaine "  Bonjour Madame  " retournera la chaine "Bonjour Madame".
+
+==== `String toLowerCase()`
+
+Retourne une chaine dans laquelle les majuscules ont été transformées en minuscules.
+
+==== `String toUpperCase()`
+
+Retourne une chaine dans laquelle les minuscules ont été transformées en majuscules.
+
+==== `boolean isEmpty()`
+
+Retourne `true` si la chaine de caractères est vide, `false` sinon.
+
+==== `int length()`
+
+Retourne la longueur de la chaîne de caractères.
+
+==== `boolean equals( Object other )`, `boolean equalsIgnoreCase( String other )`
+
+Retourne `true` si la chaine passée en paramètre est identique à celle sur laquelle on appelle la méthode. La méthode `equalsIgnoreCase` ignore la casse lors de la comparaison.
+
+==== `int indexOf( String part )`
+
+Cherche dans la chaine si elle contient `part`, auquel cas cette méthode retourne l'index où de trouve `part` dans la chaîne sur laquelle on appelle cette méthode. Elle retourne *-1* si `part` n'est pas trouvée.
+
+==== `substring( int start, int end )`
+
+Retourne une sous chaine de la chaine sur laquelle est appellée la méthode, en commençant à l'index `start` et en terminant à l'index `end` _exclu_.
+
+==== `replace( String motif, String par )`, `replaceAll( String motif, String par )`
+
+Retourne une chaine dans laquelle l'occurence de `motif` a été remplacée par `par`. La méthode `replaceAll` remplace *toutes* les occurences.
+
+NOTE: Attention, le paramètre `motif` est en fait interprété comme une expression régulière.
+
 === Structures de controle
 
 === Ecrire une classe
@@ -424,7 +497,15 @@ tableau.set( 4, "Une chaine de caractère" );
 
 === Classes anonymes
 
-=== Quelques classes du SDK : `Iterable<T>` et la boucle for, `Comparable<T>`, `ArrayList<>`, `List<>`, `StringBuilder`, ...
+=== Quelques classes du SDK
+
+==== `Iterable<T>` et la boucle for
+
+==== `Comparable<T>`
+
+==== `ArrayList<>`, `List<>`
+
+==== `StringBuilder`, ...
 
 *Exercice* : implémenter `Iterable<T>` dans TableauDynamique et utiliser la forme _foreach_ de la boucle `for` dans le projet des cartes.
 
@@ -434,9 +515,9 @@ tableau.set( 4, "Une chaine de caractère" );
 
 == A suivre...
 
+- Design patterns
 - Java EE - Architectures distribuées
 - Java EE - Servlets, JSP, EJB
-- Design patterns
 - Spring IOC et TDD
 - XML, DTD, XSL, XSLT
 - SOA - Approche orientée services

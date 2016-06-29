@@ -452,6 +452,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_variables">Variables</a></li>
 <li><a href="#_les_types_primitifs">Les types primitifs</a></li>
 <li><a href="#_les_tableaux">Les tableaux</a></li>
+<li><a href="#_la_classe_code_string_code">La classe <code>String</code></a></li>
 <li><a href="#_structures_de_controle">Structures de controle</a></li>
 <li><a href="#_ecrire_une_classe">Ecrire une classe</a></li>
 <li><a href="#_classes_abstraites">Classes abstraites</a></li>
@@ -465,7 +466,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_classes_imbriquées">Classes imbriquées</a></li>
 <li><a href="#_classes_imbriquées_2">Classes imbriquées</a></li>
 <li><a href="#_classes_anonymes">Classes anonymes</a></li>
-<li><a href="#_quelques_classes_du_sdk_code_iterable_t_code_et_la_boucle_for_code_comparable_t_code_code_arraylist_code_code_list_code_code_stringbuilder_code">Quelques classes du SDK : <code>Iterable&lt;T&gt;</code> et la boucle for, <code>Comparable&lt;T&gt;</code>, <code>ArrayList&lt;&gt;</code>, <code>List&lt;&gt;</code>, <code>StringBuilder</code>, &#8230;&#8203;</a></li>
+<li><a href="#_quelques_classes_du_sdk">Quelques classes du SDK</a></li>
 <li><a href="#_les_exceptions">Les exceptions</a></li>
 <li><a href="#_communication_entre_objets_patterns_de_communication">Communication entre objets (patterns de communication)</a></li>
 </ul>
@@ -666,6 +667,116 @@ System.out.println( "La valeur de v est : " + v ); <b class="conum">(2)</b></cod
 </div>
 <div class="paragraph">
 <p><code>IndexOutOfBoundsExeption</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_la_classe_code_string_code">La classe <code>String</code></h3>
+<div class="paragraph">
+<p>La classe <code>String</code> sert à représenter des chaînes de caractères (qui ont le plus souvent comme objectif d&#8217;être affichées à un moment où un autre à l&#8217;utilisateur).</p>
+</div>
+<div class="paragraph">
+<p>Voici quelques méthodes de la classe <code>String</code> que vous pourrez trouver utiles :</p>
+</div>
+<div class="sect3">
+<h4 id="__code_boolean_startswith_string_other_code_code_boolean_endswith_string_other_code"><code>boolean startsWith( String other )</code>, <code>boolean endsWith( String other )</code></h4>
+<div class="paragraph">
+<p>Permet de savoir si une chaîne commence par une autre (ou termine pour la méthode <code>endsWith()</code>).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__code_string_split_string_splitter_code"><code>String[] split( String splitter )</code></h4>
+<div class="paragraph">
+<p>Permet de découper une chaîne de caractère en morceaux séparés par la chaine <code>splitter</code>.</p>
+</div>
+<div class="paragraph">
+<p>Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">String s = "5;6";
+
+// partage la chaine "5;6" en utilisant ';' comme séparateur
+String[] parts = s.split( ";" );
+
+// affiche "2"
+System.out.println( parts.length );
+
+// affiche "5"
+System.out.println( parts[0] );
+
+// affiche "6"
+System.out.println( parts[1] );</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__code_string_trim_code"><code>String trim()</code></h4>
+<div class="paragraph">
+<p>Renvoie la chaine sans les espaces de début et de fin.</p>
+</div>
+<div class="paragraph">
+<p>Par exemple appeller cette méthode sur la chaine "  Bonjour Madame  " retournera la chaine "Bonjour Madame".</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__code_string_tolowercase_code"><code>String toLowerCase()</code></h4>
+<div class="paragraph">
+<p>Retourne une chaine dans laquelle les majuscules ont été transformées en minuscules.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__code_string_touppercase_code"><code>String toUpperCase()</code></h4>
+<div class="paragraph">
+<p>Retourne une chaine dans laquelle les minuscules ont été transformées en majuscules.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__code_boolean_isempty_code"><code>boolean isEmpty()</code></h4>
+<div class="paragraph">
+<p>Retourne <code>true</code> si la chaine de caractères est vide, <code>false</code> sinon.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__code_int_length_code"><code>int length()</code></h4>
+<div class="paragraph">
+<p>Retourne la longueur de la chaîne de caractères.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__code_boolean_equals_object_other_code_code_boolean_equalsignorecase_string_other_code"><code>boolean equals( Object other )</code>, <code>boolean equalsIgnoreCase( String other )</code></h4>
+<div class="paragraph">
+<p>Retourne <code>true</code> si la chaine passée en paramètre est identique à celle sur laquelle on appelle la méthode. La méthode <code>equalsIgnoreCase</code> ignore la casse lors de la comparaison.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__code_int_indexof_string_part_code"><code>int indexOf( String part )</code></h4>
+<div class="paragraph">
+<p>Cherche dans la chaine si elle contient <code>part</code>, auquel cas cette méthode retourne l&#8217;index où de trouve <code>part</code> dans la chaîne sur laquelle on appelle cette méthode. Elle retourne <strong>-1</strong> si <code>part</code> n&#8217;est pas trouvée.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__code_substring_int_start_int_end_code"><code>substring( int start, int end )</code></h4>
+<div class="paragraph">
+<p>Retourne une sous chaine de la chaine sur laquelle est appellée la méthode, en commençant à l&#8217;index <code>start</code> et en terminant à l&#8217;index <code>end</code> <em>exclu</em>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__code_replace_string_motif_string_par_code_code_replaceall_string_motif_string_par_code"><code>replace( String motif, String par )</code>, <code>replaceAll( String motif, String par )</code></h4>
+<div class="paragraph">
+<p>Retourne une chaine dans laquelle l&#8217;occurence de <code>motif</code> a été remplacée par <code>par</code>. La méthode <code>replaceAll</code> remplace <strong>toutes</strong> les occurences.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Attention, le paramètre <code>motif</code> est en fait interprété comme une expression régulière.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -1152,9 +1263,24 @@ tableau.set( 4, "Une chaine de caractère" );</code></pre>
 
 </div>
 <div class="sect2">
-<h3 id="_quelques_classes_du_sdk_code_iterable_t_code_et_la_boucle_for_code_comparable_t_code_code_arraylist_code_code_list_code_code_stringbuilder_code">Quelques classes du SDK : <code>Iterable&lt;T&gt;</code> et la boucle for, <code>Comparable&lt;T&gt;</code>, <code>ArrayList&lt;&gt;</code>, <code>List&lt;&gt;</code>, <code>StringBuilder</code>, &#8230;&#8203;</h3>
+<h3 id="_quelques_classes_du_sdk">Quelques classes du SDK</h3>
+<div class="sect3">
+<h4 id="__code_iterable_t_code_et_la_boucle_for"><code>Iterable&lt;T&gt;</code> et la boucle for</h4>
+
+</div>
+<div class="sect3">
+<h4 id="__code_comparable_t_code"><code>Comparable&lt;T&gt;</code></h4>
+
+</div>
+<div class="sect3">
+<h4 id="__code_arraylist_code_code_list_code"><code>ArrayList&lt;&gt;</code>, <code>List&lt;&gt;</code></h4>
+
+</div>
+<div class="sect3">
+<h4 id="__code_stringbuilder_code"><code>StringBuilder</code>, &#8230;&#8203;</h4>
 <div class="paragraph">
 <p><strong>Exercice</strong> : implémenter <code>Iterable&lt;T&gt;</code> dans TableauDynamique et utiliser la forme <em>foreach</em> de la boucle <code>for</code> dans le projet des cartes.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -1173,13 +1299,13 @@ tableau.set( 4, "Une chaine de caractère" );</code></pre>
 <div class="ulist">
 <ul>
 <li>
+<p>Design patterns</p>
+</li>
+<li>
 <p>Java EE - Architectures distribuées</p>
 </li>
 <li>
 <p>Java EE - Servlets, JSP, EJB</p>
-</li>
-<li>
-<p>Design patterns</p>
 </li>
 <li>
 <p>Spring IOC et TDD</p>
@@ -1224,7 +1350,7 @@ tableau.set( 4, "Une chaine de caractère" );</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-28 07:25:38 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-06-29 10:38:55 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
