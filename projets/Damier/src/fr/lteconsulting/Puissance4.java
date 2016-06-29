@@ -24,45 +24,54 @@ public class Puissance4
 		int tour = 0;
 		JoueurPuissance4 joueurGagnant = null;
 
-		while( plateau.possedeCasesVides() )
+		while( joueurGagnant == null && plateau.possedeCasesVides() )
 		{
 			plateau.afficher();
 
 			JoueurPuissance4 joueur = joueurs[tour % 2];
 
-			int ligneInsertion;
-			int colonneInsertion;
-			do
-			{
-				colonneInsertion = Saisie.saisieInt( "A quelle colonne jouez vous " + joueur.getNom() + " ?" );
+			Coordonnee coordonneeInsertion = saisirCoordonneeInsertion( joueur );
 
-				// les index commencent à 1 dans la tête de l'utilisateur
-				colonneInsertion = colonneInsertion - 1;
-
-				ligneInsertion = getPremiereLigneVide( colonneInsertion );
-				if( ligneInsertion < 0 )
-					System.out.println( "NON !!! Pas possible, cette colonne est pleine !!!" );
-			}
-			while( ligneInsertion < 0 );
-
-			Coordonnee coordonneeInsertion = new Coordonnee( colonneInsertion, ligneInsertion );
 			plateau.placer( new Jeton( joueur.getCouleur() ), coordonneeInsertion );
 
 			if( estPositionGagnante( coordonneeInsertion, joueur.getCouleur() ) )
-			{
 				joueurGagnant = joueur;
-				break;
-			}
 
 			tour += 1;
 		}
 
+		System.out.println();
+		
+		plateau.afficher();
+		
 		System.out.println();
 
 		if( joueurGagnant == null )
 			System.out.println( "Match nul !" );
 		else
 			System.out.printf( "Bravo à %s, la partie est gagné en %d tours !", joueurGagnant.getNom(), tour );
+	}
+
+	private Coordonnee saisirCoordonneeInsertion( JoueurPuissance4 joueur )
+	{
+		int ligneInsertion;
+		int colonneInsertion;
+
+		do
+		{
+			colonneInsertion = Saisie.saisieInt( "A quelle colonne jouez vous " + joueur.getNom() + " ?" );
+
+			// les index commencent à 1 dans la tête de l'utilisateur
+			colonneInsertion = colonneInsertion - 1;
+
+			ligneInsertion = getPremiereLigneVide( colonneInsertion );
+
+			if( ligneInsertion < 0 )
+				System.out.println( "NON !!! Pas possible, cette colonne est pleine !!!" );
+		}
+		while( ligneInsertion < 0 );
+
+		return new Coordonnee( colonneInsertion, ligneInsertion );
 	}
 
 	/**
