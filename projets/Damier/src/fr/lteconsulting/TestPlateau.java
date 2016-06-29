@@ -1,5 +1,11 @@
 package fr.lteconsulting;
 
+import fr.lteconsulting.bidon.CouleurNB;
+import fr.lteconsulting.bidon.Dame;
+import fr.lteconsulting.bidon.Galet;
+import fr.lteconsulting.bidon.JeuBidon;
+import fr.lteconsulting.puissance4.Puissance4;
+
 public class TestPlateau
 {
 	public static void main( String[] args )

@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import fr.lteconsulting.bidon.CouleurNB;
+
 public class Saisie
 {
 	public static String saisie( String message )
