@@ -4,10 +4,10 @@ public class TestPlateau
 {
 	public static void main( String[] args )
 	{
-		testPuissance4();
-		testSaisie();
+		// testPuissance4();
+		// testSaisie();
 		testDames();
-		testDeBase();
+		//testDeBase();
 	}
 
 	private static void testPuissance4()
@@ -16,7 +16,7 @@ public class TestPlateau
 
 	private static void testSaisie()
 	{
-		Plateau plateau = new Plateau( 9, 9 );
+		Plateau plateau = new Plateau( 15, 15 );
 
 		int nb = 10;
 
@@ -41,15 +41,16 @@ public class TestPlateau
 
 	private static void testDames()
 	{
-		Plateau plateau = new Plateau( 10, 10 );
+		int size = 20;
+		Plateau plateau = new Plateau( size, size );
 
-		for( int i = 0; i < 10; i++ )
+		for( int i = 0; i < size; i++ )
 		{
 			plateau.placer( new Dame( CouleurNB.Noir ), new Coordonnee( i, (1 + i) % 2 ) );
 			plateau.placer( new Dame( CouleurNB.Noir ), new Coordonnee( i, 2 + (1 + i) % 2 ) );
 
-			plateau.placer( new Dame( CouleurNB.Blanc ), new Coordonnee( i, 6 + (1 + i) % 2 ) );
-			plateau.placer( new Dame( CouleurNB.Blanc ), new Coordonnee( i, 8 + (1 + i) % 2 ) );
+			plateau.placer( new Dame( CouleurNB.Blanc ), new Coordonnee( i, size - 4 + (1 + i) % 2 ) );
+			plateau.placer( new Dame( CouleurNB.Blanc ), new Coordonnee( i, size - 2 + (1 + i) % 2 ) );
 		}
 
 		plateau.afficher();

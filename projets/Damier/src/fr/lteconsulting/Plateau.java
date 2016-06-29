@@ -10,20 +10,40 @@ public class Plateau
 	 */
 	private Piece[][] damier;
 
+	private int largeur;
+
 	public Plateau( int largeur, int hauteur )
 	{
+		this.largeur = largeur;
+		
 		damier = new Piece[hauteur][largeur];
+		
+		String s = "5;6";
+		String[] parts = s.split( ";" );
+		
+		// affiche "5"
+		System.out.println( parts[0] );
+		
+		// affiche "6"
+		System.out.println( parts[1] );
 	}
 
 	public void afficher()
 	{
 		System.out.println();
 
+		afficherBordHaut();
+
+		afficherEchelleHorizontaleRomaine();
+
 		for( int l = 0; l < damier.length; l++ )
 		{
 			Piece[] ligne = damier[l];
 
-			System.out.print( (1 + l) + " " );
+			System.out.print( "| " );
+
+			int numeroLigne = l + 1;
+			System.out.printf( "%2d ", numeroLigne );
 
 			for( Piece piece : ligne )
 			{
@@ -33,18 +53,14 @@ public class Plateau
 					System.out.print( piece.getDisplayChar() );
 			}
 
-			System.out.print( " " + (1 + l) );
+			System.out.printf( " %2d |", numeroLigne );
 
 			System.out.println();
 		}
 
-		System.out.print( "  " );
-		for( int i = 0; i < 9; i++ )
-		{
-			System.out.print( (char)('A' + i) );
-		}
+		afficherEchelleHorizontaleNaturelle();
 
-		System.out.println();
+		afficherBordBas();
 	}
 
 	public void placer( Piece piece, Coordonnee coordonnee )
@@ -73,4 +89,59 @@ public class Plateau
 		return null;
 	}
 
+	private void afficherBordHaut()
+	{
+		System.out.print( "/" );
+		for( int i = 0; i < 8 + largeur; i++ )
+			System.out.print( "-" );
+		System.out.println( "\\" );
+	}
+
+	private void afficherBordBas()
+	{
+		System.out.print( "\\" );
+		for( int i = 0; i < 8 + largeur; i++ )
+			System.out.print( "-" );
+		System.out.println( "/" );
+	}
+
+	private void afficherEchelleHorizontaleRomaine()
+	{
+		System.out.print( "|    " );
+		for( int i = 0; i < largeur; i++ )
+		{
+			int dizaine = i / 26;
+			System.out.print( (char) ('A' + dizaine) );
+		}
+		System.out.println( "    |" );
+
+		System.out.print( "|    " );
+		for( int i = 0; i < largeur; i++ )
+		{
+			int unite = i % 26;
+			System.out.print( (char) ('A' + unite) );
+		}
+		System.out.println( "    |" );
+	}
+
+	private void afficherEchelleHorizontaleNaturelle()
+	{
+		System.out.print( "|    " );
+		for( int i = 1; i <= largeur; i++ )
+		{
+			int dizaine = i / 10;
+
+			System.out.printf( "%1d", dizaine );
+		}
+		System.out.println( "    |" );
+
+		System.out.print( "|    " );
+		for( int i = 1; i <= largeur; i++ )
+		{
+			int unite = i % 10;
+
+			System.out.printf( "%1d", unite );
+		}
+		System.out.println( "    |" );
+	}
 }
