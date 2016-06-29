@@ -3,7 +3,7 @@ package fr.lteconsulting;
 /**
  * Un plateau est une grille (à deux dimensions) contenant des {@link Piece}.
  */
-public class Plateau<T>
+public class Plateau<T extends Piece>
 {
 	/**
 	 * La première dimension représente les ordonnées et la deuxième les abscisses
@@ -12,11 +12,12 @@ public class Plateau<T>
 
 	private int largeur;
 
+	@SuppressWarnings( "unchecked" )
 	public Plateau( int largeur, int hauteur )
 	{
 		this.largeur = largeur;
 
-		damier = (T[][]) new Object[hauteur][largeur];
+		damier = (T[][]) new Piece[hauteur][largeur];
 	}
 
 	public void afficher()

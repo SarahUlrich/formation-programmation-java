@@ -3,11 +3,11 @@ package fr.lteconsulting;
 // TODO : exercice supplémentaire : rendre variable le nombre de lignes et de colonnes
 public class Puissance4
 {
-	private Plateau plateau;
+	private Plateau<Jeton> plateau;
 
 	public Puissance4()
 	{
-		plateau = new Plateau( 7, 6 );
+		plateau = new Plateau<>( 7, 6 );
 	}
 
 	public void jouer()
@@ -62,12 +62,9 @@ public class Puissance4
 
 	private boolean positionVictorieuse( Coordonnee origine )
 	{
-		Piece piece = plateau.getPieceAt( origine );
-		if( piece == null )
+		Jeton jeton = plateau.getPieceAt( origine );
+		if( jeton == null )
 			return false;
-
-		// TODO : ce transtypage c'est pas juste, il y a une meilleure façon de faire en java ...
-		Jeton jeton = (Jeton) piece;
 
 		CouleurPuissance4 couleur = jeton.getCouleur();
 
@@ -118,13 +115,10 @@ public class Puissance4
 			if( (x < 0) || (x > 6) || (y < 0) || (y > 5) )
 				break;
 
-			Piece piece = plateau.getPieceAt( new Coordonnee( x, y ) );
-
-			// TODO : ce transtypage c'est pas juste, il y a une meilleure façon de faire en java ...
-			Jeton jeton = (Jeton) piece;
+			Jeton jeton = plateau.getPieceAt( new Coordonnee( x, y ) );
 
 			// condition d'arrêt
-			if( piece == null || jeton.getCouleur() != couleur )
+			if( jeton == null || jeton.getCouleur() != couleur )
 				break;
 
 		}

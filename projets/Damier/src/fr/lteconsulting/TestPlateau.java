@@ -25,7 +25,7 @@ public class TestPlateau
 
 	private static void testSaisie()
 	{
-		Plateau plateau = new Plateau( 15, 15 );
+		Plateau<Piece> plateau = new Plateau<>( 15, 15 );
 
 		int nb = 10;
 
@@ -51,7 +51,7 @@ public class TestPlateau
 	private static void testDames()
 	{
 		int size = 20;
-		Plateau plateau = new Plateau( size, size );
+		Plateau<Dame> plateau = new Plateau<>( size, size );
 
 		for( int i = 0; i < size; i++ )
 		{
@@ -67,7 +67,7 @@ public class TestPlateau
 
 	private static void testDeBase()
 	{
-		Plateau plateau = new Plateau( 10, 10 );
+		Plateau<Galet> plateau = new Plateau<>( 10, 10 );
 
 		plateau.afficher();
 

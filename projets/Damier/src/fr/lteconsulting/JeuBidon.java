@@ -2,11 +2,11 @@ package fr.lteconsulting;
 
 public class JeuBidon
 {
-	private Plateau plateau;
+	private Plateau<Dame> plateau;
 
 	public JeuBidon()
 	{
-		plateau = new Plateau( 13, 5 );
+		plateau = new Plateau<>( 13, 5 );
 	}
 
 	public void jouer()
