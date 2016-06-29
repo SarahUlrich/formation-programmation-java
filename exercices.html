@@ -5,6 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
+<meta name="author" content="Arnaud Tournier">
 <title>Exercices Programmation Java</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -420,10 +421,43 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <body class="article">
 <div id="header">
 <h1>Exercices Programmation Java</h1>
+<div class="details">
+<span id="author" class="author">Arnaud Tournier</span><br>
+<span id="email" class="email"><a href="mailto:ltearno@gmail.com">ltearno@gmail.com</a></span><br>
+</div>
 </div>
 <div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>LTE Consulting &#169; - 2016</p>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle" class="title">Exercices de programmation orientée objet avec Java</div>
+<ul class="sectlevel1">
+<li><a href="#_créer_une_bibliothèque_pour_nos_jeux">Créer une bibliothèque pour nos jeux</a></li>
+<li><a href="#_jeu_bidon_sur_plateau">Jeu bidon sur Plateau</a>
+<ul class="sectlevel2">
+<li><a href="#_première_étape">Première étape</a></li>
+<li><a href="#_deuxième_étape">Deuxième étape</a></li>
+<li><a href="#_etapes_suivantes">Etapes suivantes</a></li>
+</ul>
+</li>
+<li><a href="#_jeu_de_puissance_4">Jeu de Puissance 4</a>
+<ul class="sectlevel2">
+<li><a href="#_etape_1_création_des_classes">Etape 1 : création des classes</a></li>
+<li><a href="#_etape_2_implémentation_de_l_algorithme">Etape 2 : implémentation de l&#8217;algorithme</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ces exercices sont Open Source et sont disponibles en ligne : <a href="https://github.com/ltearno/formation-programmation-java">github.com/ltearno/formation-programmation-java</a></p>
+</div>
+</div>
+</div>
 <div class="sect1">
-<h2 id="_créer_une_bibliothèque">Créer une bibliothèque</h2>
+<h2 id="_créer_une_bibliothèque_pour_nos_jeux">Créer une bibliothèque pour nos jeux</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Une classe <code>Plateau</code></p>
@@ -456,7 +490,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">JeuBidon jeu = new JeuBidon();
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">JeuBidon jeu = new JeuBidon();
 jeu.jouer();</code></pre>
 </div>
 </div>
@@ -566,8 +600,11 @@ AFFICHER Math nul ou le gagnant</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-29 15:20:35 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-06-29 15:22:30 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
 </body>
 </html>

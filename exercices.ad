@@ -1,6 +1,17 @@
 = Exercices Programmation Java
+:author: Arnaud Tournier
+:email: ltearno@gmail.com
+:toc: macro
+:toc-title: Exercices de programmation orientée objet avec Java
+:source-highlighter: highlightjs
 
-== Créer une bibliothèque
+LTE Consulting (C) - 2016
+
+toc::[]
+
+Ces exercices sont Open Source et sont disponibles en ligne : https://github.com/ltearno/formation-programmation-java[github.com/ltearno/formation-programmation-java]
+
+== Créer une bibliothèque pour nos jeux
 
 Une classe `Plateau`
 
