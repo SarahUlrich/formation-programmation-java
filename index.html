@@ -464,10 +464,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_interfaces">Interfaces</a></li>
 <li><a href="#_les_génériques">Les génériques</a></li>
 <li><a href="#_classes_imbriquées">Classes imbriquées</a></li>
-<li><a href="#_classes_imbriquées_2">Classes imbriquées</a></li>
 <li><a href="#_classes_anonymes">Classes anonymes</a></li>
-<li><a href="#_quelques_classes_du_sdk">Quelques classes du SDK</a></li>
 <li><a href="#_les_exceptions">Les exceptions</a></li>
+<li><a href="#_quelques_classes_du_sdk">Quelques classes du SDK</a></li>
 <li><a href="#_communication_entre_objets_patterns_de_communication">Communication entre objets (patterns de communication)</a></li>
 </ul>
 </li>
@@ -1252,18 +1251,173 @@ tableau.set( 4, "Une chaine de caractère" );</code></pre>
 </div>
 <div class="sect2">
 <h3 id="_classes_imbriquées">Classes imbriquées</h3>
+<div class="paragraph">
+<p>Le langage Java permet de créer des classes à l’intérieur d’une autre classe. On parle de classes imbriquées (<em>nested class</em>)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">class A {
+   private class B{
+   }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Les classes imbriquées sont divisées en deux catégories : <em>statique</em> ou <em>non statique</em>. On parle de classes statiques imbriquées (<em>static nested class</em>) et de classes internes (<em>inner class</em>) pour les classes imbriquées non statiques.</p>
+</div>
+<div class="paragraph">
+<p>Contrairement aux classes classiques qui ne peuvent être définies qu’avec une visibilité <code>public</code> ou <code>package</code>, les classes imbriquées peuvent être aussi bien <code>private</code>, <code>public</code>, <code>protected</code> ou <code>package</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="_classes_internes">Classes internes</h4>
+<div class="paragraph">
+<p>Une classe interne peut avoir accès aux méthodes et aux attributs de la classe englobante même si ces derniers sont déclarés en <strong>private</strong>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public class A {
+    int a = 1;
+    B b = new B();
+    C c = new C();
+
+    class B {
+        void test() {
+            a = a + 1;
+        }
+    }
+
+    class C {
+        void test() {
+            a = a + 1;
+            b.test();
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Une classe interne ne peut pas exister si sa classe englobante n’existe pas. Dans l&#8217;exemple suivant il est donc nécessaire d&#8217;avoir une instance de A pour créer une instance de B :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">void uneMethode() {
+	A a = new A(); <b class="conum">(1)</b>
+
+	B b = a.new B(); <b class="conum">(2)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Création d&#8217;une instance de A.</p>
+</li>
+<li>
+<p>Création d&#8217;une instance de B reliée à a.</p>
+</li>
+</ol>
+</div>
+</div>
 <div class="sect3">
 <h4 id="_classes_imbriquées_statiques">Classes imbriquées statiques</h4>
+<div class="paragraph">
+<p>Une classe imbriquée statique se comporte avec la classe englobante comme n’importe quelle autre classe de haut niveau. Elle <strong>ne peut pas</strong> accéder aux attributs non statiques de la class englobante. Autrement dit, elle ne peut accéder <strong>qu&#8217;aux membres statiques</strong> de la classe englobante.</p>
+</div>
+<div class="paragraph">
+<p>Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public class A {
+    private static int a = 1;
 
+    public static class B {
+        public void test() {
+            a = a + 1;
+        }
+    }
+}</code></pre>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_classes_imbriquées_2">Classes imbriquées</h3>
-
+<div class="paragraph">
+<p>On peut instancier la classe englobée sans avoir de référence à une instance de la classe englobante.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">void uneMethode() {
+	A.B b = new A.B();
+	b.test();
+	System.out.println(A.a);
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_cas_d_utilisation">Cas d&#8217;utilisation</h4>
+<div class="paragraph">
+<p>Les classes imbriquées sont utiles dans plusieurs cas :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Si une classe n’est utile qu’à une autre classe il est logique de l’intégrer directement dedans. Ceci aide à la lisibilité et la maintenabilité du code.</p>
+</li>
+<li>
+<p>Si une classe a besoin d’accéder aux éléments d’une autre classe que l’on souhaite garder avec une visibilité privée, définir cette classe comme classe interne permet de répondre à cette problématique. Ceci améliore l’encapsulation.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_classes_anonymes">Classes anonymes</h3>
+<div class="paragraph">
+<p>Une classe anonyme est une classe déclarée et instanciée en même temps sans définir de nom (il sera donné par le compilateur). Cette classe ne peut être utilisée qu’à l’endroit où elle a été définie.</p>
+</div>
+<div class="paragraph">
+<p>Une classe anonyme a accès à tous les éléments accessibles à l&#8217;endroit de sa définition.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">void uneMethode() {
+	Plateau plateau = new Plateau( 5, 2 );
 
+	Piece piece = new Piece() { <b class="conum">(1)</b>
+		@Override
+		public char getDisplayChar() {
+			return 'X';
+		}
+	}
+
+	plateau.placer( piece, new Coordonnee( 2, 2 ) );
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>On voit ici la création implicite d&#8217;une classe implémentant l&#8217;interface <code>Piece</code>. Cette classe n&#8217;a pas de nom : elle est anonyme.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_les_exceptions">Les exceptions</h3>
+<div class="paragraph">
+<p>Mécanisme de gestion des erreurs en Java.</p>
+</div>
+<div class="paragraph">
+<p>Une <strong>exception</strong> est une instance de la classe (ou sous-classe) <code>Exception</code>. Elle représente une <strong>erreur</strong> survenue pendant le déroulement du programme.</p>
+</div>
+<div class="paragraph">
+<p>Trois mot-clés permettent de détecter et traiter ces erreurs : <code>try</code>, <code>catch</code> et <code>finally</code>.</p>
+</div>
+<div class="paragraph">
+<p>Lorsqu&#8217;une erreur est provoquée, une exception est levée grâce au mot-clé <code>throw</code>.</p>
+</div>
+<div class="paragraph">
+<p>Il est possible d&#8217;indiquer qu&#8217;une méthode peut potentiellement lever un type d&#8217;exception avec le mot-clé <code>throws</code>.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_quelques_classes_du_sdk">Quelques classes du SDK</h3>
@@ -1285,10 +1439,6 @@ tableau.set( 4, "Une chaine de caractère" );</code></pre>
 <p><strong>Exercice</strong> : implémenter <code>Iterable&lt;T&gt;</code> dans TableauDynamique et utiliser la forme <em>foreach</em> de la boucle <code>for</code> dans le projet des cartes.</p>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_les_exceptions">Les exceptions</h3>
-
 </div>
 <div class="sect2">
 <h3 id="_communication_entre_objets_patterns_de_communication">Communication entre objets (patterns de communication)</h3>
@@ -1353,7 +1503,7 @@ tableau.set( 4, "Une chaine de caractère" );</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-29 12:06:14 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-06-30 09:15:16 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">

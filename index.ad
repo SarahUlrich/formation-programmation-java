@@ -493,11 +493,130 @@ tableau.set( 4, "Une chaine de caractère" );
 
 === Classes imbriquées
 
+Le langage Java permet de créer des classes à l’intérieur d’une autre classe. On parle de classes imbriquées (_nested class_)
+
+[source,language="java"]
+----
+class A {
+   private class B{
+   }
+}
+----
+
+Les classes imbriquées sont divisées en deux catégories : _statique_ ou _non statique_. On parle de classes statiques imbriquées (_static nested class_) et de classes internes (_inner class_) pour les classes imbriquées non statiques.
+
+Contrairement aux classes classiques qui ne peuvent être définies qu’avec une visibilité `public` ou `package`, les classes imbriquées peuvent être aussi bien `private`, `public`, `protected` ou `package`.
+
+==== Classes internes
+
+Une classe interne peut avoir accès aux méthodes et aux attributs de la classe englobante même si ces derniers sont déclarés en *private*.
+
+[source,language="java"]
+----
+public class A {
+    int a = 1;
+    B b = new B();
+    C c = new C();
+    
+    class B {
+        void test() {
+            a = a + 1;
+        }
+    }
+	
+    class C {
+        void test() {
+            a = a + 1;
+            b.test();
+        }
+    }
+}
+----
+
+Une classe interne ne peut pas exister si sa classe englobante n’existe pas. Dans l'exemple suivant il est donc nécessaire d'avoir une instance de A pour créer une instance de B :
+
+[source,language="java"]
+----
+void uneMethode() {
+	A a = new A(); <1>
+	
+	B b = a.new B(); <2>
+}
+----
+<1> Création d'une instance de A.
+<2> Création d'une instance de B reliée à a.
+
 ==== Classes imbriquées statiques
 
-===  Classes imbriquées
+Une classe imbriquée statique se comporte avec la classe englobante comme n’importe quelle autre classe de haut niveau. Elle *ne peut pas* accéder aux attributs non statiques de la class englobante. Autrement dit, elle ne peut accéder *qu'aux membres statiques* de la classe englobante.
+
+Exemple :
+
+[source,language="java"]
+----
+public class A {
+    private static int a = 1;
+    
+    public static class B {
+        public void test() {
+            a = a + 1;
+        }
+    }
+}
+----
+
+On peut instancier la classe englobée sans avoir de référence à une instance de la classe englobante.
+
+[source,language="java"]
+----
+void uneMethode() {
+	A.B b = new A.B();
+	b.test();
+	System.out.println(A.a);
+}
+----
+
+==== Cas d'utilisation
+
+Les classes imbriquées sont utiles dans plusieurs cas :
+
+- Si une classe n’est utile qu’à une autre classe il est logique de l’intégrer directement dedans. Ceci aide à la lisibilité et la maintenabilité du code.
+- Si une classe a besoin d’accéder aux éléments d’une autre classe que l’on souhaite garder avec une visibilité privée, définir cette classe comme classe interne permet de répondre à cette problématique. Ceci améliore l’encapsulation.
 
 === Classes anonymes
+
+Une classe anonyme est une classe déclarée et instanciée en même temps sans définir de nom (il sera donné par le compilateur). Cette classe ne peut être utilisée qu’à l’endroit où elle a été définie.
+
+Une classe anonyme a accès à tous les éléments accessibles à l'endroit de sa définition.
+
+[source,language="java"]
+----
+void uneMethode() {
+	Plateau plateau = new Plateau( 5, 2 );
+	
+	Piece piece = new Piece() { <1>
+		@Override
+		public char getDisplayChar() {
+			return 'X';
+		}
+	}
+	
+	plateau.placer( piece, new Coordonnee( 2, 2 ) );
+}
+----
+<1> On voit ici la création implicite d'une classe implémentant l'interface `Piece`. Cette classe n'a pas de nom : elle est anonyme.
+
+=== Les exceptions
+
+Mécanisme de gestion des erreurs en Java.
+
+Une *exception* est une instance de la classe (ou sous-classe) `Exception`. Elle représente une *erreur* survenue pendant le déroulement du programme.
+
+Trois mot-clés permettent de détecter et traiter ces erreurs : `try`, `catch` et `finally`.
+
+Lorsqu'une erreur est provoquée, une exception est levée grâce au mot-clé `throw`.
+
+Il est possible d'indiquer qu'une méthode peut potentiellement lever un type d'exception avec le mot-clé `throws`.
 
 === Quelques classes du SDK
 
@@ -510,8 +629,6 @@ tableau.set( 4, "Une chaine de caractère" );
 ==== `StringBuilder`, ...
 
 *Exercice* : implémenter `Iterable<T>` dans TableauDynamique et utiliser la forme _foreach_ de la boucle `for` dans le projet des cartes.
-
-=== Les exceptions
 
 === Communication entre objets (patterns de communication)
 
