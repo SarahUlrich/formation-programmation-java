@@ -1418,6 +1418,250 @@ tableau.set( 4, "Une chaine de caractère" );</code></pre>
 <div class="paragraph">
 <p>Il est possible d&#8217;indiquer qu&#8217;une méthode peut potentiellement lever un type d&#8217;exception avec le mot-clé <code>throws</code>.</p>
 </div>
+<div class="sect3">
+<h4 id="_la_hiérarchie_des_classes_d_exception">La hiérarchie des classes d&#8217;Exception</h4>
+<div class="paragraph">
+<p>La classe mère de toutes les exceptions est la classe <code>Throwable</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="java-images/exceptions.png" alt="exceptions">
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>java.lang.Error</code></dt>
+<dd>
+<p>C&#8217;est sous cette classe que sont regroupées toutes les exceptions associées à des erreurs irrécupérables (par exemple: <code>OutOfMemoryError</code>, <code>StackOverflowError</code>, &#8230;&#8203;). Cette classe est réservée à Java, elle est d&#8217;ailleurs déclarée <code>final</code>, ce qui empêche d&#8217;en hériter.</p>
+</dd>
+<dt class="hdlist1"><code>java.lang.Exception</code></dt>
+<dd>
+<p>Cette classe est la classe mère de toutes les exceptions <em>gérées</em> (par exemple <code>FileNotFoundException</code>). C&#8217;est à dire que ces exceptions doivent être déclarées au niveau des signatures des méthodes pouvant les lever (avec le mot-clé <code>throws</code>, voir plus loin dans le cours).</p>
+</dd>
+<dt class="hdlist1"><code>java.lang.RuntimeException</code></dt>
+<dd>
+<p>Cette classe est la classe mère des exceptions <em>non gérées</em> (par exemple <code>NullPointerException</code>), c&#8217;est à dire qui peuvent être levées sans être déclarées au préalable dans la signature de la méthode (voir plus loin dans le cours).</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_la_classe_code_throwable_code">La classe <code>Throwable</code></h4>
+<div class="paragraph">
+<p>La classe <code>Throwable</code> possède les caractéristiques suivantes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>un constructeur par défaut <code>Throwable()</code>,</p>
+</li>
+<li>
+<p>un constructeur <code>Throwable( String message )</code> qui mémorise un message d&#8217;erreur,</p>
+</li>
+<li>
+<p>une méthode <code>String getMessage()</code> qui permet de retrouver le message passé par le constructeur (<code>null</code> sinon),</p>
+</li>
+<li>
+<p>une méthode <code>void printStackTrace()</code> qui écrit dans la sortie standard la pile d&#8217;exécution au moment de la levée de l&#8217;exception,</p>
+</li>
+<li>
+<p>une méthode <code>void printStackTrace( PrintStream stream )</code> qui fait la même chose mais dans le flux indiqué en paramètre.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>La classe <code>Throwable</code> étant la classe mère de <strong>toutes</strong> les exceptions, toutes les exceptions bénéficient de ces fonctionnalités&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_détecter_et_traiter_une_exception">Détecter et traiter une exception</h4>
+<div class="paragraph">
+<p>Si vous exécutez ce code :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public class TestException {
+	public static void main( String[] args ) {
+		int i = 3;
+		int j = 0;
+
+		System.out.println("résultat = " + (i / j));
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Vous provoquerez la levée de l&#8217;exception <code>ArithmeticException</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Exception in thread "main" java.lang.ArithmeticException: by zero
+	at tests.TestException.main(TestException.java:6)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ce message signifie que l&#8217;exception <code>ArithmeticException</code> a été levée mais qu&#8217;elle n&#8217;a été <em>gérée</em> par aucun code de votre programme. L&#8217;effet de ceci est donc l&#8217;arrêt complet du programme.</p>
+</div>
+<div class="paragraph">
+<p>Il est possible de gérer les exceptions levées, de reprendre la main sur l&#8217;exécution du programme et ainsi de poursuivre les opérations, même après la levée d&#8217;une exception. Ceci se fait avec les mot-clés <code>try</code>, <code>catch</code> et <code>finally</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">try {
+	// operation risquées;
+} catch (ExceptionInteressante e) {
+	// traitement de l'exception ExceptionInteressante
+} catch (Exception e) {
+	// traitement du cas d'exception général
+} finally {
+	// traitement exécuté dans tous les cas (exception levée ou pas)
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Les instructions situées dans le bloc <code>try</code> sont <em>surveillées</em> :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Si aucune exception n&#8217;est levée pendant l&#8217;exécution du bloc <code>try</code>, l&#8217;exécution se poursuit avec le contenu du bloc <code>finally</code>.</p>
+</li>
+<li>
+<p>Si une exception est levée pendant l&#8217;exécution du bloc <code>try</code>, l&#8217;exécution de celui-ci s&#8217;arrête immédiatement et l&#8217;exécution se poursuit avec l&#8217;exécution du bloc <code>catch</code> correspondant le mieux au type de l&#8217;exception levée.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Dans tous les cas (exception levée ou pas), le bloc <code>finally</code> est exécuté après les autres (même si on fait <code>return</code> dans le bloc <code>try</code>).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_déclarer_la_potentielle_levée_d_une_exception">Déclarer la potentielle levée d&#8217;une exception</h4>
+<div class="paragraph">
+<p>Lorsqu&#8217;une méthode peut lever une exception <strong>gérée</strong>, celle-ci doit être déclarée au niveau de la signature de la méthode. L&#8217;objectif est multiple : avoir une valeur documentaire, préciser au compilateur que cette méthode pourra lever cette exception et obliger à ce que toute méthode qui l&#8217;appelle devra prendre en compte cette exception (traitement ou propagation).</p>
+</div>
+<div class="paragraph">
+<p>Par exemple, cette méthode doit déclarer <code>throws IOException</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public static String saisir( String message ) throws IOException <b class="conum">(2)</b>
+{
+	System.out.println( message );
+	System.out.print( "&gt; " );
+
+	BufferedReader reader = new BufferedReader( new InputStreamReader( System.in ) );
+	return reader.readLine(); <b class="conum">(1)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>La méthode <code>readLine()</code> peut provoquer l&#8217;exception <code>IOException</code> qui est une sous-classe de <code>Exception</code> (et non de <code>RuntimeException</code>).</p>
+</li>
+<li>
+<p>Ceci oblige à préciser dans le prototype de <code>saisir(&#8230;&#8203;)</code> que cette méthode peut lever <code>IOException</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Si l&#8217;exception potentiellement est gérée par la méthode, alors il n&#8217;est plus nécessaire de la déclarer avec <code>throws</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public static String saisie( String message )
+{
+	System.out.println( message );
+	System.out.print( "&gt; " );
+
+	BufferedReader reader = new BufferedReader( new InputStreamReader( System.in ) );
+	try <b class="conum">(1)</b>
+	{
+		return reader.readLine();
+	}
+	catch( IOException e ) <b class="conum">(2)</b>
+	{
+		e.printStackTrace(); <b class="conum">(3)</b>
+		return null; <b class="conum">(4)</b>
+	}
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>On surveille l&#8217;exécution de la méthode <code>readLine()</code>&#8230;&#8203;</p>
+</li>
+<li>
+<p>On définit le comportement à adopter si l&#8217;exception <code>IOException</code> est levée.</p>
+</li>
+<li>
+<p>On affiche la pile d&#8217;appel ayant provoqué l&#8217;exception.</p>
+</li>
+<li>
+<p>Mais on décide de retourner <code>null</code>&#8230;&#8203;</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_les_exceptions_personnalisées">Les exceptions personnalisées</h4>
+<div class="paragraph">
+<p>Il est évidemment possible de définir des classes d&#8217;exception spécifiques à votre application. Celles-ci doivent être des sous-classes de <code>RuntimeException</code> (pour les exceptions non gérées) ou de <code>Exception</code>.</p>
+</div>
+<div class="paragraph">
+<p>Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public class SaisieErroneeException extends Exception { <b class="conum">(1)</b>
+	public SaisieErroneeException() {
+	}
+
+	public SaisieErroneeException( String s ) {
+		super( s );
+	}
+}
+
+public class TestSaisieErroneeException {
+	public static void controle( String chaine ) throws SaisieErroneeException {
+		if( "".equals( chaine ) == true )
+			throw new SaisieErroneeException("Saisie erronee : chaine vide"); <b class="conum">(2)</b>
+	}
+
+	public static void main( String[] args ) {
+		String chaine1 = "";
+
+		try {
+			controle( chaine1 );
+		} catch ( SaisieErroneeException e ) { <b class="conum">(3)</b>
+			System.out.println( "Saisie erronee: " + e.getMessage() );
+		}
+	}
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Nous sommes en train de définir une exception <em>gérée</em>.</p>
+</li>
+<li>
+<p>Le mot clé <code>throws</code> sert à lever une exception.</p>
+</li>
+<li>
+<p>Le <code>catch</code> ici permet le traitement spécifique de l&#8217;exception <code>SaisieErroneeException</code>. Toute autre classe d&#8217;exception ne sera pas <em>attrapée</em>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_exercices">Exercices</h4>
+<div class="paragraph">
+<p>Vous pouvez effectuer cet <a href="http://perso.telecom-paristech.fr/~charon/coursJava/exercices/fact+Exc.html">exercice</a> pour vous familiariser avec la syntaxe des exceptions.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_quelques_classes_du_sdk">Quelques classes du SDK</h3>
@@ -1503,7 +1747,7 @@ tableau.set( 4, "Une chaine de caractère" );</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-30 09:15:16 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-06-30 15:47:44 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">

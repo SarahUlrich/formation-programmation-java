@@ -618,6 +618,165 @@ Lorsqu'une erreur est provoquée, une exception est levée grâce au mot-clé `t
 
 Il est possible d'indiquer qu'une méthode peut potentiellement lever un type d'exception avec le mot-clé `throws`.
 
+==== La hiérarchie des classes d'Exception
+
+La classe mère de toutes les exceptions est la classe `Throwable`.
+
+image::exceptions.png[]
+
+`java.lang.Error`:: C'est sous cette classe que sont regroupées toutes les exceptions associées à des erreurs irrécupérables (par exemple: `OutOfMemoryError`, `StackOverflowError`, ...). Cette classe est réservée à Java, elle est d'ailleurs déclarée `final`, ce qui empêche d'en hériter.
+
+`java.lang.Exception`:: Cette classe est la classe mère de toutes les exceptions _gérées_ (par exemple `FileNotFoundException`). C'est à dire que ces exceptions doivent être déclarées au niveau des signatures des méthodes pouvant les lever (avec le mot-clé `throws`, voir plus loin dans le cours).
+
+`java.lang.RuntimeException`:: Cette classe est la classe mère des exceptions _non gérées_ (par exemple `NullPointerException`), c'est à dire qui peuvent être levées sans être déclarées au préalable dans la signature de la méthode (voir plus loin dans le cours).
+
+==== La classe `Throwable`
+
+La classe `Throwable` possède les caractéristiques suivantes :
+
+- un constructeur par défaut `Throwable()`,
+- un constructeur `Throwable( String message )` qui mémorise un message d'erreur,
+- une méthode `String getMessage()` qui permet de retrouver le message passé par le constructeur (`null` sinon),
+- une méthode `void printStackTrace()` qui écrit dans la sortie standard la pile d'exécution au moment de la levée de l'exception,
+- une méthode `void printStackTrace( PrintStream stream )` qui fait la même chose mais dans le flux indiqué en paramètre.
+
+La classe `Throwable` étant la classe mère de *toutes* les exceptions, toutes les exceptions bénéficient de ces fonctionnalités...
+
+==== Détecter et traiter une exception
+
+Si vous exécutez ce code :
+
+[source,language="java"]
+----
+public class TestException {
+	public static void main( String[] args ) {
+		int i = 3;
+		int j = 0;
+		
+		System.out.println("résultat = " + (i / j));
+	}
+}
+----
+
+Vous provoquerez la levée de l'exception `ArithmeticException` :
+
+----
+Exception in thread "main" java.lang.ArithmeticException: by zero
+	at tests.TestException.main(TestException.java:6)
+----
+
+Ce message signifie que l'exception `ArithmeticException` a été levée mais qu'elle n'a été _gérée_ par aucun code de votre programme. L'effet de ceci est donc l'arrêt complet du programme.
+
+Il est possible de gérer les exceptions levées, de reprendre la main sur l'exécution du programme et ainsi de poursuivre les opérations, même après la levée d'une exception. Ceci se fait avec les mot-clés `try`, `catch` et `finally` :
+
+[source,language="java"]
+----
+try {
+	// operation risquées;
+} catch (ExceptionInteressante e) {
+	// traitement de l'exception ExceptionInteressante
+} catch (Exception e) {
+	// traitement du cas d'exception général
+} finally {
+	// traitement exécuté dans tous les cas (exception levée ou pas)
+}
+----
+
+Les instructions situées dans le bloc `try` sont _surveillées_ :
+
+- Si aucune exception n'est levée pendant l'exécution du bloc `try`, l'exécution se poursuit avec le contenu du bloc `finally`.
+- Si une exception est levée pendant l'exécution du bloc `try`, l'exécution de celui-ci s'arrête immédiatement et l'exécution se poursuit avec l'exécution du bloc `catch` correspondant le mieux au type de l'exception levée.
+
+Dans tous les cas (exception levée ou pas), le bloc `finally` est exécuté après les autres (même si on fait `return` dans le bloc `try`).
+
+==== Déclarer la potentielle levée d'une exception
+
+Lorsqu'une méthode peut lever une exception *gérée*, celle-ci doit être déclarée au niveau de la signature de la méthode. L'objectif est multiple : avoir une valeur documentaire, préciser au compilateur que cette méthode pourra lever cette exception et obliger à ce que toute méthode qui l'appelle devra prendre en compte cette exception (traitement ou propagation).
+
+Par exemple, cette méthode doit déclarer `throws IOException` :
+
+[source,language="java"]
+----
+public static String saisir( String message ) throws IOException <2>
+{
+	System.out.println( message );
+	System.out.print( "> " );
+
+	BufferedReader reader = new BufferedReader( new InputStreamReader( System.in ) );
+	return reader.readLine(); <1>
+}
+----
+<1> La méthode `readLine()` peut provoquer l'exception `IOException` qui est une sous-classe de `Exception` (et non de `RuntimeException`).
+<2> Ceci oblige à préciser dans le prototype de `saisir(...)` que cette méthode peut lever `IOException`.
+
+Si l'exception potentiellement est gérée par la méthode, alors il n'est plus nécessaire de la déclarer avec `throws` :
+
+[source,language="java"]
+----
+public static String saisie( String message )
+{
+	System.out.println( message );
+	System.out.print( "> " );
+
+	BufferedReader reader = new BufferedReader( new InputStreamReader( System.in ) );
+	try <1>
+	{
+		return reader.readLine();
+	}
+	catch( IOException e ) <2>
+	{
+		e.printStackTrace(); <3>
+		return null; <4>
+	}
+}
+----
+<1> On surveille l'exécution de la méthode `readLine()`...
+<2> On définit le comportement à adopter si l'exception `IOException` est levée.
+<3> On affiche la pile d'appel ayant provoqué l'exception.
+<4> Mais on décide de retourner `null`...
+
+==== Les exceptions personnalisées
+
+Il est évidemment possible de définir des classes d'exception spécifiques à votre application. Celles-ci doivent être des sous-classes de `RuntimeException` (pour les exceptions non gérées) ou de `Exception`.
+
+Exemple : 
+
+[source,language="java"]
+----
+public class SaisieErroneeException extends Exception { <1>
+	public SaisieErroneeException() {
+	}
+
+	public SaisieErroneeException( String s ) {
+		super( s );
+	}
+}
+
+public class TestSaisieErroneeException {
+	public static void controle( String chaine ) throws SaisieErroneeException {
+		if( "".equals( chaine ) == true )
+			throw new SaisieErroneeException("Saisie erronee : chaine vide"); <2>
+	}
+
+	public static void main( String[] args ) {
+		String chaine1 = "";
+
+		try {
+			controle( chaine1 );
+		} catch ( SaisieErroneeException e ) { <3>
+			System.out.println( "Saisie erronee: " + e.getMessage() );
+		}
+	}
+}
+----
+<1> Nous sommes en train de définir une exception _gérée_.
+<2> Le mot clé `throws` sert à lever une exception.
+<3> Le `catch` ici permet le traitement spécifique de l'exception `SaisieErroneeException`. Toute autre classe d'exception ne sera pas _attrapée_.
+
+==== Exercices
+
+Vous pouvez effectuer cet http://perso.telecom-paristech.fr/~charon/coursJava/exercices/fact+Exc.html[exercice] pour vous familiariser avec la syntaxe des exceptions.
+
 === Quelques classes du SDK
 
 ==== `Iterable<T>` et la boucle for

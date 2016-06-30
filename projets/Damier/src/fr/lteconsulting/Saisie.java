@@ -34,16 +34,24 @@ public class Saisie
 
 	public static Coordonnee saisieCoordonnee( String message )
 	{
-		String reponse = saisie( message );
+		while( true )
+		{
+			try
+			{
+				String reponse = saisie( message );
 
-		// dans réponse on a : "5556;3332"
+				String[] parts = reponse.split( ";" );
 
-		String[] parts = reponse.split( ";" );
+				int abscisse = Integer.parseInt( parts[0] );
+				int ordonnee = Integer.parseInt( parts[1] );
 
-		int abscisse = Integer.parseInt( parts[0] );
-		int ordonnee = Integer.parseInt( parts[1] );
-
-		return new Coordonnee( abscisse - 1, ordonnee - 1 );
+				return new Coordonnee( abscisse - 1, ordonnee - 1 );
+			}
+			catch( Exception e )
+			{
+				System.out.println( "NON! essaye encore" );
+			}
+		}
 	}
 
 	public static CouleurNB saisieCouleurNB( String message )
@@ -51,7 +59,7 @@ public class Saisie
 		message += " (";
 		for( CouleurNB valeurPossible : CouleurNB.values() )
 			message += valeurPossible + " ";
-		 message += " )";
+		message += " )";
 
 		String saisieUtilisateur = saisie( message );
 		return CouleurNB.valueOf( saisieUtilisateur );
