@@ -15,11 +15,13 @@ Ce cours est Open Source. Les sources et ce document sont disponibles en ligne �
 - Ce document : http://lteconsulting.fr/java/[lteconsulting.fr/java/]
 - Les sources de ce document ainsi que des projets d'exemple : https://github.com/ltearno/formation-programmation-java[github.com/ltearno/formation-programmation-java]
 
+Vous pouvez donc proposer des modifications (les corrections sont bienvenues) en créant des https://help.github.com/articles/using-pull-requests/[pull requests].
+
 == Avant-propos
 
 Ce document n'a pas vocation a être ni trop détaillé ni exhaustif. On renverra le lecteur vers des documents plus riches lorsque cela est nécessaire.
 
-Voici une liste de liens que vous pouvez utiliser pour vous auto-documenter, ou bien simplement pour approfondir les connaissances acquises dans ce cour.
+Voici une liste de liens que vous pouvez utiliser pour vous auto-documenter, ou bien simplement pour approfondir les connaissances acquises dans ce cours.
 
 === Quelques liens utiles
 
@@ -39,13 +41,21 @@ Les exercices :
 Les personnes influentes :
 
 - Rémi Forax,
+- Antonio Goncalves (livre Java EE),
 - José Paumard avec son blog http://blog.paumard.org/[Java le soir],
 - Jean-Michel Doudoux,
-- Antonio Goncalves (livre Java EE),
 - Antoine Sabot-Durand,
 - ...
 
 == Enjeux et Etat de l'art
+
+Le système d'information est crucial pour n'importe quelle entreprise. Toutes les informations y sont stockées (clients, factures, ...).
+
+Créer des SI est un métier. Le marché est pour le plus gros organisé avec des _prestataires de service_ (SSII), qui créent et gèrent le SI pour leurs clients. Le point est que concevoir, déployer et gérer un SI est un métier qui exige des compétences fortes.
+
+De nombreuses pratiques et théories existent pour construire et gérer les SI.
+
+Nous allons découvrir la _programmation objet avec Java_ - une de ces méthodes - qui permet la conception et le développement d'applications d'entreprise de grande taille tout en _maîtrisant_ la complexité des problèmes soumis au développeur.
 
 == UML - conception objet
 
@@ -149,7 +159,37 @@ Indices démarrent de zéro.
 
 Un tableau stocke la classe des éléments qu'il stocke. Il provoque une exception `java.lang.ArrayStoreException` si un objet du mauvais type est inséré dans le tableau.
 
-`IndexOutOfBoundsExeption`
+Si on essaie d'accéder à une cellule du tableau qui n'existe pas (index négatif ou index trop grand), l'exception `IndexOutOfBoundsExeption` est levée.
+
+==== Déclaration
+
+[source,language="java"]
+----
+int[] tableauEntiers; <1>
+String[] tableauString; <1>
+----
+<1> Les tableaux sont ici seulement déclarés, il ne sont pas encore _instanciés_ en mémoire. La variable `tableauEntiers` vaut `null` (de même pour `tableauString`).
+
+==== Instantiation
+
+On crée véritablement le tableau en mémoire avec l'instantiation qui s'écrit ainsi :
+
+[source,language="java"]
+----
+tableauEntiers = new int[50]; <1>
+----
+<1> Nous demandons la réservation en mémoire d'un espace pouvant stocker 50 valeurs `int`.
+
+==== Utilisation
+
+[source,language="java"]
+----
+// lecture de la sixième cellule
+int valeurCellule = tableauEntiers[5];
+
+// écriture dans la première cellule
+tableauEntiers[0] = -2;
+----
 
 === La classe `String`
 
