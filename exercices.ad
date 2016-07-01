@@ -115,6 +115,63 @@ AFFICHER Math nul ou le gagnant
 - Instancier un `Set<T>` avec la classe `HashSet<T>`.
 - Y stocker les chaines "bateau", "Bateau", "soleil", "bateau" et "fleur".
 - Parcourir l'ensemble et afficher chaque chaine.
-- Faire saisir à l'utilisateur un mot et indiquer si ce mot est présent dans l'ensemble. S'il n'est pas présent, le rajouter et recommencer.
+- Faire saisir à l'utilisateur un mot et indiquer si ce mot est présent dans l'ensemble. S'il n'est pas présent, le rajouter. Recommencer jusqu'à ce que l'utilisateur saisisse le mote "FIN" (peu importe la casse).
 
 === Exercice 3 : `Map<K, V>`
+
+Le problème est d'associer une note à chaque exercice pour chaque étudiant.
+
+Créez une classe `Exercice` qui représente un exercice donné (avec les attributs `intitule` et `sujet`).
+
+Créez une classe `Etudiant` qui a deux attributs : `nom` (de l'étudiant) et `notes` (ses notes pour chaque exercice, vous aurez à réfléchir sur le type à utiliser).
+
+Créez dans la classe `Etudiant` la méthode `void ajouterNote( Exercice exercice, int note )` qui enregistrera pour un étudiant la note obtenue à l'exercice donné.
+
+Créez la méthode `void afficherNotes()` toujours dans la classe `Etudiant`, qui affiche le nom de l'étudiant ainsi que les notes obtenues aux exercices auquels il a participé.
+
+Ecrire une classe avec une méthode `main` qui illustre que l'ensemble fonctionne de la façon attendue.
+
+=== Exercice 4 : Les collections
+
+On souhaite gérer une bibliothèque de disques audio.
+
+Voici le diagramme des classes _à minima_, vous aurez bien sûr à ajouter des attributs et des méthodes selon la conception que vous aurez choisie !
+
+Classe `Chanson` :
+
+- attribut *privé* `nom` de type `String`,
+- attribut *privé* `duree` de type `int` (durée de la chanson en secondes),
+- constructeur et accesseurs.
+
+Classe `Disque` :
+
+- attribut *privé* `nom` de type `String`,
+- attribut *privé* `codeBarre` de type `String`,
+- attribut *privé* `chansons` de type `List<Chanson>`,
+- constructeur et accesseurs,
+- `addChanson( Chanson chanson )`,
+- `getDuree()` retourne la durée totale du disque.
+
+Classe `Bibliotheque` :
+
+- les attributs nécessaires,
+- `ajouterDisque( Disque disque )`,
+- `retirerDisque( String codeBarre )`,
+- `getNbDisques()`,
+- `getDisque( String codeBarre )`,
+- `List<Disque> rechercherDisques( String recherche )` : retourne la liste des disques dont le nom contient la chaîne `recherche`, peu importe la casse.
+- `List<Chanson> rechercherChansons( String recherche )` : retourne la liste des chansons dont le titre contient `recherche` (sans prendre la casse en compte).
+
+On considère qu'une fois ajouté à la bibliothèque, les disques et leurs chansons ne changent pas.
+
+Commencez par implémenter les classes ci-dessus.
+
+Puis proposez une interface en ligne de commande qui permette à l'utilisateur :
+
+- de consulter la bibliothèque (chercher les disques par nom). En tapant une recherche il obtiendra la liste des disques correspondant ainsi que leur code barre.
+- de consulter les détails d'un disque : en tapant le code barre du disque, il obtient la liste des chansons (nom de la chanson + durée).
+- chercher des chansons : en tapant une recherche l'utilisateur reçoit les chansons avec le titre recherché, ainsi que le code barre du disque qui la contient.
+
+==== Exercice 5
+
+Continuer l'exercice précedent en chargeant la liste des disques et chansons à partir d'un fichier.
