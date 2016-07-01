@@ -193,19 +193,17 @@ tableauEntiers[0] = -2;
 
 === La classe `String`
 
-Voir surtout la https://docs.oracle.com/javase/7/docs/api/java/lang/String.html[Javadoc] de la class String...
+La classe `String` sert à représenter des chaînes de caractères (qui ont le plus souvent comme objectif d'être présentées à l'utilisateur, à un moment où un autre).
 
-La classe `String` sert à représenter des chaînes de caractères (qui ont le plus souvent comme objectif d'être affichées à un moment où un autre à l'utilisateur).
-
-Voici quelques méthodes de la classe `String` que vous pourrez trouver utiles :
+La https://docs.oracle.com/javase/7/docs/api/java/lang/String.html[Javadoc] de la class String est complète pour connaître les méthodes statiques et non statiques de cette classe. Voici néanmoins quelques méthodes de la classe `String` que vous utiliserez souvent :
 
 ==== `boolean startsWith( String other )`, `boolean endsWith( String other )`
 
 Permet de savoir si une chaîne commence par une autre (ou termine pour la méthode `endsWith()`).
 
-==== `String[] split( String splitter )`
+==== `String[] split( String separateur )`
 
-Permet de découper une chaîne de caractère en morceaux séparés par la chaine `splitter`.
+Permet de découper une chaîne de caractère en morceaux séparés par la chaine contenue dans le paramètre `separateur`.
 
 Exemple :
 
@@ -224,6 +222,8 @@ System.out.println( parts[0] );
 
 // affiche "6"
 System.out.println( parts[1] );
+
+NOTE: Attention, le paramètre `separateur` est en fait interprété comme une expression régulière.
 ----
 
 ==== `String trim()`
@@ -268,15 +268,19 @@ NOTE: Attention, le paramètre `motif` est en fait interprété comme une expres
 
 === Structures de controle
 
+Instructions de branchement:: `if`, `switch`.
+
+Instructions de bouclage:: `for`, `while`, `do ... while`.
+
 === Ecrire une classe
 
 ==== Un fichier, une classe
 
-Une classe java est écrite dans un fichier nommé par le même nom (et même casse) auquel on donne l'extension `.java`.
+Une classe java s'écrit dans un fichier nommé par le même nom (et même casse) auquel on donne l'extension `.java`.
 
-Ce fichier .java sera situé dans un sous-répertoire du répertoire `src/` du projet, et qui correspondra au chemin jusqu'au _package_ de la classe.
+Ce fichier .java sera (_le plus souvent_) situé dans un sous-répertoire du répertoire `src/` du projet, et qui correspondra au chemin jusqu'au _package_ de la classe.
 
-NOTE: Il est néanmoins possible de déclarer plusieurs classes dans un même fichier *.java*. Nous reviendrons sur ces cas plus tard dans le cours.
+NOTE: Il est néanmoins possible de déclarer plusieurs classes dans un même fichier *.java*. Nous reviendrons sur ces cas plus tard dans le cours (voir les classes imbriquées).
 
 ==== Déclaration d'une classe
 
@@ -284,17 +288,19 @@ Pour créer une classe, on utilise le code suivant :
 
 [source,language="java"]
 ----
-[public] class NomDeLaClasse
+public <1> class NomDeLaClasse <2>
 {
 	// Corps de la classe (attributs et méthodes)
 }
 ----
+<1> Modificateur de visibilité : `public` ou `protected`.
+<2> Nom de la classe en cours de définition.
 
 NOTE: Par convention les noms de classes commencent par une majuscule comme par exemple `NomDeLaClasse`.
 
 ==== Fully Qualified Name
 
-Le véritable nom complet d'une classe s'appelle le _Fully Qualified Name_. Il est composé du _nom de package_ dans lequel se trouve la classe ainsi que du _nom de la classe_ lui-même.
+Le véritable nom complet d'une classe s'appelle le _Fully Qualified Name_ (FQN). Il est composé du _nom de package_ dans lequel se trouve la classe ainsi que du _nom de la classe_ lui-même.
 
 Ainsi pour une classe déclarée ainsi :
 
@@ -316,7 +322,7 @@ NOTE: Par convention les noms de package sont tout en minuscule, comme par exemp
 
 Lorsque l'on souhaite utiliser une classe qui n'est pas située dans le même package que celle qui l'utilise, on peut l'importer, de façon à ne pas avoir à rappeler le _FQN_ complet à chaque utilisation.
 
-Ainsi, à la place de ceci :
+Ainsi au lieu d'écrire ceci :
 
 [source,language="java"]
 ----
@@ -332,7 +338,7 @@ class MaClasse
 }
 ----
 
-On pourra écrire ceci :
+On pourra _importer_ la classe `fr.lteconsulting.MaClasse` :
 
 [source,language="java"]
 ----
@@ -358,7 +364,11 @@ class MaClasse
 
 === Classes abstraites
 
+Classe dont on ne peut créer d'instance. Il est possible de déclarer des _méthodes abstraites_ dont le corps (l'implémentation) n'est pas fourni. Ces méthodes seront implémentées plus tard dans la hierarchie des sous classes de la classe abstraite.
+
 === Classes finales
+
+Avec le mot-clé `final` on peut interdier aux autres classes d'hériter d'un classe.
 
 === Champs et méthodes statiques
 
@@ -368,11 +378,17 @@ Attribut d'instance:: chaque objet a SA propre valeur pour cet attribut
 
 === Héritage
 
+Mot-clé `extends`.
+
 ==== Conversion de type (`instanceof` et transtypage)
 
-Le système de typage de Java n'est pas unifié.
+Le système de typage de Java n'est pas unifié. Il y a les _types objet_ et les _types primitifs_.
 
 === La classe `Object`
+
+Toutes les classes ont la classe `Object` comme super-classe si elles n'en n'ont pas déjà une autre.
+
+Les méthodes de la classe `Object` sont donc accessibles sur _tous_ les objets que l'on peut rencontrer.
 
 ==== `boolean equals( Object other )` et `int hashCode()`
 
@@ -395,7 +411,9 @@ L'implémentation de cette méthode dans la classe `Object` consiste à indiquer
 
 Renvoie un objet représentant la classe de l'objet sur lequel on appelle cette méthode.
 
-=== Annotations introduction : @Deprecated, @Override
+=== Annotations introduction
+
+`@Deprecated`, `@Override`, ...
 
 === Interfaces
 
@@ -848,17 +866,161 @@ public class TestSaisieErroneeException {
 
 ==== Exercices
 
-Vous pouvez effectuer cet http://perso.telecom-paristech.fr/~charon/coursJava/exercices/fact+Exc.html[exercice] pour vous familiariser avec la syntaxe des exceptions.
+Vous pouvez utiliser cet http://perso.telecom-paristech.fr/~charon/coursJava/exercices/fact+Exc.html[exercice] pour vous familiariser avec la syntaxe des exceptions.
 
 === Quelques classes du SDK
 
-==== `Iterable<T>` et la boucle for
+==== Les collections
 
-==== `Comparable<T>`
+NOTE: Le lecteur avide de précisions supplémentaires pourra lire ce http://www.jmdoudoux.fr/java/dej/chap-collections.htm[document] très complet de JM Doudoux.
 
-==== `ArrayList<>`, `List<>`
+Les classes de collection représentent des objets capables de gérer un ensemble d'objets.
+
+Plusieurs familles de collections existent, avec une interface pour représenter chacune de ces familles. Chaque interface possède plusieurs implémentations répondant à des contraintes techniques variées. Toutes ces interface se retrouvent soit filles de l'interface `Collection` soit de `Map`.
+
+En général une classe de collection permet au moins de stocker un ensemble d'objets, avec des méthodes pour ajouter d'autres objets, en retirer et parcourir les objets présents dans la collection.
+
+Deux interfaces sont utilisées pour parcourir les collections : `Iterator` et `ListIterator`.
+
+Une interface et une classe pour permettre le tri de certaines collections : `Comparable` et `Comparator`.
+
+Deux classes comportant de nombreuses méthodes d'_outillage_ : `Arrays` et `Collections`.
+
+Certaines de ces collections proposent des fonctionnalités comme la suppression des doublons ou encore la recherche d'éléments. Ces opérations s'appuient en général sur le concept d'égalité entre objets définie par les méthodes `equals(...)` et `hashCode()`. Il est donc d'autant plus important d'implémenter ces méthodes correctement lorqu'on les surcharge.
+
+===== L'interface `Collection<E>`
+
+Cette interface est l'interface de base pour `List<E>` et `Set<E>`. Voici quelques méthodes importantes :
+
+`boolean add( E element )`:: Ajoute un élément à la collection
+
+`boolean addAll( Collection<? extends E> collection )`:: Ajoute les éléments d'une collection dans une autre.
+
+`void clear()`:: Vide la collection de tous ses éléments.
+
+`boolean contains( Object o )`:: Teste la présence d'un élément particulier dans la collection. Les méthodes `equals` et `hashCode` sont utilisées pour rechercher l'élément dans la collection. On parle donc de la présence d'un objet _identique_ au sens _applicatif_.
+
+`equals( Object other )` et `hashCode()`:: Ces méthodes sont redéfinies dans les collections pour refléter l'égalité de l'ensemble des éléments d'une collection.
+
+`int size()`:: Retourne le nombre d'éléments dans la collection.
+
+`boolean isEmpty()`:: Permet de savoir si une collection est vide. A utiliser de préférence au lieu de tester `if( collection.size() == 0 )`...
+
+`Iterator<E> iterator()`:: Renvoie un `Iterator` permettant de parcourir la collection. Cette méthode est issue de l'interface `Iterable` qui est utilisée par la boucle `for( Element e : iterableObject )`.
+
+===== `List<V>`, `ArrayList<V>`, `LinkedList<V>`
+
+Un classe qui implémente l'interface `List<V>` représente un ensemble ordonné d'objets de type _V_. Le contrat de `List<V>` n'interdit pas les doublons.
+
+`ArrayList<V>`:: Implémentation de l'interface `List<V>` grâce à un tableau redimensionnable. Non thread-safe. Autorise l'ajout d'élément `null`. La Javadoc est disponible https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html[ici].
+
+`LinkedList<V>`:: Implémentation de l'interface `List<V>` utilisant une liste (doublement) chaînée.
+
+Voici quelques méthodes très utilisées de `List<V>` : `add( T element )`, `T get( int index )`, `ListIterator<T> listIterator()`, `T remove( int index )`, `T set( int index, T element )`, `List<T> subList( int indexFrom, int indexTo )` (attention ce n'est pas une copie !).
+
+===== `Set<V>`, `HashSet<V>`, `TreeSet<V>`, `LinkedHashSet<V>`
+
+Ensemble d'objet sans doublons. Ne permet pas l'accès direct à un élément de la collection (les éléments ne sont par ordonnés). Il existe une interface `SortedSet<V>` qui interdit les doublons et pour autant ordonne quand même les éléments.
+
+===== `Map<K, V>`, `HashMap<K, V>`, `TreeMap<V>`, `LinkedTreeMap<V>`
+
+Collection de couples d'objets _clé_, _valeur_. Une `Map<K, V>` permet d'associer des `V` à des `K`. Une fois l'association stockée dans l'objet _Map_, consulter l'objet de type `V` associé à une objet `K` est une opération qui sera réalisée avec une complexité algorithmique en _O(1)_.
+
+Un objet de type `Map<K, V>` permet de lier un objet `V` avec une clé de type `K`. Il est ainsi possible d'obtenir un objet à partir de sa clé.
+
+Quelques méthodes :
+
+`boolean containsKey( K key )`:: Indique si un objet est associé à la clé `key` dans la table associative.
+
+`boolean containsValue( V value )`:: Indique si un objet `value` est stocké dans la table associative.
+
+`Set<Entry<K, V>> entrySet()`:: Retourne l'ensemble des couples clé-valeur (`Entry<K, V>`) contenues dans la table associative.
+
+`Set<K> keySet()`:: Retourne l'ensemble des clés contenues dans la table associative.
+
+`Collection<V> values()`:: Retourne l'ensemble des valeurs contenues dans la table associative.
+
+*Attention !* les `Map` n'ordonnent pas les couples clé-valeur. Lors du parcours de ces entrées, l'ordre du parcours n'est pas garanti ni censé être le même à chaque fois ! Ceci est illustré par ce petit bout de code :
+
+[source, language="java"]
+----
+import java.util.HashMap;
+
+public class TestHashMapIterator {
+	public static void main( String[] args ) {
+		HashMap<String, String> map = new HashMap<String, String>( 34 );
+		
+		map.put( "1", "un" );
+		map.put( "2", "deux" );
+		map.put( "3", "trois" );
+		map.put( "4", "quatre" );
+		map.put( "5", "cinq" );
+		
+		for( String s : map.keySet() ) {
+			System.out.print( s + " " );
+		}
+	}
+}
+----
+
+Les performances des opérations `get()` et `put()` sont constantes sous réserve que la répartition des éléments dans les différents buckets grâce à leur valeur de hachage soit équitable (implémentation de la méthode `hashCode()` des éléments de la table associative).
+
+===== `Queue<V>`, `LinkedList<V>`, `ArrayDequeue<V>`, `PriorityQueue<V>`
+
+===== La classe `Collections`
+
+Cette classe contient de nombreuses méthodes utilitaires statiques qui facilitent le travail avec les collections.
+
+[source,language="java"]
+----
+Map<String, Piece> m = Collections.synchronizedMap( new HashMap<String, Piece>() );
+----
+
+==== `Iterator<T>`
+
+L'interface `Iterator` permet un parcours très simple d'une collection. Trois méthodes sont fournies.
+
+`boolean hasNext()`:: Renvoie `true` si au moins un élément de la collection n'a pas encore été parcouru.
+
+`T next()`:: Retour l'élément suivant dans le parcours.
+
+`void remove()`:: Retire l'élément tout juste parcouru de la collection.
+
+Exemple d'utilisation:
+
+[source,language="java"]
+----
+Iterator iterator = collection.iterator();
+while( iterator.hasNext() ) {
+	System.out.println( "objet = " + iterator.next() );
+}
+----
+
+==== `ListIterator<T>`
+
+==== `Comparable<T>`, `Comparator<T>`
 
 ==== `StringBuilder`, ...
+
+==== java.io
+
+Cette extension concerne les flux d'entrées et sorties en général (fichiers, réseau, buffer).
+
+Les deux classes abstraites InputStream et OutputStream gèrent les entrées et sorties binaires, utilisant des tableaux d'octets.
+
+Les sous-classes de celles-ci sont plus spécialisées :
+
+FileInputStream et FileOutputStream gèrent les fichiers,
+
+ByteArrayInputStream et ByteArrayOutputStream lisent/écrivent depuis/vers un tableau d'octets.
+
+Les classes Reader et Writer utilisent les tableaux de caractères.
+
+Leurs sous-classes sont également plus spécialisées :
+
+FileReader et FileWriter gèrent les fichiers,
+
+StringReader et StringWriter lisent/écrivent depuis/vers une chaîne de caractères.
 
 *Exercice* : implémenter `Iterable<T>` dans TableauDynamique et utiliser la forme _foreach_ de la boucle `for` dans le projet des cartes.
 

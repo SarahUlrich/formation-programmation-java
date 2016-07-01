@@ -100,3 +100,21 @@ TANT QUE (personne n'a gagné) ET QUE (le plateau n'est pas complètement rempli
 FIN TANT QUE
 AFFICHER Math nul ou le gagnant
 ----
+
+== Exercices avec les collections
+
+=== Exercice 1 : `List<T>`
+
+- Instancier une `List<String>` avec la classe `ArrayList<T>`.
+- Y stocker une dizaine de chaines de caractère.
+- Parcourir la liste et afficher chaque chaine.
+- Faire saisir à l'utilisateur un index, afficher la chaine stockée à l'index saisi.
+
+=== Exercice 2 : `Set<T>`
+
+- Instancier un `Set<T>` avec la classe `HashSet<T>`.
+- Y stocker les chaines "bateau", "Bateau", "soleil", "bateau" et "fleur".
+- Parcourir l'ensemble et afficher chaque chaine.
+- Faire saisir à l'utilisateur un mot et indiquer si ce mot est présent dans l'ensemble. S'il n'est pas présent, le rajouter et recommencer.
+
+=== Exercice 3 : `Map<K, V>`

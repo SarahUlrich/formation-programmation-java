@@ -465,7 +465,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_champs_et_méthodes_statiques">Champs et méthodes statiques</a></li>
 <li><a href="#_héritage">Héritage</a></li>
 <li><a href="#_la_classe_code_object_code">La classe <code>Object</code></a></li>
-<li><a href="#_annotations_introduction_deprecated_override">Annotations introduction : @Deprecated, @Override</a></li>
+<li><a href="#_annotations_introduction">Annotations introduction</a></li>
 <li><a href="#_interfaces">Interfaces</a></li>
 <li><a href="#_les_génériques">Les génériques</a></li>
 <li><a href="#_classes_imbriquées">Classes imbriquées</a></li>
@@ -817,13 +817,10 @@ tableauEntiers[0] = -2;</code></pre>
 <div class="sect2">
 <h3 id="_la_classe_code_string_code">La classe <code>String</code></h3>
 <div class="paragraph">
-<p>Voir surtout la <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html">Javadoc</a> de la class String&#8230;&#8203;</p>
+<p>La classe <code>String</code> sert à représenter des chaînes de caractères (qui ont le plus souvent comme objectif d&#8217;être présentées à l&#8217;utilisateur, à un moment où un autre).</p>
 </div>
 <div class="paragraph">
-<p>La classe <code>String</code> sert à représenter des chaînes de caractères (qui ont le plus souvent comme objectif d&#8217;être affichées à un moment où un autre à l&#8217;utilisateur).</p>
-</div>
-<div class="paragraph">
-<p>Voici quelques méthodes de la classe <code>String</code> que vous pourrez trouver utiles :</p>
+<p>La <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html">Javadoc</a> de la class String est complète pour connaître les méthodes statiques et non statiques de cette classe. Voici néanmoins quelques méthodes de la classe <code>String</code> que vous utiliserez souvent :</p>
 </div>
 <div class="sect3">
 <h4 id="__code_boolean_startswith_string_other_code_code_boolean_endswith_string_other_code"><code>boolean startsWith( String other )</code>, <code>boolean endsWith( String other )</code></h4>
@@ -832,9 +829,9 @@ tableauEntiers[0] = -2;</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="__code_string_split_string_splitter_code"><code>String[] split( String splitter )</code></h4>
+<h4 id="__code_string_split_string_separateur_code"><code>String[] split( String separateur )</code></h4>
 <div class="paragraph">
-<p>Permet de découper une chaîne de caractère en morceaux séparés par la chaine <code>splitter</code>.</p>
+<p>Permet de découper une chaîne de caractère en morceaux séparés par la chaine contenue dans le paramètre <code>separateur</code>.</p>
 </div>
 <div class="paragraph">
 <p>Exemple :</p>
@@ -853,7 +850,9 @@ System.out.println( parts.length );
 System.out.println( parts[0] );
 
 // affiche "6"
-System.out.println( parts[1] );</code></pre>
+System.out.println( parts[1] );
+
+NOTE: Attention, le paramètre `separateur` est en fait interprété comme une expression régulière.</code></pre>
 </div>
 </div>
 </div>
@@ -929,17 +928,28 @@ Attention, le paramètre <code>motif</code> est en fait interprété comme une e
 </div>
 <div class="sect2">
 <h3 id="_structures_de_controle">Structures de controle</h3>
-
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Instructions de branchement</dt>
+<dd>
+<p><code>if</code>, <code>switch</code>.</p>
+</dd>
+<dt class="hdlist1">Instructions de bouclage</dt>
+<dd>
+<p><code>for</code>, <code>while</code>, <code>do &#8230;&#8203; while</code>.</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_ecrire_une_classe">Ecrire une classe</h3>
 <div class="sect3">
 <h4 id="_un_fichier_une_classe">Un fichier, une classe</h4>
 <div class="paragraph">
-<p>Une classe java est écrite dans un fichier nommé par le même nom (et même casse) auquel on donne l&#8217;extension <code>.java</code>.</p>
+<p>Une classe java s&#8217;écrit dans un fichier nommé par le même nom (et même casse) auquel on donne l&#8217;extension <code>.java</code>.</p>
 </div>
 <div class="paragraph">
-<p>Ce fichier .java sera situé dans un sous-répertoire du répertoire <code>src/</code> du projet, et qui correspondra au chemin jusqu&#8217;au <em>package</em> de la classe.</p>
+<p>Ce fichier .java sera (<em>le plus souvent</em>) situé dans un sous-répertoire du répertoire <code>src/</code> du projet, et qui correspondra au chemin jusqu&#8217;au <em>package</em> de la classe.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -948,7 +958,7 @@ Attention, le paramètre <code>motif</code> est en fait interprété comme une e
 <div class="title">Note</div>
 </td>
 <td class="content">
-Il est néanmoins possible de déclarer plusieurs classes dans un même fichier <strong>.java</strong>. Nous reviendrons sur ces cas plus tard dans le cours.
+Il est néanmoins possible de déclarer plusieurs classes dans un même fichier <strong>.java</strong>. Nous reviendrons sur ces cas plus tard dans le cours (voir les classes imbriquées).
 </td>
 </tr>
 </table>
@@ -961,11 +971,21 @@ Il est néanmoins possible de déclarer plusieurs classes dans un même fichier 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java" data-lang="java">[public] class NomDeLaClasse
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public &lt;1&gt; class NomDeLaClasse <b class="conum">(2)</b>
 {
 	// Corps de la classe (attributs et méthodes)
 }</code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Modificateur de visibilité : <code>public</code> ou <code>protected</code>.</p>
+</li>
+<li>
+<p>Nom de la classe en cours de définition.</p>
+</li>
+</ol>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -983,7 +1003,7 @@ Par convention les noms de classes commencent par une majuscule comme par exempl
 <div class="sect3">
 <h4 id="_fully_qualified_name">Fully Qualified Name</h4>
 <div class="paragraph">
-<p>Le véritable nom complet d&#8217;une classe s&#8217;appelle le <em>Fully Qualified Name</em>. Il est composé du <em>nom de package</em> dans lequel se trouve la classe ainsi que du <em>nom de la classe</em> lui-même.</p>
+<p>Le véritable nom complet d&#8217;une classe s&#8217;appelle le <em>Fully Qualified Name</em> (FQN). Il est composé du <em>nom de package</em> dans lequel se trouve la classe ainsi que du <em>nom de la classe</em> lui-même.</p>
 </div>
 <div class="paragraph">
 <p>Ainsi pour une classe déclarée ainsi :</p>
@@ -1020,7 +1040,7 @@ Par convention les noms de package sont tout en minuscule, comme par exemple : <
 <p>Lorsque l&#8217;on souhaite utiliser une classe qui n&#8217;est pas située dans le même package que celle qui l&#8217;utilise, on peut l&#8217;importer, de façon à ne pas avoir à rappeler le <em>FQN</em> complet à chaque utilisation.</p>
 </div>
 <div class="paragraph">
-<p>Ainsi, à la place de ceci :</p>
+<p>Ainsi au lieu d&#8217;écrire ceci :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1037,7 +1057,7 @@ class MaClasse
 </div>
 </div>
 <div class="paragraph">
-<p>On pourra écrire ceci :</p>
+<p>On pourra <em>importer</em> la classe <code>fr.lteconsulting.MaClasse</code> :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1072,11 +1092,15 @@ class MaClasse
 </div>
 <div class="sect2">
 <h3 id="_classes_abstraites">Classes abstraites</h3>
-
+<div class="paragraph">
+<p>Classe dont on ne peut créer d&#8217;instance. Il est possible de déclarer des <em>méthodes abstraites</em> dont le corps (l&#8217;implémentation) n&#8217;est pas fourni. Ces méthodes seront implémentées plus tard dans la hierarchie des sous classes de la classe abstraite.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_classes_finales">Classes finales</h3>
-
+<div class="paragraph">
+<p>Avec le mot-clé <code>final</code> on peut interdier aux autres classes d&#8217;hériter d&#8217;un classe.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_champs_et_méthodes_statiques">Champs et méthodes statiques</h3>
@@ -1095,15 +1119,24 @@ class MaClasse
 </div>
 <div class="sect2">
 <h3 id="_héritage">Héritage</h3>
+<div class="paragraph">
+<p>Mot-clé <code>extends</code>.</p>
+</div>
 <div class="sect3">
 <h4 id="_conversion_de_type_code_instanceof_code_et_transtypage">Conversion de type (<code>instanceof</code> et transtypage)</h4>
 <div class="paragraph">
-<p>Le système de typage de Java n&#8217;est pas unifié.</p>
+<p>Le système de typage de Java n&#8217;est pas unifié. Il y a les <em>types objet</em> et les <em>types primitifs</em>.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_la_classe_code_object_code">La classe <code>Object</code></h3>
+<div class="paragraph">
+<p>Toutes les classes ont la classe <code>Object</code> comme super-classe si elles n&#8217;en n&#8217;ont pas déjà une autre.</p>
+</div>
+<div class="paragraph">
+<p>Les méthodes de la classe <code>Object</code> sont donc accessibles sur <em>tous</em> les objets que l&#8217;on peut rencontrer.</p>
+</div>
 <div class="sect3">
 <h4 id="__code_boolean_equals_object_other_code_et_code_int_hashcode_code"><code>boolean equals( Object other )</code> et <code>int hashCode()</code></h4>
 <div class="paragraph">
@@ -1152,8 +1185,10 @@ Il est important que ces deux méthodes soient implémentées de façon à garde
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotations_introduction_deprecated_override">Annotations introduction : @Deprecated, @Override</h3>
-
+<h3 id="_annotations_introduction">Annotations introduction</h3>
+<div class="paragraph">
+<p><code>@Deprecated</code>, <code>@Override</code>, &#8230;&#8203;</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_interfaces">Interfaces</h3>
@@ -1805,26 +1840,269 @@ public class TestSaisieErroneeException {
 <div class="sect3">
 <h4 id="_exercices">Exercices</h4>
 <div class="paragraph">
-<p>Vous pouvez effectuer cet <a href="http://perso.telecom-paristech.fr/~charon/coursJava/exercices/fact+Exc.html">exercice</a> pour vous familiariser avec la syntaxe des exceptions.</p>
+<p>Vous pouvez utiliser cet <a href="http://perso.telecom-paristech.fr/~charon/coursJava/exercices/fact+Exc.html">exercice</a> pour vous familiariser avec la syntaxe des exceptions.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_quelques_classes_du_sdk">Quelques classes du SDK</h3>
 <div class="sect3">
-<h4 id="__code_iterable_t_code_et_la_boucle_for"><code>Iterable&lt;T&gt;</code> et la boucle for</h4>
+<h4 id="_les_collections">Les collections</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Le lecteur avide de précisions supplémentaires pourra lire ce <a href="http://www.jmdoudoux.fr/java/dej/chap-collections.htm">document</a> très complet de JM Doudoux.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Les classes de collection représentent des objets capables de gérer un ensemble d&#8217;objets.</p>
+</div>
+<div class="paragraph">
+<p>Plusieurs familles de collections existent, avec une interface pour représenter chacune de ces familles. Chaque interface possède plusieurs implémentations répondant à des contraintes techniques variées. Toutes ces interface se retrouvent soit filles de l&#8217;interface <code>Collection</code> soit de <code>Map</code>.</p>
+</div>
+<div class="paragraph">
+<p>En général une classe de collection permet au moins de stocker un ensemble d&#8217;objets, avec des méthodes pour ajouter d&#8217;autres objets, en retirer et parcourir les objets présents dans la collection.</p>
+</div>
+<div class="paragraph">
+<p>Deux interfaces sont utilisées pour parcourir les collections : <code>Iterator</code> et <code>ListIterator</code>.</p>
+</div>
+<div class="paragraph">
+<p>Une interface et une classe pour permettre le tri de certaines collections : <code>Comparable</code> et <code>Comparator</code>.</p>
+</div>
+<div class="paragraph">
+<p>Deux classes comportant de nombreuses méthodes d'<em>outillage</em> : <code>Arrays</code> et <code>Collections</code>.</p>
+</div>
+<div class="paragraph">
+<p>Certaines de ces collections proposent des fonctionnalités comme la suppression des doublons ou encore la recherche d&#8217;éléments. Ces opérations s&#8217;appuient en général sur le concept d&#8217;égalité entre objets définie par les méthodes <code>equals(&#8230;&#8203;)</code> et <code>hashCode()</code>. Il est donc d&#8217;autant plus important d&#8217;implémenter ces méthodes correctement lorqu&#8217;on les surcharge.</p>
+</div>
+<div class="sect4">
+<h5 id="_l_interface_code_collection_e_code">L&#8217;interface <code>Collection&lt;E&gt;</code></h5>
+<div class="paragraph">
+<p>Cette interface est l&#8217;interface de base pour <code>List&lt;E&gt;</code> et <code>Set&lt;E&gt;</code>. Voici quelques méthodes importantes :</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>boolean add( E element )</code></dt>
+<dd>
+<p>Ajoute un élément à la collection</p>
+</dd>
+<dt class="hdlist1"><code>boolean addAll( Collection&lt;? extends E&gt; collection )</code></dt>
+<dd>
+<p>Ajoute les éléments d&#8217;une collection dans une autre.</p>
+</dd>
+<dt class="hdlist1"><code>void clear()</code></dt>
+<dd>
+<p>Vide la collection de tous ses éléments.</p>
+</dd>
+<dt class="hdlist1"><code>boolean contains( Object o )</code></dt>
+<dd>
+<p>Teste la présence d&#8217;un élément particulier dans la collection. Les méthodes <code>equals</code> et <code>hashCode</code> sont utilisées pour rechercher l&#8217;élément dans la collection. On parle donc de la présence d&#8217;un objet <em>identique</em> au sens <em>applicatif</em>.</p>
+</dd>
+<dt class="hdlist1"><code>equals( Object other )</code> et <code>hashCode()</code></dt>
+<dd>
+<p>Ces méthodes sont redéfinies dans les collections pour refléter l&#8217;égalité de l&#8217;ensemble des éléments d&#8217;une collection.</p>
+</dd>
+<dt class="hdlist1"><code>int size()</code></dt>
+<dd>
+<p>Retourne le nombre d&#8217;éléments dans la collection.</p>
+</dd>
+<dt class="hdlist1"><code>boolean isEmpty()</code></dt>
+<dd>
+<p>Permet de savoir si une collection est vide. A utiliser de préférence au lieu de tester <code>if( collection.size() == 0 )</code>&#8230;&#8203;</p>
+</dd>
+<dt class="hdlist1"><code>Iterator&lt;E&gt; iterator()</code></dt>
+<dd>
+<p>Renvoie un <code>Iterator</code> permettant de parcourir la collection. Cette méthode est issue de l&#8217;interface <code>Iterable</code> qui est utilisée par la boucle <code>for( Element e : iterableObject )</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="__code_list_v_code_code_arraylist_v_code_code_linkedlist_v_code"><code>List&lt;V&gt;</code>, <code>ArrayList&lt;V&gt;</code>, <code>LinkedList&lt;V&gt;</code></h5>
+<div class="paragraph">
+<p>Un classe qui implémente l&#8217;interface <code>List&lt;V&gt;</code> représente un ensemble ordonné d&#8217;objets de type <em>V</em>. Le contrat de <code>List&lt;V&gt;</code> n&#8217;interdit pas les doublons.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>ArrayList&lt;V&gt;</code></dt>
+<dd>
+<p>Implémentation de l&#8217;interface <code>List&lt;V&gt;</code> grâce à un tableau redimensionnable. Non thread-safe. Autorise l&#8217;ajout d&#8217;élément <code>null</code>. La Javadoc est disponible <a href="https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html">ici</a>.</p>
+</dd>
+<dt class="hdlist1"><code>LinkedList&lt;V&gt;</code></dt>
+<dd>
+<p>Implémentation de l&#8217;interface <code>List&lt;V&gt;</code> utilisant une liste (doublement) chaînée.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Voici quelques méthodes très utilisées de <code>List&lt;V&gt;</code> : <code>add( T element )</code>, <code>T get( int index )</code>, <code>ListIterator&lt;T&gt; listIterator()</code>, <code>T remove( int index )</code>, <code>T set( int index, T element )</code>, <code>List&lt;T&gt; subList( int indexFrom, int indexTo )</code> (attention ce n&#8217;est pas une copie !).</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="__code_set_v_code_code_hashset_v_code_code_treeset_v_code_code_linkedhashset_v_code"><code>Set&lt;V&gt;</code>, <code>HashSet&lt;V&gt;</code>, <code>TreeSet&lt;V&gt;</code>, <code>LinkedHashSet&lt;V&gt;</code></h5>
+<div class="paragraph">
+<p>Ensemble d&#8217;objet sans doublons. Ne permet pas l&#8217;accès direct à un élément de la collection (les éléments ne sont par ordonnés). Il existe une interface <code>SortedSet&lt;V&gt;</code> qui interdit les doublons et pour autant ordonne quand même les éléments.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="__code_map_k_v_code_code_hashmap_k_v_code_code_treemap_v_code_code_linkedtreemap_v_code"><code>Map&lt;K, V&gt;</code>, <code>HashMap&lt;K, V&gt;</code>, <code>TreeMap&lt;V&gt;</code>, <code>LinkedTreeMap&lt;V&gt;</code></h5>
+<div class="paragraph">
+<p>Collection de couples d&#8217;objets <em>clé</em>, <em>valeur</em>. Une <code>Map&lt;K, V&gt;</code> permet d&#8217;associer des <code>V</code> à des <code>K</code>. Une fois l&#8217;association stockée dans l&#8217;objet <em>Map</em>, consulter l&#8217;objet de type <code>V</code> associé à une objet <code>K</code> est une opération qui sera réalisée avec une complexité algorithmique en <em>O(1)</em>.</p>
+</div>
+<div class="paragraph">
+<p>Un objet de type <code>Map&lt;K, V&gt;</code> permet de lier un objet <code>V</code> avec une clé de type <code>K</code>. Il est ainsi possible d&#8217;obtenir un objet à partir de sa clé.</p>
+</div>
+<div class="paragraph">
+<p>Quelques méthodes :</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>boolean containsKey( K key )</code></dt>
+<dd>
+<p>Indique si un objet est associé à la clé <code>key</code> dans la table associative.</p>
+</dd>
+<dt class="hdlist1"><code>boolean containsValue( V value )</code></dt>
+<dd>
+<p>Indique si un objet <code>value</code> est stocké dans la table associative.</p>
+</dd>
+<dt class="hdlist1"><code>Set&lt;Entry&lt;K, V&gt;&gt; entrySet()</code></dt>
+<dd>
+<p>Retourne l&#8217;ensemble des couples clé-valeur (<code>Entry&lt;K, V&gt;</code>) contenues dans la table associative.</p>
+</dd>
+<dt class="hdlist1"><code>Set&lt;K&gt; keySet()</code></dt>
+<dd>
+<p>Retourne l&#8217;ensemble des clés contenues dans la table associative.</p>
+</dd>
+<dt class="hdlist1"><code>Collection&lt;V&gt; values()</code></dt>
+<dd>
+<p>Retourne l&#8217;ensemble des valeurs contenues dans la table associative.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><strong>Attention !</strong> les <code>Map</code> n&#8217;ordonnent pas les couples clé-valeur. Lors du parcours de ces entrées, l&#8217;ordre du parcours n&#8217;est pas garanti ni censé être le même à chaque fois ! Ceci est illustré par ce petit bout de code :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">import java.util.HashMap;
+
+public class TestHashMapIterator {
+	public static void main( String[] args ) {
+		HashMap&lt;String, String&gt; map = new HashMap&lt;String, String&gt;( 34 );
+
+		map.put( "1", "un" );
+		map.put( "2", "deux" );
+		map.put( "3", "trois" );
+		map.put( "4", "quatre" );
+		map.put( "5", "cinq" );
+
+		for( String s : map.keySet() ) {
+			System.out.print( s + " " );
+		}
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Les performances des opérations <code>get()</code> et <code>put()</code> sont constantes sous réserve que la répartition des éléments dans les différents buckets grâce à leur valeur de hachage soit équitable (implémentation de la méthode <code>hashCode()</code> des éléments de la table associative).</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="__code_queue_v_code_code_linkedlist_v_code_code_arraydequeue_v_code_code_priorityqueue_v_code"><code>Queue&lt;V&gt;</code>, <code>LinkedList&lt;V&gt;</code>, <code>ArrayDequeue&lt;V&gt;</code>, <code>PriorityQueue&lt;V&gt;</code></h5>
+
+</div>
+<div class="sect4">
+<h5 id="_la_classe_code_collections_code">La classe <code>Collections</code></h5>
+<div class="paragraph">
+<p>Cette classe contient de nombreuses méthodes utilitaires statiques qui facilitent le travail avec les collections.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">Map&lt;String, Piece&gt; m = Collections.synchronizedMap( new HashMap&lt;String, Piece&gt;() );</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__code_iterator_t_code"><code>Iterator&lt;T&gt;</code></h4>
+<div class="paragraph">
+<p>L&#8217;interface <code>Iterator</code> permet un parcours très simple d&#8217;une collection. Trois méthodes sont fournies.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>boolean hasNext()</code></dt>
+<dd>
+<p>Renvoie <code>true</code> si au moins un élément de la collection n&#8217;a pas encore été parcouru.</p>
+</dd>
+<dt class="hdlist1"><code>T next()</code></dt>
+<dd>
+<p>Retour l&#8217;élément suivant dans le parcours.</p>
+</dd>
+<dt class="hdlist1"><code>void remove()</code></dt>
+<dd>
+<p>Retire l&#8217;élément tout juste parcouru de la collection.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Exemple d&#8217;utilisation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">Iterator iterator = collection.iterator();
+while( iterator.hasNext() ) {
+	System.out.println( "objet = " + iterator.next() );
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__code_listiterator_t_code"><code>ListIterator&lt;T&gt;</code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="__code_comparable_t_code"><code>Comparable&lt;T&gt;</code></h4>
-
-</div>
-<div class="sect3">
-<h4 id="__code_arraylist_code_code_list_code"><code>ArrayList&lt;&gt;</code>, <code>List&lt;&gt;</code></h4>
+<h4 id="__code_comparable_t_code_code_comparator_t_code"><code>Comparable&lt;T&gt;</code>, <code>Comparator&lt;T&gt;</code></h4>
 
 </div>
 <div class="sect3">
 <h4 id="__code_stringbuilder_code"><code>StringBuilder</code>, &#8230;&#8203;</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_java_io">java.io</h4>
+<div class="paragraph">
+<p>Cette extension concerne les flux d&#8217;entrées et sorties en général (fichiers, réseau, buffer).</p>
+</div>
+<div class="paragraph">
+<p>Les deux classes abstraites InputStream et OutputStream gèrent les entrées et sorties binaires, utilisant des tableaux d&#8217;octets.</p>
+</div>
+<div class="paragraph">
+<p>Les sous-classes de celles-ci sont plus spécialisées :</p>
+</div>
+<div class="paragraph">
+<p>FileInputStream et FileOutputStream gèrent les fichiers,</p>
+</div>
+<div class="paragraph">
+<p>ByteArrayInputStream et ByteArrayOutputStream lisent/écrivent depuis/vers un tableau d&#8217;octets.</p>
+</div>
+<div class="paragraph">
+<p>Les classes Reader et Writer utilisent les tableaux de caractères.</p>
+</div>
+<div class="paragraph">
+<p>Leurs sous-classes sont également plus spécialisées :</p>
+</div>
+<div class="paragraph">
+<p>FileReader et FileWriter gèrent les fichiers,</p>
+</div>
+<div class="paragraph">
+<p>StringReader et StringWriter lisent/écrivent depuis/vers une chaîne de caractères.</p>
+</div>
 <div class="paragraph">
 <p><strong>Exercice</strong> : implémenter <code>Iterable&lt;T&gt;</code> dans TableauDynamique et utiliser la forme <em>foreach</em> de la boucle <code>for</code> dans le projet des cartes.</p>
 </div>
@@ -1893,7 +2171,7 @@ public class TestSaisieErroneeException {
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-30 19:05:27 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-01 07:45:13 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
