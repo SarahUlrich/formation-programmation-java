@@ -435,7 +435,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc">
 <div id="toctitle" class="title">Exercices de programmation orientée objet avec Java</div>
 <ul class="sectlevel1">
-<li><a href="#_créer_une_bibliothèque_pour_nos_jeux">Créer une bibliothèque pour nos jeux</a></li>
+<li><a href="#_exercices_de_base">Exercices de base</a></li>
+<li><a href="#_jeu_de_cartes">Jeu de Cartes</a></li>
+<li><a href="#_créer_une_plateforme_de_jeux_de_plateau">Créer une plateforme de jeux de plateau</a></li>
 <li><a href="#_jeu_bidon_sur_plateau">Jeu bidon sur Plateau</a>
 <ul class="sectlevel2">
 <li><a href="#_première_étape">Première étape</a></li>
@@ -465,7 +467,132 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_créer_une_bibliothèque_pour_nos_jeux">Créer une bibliothèque pour nos jeux</h2>
+<h2 id="_exercices_de_base">Exercices de base</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>Connaissances de base du langage de programmation</em></p>
+</div>
+<div class="paragraph">
+<p>Voici un <a href="https://www.infres.telecom-paristech.fr/people/charon/coursJava/exercices/">lien</a> vers différents exercices.</p>
+</div>
+<div class="paragraph">
+<p>Je vous propose de les réaliser dans l&#8217;ordre suivant :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Calculer une factorielle</p>
+</li>
+<li>
+<p>Palindromes</p>
+</li>
+<li>
+<p>Implanter l&#8217;algorithme de tri naîf et l&#8217;algorithme de tri fusion sur un tableau d&#8217;entiers (celui-ci n&#8217;est pas dans le lien précédent).</p>
+</li>
+<li>
+<p>Classe abstraite pour un animal</p>
+</li>
+<li>
+<p>Chaînage des constructeurs</p>
+</li>
+<li>
+<p>Polymorphisme</p>
+</li>
+<li>
+<p>Jeu de Chifoumi</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jeu_de_cartes">Jeu de Cartes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>Connaissance des concepts de classe et d&#8217;héritage</em></p>
+</div>
+<div class="paragraph">
+<p>Vous vous intéressez dans cet exercice à décrire les données d&#8217;un jeu simulant des combats de magiciens.</p>
+</div>
+<div class="paragraph">
+<p>Dans ce jeu, il existe trois types de cartes : les terrains, les créatures et les sortilèges.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Les terrains possèdent une couleur (parmi 5 : <code>Blanc</code>, <code>Bleu</code>, <code>Noir</code>, <code>Rouge</code> et <code>Vert</code>. Pour ceci créez un enum <code>Couleur</code>).</p>
+</li>
+<li>
+<p>Les créatures possèdent un nom, un nombre de points de dégâts et un nombre de points de vie.</p>
+</li>
+<li>
+<p>Les sortilèges possèdent un nom et une explication sous forme de texte.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>De plus, chaque carte, indépendamment de son type, possède un coût. Celui d&#8217;un terrain est 0.</p>
+</div>
+<div class="paragraph">
+<p>Dans un nouveau projet nommé Magic, implémentez une hiérarchie de classes permettant de représenter des cartes de différents types.</p>
+</div>
+<div class="paragraph">
+<p>Chaque classe aura un constructeur permettant de spécifier la/les valeurs de ses attributs.</p>
+</div>
+<div class="paragraph">
+<p>Le programme doit utiliser la conception orientée objet et ne doit pas comporter de duplication de code.</p>
+</div>
+<div class="paragraph">
+<p>Ajoutez ensuite aux cartes une méthode <code>afficher()</code> qui, pour toute carte, affiche son coût et la valeur de ses arguments spécifiques.</p>
+</div>
+<div class="paragraph">
+<p>Créez de plus une classe <code>Jeu</code> pour représenter un jeu de cartes, c&#8217;est-à-dire une collection de telles cartes.</p>
+</div>
+<div class="paragraph">
+<p>Cette classe devra avoir une méthode <code>piocher()</code> permettant d&#8217;ajouter une carte au jeu. On supposera qu&#8217;un jeu comporte au plus 10 cartes. Le jeu comportera également une méthode <code>joue()</code> permettant de jouer une carte. Pour simplifier, on jouera les cartes dans l&#8217;ordre où elles sont stockées dans le jeu, et on mettra la carte jouée à <code>null</code> dans le jeu de cartes.</p>
+</div>
+<div class="paragraph">
+<p>Pour finir, dans la méthode <code>main(String[] args)</code>, constituez un jeu contenant divers types de cartes et faites afficher le jeu grâce à une méthode <code>afficher()</code> propre à cette classe.</p>
+</div>
+<div class="paragraph">
+<p>Par exemple la méthode main pourrait ressembler à quelque chose comme cela  :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">class Magic {
+	public static void main(String[] args) {
+		Jeu maMain = new Jeu(10);
+
+		maMain.piocher(new Terrain(Couleur.Bleu));
+		maMain.piocher(new Creature(6, "Golem", 4, 6));
+		maMain.piocher(new Sortilege(1, "Croissance Gigantesque",
+				"La créature ciblée gagne +3/+3 jusqu'à la fin du tour"));
+
+		System.out.println("Là, j'ai en stock :");
+		maMain.afficher();
+		maMain.joue();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>qui produirait quelque chose comme :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Là, j'ai en stock :
+Un terrain bleu
+Une créature Golem 4/6
+Un sortilège Croissance Gigantesque
+Je joue une carte...
+La carte jouée est :
+Un terrain bleu</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_créer_une_plateforme_de_jeux_de_plateau">Créer une plateforme de jeux de plateau</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Une classe <code>Plateau</code></p>
@@ -478,6 +605,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_jeu_bidon_sur_plateau">Jeu bidon sur Plateau</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p><em>Saisie clavier, conception objet</em></p>
+</div>
 <div class="sect2">
 <h3 id="_première_étape">Première étape</h3>
 <div class="paragraph">
@@ -538,6 +668,9 @@ Si la réponse est OUI :
 <div class="sect1">
 <h2 id="_jeu_de_puissance_4">Jeu de Puissance 4</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p><em>Saisie clavier, conception objet, algorithmique</em></p>
+</div>
 <div class="sect2">
 <h3 id="_etape_1_création_des_classes">Etape 1 : création des classes</h3>
 <div class="paragraph">
@@ -610,6 +743,9 @@ AFFICHER Math nul ou le gagnant</pre>
 <div class="sect1">
 <h2 id="_exercices_avec_les_collections">Exercices avec les collections</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p><em>Connaissances des interfaces <code>List&lt;T&gt;</code>, <code>Set&lt;T&gt;</code> et `HashMap&lt;K,V&gt;`</em></p>
+</div>
 <div class="sect2">
 <h3 id="_exercice_1_code_list_t_code">Exercice 1 : <code>List&lt;T&gt;</code></h3>
 <div class="ulist">
@@ -671,6 +807,9 @@ AFFICHER Math nul ou le gagnant</pre>
 </div>
 <div class="sect2">
 <h3 id="_exercice_4_les_collections">Exercice 4 : Les collections</h3>
+<div class="paragraph">
+<p><em>Utilisation des collections pour résoudre un problème concret</em></p>
+</div>
 <div class="paragraph">
 <p>On souhaite gérer une bibliothèque de disques audio.</p>
 </div>
@@ -780,7 +919,7 @@ AFFICHER Math nul ou le gagnant</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-01 16:32:13 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-01 22:01:27 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
