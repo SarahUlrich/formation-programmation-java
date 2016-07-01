@@ -155,8 +155,8 @@ Classe `Disque` :
 Classe `Bibliotheque` :
 
 - les attributs nécessaires,
-- `ajouterDisque( Disque disque )`,
-- `retirerDisque( String codeBarre )`,
+- `void ajouterDisque( Disque disque ) throws DisqueDejaPresentException`. Cette méthode provoque une exception `DisqueDejaPresentException` (que vous définirez) lorsqu'on ajoute un disque dont le code barre est déjà enregistré dans la bibliothèque.
+- `boolean retirerDisque( String codeBarre )` qui retourne `true` si le disque a bien été retiré,
 - `getNbDisques()`,
 - `getDisque( String codeBarre )`,
 - `List<Disque> rechercherDisques( String recherche )` : retourne la liste des disques dont le nom contient la chaîne `recherche`, peu importe la casse.

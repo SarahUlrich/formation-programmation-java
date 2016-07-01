@@ -727,10 +727,10 @@ AFFICHER Math nul ou le gagnant</pre>
 <p>les attributs nécessaires,</p>
 </li>
 <li>
-<p><code>ajouterDisque( Disque disque )</code>,</p>
+<p><code>void ajouterDisque( Disque disque ) throws DisqueDejaPresentException</code>. Cette méthode provoque une exception <code>DisqueDejaPresentException</code> (que vous définirez) lorsqu&#8217;on ajoute un disque dont le code barre est déjà enregistré dans la bibliothèque.</p>
 </li>
 <li>
-<p><code>retirerDisque( String codeBarre )</code>,</p>
+<p><code>boolean retirerDisque( String codeBarre )</code> qui retourne <code>true</code> si le disque a bien été retiré,</p>
 </li>
 <li>
 <p><code>getNbDisques()</code>,</p>
@@ -780,7 +780,7 @@ AFFICHER Math nul ou le gagnant</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-01 13:44:40 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-01 16:32:13 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
