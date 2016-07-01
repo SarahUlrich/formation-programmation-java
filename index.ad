@@ -37,6 +37,7 @@ Les cours :
 Les exercices :
 
 - Les http://perso.telecom-paristech.fr/~charon/coursJava/exercices/index.html[cours] d'Irène Charon.
+- D'autres exercices sur http://www.cours-gratuit.com/java/[cours-gratuit.com/java/].
 
 Les personnes influentes :
 
@@ -930,9 +931,15 @@ Un objet de type `Map<K, V>` permet de lier un objet `V` avec une clé de type `
 
 Quelques méthodes :
 
-`boolean containsKey( K key )`:: Indique si un objet est associé à la clé `key` dans la table associative.
+`V put( K key, V value )`:: Associe un objet à une clé.
 
-`boolean containsValue( V value )`:: Indique si un objet `value` est stocké dans la table associative.
+`V get( Object key )`:: Retourne la valeur qui a été associée à la clé passée en paramètre, ou null s'il n'y en a pas.
+
+`boolean containsKey( Object key )`:: Indique si un objet est associé à la clé `key` dans la table associative.
+
+`boolean containsValue( Object value )`:: Indique si un objet `value` est stocké dans la table associative.
+
+`V remove( Object key ), qui supprime la clé de cette table, et la valeur qui lui est associée.
 
 `Set<Entry<K, V>> entrySet()`:: Retourne l'ensemble des couples clé-valeur (`Entry<K, V>`) contenues dans la table associative.
 

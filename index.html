@@ -537,6 +537,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p>Les <a href="http://perso.telecom-paristech.fr/~charon/coursJava/exercices/index.html">cours</a> d&#8217;Irène Charon.</p>
 </li>
+<li>
+<p>D&#8217;autres exercices sur <a href="http://www.cours-gratuit.com/java/">cours-gratuit.com/java/</a>.</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
@@ -1963,14 +1966,29 @@ Le lecteur avide de précisions supplémentaires pourra lire ce <a href="http://
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>boolean containsKey( K key )</code></dt>
+<dt class="hdlist1"><code>V put( K key, V value )</code></dt>
+<dd>
+<p>Associe un objet à une clé.</p>
+</dd>
+<dt class="hdlist1"><code>V get( Object key )</code></dt>
+<dd>
+<p>Retourne la valeur qui a été associée à la clé passée en paramètre, ou null s&#8217;il n&#8217;y en a pas.</p>
+</dd>
+<dt class="hdlist1"><code>boolean containsKey( Object key )</code></dt>
 <dd>
 <p>Indique si un objet est associé à la clé <code>key</code> dans la table associative.</p>
 </dd>
-<dt class="hdlist1"><code>boolean containsValue( V value )</code></dt>
+<dt class="hdlist1"><code>boolean containsValue( Object value )</code></dt>
 <dd>
 <p>Indique si un objet <code>value</code> est stocké dans la table associative.</p>
 </dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>`V remove( Object key ), qui supprime la clé de cette table, et la valeur qui lui est associée.</p>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1"><code>Set&lt;Entry&lt;K, V&gt;&gt; entrySet()</code></dt>
 <dd>
 <p>Retourne l&#8217;ensemble des couples clé-valeur (<code>Entry&lt;K, V&gt;</code>) contenues dans la table associative.</p>
@@ -2171,7 +2189,7 @@ while( iterator.hasNext() ) {
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-01 07:45:13 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-01 13:37:53 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
