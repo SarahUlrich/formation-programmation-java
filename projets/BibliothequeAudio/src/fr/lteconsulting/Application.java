@@ -7,10 +7,82 @@ public class Application
 {
 	public static void main( String[] args )
 	{
-		testBibliotheque();
+		// testBibliotheque();
+		run();
 	}
 
-	static void testBibliotheque()
+	static void run()
+	{
+		Bibliotheque bibliotheque = creerBibliothequeDeTest();
+
+		System.out.println( "Initialisation OK..." );
+
+		menuPrincipal( bibliotheque );
+	}
+
+	static void menuPrincipal( Bibliotheque bibliotheque )
+	{
+		while( true )
+		{
+			System.out.println( "\n## MENU PRINCIPAL ##\n" );
+			System.out.println( "1. Chercher des disques" );
+			System.out.println( "2. Chercher des chansons" );
+			System.out.println( "3. Détails d'un disque" );
+			System.out.println( "4. Quitter" );
+
+			int choix = Saisie.saisieInt( "Entrez le numéro du choix" );
+
+			switch( choix )
+			{
+				case 1:
+					rechercherDisques( bibliotheque );
+					break;
+				case 2:
+					rechercherChansons( bibliotheque );
+					break;
+				case 3:
+					detailsDisque( bibliotheque );
+					break;
+				case 4:
+					System.out.println( "Bye bye !" );
+					return;
+				default:
+					System.out.println( "Choix non disponible..." );
+			}
+		}
+	}
+
+	static void rechercherDisques( Bibliotheque bibliotheque )
+	{
+		System.out.println( "\n## RECHERCHE DISQUES ##\n" );
+		String recherche = Saisie.saisie( "Saisissez la chaine de recherche" );
+		rechercherDisques( bibliotheque, recherche );
+	}
+
+	static void rechercherChansons( Bibliotheque bibliotheque )
+	{
+		System.out.println( "\n## RECHERCHE CHANSONS ##\n" );
+		String recherche = Saisie.saisie( "Saisissez la chaine de recherche" );
+		rechercherChansons( bibliotheque, recherche );
+	}
+
+	static void detailsDisque( Bibliotheque bibliotheque )
+	{
+		System.out.println( "\n## DETAILS DISQUE ##\n" );
+		String codeBarre = Saisie.saisie( "Saisissez le code barre du dsique à afficher" );
+		Disque disque = bibliotheque.getDisque( codeBarre );
+		if( disque == null )
+		{
+			System.out.println( "Aucun disque trouvé..." );
+		}
+		else
+		{
+			System.out.println( "Disque trouvé, affichage des détails :" );
+			disque.afficher();
+		}
+	}
+
+	static Bibliotheque creerBibliothequeDeTest()
 	{
 		Bibliotheque bibliotheque = new Bibliotheque();
 
@@ -26,6 +98,13 @@ public class Application
 				System.out.println( "Duplication de code barre ! C'est pas grave va..." );
 			}
 		}
+
+		return bibliotheque;
+	}
+
+	static void testBibliotheque()
+	{
+		Bibliotheque bibliotheque = creerBibliothequeDeTest();
 
 		bibliotheque.afficher();
 
@@ -48,7 +127,7 @@ public class Application
 		{
 			String recherche = Mots.mot();
 
-			rechercheChansons( bibliotheque, recherche );
+			rechercherChansons( bibliotheque, recherche );
 		}
 	}
 
@@ -77,7 +156,7 @@ public class Application
 		return codeBarre;
 	}
 
-	static void rechercheChansons( Bibliotheque bibliotheque, String recherche )
+	static void rechercherChansons( Bibliotheque bibliotheque, String recherche )
 	{
 		System.out.println( "\nRecherche des chansons contenant '" + recherche + "'" );
 
