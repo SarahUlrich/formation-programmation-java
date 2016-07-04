@@ -2081,16 +2081,253 @@ while( iterator.hasNext() ) {
 </div>
 </div>
 <div class="sect3">
-<h4 id="__code_listiterator_t_code"><code>ListIterator&lt;T&gt;</code></h4>
+<h4 id="__code_listiterator_t_code_code_comparable_t_code_code_comparator_t_code"><code>ListIterator&lt;T&gt;</code>, <code>Comparable&lt;T&gt;</code>, <code>Comparator&lt;T&gt;</code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="__code_comparable_t_code_code_comparator_t_code"><code>Comparable&lt;T&gt;</code>, <code>Comparator&lt;T&gt;</code></h4>
+<h4 id="__code_date_code"><code>Date</code></h4>
+<div class="paragraph">
+<p>La class <code>java.util.Date</code> permet d&#8217;encoder une date et d&#8217;effectuer des traitements.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">Date date = new Date();
+Date date2 = new Date();
 
+date.after( date2 ); // retourne true ou false
+date.before( date2 ); // retourne true ou false
+date.getTime(); // ms depuis 1er Janvier 1970
+date.setTime( long time );</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>La classe <code>java.util.Calendar</code> possèdes des méthodes utiles pour manipuler les dates.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">Calendar cal = Calendar.getInstance();
+cal.setTime( date.getTime() );
+cal.add( Calendar.DATE, nbJour );
+Date date = cal.getTime();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Utilisez ce <a href="http://www.jmdoudoux.fr/java/dej/chap-utilisation_dates.htm">document</a> pour aller plus loin&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Demander le formattage d&#8217;une date :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">SimpleDateFormat formater = null;
+
+Date aujourdhui = new Date();
+
+formater = new SimpleDateFormat("dd-MM-yy");
+System.out.println(formater.format(aujourdhui));
+
+formater = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+System.out.println(formater.format(aujourdhui));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ou <em>parser</em> une saisise utilisateur :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">SimpleDateFormat simpleDateFormat = new SimpleDateFormat( "dd/MM/yyyy" );
+String dateString = "22/06/2016";
+try {
+	Date date = simpleDateFormat.parse( dateString );
+}
+catch( ParseException e ) {
+	e.printStackTrace();
+}</code></pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="__code_stringbuilder_code"><code>StringBuilder</code>, &#8230;&#8203;</h4>
 
+</div>
+<div class="sect3">
+<h4 id="__code_bigdecimal_code"><code>BigDecimal</code></h4>
+<div class="paragraph">
+<p>Pour faire du calcul en virgule fixe avec une grande précision (les traitements sur les devises par exemple ne se feront jamais ni avec <strong>float</strong> ni avec <strong>double</strong> !), on peut utiliser la classe <code>BigDecimal</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">BigDecimal valeur1 = new BigDecimal( "10" );
+BigDecimal valeur2 = new BigDecimal( "0.09" );
+
+BigDecimal valeur = valeur1.multiply( valeur2 );
+
+System.out.println( valeur );
+
+// affiche 0.90</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Attention aux erreurs de précision lorsque l&#8217;on crée des instances de <code>BigDecimal</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">BigDecimal valeur1 = new BigDecimal( 2.8 );
+BigDecimal valeur2 = new BigDecimal( "2.8" );
+
+System.out.println( "valeur1=" + valeur1 );
+System.out.println( "valeur2=" + valeur2 );
+
+// affiche :
+// valeur1=2.79999999999999982236431605997495353221893310546875
+// valeur2=2.8</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_utilisation_du_système_de_fichiers">Utilisation du système de fichiers</h4>
+<div class="paragraph">
+<p>Illustration :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">static void parcourir( String path )
+{
+	File file = new File( path );
+	if( file.exists() )
+	{
+		file.isDirectory();
+		file.isFile();
+		File[] files = file.listFiles();
+		file.getParentFile();
+		file.delete();
+		file.mkdir();
+		file.mkdirs();
+		file.length();
+	}
+
+	try
+	{
+		File tempFile = File.createTempFile( "prefix", "suffix" );
+	}
+	catch( IOException e )
+	{
+		e.printStackTrace();
+	}
+}
+
+static void lireFichierTexte( String path )
+{
+	File file = new File( path );
+
+	FileInputStream fis;
+	try
+	{
+		fis = new FileInputStream( file );
+
+		InputStreamReader isr = new InputStreamReader( fis, "UTF8" );
+
+		BufferedReader reader = new BufferedReader( isr );
+
+		reader.readLine();
+
+		reader.close();
+
+		isr.close();
+
+		fis.close();
+	}
+	// FileInputStream
+	catch( FileNotFoundException e )
+	{
+		e.printStackTrace();
+	}
+	// InputStreamReader
+	catch( UnsupportedEncodingException e )
+	{
+		e.printStackTrace();
+	}
+	// reader.readLine();, reader.close(); isr.close(), fis.close()
+	catch( IOException e )
+	{
+		e.printStackTrace();
+	}
+}
+
+static void ecrireFichierTexte( String path )
+{
+	boolean utilisePrintWriter = false;
+
+	File file = new File( path );
+
+	try
+	{
+		FileOutputStream fos = new FileOutputStream( file );
+
+		if( utilisePrintWriter )
+		{
+			PrintWriter pw = new PrintWriter( fos );
+
+			pw.print( 23 );
+			pw.println( "coucou" );
+
+			pw.flush();
+
+			pw.close();
+		}
+		else
+		{
+			OutputStreamWriter osw = new OutputStreamWriter( fos, "UTF8" );
+
+			Writer out = new BufferedWriter( osw );
+
+			out.append( "Website UTF-8" ).append( "\r\n" );
+
+			out.flush();
+
+			out.close();
+
+			osw.close();
+		}
+
+		fos.close();
+	}
+	// new FileOutputStream( file );
+	catch( FileNotFoundException e )
+	{
+		e.printStackTrace();
+	}
+	// new OutputStreamWriter( fos, "UTF8" );
+	catch( UnsupportedEncodingException e )
+	{
+		e.printStackTrace();
+	}
+	// append(), flush() et close()
+	catch( IOException e )
+	{
+		e.printStackTrace();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="http://www.jmdoudoux.fr/java/dej/indexavecframes.htm" class="bare">http://www.jmdoudoux.fr/java/dej/indexavecframes.htm</a></p>
+</div>
+<div class="paragraph">
+<p>Logging</p>
+</div>
+<div class="paragraph">
+<p>Réseau</p>
+</div>
+<div class="paragraph">
+<p>Les threads</p>
+</div>
+<div class="paragraph">
+<p>JDBC</p>
+</div>
+<div class="paragraph">
+<p>JPA</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_java_io">java.io</h4>
@@ -2189,7 +2426,7 @@ while( iterator.hasNext() ) {
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-01 13:37:53 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-04 09:25:22 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">

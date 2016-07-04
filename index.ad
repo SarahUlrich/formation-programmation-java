@@ -1003,11 +1003,233 @@ while( iterator.hasNext() ) {
 }
 ----
 
-==== `ListIterator<T>`
+==== `ListIterator<T>`, `Comparable<T>`, `Comparator<T>`
 
-==== `Comparable<T>`, `Comparator<T>`
+==== `Date`
+
+La class `java.util.Date` permet d'encoder une date et d'effectuer des traitements.
+
+[source,language="java"]
+----
+Date date = new Date();
+Date date2 = new Date();
+
+date.after( date2 ); // retourne true ou false
+date.before( date2 ); // retourne true ou false
+date.getTime(); // ms depuis 1er Janvier 1970
+date.setTime( long time );
+----
+
+La classe `java.util.Calendar` possèdes des méthodes utiles pour manipuler les dates.
+
+[source,language="java"]
+----
+Calendar cal = Calendar.getInstance(); 
+cal.setTime( date.getTime() );
+cal.add( Calendar.DATE, nbJour );
+Date date = cal.getTime();
+----
+
+Utilisez ce http://www.jmdoudoux.fr/java/dej/chap-utilisation_dates.htm[document] pour aller plus loin...
+
+Demander le formattage d'une date :
+
+[source,language="java"]
+----
+SimpleDateFormat formater = null;
+
+Date aujourdhui = new Date();
+
+formater = new SimpleDateFormat("dd-MM-yy");
+System.out.println(formater.format(aujourdhui));
+
+formater = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+System.out.println(formater.format(aujourdhui));
+----
+
+Ou _parser_ une saisise utilisateur :
+
+[source,language="java"]
+----
+SimpleDateFormat simpleDateFormat = new SimpleDateFormat( "dd/MM/yyyy" );
+String dateString = "22/06/2016";
+try {
+	Date date = simpleDateFormat.parse( dateString );
+}
+catch( ParseException e ) {
+	e.printStackTrace();
+}
+----
 
 ==== `StringBuilder`, ...
+
+==== `BigDecimal`
+
+Pour faire du calcul en virgule fixe avec une grande précision (les traitements sur les devises par exemple ne se feront jamais ni avec *float* ni avec *double* !), on peut utiliser la classe `BigDecimal`.
+
+[source,language="java"]
+----
+BigDecimal valeur1 = new BigDecimal( "10" );
+BigDecimal valeur2 = new BigDecimal( "0.09" );
+
+BigDecimal valeur = valeur1.multiply( valeur2 );
+
+System.out.println( valeur );
+
+// affiche 0.90
+----
+
+Attention aux erreurs de précision lorsque l'on crée des instances de `BigDecimal` :
+
+[source,language="java"]
+----
+BigDecimal valeur1 = new BigDecimal( 2.8 );
+BigDecimal valeur2 = new BigDecimal( "2.8" );
+
+System.out.println( "valeur1=" + valeur1 );
+System.out.println( "valeur2=" + valeur2 );
+
+// affiche :
+// valeur1=2.79999999999999982236431605997495353221893310546875
+// valeur2=2.8
+----
+
+==== Utilisation du système de fichiers
+
+Illustration :
+
+[source,language="java"]
+----
+static void parcourir( String path )
+{
+	File file = new File( path );
+	if( file.exists() )
+	{
+		file.isDirectory();
+		file.isFile();
+		File[] files = file.listFiles();
+		file.getParentFile();
+		file.delete();
+		file.mkdir();
+		file.mkdirs();
+		file.length();
+	}
+
+	try
+	{
+		File tempFile = File.createTempFile( "prefix", "suffix" );
+	}
+	catch( IOException e )
+	{
+		e.printStackTrace();
+	}
+}
+
+static void lireFichierTexte( String path )
+{
+	File file = new File( path );
+
+	FileInputStream fis;
+	try
+	{
+		fis = new FileInputStream( file );
+
+		InputStreamReader isr = new InputStreamReader( fis, "UTF8" );
+
+		BufferedReader reader = new BufferedReader( isr );
+
+		reader.readLine();
+
+		reader.close();
+
+		isr.close();
+
+		fis.close();
+	}
+	// FileInputStream
+	catch( FileNotFoundException e )
+	{
+		e.printStackTrace();
+	}
+	// InputStreamReader
+	catch( UnsupportedEncodingException e )
+	{
+		e.printStackTrace();
+	}
+	// reader.readLine();, reader.close(); isr.close(), fis.close()
+	catch( IOException e )
+	{
+		e.printStackTrace();
+	}
+}
+
+static void ecrireFichierTexte( String path )
+{
+	boolean utilisePrintWriter = false;
+
+	File file = new File( path );
+
+	try
+	{
+		FileOutputStream fos = new FileOutputStream( file );
+
+		if( utilisePrintWriter )
+		{
+			PrintWriter pw = new PrintWriter( fos );
+
+			pw.print( 23 );
+			pw.println( "coucou" );
+
+			pw.flush();
+
+			pw.close();
+		}
+		else
+		{
+			OutputStreamWriter osw = new OutputStreamWriter( fos, "UTF8" );
+
+			Writer out = new BufferedWriter( osw );
+
+			out.append( "Website UTF-8" ).append( "\r\n" );
+
+			out.flush();
+
+			out.close();
+
+			osw.close();
+		}
+
+		fos.close();
+	}
+	// new FileOutputStream( file );
+	catch( FileNotFoundException e )
+	{
+		e.printStackTrace();
+	}
+	// new OutputStreamWriter( fos, "UTF8" );
+	catch( UnsupportedEncodingException e )
+	{
+		e.printStackTrace();
+	}
+	// append(), flush() et close()
+	catch( IOException e )
+	{
+		e.printStackTrace();
+	}
+}
+----
+
+http://www.jmdoudoux.fr/java/dej/indexavecframes.htm
+
+Logging
+
+Réseau
+
+Les threads
+
+JDBC
+
+JPA
 
 ==== java.io
 
