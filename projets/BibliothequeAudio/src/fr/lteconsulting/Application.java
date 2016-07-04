@@ -29,17 +29,67 @@ public class Application
 
 		bibliotheque.afficher();
 
-		for( String recherche : new String[] { "Tithon", "dryade", "Ovide", "ovide", "oVIDE" } )
-			rechercherDisques( bibliotheque, recherche );
+		int nbRechercheDisque = 5;
+		while( nbRechercheDisque-- > 0 )
+		{
+			String recherche = Mots.mot();
+
+			String codeBarre = rechercherDisques( bibliotheque, recherche );
+			if( codeBarre != null )
+			{
+				System.out.println( "Recher et détails du disque " + codeBarre );
+				Disque disque = bibliotheque.getDisque( codeBarre );
+				disque.afficher();
+			}
+		}
+
+		int nbRechercheChanson = 5;
+		while( nbRechercheChanson-- > 0 )
+		{
+			String recherche = Mots.mot();
+
+			rechercheChansons( bibliotheque, recherche );
+		}
 	}
 
-	static void rechercherDisques( Bibliotheque bibliotheque, String recherche )
+	/**
+	 * Retourne un des code barres des disques trouvés
+	 * 
+	 * @param bibliotheque
+	 * @param recherche
+	 * @return
+	 */
+	static String rechercherDisques( Bibliotheque bibliotheque, String recherche )
 	{
+		String codeBarre = null;
+
 		System.out.println( "\nRecherche des disques contenant '" + recherche + "'" );
 		List<Disque> disques = bibliotheque.rechercherDisques( recherche );
 		System.out.println( disques.size() + " disques contiennent le mot " + recherche );
 		for( Disque disque : disques )
+		{
+			if( codeBarre == null )
+				codeBarre = disque.getCodeBarre();
+
 			System.out.println( "REFERENCE : " + disque.getCodeBarre() + " NOM:" + disque.getNom() );
+		}
+
+		return codeBarre;
+	}
+
+	static void rechercheChansons( Bibliotheque bibliotheque, String recherche )
+	{
+		System.out.println( "\nRecherche des chansons contenant '" + recherche + "'" );
+
+		List<Chanson> chansons = bibliotheque.rechercherChansons( recherche );
+
+		System.out.println( chansons.size() + " chansons contiennent le mot " + recherche );
+
+		for( Chanson chanson : chansons )
+		{
+			Disque disque = chanson.getDisque();
+			System.out.println( "- '" + chanson.getNom() + "' dans le disque " + disque.getNom() + " (ref:" + disque.getCodeBarre() + ")" );
+		}
 	}
 
 	static Disque creerDisque()

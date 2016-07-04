@@ -34,6 +34,6 @@ public class Chanson
 
 	public void afficher()
 	{
-		System.out.println( nom + " " + duree + " secondes" );
+		System.out.println( nom + " (" + duree + " s.)" );
 	}
 }

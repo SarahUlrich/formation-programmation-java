@@ -18,8 +18,12 @@ public class Mots
 		{
 			if( i > 0 )
 				phrase += " ";
+			
 			phrase += mot();
 		}
+
+		phrase = phrase.substring( 0, 1 ).toUpperCase() + phrase.substring( 1 );
+
 		return phrase;
 	}
 
