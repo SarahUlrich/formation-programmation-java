@@ -20,6 +20,24 @@ public class Bibliotheque
 			throw new DisqueDejaPresentException();
 
 		disques.put( disque.getCodeBarre(), disque );
+
+		disque.registerObserver( new IObserver<Disque>()
+		{
+			String ancienCodeBarre = disque.getCodeBarre();
+
+			@Override
+			public void onChange( Disque object )
+			{
+				System.out.println( "#### MISE A JOUR DES INDEX DE LA BIBLIOTHEQUE ####" );
+				if( disques.containsKey( disque.getCodeBarre() ) )
+					throw new RuntimeException( new DisqueDejaPresentException() );
+
+				disques.remove( ancienCodeBarre );
+				disques.put( disque.getCodeBarre(), disque );
+
+				ancienCodeBarre = disque.getCodeBarre();
+			}
+		} );
 	}
 
 	public boolean retirerDisque( String codeBarre )

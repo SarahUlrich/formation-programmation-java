@@ -28,7 +28,8 @@ public class Application
 			System.out.println( "1. Chercher des disques" );
 			System.out.println( "2. Chercher des chansons" );
 			System.out.println( "3. Détails d'un disque" );
-			System.out.println( "4. Quitter" );
+			System.out.println( "4. Changer le code barre d'un disque" );
+			System.out.println( "5. Quitter" );
 
 			int choix = Saisie.saisieInt( "Entrez le numéro du choix" );
 
@@ -44,6 +45,9 @@ public class Application
 					detailsDisque( bibliotheque );
 					break;
 				case 4:
+					changerCodeBarreDisque( bibliotheque );
+					break;
+				case 5:
 					System.out.println( "Bye bye !" );
 					return;
 				default:
@@ -79,6 +83,22 @@ public class Application
 		{
 			System.out.println( "Disque trouvé, affichage des détails :" );
 			disque.afficher();
+		}
+	}
+
+	static void changerCodeBarreDisque( Bibliotheque bibliotheque )
+	{
+		System.out.println( "\n## CHANGER CODE BARRE DISQUE ##\n" );
+		String codeBarre = Saisie.saisie( "Saisissez le code barre du disque à modifier" );
+		Disque disque = bibliotheque.getDisque( codeBarre );
+		if( disque == null )
+		{
+			System.out.println( "Aucun disque trouvé..." );
+		}
+		else
+		{
+			String nouveauCodeBarre = Saisie.saisie( "Saisissez le nouveau code barre" );
+			disque.setCodeBarre( nouveauCodeBarre );
 		}
 	}
 

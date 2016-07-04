@@ -3,17 +3,25 @@ package fr.lteconsulting;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Disque
+public class Disque implements IObservable<Disque>
 {
 	private String nom;
 	private String codeBarre;
 	private List<Chanson> chansons;
+
+	private Observable<Disque> observable = new Observable<>( this );
 
 	public Disque( String nom, String codeBarre )
 	{
 		this.nom = nom;
 		this.codeBarre = codeBarre;
 		this.chansons = new ArrayList<>();
+	}
+
+	@Override
+	public IObservableRegistration registerObserver( IObserver<Disque> observer )
+	{
+		return observable.registerObserver( observer );
 	}
 
 	public void addChanson( Chanson chanson )
@@ -38,6 +46,13 @@ public class Disque
 	public String getCodeBarre()
 	{
 		return codeBarre;
+	}
+
+	public void setCodeBarre( String codeBarre )
+	{
+		this.codeBarre = codeBarre;
+
+		observable.notifyObservers();
 	}
 
 	public List<Chanson> getChansons()
