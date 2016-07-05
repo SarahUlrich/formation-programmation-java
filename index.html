@@ -471,6 +471,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_classes_imbriquées">Classes imbriquées</a></li>
 <li><a href="#_classes_anonymes">Classes anonymes</a></li>
 <li><a href="#_les_exceptions">Les exceptions</a></li>
+<li><a href="#_les_collections">Les collections</a></li>
+<li><a href="#_communication_entre_objets">Communication entre objets</a></li>
+<li><a href="#_le_pattern_commande">Le pattern Commande</a></li>
 <li><a href="#_quelques_classes_du_sdk">Quelques classes du SDK</a></li>
 <li><a href="#_communication_entre_objets_patterns_de_communication">Communication entre objets (patterns de communication)</a></li>
 </ul>
@@ -1848,9 +1851,7 @@ public class TestSaisieErroneeException {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_quelques_classes_du_sdk">Quelques classes du SDK</h3>
-<div class="sect3">
-<h4 id="_les_collections">Les collections</h4>
+<h3 id="_les_collections">Les collections</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1884,8 +1885,8 @@ Le lecteur avide de précisions supplémentaires pourra lire ce <a href="http://
 <div class="paragraph">
 <p>Certaines de ces collections proposent des fonctionnalités comme la suppression des doublons ou encore la recherche d&#8217;éléments. Ces opérations s&#8217;appuient en général sur le concept d&#8217;égalité entre objets définie par les méthodes <code>equals(&#8230;&#8203;)</code> et <code>hashCode()</code>. Il est donc d&#8217;autant plus important d&#8217;implémenter ces méthodes correctement lorqu&#8217;on les surcharge.</p>
 </div>
-<div class="sect4">
-<h5 id="_l_interface_code_collection_e_code">L&#8217;interface <code>Collection&lt;E&gt;</code></h5>
+<div class="sect3">
+<h4 id="_l_interface_code_collection_e_code">L&#8217;interface <code>Collection&lt;E&gt;</code></h4>
 <div class="paragraph">
 <p>Cette interface est l&#8217;interface de base pour <code>List&lt;E&gt;</code> et <code>Set&lt;E&gt;</code>. Voici quelques méthodes importantes :</p>
 </div>
@@ -1926,8 +1927,8 @@ Le lecteur avide de précisions supplémentaires pourra lire ce <a href="http://
 </dl>
 </div>
 </div>
-<div class="sect4">
-<h5 id="__code_list_v_code_code_arraylist_v_code_code_linkedlist_v_code"><code>List&lt;V&gt;</code>, <code>ArrayList&lt;V&gt;</code>, <code>LinkedList&lt;V&gt;</code></h5>
+<div class="sect3">
+<h4 id="__code_list_v_code_code_arraylist_v_code_code_linkedlist_v_code"><code>List&lt;V&gt;</code>, <code>ArrayList&lt;V&gt;</code>, <code>LinkedList&lt;V&gt;</code></h4>
 <div class="paragraph">
 <p>Un classe qui implémente l&#8217;interface <code>List&lt;V&gt;</code> représente un ensemble ordonné d&#8217;objets de type <em>V</em>. Le contrat de <code>List&lt;V&gt;</code> n&#8217;interdit pas les doublons.</p>
 </div>
@@ -1947,14 +1948,14 @@ Le lecteur avide de précisions supplémentaires pourra lire ce <a href="http://
 <p>Voici quelques méthodes très utilisées de <code>List&lt;V&gt;</code> : <code>add( T element )</code>, <code>T get( int index )</code>, <code>ListIterator&lt;T&gt; listIterator()</code>, <code>T remove( int index )</code>, <code>T set( int index, T element )</code>, <code>List&lt;T&gt; subList( int indexFrom, int indexTo )</code> (attention ce n&#8217;est pas une copie !).</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="__code_set_v_code_code_hashset_v_code_code_treeset_v_code_code_linkedhashset_v_code"><code>Set&lt;V&gt;</code>, <code>HashSet&lt;V&gt;</code>, <code>TreeSet&lt;V&gt;</code>, <code>LinkedHashSet&lt;V&gt;</code></h5>
+<div class="sect3">
+<h4 id="__code_set_v_code_code_hashset_v_code_code_treeset_v_code_code_linkedhashset_v_code"><code>Set&lt;V&gt;</code>, <code>HashSet&lt;V&gt;</code>, <code>TreeSet&lt;V&gt;</code>, <code>LinkedHashSet&lt;V&gt;</code></h4>
 <div class="paragraph">
 <p>Ensemble d&#8217;objet sans doublons. Ne permet pas l&#8217;accès direct à un élément de la collection (les éléments ne sont par ordonnés). Il existe une interface <code>SortedSet&lt;V&gt;</code> qui interdit les doublons et pour autant ordonne quand même les éléments.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="__code_map_k_v_code_code_hashmap_k_v_code_code_treemap_v_code_code_linkedtreemap_v_code"><code>Map&lt;K, V&gt;</code>, <code>HashMap&lt;K, V&gt;</code>, <code>TreeMap&lt;V&gt;</code>, <code>LinkedTreeMap&lt;V&gt;</code></h5>
+<div class="sect3">
+<h4 id="__code_map_k_v_code_code_hashmap_k_v_code_code_treemap_v_code_code_linkedtreemap_v_code"><code>Map&lt;K, V&gt;</code>, <code>HashMap&lt;K, V&gt;</code>, <code>TreeMap&lt;V&gt;</code>, <code>LinkedTreeMap&lt;V&gt;</code></h4>
 <div class="paragraph">
 <p>Collection de couples d&#8217;objets <em>clé</em>, <em>valeur</em>. Une <code>Map&lt;K, V&gt;</code> permet d&#8217;associer des <code>V</code> à des <code>K</code>. Une fois l&#8217;association stockée dans l&#8217;objet <em>Map</em>, consulter l&#8217;objet de type <code>V</code> associé à une objet <code>K</code> est une opération qui sera réalisée avec une complexité algorithmique en <em>O(1)</em>.</p>
 </div>
@@ -2031,19 +2032,18 @@ public class TestHashMapIterator {
 <p>Les performances des opérations <code>get()</code> et <code>put()</code> sont constantes sous réserve que la répartition des éléments dans les différents buckets grâce à leur valeur de hachage soit équitable (implémentation de la méthode <code>hashCode()</code> des éléments de la table associative).</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="__code_queue_v_code_code_linkedlist_v_code_code_arraydequeue_v_code_code_priorityqueue_v_code"><code>Queue&lt;V&gt;</code>, <code>LinkedList&lt;V&gt;</code>, <code>ArrayDequeue&lt;V&gt;</code>, <code>PriorityQueue&lt;V&gt;</code></h5>
+<div class="sect3">
+<h4 id="__code_queue_v_code_code_linkedlist_v_code_code_arraydequeue_v_code_code_priorityqueue_v_code"><code>Queue&lt;V&gt;</code>, <code>LinkedList&lt;V&gt;</code>, <code>ArrayDequeue&lt;V&gt;</code>, <code>PriorityQueue&lt;V&gt;</code></h4>
 
 </div>
-<div class="sect4">
-<h5 id="_la_classe_code_collections_code">La classe <code>Collections</code></h5>
+<div class="sect3">
+<h4 id="_la_classe_code_collections_code">La classe <code>Collections</code></h4>
 <div class="paragraph">
 <p>Cette classe contient de nombreuses méthodes utilitaires statiques qui facilitent le travail avec les collections.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java" data-lang="java">Map&lt;String, Piece&gt; m = Collections.synchronizedMap( new HashMap&lt;String, Piece&gt;() );</code></pre>
-</div>
 </div>
 </div>
 </div>
@@ -2084,6 +2084,164 @@ while( iterator.hasNext() ) {
 <h4 id="__code_listiterator_t_code_code_comparable_t_code_code_comparator_t_code"><code>ListIterator&lt;T&gt;</code>, <code>Comparable&lt;T&gt;</code>, <code>Comparator&lt;T&gt;</code></h4>
 
 </div>
+</div>
+<div class="sect2">
+<h3 id="_communication_entre_objets">Communication entre objets</h3>
+<div class="sect3">
+<h4 id="_un_à_un_unidirectionnel">Un à un unidirectionnel</h4>
+<div class="paragraph">
+<p>C&#8217;est le cas le plus simple. Un objet doit avoir accès à un autre objet. Dans ce cas, il suffit de créer un attribut de type <code>B</code> dans la classe <code>A</code>. On décide ensuite s&#8217;il faut mettre un setter du côté <code>A</code> ou bien si l&#8217;objet <code>B</code> est reçu ou construit dans le constructeur de <code>A</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_un_à_un_bidirectionnel">Un à un bidirectionnel</h4>
+<div class="paragraph">
+<p>Dans ce cas, chaque partie de la relation possède une référence vers l&#8217;autre partie. <code>A</code> a donc un attribut de type <code>B</code> et <code>B</code> a un attribut de type <code>A</code>. Reste à décider comment et dans quel ordre s&#8217;effectue l&#8217;initialisation.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_un_à_plusieurs_unidirectionnel">Un à plusieurs unidirectionnel</h4>
+<div class="paragraph">
+<p>Dans ce cas, un objet de type <code>A</code> possède une relation vers plusieurs objets du type <code>B</code>. Il suffit alors d&#8217;avoir une <em>collection</em> de <code>B</code> du côté de <code>A</code>.</p>
+</div>
+<div class="paragraph">
+<p>La collection peut être initialisée vide à la construction de <code>A</code> puis enrichie ensuite (lors de l&#8217;appel de méthodes destinées à cet effet).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_un_à_plusieurs_bidirectionnel">Un à plusieurs bidirectionnel</h4>
+<div class="paragraph">
+<p><code>A</code> possède encore une collection de <code>B</code>. Par contre chaque objet <code>B</code> de la relation doit avoir une référence vers le <code>A</code> qui le contient.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Il faut prendre garde au moment de l&#8217;ajout, retrait ou modification que les attributs sont bien à jour après opération.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_plusieurs_à_plusieurs">Plusieurs à plusieurs</h4>
+<div class="paragraph">
+<p>Cas le plus complexe. Exemple de <code>Article</code> et <code>Categorie</code>. Un article peut appartenir à plusieurs catégories et une catégorie peut être liée à plusieurs articles.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_le_pattern_code_observer_code">Le pattern <code>Observer</code></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_le_pattern_code_eventbus_code">Le pattern <code>EventBus</code></h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_le_pattern_commande">Le pattern Commande</h3>
+<div class="paragraph">
+<p>L&#8217;intention du pattern <code>Commande</code> est d'<em>encapsuler une requête comme un objet, autorisant ainsi le paramétrage des clients par différentes requêtes, file d&#8217;attente et récapitulatifs de requêtes, et de plus permettant la révision des opérations</em>. Il est ici fait allusion à deux utilisations des commandes : découpler la création d&#8217;une requête de son exécution, et implémenter l&#8217;undo.</p>
+</div>
+<div class="paragraph">
+<p>On peut ainsi découpler :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>La création de la commande,</p>
+</li>
+<li>
+<p>Le paramétrage de la commande,</p>
+</li>
+<li>
+<p>Son exécution (déclenchée par : menu, bouton, raccourci clavier, batch, &#8230;&#8203;).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Voici une illustration en diagramme de classe :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="java-images/pattern-commande.jpg" alt="Les acteurs du pattern Commande">
+</div>
+</div>
+<div class="paragraph">
+<p>Les différents roles des classes sont :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Command</em> : l&#8217;abstraction d&#8217;une action, qui permet de découpler la création et le paramétrage de l&#8217;action de son exécution,</p>
+</li>
+<li>
+<p><em>Invocator</em> : celui qui déclenche l&#8217;exécution des commandes (ex. : le click d&#8217;un bouton, un raccourci clavier, &#8230;&#8203;),</p>
+</li>
+<li>
+<p><em>ConcreteCommand</em> : un type de commande particulier avec son implémentation,</p>
+</li>
+<li>
+<p><em>Client</em> : l&#8217;instanciateur de ConcreteCommand. Il fourni les paramètres passés au constructeur de ConcreteCommand,</p>
+</li>
+<li>
+<p><em>Receptor</em> : la cible d&#8217;un type de commande particulier (ex. : un graphique pour une commande "drawLine", une Bibliothèque pour une commande "ajouterDisque", &#8230;&#8203;).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ils interagissent de la façon suivante :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Le <em>Client</em> connaît les valeurs permettant de paramétrer une ConcreteCommand. Il l&#8217;instancie en lui passant ces paramètres.</p>
+</li>
+<li>
+<p>L'<em>Invocator</em> déclenche une Command.</p>
+</li>
+<li>
+<p>La <em>ConcreteCommand</em> exécute une action impactant le <em>Receptor</em>, en utilisant les paramètres que son constructeur a capturés.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Voici trois liens vers des informations additionnelles sur le pattern commande, à méditer : <a href="https://fr.wikipedia.org/wiki/Commande_(patron_de_conception" class="bare">https://fr.wikipedia.org/wiki/Commande_(patron_de_conception</a>), <a href="http://jfod.cnam.fr/NSY102/ed/ed_02_pattern/" class="bare">http://jfod.cnam.fr/NSY102/ed/ed_02_pattern/</a>, <a href="http://zenika.developpez.com/tutoriels/java/patterns-command/#LVI-B" class="bare">http://zenika.developpez.com/tutoriels/java/patterns-command/#LVI-B</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>On voit que ce pattern permet bien de découpler l&#8217;instanciation d&#8217;un traitement de son exécution. C&#8217;est pour cela qu&#8217;on introduit souvent ce degré d&#8217;abstraction lorsque les lieux d&#8217;instanciation et d&#8217;exécution d&#8217;un traitement sont éloignés, dans l&#8217;espace ou dans le temps.</p>
+</div>
+<div class="paragraph">
+<p>La séparation modulaire est une motivation suffisante. Le pattern Command permet :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>de garder des modules faiblement couplés : le module d&#8217;exécution a juste à connaître l&#8217;interface de Command sans se soucier de la création de nouvelles commandes,</p>
+</li>
+<li>
+<p>en particulier, d&#8217;ajouter de nouveaux types de commandes (de nouvelles ConcreteCommand) dans le module de création, sans modifier le module d&#8217;exécution. Cette approche correspond au principe open-close de Robert Martin (voir aussi les autres principes SOLID du même auteur).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ceci était un extrait de ce <a href="http://zenika.developpez.com/tutoriels/java/patterns-command/">site</a>, vous pouvez le consulter pour aller plus loin et comprendre par exemple comment le pattern Commande peut aider à implémenter les fonctions <em>undo</em> et <em>redo</em>&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quelques_classes_du_sdk">Quelques classes du SDK</h3>
 <div class="sect3">
 <h4 id="__code_date_code"><code>Date</code></h4>
 <div class="paragraph">
@@ -2358,9 +2516,6 @@ static void ecrireFichierTexte( String path )
 <div class="paragraph">
 <p>StringReader et StringWriter lisent/écrivent depuis/vers une chaîne de caractères.</p>
 </div>
-<div class="paragraph">
-<p><strong>Exercice</strong> : implémenter <code>Iterable&lt;T&gt;</code> dans TableauDynamique et utiliser la forme <em>foreach</em> de la boucle <code>for</code> dans le projet des cartes.</p>
-</div>
 </div>
 </div>
 <div class="sect2">
@@ -2426,7 +2581,7 @@ static void ecrireFichierTexte( String path )
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-04 09:25:22 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-05 11:02:28 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">

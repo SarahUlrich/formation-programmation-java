@@ -869,9 +869,7 @@ public class TestSaisieErroneeException {
 
 Vous pouvez utiliser cet http://perso.telecom-paristech.fr/~charon/coursJava/exercices/fact+Exc.html[exercice] pour vous familiariser avec la syntaxe des exceptions.
 
-=== Quelques classes du SDK
-
-==== Les collections
+=== Les collections
 
 NOTE: Le lecteur avide de précisions supplémentaires pourra lire ce http://www.jmdoudoux.fr/java/dej/chap-collections.htm[document] très complet de JM Doudoux.
 
@@ -889,7 +887,7 @@ Deux classes comportant de nombreuses méthodes d'_outillage_ : `Arrays` et `Col
 
 Certaines de ces collections proposent des fonctionnalités comme la suppression des doublons ou encore la recherche d'éléments. Ces opérations s'appuient en général sur le concept d'égalité entre objets définie par les méthodes `equals(...)` et `hashCode()`. Il est donc d'autant plus important d'implémenter ces méthodes correctement lorqu'on les surcharge.
 
-===== L'interface `Collection<E>`
+==== L'interface `Collection<E>`
 
 Cette interface est l'interface de base pour `List<E>` et `Set<E>`. Voici quelques méthodes importantes :
 
@@ -909,7 +907,7 @@ Cette interface est l'interface de base pour `List<E>` et `Set<E>`. Voici quelqu
 
 `Iterator<E> iterator()`:: Renvoie un `Iterator` permettant de parcourir la collection. Cette méthode est issue de l'interface `Iterable` qui est utilisée par la boucle `for( Element e : iterableObject )`.
 
-===== `List<V>`, `ArrayList<V>`, `LinkedList<V>`
+==== `List<V>`, `ArrayList<V>`, `LinkedList<V>`
 
 Un classe qui implémente l'interface `List<V>` représente un ensemble ordonné d'objets de type _V_. Le contrat de `List<V>` n'interdit pas les doublons.
 
@@ -919,11 +917,11 @@ Un classe qui implémente l'interface `List<V>` représente un ensemble ordonné
 
 Voici quelques méthodes très utilisées de `List<V>` : `add( T element )`, `T get( int index )`, `ListIterator<T> listIterator()`, `T remove( int index )`, `T set( int index, T element )`, `List<T> subList( int indexFrom, int indexTo )` (attention ce n'est pas une copie !).
 
-===== `Set<V>`, `HashSet<V>`, `TreeSet<V>`, `LinkedHashSet<V>`
+==== `Set<V>`, `HashSet<V>`, `TreeSet<V>`, `LinkedHashSet<V>`
 
 Ensemble d'objet sans doublons. Ne permet pas l'accès direct à un élément de la collection (les éléments ne sont par ordonnés). Il existe une interface `SortedSet<V>` qui interdit les doublons et pour autant ordonne quand même les éléments.
 
-===== `Map<K, V>`, `HashMap<K, V>`, `TreeMap<V>`, `LinkedTreeMap<V>`
+==== `Map<K, V>`, `HashMap<K, V>`, `TreeMap<V>`, `LinkedTreeMap<V>`
 
 Collection de couples d'objets _clé_, _valeur_. Une `Map<K, V>` permet d'associer des `V` à des `K`. Une fois l'association stockée dans l'objet _Map_, consulter l'objet de type `V` associé à une objet `K` est une opération qui sera réalisée avec une complexité algorithmique en _O(1)_.
 
@@ -972,9 +970,9 @@ public class TestHashMapIterator {
 
 Les performances des opérations `get()` et `put()` sont constantes sous réserve que la répartition des éléments dans les différents buckets grâce à leur valeur de hachage soit équitable (implémentation de la méthode `hashCode()` des éléments de la table associative).
 
-===== `Queue<V>`, `LinkedList<V>`, `ArrayDequeue<V>`, `PriorityQueue<V>`
+==== `Queue<V>`, `LinkedList<V>`, `ArrayDequeue<V>`, `PriorityQueue<V>`
 
-===== La classe `Collections`
+==== La classe `Collections`
 
 Cette classe contient de nombreuses méthodes utilitaires statiques qui facilitent le travail avec les collections.
 
@@ -1004,6 +1002,77 @@ while( iterator.hasNext() ) {
 ----
 
 ==== `ListIterator<T>`, `Comparable<T>`, `Comparator<T>`
+
+=== Communication entre objets
+
+==== Un à un unidirectionnel
+
+C'est le cas le plus simple. Un objet doit avoir accès à un autre objet. Dans ce cas, il suffit de créer un attribut de type `B` dans la classe `A`. On décide ensuite s'il faut mettre un setter du côté `A` ou bien si l'objet `B` est reçu ou construit dans le constructeur de `A`.
+
+==== Un à un bidirectionnel
+
+Dans ce cas, chaque partie de la relation possède une référence vers l'autre partie. `A` a donc un attribut de type `B` et `B` a un attribut de type `A`. Reste à décider comment et dans quel ordre s'effectue l'initialisation.
+
+==== Un à plusieurs unidirectionnel
+
+Dans ce cas, un objet de type `A` possède une relation vers plusieurs objets du type `B`. Il suffit alors d'avoir une _collection_ de `B` du côté de `A`.
+
+La collection peut être initialisée vide à la construction de `A` puis enrichie ensuite (lors de l'appel de méthodes destinées à cet effet).
+
+==== Un à plusieurs bidirectionnel
+
+`A` possède encore une collection de `B`. Par contre chaque objet `B` de la relation doit avoir une référence vers le `A` qui le contient.
+
+NOTE: Il faut prendre garde au moment de l'ajout, retrait ou modification que les attributs sont bien à jour après opération.
+
+==== Plusieurs à plusieurs
+
+Cas le plus complexe. Exemple de `Article` et `Categorie`. Un article peut appartenir à plusieurs catégories et une catégorie peut être liée à plusieurs articles.
+
+==== Le pattern `Observer`
+
+==== Le pattern `EventBus`
+
+=== Le pattern Commande
+
+L'intention du pattern `Commande` est d'_encapsuler une requête comme un objet, autorisant ainsi le paramétrage des clients par différentes requêtes, file d'attente et récapitulatifs de requêtes, et de plus permettant la révision des opérations_. Il est ici fait allusion à deux utilisations des commandes : découpler la création d'une requête de son exécution, et implémenter l'undo.
+
+On peut ainsi découpler :
+
+- La création de la commande,
+- Le paramétrage de la commande,
+- Son exécution (déclenchée par : menu, bouton, raccourci clavier, batch, ...).
+
+Voici une illustration en diagramme de classe :
+
+image::pattern-commande.jpg[Les acteurs du pattern Commande]
+
+Les différents roles des classes sont :
+
+- _Command_ : l'abstraction d'une action, qui permet de découpler la création et le paramétrage de l'action de son exécution,
+- _Invocator_ : celui qui déclenche l'exécution des commandes (ex. : le click d'un bouton, un raccourci clavier, ...),
+- _ConcreteCommand_ : un type de commande particulier avec son implémentation,
+- _Client_ : l'instanciateur de ConcreteCommand. Il fourni les paramètres passés au constructeur de ConcreteCommand,
+- _Receptor_ : la cible d'un type de commande particulier (ex. : un graphique pour une commande "drawLine", une Bibliothèque pour une commande "ajouterDisque", ...).
+
+Ils interagissent de la façon suivante :
+
+- Le _Client_ connaît les valeurs permettant de paramétrer une ConcreteCommand. Il l'instancie en lui passant ces paramètres.
+- L'_Invocator_ déclenche une Command.
+- La _ConcreteCommand_ exécute une action impactant le _Receptor_, en utilisant les paramètres que son constructeur a capturés.
+
+NOTE: Voici trois liens vers des informations additionnelles sur le pattern commande, à méditer : https://fr.wikipedia.org/wiki/Commande_(patron_de_conception), http://jfod.cnam.fr/NSY102/ed/ed_02_pattern/, http://zenika.developpez.com/tutoriels/java/patterns-command/#LVI-B.
+
+On voit que ce pattern permet bien de découpler l'instanciation d'un traitement de son exécution. C'est pour cela qu'on introduit souvent ce degré d'abstraction lorsque les lieux d'instanciation et d'exécution d'un traitement sont éloignés, dans l'espace ou dans le temps.
+
+La séparation modulaire est une motivation suffisante. Le pattern Command permet :
+
+- de garder des modules faiblement couplés : le module d'exécution a juste à connaître l'interface de Command sans se soucier de la création de nouvelles commandes,
+- en particulier, d'ajouter de nouveaux types de commandes (de nouvelles ConcreteCommand) dans le module de création, sans modifier le module d'exécution. Cette approche correspond au principe open-close de Robert Martin (voir aussi les autres principes SOLID du même auteur).
+
+Ceci était un extrait de ce http://zenika.developpez.com/tutoriels/java/patterns-command/[site], vous pouvez le consulter pour aller plus loin et comprendre par exemple comment le pattern Commande peut aider à implémenter les fonctions _undo_ et _redo_...
+
+=== Quelques classes du SDK
 
 ==== `Date`
 
@@ -1250,8 +1319,6 @@ Leurs sous-classes sont également plus spécialisées :
 FileReader et FileWriter gèrent les fichiers,
 
 StringReader et StringWriter lisent/écrivent depuis/vers une chaîne de caractères.
-
-*Exercice* : implémenter `Iterable<T>` dans TableauDynamique et utiliser la forme _foreach_ de la boucle `for` dans le projet des cartes.
 
 === Communication entre objets (patterns de communication)
 
