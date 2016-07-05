@@ -11,4 +11,10 @@ public class AjouterMot extends Commande
 		String mot = Saisie.saisie( "Quel mot voulez-vous ajouter ?" );
 		mots.add( mot );
 	}
+
+	@Override
+	public String toString()
+	{
+		return "Ajouter un mot";
+	}
 }

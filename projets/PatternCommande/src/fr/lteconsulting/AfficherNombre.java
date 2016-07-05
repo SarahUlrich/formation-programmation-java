@@ -9,4 +9,10 @@ public class AfficherNombre extends Commande
 	{
 		System.out.println( "\nNombre de mots : " + mots.size() );
 	}
+	
+	@Override
+	public String toString()
+	{
+		return "Afficher le nombre de mots";
+	}
 }

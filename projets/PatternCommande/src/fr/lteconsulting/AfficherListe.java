@@ -11,4 +11,10 @@ public class AfficherListe extends Commande
 		for( String s : mots )
 			System.out.println( s );
 	}
+	
+	@Override
+	public String toString()
+	{
+		return "Afficher la liste des mots";
+	}
 }
