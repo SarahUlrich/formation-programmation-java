@@ -1331,18 +1331,18 @@ StringReader et StringWriter lisent/écrivent depuis/vers une chaîne de caract�
 - Design patterns
 - Java EE - Architectures distribuées
 - Java EE - Servlets, JSP, EJB
-- Spring IOC et TDD
 - XML, DTD, XSL, XSLT
-- SOA - Approche orientée services
 - RIA - Rich internet applications
+- HTML5 CSS3 Javascript, Typescript
 
 - Java : file system, threads, ...
 - Tests unitaires
 - Maven
 - GWT
+- Spring IOC et TDD
+- SOA - Approche orientée services
 - Spring Boot -> les indispensables : JPA, IOC, conf discovery, ...
 - Docker
-- HTML5 CSS3 Javascript, Typescript
 
 TOTAL = 8 semaines.
 

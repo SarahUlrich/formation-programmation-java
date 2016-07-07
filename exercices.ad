@@ -24,6 +24,11 @@ Vendredi 1er juillet : correction exceptions. les Collections
 lundi 4 juillet
 - pattern Commande (dur dur)
 - Lecture/Ecriture fichier
+mardi 5 juillet :
+	détails sur pattern Commande (surement trop tot et trop compliqué pour en parler à ce stade)
+	détails sur File et FileInputStream (juste lire et écrire des octets, pas des caractères)
+mercredi 6 juillet : InputStreamReader avec encoding, html
+jeudi 7 juillet : html / css
 ////
 
 
