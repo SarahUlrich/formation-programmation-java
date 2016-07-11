@@ -28,7 +28,8 @@ mardi 5 juillet :
 	détails sur pattern Commande (surement trop tot et trop compliqué pour en parler à ce stade)
 	détails sur File et FileInputStream (juste lire et écrire des octets, pas des caractères)
 mercredi 6 juillet : InputStreamReader avec encoding, html
-jeudi 7 juillet : html / css
+jeudi 7 juillet : html / css (balises, flux, position static relative fixed)
+vendredi 8 juillet : css (position absolute, overflow, clear, clear fix, flexbox, media queries, responsive design)
 ////
 
 

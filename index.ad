@@ -152,6 +152,8 @@ Les types primitifs portent des valeurs, en voici la liste :
 - valeurs flottantes : `float` et `short`,
 - valeur caractère (unicode, 16 bits) : `char`.
 
+NOTE: Attention, les types primitifs `float` et `double` sont codés en virgule flottante ! Il ne faut **surtout pas les utiliser** pour effectuer des traitements monétaires. Voici http://www.enseignement.polytechnique.fr/informatique/profs/Jean-Jacques.Levy/poly/main1/node7.html[quelques] http://pdp.microjoe.org/tutoriels/85/les-nombres-a-virgule-flottante/[liens] http://www.math.univ-paris13.fr/~delourme/Feuilles_TD_Projets_2013-2014/Chapitre1Japhet.pdf[explicatifs] et http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html[passionnants].
+
 === Les tableaux
 
 Une ou plusieurs dimension.
