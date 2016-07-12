@@ -1,0 +1,1862 @@
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="fr" prefix="og: http://ogp.me/ns#">
+    
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-gestion-d-un-formulaire-avec-jsf by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:52:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(e,t){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,t)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var u=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(u,function(e,t){newrelic[t]=r(f+t,"api")}),i(c,function(e,t){newrelic[t]=r(f+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?u(e,a,i):i()}function n(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,c=0;u>c;c++)a[c].apply(i,r);var s=f[g[n]];return s&&s.push([m,n,r,i]),i}function p(e,t){w[e]=l(e).concat(t)}function l(e){return w[e]||[]}function d(e){return s[e]=s[e]||o(n)}function v(e,t){c(e,function(e,n){t=t||"feature",g[n]=t,t in f||(f[t]=[])})}var w={},g={},m={on:p,emit:n,get:d,listeners:l,context:t,buffer:v};return m}function i(){return new r}var a="nr@context",u=e("gos"),c=e(2),f={},s={},p=t.exports=o();p.backlog=f},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!w++){var e=v.info=NREUM.info,t=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){c(l,function(t,n){e[t]||(e[t]=n)});var n="https"===p.split(":")[0]||e.sslForHttp;v.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=v.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=window,s=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var p=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),v=t.exports={offset:a(),origin:p,features:{},xhrWrappable:d};s.addEventListener?(s.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(s.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),u("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader"]);</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="application-name" content="OpenClassrooms"/>
+        <meta name="msapplication-TileColor" content="#e95325"/>
+        <meta name="msapplication-TileImage" content="/fav-icon.png?v=1"/>
+
+        <meta name="theme-color" content="#E95325">
+        <link rel="icon" sizes="144x144" href="../../fav-icon3860.png?v=1">
+
+        
+        
+        <link href="../../bundles/common/css/masterd0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"  />
+        
+
+        <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="../../apple-touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-iphone-retina-display.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-ipad-retina-display.png" />
+
+        <link rel="apple-touch-icon-precomposed" href="../../apple-touch-icon-precomposed.png" />
+
+            <link href="../../bundles/course/css/maind0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" src="../../js/modernizrd0b3.js?095b5b3"></script>
+
+        <link rel="shortcut icon" href="https://openclassrooms.com/favicon.ico?095b5b3" />
+
+            
+    <meta property="og:locale" content="fr"/>
+    <meta property="og:type" content="website"/>
+
+    <meta property="og:title" content="Découvrez le cours &quot;La gestion d&#039;un formulaire avec JSF&quot; sur @OpenClassrooms"/>
+    <meta property="og:url" content="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-gestion-d-un-formulaire-avec-jsf"/>
+    <meta property="og:site_name" content="OpenClassrooms"/>
+    <meta property="og:image" content="https://static.oc-static.com/prod/courses/illustrations/illu_creez-votre-application-web-avec-java-ee.png"/>
+    <meta property="og:description" content="Pour réaliser des sites web en Java, on utilise l&#039;environnement Java EE (anciennement appelé J2EE). Celui-ci impose de développer de façon très structurée, ce qui explique certainement pour quoi on le retrouve dans un très grand nombre d&#039;applications web notamment en entreprise (banques, administrations...)."/>
+
+            
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@OpenClassrooms"/>
+    <meta name="twitter:title" content="Découvrez le cours &quot;La gestion d&#039;un formulaire avec JSF&quot; sur @OpenClassrooms"/>
+    <meta name="twitter:description" content=""/>
+
+                
+        <title>La gestion d&#039;un formulaire avec JSF</title>
+
+        <!-- inlined top javascript block -->
+
+
+        <script type="text/javascript">
+            var App = {
+                startTime: (new Date()).getTime(),
+                debug: false
+            };
+
+            App.user = {
+                
+                
+                
+                isPremium: false
+            };
+
+
+            App.preferences = {
+                assetVersion: '095b5b3',
+                contactMail: 'hello@openclassrooms.com',
+                adyenPublicKey: '10001|889EBFD4D434B82683E21DCA26E77C3E20E0EE09A5ECE3830B0ED51F2FA721A2F7E9EC871C6AB9A1E12C4492F4717673047757E02C5256D8E265CD51E413E5EFCCFEAC41B39C662A424ADC13EE187C38C372A7FCCEC1EA5DF841989437D78B252A8EB51008E60BB55B1E55A7A80DE1A9D60D998C128A576BFAE1DDB97D514AF0A073AEDDE84CEE40D1F8F6ECE85D0FFA50C95C06DB274021C1371376C6EB16561FD65C5E2704B570A7504D617D0F3820F176A0609F6162BDF5890533289FDC3DA7DB03B50BB3BD60A613E1FF72060F22987627E8F1A29F0128A94EC4C8FF7CF6B7AB9558D8433BF86D7A388AB927641CD6C02689139CEE3AAC9ACBFFE83806CB',
+                algolia: {
+                    appId: 'JGRXRFVQM0',
+                    apiKey: 'dfbdea500cb0b5f46e449ad334916c44', indexName: 'prod_COURSES_fr'
+                },
+                routes: {
+                    COURSE_EVENT: '/components/courses/:courseId',
+                    COURSE_PART_EVENT: '/components/courses/:courseId/parts/:partId',
+
+                    ACCEPT_COOKIE: '/components/user-accept-consent-cookie'
+                }
+
+                                            };
+
+            App.preferences.navigationPreference = {
+                            };
+
+            App.preferences.modules = {
+                'smiley': {
+                    basePath: '/bundles/common/images/smiley/'
+                }
+            };
+        </script>
+        <!-- inlined top javascript block end -->
+
+        <script>    App.preferences.modules['course/view/internalFolding'] = {
+        isBigCourse: true
+    };
+
+    App.data = App.data || {};
+App.data.currentCourse = {"partId":626484,"courseId":626954};
+App.preferences.modules['view/currentCoursePage'] = App.data.currentCourse;
+
+</script>
+
+        
+        
+    </head>
+
+    <body class="course oc-body ">
+
+        
+
+        
+    
+    
+    <script id="_EVENTS-PAGE" type="application/json">
+        {"type":"page"}
+    </script>
+
+
+        <!--[if lt IE 9]>
+<div class="disclaimer  disclaimer-error">
+    Vous utilisez un navigateur obsolète, veuillez le <a href="http://browsehappy.com/">mettre à jour</a>.
+</div>
+<![endif]-->
+
+<noscript>
+    <div class="disclaimer  disclaimer--error">
+        Veuillez utiliser un <a href="http://browsehappy.com/">navigateur internet moderne</a> avec JavaScript activé pour naviguer sur OpenClassrooms.com
+    </div>
+</noscript>
+
+
+                    
+
+<header id="oc-header" class="js-tabs-mobile mainHeader ">
+
+        <div class="disclaimer  disclaimer--info hidden  js-cookie-disclaimer">
+        <div class="disclaimer__wrapper">
+            <span class="disclaimer__content">Bienvenue sur OpenClassrooms ! En poursuivant votre navigation, vous acceptez l'utilisation de cookies. <a href="https://openclassrooms.com/privacy-policy#personal-data-gathering">En savoir plus</a></span>
+            <span class="disclaimer__actions">
+                <a href="#" class="disclaimer__button  js-close-button">ok</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="mainHeader__wrapper">
+
+        <div class="mainHeader__topLine">
+                <a href="https://openclassrooms.com/pole-emploi/partenariat?utm_source=SiteWeb-OC&amp;utm_medium=Lien-PhraseHeader&amp;utm_campaign=relancePE"> Vous êtes demandeur d'emploi ? On vous offre le Premium Solo en 3 clics :) ! </a>
+
+        </div>
+
+        <div class="mainHeader__top">
+            <a href="https://openclassrooms.com/" class="mainHeader__logo" title="OpenClassrooms.com">OpenClassrooms.com</a>
+
+            
+<nav role="navigation" class="icoTabs  mainHeader__tabSet">
+    <span class="mainHeader__mobileNav">
+
+        
+        
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseEditMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" data-tabs-default="true" href="#tab-searchMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-search  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab" href="#tab-main">
+            <i class="icon-menu  icoTabs__icon"></i>
+        </a>
+    </span>
+
+</nav>
+        </div>
+
+                <div class="js-tabs-content  mainHeader__content"></div>
+
+        <div class="mainHeader__content">
+            <div id="tab-main" class="mainHeader__tabs">
+                <nav class="mainTopNav  scrollPanel  js-scrollPanel-mobileMenu">
+    <div class="mainTopNav__container  scrollPanel__container  js-scrollPanel-container">
+        <ul class="mainHeader__container  mainHeader__container--mainMenu  js-scrollPanel-content">
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="http://openclassrooms.com/paths/">Parcours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/courses">Cours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/forum/">Forums</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/partners">Partenaires</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/premium">Premium</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+                <div class="mainHeader__contentInner">
+                    <div class="mainHeader__container  mainHeader__container--search">
+                                                                                                                                                                            
+                                                                          
+ <div class="js-courseSearch  topSearchBox">
+     <form tabindex="0" class="js-courseSearch-form  oc-form" action="https://openclassrooms.com/courses" method="get">
+         <div class="js-courseSearch-inputGroup oc-form__widget  inputGroup  topSearchBox__inner">
+             <input id="algolia-search-input"
+                    type="search"
+                    class="js-courseSearch-input oc-form__control inputGroup__input  topSearchBox__input"
+                    title="Rechercher"
+                    autocomplete="off"
+                    data-option_source="/components/courses/search?q=<%= term %>"
+                    placeholder="Rechercher"
+                    name="q" />
+
+             <button class="js-courseSearch-button  oc-btn dark-btn  only-icon  inputGroup__button  topSearchBox__button" type="submit" title="Rechercher un cours">
+                 <i class="inputGroup__icon icon-search"></i>
+                 <i class="inputGroup__icon inputGroup__icon--load icon-spinner icon-spin"></i>
+             </button>
+         </div>
+     </form>
+ </div>
+                    </div>
+
+                                            <div class="mainHeader__container  mainHeader__container--separatorLarge  hidden-s"></div>
+                    
+
+
+                    
+                                            <div class="mainHeader__container  mainHeader__container--login">
+    <a href="https://openclassrooms.com/register" class="oc-btn orange-alt-btn js-popin-activator space-right" data-popin-selector="#popin-sign-in">
+    S&#039;inscrire
+</a>
+<a href="https://openclassrooms.com/login" class="oc-btn dark-btn js-popin-activator" data-popin-selector="#popin-log-in">
+    Se connecter
+</a>
+</div>
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-sign-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-sign-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-sign-in_popin_title" class="popin__title  js-popin-title">Inscription</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=e9ddeb947cfa7cdc43331fb8db40a29b&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail">
+            <i class="icon-facebook"></i>S&#039;inscrire avec Facebook
+        </a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto">
+            <i class="icon-google"></i>S&#039;inscrire avec Google
+        </a>
+    </li>
+
+    <li class="formLogin__column">
+        
+            
+    
+    
+
+    <form name="register" method="post" action="https://openclassrooms.com/register" class="js-registerForm oc-form">
+
+        <div class="accessibility-hidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Wonder&nbsp;                        </span><span class="oc-form__widget"><input type="text" id="register_wonder" name="register[wonder]" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Prénom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_firstName" name="register[firstName]" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Nom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_lastName" name="register[lastName]" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="email" id="register_email" name="register[email]" required="required" class="" /></span></label>
+            <p>
+                <em>
+                    Vous recevrez votre mot de passe sur cette adresse email.
+                </em>
+            </p>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="register_terms" name="register[terms]" required="required" class="" value="1" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            J'ai lu et j'accepte les <a href="https://openclassrooms.com/terms-conditions/fr">Conditions Générales d'Utilisation</a>.&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span></span></label>
+        </div>
+
+
+        <div class="oc-form__group  center-text">
+            
+    <button type="submit" id="register_create" name="register[create]" class="oc-btn orange-alt-btn oc-btn"> S'inscrire</button>
+        </div>
+
+        <input type="hidden" id="register__target_path" name="register[_target_path]" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-gestion-d-un-formulaire-avec-jsf" /><input type="hidden" id="register__token" name="register[_token]" value="LEhsW-IhokD4hQHYoHva_FZzYy-PP2cG-886IBpx9HY" /></form>
+    </li>
+</ul>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-log-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-log-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-log-in_popin_title" class="popin__title  js-popin-title">Connexion</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=e9ddeb947cfa7cdc43331fb8db40a29b&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail"><i class="icon-facebook"></i> Se connecter avec Facebook</a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto"><i class="icon-google"></i> Se connecter avec Google</a>
+    </li>
+
+    <li class="formLogin__column">
+
+        
+            
+    
+    
+
+    <form name="" method="post" action="https://openclassrooms.com/login_check" class=" oc-form">
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email ou nom d'utilisateur&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="_username" name="_username" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Mot de passe&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="password" id="_password" name="_password" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="_remember_me" name="_remember_me" class="" value="1" checked="checked" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            Se souvenir de moi&nbsp;                        </span></span></label>
+        </div>
+
+        <div class="oc-form__group right-text">
+            <a href="https://openclassrooms.com/set-new-password">Mot de passe oublié</a>
+        </div>
+
+        <div class="oc-form__group  center-text">
+            <input type="hidden" id="_target_path" name="_target_path" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-gestion-d-un-formulaire-avec-jsf" /><div>
+    <button type="submit" id="login" name="login" class="orange-alt-btn oc-btn"> Se connecter</button></div><input type="hidden" id="_csrf_token" name="_csrf_token" value="WFIVlYEKEcL5v9hnQC1z3quXwgYs14KEFOLh1GUmi_I" />
+        </div>
+
+        </form>
+    </li>
+</ul>
+<p class="text-center space-top">
+    Pas encore membre ? <a href="https://openclassrooms.com/register">Inscrivez-vous gratuitement</a> en 30s.
+</p>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+                    
+                    <div class="mainHeader__container  mainHeader__container--langSelector">
+                        <div class="js-popOut-header  popOut popOut--small  popOut--rightAlign" data-keep-it-mobile="true">
+    <span class="js-popOut-button  popOut__button">
+                    <a href="javascript:;" class="languageSelector__selected">Français</a>
+            </span>
+    <ul class="popOutList  popOut__content  popOutList--small">
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/en/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">English</a>
+            </li>
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/es/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">Español</a>
+            </li>
+            </ul>
+</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+        
+        <div id="mainSearch" class="centered search-content">
+        </div>
+
+        <div id="mainContentWithHeader">
+            <div id="pre-main-part">
+                
+                                        <section class="inset no-padding">
+        <div class="centered">
+
+            <h6 class="accessibility-hidden">Fil d&#039;Ariane</h6>
+
+            <nav class="breadcrumb">
+                <ul class="breadcrumbtrail">
+                                                                        <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/" itemprop="url">
+                                <span itemprop="title">Accueil</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses" itemprop="url">
+                                <span itemprop="title">Cours</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee?status=published" itemprop="url">
+                                <span itemprop="title">Créez votre application web avec Java EE</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li class="current" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            La gestion d&#039;un formulaire avec JSF
+                                                                        </li>
+                                    </ul>
+            </nav>
+        </div>
+    </section>
+
+                
+                            </div>
+
+            <div class="claire clearfix" >
+                    <article itemscope itemtype="http://schema.org/Article">
+
+                        
+<header class="course-header" xmlns="http://www.w3.org/1999/html">
+    <div class="centered"><div class="course-header__topPart"><div class="course-header__info"><a itemprop="url" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><h1 data-course-title="Créez votre application web avec Java EE">Créez votre application web avec Java EE</h1></a><span class="course-header__updatedTime visible-l">Mis à jour le lundi 13 juillet 2015</span></div></div></div><div class="course-header__details-container"><div class="centered"><div class="row"><div class="col12"><div class="course-header__details  iconBar"><div class="course-header__detailsGroup  course-header__detailsGroup--formats iconBar__group"><ul data-option_popinselector="#popin-formats-availables" class="course-types iconBar__list js-course-formats-bar"><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours est visible gratuitement en ligne."><a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><i class="icon-desktop  course-types__icon"></i><span class="course-header__format-current"></span></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore en vidéo."><span><i class="icon-video course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en livre papier."><a href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank"><i class="icon-book  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en eBook."><a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee"><i class="icon-ebook  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip"
+                                                                                            title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours."
+                                                                                ><a
+                                                                                        ><i class="icon-badge  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore diplômant et ne vous permet pas d&#039;obtenir des crédits universitaires européens (ECTS)."><span><i class="icon-hat  course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Vous pouvez être accompagné sur ce cours par un mentor dédié en visioconférence."><a  href="https://openclassrooms.com/premium#discover-premium-plus-offer" ><i class="icon-mentor  course-types__icon"></i></a></li></ul></div><div class="course-header__detailsGroup  course-header__detailsGroup--info  iconBar__group"><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-duration iconBar__icon js-tooltip" title="Ce cours demande en moyenne 40 heures de travail pour être réussi."></i><span class="iconBar__label">40 heures</span></li><li class="iconBar__item"><i class="icon-level iconBar__icon"></i><span class="iconBar__label">
+                                                                                                    Moyenne
+                                                                                            </span></li></ul></div><div class="course-header__detailsGroup course-header__detailsGroup--licences iconBar__group"><a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/2.0"><span class="iconBar__label">Licence</span><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-cc iconBar__icon" title="CC"></i></li><li class="iconBar__item"><i class="icon-ccby iconBar__icon" title="BY"></i></li><li class="iconBar__item"><i class="icon-ccnc iconBar__icon" title="NC"></i></li><li class="iconBar__item"><i class="icon-ccsa iconBar__icon" title="SA"></i></li></ul></a></div></div></div></div></div></div>
+    <div id="popin-formats-availables" class="popin popin--course-formats-availables">
+        <i class="popin__close-button icon-close js-close-button"></i>
+
+        <div class="course-types course-types--withSpace">
+                            <a class="course-types__item" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-desktop course-types__icon"></i>
+                </a>
+            
+            
+                            <a class="course-types__item" href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms">
+                    <i class="icon-book course-types__icon"></i>
+                </a>
+            
+                            <a class="course-types__item" href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-ebook course-types__icon"></i>
+                </a>
+            
+            
+                                        <a class="course-types__item" href="https://openclassrooms.com/premium#discover-premium-plus-offer">
+                    <i class="icon-mentor course-types__icon"></i>
+                </a>
+                    </div>
+
+                    <p>Ce cours est visible <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">gratuitement en ligne</a>.</p>
+        
+        
+                    <p>
+                Ce cours existe en livre papier.
+            </p>
+        
+                    <p>Ce cours existe <a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">en eBook</a>.</p>
+        
+        
+        
+                    <p>
+                Vous pouvez être <a href="https://openclassrooms.com/premium#discover-premium-plus-offer">accompagné et mentoré par un professeur particulier</a> par visioconférence sur ce cours.
+            </p>
+        
+        <a class="oc-btn orange-alt-btn js-close-button" href="#">J&#039;ai tout compris !</a>
+    </div>
+
+    
+</header>
+
+    <div class="centered">
+                            
+        
+            <div class="row">
+        <div class="col12 col11-s">
+                            <nav class="timeline">
+        <div class="timeline__inner">
+
+        <span class="timeline__iconContainer">
+            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+                <i class="icon-home roundIcon__icon"></i>
+            </a>
+        </span>
+            <div class="timeline__steps">
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-au-java-ee.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction au Java EE
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-java-ee-mis-a-nu.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le Java EE mis à nu !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="outils-et-environnement-de-developpement.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Outils et environnement de développement
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="la-servlet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La servlet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="servlet-avec-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Servlet avec vue…
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="transmission-de-donnees.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Transmission de données
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-javabean.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le JavaBean
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-1-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (1/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-2-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (2/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="des-problemes-de-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Des problèmes de vue ?
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-1.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 1
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="objectifs-et-configuration.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Objectifs et configuration
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-core.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque Core
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-core-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL core : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-xml.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque xml
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-xml-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL xml : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="faisons-le-point-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Faisons le point !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 2
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="formulaires-le-b-a-ba.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : le b.a.-ba
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-a-la-mode-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : à la mode MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-3.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 3
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-session-connectez-vos-clients.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La session : connectez vos clients
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-filtre-creez-un-espace-membre.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le filtre : créez un espace membre
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-cookie-le-navigateur-vous-ouvre-ses-portes.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le cookie : le navigateur vous ouvre ses portes
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-4.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 4
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-l-envoi-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : l&#039;envoi de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-telechargement-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le téléchargement de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-5.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 5
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-a-mysql-et-jdbc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction à MySQL et JDBC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="communiquez-avec-votre-bdd.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Communiquez avec votre BDD
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-modele-dao.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le modèle DAO
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-6.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 6
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="gerer-un-pool-de-connexions-avec-bonecp.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Gérer un pool de connexions avec BoneCP
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="les-annotations.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Les annotations
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-persistance-des-donnees-avec-jpa.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La persistance des données avec JPA
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-7.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 7
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="introduction-aux-frameworks-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction aux frameworks MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="premiers-pas-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Premiers pas avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-gestion-d-un-formulaire-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La gestion d&#039;un formulaire avec JSF
+                                </span>
+
+                                                                    <span class="timeline__progressMarker"></span>
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="l-envoi-de-fichiers-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    L&#039;envoi de fichiers avec JSF
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="debugger-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Débugger un projet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="empaquetage-et-deploiement-d-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Empaquetage et déploiement d&#039;un projet
+                                </span>
+
+                                                            </a>
+                                            
+                
+                <span class="timeline__splitChapter"></span>
+
+            </div>
+
+        <span class="timeline__iconContainer">
+                            <span title="Ce cours n&#039;est pas encore certifiant." class="roundIcon roundIcon--disabled">
+                    <i class="icon-trophy roundIcon__icon"></i>
+                </span>
+                    </span>
+
+        </div>
+    </nav>
+        </div>
+    </div>
+    </div>
+
+        
+        <div class="centered">
+            <div class="contentWithSidebar  spacer  js-contentWithSidebar" >
+                <main class="contentWithSidebar__content" >
+                        
+
+        <div class="relative js-sidebar-container">
+        <div class="static">
+    <h2 itemprop="name" data-part-title="La gestion d&#039;un formulaire avec JSF" class="part-title">La gestion d&#039;un formulaire avec JSF</h2>
+
+    <section class="row space-bottom js-desktop-sticky-container">
+        <div class="col9 col11-s col__small-padding--right">
+
+                <div class="tooltipMessage tooltipMessage--noArrow">
+        <i class="tooltipMessage__icon  icon-lock"></i>
+        <a href="https://openclassrooms.com/login" class="js-popin-activator" data-popin-selector="#popin-log-in" >Connectez-vous</a> ou <a href="https://openclassrooms.com/register" class="js-popin-activator" data-popin-selector="#popin-sign-in" >inscrivez-vous</a> pour bénéficier de toutes les fonctionnalités de ce cours !
+    </div>
+
+            <div
+                itemprop="articleBody"
+                data-page-indentifier="/courses/creez-votre-application-web-avec-java-ee/la-gestion-d-un-formulaire-avec-jsf"
+                class="js-isRestrictablePage course-content js-course-container js-smilize "
+
+                                    data-video-blocked-wrapper="<a href='https://openclassrooms.com/login#popin-log-in' class='js-popin-activator'>"
+                            >
+
+                <p id="r-2138357" data-claire-element-id="2355430">Maintenant que nous sommes familiers avec JSF, nous allons mettre en pratique et apprendre à gérer proprement un formulaire, en ajoutant de la complexité au fur et à mesure de notre progression.</p><p id="r-2138358" data-claire-element-id="2355431">Une fois n'est pas coutume, nous allons réécrire notre fonction d'inscription d'utilisateur. Comme d'habitude, nous allons ajouter un petit plus à notre système : après la création initiale du système en suivant MVC avec des JSP et des servlets, nous y avions ajouté une base de données pour commencer, puis nous y avions intégré JPA. Eh bien cette fois nous allons bien évidemment employer JSF, mais également rendre la validation du formulaire... ajaxisée ! Appétissant, n'est-ce pas ? :)</p><h3 id="r-626299" data-claire-element-id="3312654">Une inscription classique</h3><h4 id="r-2138365" data-claire-element-id="2838402">Préparation du projet</h4><p id="r-2138359" data-claire-element-id="2355432">Nous allons partir sur une base propre. Pour ce faire, créez un nouveau projet web dynamique sous Eclipse, et nommez-le <strong>pro_jsf</strong>. Créez-y alors un fichier de configuration <strong>/WEB-INF/glassfish-web.xml</strong> :</p><pre id="r-2138360" data-claire-element-id="2838400"><code data-claire-semantic="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE glassfish-web-app PUBLIC &quot;-//GlassFish.org//DTD GlassFish Application Server 3.1 Servlet 3.0//EN&quot; &quot;http://glassfish.org/dtds/glassfish-web-app_3_0-1.dtd&quot;&gt;
+&lt;glassfish-web-app&gt;
+  &lt;context-root&gt;/pro_jsf&lt;/context-root&gt;
+  &lt;class-loader delegate=&quot;true&quot;/&gt;
+  &lt;jsp-config&gt;
+    &lt;property name=&quot;keepgenerated&quot; value=&quot;true&quot;&gt;
+      &lt;description&gt;Conserve une copie du code des servlets auto-générées.&lt;/description&gt;
+    &lt;/property&gt;
+  &lt;/jsp-config&gt;
+&lt;/glassfish-web-app&gt;</code></pre><p id="r-2138361" data-claire-element-id="2355434">Copiez-y ensuite le fichier <strong>web.xml</strong> que nous avions mis en place dans le projet <strong>test_jsf</strong>, fichier que nous pouvons, comme je vous l'avais expliqué, réutiliser tel quel.</p><p id="r-2138362" data-claire-element-id="2355435">Avant de poursuivre, je vous conseille de mettre en place une petite configuration particulière, afin d'éviter de futurs ennuis. Par défaut, le contenu d'un champ laissé vide dans vos formulaires sera considéré comme une chaîne vide. Et vous devez le savoir, <strong>les chaînes vides sont l'ennemi du développeur</strong> ! Heureusement, il est possible de forcer le conteneur à considérer un tel contenu comme une valeur nulle plutôt que comme une chaîne vide, en ajoutant cette section dans votre fichier <strong>web.xml</strong> :</p><pre id="r-2138363" data-claire-element-id="2838401"><code data-claire-semantic="xml">...
+
+&lt;context-param&gt;
+    &lt;param-name&gt;javax.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL&lt;/param-name&gt;
+    &lt;param-value&gt;true&lt;/param-value&gt;
+&lt;/context-param&gt;
+
+...</code></pre><p id="r-2138364" data-claire-element-id="2355437">Voilà tout pour le moment, nous reviendrons sur l'intérêt pratique de cette manipulation plus loin dans ce chapitre.</p><h4 id="r-2138380" data-claire-element-id="3312643">Création de la couche d'accès aux données</h4><p id="r-2138366" data-claire-element-id="2355439">La première étape du développement, si c'en est une, est la &quot;création&quot; du modèle. En réalité, nous n'avons rien à faire ici : nous allons simplement réutiliser notre entité <strong>Utilisateur</strong> telle que nous l'avions développée dans notre projet <strong>pro_jpa</strong>, ainsi que notre EJB Stateless ! Copiez donc simplement dans votre projet :</p><ul id="r-2138375" data-claire-element-id="2355448"><li id="r-2138368" data-claire-element-id="2355441"><p id="r-2138367" data-claire-element-id="2355440">la classe <code>com.sdzee.entities.Utilisateur</code>, en conservant le même package ;</p></li><li id="r-2138370" data-claire-element-id="2355443"><p id="r-2138369" data-claire-element-id="2355442">la classe <code>com.sdzee.dao.DAOException</code>, en conservant le même package ;</p></li><li id="r-2138372" data-claire-element-id="2355445"><p id="r-2138371" data-claire-element-id="2355444">la classe <code>com.sdzee.dao.UtilisateurDao</code>, en conservant le même package ;</p></li><li id="r-2138374" data-claire-element-id="2355447"><p id="r-2138373" data-claire-element-id="2355446">le fichier de configuration de JPA <strong>src/META-INF/persistence.xml</strong>, en conservant le même répertoire.</p></li></ul><p id="r-2138376" data-claire-element-id="2355449">Voici sur la figure suivante l'arborescence que vous devez obtenir une fois arrivés à cette étape.</p><figure id="r-2138379" data-claire-element-id="3312642"><img id="r-2138377" data-claire-element-id="2355450" src="../../../user.oc-static.com/files/418001_419000/418646.png" alt="Image utilisateur" /></figure><h4 id="r-2138409" data-claire-element-id="2838407">Création du backing bean</h4><p id="r-2138381" data-claire-element-id="2355454">Nous l'avons découvert dans le chapitre précédent, un nouvel objet propre à JSF fait son apparition : le <strong>backing bean</strong>. Il s'agit en réalité d'une sorte de mini-contrôleur MVC, une sorte de glue qui relie la vue (la page JSF) au modèle de données (l'entité). Cet objet est littéralement lié à la vue, et <strong>tous les attributs de l'entité sont exposés à la vue à travers lui</strong>.</p><aside id="r-2138383" data-claire-element-id="2355456" data-claire-semantic="information"><p id="r-2138382" data-claire-element-id="2355455">Pour faire l'analogie avec ce que nous avions développé dans nos précédents exemples, cet objet va remplacer notre ancien <strong>InscriptionForm</strong>. Toutefois, nous n'allons pour le moment pas nous encombrer avec les méthodes de validation des différents champs du formulaire, et nous nous contenterons de mettre en place une inscription sans vérifications. Nous compléterons ensuite notre système, lorsque nous aurons construit une base fonctionnelle.</p></aside><p id="r-2138384" data-claire-element-id="2355457">Sur la forme, ce <strong>backing-bean</strong> se présente comme un bean classique, aux annotations JSF près. Puisqu'il est associé à une action, il est courant de le nommer par un verbe représentant l'action effectuée. Nous allons donc logiquement dans le cadre de notre exemple créer un bean intitulé <strong>InscrireBean</strong> :</p><pre id="r-2138385" data-claire-element-id="2838406"><code data-claire-semantic="java">package com.sdzee.beans;
+
+import java.io.Serializable;
+import java.sql.Timestamp;
+
+import javax.ejb.EJB;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
+
+import com.sdzee.dao.UtilisateurDao;
+import com.sdzee.entities.Utilisateur;
+
+@ManagedBean
+@RequestScoped
+public class InscrireBean implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    private Utilisateur       utilisateur;
+
+    // Injection de notre EJB (Session Bean Stateless)
+    @EJB
+    private UtilisateurDao    utilisateurDao;
+
+    // Initialisation de l'entité utilisateur
+    public InscrireBean() {
+        utilisateur = new Utilisateur();
+    }
+
+    // Méthode d'action appelée lors du clic sur le bouton du formulaire
+    // d'inscription
+    public void inscrire() {
+        initialiserDateInscription();
+        utilisateurDao.creer( utilisateur );
+        FacesMessage message = new FacesMessage( &quot;Succès de l'inscription !&quot; );
+        FacesContext.getCurrentInstance().addMessage( null, message );
+    }
+
+    public Utilisateur getUtilisateur() {
+        return utilisateur;
+    }
+
+    private void initialiserDateInscription() {
+        Timestamp date = new Timestamp( System.currentTimeMillis() );
+        utilisateur.setDateInscription( date );
+    }
+}</code></pre><p id="r-2138386" data-claire-element-id="2355459">Notre objet contient tout d'abord une référence à notre entité <strong>Utilisateur</strong> à la ligne 20, à laquelle est associée une méthode <em>getter</em> lignes 40 à 42. Cette entité <strong>Utilisateur</strong> est initialisée depuis un simple constructeur public et sans argument aux lignes 27 à 29.</p><p id="r-2138387" data-claire-element-id="2355460">Notre DAO Utilisateur, qui pour rappel est depuis l'introduction de JPA dans notre projet un simple EJB Stateless, est injecté automatiquement via l'annotation <code>@EJB</code> à la ligne 24, exactement comme nous l'avions fait depuis notre servlet dans le projet <strong>pro_jpa</strong>.</p><p id="r-2138388" data-claire-element-id="2355461">Enfin, une méthode d'action nommée <strong>inscrire()</strong> est chargée :</p><ul id="r-2138395" data-claire-element-id="2355468"><li id="r-2138390" data-claire-element-id="2355463"><p id="r-2138389" data-claire-element-id="2355462">d'initialiser la propriété <strong>dateInscription</strong> de l'entité <strong>Utilisateur</strong> avec la date courante, via la méthode <strong>initialiserDateInscription()</strong> que nous avons créée aux lignes 44 à 47 pour l'occasion ;</p></li><li id="r-2138392" data-claire-element-id="2355465"><p id="r-2138391" data-claire-element-id="2355464">d'enregistrer l'utilisateur en base, via un appel à la méthode <code>creer()</code> du DAO Utilisateur ;</p></li><li id="r-2138394" data-claire-element-id="2355467"><p id="r-2138393" data-claire-element-id="2355466">d'initialiser un message de succès de la validation.</p></li></ul><p id="r-2138396" data-claire-element-id="2355469">Dans cette dernière étape, deux nouveaux objets apparaissent :</p><ul id="r-2138401" data-claire-element-id="2355474"><li id="r-2138398" data-claire-element-id="2355471"><p id="r-2138397" data-claire-element-id="2355470"><code><a href="http://docs.oracle.com/javaee/6/api/javax/faces/application/FacesMessage.html">FacesMessage</a></code> : cet objet permet simplement de définir un message de validation, que nous précisons ici en dur directement dans son constructeur. Il existe d'autres constructeurs, notamment un qui permet d'associer à un message un niveau de criticité, en précisant une catégorie qui est définie par <code>FacesMessage.Severity</code>. Les niveaux existants sont représentés par des constantes que vous pouvez retrouver sur <a href="http://docs.oracle.com/javaee/6/api/javax/faces/application/FacesMessage.html#FACES_MESSAGES">la documentation de l'objet FacesMessage</a>. En ce qui nous concerne, nous ne spécifions qu'un message dans le constructeur, et c'est par conséquent la criticité <code>Severity.INFO</code> qui est appliquée par défaut à notre message par JSF ;</p></li><li id="r-2138400" data-claire-element-id="2355473"><p id="r-2138399" data-claire-element-id="2355472"><code><a href="http://docs.oracle.com/javaee/6/api/javax/faces/context/FacesContext.html">FacesContext</a></code> : vous retrouvez là l'objet dont je vous ai annoncé l'existence dans le chapitre précédent, celui qui contient l'arbre des composants d'une vue ainsi que les éventuels messages d'erreur qui leur sont associés. Eh bien ici, nous nous en servons pour mettre en place un <strong>FacesMessage</strong> dans le contexte courant via la méthode <code><a href="http://docs.oracle.com/javaee/6/api/javax/faces/context/FacesContext.html#addMessage%28java.lang.String,%20javax.faces.application.FacesMessage%29">addMessage()</a></code>, pour que la réponse puisse ensuite l'afficher. Je vous laisse parcourir sa documentation, et nous reviendrons ensemble sur l'intérêt de passer <code>null</code> en tant que premier argument de cette méthode lorsque nous développerons la vue.</p></li></ul><p id="r-2138402" data-claire-element-id="2355475">Par défaut, nous avons annoté notre bean avec <code>@RequestScoped</code> pour le placer dans la portée requête : en effet, notre objet ne va intervenir qu'à chaque demande d'inscription et n'a donc pas vocation à être stocké plus longtemps que le temps d'une requête.</p><aside id="r-2138404" data-claire-element-id="2355477" data-claire-semantic="warning"><p id="r-2138403" data-claire-element-id="2355476">Au passage, vous remarquez ici pourquoi il est très important d'avoir découvert comment fonctionne une application Java EE MVC sans <em>framework</em>. Si vous n'aviez pas conscience de ce qui se passe derrière les rideaux, notamment des différentes portées existantes dans une application et des allers-retours de paires requête/réponse qui ont lieu à chaque intervention de l'utilisateur depuis son navigateur, vous auriez beaucoup plus de mal à saisir comment manipuler vos objets avec JSF !</p></aside><p id="r-2138405" data-claire-element-id="2355478">Si vous avez bien observé le code de ce <strong>backing-bean</strong>, et si vous vous souvenez de celui de notre ancien objet métier <strong>InscriptionForm</strong>, vous devez instantanément vous poser la question suivante :</p><div id="r-2138407" data-claire-element-id="2355480" data-claire-semantic="question"><p id="r-2138406" data-claire-element-id="2355479">Où sont les méthodes de récupération et conversion des valeurs envoyées depuis le formulaire ?</p></div><p id="r-2138408" data-claire-element-id="2355481">Eh oui, dans notre bean nous nous contentons simplement d'initialiser la date d'inscription dans notre entité <strong>Utilisateur</strong>, car ce n'est pas une information saisie par l'utilisateur. Mais en ce qui concerne toutes les autres propriétés de notre entité, nous ne faisons strictement rien. Vous retrouvez ici ce que je vous ai expliqué dans la description du processus du traitement d'une requête avec JSF, le fameux parcours en six étapes. Les étapes de récupération, conversion, validation et enregistrement dans le modèle sont entièrement automatisées ! Et c'est depuis la vue que nous allons directement effectuer les associations entre les champs du formulaire et les propriétés de notre entité.</p><h4 id="r-2138454" data-claire-element-id="2838412">Création de la vue</h4><p id="r-2138410" data-claire-element-id="2355483">Nous devons ensuite créer la Facelet générant le formulaire d'inscription. Pour rappel, une Facelet n'est qu'une simple page XHTML contenant des balises JSF. Je vous donne dès maintenant le code de la vue dans son intégralité, prenez le temps de bien regarder les composants qui interviennent et nous en reparlons en détail ensuite.</p><pre id="r-2138411" data-claire-element-id="2838408"><code data-claire-semantic="html">&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:h=&quot;http://java.sun.com/jsf/html&quot;&gt; 
+    &lt;h:head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;title&gt;Inscription&lt;/title&gt;
+        &lt;h:outputStylesheet library=&quot;default&quot; name=&quot;css/form.css&quot;  /&gt;
+    &lt;/h:head&gt;
+    &lt;h:body&gt;
+      &lt;h:form&gt;
+         &lt;fieldset&gt;
+         	&lt;legend&gt;Inscription&lt;/legend&gt;
+	     	&lt;h:outputLabel for=&quot;email&quot;&gt;Adresse email &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/h:outputLabel&gt;
+	        &lt;h:inputText id=&quot;email&quot; value=&quot;#{inscrireBean.utilisateur.email}&quot; required=&quot;true&quot; size=&quot;20&quot; maxlength=&quot;60&quot; /&gt;
+	        &lt;h:message id=&quot;emailMessage&quot; for=&quot;email&quot; errorClass=&quot;erreur&quot; /&gt;
+	        &lt;br /&gt;
+	
+	        &lt;h:outputLabel for=&quot;motdepasse&quot;&gt;Mot de passe &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/h:outputLabel&gt;
+	        &lt;h:inputSecret id=&quot;motdepasse&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; required=&quot;true&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+	        &lt;h:message id=&quot;motDePasseMessage&quot; for=&quot;motdepasse&quot; errorClass=&quot;erreur&quot; /&gt;
+	        &lt;br /&gt;
+	
+	        &lt;h:outputLabel for=&quot;confirmation&quot;&gt;Confirmation du mot de passe &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/h:outputLabel&gt;
+	        &lt;h:inputSecret id=&quot;confirmation&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; required=&quot;true&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+	        &lt;h:message id=&quot;confirmationMessage&quot; for=&quot;confirmation&quot; errorClass=&quot;erreur&quot; /&gt;
+	        &lt;br /&gt;
+	
+	        &lt;h:outputLabel for=&quot;nom&quot;&gt;Nom d'utilisateur &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/h:outputLabel&gt;
+	        &lt;h:inputText id=&quot;nom&quot; value=&quot;#{inscrireBean.utilisateur.nom}&quot; required=&quot;true&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+	        &lt;h:message id=&quot;nomMessage&quot; for=&quot;nom&quot; errorClass=&quot;erreur&quot; /&gt;
+	        &lt;br /&gt;
+	        
+	        &lt;h:messages globalOnly=&quot;true&quot; infoClass=&quot;info&quot; /&gt;
+	
+	        &lt;h:commandButton value=&quot;Inscription&quot; action=&quot;#{inscrireBean.inscrire}&quot; styleClass=&quot;sansLabel&quot; /&gt;
+	        &lt;br /&gt;
+          &lt;/fieldset&gt;
+        &lt;/h:form&gt; 	
+    &lt;/h:body&gt;
+&lt;/html&gt;</code></pre><p id="r-2138412" data-claire-element-id="2355485">Vous devez reconnaître la structure globale de la page, identique aux premiers exemples de Facelets que nous avons mis en place dans le chapitre précédent :</p><ul id="r-2138419" data-claire-element-id="2355492"><li id="r-2138414" data-claire-element-id="2355487"><p id="r-2138413" data-claire-element-id="2355486">un en-tête HTML particulier contenant la déclaration de la bibliothèque de composants, préfixés par <kbd>h:</kbd> ;</p></li><li id="r-2138416" data-claire-element-id="2355489"><p id="r-2138415" data-claire-element-id="2355488">une section header contenant l'inclusion de la feuille de style CSS <strong>form.css</strong>, que vous prendrez soin de recopier depuis le projet <strong>test_jsf</strong> en recréant l'arborescence <strong>/resources/default/css</strong> dans votre projet ;</p></li><li id="r-2138418" data-claire-element-id="2355491"><p id="r-2138417" data-claire-element-id="2355490">puis le corps de la page contenant un formulaire généré par le composant <code>&lt;h:form&gt;</code>.</p></li></ul><aside id="r-2138421" data-claire-element-id="2355494" data-claire-semantic="information"><p id="r-2138420" data-claire-element-id="2355493">Nous allons maintenant détailler comment nous procédons à la création des différents éléments du formulaire, en analysant les composants qui interviennent. Comme vous pourrez le constater en parcourant la documentation de chacune des balises, elles supportent toutes un nombre conséquent d'attributs. Nous allons par conséquent limiter notre analyse à ceux qui nous sont ici utiles. Si vous souhaitez connaître en détail toutes les possibilités offertes par chaque balise, je vous invite à parcourir leurs documentations en intégralité et à faire vos propres tests pour vérifier que vous avez bien compris.</p></aside><h5 id="r-2138423" data-claire-element-id="2355496">Les labels</h5><p id="r-2138422" data-claire-element-id="2355495">Pour générer un label associé à un champ de formulaire, concrétisé par la balise HTML <code>&lt;label&gt;</code>, il faut utiliser <a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/h/outputLabel.html">le composant <code>&lt;h:outputLabel&gt;</code></a>. Le comportement de l'attribut <strong>for</strong> est identique à celui de la balise HTML, il suffit d'y préciser l'<strong>id</strong> du champ de saisie auquel le label fait référence.</p><h5 id="r-2138434" data-claire-element-id="2355507">Les champs de saisie</h5><p id="r-2138424" data-claire-element-id="2355497">Pour générer un champ de saisie de type texte, concrétisé par la balise HTML <code>&lt;input type=&quot;text&quot; ...&gt;</code>, il faut utiliser <a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/h/inputText.html">le composant <code>&lt;h:inputText&gt;</code></a>. Tout comme la balise HTML, il accepte les attributs <strong>id</strong>, <strong>value</strong>, <strong>size</strong> et <strong>maxlength</strong>.</p><p id="r-2138425" data-claire-element-id="2355498">Pour générer un champ de saisie de type mot de passe, concrétisé par la balise HTML <code>&lt;input type=&quot;password&quot; ...&gt;</code>, il faut utiliser <a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/h/inputSecret.html">le composant <code>&lt;h:inputSecret&gt;</code></a>. Il accepte lui aussi les attributs <strong>id</strong>, <strong>value</strong>, <strong>size</strong> et <strong>maxlength</strong>.</p><p id="r-2138426" data-claire-element-id="2355499">Petite nouveauté, nous utilisons un attribut nommé <strong>required</strong>, qui peut prendre comme valeur <code>true</code> ou <code>false</code>, et qui va déterminer si l'utilisateur doit obligatoirement saisir des données dans ce champ ou non. En réalité, il s'agit là d'un marqueur qui va être appliqué au composant, et qui va permettre de générer une erreur lors de la validation de la valeur du champ associé. Si un champ est marqué comme requis et qu'aucune valeur n'est entrée par l'utilisateur, alors un message d'erreur sera automatiquement placé dans le <code>FacesContext</code> par JSF, et nous pourrons ensuite l'afficher à l'utilisateur dans la réponse.</p><p id="r-2138427" data-claire-element-id="2355500">Ce qu'il faut bien observer ici, c'est l'emploi d'expressions EL pour cibler la propriété <strong>utilisateur</strong> de notre <strong>backing-bean</strong>, par exemple <code>#{inscrireBean.utilisateur.email}</code> à la ligne 13. Comme je vous l'ai déjà dit, <strong>tous les attributs de l'entité sont exposés à la vue à travers le backing-bean.</strong> Voilà pourquoi nous devons d'abord cibler l'entité <strong>utilisateur</strong>, qui est elle-même une propriété du backing-bean <strong>inscrireBean</strong>, puis cibler la propriété de l'entité désirée. Vous comprenez mieux maintenant pourquoi je vous ai dit que ce bean était la glue qui reliait la vue au modèle !</p><p id="r-2138428" data-claire-element-id="2355501">En outre, comprenez bien que la liaison créée par l'intermédiaire de cette expression EL placée dans l'attribut <strong>value</strong> d'un composant de saisie est bidirectionnelle :</p><ul id="r-2138433" data-claire-element-id="2355506"><li id="r-2138430" data-claire-element-id="2355503"><p id="r-2138429" data-claire-element-id="2355502">lors du rendu de la page HTML, la valeur contenue dans le modèle qui est retournée par cette expression EL sera affichée dans le champ de saisie ;</p></li><li id="r-2138432" data-claire-element-id="2355505"><p id="r-2138431" data-claire-element-id="2355504">lors de l'envoi des données du formulaire par l'utilisateur, la valeur contenue dans le champ de saisie sera utilisée pour mettre à jour la valeur contenue dans le modèle.</p></li></ul><h5 id="r-2138448" data-claire-element-id="2838411">Les messages</h5><p id="r-2138435" data-claire-element-id="2355508">Depuis le temps que je vous parle de ces fameux messages d'erreurs, nous y voilà. La différence la plus marquante entre la page JSP que nous avions utilisée jusqu'à présent et notre Facelet fraîchement créée est l'utilisation d'un composant JSF pour générer un message associé à un champ de saisie en particulier. Il s'agit du <a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/h/message.html">composant <code>&lt;h:message&gt;</code></a>. Entre autres, celui-ci accepte deux attributs qui nous sont ici utiles :</p><ul id="r-2138440" data-claire-element-id="2355513"><li id="r-2138437" data-claire-element-id="2355510"><p id="r-2138436" data-claire-element-id="2355509"><strong>for</strong>, pour cibler l'id du champ concerné ;</p></li><li id="r-2138439" data-claire-element-id="2355512"><p id="r-2138438" data-claire-element-id="2355511"><strong>errorClass</strong>, pour permettre de donner une classe CSS particulière lors de l'affichage du message généré s'il s'agit d'une erreur.</p></li></ul><p id="r-2138441" data-claire-element-id="2355514">Ce composant va donc afficher, lors du rendu de la réponse, l'éventuel message associé au champ ciblé par l'attribut <strong>for</strong>. S'il s'agit d'un message d'erreur, que JSF sait différencier des messages d'information qui peuvent éventuellement être placés dans le <code>FacesContext</code> grâce au niveau de criticité associé à un message dont je vous ai parlé un peu plus tôt, alors le style <strong>erreur</strong> défini dans notre feuille CSS sera appliqué.</p><p id="r-2138442" data-claire-element-id="2355515">Nous utilisons en fin de page un autre élément responsable de l'affichage de messages à l'utilisateur : <a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/h/messages.html">le composant <code>&lt;h:messages&gt;</code></a>. Par défaut, celui-ci provoque l'affichage de tous les messages disponibles dans la vue, y compris ceux qui sont déjà affichés via un <code>&lt;h:message&gt;</code> ailleurs dans la page. Toutefois, il est possible de n'afficher que les messages qui ne sont attachés à aucun composant défini, c'est-à-dire les messages dont l'<strong>id</strong> est <code>null</code>, en utilisant l'attribut optionnel <code>globalOnly=&quot;true&quot;</code> :</p><pre id="r-2138443" data-claire-element-id="2838409"><code data-claire-semantic="html">&lt;h:messages globalOnly=&quot;true&quot; /&gt;</code></pre><p id="r-2138444" data-claire-element-id="2355517">Vous comprenez maintenant pourquoi dans la méthode <strong>inscrire()</strong> de notre <strong>backing-bean</strong>, nous avons passé <code>null</code> en paramètre de la méthode <code>FacesContext.addMessage()</code> : c'est pour pouvoir distinguer notre message à caractère général (nous nous en servons pour stocker le résultat final de l'inscription) des messages liés aux composants de la vue. Comprenez donc bien que le code suivant dans notre <strong>backing-bean</strong> attacherait le message donné au composant <code>&lt;h:message for=&quot;clientId&quot;&gt;</code>, et que nous passons <code>null</code> pour n'attacher notre message à aucun composant existant.</p><pre id="r-2138445" data-claire-element-id="2838410"><code data-claire-semantic="java">facesContext.addMessage(&quot;clientId&quot;,  facesMessage);</code></pre><p id="r-2138446" data-claire-element-id="2355519">Notre message a ainsi un caractère <strong>global</strong>. Voilà d'ailleurs pourquoi l'attribut de la balise <code>&lt;h:messages&gt;</code> permettant de cibler uniquement ce type de messages s'intitule... <code>globalOnly</code> !</p><p id="r-2138447" data-claire-element-id="2355520">Enfin, nous utilisons l'attribut <strong>infoClass</strong> pour donner à notre message global le style <strong>info</strong> qui est défini dans notre feuille CSS. Nous pourrions utiliser également l'attribut <strong>styleClass</strong>, mais puisque JSF permet de différencier les messages selon leur gravité, autant en profiter !</p><h5 id="r-2138453" data-claire-element-id="2355526">Le bouton d'envoi</h5><p id="r-2138449" data-claire-element-id="2355522">Pour générer un bouton de soumission de formulaire, concrétisé par la balise HTML <code>&lt;input type=&quot;submit&quot; ...&gt;</code>, il faut utiliser <a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/h/commandButton.html">le composant <code>&lt;h:commandButton&gt;</code></a>. Nous l'avons déjà étudié dans notre premier exemple : le contenu de son attribut <strong>value</strong> est affiché en tant que texte du bouton HTML généré, et son attribut <strong>action</strong> permet de définir la navigation. À la différence de notre premier exemple cependant, où nous redirigions l'utilisateur vers une autre page, nous utilisons ici une expression EL pour appeler une méthode de notre <strong>backing-bean</strong>, en l'occurrence notre méthode d'action <strong>inscrire()</strong>. Vous retrouvez ici ce que je vous ai expliqué en vous présentant la technologie EL : les expressions se basant sur la syntaxe <code>#{...}</code> permettent d'appeler n’importe quelle méthode d'un bean, et pas seulement une méthode <em>getter</em> comme c'était le cas avec <code>${...}</code>.</p><p id="r-2138450" data-claire-element-id="2355523">Nous utilisons enfin l'attribut <strong>styleClass</strong>, pour appliquer au bouton HTML généré la classe <strong>sansLabel</strong> définie dans notre feuille CSS.</p><aside id="r-2138452" data-claire-element-id="2355525" data-claire-semantic="warning"><p id="r-2138451" data-claire-element-id="2355524">Nous avons fait le tour de tout ce qu'il faut savoir sur notre léger système d'inscription. Pour le moment, aucun contrôle de validation n'est effectué hormis les simples <code>required=&quot;true&quot;</code> sur les champs du formulaire. De même, aucune information n'est affichée hormis un message d'erreur sur chaque champ laissé vide, et notre message de succès lorsque l'inscription fonctionne.</p></aside><h4 id="r-2138494" data-claire-element-id="3312650">Tests &amp; observations</h4><p id="r-2138455" data-claire-element-id="3312574">Notre projet est maintenant prêt pour utilisation. En fin de compte, seuls une Facelet et un backing bean sont suffisants, le reste étant récupéré depuis notre projet JPA. Vérifions pour commencer le bon fonctionnement de l'application en nous rendant sur l'URL <code>http://localhost:8088/pro_jsf/inscription.xhtml</code> depuis notre navigateur. Vous devez observer le formulaire d'inscription tel qu'il existait dans nos précédents exemples.<br /> Si ce n'est pas le cas, c'est que vous avez oublié quelque chose en cours de route. Vérifiez bien que vous avez :</p><ul id="r-2138470" data-claire-element-id="2355543"><li id="r-2138457" data-claire-element-id="2355530"><p id="r-2138456" data-claire-element-id="2355529">copié les classes <strong>Utilisateur</strong>, <strong>UtilisateurDao</strong> et <strong>DAOException</strong> en conservant leurs packages respectifs, depuis le projet <strong>pro_jpa</strong> ;</p></li><li id="r-2138459" data-claire-element-id="2355532"><p id="r-2138458" data-claire-element-id="2355531">copié le fichier <strong>META-INF/persistence.xml</strong> depuis le projet <strong>pro_jpa</strong> ;</p></li><li id="r-2138461" data-claire-element-id="2355534"><p id="r-2138460" data-claire-element-id="2355533">copié le fichier <strong>form.css</strong> depuis le projet <strong>test_jsf</strong>, en le plaçant dans l'arborescence <strong>/resources/default/css/</strong> ;</p></li><li id="r-2138463" data-claire-element-id="2355536"><p id="r-2138462" data-claire-element-id="2355535">copié le fichier <strong>web.xml</strong> depuis le projet <strong>test_jsf</strong> ;</p></li><li id="r-2138465" data-claire-element-id="2355538"><p id="r-2138464" data-claire-element-id="2355537">démarré votre serveur MySQL ;</p></li><li id="r-2138467" data-claire-element-id="2355540"><p id="r-2138466" data-claire-element-id="2355539">démarré votre serveur GlassFish ;</p></li><li id="r-2138469" data-claire-element-id="2355542"><p id="r-2138468" data-claire-element-id="2355541">déployé votre projet <strong>pro_jsf</strong> sur le serveur GlassFish.</p></li></ul><p id="r-2138471" data-claire-element-id="2355544">Le formulaire s'affichant correctement, nous pouvons alors tester une inscription. Pour ce premier cas, nous allons essayer avec des informations valides, et qui n'existent pas déjà en base. Par exemple, avec une adresse jamais utilisée auparavant, deux mots de passe corrects et identiques et un nom d'utilisateur suffisamment long, comme indiqué à la figure suivante.</p><figure id="r-2138474" data-claire-element-id="3312645"><img id="r-2138472" data-claire-element-id="2355545" src="../../../user.oc-static.com/files/419001_420000/419147.png" alt="Image utilisateur" /></figure><p id="r-2138475" data-claire-element-id="2355548">Après un clic sur le bouton d'inscription, l'inscription fonctionne et le message de succès est affiché (voir la figure suivante).</p><figure id="r-2138478" data-claire-element-id="3312647"><img id="r-2138476" data-claire-element-id="2355549" src="../../../user.oc-static.com/files/419001_420000/419148.png" alt="Image utilisateur" /></figure><p id="r-2138479" data-claire-element-id="2355552">Nous constatons alors que :</p><ul id="r-2138486" data-claire-element-id="2355559"><li id="r-2138481" data-claire-element-id="2355554"><p id="r-2138480" data-claire-element-id="2355553">c'est la page courante qui est rechargée. Comme je vous l'ai déjà expliqué, par défaut et sans règle de navigation particulière précisée par le développeur, c'est la page courante qui est automatiquement utilisée comme action d'un formulaire JSF ;</p></li><li id="r-2138483" data-claire-element-id="2355556"><p id="r-2138482" data-claire-element-id="2355555">le contenu des champs de saisie des mots de passe n'est pas réaffiché, alors que l'expression EL est bien présente dans l'attribut <strong>value</strong> des champs. Ce comportement est voulu, car il ne faut jamais retransmettre un mot de passe après validation d'un formulaire. Nous avions d'ailleurs pris garde à ne pas le faire dans notre ancienne page JSP d'inscription, si vous vous souvenez bien. Avec JSF, le composant <code>&lt;h:inputSecret&gt;</code> est programmé pour ne pas renvoyer son contenu, il n'y a donc plus d'erreur d'inattention possible ;</p></li><li id="r-2138485" data-claire-element-id="2355558"><p id="r-2138484" data-claire-element-id="2355557">le message de succès est bien décoré avec le style décrit par la classe <strong>info</strong> de notre feuille CSS. JSF a donc bien utilisé la classe précisée dans l'attribut <strong>infoClass</strong> de la balise <code>&lt;h:messages&gt;</code>, ce qui est une preuve que le <em>framework</em> a bien attribué par défaut le niveau <code>Severity.INFO</code> au message que nous avons construit depuis notre <strong>backing-bean</strong>.</p></li></ul><p id="r-2138487" data-claire-element-id="2355560">Essayons maintenant de nous inscrire en entrant des informations invalides, comme par exemple une adresse email déjà utilisée (celle que vous venez de saisir pour réaliser l'inscription précédente ira très bien).<br /> Nous constatons alors l'échec de notre système, qui plante et affiche un joli message de debug JSF. Toutefois, pas d'inquiétude, c'était prévu : puisque nous n'avons encore mis en place aucun contrôle, l'inscription a été tentée sans vérifier auparavant si l'adresse email existait déjà en base. MySQL a retourné une exception lors de cette tentative, car il a trouvé une entrée contenant cette adresse dans la table Utilisateur.</p><p id="r-2138488" data-claire-element-id="2355561">C'est très fâcheux, mais nous n'allons pas nous occuper de ce problème tout de suite. Poursuivons nos tests, et essayons cette fois-ci de nous inscrire en laissant plusieurs champs du formulaire vides. Par exemple, retournons sur le formulaire, saisissons uniquement une adresse email et cliquons sur le bouton d'inscription (voir la figure suivante).</p><figure id="r-2138491" data-claire-element-id="3312649"><img id="r-2138489" data-claire-element-id="2355562" src="../../../user.oc-static.com/files/419001_420000/419150.png" alt="Image utilisateur" /></figure><p id="r-2138492" data-claire-element-id="2355565">Nous constatons alors l'affichage de messages d'erreurs à côté de chacun des champs laissés vides : c'est le fruit du composant <code>&lt;h:message&gt;</code> ! En outre, ces messages étant spécifiés comme étant des erreurs par JSF, le <em>framework</em> utilise l'attribut <strong>errorClass</strong> et les décore avec la classe <strong>erreur</strong> de notre feuille CSS : voilà pourquoi ces messages apparaissent en rouge.</p><p id="r-2138493" data-claire-element-id="2355566">Par contre, nous observons que ces messages automatiquement générés par JSF sont vraiment bruts de décoffrage... Il nous faut trouver un moyen de les rendre plus <strong>user-friendly</strong>, et c'est ce à quoi nous allons nous atteler dès maintenant.</p><h4 id="r-2138528" data-claire-element-id="3312653">Amélioration des messages affichés lors de la validation</h4><p id="r-2138495" data-claire-element-id="2355568">Les messages automatiques générés par JSF sur chaque champ de notre formulaire sont vraiment laids, et cela s'explique très simplement : par défaut, JSF fait précéder ses messages d'erreurs des identifiants des objets concernés. En l'occurrence, il a concaténé l'identifiant de notre formulaire (<strong>j_idt7</strong>) et celui de chaque champ (<strong>motdepasse</strong>, <strong>confirmation</strong> et <strong>nom</strong>) en les séparant par le caractère <kbd>:</kbd>.</p><div id="r-2138497" data-claire-element-id="2355570" data-claire-semantic="question"><p id="r-2138496" data-claire-element-id="2355569">Quand avons-nous donné cet id barbare à notre formulaire ?</p></div><p id="r-2138498" data-claire-element-id="2355571">Eh bien en réalité, nous ne lui avons jamais donné d'identifiant, et JSF en a donc généré un par défaut, voilà pourquoi il est si laid. Ainsi, pour rendre ces messages moins repoussants, nous pouvons donc commencer par donner un <strong>id</strong> à notre formulaire. Nous allons par exemple l'appeler &quot;formulaire&quot;, en changeant sa déclaration dans notre Facelet de <code>&lt;h:form&gt;</code> à <code>&lt;h:form id=&quot;formulaire&quot;&gt;</code>. Appliquez cette modification au code, puis tentez à nouveau le test précédent.</p><p id="r-2138499" data-claire-element-id="2355572">C'est déjà mieux, mais ça reste encore brut. Si nous regardons la documentation du composant <code>&lt;h:inputText&gt;</code>, nous remarquons qu'il présente un attribut intitulé <strong>label</strong>, qui est utilisé pour représenter un champ de manière littérale. Nous allons donc ajouter un attribut <strong>label</strong> à chacune des balises déclarant un composant <code>&lt;h:inputText&gt;</code> ou <code>&lt;h:inputSecret&gt;</code> dans notre Facelet :</p><pre id="r-2138500" data-claire-element-id="2838420"><code data-claire-semantic="html">&lt;h:inputText id=&quot;email&quot; value=&quot;#{inscrireBean.utilisateur.email}&quot; ... label=&quot;Email&quot; /&gt;
+&lt;h:inputSecret id=&quot;motdepasse&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; ... label=&quot;Mot de passe&quot; /&gt;
+&lt;h:inputSecret id=&quot;confirmation&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; ... label=&quot;Confirmation&quot; /&gt;
+&lt;h:inputText id=&quot;nom&quot; value=&quot;#{inscrireBean.utilisateur.nom}&quot;... label=&quot;Nom&quot; /&gt;</code></pre><p id="r-2138501" data-claire-element-id="2355574">Effectuez ces modifications, puis faites à nouveau le test (voir la figure suivante).</p><figure id="r-2138504" data-claire-element-id="3312652"><img id="r-2138502" data-claire-element-id="2355575" src="../../../user.oc-static.com/files/419001_420000/419153.png" alt="Image utilisateur" /></figure><p id="r-2138505" data-claire-element-id="2355578">C'est un peu mieux, mais c'est encore brut, et c'est toujours en anglais... Pour régler ce problème une fois pour toutes, nous allons utiliser l'attribut <strong>requiredMessage</strong> des composants de saisie JSF qui, d'après leur documentation, permet de définir le message utilisé lors de la vérification de la règle définie par l'attribut <strong>required</strong>. En d'autres termes, nous allons y spécifier directement le message d'erreur à afficher lorsque le champ est laissé vide ! Nous allons donc laisser tomber nos attributs <strong>label</strong>, et les remplacer par ces nouveaux attributs <strong>requiredMessage</strong> :</p><pre id="r-2138506" data-claire-element-id="2838423"><code data-claire-semantic="html">&lt;h:inputText id=&quot;email&quot; value=&quot;#{inscrireBean.utilisateur.email}&quot; ... requiredMessage=&quot;Veuillez saisir une adresse email&quot; /&gt;
+&lt;h:inputSecret id=&quot;motdepasse&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; ... requiredMessage=&quot;Veuillez saisir un mot de passe&quot; /&gt;
+&lt;h:inputSecret id=&quot;confirmation&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; ... requiredMessage=&quot;Veuillez saisir la confirmation du mot de passe&quot; /&gt;
+&lt;h:inputText id=&quot;nom&quot; value=&quot;#{inscrireBean.utilisateur.nom}&quot; ... requiredMessage=&quot;Veuillez saisir un nom d'utilisateur&quot; /&gt;</code></pre><p id="r-2138507" data-claire-element-id="2355580">Effectuez ces modifications, puis faites à nouveau le test… Nous y voilà, les messages sont finalement propres et compréhensibles pour les utilisateurs. Petit bémol toutefois, du point de vue de la qualité du code, c'est un peu sale de définir directement en dur dans la vue les messages d'erreurs à afficher... Comme le hasard fait très bien les choses, il existe justement une fonctionnalité dans JSF qui permet de définir des messages dans un fichier externe, et d'y faire référence depuis les Facelets. Ce système s'appelle un <strong>bundle</strong>, et nous allons en mettre un en place dans notre exemple.</p><h5 id="r-2138527" data-claire-element-id="2838427">Mise en place d'un bundle</h5><p id="r-2138508" data-claire-element-id="2355581">Un bundle n'est rien d'autre qu'un fichier de type Properties, contenant une liste de messages. La première étape dans la création d'un bundle consiste donc à créer un fichier Properties et à y placer nos différents messages de validation. Nous allons par exemple nommer notre fichier <strong>messages.properties</strong>. Il faut le placer dans les sources du projet, aux côtés du code de l'application. En l'occurrence nous allons le placer dans un package nommé <code>com.sdzee.bundle</code> :</p><pre id="r-2138509" data-claire-element-id="2838424"><code data-claire-semantic="Properties">inscription.email = Veuillez saisir une adresse email
+inscription.motdepasse = Veuillez saisir un mot de passe
+inscription.confirmation = Veuillez saisir la confirmation du mot de passe
+inscription.nom = Veuillez saisir un nom d'utilisateur</code></pre><p id="r-2138510" data-claire-element-id="2355583">Nous avons ici placé nos quatre messages, identifiés par le nom de la Facelet qui en fait usage (inscription) suivi d'un point et du nom du champ concerné. La syntaxe à respecter est celle d'un fichier de type Properties Java classique.</p><p id="r-2138511" data-claire-element-id="2355584">Une fois ce dossier en place, il faut maintenant le charger depuis notre Facelet pour qu'elle puisse faire référence à son contenu. Pour ce faire, nous allons utiliser <a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/f/loadBundle.html">le composant <code>&lt;f:loadBundle&gt;</code></a>. Celui-ci doit être placé dans la page <strong>avant</strong> les balises qui en feront usage, typiquement nous pouvons le mettre dans le header de notre page :</p><pre id="r-2138512" data-claire-element-id="2838425"><code data-claire-semantic="html">&lt;h:head&gt;
+     ...
+    &lt;f:loadBundle basename=&quot;com.sdzee.bundle.messages&quot; var=&quot;msg&quot;/&gt;
+&lt;/h:head&gt;</code></pre><p id="r-2138513" data-claire-element-id="2355586">Cette balise attend uniquement deux attributs :</p><ul id="r-2138518" data-claire-element-id="2355591"><li id="r-2138515" data-claire-element-id="2355588"><p id="r-2138514" data-claire-element-id="2355587"><strong>basename</strong>, qui contient le chemin complet dans lequel est placé le fichier (le package suivi du nom du fichier) ;</p></li><li id="r-2138517" data-claire-element-id="2355590"><p id="r-2138516" data-claire-element-id="2355589"><strong>var</strong>, qui permet de définir par quel nom le bundle sera désigné dans le reste de la page.</p></li></ul><p id="r-2138519" data-claire-element-id="2355592">Nous avons donc précisé le chemin <code>com.sdzee.bundle.messages</code>, et nous utiliserons le nom <strong>msg</strong> pour faire référence à notre bundle. Effectuez cet ajout dans le header de votre Facelet.</p><p id="r-2138520" data-claire-element-id="2355593">Il ne nous reste maintenant plus qu'à remplacer nos messages, actuellement en dur dans les attributs <strong>requiredMessage</strong>, par une référence vers les messages présents dans le bundle. Vous vous en doutez peut-être déjà, iI suffit pour cela d'utiliser des expressions EL ! Voilà comment nous allons procéder :</p><pre id="r-2138521" data-claire-element-id="2838426"><code data-claire-semantic="html">&lt;h:inputText id=&quot;email&quot; value=&quot;#{inscrireBean.utilisateur.email}&quot; ... requiredMessage=&quot;#{msg['inscription.email']}&quot; /&gt;
+&lt;h:inputSecret id=&quot;motdepasse&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; ... requiredMessage=&quot;#{msg['inscription.motdepasse']}&quot; /&gt;
+&lt;h:inputSecret id=&quot;confirmation&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; ... requiredMessage=&quot;#{msg['inscription.confirmation']}&quot; /&gt;
+&lt;h:inputText id=&quot;nom&quot; value=&quot;#{inscrireBean.utilisateur.nom}&quot; ... requiredMessage=&quot;#{msg['inscription.nom']}&quot; /&gt;</code></pre><p id="r-2138522" data-claire-element-id="2355595">La forme de l'expression EL utilisée est simple : nous ciblons le bundle via son nom <strong>msg</strong>, puis nous utilisons la notation avec les crochets pour cibler le nom souhaité.</p><p id="r-2138523" data-claire-element-id="2355596">Effectuez ces dernières modifications dans le code de votre Facelet, puis testez à nouveau votre formulaire. Si vous n'avez rien oublié et si vous avez correctement positionné votre fichier <strong>bundle</strong>, vous devriez observer exactement le même comportement que lors du test effectué avec les messages écrits en dur.</p><aside id="r-2138525" data-claire-element-id="2355598" data-claire-semantic="information"><p id="r-2138524" data-claire-element-id="2355597">L'intérêt de cette technique, c'est bien évidemment d'écrire un code plus propre dans vos Facelets, mais surtout de regrouper tous vos messages de validation dans un seul et unique fichier. Pratique, notamment pour l'internationalisation ! Par exemple, si vous souhaitez traduire votre application dans une langue différente, vous n'avez alors qu'à changer de bundle : inutile de repasser sur chacune de vos Facelets pour traduire les messages un par un !</p></aside><p id="r-2138526" data-claire-element-id="2355599">Nous allons nous arrêter là pour les tests et améliorations. Passons maintenant au paragraphe suivant, afin de rendre tout ce mécanisme... ajaxisé !</p><h3 id="r-626351" data-claire-element-id="3312621">Une inscription ajaxisée</h3><h4 id="r-2138533" data-claire-element-id="2355607">Présentation</h4><div id="r-2138530" data-claire-element-id="2355604" data-claire-semantic="question"><p id="r-2138529" data-claire-element-id="2355603">Qu'est-ce que c'est, une inscription &quot;ajaxisée&quot; ?</p></div><p id="r-2138531" data-claire-element-id="2355605">AJAX est l'acronyme d'<strong>Asynchronous Javascript and XML</strong>, ce qui en français signifie littéralement « Javascript et XML asynchrones ». Derrière cette appellation se cache un ensemble de technologies qui permettent la mise à jour d'un fragment d'une page web sans que le rechargement complet de la page web visitée par l'utilisateur ne soit nécessaire. C'est ce type de technologie qui permet à certains sites de proposer des fonctionnalités avancées et intuitives à leurs utilisateurs. Citons par exemple le Site du Zéro qui propose l'auto-complétion lors de la saisie dans le champ de recherche d'un membre, ou encore le site Stackoverflow avec son système de vote en direct sur les réponses posées et questions apportées.</p><p id="r-2138532" data-claire-element-id="2355606">Ainsi, lorsque je parle d'inscription ajaxisée, je désigne en réalité le fait de pouvoir valider le contenu de chacun des champs de notre formulaire d'inscription sans nécessiter un clic sur le bouton d'envoi, ni nécessiter un rechargement de la page entière.</p><h4 id="r-2138570" data-claire-element-id="3312618">L'AJAX avec JSF</h4><p id="r-2138534" data-claire-element-id="2355608">Si nous travaillions toujours à la main, il nous faudrait mettre les mains dans le cambouis et mettre en place du JavaScript, des traitements spéciaux dans nos servlets pour ne déclencher l'actualisation que d'un morceau de la page visitée par l'utilisateur, etc. Heureusement, avec JSF nous allons pouvoir garder nos mains propres : le <em>framework</em> nous propose un moyen ultra-simple pour court-circuiter le processus classique de traitement d'une requête, et permettre à un composant de s'actualiser de manière indépendante, et non pas dans le flot complet de l'arbre des composants présents dans la vue courante comme c'est le cas traditionnellement.</p><p id="r-2138535" data-claire-element-id="2355609">La solution offerte se matérialise sous la forme... d'un composant ! C'est cette fois une balise de la bibliothèque Core que nous allons utiliser : la bien nommée <code>&lt;f:ajax&gt;</code>. Sans plus attendre, je vous propose le nouveau code de notre Facelet, et nous en discutons ensuite.</p><pre id="r-2138536" data-claire-element-id="2838430"><code data-claire-semantic="html">&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:f=&quot;http://java.sun.com/jsf/core&quot; xmlns:h=&quot;http://java.sun.com/jsf/html&quot;&gt; 
+    &lt;h:head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;title&gt;Inscription&lt;/title&gt;
+        &lt;h:outputStylesheet library=&quot;default&quot; name=&quot;css/form.css&quot;  /&gt;
+        &lt;f:loadBundle basename=&quot;com.sdzee.bundle.messages&quot; var=&quot;msg&quot;/&gt;
+    &lt;/h:head&gt;
+    &lt;h:body&gt;
+      &lt;h:form id=&quot;formulaire&quot;&gt;
+         &lt;fieldset&gt;
+         	&lt;legend&gt;Inscription&lt;/legend&gt;
+	     	&lt;h:outputLabel for=&quot;email&quot;&gt;Adresse email &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/h:outputLabel&gt;
+	        &lt;h:inputText id=&quot;email&quot; value=&quot;#{inscrireBean.utilisateur.email}&quot; required=&quot;true&quot; size=&quot;20&quot; maxlength=&quot;60&quot; requiredMessage=&quot;#{msg['inscription.email']}&quot;&gt;
+	            &lt;f:ajax event=&quot;blur&quot; render=&quot;emailMessage&quot; /&gt;
+	        &lt;/h:inputText&gt;
+	        &lt;h:message id=&quot;emailMessage&quot; for=&quot;email&quot; errorClass=&quot;erreur&quot; /&gt;
+	        &lt;br /&gt;
+	
+	        &lt;h:outputLabel for=&quot;motdepasse&quot;&gt;Mot de passe &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/h:outputLabel&gt;
+	        &lt;h:inputSecret id=&quot;motdepasse&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; required=&quot;true&quot; size=&quot;20&quot; maxlength=&quot;20&quot; requiredMessage=&quot;#{msg['inscription.motdepasse']}&quot;&gt;
+	       	    &lt;f:ajax event=&quot;blur&quot; render=&quot;motDePasseMessage&quot; /&gt;
+	        &lt;/h:inputSecret&gt;
+	        &lt;h:message id=&quot;motDePasseMessage&quot; for=&quot;motdepasse&quot; errorClass=&quot;erreur&quot; /&gt;
+	        &lt;br /&gt;
+	
+	        &lt;h:outputLabel for=&quot;confirmation&quot;&gt;Confirmation du mot de passe &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/h:outputLabel&gt;
+	        &lt;h:inputSecret id=&quot;confirmation&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; required=&quot;true&quot; size=&quot;20&quot; maxlength=&quot;20&quot; requiredMessage=&quot;#{msg['inscription.confirmation']}&quot;&gt;
+	            &lt;f:ajax event=&quot;blur&quot; render=&quot;confirmationMessage&quot; /&gt;
+	        &lt;/h:inputSecret&gt;
+	        &lt;h:message id=&quot;confirmationMessage&quot; for=&quot;confirmation&quot; errorClass=&quot;erreur&quot; /&gt;
+	        &lt;br /&gt;
+	
+	        &lt;h:outputLabel for=&quot;nom&quot;&gt;Nom d'utilisateur &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/h:outputLabel&gt;
+	        &lt;h:inputText id=&quot;nom&quot; value=&quot;#{inscrireBean.utilisateur.nom}&quot; required=&quot;true&quot; size=&quot;20&quot; maxlength=&quot;20&quot; requiredMessage=&quot;#{msg['inscription.nom']}&quot;&gt;
+	            &lt;f:ajax event=&quot;blur&quot; render=&quot;nomMessage&quot; /&gt;
+	        &lt;/h:inputText&gt;
+	        &lt;h:message id=&quot;nomMessage&quot; for=&quot;nom&quot; errorClass=&quot;erreur&quot; /&gt;
+	        &lt;br /&gt;
+	        
+	        &lt;h:messages globalOnly=&quot;true&quot; infoClass=&quot;info&quot; /&gt;
+	
+	        &lt;h:commandButton value=&quot;Inscription&quot; action=&quot;#{inscrireBean.inscrire}&quot; styleClass=&quot;sansLabel&quot;&gt;
+	            &lt;f:ajax execute=&quot;@form&quot; render=&quot;@form&quot; /&gt;
+	        &lt;/h:commandButton&gt;
+	        &lt;br /&gt;
+          &lt;/fieldset&gt;
+        &lt;/h:form&gt; 	
+    &lt;/h:body&gt;
+&lt;/html&gt;</code></pre><p id="r-2138537" data-claire-element-id="2355611">Les différences apparentes avec la version précédente de la Facelet sont minimes, seules quelques lignes font leur apparition :</p><ul id="r-2138542" data-claire-element-id="3312617"><li id="r-2138539" data-claire-element-id="2355613"><p id="r-2138538" data-claire-element-id="2355612">chaque balise <code>&lt;h:inputText&gt;</code> et <code>&lt;h:inputSecret&gt;</code> contient dorénavant un corps, et dans ce corps est placée la fameuse balise <code>&lt;f:ajax&gt;</code> ;</p></li><li id="r-2138541" data-claire-element-id="3312616"><p id="r-2138540" data-claire-element-id="3312615">de même, la balise <code>&lt;h:commandButton&gt;</code> contient dorénavant elle aussi un corps, dans lequel est logée une balise <code>&lt;f:ajax&gt;</code>.</p></li></ul><p id="r-2138543" data-claire-element-id="2355617">Étudions la construction de cette nouvelle balise. Seuls deux de ses attributs nous sont utiles dans les champs de saisie :</p><ul id="r-2138548" data-claire-element-id="2355622"><li id="r-2138545" data-claire-element-id="2355619"><p id="r-2138544" data-claire-element-id="2355618"><strong>event</strong>, qui nous permet de définir l'action déclenchant l'envoi de la requête AJAX au serveur ;</p></li><li id="r-2138547" data-claire-element-id="2355621"><p id="r-2138546" data-claire-element-id="2355620"><strong>render</strong>, qui nous permet de définir le ou les composants dont le rendu doit être effectué, une fois la requête traitée par le serveur.</p></li></ul><p id="r-2138549" data-claire-element-id="2355623">Autrement dit, c'est extrêmement simple : il suffit de placer la balise <code>&lt;f:ajax&gt;</code> dans le corps du champ qui est concerné par l'événement déclencheur, et de préciser dans l'attribut <strong>render</strong> le(s) composant(s) pour le(s)quel(s) nous souhaitons relancer un rendu graphique.</p><p id="r-2138550" data-claire-element-id="2355624">Dans notre cas, ce qui nous intéresse c'est de faire valider le contenu d'un champ dès que l'utilisateur a terminé la saisie, et d'actualiser le message associé au champ en conséquence :</p><ul id="r-2138555" data-claire-element-id="2355629"><li id="r-2138552" data-claire-element-id="2355626"><p id="r-2138551" data-claire-element-id="2355625">l'<strong>event</strong> que nous utilisons pour considérer que l'utilisateur a terminé la saisie du contenu d'un champ s'intitule <strong>blur</strong>. Cette propriété JavaScript va permettre de déclencher une requête dès que le champ courant perd le focus, c'est-à-dire dès que l'utilisateur clique dans un autre champ, ou ailleurs sur la page, ou bien lorsqu'il navigue en dehors du champ via la touche tabulation de son clavier par exemple ;</p></li><li id="r-2138554" data-claire-element-id="2355628"><p id="r-2138553" data-claire-element-id="2355627">pour désigner quel composant actualiser, nous devons simplement préciser son id dans l'attribut <strong>render</strong>.</p></li></ul><p id="r-2138556" data-claire-element-id="2355630">La balise <code>&lt;f:ajax&gt;</code> présente sur chaque champ de saisie va soumettre (et donc valider !) seulement le contenu du champ courant, et déclencher un réaffichage du message associé lorsque le champ va perdre le focus. La balise <code>&lt;f:ajax&gt;</code> placée sur le bouton de validation est un peu différente des autres : elle permet d'effectuer un envoi complet, mais là encore ajaxisé et non pas simplement un envoi classique avec rechargement de la page. Pour ce faire, vous constatez l'emploi d'un mot-clé un peu spécial : <code>@form</code>. Il existe quatre marqueurs de la sorte :</p><ul id="r-2138565" data-claire-element-id="2355639"><li id="r-2138558" data-claire-element-id="2355632"><p id="r-2138557" data-claire-element-id="2355631"><code>@this</code> : désigne le composant englobant la balise <code>&lt;f:ajax&gt;</code> ;</p></li><li id="r-2138560" data-claire-element-id="2355634"><p id="r-2138559" data-claire-element-id="2355633"><code>@form</code> : désigne le formulaire entier ;</p></li><li id="r-2138562" data-claire-element-id="2355636"><p id="r-2138561" data-claire-element-id="2355635"><code>@all</code> : désigne l'arbre des composants de la page entière ;</p></li><li id="r-2138564" data-claire-element-id="2355638"><p id="r-2138563" data-claire-element-id="2355637"><code>@none</code> : ne désigne aucun composant.</p></li></ul><p id="r-2138566" data-claire-element-id="2355640">En précisant <code>@form</code> dans l'attribut <strong>render</strong>, nous nous assurons ainsi que tout le formulaire va être actualisé lors d'un clic sur le bouton d'envoi. Par ailleurs, nous n'utilisons plus l'attribut <strong>event</strong> comme nous le faisions sur les champs de saisie, car nous savons très bien que c'est un clic sur le bouton qui va déclencher l'action. Nous utilisons cette fois l'attribut <strong>execute</strong>, qui permet de définir la portée de l'action à effectuer : en l'occurrence, nous souhaitons bien traiter le formulaire complet.</p><p id="r-2138567" data-claire-element-id="2355641">Effectuez ces modifications dans votre Facelet, puis testez à nouveau votre formulaire d'inscription. À chaque fois que vous allez cliquer dans un champ de saisie, puis en dehors de ce champ, vous pourrez observer l'actualisation des éventuels messages d'erreurs associés à chaque champ, et ce presque en temps réel !</p><aside id="r-2138569" data-claire-element-id="2355643" data-claire-semantic="information"><p id="r-2138568" data-claire-element-id="2355642">En fin de compte, JSF offre un masquage total de ce qui se passe sous la couverture ! Il suffit d'inclure une simple balise dans le corps d'un composant, et le tour est joué. C'est d'une facilité à la fois admirable et déconcertante ! :)</p></aside><h4 id="r-2138579" data-claire-element-id="3312620">L'importance de la portée d'un objet</h4><p id="r-2138571" data-claire-element-id="2355645">Avant de passer à la suite, je tiens à vous faire remarquer quelque chose de très inquiétant : nous avons oublié de nous soucier de la portée de notre <strong>backing-bean</strong> ! Souvenez-vous, celle que nous avions déclarée via l'annotation <code>@RequestScoped</code>. Nous ne nous en étions pas inquiétés plus que ça sur le moment, mais maintenant que nous avons ajaxisé notre formulaire, cette notion de portée va prendre de l'importance.</p><p id="r-2138572" data-claire-element-id="2355646">Actuellement, notre objet est dans la portée requête. Cela signifie que notre bean ne vit que le temps d'une requête : il est créé par JSF à l'arrivée d'une requête sur le serveur, puis détruit une fois la réponse renvoyée. Autrement dit, notre formulaire provoque la création et la destruction d'un bean sur le serveur à chaque fois que l'utilisateur change de champ ! C'est du gâchis de performances.</p><p id="r-2138573" data-claire-element-id="2355647">Nous pourrions envisager de mettre notre objet en session plutôt que dans la portée requête. Oui, mais la session est un objet qu'il est coûteux de maintenir pour le serveur, car il faut conserver un unique objet pour chaque visiteur utilisant l'application. Voilà pourquoi en pratique, il ne faut utiliser la session que lorsque c'est impérativement nécessaire, comme pour réaliser un panier d'achats par exemple, où les items commandés doivent absolument être conservés tout au long de la navigation du visiteur. Dans notre simple système d'inscription, garder nos informations serait du pur gâchis de mémoire.</p><p id="r-2138574" data-claire-element-id="3312619">Nous devons donc impérativement réfléchir à ce type de problématique lorsque nous développons une application : car plus il y a d'utilisateurs, plus le gaspillage de ressources va être susceptible de poser des problèmes que vous ne pouvez pas identifier par de simples tests mono-utilisateur. En d'autres termes, votre application peut très bien donner l'impression de fonctionner au poil et d'être parfaitement codée, jusqu'au jour où un nombre critique d'utilisateurs simultanés va faire surgir des problèmes imprévus.</p><p id="r-2138575" data-claire-element-id="2355649">Pour revenir à notre cas, il existe une portée qui se place entre la requête et la session, et qui semble donc parfaite pour ce que nous faisons ici : le scope de conversation. Il permet de conserver un objet tant qu'une même vue est utilisée par un même utilisateur. Cela signifie que tant qu'un utilisateur effectue des requêtes depuis une seule et même page, alors l'objet est conservé sur le serveur et réutilisé. Dès que l'utilisateur effectue une requête vers une autre vue, alors l'objet est finalement détruit. Dans notre cas, c'est parfait : notre formulaire provoque l'envoi de plusieurs requêtes vers le serveur pour la validation de chacun des champs, et toutes constituent un échange continu entre le serveur et une unique vue. Nous allons donc placer notre objet dans cette portée, pour limiter le gâchis de ressources sur le serveur.</p><p id="r-2138576" data-claire-element-id="2355650">Pour déclarer un <strong>backing-bean</strong> dans cette portée, il faut l'annoter avec <code>@ViewScoped</code>, et non plus avec <code>@RequestScoped</code>. Voilà tout ce qu'il nous faut changer pour optimiser notre application !</p><aside id="r-2138578" data-claire-element-id="2355652" data-claire-semantic="warning"><p id="r-2138577" data-claire-element-id="2355651">À titre d'exercice, et si vous avez déjà parcouru l'annexe sur le débuggage de projet avec Eclipse, je vous encourage à utiliser le mode debug pour vérifier de vos propres yeux la conservation d'une instance du backing-bean d'une requête à l'autre avec le scope de conversation, et sa destruction avec le scope de requête.</p></aside><h3 id="r-626483" data-claire-element-id="3312664">Une inscription contrôlée</h3><h4 id="r-2138601" data-claire-element-id="3312659">Déporter la validation de la vue vers l'entité</h4><p id="r-2138580" data-claire-element-id="2355655">Nous nous sommes jusqu'à présent contentés d'effectuer une simple vérification sur les champs du formulaire, directement dans la vue grâce aux attributs <strong>required</strong> et <strong>requiredMessage</strong>. Nous allons déplacer ces conditions de la vue vers notre modèle, à savoir notre entité, grâce à de simples annotations ! Le serveur GlassFish fournit par défaut un moyen de validation, identifié sous le nom de <strong>JSR 303</strong> : il contient différentes contraintes de validation sous forme d'annotations, par exemple <code>@NotNull</code> qui permet d'indiquer qu'une propriété ne peut être laissée vide.</p><p id="r-2138581" data-claire-element-id="2355656">Première étape, nous allons donc supprimer de notre Facelet les quelques <strong>required</strong> et <strong>requiredMessage</strong> présents sur les champs de notre formulaire, et que nous utilisions justement pour indiquer que nos champs ne pouvaient pas être laissés vides. Il nous suffit ensuite d'éditer notre entité <strong>Utilisateur</strong> et d'y ajouter les annotations sur les attributs correspondants pour remettre en place ces contraintes. Voici le code de notre entité reprise et complétée (j'omets ici les méthodes <em>getters</em>/<em>setters</em> pour ne pas encombrer le code inutilement) :</p><pre id="r-2138582" data-claire-element-id="2838433"><code data-claire-semantic="java">package com.sdzee.entities;
+
+import java.sql.Timestamp;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+@Entity
+public class Utilisateur {
+
+    @Id
+    @GeneratedValue( strategy = GenerationType.IDENTITY )
+    private Long      id;
+    @NotNull
+    private String    email;
+    @Column( name = &quot;mot_de_passe&quot; )
+    @NotNull
+    private String    motDePasse;
+    @NotNull
+    private String    nom;
+    @Column( name = &quot;date_inscription&quot; )
+    private Timestamp dateInscription;
+
+    ....
+}</code></pre><p id="r-2138583" data-claire-element-id="2355658">Les seuls ajouts effectués sont les trois annotations <code>@NotNull</code>, issues du package <code>javax.validation.constraints</code>.</p><aside id="r-2138585" data-claire-element-id="2355660" data-claire-semantic="warning"><p id="r-2138584" data-claire-element-id="2355659">Par contre, comprenez bien que ceci ne fonctionnera que si vous avez suivi mon conseil en début de chapitre, et ajouté <code>javax.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL</code> en paramètre de contexte. Sans cette configuration, les champs du formulaire laissés vides seraient traités comme des chaînes vides par votre serveur, et par conséquent celles-ci ne seraient pas détectées comme nulles par ces annotations fraîchement mises en place dans l'entité.</p></aside><p id="r-2138586" data-claire-element-id="2355661">Le seul cas où vous pourriez vous passer de cette configuration se présenterait si vous utilisiez Hibernate en guise de <em>framework</em> ORM, et que vous utilisiez l'annotation spécifique à Hibernate intitulée <code>@NotEmpty</code>. Cependant comme je vous l'ai déjà expliqué, si vous commencez à mettre du code spécifique à Hibernate dans votre application, vous ne pourrez plus revenir en arrière, c'est-à-dire changer d'implémentation de JPA, sans modifier votre code…</p><p id="r-2138587" data-claire-element-id="2355662">Une fois ces légères modifications effectuées, ouvrez à nouveau la page d'inscription dans votre navigateur, et tentez une nouvelle fois de vous inscrire en laissant des champs vides. Vous constaterez alors que les contraintes fonctionnent bien, mais que les messages de validation sont une nouvelle fois trop génériques (voir la figure suivante).</p><figure id="r-2138590" data-claire-element-id="3312656"><img id="r-2138588" data-claire-element-id="2355663" src="../../../user.oc-static.com/files/419001_420000/419336.png" alt="Image utilisateur" /></figure><p id="r-2138591" data-claire-element-id="2355666">Pas d'inquiétude, nous allons pouvoir les personnaliser directement depuis notre entité en complétant nos annotations :</p><pre id="r-2138592" data-claire-element-id="2838436"><code data-claire-semantic="java">...
+
+@NotNull( message = &quot;Veuillez saisir une adresse email&quot; )
+private String    email;
+@Column( name = &quot;mot_de_passe&quot; )
+@NotNull( message = &quot;Veuillez saisir un mot de passe&quot; )
+private String    motDePasse;
+@NotNull( message = &quot;Veuillez saisir un nom d'utilisateur&quot; )
+private String    nom;
+
+...</code></pre><p id="r-2138593" data-claire-element-id="2355668">s<br /> Il suffit comme vous pouvez l'observer dans cet exemple de préciser entre parenthèses <a href="http://docs.oracle.com/javaee/6/api/javax/validation/constraints/NotNull.html#message%28%29">un attribut <strong>message</strong></a> à l'annotation <code>@NotNull</code>.</p><p id="r-2138594" data-claire-element-id="2355669">Nous voilà de retour à une situation similaire à celle que nous observions lorsque nous effectuions la validation directement depuis notre vue (voir la figure suivante).</p><figure id="r-2138597" data-claire-element-id="3312658"><img id="r-2138595" data-claire-element-id="2355670" src="../../../user.oc-static.com/files/419001_420000/419337.png" alt="Image utilisateur" /></figure><div id="r-2138599" data-claire-element-id="2355674" data-claire-semantic="question"><p id="r-2138598" data-claire-element-id="2355673">Quelle est la méthode de validation à préférer : depuis la vue, ou depuis l'entité ?</p></div><p id="r-2138600" data-claire-element-id="2355675">Cela dépend principalement des contraintes du projet. Par exemple, si l'application doit pouvoir fonctionner sur un serveur léger comme Tomcat sans support des EJB ni de JPA, alors il ne faudra pas utiliser la validation depuis l'entité mais lui préférer la validation depuis la vue JSF.</p><h4 id="r-2138620" data-claire-element-id="2838442">Affiner les contrôles effectués</h4><p id="r-2138602" data-claire-element-id="2355677">Allons un petit peu plus loin, et essayons de nous rapprocher davantage du fonctionnement de notre formulaire lorsque nous utilisions une page JSP et notre objet métier fait maison.</p><p id="r-2138603" data-claire-element-id="2355678">Nous souhaitons affiner la validation des différents champs de notre formulaire. Dans notre ancien objet métier, nous procédions aux vérifications suivantes :</p><ul id="r-2138610" data-claire-element-id="2355685"><li id="r-2138605" data-claire-element-id="2355680"><p id="r-2138604" data-claire-element-id="2355679">que l'adresse respecte bien le format standard d'une adresse email ;</p></li><li id="r-2138607" data-claire-element-id="2355682"><p id="r-2138606" data-claire-element-id="2355681">que le mot de passe soit long de 3 caractères ou plus ;</p></li><li id="r-2138609" data-claire-element-id="2355684"><p id="r-2138608" data-claire-element-id="2355683">que le nom soit long de 3 caractères ou plus.</p></li></ul><p id="r-2138611" data-claire-element-id="2355686">Le hasard fait encore une fois bien les choses :<a href="http://docs.oracle.com/javaee/6/api/javax/validation/constraints/Pattern.html">l'annotation <code>@Pattern</code></a> fournie par la <a href="http://jcp.org/aboutJava/communityprocess/final/jsr303/index.html">JSR 303</a> est parfaite pour vérifier le format de l'adresse grâce à l'utilisation d'expressions régulières, et <a href="http://docs.oracle.com/javaee/6/api/javax/validation/constraints/Size.html">l'annotation <code>@Size</code></a> est parfaite pour vérifier la taille des champs ! Voici le code complété :</p><pre id="r-2138612" data-claire-element-id="2838440"><code data-claire-semantic="java">...
+
+@NotNull( message = &quot;Veuillez saisir une adresse email&quot; )
+@Pattern( regexp = &quot;([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)&quot;, message = &quot;Merci de saisir une adresse mail valide&quot; )
+private String    email;
+@Column( name = &quot;mot_de_passe&quot; )
+@NotNull( message = &quot;Veuillez saisir un mot de passe&quot; )
+@Size( min = 3, message = &quot;Le mot de passe doit contenir au moins 3 caractères&quot; )
+private String    motDePasse;
+@NotNull( message = &quot;Veuillez saisir un nom d'utilisateur&quot; )
+@Size( min = 3, message = &quot;Le nom d'utilisateur doit contenir au moins 3 caractères&quot; )
+private String    nom;
+
+...</code></pre><p id="r-2138613" data-claire-element-id="2355688">Les documentations respectives des deux annotations expliquent que l'attribut <strong>regexp</strong> permet de définir une expression régulière qui sera appliquée au champ ciblé par l'annotation <code>@Pattern</code>, et que l'attribut <strong>min</strong> permet de définir la taille minimale autorisée pour le champ ciblé par l'annotation <code>@Size</code>.</p><p id="r-2138614" data-claire-element-id="2355689">Effectuez ces ajouts, puis tentez à nouveau de vous inscrire en saisissant un nom ou un mot de passe trop court, et une adresse email dont le format est incorrect.</p><aside id="r-2138616" data-claire-element-id="2355691" data-claire-semantic="information"><p id="r-2138615" data-claire-element-id="2355690">Rendez-vous bien compte de la simplicité avec laquelle nous avons mis en place ces quelques vérifications : de simples annotations placées sur les champs de l'entité suffisent ! Alors qu'auparavant, nous avions dû écrire pas loin d'une centaine de lignes de code dans notre objet métier, rien que pour mettre en place ces vérifications et gérer les exceptions proprement...</p></aside><p id="r-2138617" data-claire-element-id="2355692">Par ailleurs, nous n'avons pas mis en place ce type de contrôle dans notre application, mais nous pourrions tout à fait vérifier que le mot de passe fourni par l'utilisateur présente un niveau de sécurité suffisamment élevé. Pour ce faire, l'annotation <code>@Pattern</code> se révèle une nouvelle fois très utile. Voici par exemple le code à mettre en place afin de s'assurer que le mot de passe entré par l'utilisateur contient au moins 8 caractères, dont au moins un chiffre, une lettre minuscule et une lettre majuscule :</p><pre id="r-2138618" data-claire-element-id="2838441"><code data-claire-semantic="java">@NotNull( message = &quot;Veuillez saisir un mot de passe&quot; )
+@Pattern(regexp = &quot;.*(?=.{8,})(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).*&quot;, message = &quot;Le mot de passe saisi n'est pas assez sécurisé&quot;)
+private String motDePasse;</code></pre><p id="r-2138619" data-claire-element-id="2355694">Simple et rapide, n'est-ce pas ? La puissance des expressions régulières associée à la simplicité des annotations, c'est tout simplement magique ! Alors qu'il nous aurait fallu écrire une barbante méthode de traitement supplémentaire et l'exception associée dans notre ancien objet métier, nous pouvons désormais nous contenter d'une courte annotation sur le champ à valider, directement dans notre entité !</p><h4 id="r-2138710" data-claire-element-id="3312663">Ajouter des contrôles &quot;métier&quot;</h4><p id="r-2138621" data-claire-element-id="2355696">Jusqu'à présent, nous avons réussi à appliquer des contrôles sur le format des données de manière étonnamment simple. Cela dit, nous avons lâchement évité deux contrôles qui étaient pourtant en place dans notre ancien objet métier, et qui sont nécessaires pour réaliser une inscription valide :</p><ul id="r-2138626" data-claire-element-id="2355701"><li id="r-2138623" data-claire-element-id="2355698"><p id="r-2138622" data-claire-element-id="2355697">le mot de passe et sa confirmation doivent être égaux ;</p></li><li id="r-2138625" data-claire-element-id="2355700"><p id="r-2138624" data-claire-element-id="2355699">l'adresse email ne doit pas exister dans la base de données.</p></li></ul><p id="r-2138627" data-claire-element-id="2355702">Ces contraintes se distinguent des simples vérifications de format que nous avons mises en place jusqu'à présent, car elles ont trait à l'aspect métier de notre application. Nous devons donc impérativement trouver un moyen propre de mettre en place ces contrôles dans notre nouvelle architecture.</p><p id="r-2138628" data-claire-element-id="2355703">Comme toujours, JSF propose un outil dédié à notre besoin. Le <em>framework</em> fournit une interface nommée <code><a href="http://docs.oracle.com/javaee/6/api/javax/faces/validator/Validator.html">javax.faces.validator.Validator</a></code>, qui permet de créer une classe contenant une méthode de validation, qui pourra alors être liée à un composant très simplement depuis la vue, via un attribut placé dans une balise.</p><p id="r-2138629" data-claire-element-id="2355704">Nous allons pour commencer mettre en place la vérification de l'existence de l'adresse email dans la base de données. Pour ce faire, nous devons créer un nouvel objet implémentant cette interface <strong>Validator</strong>, que nous allons nommer <strong>ExistenceEmailValidator</strong> et placer dans un nouveau package <code>com.sdzee.validators</code> :</p><pre id="r-2138630" data-claire-element-id="2838443"><code data-claire-semantic="java">package com.sdzee.validators;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.Validator;
+import javax.faces.validator.ValidatorException;
+
+public class ExistenceEmailValidator implements Validator {
+
+    @Override
+    public void validate( FacesContext context, UIComponent component, Object value ) throws ValidatorException {
+        ...
+    }
+}</code></pre><p id="r-2138631" data-claire-element-id="2355706">La seule méthode qu'il est nécessaire de surcharger est la méthode <strong>validate()</strong> : c'est elle qui va contenir le code métier chargé d'effectuer le contrôle de l'existence de l'adresse dans la base. Nous savons déjà comment réaliser cette tâche, nous l'avions déjà fait dans notre ancien objet métier. Il nous suffit donc d'adapter le code que nous avions alors écrit. Voici un exemple de solution :</p><pre id="r-2138632" data-claire-element-id="2838444"><code data-claire-semantic="java">package com.sdzee.validators;
+
+import javax.ejb.EJB;
+import javax.faces.application.FacesMessage;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.Validator;
+import javax.faces.validator.ValidatorException;
+
+import com.sdzee.dao.DAOException;
+import com.sdzee.dao.UtilisateurDao;
+
+public class ExistenceEmailValidator implements Validator {
+
+    private static final String EMAIL_EXISTE_DEJA = &quot;Cette adresse email est déjà utilisée&quot;;
+
+    @EJB
+    private UtilisateurDao      utilisateurDao;
+
+    @Override
+    public void validate( FacesContext context, UIComponent component, Object value ) throws ValidatorException {
+        /* Récupération de la valeur à traiter depuis le paramètre value */
+        String email = (String) value;
+        try {
+            if ( utilisateurDao.trouver( email ) != null ) {
+                /*
+                 * Si une adresse est retournée, alors on envoie une exception
+                 * propre à JSF, qu'on initialise avec un FacesMessage de
+                 * gravité &quot;Erreur&quot; et contenant le message d'explication. Le
+                 * framework va alors gérer lui-même cette exception et s'en
+                 * servir pour afficher le message d'erreur à l'utilisateur.
+                 */
+                throw new ValidatorException(
+                        new FacesMessage( FacesMessage.SEVERITY_ERROR, EMAIL_EXISTE_DEJA, null ) );
+            }
+        } catch ( DAOException e ) {
+            /*
+             * En cas d'erreur imprévue émanant de la BDD, on prépare un message
+             * d'erreur contenant l'exception retournée, pour l'afficher à
+             * l'utilisateur ensuite.
+             */
+            FacesMessage message = new FacesMessage( FacesMessage.SEVERITY_ERROR, e.getMessage(), null );
+            FacesContext facesContext = FacesContext.getCurrentInstance();
+            facesContext.addMessage( component.getClientId( facesContext ), message );
+        }
+    }
+}</code></pre><p id="r-2138633" data-claire-element-id="2355708">Vous devriez comprendre sans problème avec les commentaires présents dans le code. Vous découvrez ici de nouveaux objets du <em>framework</em> JSF, comme <strong>UIComponent</strong> ou <strong>ValidatorException</strong>, et en retrouvez d'autres que vous connaissez déjà comme <strong>FacesContext</strong> et <strong>FacesMessage</strong>. N'hésitez pas à parcourir leur documentation, via Eclipse ou dans la Javadoc en ligne directement depuis votre navigateur, si vous souhaitez en apprendre davantage sur les constructeurs et méthodes ici utilisés.</p><p id="r-2138634" data-claire-element-id="2355709">Vous retrouvez en outre l'injection de notre EJB Stateless, le DAO Utilisateur, dans notre objet via l'annotation JPA <code>@EJB</code>.</p><p id="r-2138635" data-claire-element-id="2355710">Maintenant que notre objet est prêt, il nous faut le déclarer auprès de JSF afin qu'il le rende accessible à notre vue. Oui, parce que pour le moment c'est bien gentil d'avoir codé un objet implémentant l'interface <strong>Validator</strong>, mais encore faut-il que notre vue puisse s'en servir pour l'appliquer au champ de saisie de l'adresse email ! Comme d'habitude, les annotations sont là pour nous sauver, et JSF propose <a href="http://download.oracle.com/javaee/6/api/javax/faces/validator/FacesValidator.html">l'annotation <code>@FacesValidator</code></a>. Celle-ci permet de déclarer auprès du <em>framework</em> un objet comme étant un <strong>Validator</strong>, et permet ainsi de rendre cet objet accessible depuis une balise dans nos Facelets.</p><p id="r-2138636" data-claire-element-id="2355711">Malheureusement, nous n'allons pas pouvoir utiliser cette annotation... Pourquoi ? Eh bien il s'agit là d'un comportement étrange de JSF : les objets annotés avec <code>@FacesValidator</code> ne sont pas pris en charge par le conteneur d'injection.</p><div id="r-2138638" data-claire-element-id="2355713" data-claire-semantic="question"><p id="r-2138637" data-claire-element-id="2355712">Qu'est-ce que cela veut dire, concrètement ?</p></div><p id="r-2138639" data-claire-element-id="2355714">Formulé autrement, cela signifie qu'il n'est pas possible d'injecter un EJB avec l'annotation <code>@EJB</code> dans un <strong>Validator</strong> JSF annoté avec <code>@FacesValidator</code>. C'est un problème, car nous faisons usage de notre DAO Utilisateur dans notre validateur, et puisque nous travaillons avec JPA nous avons besoin de pouvoir y injecter cet EJB.</p><aside id="r-2138641" data-claire-element-id="2355716" data-claire-semantic="information"><p id="r-2138640" data-claire-element-id="2355715">D'après les informations qui circulent sur la toile, il semblerait que la communauté des développeurs chargés du maintien de JSF et de JPA travaille sur ce point, et qu'une correction soit prévue pour la prochaine version à venir de JSF (JSF 2.2, pas encore sorti lors de la rédaction de ce cours).</p></aside><p id="r-2138642" data-claire-element-id="2355717">Il nous faut donc contourner cette limitation nous-mêmes. Il existe plusieurs moyens : nous pouvons conserver l'annotation <code>@FacesValidator</code> et récupérer manuellement notre EJB depuis notre validateur, ou encore laisser tomber l'annotation et nous débrouiller autrement. Nous allons opter pour la seconde méthode, et en ce qui concerne la première je vous renvoie vers <a href="http://balusc.blogspot.com/2011/09/communication-in-jsf-20.html#GettingAnEJBInFacesConverterAndFacesValidator">cet excellent article</a> pour plus de détails.</p><p id="r-2138643" data-claire-element-id="2355718">Nous n'allons donc pas utiliser cette annotation. À la place, nous allons déclarer notre objet comme un simple <strong>backing-bean</strong> ! Ainsi, notre vue pourra y accéder, c'est le principe même du <strong>backing-bean</strong>, et nous pourrons y injecter notre EJB sans problème. Nous devons donc ajouter les annotations suivantes à notre objet :</p><pre id="r-2138644" data-claire-element-id="2838445"><code data-claire-semantic="java">...
+
+@ManagedBean
+@RequestScoped
+public class ExistenceEmailValidator implements Validator {
+   ...</code></pre><p id="r-2138645" data-claire-element-id="2355720">Au sujet de la portée requête ici utilisée, puisque notre validateur ne sera utilisé que pour valider un champ, nous pouvons utiliser la portée par défaut sans souci.</p><p id="r-2138646" data-claire-element-id="3312660">Maintenant que notre objet est déclaré et donc accessible depuis la vue, nous devons ajouter une balise à notre Facelet pour qu'elle fasse appel à ce validateur pour le champ de saisie de l'adresse email. Pour ce faire, nous allons utiliser <a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/f/validator.html">la balise <code>&lt;f:validator&gt;</code></a>. En regardant sa documentation, nous découvrons qu'elle possède un attribut <strong>validatorId</strong> permettant de préciser quel objet utiliser en tant que validateur. Oui mais voilà, cet attribut ne fonctionne que si notre objet est annoté avec <code>@FacesValidator</code>, et pour des raisons techniques évoquées un peu plus tôt nous avons décidé de ne pas utiliser cette annotation...</p><p id="r-2138647" data-claire-element-id="2355722">Heureusement, la balise propose un autre attribut intitulé <strong>binding</strong>, qui permet de préciser un <strong>backing-bean</strong> à utiliser en tant que validateur, à la condition que cet objet implémente l'interface <strong>Validator</strong>. Bingo ! C'est exactement notre cas, et il ne nous reste donc plus qu'à ajouter cette balise dans notre Facelet. Le code responsable du champ de saisie de l'adresse email va donc devenir :</p><pre id="r-2138648" data-claire-element-id="2838446"><code data-claire-semantic="html">&lt;h:inputText id=&quot;email&quot; value=&quot;#{inscrireBean.utilisateur.email}&quot; size=&quot;20&quot; maxlength=&quot;60&quot;&gt;
+    &lt;f:ajax event=&quot;blur&quot; render=&quot;emailMessage&quot; /&gt;
+    &lt;f:validator binding=&quot;#{existenceEmailValidator}&quot; /&gt;
+&lt;/h:inputText&gt;</code></pre><p id="r-2138649" data-claire-element-id="2355724">Sans surprise, nous utilisons une expression EL pour cibler notre <strong>backing-bean</strong>, comme nous l'avons déjà fait pour <strong>inscriptionBean</strong> dans les autres balises. Sa dénomination est par défaut, je vous le rappelle, le nom de la classe de l'objet débutant par une minuscule, à savoir <strong>existenceEmailValidator</strong> dans notre cas.</p><p id="r-2138650" data-claire-element-id="2355725">Une fois cette modification effectuée, rendez-vous à nouveau sur la page d'inscription depuis votre navigateur, et essayez de vous inscrire avec une adresse email qui existe déjà dans votre base de données, comme indiqué sur la figure suivante.</p><figure id="r-2138653" data-claire-element-id="3312662"><img id="r-2138651" data-claire-element-id="2355726" src="../../../user.oc-static.com/files/419001_420000/419343.png" alt="Image utilisateur" /></figure><p id="r-2138654" data-claire-element-id="2355729">Vous constatez alors que la validation est effectuée comme prévu : en plus des contrôles sur le format de l'adresse email, votre application vérifie maintenant que l'adresse saisie n'existe pas déjà dans la base de données, et affiche un message d'erreur le cas échéant ! Par ailleurs, vous remarquerez que puisque nous avons donné le niveau <code>FacesMessage.SEVERITY_ERROR</code> à notre message d'erreur depuis la méthode de validation, le message est bien considéré comme tel par JSF et est coloré en rouge (la classe CSS <strong>erreur</strong> lui est appliquée).</p><p id="r-2138655" data-claire-element-id="2355730">Il nous reste encore un contrôle à effectuer avant d'en avoir terminé avec notre formulaire : vérifier que le mot de passe et la confirmation saisis sont égaux. De la même manière que précédemment, nous allons créer un validateur dédié à cette tâche. Seulement cette fois-ci, nous n'allons pas avoir besoin d'injecter un EJB dans notre objet. En effet, pour vérifier que les deux champs sont égaux, nous n'avons absolument pas besoin de faire appel à notre DAO Utilisateur. Nous allons donc pouvoir utiliser l'annotation <code>@FacesValidator</code> pour lier notre validateur à la vue :</p><pre id="r-2138656" data-claire-element-id="2838449"><code data-claire-semantic="java">package com.sdzee.validators;
+
+import javax.faces.component.UIComponent;
+import javax.faces.component.UIInput;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.FacesValidator;
+import javax.faces.validator.Validator;
+import javax.faces.validator.ValidatorException;
+
+@FacesValidator( value = &quot;confirmationMotDePasseValidator&quot; )
+public class ConfirmationMotDePasseValidator implements Validator {
+
+    @Override
+    public void validate( FacesContext context, UIComponent component, Object value ) throws ValidatorException {
+        ...
+    }
+}</code></pre><p id="r-2138657" data-claire-element-id="2355732">Celle-ci attend en paramètre le nom qui sera utilisé comme identifiant depuis la vue pour désigner ce validateur : nous lui donnons ici le même nom que la classe, avec la première lettre en minuscule pour respecter la règle à suivre pour les <strong>backing-bean</strong> et avoir des dénominations homogènes dans notre Facelet.</p><p id="r-2138658" data-claire-element-id="2355733">Voilà tout pour la forme. Le plus important maintenant, c'est de trouver un moyen de comparer les contenus de deux champs différents. Car c'est bien cela que nous cherchons à faire : comparer le contenu du champ de saisie du mot de passe avec celui de la confirmation. Pour ce faire, nous allons commencer par regarder comment procéder depuis notre Facelet, avant de revenir sur notre objet et de coder la méthode de validation.</p><p id="r-2138659" data-claire-element-id="2355734">Commençons tout simplement par lier notre validateur, même s'il n'est pas encore terminé, au composant en charge de la confirmation :</p><pre id="r-2138660" data-claire-element-id="2838450"><code data-claire-semantic="html">&lt;h:inputSecret id=&quot;confirmation&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; size=&quot;20&quot; maxlength=&quot;20&quot;&gt;
+    &lt;f:ajax event=&quot;blur&quot; render=&quot;confirmationMessage&quot; /&gt;
+    &lt;f:validator validatorId=&quot;confirmationMotDePasseValidator&quot; /&gt;
+&lt;/h:inputSecret&gt;</code></pre><p id="r-2138661" data-claire-element-id="2355736">Puisque cette fois nous avons pu nous servir de l'annotation <code>@FacesValidator</code>, nous pouvons donc utiliser l'attribut <strong>validatorId</strong> de la balise <code>&lt;f:validator&gt;</code>. Celle-ci, à la différence de l'attribut <strong>binding</strong>, n'attend pas une expression EL mais directement le nom du validateur. Il s'agit de celui que nous avons défini en tant que paramètre de l'annotation dans notre validateur, en l'occurrence <strong>confirmationMotDePasseValidator</strong>. En mettant en place cette balise, nous nous assurons ainsi que notre validateur est associé au composant en charge du champ de confirmation.</p><p id="r-2138662" data-claire-element-id="2355737">La prochaine étape va consister à déclarer le composant en charge du champ de mot de passe <strong>en tant qu'attribut du composant</strong> en charge de la confirmation. L'intérêt de réaliser cette association est de rendre disponible le contenu du champ de mot de passe depuis le composant en charge du champ de confirmation. Ne vous embrouillez pas trop pour le moment, regardez simplement comment procéder :</p><pre id="r-2138663" data-claire-element-id="2838451"><code data-claire-semantic="html">&lt;h:inputSecret id=&quot;confirmation&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; size=&quot;20&quot; maxlength=&quot;20&quot;&gt;
+    &lt;f:ajax event=&quot;blur&quot; render=&quot;confirmationMessage&quot; /&gt;
+    &lt;f:attribute name=&quot;composantMotDePasse&quot; value=&quot;#{composantMotDePasse}&quot; /&gt;
+    &lt;f:validator validatorId=&quot;confirmationMotDePasseValidator&quot; /&gt;
+&lt;/h:inputSecret&gt;</code></pre><p id="r-2138664" data-claire-element-id="2355739">Nous utilisons <a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/f/attribute.html">la balise <code>&lt;f:attribute&gt;</code></a> pour mettre en place l'association. Sa propriété <strong>name</strong> permet de définir le nom de l'objet qui va être créé en tant qu'attribut au composant courant, et sa propriété <strong>value</strong> permet de définir son contenu. Nous avons donc nommé l'objet <strong>composantMotDePasse</strong>, et avons lié la propriété <strong>value</strong> directement avec sa valeur en utilisant l'expression EL <code>#{composantMotDePasse}</code>.</p><p id="r-2138665" data-claire-element-id="2355740">Cette déclaration permet donc de créer un objet représentant le champ mot de passe en tant qu'attribut du composant de confirmation, mais il faut encore faire en sorte que la valeur du champ mot de passe soit bien affectée à la valeur de cet objet. Pour ce faire, nous allons modifier la déclaration du composant en charge du mot de passe de cette manière :</p><pre id="r-2138666" data-claire-element-id="2838452"><code data-claire-semantic="html">&lt;h:inputSecret id=&quot;motdepasse&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; binding=&quot;#{composantMotDePasse}&quot; size=&quot;20&quot; maxlength=&quot;20&quot;&gt;
+    &lt;f:ajax event=&quot;blur&quot; render=&quot;motDePasseMessage&quot; /&gt;
+&lt;/h:inputSecret&gt;</code></pre><p id="r-2138667" data-claire-element-id="2355742">En ajoutant un attribut <strong>binding</strong> et en le liant à la valeur de l'objet via l'expression EL <code>#{composantMotDePasse}</code>, nous nous assurons alors que la valeur saisie dans le champ de mot de passe sera affectée à l'objet déclaré en tant qu'attribut du composant de confirmation !</p><p id="r-2138668" data-claire-element-id="2355743">La dernière étape consiste maintenant à accorder nos violons. Actuellement, nos validations AJAX déclenchent le rendu de leur champ respectif uniquement. Maintenant que nous vérifions l'égalité entre les deux champs, pour rendre l'expérience utilisateur plus intuitive et logique, il faut faire en sorte que la validation AJAX de l'un entraîne la validation de l'autre, et vice-versa. Pour ce faire, nous devons modifier les balises <code>&lt;f:ajax&gt;</code> que nous avions mises en place, et le code final devient alors :</p><pre id="r-2138669" data-claire-element-id="2838453"><code data-claire-semantic="html">... 
+
+&lt;h:inputSecret id=&quot;motdepasse&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; binding=&quot;#{composantMotDePasse}&quot; size=&quot;20&quot; maxlength=&quot;20&quot;&gt;
+    &lt;f:ajax event=&quot;blur&quot; execute=&quot;motdepasse confirmation&quot; render=&quot;motDePasseMessage confirmationMessage&quot; /&gt;
+&lt;/h:inputSecret&gt;
+
+...
+	
+&lt;h:inputSecret id=&quot;confirmation&quot; value=&quot;#{inscrireBean.utilisateur.motDePasse}&quot; size=&quot;20&quot; maxlength=&quot;20&quot;&gt;
+    &lt;f:validator validatorId=&quot;confirmationMotDePasseValidator&quot; /&gt;
+    &lt;f:attribute name=&quot;composantMotDePasse&quot; value=&quot;#{composantMotDePasse}&quot; /&gt; 
+    &lt;f:ajax event=&quot;blur&quot; execute=&quot;motdepasse confirmation&quot; render=&quot;motDePasseMessage confirmationMessage&quot; /&gt;
+&lt;/h:inputSecret&gt;
+
+...</code></pre><p id="r-2138670" data-claire-element-id="2355745">Seules les balises <code>&lt;f:ajax&gt;</code> ont changé. Deux choses importantes à remarquer :</p><ul id="r-2138675" data-claire-element-id="2355750"><li id="r-2138672" data-claire-element-id="2355747"><p id="r-2138671" data-claire-element-id="2355746">l'ajout effectué dans les attributs <strong>render</strong>. Avec cette configuration, l'affichage du message associé au mot de passe ET de celui associé à la confirmation sera actualisé quoi qu'il arrive. Pour information, mais vous pouvez trouver cela vous-mêmes dans la documentation de la balise <code>&lt;f:ajax&gt;</code>, il suffit de séparer les composants à actualiser par un espace.</p></li><li id="r-2138674" data-claire-element-id="2355749"><p id="r-2138673" data-claire-element-id="2355748">l'utilisation de l'attribut <strong>execute</strong>. Je vous ai déjà expliqué qu'il permet de définir la portée de l'action réalisée. C'est exactement ce dont nous avons besoin ici : nous voulons que lorsque l'événement <strong>blur</strong> est déclenché, à la fois le composant mot de passe et le composant confirmation soient traités. Voilà pourquoi nous y précisons les identifiants de nos deux champs de saisie.</p></li></ul><p id="r-2138676" data-claire-element-id="2355751">Notre Facelet est enfin terminée, il ne nous reste maintenant plus qu'à coder la méthode de validation, dans notre Validator associé au champ de confirmation. Le petit challenge qui nous attend, c'est de trouver un moyen pour récupérer le contenu du champ mot de passe depuis le composant traité par la méthode, c'est-à-dire le composant de confirmation.</p><p id="r-2138677" data-claire-element-id="2355752">En regardant <a href="http://docs.oracle.com/javaee/6/api/javax/faces/component/UIComponent.html">la documentation de l'objet <code>UIComponent</code></a>, nous y trouvons la méthode <code><a href="http://docs.oracle.com/javaee/6/api/javax/faces/component/UIComponent.html#getAttributes%28%29">getAttributes()</a></code> qui permet de récupérer une liste des attributs du composant. C'est justement ce que nous cherchons à faire ! Eh oui, rappelez-vous : nous avons déclaré le composant mot de passe comme attribut du composant confirmation dans notre Facelet, par le biais de la balise <code>&lt;f:attribute&gt;</code>. Nous apprenons que les éléments de cette liste sont accessibles par leur nom, il va donc nous suffire de cibler l'élément nommé <strong>composantMotDePasse</strong> et le tour est joué ! Voici le code final de notre validateur :</p><pre id="r-2138678" data-claire-element-id="2838454"><code data-claire-semantic="java">package com.sdzee.validators;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.component.UIComponent;
+import javax.faces.component.UIInput;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.FacesValidator;
+import javax.faces.validator.Validator;
+import javax.faces.validator.ValidatorException;
+
+@FacesValidator( value = &quot;confirmationMotDePasseValidator&quot; )
+public class ConfirmationMotDePasseValidator implements Validator {
+
+    private static final String CHAMP_MOT_DE_PASSE       = &quot;composantMotDePasse&quot;;
+    private static final String MOTS_DE_PASSE_DIFFERENTS = &quot;Le mot de passe et la confirmation doivent être identiques.&quot;;
+
+    @Override
+    public void validate( FacesContext context, UIComponent component, Object value ) throws ValidatorException {
+        /*
+         * Récupération de l'attribut mot de passe parmi la liste des attributs
+         * du composant confirmation
+         */
+        UIInput composantMotDePasse = (UIInput) component.getAttributes().get( CHAMP_MOT_DE_PASSE );
+        /*
+         * Récupération de la valeur du champ, c'est-à-dire le mot de passe
+         * saisi
+         */
+        String motDePasse = (String) composantMotDePasse.getValue();
+        /* Récupération de la valeur du champ confirmation */
+        String confirmation = (String) value;
+
+        if ( confirmation != null &amp;&amp; !confirmation.equals( motDePasse ) ) {
+            /*
+             * Envoi d'une exception contenant une erreur de validation JSF
+             * initialisée avec le message destiné à l'utilisateur, si les mots
+             * de passe sont différents
+             */
+            throw new ValidatorException(
+                    new FacesMessage( FacesMessage.SEVERITY_ERROR, MOTS_DE_PASSE_DIFFERENTS, null ) );
+        }
+    }
+}</code></pre><p id="r-2138679" data-claire-element-id="2355754">La seule petite difficulté ici est de penser à convertir l'objet récupéré depuis la liste des attributs du composant confirmation, à la ligne 23, en tant que <code><a href="http://docs.oracle.com/javaee/6/api/javax/faces/component/UIInput.html">UIInput</a></code>, afin de pouvoir récupérer ensuite simplement sa valeur avec la méthode <code><a href="http://docs.oracle.com/javaee/6/api/javax/faces/component/UIOutput.html#getValue%28%29">getValue()</a></code>. Quant au reste de la méthode, c'est le même principe que dans le validateur de l'adresse email que nous avons codé un peu plus tôt.</p><p id="r-2138680" data-claire-element-id="2355755">Une fois ces modifications effectuées dans le code de votre projet, rendez-vous une ultime fois sur la page d'inscription depuis votre navigateur. Tentez alors de rentrer des mots de passe différents, égaux, de rentrer la confirmation avant le mot de passe, de rentrer des mots de passe égaux puis d'en modifier un des deux, etc. Vous observerez alors, si vous n'avez rien oublié, une actualisation en direct des messages d'erreur associés aux champs mot de passe et confirmation !</p><p id="r-2138681" data-claire-element-id="2355756">Nous en avons enfin terminé avec notre formulaire d'inscription ! Tout cela a dû vous paraître bien long, mais c'est avant tout parce que nous avons pris le temps de décortiquer toutes les nouveautés qui interviennent. Si vous prenez un peu de recul, et que vous regardez le code final de votre application, vous remarquerez alors qu'il est bien moins volumineux et bien plus organisé que lorsque nous travaillions sur MVC à la main. Mission réussie pour le tandem JSF + JPA : la gestion des formulaires est maintenant une partie de plaisir, et seules les vérifications métier nécessitent encore l'écriture de méthodes de validation !</p><ul id="r-2138709" data-claire-element-id="2355784"><li id="r-2138683" data-claire-element-id="2355758"><p id="r-2138682" data-claire-element-id="2355757">Grâce à notre travail effectué avec JPA, la couche de données est totalement indépendante du reste de l'application.</p></li><li id="r-2138685" data-claire-element-id="2355760"><p id="r-2138684" data-claire-element-id="2355759">Pour gérer correctement les champs de formulaire laissés vides par l'utilisateur, il est recommandé de configurer le paramètre <code>javax.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL</code> dans le web.xml du projet.</p></li><li id="r-2138687" data-claire-element-id="2355762"><p id="r-2138686" data-claire-element-id="2355761">Pour gérer un formulaire simple, il suffit d'une Facelet, d'un backing-bean et d'une entité.</p></li><li id="r-2138689" data-claire-element-id="2355764"><p id="r-2138688" data-claire-element-id="2355763">Le backing-bean contient une référence à l'entité, et une ou plusieurs méthodes d'actions appelées lors de la soumission du formulaire associé.</p></li><li id="r-2138691" data-claire-element-id="2355766"><p id="r-2138690" data-claire-element-id="2355765">La portée du backing-bean ne doit pas être définie à la légère, il est important d'utiliser la plus petite portée possible pour limiter le gâchis de ressources sur le serveur.</p></li><li id="r-2138693" data-claire-element-id="2355768"><p id="r-2138692" data-claire-element-id="2355767">La méthode <code>FacesContext.addMessage()</code> permet de définir un message géré par JSF, et de lui attribuer un niveau de gravité.</p></li><li id="r-2138695" data-claire-element-id="2355770"><p id="r-2138694" data-claire-element-id="2355769">La Facelet contient des balises qui représentent les composants JSF, et qui sont liées aux propriétés de l'entité par l'intermédiaire du backing-bean, à travers des expressions EL.</p></li><li id="r-2138702" data-claire-element-id="2355777"><p id="r-2138696" data-claire-element-id="2355771">La validation du format des données saisies est entièrement prise en charge par JSF, et il est possible de l'effectuer :</p><ul id="r-2138701" data-claire-element-id="2355776"><li id="r-2138698" data-claire-element-id="2355773"><p id="r-2138697" data-claire-element-id="2355772">depuis la vue, via des attributs et balises dédiées.</p></li><li id="r-2138700" data-claire-element-id="2355775"><p id="r-2138699" data-claire-element-id="2355774">depuis le modèle, via des annotations sur les propriétés des entités.</p></li></ul></li><li id="r-2138704" data-claire-element-id="2355779"><p id="r-2138703" data-claire-element-id="2355778">Les contrôles métier se font par le biais d'un objet <code>Validator</code>, dont la création est simple et guidée par le <em>framework</em>.</p></li><li id="r-2138706" data-claire-element-id="2355781"><p id="r-2138705" data-claire-element-id="2355780">L'ajaxisation de la validation des champs d'un formulaire avec JSF est incroyablement simple.</p></li><li id="r-2138708" data-claire-element-id="2355783"><p id="r-2138707" data-claire-element-id="2355782">Avec le tandem JPA et JSF, nous pouvons construire un formulaire efficace sans SQL et sans JavaScript.</p></li></ul>
+
+                <div class="js-courseSelementActions sideActions">
+    <ul class="sideActions__container">
+        <li>
+            <a class="sideActions__item  js-courseElementActions-copyUrl  js-tooltip"
+               href="#" data-tooltip="Copier le lien"
+               data-tooltip-done="Lien copié !">
+            #
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+
+            
+            <nav class="course-pagination    clearfix">
+
+            <a href="premiers-pas-avec-jsf.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--previous">
+            <i class="icon-previous"></i>
+            <span>Premiers pas avec JSF</span>
+        </a>
+    
+    <span class="course-pagination__separator"></span>
+
+            <a href="l-envoi-de-fichiers-avec-jsf.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--next">
+            <span>L&#039;envoi de fichiers avec JSF</span>
+            <i class="icon-next"></i>
+        </a>
+    
+</nav>
+
+            
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-view-restriction_popin_title"
+                class="popin popin--illustrated  js-popin"
+        id="popin-view-restriction"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+                    <div class="popin__illustrationWrapper">
+                <div class="popin__illustration illustration--balloon"></div>
+            </div>
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-view-restriction_popin_title" class="popin__title  js-popin-title">Waouh !</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <p>
+            Très heureux de voir que nos cours vous plaisent, déjà 3 pages lues aujourd&#039;hui ! Vous pouvez continuer la lecture de nos cours en devenant un Roomie, un membre de la communauté d&#039;OpenClassrooms. C&#039;est gratuit !
+        </p>
+        <p>
+            Vous pourrez aussi suivre votre avancement dans le cours, faire les exercices et discuter avec les autres Roomies.
+        </p>
+                    </div>
+            </div>
+
+                            <div class="popin__actions  js-popin-actions">
+                                                                        <a class="oc-btn orange-alt-btn "  href="https://openclassrooms.com/register">S'inscrire</a>
+                                                    <a class="oc-btn dark-btn "  href="https://openclassrooms.com/login">Se connecter</a>
+                                                            </div>
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+        </div>
+
+
+    </section>
+</div>
+    </div>
+
+    
+    <div id="popin-not-certifying-yet"
+     class="popin"
+     data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <a href='https://openclassrooms.com/premium'><i class='icon-star'></i> Devenez Premium</a>
+                    ">
+    <img alt="Exemple de certificat de réussite" src="../../../static.oc-static.com/prod/images/courses/certif.jpg"/>
+</div>
+
+
+                </main>
+
+                <aside class="contentWithSidebar__sidebar  js-contentWithSidebar-slidingElement" >
+                        <nav class="col-nav">
+    <div id="tab-courseMenu" class="col-nav__inner js-sidebar-inner">
+        <div class="col-nav__block  col-nav__block--summary">
+
+            <div class="side-paginate">
+                                    <a href="premiers-pas-avec-jsf.html" class="side-paginate__previous">
+                        <i class="icon-previous"></i>
+                    </a>
+
+                    <span class="side-paginate__separator"></span>
+                
+                <h6 class="side-paginate__title">
+                    Aller plus loin avec JPA et JSF
+                </h6>
+
+                                    <span class="side-paginate__separator"></span>
+
+                    <a href="l-envoi-de-fichiers-avec-jsf.html" class="side-paginate__next">
+                        <i class="icon-next"></i>
+                    </a>
+                            </div>
+
+                            <div class="col-nav__block--summary-list">
+                    <ol class="col-nav__chapters">
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="les-annotations.html">Les annotations</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="la-persistance-des-donnees-avec-jpa.html">La persistance des données avec JPA</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="tp-fil-rouge-etape-7.html">TP Fil rouge - Étape 7</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="introduction-aux-frameworks-mvc.html">Introduction aux frameworks MVC</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="premiers-pas-avec-jsf.html">Premiers pas avec JSF</a>
+                                                            </li>
+                                                    <li class="selected">
+                                                                                                    <span class="col-nav__chapterTitle">La gestion d&#039;un formulaire avec JSF</span>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="l-envoi-de-fichiers-avec-jsf.html">L&#039;envoi de fichiers avec JSF</a>
+                                                            </li>
+                                            </ol>
+
+                                    </div>
+                    </div>
+
+        
+        
+            <div class="col-nav__block  col-nav__block--subscribe">
+            <a href="https://openclassrooms.com/login" class="oc-btn orange-alt-btn js-popin-activator" data-popin-selector="#popin-log-in">
+                <i class="icon-lock"></i>
+                Suivre ce cours
+            </a>
+
+            <a href="https://openclassrooms.com/how-does-it-work">
+                <small>Comment ça marche ?</small>
+            </a>
+        </div>
+    
+
+
+        
+                    <div class="col-nav__block col-nav__block--institution">
+    <h2>Créé par</h2>
+            <a  href="https://openclassrooms.com/partners/openclassrooms" target="_blank">
+            <img src="../../../sdz-upload.s3.amazonaws.com/prod/partners/img/logo_logo-oc.png" alt="logo OpenClassrooms" class="col-nav__institutionLogo"/>
+            <p class="col-nav__block--institutionDescription">
+                OpenClassrooms, 1ère plateforme  <span class='nowrap'>e-Education<span> en Europe
+            </p>
+        </a>
+    </div>
+        
+        
+        
+    
+                        
+            
+    <div class="socialNetwork col-nav__block">
+        <ul class="socialButtons  js-socialButtons"
+    data-options="
+                title: 'Découvrez le cours &quot;La gestion d&#039;un formulaire avec JSF&quot; sur @OpenClassrooms',
+        mailTitle: 'Cours &quot;La gestion d&#039;un formulaire avec JSF&quot; sur OpenClassrooms',
+        mailContent: 'Découvrez le cours &quot;La gestion d&#039;un formulaire avec JSF&quot; sur OpenClassrooms.'">
+
+    <li>
+        <a class="roundIcon  roundIcon--twitter addthis_button_twitter  js-socialButtons-btn" data-tooltip="Partagez sur Twitter" >
+            <i class="roundIcon__icon  icon-twitter"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--facebook  addthis_button_facebook  js-socialButtons-btn" data-tooltip="Partagez sur Facebook">
+            <i class="roundIcon__icon  icon-facebook"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--googlePlus  addthis_button_google_plusone_share  js-socialButtons-btn" data-tooltip="Partagez sur Google+" >
+            <i class="roundIcon__icon  icon-google"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  addthis_button_email  js-socialButtons-btn  js-socialButtons-email" data-tooltip="Partagez par e-mail">
+            <i class="roundIcon__icon  icon-letter"></i>
+        </a>
+    </li>
+
+</ul>
+
+    </div>
+    </div>
+</nav>
+                </aside>
+            </div>
+        </div>
+
+                    <footer class="alt-section">
+    <div class="centered">
+
+        <div class="row">
+                            <div class="col4 course-bottom__category">
+                    <h2 class="highlighted">
+                        L&#039;auteur
+                    </h2>
+                    <div>
+                                                    <a itemprop="author" itemscope itemtype="http://schema.org/Person" href="https://openclassrooms.com/membres/coyote-92394" class="no-underlined">
+                                <div class="course-bottom__text-illustrated">
+                                    <span data-author="Médéric Munier" style="background-image: url(../../../www.gravatar.com/avatar/15c349ac5313535fba91e5dbfa8803ec/indexd6dc.html?s=256&amp;r=g&amp;d=https%3A%2F%2Fopenclassrooms.com%2Fbundles%2Fcommon%2Fimages%2Favatar_defaut.png);"></span>
+                                    <h4 itemprop="name">Médéric Munier</h4>
+                                                                            <p itemprop="description">
+                                            Auteur du livre sur le Java EE.
+                                        </p>
+                                                                    </div>
+                            </a>
+                                            </div>
+                </div>
+            
+                            <div class="col8 course-bottom__category">
+                    <h2 class="highlighted">Découvrez aussi ce cours en...</h2>
+
+                    <ul class="course-bottom__format">
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">eBook</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-book"></i>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">Livre papier</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook pdf"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">PDF</div>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                    </div>
+
+    </div>
+</footer>
+
+
+    </article>
+            </div>
+        </div>
+
+                    <footer class="footer">
+    <div class="centered">
+        <div class="row">
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    OpenClassrooms
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/about-us" class="footer__link">Qui sommes-nous ?</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/how-does-it-work" class="footer__link">Fonctionnement de nos cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/jobs" class="footer__link">Recrutement</a>
+                    </li>
+                    <li>
+                        <a href="#" class="js-zendesk-show footer__link">Nous contacter</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Professionnels
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/affiliation" class="footer__link">
+                            Affiliation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/business" class="footer__link">Entreprises</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/universities" class="footer__link">Universités et écoles</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Participez
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/new-teachers" class="footer__link">Créer un cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/courses/courselab" class="footer__link">CourseLab</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/terms-conditions/fr" class="footer__link">
+                            <strong>Conditions Générales d&#039;Utilisation</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Suivez-nous
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+                                                                    <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="http://blog.openclassrooms.com/" class="footer__link">Le blog OpenClassrooms</a>
+                    </li>
+                    <li>
+                        <ul class="footer__socialNetwork">
+                            <li>
+                                <a href="https://www.facebook.com/openclassrooms" target="_blank" class="roundIcon roundIcon--facebook footer__socialButtons">
+                                    <i class="icon-facebook roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/openclassrooms" target="_blank" class="roundIcon roundIcon--twitter footer__socialButtons">
+                                    <i class="icon-twitter roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/+OpenClassrooms/posts" target="_blank" class="roundIcon roundIcon--youtube footer__socialButtons">
+                                    <i class="icon-google roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/openclassrooms" target="_blank" class="roundIcon roundIcon--instagram footer__socialButtons">
+                                    <i class="icon-instagram roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/TheOpenClassrooms" target="_blank" class="roundIcon roundIcon--googlePlus footer__socialButtons">
+                                    <i class="icon-youtube roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/openclassrooms" target="_blank" class="roundIcon roundIcon--linkedin footer__socialButtons">
+                                    <i class="icon-linkedin roundIcon__icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
+        
+        <!-- loaded javascript block -->
+
+            
+            <script type="text/javascript" src="../../js/maind0b3.js?095b5b3"></script>
+
+        
+
+    <script type="text/javascript" src="../../js/oc/courseViewd0b3.js?095b5b3"></script>
+
+
+        <!-- loaded javascript block -->
+
+        <script type="text/javascript">
+    window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+    window.analytics.load('mou95e6tdn');
+</script>
+
+                            
+        <!-- inlined javascript block -->
+
+        <script type="text/javascript">
+            
+            if (App.modules) {
+                App.modules.startAll();
+            }
+        </script>
+
+                        
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"90dc06697a","applicationID":"20302107","transactionName":"NANaYkJXC0ICAhdYVw1Je0NDQgpcTA4AblsPB1FEVWkGXhYTEFRnEwdKQm9GBEMXPhVYXRQ=","queueTime":0,"applicationTime":410,"atts":"GERZFApNGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-gestion-d-un-formulaire-avec-jsf by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:52:30 GMT -->
+</html>

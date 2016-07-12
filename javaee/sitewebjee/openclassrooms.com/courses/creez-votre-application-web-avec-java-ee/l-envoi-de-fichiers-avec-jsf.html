@@ -1,0 +1,1652 @@
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="fr" prefix="og: http://ogp.me/ns#">
+    
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/l-envoi-de-fichiers-avec-jsf by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:52:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(e,t){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,t)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var u=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(u,function(e,t){newrelic[t]=r(f+t,"api")}),i(c,function(e,t){newrelic[t]=r(f+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?u(e,a,i):i()}function n(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,c=0;u>c;c++)a[c].apply(i,r);var s=f[g[n]];return s&&s.push([m,n,r,i]),i}function p(e,t){w[e]=l(e).concat(t)}function l(e){return w[e]||[]}function d(e){return s[e]=s[e]||o(n)}function v(e,t){c(e,function(e,n){t=t||"feature",g[n]=t,t in f||(f[t]=[])})}var w={},g={},m={on:p,emit:n,get:d,listeners:l,context:t,buffer:v};return m}function i(){return new r}var a="nr@context",u=e("gos"),c=e(2),f={},s={},p=t.exports=o();p.backlog=f},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!w++){var e=v.info=NREUM.info,t=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){c(l,function(t,n){e[t]||(e[t]=n)});var n="https"===p.split(":")[0]||e.sslForHttp;v.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=v.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=window,s=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var p=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),v=t.exports={offset:a(),origin:p,features:{},xhrWrappable:d};s.addEventListener?(s.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(s.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),u("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader"]);</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="application-name" content="OpenClassrooms"/>
+        <meta name="msapplication-TileColor" content="#e95325"/>
+        <meta name="msapplication-TileImage" content="/fav-icon.png?v=1"/>
+
+        <meta name="theme-color" content="#E95325">
+        <link rel="icon" sizes="144x144" href="../../fav-icon3860.png?v=1">
+
+        
+        
+        <link href="../../bundles/common/css/masterd0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"  />
+        
+
+        <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="../../apple-touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-iphone-retina-display.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-ipad-retina-display.png" />
+
+        <link rel="apple-touch-icon-precomposed" href="../../apple-touch-icon-precomposed.png" />
+
+            <link href="../../bundles/course/css/maind0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" src="../../js/modernizrd0b3.js?095b5b3"></script>
+
+        <link rel="shortcut icon" href="https://openclassrooms.com/favicon.ico?095b5b3" />
+
+            
+    <meta property="og:locale" content="fr"/>
+    <meta property="og:type" content="website"/>
+
+    <meta property="og:title" content="Découvrez le cours &quot;L&#039;envoi de fichiers avec JSF&quot; sur @OpenClassrooms"/>
+    <meta property="og:url" content="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/l-envoi-de-fichiers-avec-jsf"/>
+    <meta property="og:site_name" content="OpenClassrooms"/>
+    <meta property="og:image" content="https://static.oc-static.com/prod/courses/illustrations/illu_creez-votre-application-web-avec-java-ee.png"/>
+    <meta property="og:description" content="Pour réaliser des sites web en Java, on utilise l&#039;environnement Java EE (anciennement appelé J2EE). Celui-ci impose de développer de façon très structurée, ce qui explique certainement pour quoi on le retrouve dans un très grand nombre d&#039;applications web notamment en entreprise (banques, administrations...)."/>
+
+            
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@OpenClassrooms"/>
+    <meta name="twitter:title" content="Découvrez le cours &quot;L&#039;envoi de fichiers avec JSF&quot; sur @OpenClassrooms"/>
+    <meta name="twitter:description" content=""/>
+
+                
+        <title>L&#039;envoi de fichiers avec JSF</title>
+
+        <!-- inlined top javascript block -->
+
+
+        <script type="text/javascript">
+            var App = {
+                startTime: (new Date()).getTime(),
+                debug: false
+            };
+
+            App.user = {
+                
+                
+                
+                isPremium: false
+            };
+
+
+            App.preferences = {
+                assetVersion: '095b5b3',
+                contactMail: 'hello@openclassrooms.com',
+                adyenPublicKey: '10001|889EBFD4D434B82683E21DCA26E77C3E20E0EE09A5ECE3830B0ED51F2FA721A2F7E9EC871C6AB9A1E12C4492F4717673047757E02C5256D8E265CD51E413E5EFCCFEAC41B39C662A424ADC13EE187C38C372A7FCCEC1EA5DF841989437D78B252A8EB51008E60BB55B1E55A7A80DE1A9D60D998C128A576BFAE1DDB97D514AF0A073AEDDE84CEE40D1F8F6ECE85D0FFA50C95C06DB274021C1371376C6EB16561FD65C5E2704B570A7504D617D0F3820F176A0609F6162BDF5890533289FDC3DA7DB03B50BB3BD60A613E1FF72060F22987627E8F1A29F0128A94EC4C8FF7CF6B7AB9558D8433BF86D7A388AB927641CD6C02689139CEE3AAC9ACBFFE83806CB',
+                algolia: {
+                    appId: 'JGRXRFVQM0',
+                    apiKey: 'dfbdea500cb0b5f46e449ad334916c44', indexName: 'prod_COURSES_fr'
+                },
+                routes: {
+                    COURSE_EVENT: '/components/courses/:courseId',
+                    COURSE_PART_EVENT: '/components/courses/:courseId/parts/:partId',
+
+                    ACCEPT_COOKIE: '/components/user-accept-consent-cookie'
+                }
+
+                                            };
+
+            App.preferences.navigationPreference = {
+                            };
+
+            App.preferences.modules = {
+                'smiley': {
+                    basePath: '/bundles/common/images/smiley/'
+                }
+            };
+        </script>
+        <!-- inlined top javascript block end -->
+
+        <script>    App.preferences.modules['course/view/internalFolding'] = {
+        isBigCourse: true
+    };
+
+    App.data = App.data || {};
+App.data.currentCourse = {"partId":626676,"courseId":626954};
+App.preferences.modules['view/currentCoursePage'] = App.data.currentCourse;
+
+</script>
+
+        
+        
+    </head>
+
+    <body class="course oc-body ">
+
+        
+
+        
+    
+    
+    <script id="_EVENTS-PAGE" type="application/json">
+        {"type":"page"}
+    </script>
+
+
+        <!--[if lt IE 9]>
+<div class="disclaimer  disclaimer-error">
+    Vous utilisez un navigateur obsolète, veuillez le <a href="http://browsehappy.com/">mettre à jour</a>.
+</div>
+<![endif]-->
+
+<noscript>
+    <div class="disclaimer  disclaimer--error">
+        Veuillez utiliser un <a href="http://browsehappy.com/">navigateur internet moderne</a> avec JavaScript activé pour naviguer sur OpenClassrooms.com
+    </div>
+</noscript>
+
+
+                    
+
+<header id="oc-header" class="js-tabs-mobile mainHeader ">
+
+        <div class="disclaimer  disclaimer--info hidden  js-cookie-disclaimer">
+        <div class="disclaimer__wrapper">
+            <span class="disclaimer__content">Bienvenue sur OpenClassrooms ! En poursuivant votre navigation, vous acceptez l'utilisation de cookies. <a href="https://openclassrooms.com/privacy-policy#personal-data-gathering">En savoir plus</a></span>
+            <span class="disclaimer__actions">
+                <a href="#" class="disclaimer__button  js-close-button">ok</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="mainHeader__wrapper">
+
+        <div class="mainHeader__topLine">
+                <a href="https://openclassrooms.com/pole-emploi/partenariat?utm_source=SiteWeb-OC&amp;utm_medium=Lien-PhraseHeader&amp;utm_campaign=relancePE"> Vous êtes demandeur d'emploi ? On vous offre le Premium Solo en 3 clics :) ! </a>
+
+        </div>
+
+        <div class="mainHeader__top">
+            <a href="https://openclassrooms.com/" class="mainHeader__logo" title="OpenClassrooms.com">OpenClassrooms.com</a>
+
+            
+<nav role="navigation" class="icoTabs  mainHeader__tabSet">
+    <span class="mainHeader__mobileNav">
+
+        
+        
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseEditMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" data-tabs-default="true" href="#tab-searchMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-search  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab" href="#tab-main">
+            <i class="icon-menu  icoTabs__icon"></i>
+        </a>
+    </span>
+
+</nav>
+        </div>
+
+                <div class="js-tabs-content  mainHeader__content"></div>
+
+        <div class="mainHeader__content">
+            <div id="tab-main" class="mainHeader__tabs">
+                <nav class="mainTopNav  scrollPanel  js-scrollPanel-mobileMenu">
+    <div class="mainTopNav__container  scrollPanel__container  js-scrollPanel-container">
+        <ul class="mainHeader__container  mainHeader__container--mainMenu  js-scrollPanel-content">
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="http://openclassrooms.com/paths/">Parcours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/courses">Cours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/forum/">Forums</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/partners">Partenaires</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/premium">Premium</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+                <div class="mainHeader__contentInner">
+                    <div class="mainHeader__container  mainHeader__container--search">
+                                                                                                                                                                            
+                                                                          
+ <div class="js-courseSearch  topSearchBox">
+     <form tabindex="0" class="js-courseSearch-form  oc-form" action="https://openclassrooms.com/courses" method="get">
+         <div class="js-courseSearch-inputGroup oc-form__widget  inputGroup  topSearchBox__inner">
+             <input id="algolia-search-input"
+                    type="search"
+                    class="js-courseSearch-input oc-form__control inputGroup__input  topSearchBox__input"
+                    title="Rechercher"
+                    autocomplete="off"
+                    data-option_source="/components/courses/search?q=<%= term %>"
+                    placeholder="Rechercher"
+                    name="q" />
+
+             <button class="js-courseSearch-button  oc-btn dark-btn  only-icon  inputGroup__button  topSearchBox__button" type="submit" title="Rechercher un cours">
+                 <i class="inputGroup__icon icon-search"></i>
+                 <i class="inputGroup__icon inputGroup__icon--load icon-spinner icon-spin"></i>
+             </button>
+         </div>
+     </form>
+ </div>
+                    </div>
+
+                                            <div class="mainHeader__container  mainHeader__container--separatorLarge  hidden-s"></div>
+                    
+
+
+                    
+                                            <div class="mainHeader__container  mainHeader__container--login">
+    <a href="https://openclassrooms.com/register" class="oc-btn orange-alt-btn js-popin-activator space-right" data-popin-selector="#popin-sign-in">
+    S&#039;inscrire
+</a>
+<a href="https://openclassrooms.com/login" class="oc-btn dark-btn js-popin-activator" data-popin-selector="#popin-log-in">
+    Se connecter
+</a>
+</div>
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-sign-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-sign-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-sign-in_popin_title" class="popin__title  js-popin-title">Inscription</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=98948ccd3fa7fbcd0b3682784c172068&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail">
+            <i class="icon-facebook"></i>S&#039;inscrire avec Facebook
+        </a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto">
+            <i class="icon-google"></i>S&#039;inscrire avec Google
+        </a>
+    </li>
+
+    <li class="formLogin__column">
+        
+            
+    
+    
+
+    <form name="register" method="post" action="https://openclassrooms.com/register" class="js-registerForm oc-form">
+
+        <div class="accessibility-hidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Wonder&nbsp;                        </span><span class="oc-form__widget"><input type="text" id="register_wonder" name="register[wonder]" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Prénom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_firstName" name="register[firstName]" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Nom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_lastName" name="register[lastName]" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="email" id="register_email" name="register[email]" required="required" class="" /></span></label>
+            <p>
+                <em>
+                    Vous recevrez votre mot de passe sur cette adresse email.
+                </em>
+            </p>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="register_terms" name="register[terms]" required="required" class="" value="1" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            J'ai lu et j'accepte les <a href="https://openclassrooms.com/terms-conditions/fr">Conditions Générales d'Utilisation</a>.&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span></span></label>
+        </div>
+
+
+        <div class="oc-form__group  center-text">
+            
+    <button type="submit" id="register_create" name="register[create]" class="oc-btn orange-alt-btn oc-btn"> S'inscrire</button>
+        </div>
+
+        <input type="hidden" id="register__target_path" name="register[_target_path]" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/l-envoi-de-fichiers-avec-jsf" /><input type="hidden" id="register__token" name="register[_token]" value="LEhsW-IhokD4hQHYoHva_FZzYy-PP2cG-886IBpx9HY" /></form>
+    </li>
+</ul>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-log-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-log-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-log-in_popin_title" class="popin__title  js-popin-title">Connexion</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=98948ccd3fa7fbcd0b3682784c172068&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail"><i class="icon-facebook"></i> Se connecter avec Facebook</a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto"><i class="icon-google"></i> Se connecter avec Google</a>
+    </li>
+
+    <li class="formLogin__column">
+
+        
+            
+    
+    
+
+    <form name="" method="post" action="https://openclassrooms.com/login_check" class=" oc-form">
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email ou nom d'utilisateur&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="_username" name="_username" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Mot de passe&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="password" id="_password" name="_password" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="_remember_me" name="_remember_me" class="" value="1" checked="checked" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            Se souvenir de moi&nbsp;                        </span></span></label>
+        </div>
+
+        <div class="oc-form__group right-text">
+            <a href="https://openclassrooms.com/set-new-password">Mot de passe oublié</a>
+        </div>
+
+        <div class="oc-form__group  center-text">
+            <input type="hidden" id="_target_path" name="_target_path" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/l-envoi-de-fichiers-avec-jsf" /><div>
+    <button type="submit" id="login" name="login" class="orange-alt-btn oc-btn"> Se connecter</button></div><input type="hidden" id="_csrf_token" name="_csrf_token" value="WFIVlYEKEcL5v9hnQC1z3quXwgYs14KEFOLh1GUmi_I" />
+        </div>
+
+        </form>
+    </li>
+</ul>
+<p class="text-center space-top">
+    Pas encore membre ? <a href="https://openclassrooms.com/register">Inscrivez-vous gratuitement</a> en 30s.
+</p>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+                    
+                    <div class="mainHeader__container  mainHeader__container--langSelector">
+                        <div class="js-popOut-header  popOut popOut--small  popOut--rightAlign" data-keep-it-mobile="true">
+    <span class="js-popOut-button  popOut__button">
+                    <a href="javascript:;" class="languageSelector__selected">Français</a>
+            </span>
+    <ul class="popOutList  popOut__content  popOutList--small">
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/en/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">English</a>
+            </li>
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/es/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">Español</a>
+            </li>
+            </ul>
+</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+        
+        <div id="mainSearch" class="centered search-content">
+        </div>
+
+        <div id="mainContentWithHeader">
+            <div id="pre-main-part">
+                
+                                        <section class="inset no-padding">
+        <div class="centered">
+
+            <h6 class="accessibility-hidden">Fil d&#039;Ariane</h6>
+
+            <nav class="breadcrumb">
+                <ul class="breadcrumbtrail">
+                                                                        <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/" itemprop="url">
+                                <span itemprop="title">Accueil</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses" itemprop="url">
+                                <span itemprop="title">Cours</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee?status=published" itemprop="url">
+                                <span itemprop="title">Créez votre application web avec Java EE</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li class="current" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            L&#039;envoi de fichiers avec JSF
+                                                                        </li>
+                                    </ul>
+            </nav>
+        </div>
+    </section>
+
+                
+                            </div>
+
+            <div class="claire clearfix" >
+                    <article itemscope itemtype="http://schema.org/Article">
+
+                        
+<header class="course-header" xmlns="http://www.w3.org/1999/html">
+    <div class="centered"><div class="course-header__topPart"><div class="course-header__info"><a itemprop="url" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><h1 data-course-title="Créez votre application web avec Java EE">Créez votre application web avec Java EE</h1></a><span class="course-header__updatedTime visible-l">Mis à jour le lundi 13 juillet 2015</span></div></div></div><div class="course-header__details-container"><div class="centered"><div class="row"><div class="col12"><div class="course-header__details  iconBar"><div class="course-header__detailsGroup  course-header__detailsGroup--formats iconBar__group"><ul data-option_popinselector="#popin-formats-availables" class="course-types iconBar__list js-course-formats-bar"><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours est visible gratuitement en ligne."><a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><i class="icon-desktop  course-types__icon"></i><span class="course-header__format-current"></span></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore en vidéo."><span><i class="icon-video course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en livre papier."><a href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank"><i class="icon-book  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en eBook."><a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee"><i class="icon-ebook  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip"
+                                                                                            title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours."
+                                                                                ><a
+                                                                                        ><i class="icon-badge  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore diplômant et ne vous permet pas d&#039;obtenir des crédits universitaires européens (ECTS)."><span><i class="icon-hat  course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Vous pouvez être accompagné sur ce cours par un mentor dédié en visioconférence."><a  href="https://openclassrooms.com/premium#discover-premium-plus-offer" ><i class="icon-mentor  course-types__icon"></i></a></li></ul></div><div class="course-header__detailsGroup  course-header__detailsGroup--info  iconBar__group"><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-duration iconBar__icon js-tooltip" title="Ce cours demande en moyenne 40 heures de travail pour être réussi."></i><span class="iconBar__label">40 heures</span></li><li class="iconBar__item"><i class="icon-level iconBar__icon"></i><span class="iconBar__label">
+                                                                                                    Moyenne
+                                                                                            </span></li></ul></div><div class="course-header__detailsGroup course-header__detailsGroup--licences iconBar__group"><a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/2.0"><span class="iconBar__label">Licence</span><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-cc iconBar__icon" title="CC"></i></li><li class="iconBar__item"><i class="icon-ccby iconBar__icon" title="BY"></i></li><li class="iconBar__item"><i class="icon-ccnc iconBar__icon" title="NC"></i></li><li class="iconBar__item"><i class="icon-ccsa iconBar__icon" title="SA"></i></li></ul></a></div></div></div></div></div></div>
+    <div id="popin-formats-availables" class="popin popin--course-formats-availables">
+        <i class="popin__close-button icon-close js-close-button"></i>
+
+        <div class="course-types course-types--withSpace">
+                            <a class="course-types__item" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-desktop course-types__icon"></i>
+                </a>
+            
+            
+                            <a class="course-types__item" href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms">
+                    <i class="icon-book course-types__icon"></i>
+                </a>
+            
+                            <a class="course-types__item" href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-ebook course-types__icon"></i>
+                </a>
+            
+            
+                                        <a class="course-types__item" href="https://openclassrooms.com/premium#discover-premium-plus-offer">
+                    <i class="icon-mentor course-types__icon"></i>
+                </a>
+                    </div>
+
+                    <p>Ce cours est visible <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">gratuitement en ligne</a>.</p>
+        
+        
+                    <p>
+                Ce cours existe en livre papier.
+            </p>
+        
+                    <p>Ce cours existe <a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">en eBook</a>.</p>
+        
+        
+        
+                    <p>
+                Vous pouvez être <a href="https://openclassrooms.com/premium#discover-premium-plus-offer">accompagné et mentoré par un professeur particulier</a> par visioconférence sur ce cours.
+            </p>
+        
+        <a class="oc-btn orange-alt-btn js-close-button" href="#">J&#039;ai tout compris !</a>
+    </div>
+
+    
+</header>
+
+    <div class="centered">
+                            
+        
+            <div class="row">
+        <div class="col12 col11-s">
+                            <nav class="timeline">
+        <div class="timeline__inner">
+
+        <span class="timeline__iconContainer">
+            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+                <i class="icon-home roundIcon__icon"></i>
+            </a>
+        </span>
+            <div class="timeline__steps">
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-au-java-ee.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction au Java EE
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-java-ee-mis-a-nu.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le Java EE mis à nu !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="outils-et-environnement-de-developpement.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Outils et environnement de développement
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="la-servlet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La servlet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="servlet-avec-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Servlet avec vue…
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="transmission-de-donnees.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Transmission de données
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-javabean.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le JavaBean
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-1-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (1/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-2-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (2/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="des-problemes-de-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Des problèmes de vue ?
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-1.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 1
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="objectifs-et-configuration.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Objectifs et configuration
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-core.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque Core
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-core-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL core : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-xml.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque xml
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-xml-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL xml : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="faisons-le-point-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Faisons le point !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 2
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="formulaires-le-b-a-ba.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : le b.a.-ba
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-a-la-mode-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : à la mode MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-3.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 3
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-session-connectez-vos-clients.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La session : connectez vos clients
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-filtre-creez-un-espace-membre.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le filtre : créez un espace membre
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-cookie-le-navigateur-vous-ouvre-ses-portes.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le cookie : le navigateur vous ouvre ses portes
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-4.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 4
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-l-envoi-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : l&#039;envoi de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-telechargement-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le téléchargement de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-5.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 5
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-a-mysql-et-jdbc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction à MySQL et JDBC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="communiquez-avec-votre-bdd.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Communiquez avec votre BDD
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-modele-dao.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le modèle DAO
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-6.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 6
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="gerer-un-pool-de-connexions-avec-bonecp.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Gérer un pool de connexions avec BoneCP
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="les-annotations.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Les annotations
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-persistance-des-donnees-avec-jpa.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La persistance des données avec JPA
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-7.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 7
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="introduction-aux-frameworks-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction aux frameworks MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="premiers-pas-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Premiers pas avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-gestion-d-un-formulaire-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La gestion d&#039;un formulaire avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="l-envoi-de-fichiers-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    L&#039;envoi de fichiers avec JSF
+                                </span>
+
+                                                                    <span class="timeline__progressMarker"></span>
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="debugger-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Débugger un projet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="empaquetage-et-deploiement-d-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Empaquetage et déploiement d&#039;un projet
+                                </span>
+
+                                                            </a>
+                                            
+                
+                <span class="timeline__splitChapter"></span>
+
+            </div>
+
+        <span class="timeline__iconContainer">
+                            <span title="Ce cours n&#039;est pas encore certifiant." class="roundIcon roundIcon--disabled">
+                    <i class="icon-trophy roundIcon__icon"></i>
+                </span>
+                    </span>
+
+        </div>
+    </nav>
+        </div>
+    </div>
+    </div>
+
+        
+        <div class="centered">
+            <div class="contentWithSidebar  spacer  js-contentWithSidebar" >
+                <main class="contentWithSidebar__content" >
+                        
+
+        <div class="relative js-sidebar-container">
+        <div class="static">
+    <h2 itemprop="name" data-part-title="L&#039;envoi de fichiers avec JSF" class="part-title">L&#039;envoi de fichiers avec JSF</h2>
+
+    <section class="row space-bottom js-desktop-sticky-container">
+        <div class="col9 col11-s col__small-padding--right">
+
+                <div class="tooltipMessage tooltipMessage--noArrow">
+        <i class="tooltipMessage__icon  icon-lock"></i>
+        <a href="https://openclassrooms.com/login" class="js-popin-activator" data-popin-selector="#popin-log-in" >Connectez-vous</a> ou <a href="https://openclassrooms.com/register" class="js-popin-activator" data-popin-selector="#popin-sign-in" >inscrivez-vous</a> pour bénéficier de toutes les fonctionnalités de ce cours !
+    </div>
+
+            <div
+                itemprop="articleBody"
+                data-page-indentifier="/courses/creez-votre-application-web-avec-java-ee/l-envoi-de-fichiers-avec-jsf"
+                class="js-isRestrictablePage course-content js-course-container js-smilize "
+
+                                    data-video-blocked-wrapper="<a href='https://openclassrooms.com/login#popin-log-in' class='js-popin-activator'>"
+                            >
+
+                <p id="r-2138711" data-claire-element-id="2355788">Dans cet ultime chapitre, nous allons découvrir comment gérer l'envoi de fichiers depuis un formulaire avec JSF. Ce sujet va en réalité nous servir de prétexte pour découvrir les fameuses bibliothèques de composants JSF ! En guise de clôture, je vous donnerai ensuite des indications pour réaliser la huitième et dernière étape du fil rouge, et nous ferons enfin un rapide point sur ce qui vous attend dans le monde du développement web avec Java EE !</p><h3 id="r-626506" data-claire-element-id="2355809">Le problème</h3><div id="r-2138713" data-claire-element-id="2355790" data-claire-semantic="question"><p id="r-2138712" data-claire-element-id="2355789">« J'ai beau chercher dans la documentation, je ne trouve aucune balise qui ressemble de près ou de loin à quelque chose qui s'occupe des fichiers ! »</p></div><p id="r-2138714" data-claire-element-id="2355791">Ne perdez pas davantage votre temps, aucun composant standard n'existe actuellement dans JSF pour générer une balise <code>&lt;input type=&quot;file&quot;&gt;</code>, ni pour gérer correctement les requêtes de types <strong>multipart</strong> impliquées par les transferts de données occasionnés.</p><p id="r-2138715" data-claire-element-id="2355792">Cependant, c'est au <a href="http://jdevelopment.nl/jsf-22/#802">programme de la version JSF 2.2</a>, prévue pour fin mars 2013 au moment de l'écriture de ce cours. Une balise standard <code>&lt;h:inputFile&gt;</code> va faire son apparition, et apporter notamment un support AJAX pour l'envoi de fichiers ! Mais en attendant cette nouveauté, nous devons trouver un autre moyen...</p><aside id="r-2138717" data-claire-element-id="2355794" data-claire-semantic="information"><p id="r-2138716" data-claire-element-id="2355793">Au passage, si vous parcourez ce programme vous apprendrez que cette nouvelle mouture de JSF apportera enfin le support de l'injection via l'annotation <code>@EJB</code> dans tous les objets JSF, problème auquel nous nous étions heurtés dans le chapitre précédent. Vous pouvez par ailleurs noter que le support des requêtes de type GET et des éléments HTML5 est également annoncé.</p></aside><div id="r-2138719" data-claire-element-id="2355796" data-claire-semantic="question"><p id="r-2138718" data-claire-element-id="2355795">« Avec JSF, il est possible de définir ses propres composants. Ne peut-on pas en créer un pour l'occasion ? »</p></div><p id="r-2138720" data-claire-element-id="2355797">C'est une très bonne idée sur le papier, et effectivement JSF permet la création de composants personnalisés. Cependant rien que pour un simple et unique composant, c'est une charge de travail assez conséquente. Afin de mener à bien un tel objectif, il est notamment nécessaire de connaître les concepts de <code><a href="http://docs.oracle.com/javaee/6/api/javax/faces/render/FacesRenderer.html">FacesRenderer</a></code> et de <code><a href="http://docs.oracle.com/javaee/6/api/javax/faces/component/FacesComponent.html">FacesComponents</a></code>. Autrement dit, il faut mettre les mains dans le code d'une bibliothèque ou d'une balise existante pour comprendre comment c'est fait, et en déduire comment l'adapter pour notre besoin. C'est un exercice très formateur je vous l'accorde, et je vous encourage à vous y atteler (voir la bulle d'information ci-après), mais dans le cadre de notre cours c'est trop d'efforts pour ce que nous souhaitons faire.</p><p id="r-2138721" data-claire-element-id="2355798">En outre, un autre obstacle se dresse sur notre chemin : par défaut, JSF et sa <code>FacesServlet</code> n'embarquent rien qui permette de gérer les requêtes de type <strong>multipart</strong>. Qu'est-ce que cela signifie exactement ? Si vous vous souvenez bien, dans notre servlet d'upload « faite maison », nous avions fait intervenir une annotation particulière, nommée <code>@MultipartConfig</code>, afin de préciser au conteneur que notre servlet était équipée pour traiter des requêtes de ce type. Ensuite seulement, nous pouvions y utiliser les méthodes <code>request.getParts()</code>, etc.</p><p id="r-2138722" data-claire-element-id="2355799">Eh bien voilà ce qu'il manque actuellement à JSF : la FacesServlet n'est pas annotée avec <code>@MultipartConfig</code>. Elle n'est capable dans les coulisses que d'utiliser les méthodes de récupération de paramètres traditionnelles, comme <code>request.getParameter()</code>. Par conséquent, il n'est pas possible de se baser directement sur elle pour réaliser un système d'envoi de fichiers.</p><p id="r-2138723" data-claire-element-id="2355800">Il existe bien entendu une parade. Il faudrait pour commencer réaliser tout le travail de conversion et de gestion des <strong>Parts</strong> à la main, comme nous l'avions fait dans notre servlet d'upload auparavant. Seulement cela n'est pas suffisant : pour intégrer ça proprement avec JSF, il faudrait créer un filtre, qui s'occuperait de précharger les traitements nécessaires en amont de la <code>FacesServlet</code>, de manière à rendre disponibles les données d'une requête <strong>multipart</strong> à travers les méthodes traditionnelles que la <code>FacesServlet</code> sait utiliser.. Elle pourrait ainsi, comme si de rien n'était et peu importe le type de requête entrante (normale ou <strong>multipart</strong>), permettre de manipuler les données envoyées.</p><p id="r-2138724" data-claire-element-id="2355801">Bref, vous devez vous rendre compte que c'est un travail massif qui nous attend, difficile à faire d'une part, et encore plus difficile à faire proprement. Autant de raisons pour nous pousser à choisir une autre solution : utiliser un composant permettant l'envoi de fichiers, prêt à l'emploi et fourni... dans <strong>une bibliothèque de composants</strong> externe !</p><p id="r-2138725" data-claire-element-id="2355802">Pour information, un bienfaiteur très actif dans le développement et la promotion de JSF surnommé <strong>BalusC</strong>, a déjà :</p><ul id="r-2138730" data-claire-element-id="2355807"><li id="r-2138727" data-claire-element-id="2355804"><p id="r-2138726" data-claire-element-id="2355803">codé des filtres prêts à l'emploi pour la gestion des requêtes <strong>multipart</strong>, et les a rendu disponibles dans <a href="http://balusc.blogspot.com/2009/12/uploading-files-in-servlet-30.html">ce premier article de blog</a> ;</p></li><li id="r-2138729" data-claire-element-id="2355806"><p id="r-2138728" data-claire-element-id="2355805">créé un composant personnalisé pour permettre la gestion de l'envoi de fichiers avec JSF, et expliqué la démarche sur <a href="http://balusc.blogspot.com/2009/12/uploading-files-with-jsf-20-and-servlet.html">ce second article de blog</a>.</p></li></ul><p id="r-2138731" data-claire-element-id="2355808">C'est en anglais, mais je vous encourage à jeter un œil à ses codes et explications. C'est clair, propre et très formateur !</p><h3 id="r-626521" data-claire-element-id="2355824">Les bibliothèques de composants</h3><p id="r-2138732" data-claire-element-id="2355810">De manière générale, quand vous avez besoin de quelque chose qui semble assez commun, et que vous vous rendez compte que ça n'existe pas dans le standard JSF, vous devez prendre le réflexe de vous dire que quelqu'un a déjà dû se poser la question avant vous, que quelqu'un y a probablement déjà apporté une réponse, et qu'il existe sûrement une ou plusieurs manières de résoudre votre problème.</p><aside id="r-2138734" data-claire-element-id="2355812" data-claire-semantic="warning"><p id="r-2138733" data-claire-element-id="2355811">Ça paraît bête à première vue, mais nombreux sont les développeurs qui ont tôt fait de l'oublier et qui s'épuisent à réinventer la roue avant, bien souvent, de se rendre compte du temps qu'ils ont perdu !</p></aside><p id="r-2138735" data-claire-element-id="2355813">D'ailleurs si vous vous souvenez du charabia que je vous avais raconté en introduisant le <em>framework</em> JSF, vous savez que nous avons déjà parlé de <strong>PrimeFaces</strong>, <strong>RichFaces</strong>, <strong>IceFaces</strong>, etc. Ces fameuses bibliothèques de composants évolués et arborant des sites vitrines parfois époustouflants. Vous pensez vraiment que des solutions capables de proposer des fonctionnalités avancées comme du drag &amp; drop, de la génération de graphiques ou du dessin vectoriel en temps réel clé en mains, ne permettent pas de gérer l'envoi de fichiers ? Vous pensez bien, c'est un des premiers travaux qu'elles ont pour la plupart entrepris ! Ainsi, si vous cherchez un peu sur la toile vous tomberez notamment sur :</p><ul id="r-2138742" data-claire-element-id="2355820"><li id="r-2138737" data-claire-element-id="2355815"><p id="r-2138736" data-claire-element-id="2355814">PrimeFaces, qui offre <a href="http://www.primefaces.org/docs/api/3.4/org/primefaces/component/fileupload/FileUpload.html">la balise <code>&lt;p:fileUpload&gt;</code></a> ;</p></li><li id="r-2138739" data-claire-element-id="2355817"><p id="r-2138738" data-claire-element-id="2355816">RichFaces, qui offre <a href="http://docs.jboss.org/richfaces/latest_3_3_X/en/devguide/html/rich_fileUpload.html">la balise <code>&lt;rich:fileUpload&gt;</code></a> ;</p></li><li id="r-2138741" data-claire-element-id="2355819"><p id="r-2138740" data-claire-element-id="2355818">IceFaces, qui offre <a href="http://res.icesoft.org/docs/v1_8_2/tld/ice/inputFile.html">la balise <code>&lt;ice:inputFile&gt;</code></a>.</p></li></ul><p id="r-2138743" data-claire-element-id="2355821">Ce sont là les trois mastodontes, les trois bibliothèques de composants JSF les plus fournies, les plus reconnues, les plus utilisées et les plus maintenues.</p><p id="r-2138744" data-claire-element-id="2355822">Seulement ils sont un peu massifs, ces mastodontes. Et sortir une telle machinerie (qui se matérialise dans votre projet par une flopée d'archives jar à placer dans le dossier <strong>/WEB-INF/lib</strong>, et qui alourdit donc votre application) simplement pour réaliser de l'envoi de fichiers, c'est un peu sortir un tank pour chasser une mouche.</p><p id="r-2138745" data-claire-element-id="2355823">À côté de ça, il existe des projets un peu moins ambitieux, mais tout aussi utiles comme le célèbre <strong>TomaHawk</strong>, qui offre <a href="http://myfaces.apache.org/tomahawk-project/tomahawk20/tagdoc/t_inputFileUpload.html">la balise <code>&lt;t:inputFileUpload&gt;</code></a>. Nous allons donc nous pencher sur cette solution &quot;légère&quot;, si tant est que l'on puisse vraiment la qualifier ainsi, et nous en servir pour mettre en place l'envoi de fichiers via un formulaire.</p><h3 id="r-626622" data-claire-element-id="2838480">L'envoi de fichier avec Tomahawk</h3><h4 id="r-2138751" data-claire-element-id="2838459">Préparation du projet</h4><p id="r-2138746" data-claire-element-id="2355825">Récupérez Tomahawk en choisissant sur <a href="http://myfaces.apache.org/tomahawk/download.html">cette page de téléchargement</a> la dernière version disponible, dans le format qui vous convient (archive .zip ou .tar.gz). Le fichier se nomme <strong>MyFaces Tomahawk 1.1.14 for JSF 2.0</strong>, le numéro de version pouvant changer si une nouvelle version existe lorsque vous lisez ce cours.</p><p id="r-2138747" data-claire-element-id="2355826">Décompressez ensuite le contenu de l'archive sur votre poste, vous obtiendrez alors un dossier portant le même nom que l'archive. Dans mon cas, ce dossier s'intitule <strong>/tomahawk20-1.1.14</strong>. Dans ce dossier se trouve un répertoire intitulé <strong>/lib</strong>, qui contient à son tour 18 archives jar ! Ce sont tous ces fichiers que vous allez devoir copier dans le répertoire <strong>/WEB-INF/lib</strong> de votre projet afin d'y intégrer Tomahawk.</p><p id="r-2138748" data-claire-element-id="2355827">Comme je vous l'ai déjà expliqué, il est nécessaire de mettre en place un filtre afin de rendre la gestion des requêtes <strong>multipart</strong> possible. Pour notre plus grand bonheur, Tomahawk en fournit un prêt à l'emploi, qu'il nous suffit de déclarer dans le fichier web.xml de notre application :</p><pre id="r-2138749" data-claire-element-id="2838458"><code data-claire-semantic="xml">&lt;filter&gt;
+    &lt;filter-name&gt;MyFacesExtensionsFilter&lt;/filter-name&gt;
+    &lt;filter-class&gt;org.apache.myfaces.webapp.filter.ExtensionsFilter&lt;/filter-class&gt;
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+    &lt;filter-name&gt;MyFacesExtensionsFilter&lt;/filter-name&gt;
+    &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+&lt;/filter-mapping&gt;</code></pre><p id="r-2138750" data-claire-element-id="2355829">Notez bien que le nom précisé dans le champ <code>&lt;servlet-name&gt;</code> doit absolument être celui que vous avez donné à votre <code>FacesServlet</code>. Si vous avez repris à la lettre le fichier web.xml que je vous ai proposé lors de notre premier projet JSF, alors vous pouvez également reprendre cette configuration telle quelle.</p><h4 id="r-2138758" data-claire-element-id="2838461">Création de la Facelet</h4><p id="r-2138752" data-claire-element-id="2355831">Créez ensuite une Facelet d'upload, en prenant exemple sur la page JSP que nous avions créée à cet égard lorsque nous avions découvert l'envoi de fichiers via une servlet :</p><pre id="r-2138753" data-claire-element-id="2838460"><code data-claire-semantic="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;fr&quot;
+    xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+    xmlns:f=&quot;http://java.sun.com/jsf/core&quot;
+    xmlns:h=&quot;http://java.sun.com/jsf/html&quot;
+    xmlns:t=&quot;http://myfaces.apache.org/tomahawk&quot;&gt;
+    &lt;h:head&gt;
+        &lt;title&gt;Tomahawk - Envoi de fichier&lt;/title&gt;
+        &lt;h:outputStylesheet library=&quot;default&quot; name=&quot;css/form.css&quot;  /&gt;
+    &lt;/h:head&gt;
+    &lt;h:body&gt;
+        &lt;h:form enctype=&quot;multipart/form-data&quot;&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;Envoi de fichier&lt;/legend&gt;
+
+                &lt;h:outputLabel for=&quot;description&quot;&gt;Description du fichier&lt;/h:outputLabel&gt;
+                &lt;h:inputText id=&quot;description&quot; value=&quot;#{uploadBean.fichier.description}&quot;/&gt;
+                &lt;h:message id=&quot;descriptionMessage&quot; for=&quot;description&quot; errorClass=&quot;erreur&quot; /&gt;
+                &lt;br /&gt;
+
+                &lt;h:outputLabel for=&quot;fichier&quot;&gt;Emplacement du fichier &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/h:outputLabel&gt;
+                &lt;t:inputFileUpload id=&quot;fichier&quot; value=&quot;#{uploadBean.fichier.contenu}&quot; /&gt;
+                &lt;h:message id=&quot;fichierMessage&quot; for=&quot;fichier&quot; errorClass=&quot;erreur&quot; /&gt;
+                &lt;br /&gt;
+                
+                &lt;h:messages globalOnly=&quot;true&quot; infoClass=&quot;info&quot; /&gt;
+                
+                &lt;h:commandButton value=&quot;Envoyer&quot; action=&quot;#{uploadBean.envoyer}&quot; styleClass=&quot;sansLabel&quot;/&gt;
+                &lt;br /&gt;
+            &lt;/fieldset&gt;
+        &lt;/h:form&gt;
+    &lt;/h:body&gt; 
+&lt;/html&gt;</code></pre><p id="r-2138754" data-claire-element-id="2355833">La seule nouveauté ici est l'utilisation du composant <code>&lt;t:inputFileUpload&gt;</code> de la bibliothèque Tomahawk à la ligne 22, que nous déclarons dans l'en-tête <code>&lt;html&gt;</code> à la ligne 6 de la même manière que les bibliothèques de composants standard de JSF.</p><p id="r-2138755" data-claire-element-id="2355834">En ce qui concerne les trois expressions EL employées aux lignes 17, 22 et 28, elles vous donnent une idée de l'architecture que nous allons mettre en place derrière cette Facelet : un backing-bean nommé <strong>UploadBean</strong>, qui contient un JavaBean intitulé <strong>fichier</strong> en tant que propriété, qui à son tour contient deux propriétés nommées <strong>description</strong> et <strong>contenu</strong>. Le backing-bean contient également une méthode <strong>envoyer()</strong>, appelée lors du clic sur le bouton de validation du formulaire.</p><aside id="r-2138757" data-claire-element-id="2355836" data-claire-semantic="warning"><p id="r-2138756" data-claire-element-id="2355835">Vous n'oublierez pas de remarquer à la ligne 12 l'ajout de l'attribut <code>enctype=&quot;multipart/form-data&quot;</code> à la balise <code>&lt;h:form&gt;</code>, c'est indispensable pour que le formulaire envoie correctement le fichier au serveur.</p></aside><h4 id="r-2138775" data-claire-element-id="2838463">Création du JavaBean</h4><p id="r-2138759" data-claire-element-id="2355838">Commençons donc par créer un objet intitulé <strong>Fichier</strong>, contenant deux propriétés :</p><ul id="r-2138764" data-claire-element-id="2355843"><li id="r-2138761" data-claire-element-id="2355840"><p id="r-2138760" data-claire-element-id="2355839">la <strong>description</strong> du fichier, stockée sous forme d'une simple String ;</p></li><li id="r-2138763" data-claire-element-id="2355842"><p id="r-2138762" data-claire-element-id="2355841">le <strong>contenu</strong> du fichier, stockant les données envoyées par l'utilisateur.</p></li></ul><p id="r-2138765" data-claire-element-id="2355844">Un rapide parcours de <a href="http://myfaces.apache.org/tomahawk-project/tomahawk20/tagdoc/t_inputFileUpload.html">la documentation de la balise <code>&lt;t:inputFileUpload&gt;</code></a> nous apprend que l'objet utilisé pour stocker le fichier envoyé par l'utilisateur est de type <code><a href="http://myfaces.apache.org/tomahawk-project/tomahawk20/apidocs/org/apache/myfaces/custom/fileupload/UploadedFile.html">UploadedFile</a></code>.</p><p id="r-2138766" data-claire-element-id="2355845">Nous allons également reprendre les vérifications que nous effectuions dans notre système d'upload basé sur les servlets, à savoir :</p><ul id="r-2138771" data-claire-element-id="2355850"><li id="r-2138768" data-claire-element-id="2355847"><p id="r-2138767" data-claire-element-id="2355846">un fichier doit obligatoirement être transmis ;</p></li><li id="r-2138770" data-claire-element-id="2355849"><p id="r-2138769" data-claire-element-id="2355848">une description, si elle est renseignée, doit contenir au moins 15 caractères.</p></li></ul><p id="r-2138772" data-claire-element-id="2355851">Pour les mettre en place, nous allons à nouveau pouvoir utiliser de simples annotations comme nous l'avons découvert dans le chapitre précédent. Voici le code du bean en résultant :</p><pre id="r-2138773" data-claire-element-id="2838462"><code data-claire-semantic="java">package com.sdzee.entities;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.apache.myfaces.custom.fileupload.UploadedFile;
+
+public class Fichier {
+
+    @Size( min = 15, message = &quot;La phrase de description du fichier doit contenir au moins 15 caractères&quot; )
+    private String       description;
+    @NotNull( message = &quot;Merci de sélectionner un fichier à envoyer&quot; )
+    private UploadedFile contenu;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription( String description ) {
+        this.description = description;
+    }
+
+    public UploadedFile getContenu() {
+        return contenu;
+    }
+
+    public void setContenu( UploadedFile contenu ) {
+        this.contenu = contenu;
+    }
+}</code></pre><p id="r-2138774" data-claire-element-id="2355853">Vous retrouvez sans surprise les annotations <code>@Size</code> et <code>@NotNull</code> appliquées aux propriétés, accompagnées de leur message d'erreur respectif.</p><h4 id="r-2138789" data-claire-element-id="2838465">Création du backing-bean</h4><p id="r-2138776" data-claire-element-id="2355855">La dernière étape consiste à créer le backing-bean qui va mettre tout ce petit monde en musique. Celui-ci doit donc s'intituler <strong>UploadBean</strong>, contenir et initialiser une instance d'un bean de type <strong>Fichier</strong>, ainsi qu'une méthode intitulée <strong>envoyer()</strong> :</p><pre id="r-2138777" data-claire-element-id="2838464"><code data-claire-semantic="java">package com.sdzee.beans;
+
+import java.io.IOException;
+import java.io.Serializable;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
+
+import com.sdzee.entities.Fichier;
+
+@ManagedBean
+@RequestScoped
+public class UploadBean implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    private Fichier           fichier;
+
+    // Initialisation du bean fichier
+    public UploadBean() {
+        fichier = new Fichier();
+    }
+
+    public void envoyer() throws IOException {
+        String nomFichier = FilenameUtils.getName( fichier.getContenu().getName() );
+        String tailleFichier = FileUtils.byteCountToDisplaySize( fichier.getContenu().getSize() );
+        String typeFichier = fichier.getContenu().getContentType();
+        byte[] contenuFichier = fichier.getContenu().getBytes();
+
+        /*
+         * Effectuer ici l'enregistrement du contenu du fichier sur le disque,
+         * ou dans la BDD (accompagné du type du contenu, éventuellement), ou
+         * tout autre traitement souhaité...
+         */
+
+        FacesContext.getCurrentInstance().addMessage( null, new FacesMessage(
+                String.format( &quot;Fichier '%s', de taille '%s' et de type '%s' envoyé avec succès !&quot;,
+                        nomFichier, tailleFichier, typeFichier ) ) );
+    }
+
+    public Fichier getFichier() {
+        return fichier;
+    }
+
+    public void setFichier( Fichier fichier ) {
+        this.fichier = fichier;
+    }
+}</code></pre><p id="r-2138778" data-claire-element-id="2355857">Vous reconnaissez dans cet exemple la structure d'un backing-bean, très semblable à celui que nous avons créé dans le chapitre précédent : les annotations <code>@ManagedBean</code> et <code>@RequestScoped</code>, le constructeur pour initialiser le bean de type <strong>Fichier</strong> et la paire de <em>getter</em>/<em>setter</em> associée.</p><p id="r-2138779" data-claire-element-id="2355858">C'est dans la méthode <strong>envoyer()</strong> que vous devrez appeler les traitements que vous souhaitez effectuer sur votre fichier : l'écrire sur le disque comme nous l'avions fait dans notre système basé sur les servlets, ou pourquoi pas l'enregistrer dans une table dans votre base de données, etc.</p><p id="r-2138780" data-claire-element-id="2355859">J'ai, pour ma part, choisi d'effectuer de simples récupérations d'informations concernant le fichier dans cet exemple, afin de ne pas encombrer le code inutilement. Cela me permet tout de même de vous montrer l'utilisation des méthodes de l'objet <code>UploadedFile</code> :</p><ul id="r-2138787" data-claire-element-id="2355866"><li id="r-2138782" data-claire-element-id="2355861"><p id="r-2138781" data-claire-element-id="2355860">à la ligne 29, je récupère le nom du fichier via <code>UploadedFile.getName()</code> et le convertis dans un format propre grâce à la méthode utilitaire <code>FilenameUtils.getName()</code> ;</p></li><li id="r-2138784" data-claire-element-id="2355863"><p id="r-2138783" data-claire-element-id="2355862">à la ligne 30, je récupère la taille du fichier via <code>UploadedFile.getSize()</code> et la convertis dans un format lisible grâce à la méthode utilitaire <code>FileUtils.byteCountToDisplaySize()</code> ;</p></li><li id="r-2138786" data-claire-element-id="2355865"><p id="r-2138785" data-claire-element-id="2355864">à la ligne 31, je récupère directement le type du fichier via <code>UploadedFile.getContentType()</code>.</p></li></ul><p id="r-2138788" data-claire-element-id="2355867">Je génère finalement un simple <code>FacesMessage</code>, initialisé avec un identifiant à <code>null</code> et un message récapitulant le nom, la taille et le type du fichier envoyé, que j'ajoute au <code>FacesContext</code>. Tout ceci est fait, comme vous devez vous en douter, en prévision d'un affichage dans notre Facelet via la balise <code>&lt;h:messages globalOnly=&quot;true&quot;&gt;</code>.</p><h4 id="r-2138812" data-claire-element-id="2838474">Tests et vérifications</h4><p id="r-2138790" data-claire-element-id="2355869">Tout est prêt, nous pouvons tester notre formulaire d'envoi. Rendez-vous sur la page <code>http://localhost:8088/pro_jsf/upload.xhtml</code>. Vous devrez alors observer le même formulaire vierge que celui mis en place dans notre ancien système d'upload basé sur les servlets (voir la figure suivante).</p><figure id="r-2138793" data-claire-element-id="2838467"><img id="r-2138791" data-claire-element-id="2355870" src="../../../user.oc-static.com/files/419001_420000/419983.png" alt="Image utilisateur" /></figure><p id="r-2138794" data-claire-element-id="2355873">L'affichage du champ de sélection du fichier peut varier selon le navigateur que vous utilisez et la langue de votre système. Ici, il s'agit de l'affichage sous le navigateur Chrome sur un système en langue anglaise. Ne vous inquiétez donc pas si vous obtenez un rendu sensiblement différent.</p><p id="r-2138795" data-claire-element-id="2355874">Essayons pour commencer de valider sans rien saisir ni sélectionner, comme indiqué à la figure suivante.</p><figure id="r-2138798" data-claire-element-id="2838469"><img id="r-2138796" data-claire-element-id="2355875" src="../../../user.oc-static.com/files/419001_420000/419984.png" alt="Image utilisateur" /></figure><p id="r-2138799" data-claire-element-id="2355878">Nous observons alors un message d'erreur sur le champ du fichier, et rien sur la description. C'est bien le comportement attendu, puisque nous n'avons mis une annotation <code>@NotNull</code> que sur la propriété <strong>contenu</strong>, et pas sur la description.</p><p id="r-2138800" data-claire-element-id="2355879">Essayons ensuite de valider en saisissant une description de moins de 15 caractères, sans sélectionner de fichier (voir la figure suivante).</p><figure id="r-2138803" data-claire-element-id="2838471"><img id="r-2138801" data-claire-element-id="2355880" src="../../../user.oc-static.com/files/419001_420000/419985.png" alt="Image utilisateur" /></figure><p id="r-2138804" data-claire-element-id="2355883">Cette fois, l'annotation <code>@Size</code> entre en jeu, et nous sommes prévenus par un message d'erreur sur le champ description que nous devons saisir au moins 15 caractères.</p><p id="r-2138805" data-claire-element-id="2355884">Essayons enfin de valider en saisissant une description assez longue, et en sélectionnant un fichier léger quelconque depuis notre disque, ainsi qu'indiqué à la figure suivante.</p><figure id="r-2138808" data-claire-element-id="2838473"><img id="r-2138806" data-claire-element-id="2355885" src="../../../user.oc-static.com/files/419001_420000/419986.png" alt="Image utilisateur" /></figure><p id="r-2138809" data-claire-element-id="2355888">J'ai, pour ma part, sélectionné un fichier de type PDF et nommé très sobrement <strong>1.pdf</strong>. Cette fois, l'envoi est validé et nous observons le message d'information que nous avons construit dans la méthode <strong>envoyer()</strong> de notre backing-bean. En l'occurrence, le message me précise bien le titre de mon fichier, sa taille et son type MIME.</p><aside id="r-2138811" data-claire-element-id="2355890" data-claire-semantic="information"><p id="r-2138810" data-claire-element-id="2355889">Nous avons donc réussi à mettre en place un système d'envoi de fichiers très simplement, grâce au composant fourni par la bibliothèque Tomahawk. Si vous souhaitez reproduire fidèlement le comportement de notre ancien système d'upload, il ne vous reste plus qu'à intégrer une méthode d'écriture du fichier sur le disque directement dans votre backing-bean, ou bien dans une classe utilitaire que vous appellerez depuis la méthode <strong>envoyer()</strong> !</p></aside><h4 id="r-2138845" data-claire-element-id="2838479">Limitation de la taille maximale autorisée</h4><p id="r-2138813" data-claire-element-id="2355892">Avant d'en terminer avec ce formulaire, je tiens à vous préciser une information importante au sujet du composant que nous utilisons pour l'envoi de fichiers : il ne sait pas très bien gérer une limitation de la taille maximale autorisée. Voyons cela ensemble en détail.</p><p id="r-2138814" data-claire-element-id="2355893">Dans <a href="http://myfaces.apache.org/tomahawk/extensionsFilter.html">la documentation du filtre de Tomahawk</a>, nous apprenons que dans la section <code>&lt;filter&gt;</code> de la déclaration du filtre dans le web.xml, nous avons la possibilité d'insérer un paramètre d'initialisation afin de définir la taille maximale autorisée par fichier :</p><pre id="r-2138815" data-claire-element-id="2838475"><code data-claire-semantic="xml">&lt;filter&gt;
+    &lt;filter-name&gt;MyFacesExtensionsFilter&lt;/filter-name&gt;
+    &lt;filter-class&gt;org.apache.myfaces.webapp.filter.ExtensionsFilter&lt;/filter-class&gt;
+    &lt;init-param&gt;
+        &lt;param-name&gt;uploadMaxFileSize&lt;/param-name&gt;
+        &lt;param-value&gt;10m&lt;/param-value&gt;
+    &lt;/init-param&gt;
+&lt;/filter&gt;</code></pre><p id="r-2138816" data-claire-element-id="2355895">Le format à respecter dans le champ <code>&lt;param-value&gt;</code> est le suivant :</p><ul id="r-2138825" data-claire-element-id="2355904"><li id="r-2138818" data-claire-element-id="2355897"><p id="r-2138817" data-claire-element-id="2355896">10 -&gt; 10 octets de données ;</p></li><li id="r-2138820" data-claire-element-id="2355899"><p id="r-2138819" data-claire-element-id="2355898">10k -&gt; 10 Ko de données ;</p></li><li id="r-2138822" data-claire-element-id="2355901"><p id="r-2138821" data-claire-element-id="2355900">10m -&gt; 10 Mo de données ;</p></li><li id="r-2138824" data-claire-element-id="2355903"><p id="r-2138823" data-claire-element-id="2355902">1g -&gt; 1 Go de données.</p></li></ul><p id="r-2138826" data-claire-element-id="2355905">Le problème est que lorsque cette limite est dépassée, Tomahawk ne prépare pas un joli <code>FacesMessage</code> prêt à être affiché dans notre Facelet à côté du composant <code>&lt;t:inputFileUpload&gt;</code>. Il envoie à la place une exception de type <strong>SizeLimitExceededException</strong>, qui sort du cadre normal d'exécution de JSF. Je ne rentre pas dans les détails, mais pour faire simple il n'est tout bonnement pas possible de gérer proprement cette exception !</p><p id="r-2138827" data-claire-element-id="2355906">Vous pouvez faire le test si vous le souhaitez : mettez en place cet ajout dans la déclaration du filtre dans votre web.xml, par exemple avec une taille maximale de 1Mo, et essayez ensuite d'envoyer via votre formulaire un fichier dont la taille dépasse cette limite. Vous ne visualiserez en retour aucun message d'erreur sur votre formulaire, ni aucun message de validation. La seule erreur que vous pourrez trouver sera affichée dans le fichier <strong>/glassfish/domains/domain1/logs/server.log</strong> de GlassFish, qui contiendra une ligne mentionnant l'exception dont je viens de vous parler...</p><div id="r-2138829" data-claire-element-id="2355908" data-claire-semantic="question"><p id="r-2138828" data-claire-element-id="2355907">Comment faire pour gérer cette exception ?</p></div><p id="r-2138830" data-claire-element-id="2355909">Je vous l'ai déjà dit, ce n'est pas possible proprement. Ce qu'il est possible de faire par contre, c'est de mettre en place une parade : nous pouvons mettre en place une limite de taille très grande, par exemple 100Mo de données, et nous occuper de la vérification de la taille du fichier envoyé grâce à un Validator JSF.</p><aside id="r-2138832" data-claire-element-id="2355911" data-claire-semantic="warning"><p id="r-2138831" data-claire-element-id="2355910">Alors bien évidemment, cela ne règle pas entièrement le problème : dans l'absolu, un utilisateur pourra toujours tenter d'envoyer un fichier trop volumineux (pesant plus de 100Mo), et se retrouver face à un formulaire sans erreur apparente. Mais nous pouvons considérer que si un utilisateur s'amuse à envoyer un fichier aussi gros, alors ça sera bien fait pour lui, il ne mérite pas d'être proprement informé de l'erreur ! :-°</p></aside><p id="r-2138833" data-claire-element-id="2355912">Mettons donc en place une limitation large dans le web.xml :</p><pre id="r-2138834" data-claire-element-id="2838476"><code data-claire-semantic="xml">&lt;filter&gt;
+    &lt;filter-name&gt;MyFacesExtensionsFilter&lt;/filter-name&gt;
+    &lt;filter-class&gt;org.apache.myfaces.webapp.filter.ExtensionsFilter&lt;/filter-class&gt;
+    &lt;init-param&gt;
+        &lt;param-name&gt;uploadMaxFileSize&lt;/param-name&gt;
+        &lt;param-value&gt;100m&lt;/param-value&gt;
+    &lt;/init-param&gt;
+&lt;/filter&gt;</code></pre><p id="r-2138835" data-claire-element-id="2355914">Il nous faut alors créer un Validator, comme nous l'avons fait à deux reprises dans le chapitre précédent. Nous allons le nommer <strong>TailleMaxFichierValidator</strong> et le placer comme ses confrères dans le package <code>com.sdzee.validators</code> :</p><pre id="r-2138836" data-claire-element-id="2838477"><code data-claire-semantic="java">package com.sdzee.validators;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.FacesValidator;
+import javax.faces.validator.Validator;
+import javax.faces.validator.ValidatorException;
+
+import org.apache.myfaces.custom.fileupload.UploadedFile;
+
+@FacesValidator( &quot;tailleMaxFichierValidator&quot; )
+public class TailleMaxFichierValidator implements Validator {
+
+    private static final long   TAILLE_MAX_FICHIER = 1 * 1024 * 1024;                          // 1Mo
+    private static final String MESSAGE_ERREUR     = &quot;La taille maximale autorisée est de 1Mo&quot;;
+
+    public void validate( FacesContext context, UIComponent component, Object value ) throws ValidatorException {
+        if ( value != null &amp;&amp; ( (UploadedFile) value ).getSize() &gt; TAILLE_MAX_FICHIER ) {
+            throw new ValidatorException( new FacesMessage( FacesMessage.SEVERITY_ERROR, MESSAGE_ERREUR, null ) );
+        }
+    }
+}</code></pre><p id="r-2138837" data-claire-element-id="2355916">Vous retrouvez l'annotation <code>@FacesValidator</code>, permettant de déclarer l'objet comme tel auprès de JSF.</p><p id="r-2138838" data-claire-element-id="2355917">Le code de la méthode <strong>validate()</strong> est ensuite très simple. Nous nous contentons de vérifier que la taille du fichier ne dépasse pas la limite définie - en l'occurrence j'ai fixé cette limite à 1Mo - et envoyons le cas échéant une exception initialisée avec un <code>FacesMessage</code> de gravité erreur et contenant un message d'avertissement destiné à l'utilisateur.</p><p id="r-2138839" data-claire-element-id="2355918">Pour terminer, nous devons lier notre Validator au composant d'envoi de fichiers dans notre Facelet, par l'intermédiaire de la balise <code>&lt;f:validator&gt;</code> que vous connaissez déjà. Remplacez tout bêtement la déclaration de la balise <code>&lt;t:inputFileUpload&gt;</code> par :</p><pre id="r-2138840" data-claire-element-id="2838478"><code data-claire-semantic="html">&lt;t:inputFileUpload id=&quot;fichier&quot; value=&quot;#{uploadBean.fichier.contenu}&quot;&gt;
+    &lt;f:validator validatorId=&quot;tailleMaxFichierValidator&quot; /&gt;
+&lt;/t:inputFileUpload&gt;</code></pre><p id="r-2138841" data-claire-element-id="2355920">Pour rappel, le nom passé dans l'attribut <strong>validatorId</strong> est le nom défini dans l'annotation <code>@FacesValidator</code> de notre objet <strong>TailleMaxFichierValidator</strong>.</p><p id="r-2138842" data-claire-element-id="2355921">Nous pouvons maintenant vérifier le bon fonctionnement de notre système de contrôle de la taille d'un fichier. Rendez-vous à nouveau sur le formulaire d'envoi depuis votre navigateur, et essayez d'envoyer un fichier dont le poids est supérieur à 1Mo (et bien évidemment, inférieur à 100Mo).<br /> Vous observez alors que le fichier est correctement envoyé au serveur, ce qui est normal puisque la limite de taille autorisée est fixée à 100Mo. Une fois le fichier récupéré, JSF applique alors le Validator que nous avons créé et constate que le fichier est trop volumineux. Il affiche donc le message d'erreur à l'utilisateur, celui que nous avons préparé dans l'exception envoyée depuis la méthode <strong>validate()</strong>, sur le champ de sélection du fichier.</p><aside id="r-2138844" data-claire-element-id="2355923" data-claire-semantic="information"><p id="r-2138843" data-claire-element-id="2355922">Vous savez maintenant vérifier la taille d'un fichier, malgré l'incapacité du composant à gérer proprement la taille maximale qu'il est permis de définir dans le filtre.</p></aside><h3 id="r-626675" data-claire-element-id="2355978">Et plus si affinités...</h3><h4 id="r-2138864" data-claire-element-id="2355944">TP Fil rouge - Étape 8</h4><p id="r-2138846" data-claire-element-id="2355926">Il vous reste encore un bout de chemin à arpenter seuls, et vous serez prêts pour la huitième et dernière étape du fil rouge ! Eh oui, je vous avais à moitié menti en vous disant que la septième étape du fil rouge était la dernière. Pourquoi à moitié ? Parce qu'il y a bel et bien une huitième étape, mais cette fois, je ne vous fournirai pas de correction ! Vous allez devoir vous débrouiller tous seuls pour intégrer JSF dans votre application, et vous devrez notamment apprendre à utiliser les composants standard suivants :</p><ul id="r-2138857" data-claire-element-id="2355937"><li id="r-2138848" data-claire-element-id="2355928"><p id="r-2138847" data-claire-element-id="2355927">la balise <code>&lt;h:selectOneRadio&gt;</code>, pour générer le bouton radio de choix entre l'utilisation d'un client existant et la saisie d'un nouveau client ;</p></li><li id="r-2138850" data-claire-element-id="2355930"><p id="r-2138849" data-claire-element-id="2355929">la balise <code>&lt;h:selectOneMenu&gt;</code>, pour générer la liste déroulante de sélection d'un client existant ;</p></li><li id="r-2138852" data-claire-element-id="2355932"><p id="r-2138851" data-claire-element-id="2355931">la balise <code>&lt;h:link&gt;</code>, pour générer les liens HTML présents dans les différentes vues ;</p></li><li id="r-2138854" data-claire-element-id="2355934"><p id="r-2138853" data-claire-element-id="2355933">la balise <code>&lt;h:dataTable&gt;</code>, pour générer le tableau récapitulatif des clients existants et des commandes passées ;</p></li><li id="r-2138856" data-claire-element-id="2355936"><p id="r-2138855" data-claire-element-id="2355935">la balise <code>&lt;ui:include&gt;</code>, pour remplacer l'inclusion du menu jusqu'à présent réalisée via une balise de la JSTL.</p></li></ul><p id="r-2138858" data-claire-element-id="2355938">Nous avons déjà appris les rudiments de JSF ensemble, ce petit exercice en solitaire ne devrait pas vous poser de problème particulier : vous allez simplement devoir chercher par vous-mêmes dans la documentation et sur le web pour trouver les informations qui vous manquent.</p><div id="r-2138860" data-claire-element-id="2355940" data-claire-semantic="question"><p id="r-2138859" data-claire-element-id="2355939">Pourquoi est-ce que nous n'apprenons pas ensemble à utiliser ces quelques composants ?</p></div><p id="r-2138861" data-claire-element-id="2355941">La première raison de ce choix est simple : je ne souhaite pas vous donner l'impression d'avoir terminé l'apprentissage de JSF ! Ce que j'entends par là, c'est qu'il ne faut surtout pas vous imaginer qu'une fois capables de reproduire le fil rouge avec JSF, vous n'aurez plus rien à apprendre. Alors certes, j'aurais pu vous tenir la main jusqu'à la fin du TP, et vous avertir ensuite comme je suis en train de le faire maintenant, mais je suis persuadé que cela n'aurait pas eu le même effet. En ne vous donnant que des pistes pour cette ultime étape du fil rouge, je vous prépare en douceur à ce qui vous attend ensuite : l'apprentissage par vous-mêmes.</p><p id="r-2138862" data-claire-element-id="2355942">La seconde raison de ce choix est que pour couvrir l'intégralité de JSF, tout en gardant ce rythme lent, pédagogique et adapté aux novices, il faudrait une collection de livres entière ! Il y a bien trop d'aspects à aborder, de fonctionnalités à découvrir, de ressources à apprendre à manipuler, etc. De toute manière, maîtriser le <em>framework</em> de A à Z n'est nécessaire que si vous envisagez de travailler à son amélioration ! Pour un usage commun, c'est-à-dire l'utilisation de JSF dans vos projets, il vous suffit d'en connaître suffisamment pour pouvoir vous débrouiller seuls lorsqu'un problème survient : cela inclut la connaissance de l'API Servlet, du processus de traitement des requêtes par JSF, des Facelets, des principaux composants, etc. Bref, tout ce que nous avons découvert ensemble dans ce cours !</p><p id="r-2138863" data-claire-element-id="2355943">Enfin, vous ne devez jamais oublier que l'expérience, les tests, les erreurs et la recherche de solutions sont les outils les plus pédagogiques qui puissent être. Lorsque vous rencontrez un problème, posez-vous les bonnes questions et interrogez-vous avant tout sur son origine avant de songer à y trouver une solution.</p><h4 id="r-2138897" data-claire-element-id="2355977">Ce que l'avenir vous réserve</h4><h5 id="r-2138869" data-claire-element-id="2355949">Ce qu'il vous manque pour pouvoir voler de vos propres ailes</h5><p id="r-2138865" data-claire-element-id="2355945">Les bibliothèques de composants JSF sont richissimes, et vous devez absolument vous y intéresser si vous comptez vous lancer dans le développement avec JSF. Nous les avons citées à plusieurs reprises dans le cours : PrimeFaces, RichFaces, IceFaces, OpenFaces, Tomahawk... Il existe même des solutions intermédiaires comme <a href="http://code.google.com/p/omnifaces/">OmniFaces</a>, qui se focalise sur la simplification du développement avec JSF et qui gagne en maturité et en popularité.</p><p id="r-2138866" data-claire-element-id="2355946">Sans parler de ces bibliothèques, ni même des composants standard restants que nous n'avons pas étudiés, il y a encore bon nombre de concepts JSF que nous n'avons pas eu la chance de pouvoir aborder ensemble dans ce cours, notamment : la création de composants personnalisés ave JSF, la création de <code>FacesConverters</code>, la compréhension des portées <code>@Custom</code> et <code>@None</code> sur un backing-bean, le découpage d'une page en plusieurs templates...</p><p id="r-2138867" data-claire-element-id="2355947">Plus important encore, il y a surtout bon nombre de concepts Java/Java EE au sens large que nous n'avons pas eu la chance de pouvoir aborder ensemble dans ce cours, notamment : l'envoi de mail depuis une application web, la réécriture d'URL (ou <em>url-rewriting</em>), la mise en place de webservices, l'écriture de tests unitaires, la génération d'une base de données directement depuis un modèle d'entités JPA...</p><p id="r-2138868" data-claire-element-id="2355948">Toutes ces mentions ne sont que des exemples, pour vous montrer que même lorsque vous savez créer une application web, il existe toujours des domaines que vous ne connaissez ou ne maîtrisez pas encore, et qui n'attendent que vous ! :)</p><h5 id="r-2138896" data-claire-element-id="2355976">Bientôt dans les bacs...</h5><p id="r-2138870" data-claire-element-id="2355950">Pour clore ce triste paragraphe aux allures de testament, n'oubliez pas de rester attentifs aux mises à jour apportées régulièrement aux technologies Java et Java EE. La sortie de Java EE 7 est proche (prévue pour mars 2013 lors de la rédaction de ce cours), et par conséquent celles de JSF 2.2, de JPA 2.1, de GlassFish 4, etc. Un lot de nouveautés fera comme toujours son apparition, et vous devrez vous y frayer un chemin si vous souhaitez rester efficace !</p><aside id="r-2138872" data-claire-element-id="2355952" data-claire-semantic="information"><p id="r-2138871" data-claire-element-id="2355951">Vous devez maintenant en avoir pleinement conscience : le monde Java EE est immensément vaste ! Vous avez acquis, en suivant ce cours, les bases, les bonnes pratiques et les réflexes nécessaires pour être autonomes dans votre progression future.<strong> Par-dessus tout, j'espère que ce cours vous a donné l'envie de continuer et d'en apprendre plus, d'aller plus loin, que ce soit pour simplifier le développement de vos applications, ou pour développer des fonctionnalités toujours plus avancées.</strong></p></aside><ul id="r-2138894" data-claire-element-id="2355974"><li id="r-2138874" data-claire-element-id="2355954"><p id="r-2138873" data-claire-element-id="2355953">Dans sa version courante (JSF 2.1), le <em>framework</em> ne fournit pas de composant pour l'envoi de fichiers, et ne sait pas gérer les requêtes de type <strong>multipart</strong>.</p></li><li id="r-2138876" data-claire-element-id="2355956"><p id="r-2138875" data-claire-element-id="2355955">La prochaine version du <em>framework</em> (JSF 2.2) est prévue à ce jour pour mars 2013 et devrait pallier ce manque.</p></li><li id="r-2138878" data-claire-element-id="2355958"><p id="r-2138877" data-claire-element-id="2355957">La plupart des bibliothèques de composants proposent une balise dédiée à l'envoi de fichiers, et un filtre pour la gestion des requêtes <strong>multipart</strong>.</p></li><li id="r-2138887" data-claire-element-id="2355967"><p id="r-2138879" data-claire-element-id="2355959">Avec la bibliothèque Tomhawak, il suffit de :</p><ul id="r-2138886" data-claire-element-id="2355966"><li id="r-2138881" data-claire-element-id="2355961"><p id="r-2138880" data-claire-element-id="2355960">déclarer le filtre <strong>ExtensionsFilter</strong> dans le web.xml du projet ;</p></li><li id="r-2138883" data-claire-element-id="2355963"><p id="r-2138882" data-claire-element-id="2355962">mettre en place la balise <code>&lt;t:inputFileUpload&gt;</code> dans le formulaire ;</p></li><li id="r-2138885" data-claire-element-id="2355965"><p id="r-2138884" data-claire-element-id="2355964">utiliser un objet de type <code>UploadedFile</code> pour récupérer le fichier envoyé.</p></li></ul></li><li id="r-2138889" data-claire-element-id="2355969"><p id="r-2138888" data-claire-element-id="2355968">Tomahawk ne permet pas de gérer proprement la limitation de la taille maximale autorisée pour l'envoi de fichiers.</p></li><li id="r-2138891" data-claire-element-id="2355971"><p id="r-2138890" data-claire-element-id="2355970">Un contournement simple et rapide consiste à relever la limite autorisée, et à mettre en place un <code>Validator</code> pour vérifier manuellement la taille du fichier envoyé.</p></li><li id="r-2138893" data-claire-element-id="2355973"><p id="r-2138892" data-claire-element-id="2355972">Les univers JSF, JPA et Java EE en général sont immenses : faire preuve d'autonomie, de curiosité et d'initiative vous permettra de progresser efficacement !</p></li></ul><p id="r-2138895" data-claire-element-id="2355975">Avec ce bagage technique supplémentaire, nous voilà maintenant équipés pour nous lancer dans le développements d'applications web basées sur des standards conçus pour faciliter et accélérer notre travail. Nous avons toutes les clés en mains pour construire nos projets de manière efficace et professionnelle !</p>
+
+                <div class="js-courseSelementActions sideActions">
+    <ul class="sideActions__container">
+        <li>
+            <a class="sideActions__item  js-courseElementActions-copyUrl  js-tooltip"
+               href="#" data-tooltip="Copier le lien"
+               data-tooltip-done="Lien copié !">
+            #
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+
+            
+            <nav class="course-pagination    clearfix">
+
+            <a href="la-gestion-d-un-formulaire-avec-jsf.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--previous">
+            <i class="icon-previous"></i>
+            <span>La gestion d&#039;un formulaire avec JSF</span>
+        </a>
+    
+    <span class="course-pagination__separator"></span>
+
+            <a href="debugger-un-projet.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--next">
+            <span>Débugger un projet</span>
+            <i class="icon-next"></i>
+        </a>
+    
+</nav>
+
+            
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-view-restriction_popin_title"
+                class="popin popin--illustrated  js-popin"
+        id="popin-view-restriction"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+                    <div class="popin__illustrationWrapper">
+                <div class="popin__illustration illustration--balloon"></div>
+            </div>
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-view-restriction_popin_title" class="popin__title  js-popin-title">Waouh !</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <p>
+            Très heureux de voir que nos cours vous plaisent, déjà 3 pages lues aujourd&#039;hui ! Vous pouvez continuer la lecture de nos cours en devenant un Roomie, un membre de la communauté d&#039;OpenClassrooms. C&#039;est gratuit !
+        </p>
+        <p>
+            Vous pourrez aussi suivre votre avancement dans le cours, faire les exercices et discuter avec les autres Roomies.
+        </p>
+                    </div>
+            </div>
+
+                            <div class="popin__actions  js-popin-actions">
+                                                                        <a class="oc-btn orange-alt-btn "  href="https://openclassrooms.com/register">S'inscrire</a>
+                                                    <a class="oc-btn dark-btn "  href="https://openclassrooms.com/login">Se connecter</a>
+                                                            </div>
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+        </div>
+
+
+    </section>
+</div>
+    </div>
+
+    
+    <div id="popin-not-certifying-yet"
+     class="popin"
+     data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <a href='https://openclassrooms.com/premium'><i class='icon-star'></i> Devenez Premium</a>
+                    ">
+    <img alt="Exemple de certificat de réussite" src="../../../static.oc-static.com/prod/images/courses/certif.jpg"/>
+</div>
+
+
+                </main>
+
+                <aside class="contentWithSidebar__sidebar  js-contentWithSidebar-slidingElement" >
+                        <nav class="col-nav">
+    <div id="tab-courseMenu" class="col-nav__inner js-sidebar-inner">
+        <div class="col-nav__block  col-nav__block--summary">
+
+            <div class="side-paginate">
+                                    <a href="la-gestion-d-un-formulaire-avec-jsf.html" class="side-paginate__previous">
+                        <i class="icon-previous"></i>
+                    </a>
+
+                    <span class="side-paginate__separator"></span>
+                
+                <h6 class="side-paginate__title">
+                    Aller plus loin avec JPA et JSF
+                </h6>
+
+                                    <span class="side-paginate__separator"></span>
+
+                    <a href="debugger-un-projet.html" class="side-paginate__next">
+                        <i class="icon-next"></i>
+                    </a>
+                            </div>
+
+                            <div class="col-nav__block--summary-list">
+                    <ol class="col-nav__chapters">
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="les-annotations.html">Les annotations</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="la-persistance-des-donnees-avec-jpa.html">La persistance des données avec JPA</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="tp-fil-rouge-etape-7.html">TP Fil rouge - Étape 7</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="introduction-aux-frameworks-mvc.html">Introduction aux frameworks MVC</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="premiers-pas-avec-jsf.html">Premiers pas avec JSF</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="la-gestion-d-un-formulaire-avec-jsf.html">La gestion d&#039;un formulaire avec JSF</a>
+                                                            </li>
+                                                    <li class="selected">
+                                                                                                    <span class="col-nav__chapterTitle">L&#039;envoi de fichiers avec JSF</span>
+                                                            </li>
+                                            </ol>
+
+                                    </div>
+                    </div>
+
+        
+        
+            <div class="col-nav__block  col-nav__block--subscribe">
+            <a href="https://openclassrooms.com/login" class="oc-btn orange-alt-btn js-popin-activator" data-popin-selector="#popin-log-in">
+                <i class="icon-lock"></i>
+                Suivre ce cours
+            </a>
+
+            <a href="https://openclassrooms.com/how-does-it-work">
+                <small>Comment ça marche ?</small>
+            </a>
+        </div>
+    
+
+
+        
+                    <div class="col-nav__block col-nav__block--institution">
+    <h2>Créé par</h2>
+            <a  href="https://openclassrooms.com/partners/openclassrooms" target="_blank">
+            <img src="../../../sdz-upload.s3.amazonaws.com/prod/partners/img/logo_logo-oc.png" alt="logo OpenClassrooms" class="col-nav__institutionLogo"/>
+            <p class="col-nav__block--institutionDescription">
+                OpenClassrooms, 1ère plateforme  <span class='nowrap'>e-Education<span> en Europe
+            </p>
+        </a>
+    </div>
+        
+        
+        
+    
+                        
+            
+    <div class="socialNetwork col-nav__block">
+        <ul class="socialButtons  js-socialButtons"
+    data-options="
+                title: 'Découvrez le cours &quot;L&#039;envoi de fichiers avec JSF&quot; sur @OpenClassrooms',
+        mailTitle: 'Cours &quot;L&#039;envoi de fichiers avec JSF&quot; sur OpenClassrooms',
+        mailContent: 'Découvrez le cours &quot;L&#039;envoi de fichiers avec JSF&quot; sur OpenClassrooms.'">
+
+    <li>
+        <a class="roundIcon  roundIcon--twitter addthis_button_twitter  js-socialButtons-btn" data-tooltip="Partagez sur Twitter" >
+            <i class="roundIcon__icon  icon-twitter"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--facebook  addthis_button_facebook  js-socialButtons-btn" data-tooltip="Partagez sur Facebook">
+            <i class="roundIcon__icon  icon-facebook"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--googlePlus  addthis_button_google_plusone_share  js-socialButtons-btn" data-tooltip="Partagez sur Google+" >
+            <i class="roundIcon__icon  icon-google"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  addthis_button_email  js-socialButtons-btn  js-socialButtons-email" data-tooltip="Partagez par e-mail">
+            <i class="roundIcon__icon  icon-letter"></i>
+        </a>
+    </li>
+
+</ul>
+
+    </div>
+    </div>
+</nav>
+                </aside>
+            </div>
+        </div>
+
+                    <footer class="alt-section">
+    <div class="centered">
+
+        <div class="row">
+                            <div class="col4 course-bottom__category">
+                    <h2 class="highlighted">
+                        L&#039;auteur
+                    </h2>
+                    <div>
+                                                    <a itemprop="author" itemscope itemtype="http://schema.org/Person" href="https://openclassrooms.com/membres/coyote-92394" class="no-underlined">
+                                <div class="course-bottom__text-illustrated">
+                                    <span data-author="Médéric Munier" style="background-image: url(../../../www.gravatar.com/avatar/15c349ac5313535fba91e5dbfa8803ec/indexd6dc.html?s=256&amp;r=g&amp;d=https%3A%2F%2Fopenclassrooms.com%2Fbundles%2Fcommon%2Fimages%2Favatar_defaut.png);"></span>
+                                    <h4 itemprop="name">Médéric Munier</h4>
+                                                                            <p itemprop="description">
+                                            Auteur du livre sur le Java EE.
+                                        </p>
+                                                                    </div>
+                            </a>
+                                            </div>
+                </div>
+            
+                            <div class="col8 course-bottom__category">
+                    <h2 class="highlighted">Découvrez aussi ce cours en...</h2>
+
+                    <ul class="course-bottom__format">
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">eBook</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-book"></i>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">Livre papier</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook pdf"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">PDF</div>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                    </div>
+
+    </div>
+</footer>
+
+
+    </article>
+            </div>
+        </div>
+
+                    <footer class="footer">
+    <div class="centered">
+        <div class="row">
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    OpenClassrooms
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/about-us" class="footer__link">Qui sommes-nous ?</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/how-does-it-work" class="footer__link">Fonctionnement de nos cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/jobs" class="footer__link">Recrutement</a>
+                    </li>
+                    <li>
+                        <a href="#" class="js-zendesk-show footer__link">Nous contacter</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Professionnels
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/affiliation" class="footer__link">
+                            Affiliation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/business" class="footer__link">Entreprises</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/universities" class="footer__link">Universités et écoles</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Participez
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/new-teachers" class="footer__link">Créer un cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/courses/courselab" class="footer__link">CourseLab</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/terms-conditions/fr" class="footer__link">
+                            <strong>Conditions Générales d&#039;Utilisation</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Suivez-nous
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+                                                                    <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="http://blog.openclassrooms.com/" class="footer__link">Le blog OpenClassrooms</a>
+                    </li>
+                    <li>
+                        <ul class="footer__socialNetwork">
+                            <li>
+                                <a href="https://www.facebook.com/openclassrooms" target="_blank" class="roundIcon roundIcon--facebook footer__socialButtons">
+                                    <i class="icon-facebook roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/openclassrooms" target="_blank" class="roundIcon roundIcon--twitter footer__socialButtons">
+                                    <i class="icon-twitter roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/+OpenClassrooms/posts" target="_blank" class="roundIcon roundIcon--youtube footer__socialButtons">
+                                    <i class="icon-google roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/openclassrooms" target="_blank" class="roundIcon roundIcon--instagram footer__socialButtons">
+                                    <i class="icon-instagram roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/TheOpenClassrooms" target="_blank" class="roundIcon roundIcon--googlePlus footer__socialButtons">
+                                    <i class="icon-youtube roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/openclassrooms" target="_blank" class="roundIcon roundIcon--linkedin footer__socialButtons">
+                                    <i class="icon-linkedin roundIcon__icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
+        
+        <!-- loaded javascript block -->
+
+            
+            <script type="text/javascript" src="../../js/maind0b3.js?095b5b3"></script>
+
+        
+
+    <script type="text/javascript" src="../../js/oc/courseViewd0b3.js?095b5b3"></script>
+
+
+        <!-- loaded javascript block -->
+
+        <script type="text/javascript">
+    window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+    window.analytics.load('mou95e6tdn');
+</script>
+
+                            
+        <!-- inlined javascript block -->
+
+        <script type="text/javascript">
+            
+            if (App.modules) {
+                App.modules.startAll();
+            }
+        </script>
+
+                        
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"90dc06697a","applicationID":"20302107","transactionName":"NANaYkJXC0ICAhdYVw1Je0NDQgpcTA4AblsPB1FEVWkGXhYTEFRnEwdKQm9GBEMXPhVYXRQ=","queueTime":0,"applicationTime":453,"atts":"GERZFApNGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/l-envoi-de-fichiers-avec-jsf by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:52:37 GMT -->
+</html>

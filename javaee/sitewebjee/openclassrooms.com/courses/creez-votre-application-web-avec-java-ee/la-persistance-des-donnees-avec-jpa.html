@@ -1,0 +1,1691 @@
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="fr" prefix="og: http://ogp.me/ns#">
+    
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-persistance-des-donnees-avec-jpa by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:52:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(e,t){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,t)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var u=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(u,function(e,t){newrelic[t]=r(f+t,"api")}),i(c,function(e,t){newrelic[t]=r(f+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?u(e,a,i):i()}function n(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,c=0;u>c;c++)a[c].apply(i,r);var s=f[g[n]];return s&&s.push([m,n,r,i]),i}function p(e,t){w[e]=l(e).concat(t)}function l(e){return w[e]||[]}function d(e){return s[e]=s[e]||o(n)}function v(e,t){c(e,function(e,n){t=t||"feature",g[n]=t,t in f||(f[t]=[])})}var w={},g={},m={on:p,emit:n,get:d,listeners:l,context:t,buffer:v};return m}function i(){return new r}var a="nr@context",u=e("gos"),c=e(2),f={},s={},p=t.exports=o();p.backlog=f},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!w++){var e=v.info=NREUM.info,t=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){c(l,function(t,n){e[t]||(e[t]=n)});var n="https"===p.split(":")[0]||e.sslForHttp;v.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=v.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=window,s=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var p=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),v=t.exports={offset:a(),origin:p,features:{},xhrWrappable:d};s.addEventListener?(s.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(s.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),u("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader"]);</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="application-name" content="OpenClassrooms"/>
+        <meta name="msapplication-TileColor" content="#e95325"/>
+        <meta name="msapplication-TileImage" content="/fav-icon.png?v=1"/>
+
+        <meta name="theme-color" content="#E95325">
+        <link rel="icon" sizes="144x144" href="../../fav-icon3860.png?v=1">
+
+        
+        
+        <link href="../../bundles/common/css/masterd0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"  />
+        
+
+        <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="../../apple-touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-iphone-retina-display.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-ipad-retina-display.png" />
+
+        <link rel="apple-touch-icon-precomposed" href="../../apple-touch-icon-precomposed.png" />
+
+            <link href="../../bundles/course/css/maind0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" src="../../js/modernizrd0b3.js?095b5b3"></script>
+
+        <link rel="shortcut icon" href="https://openclassrooms.com/favicon.ico?095b5b3" />
+
+            
+    <meta property="og:locale" content="fr"/>
+    <meta property="og:type" content="website"/>
+
+    <meta property="og:title" content="Découvrez le cours &quot;La persistance des données avec JPA&quot; sur @OpenClassrooms"/>
+    <meta property="og:url" content="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-persistance-des-donnees-avec-jpa"/>
+    <meta property="og:site_name" content="OpenClassrooms"/>
+    <meta property="og:image" content="https://static.oc-static.com/prod/courses/illustrations/illu_creez-votre-application-web-avec-java-ee.png"/>
+    <meta property="og:description" content="Pour réaliser des sites web en Java, on utilise l&#039;environnement Java EE (anciennement appelé J2EE). Celui-ci impose de développer de façon très structurée, ce qui explique certainement pour quoi on le retrouve dans un très grand nombre d&#039;applications web notamment en entreprise (banques, administrations...)."/>
+
+            
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@OpenClassrooms"/>
+    <meta name="twitter:title" content="Découvrez le cours &quot;La persistance des données avec JPA&quot; sur @OpenClassrooms"/>
+    <meta name="twitter:description" content=""/>
+
+                
+        <title>La persistance des données avec JPA</title>
+
+        <!-- inlined top javascript block -->
+
+
+        <script type="text/javascript">
+            var App = {
+                startTime: (new Date()).getTime(),
+                debug: false
+            };
+
+            App.user = {
+                
+                
+                
+                isPremium: false
+            };
+
+
+            App.preferences = {
+                assetVersion: '095b5b3',
+                contactMail: 'hello@openclassrooms.com',
+                adyenPublicKey: '10001|889EBFD4D434B82683E21DCA26E77C3E20E0EE09A5ECE3830B0ED51F2FA721A2F7E9EC871C6AB9A1E12C4492F4717673047757E02C5256D8E265CD51E413E5EFCCFEAC41B39C662A424ADC13EE187C38C372A7FCCEC1EA5DF841989437D78B252A8EB51008E60BB55B1E55A7A80DE1A9D60D998C128A576BFAE1DDB97D514AF0A073AEDDE84CEE40D1F8F6ECE85D0FFA50C95C06DB274021C1371376C6EB16561FD65C5E2704B570A7504D617D0F3820F176A0609F6162BDF5890533289FDC3DA7DB03B50BB3BD60A613E1FF72060F22987627E8F1A29F0128A94EC4C8FF7CF6B7AB9558D8433BF86D7A388AB927641CD6C02689139CEE3AAC9ACBFFE83806CB',
+                algolia: {
+                    appId: 'JGRXRFVQM0',
+                    apiKey: 'dfbdea500cb0b5f46e449ad334916c44', indexName: 'prod_COURSES_fr'
+                },
+                routes: {
+                    COURSE_EVENT: '/components/courses/:courseId',
+                    COURSE_PART_EVENT: '/components/courses/:courseId/parts/:partId',
+
+                    ACCEPT_COOKIE: '/components/user-accept-consent-cookie'
+                }
+
+                                            };
+
+            App.preferences.navigationPreference = {
+                            };
+
+            App.preferences.modules = {
+                'smiley': {
+                    basePath: '/bundles/common/images/smiley/'
+                }
+            };
+        </script>
+        <!-- inlined top javascript block end -->
+
+        <script>    App.preferences.modules['course/view/internalFolding'] = {
+        isBigCourse: true
+    };
+
+    App.data = App.data || {};
+App.data.currentCourse = {"partId":625580,"courseId":626954};
+App.preferences.modules['view/currentCoursePage'] = App.data.currentCourse;
+
+</script>
+
+        
+            <script src="../../../dmc1acwvwny3.cloudfront.net/atatus.js"></script>
+    <script type="text/javascript">
+        atatus.config('4c4d9c0b8ab341c9b46fdd4b9b41da41', {
+            allowedDomains: ['openclassrooms.com']
+        }).install();
+    </script>
+
+    </head>
+
+    <body class="course oc-body ">
+
+        
+
+        
+    
+    
+    <script id="_EVENTS-PAGE" type="application/json">
+        {"type":"page"}
+    </script>
+
+
+        <!--[if lt IE 9]>
+<div class="disclaimer  disclaimer-error">
+    Vous utilisez un navigateur obsolète, veuillez le <a href="http://browsehappy.com/">mettre à jour</a>.
+</div>
+<![endif]-->
+
+<noscript>
+    <div class="disclaimer  disclaimer--error">
+        Veuillez utiliser un <a href="http://browsehappy.com/">navigateur internet moderne</a> avec JavaScript activé pour naviguer sur OpenClassrooms.com
+    </div>
+</noscript>
+
+
+                    
+
+<header id="oc-header" class="js-tabs-mobile mainHeader ">
+
+        <div class="disclaimer  disclaimer--info hidden  js-cookie-disclaimer">
+        <div class="disclaimer__wrapper">
+            <span class="disclaimer__content">Bienvenue sur OpenClassrooms ! En poursuivant votre navigation, vous acceptez l'utilisation de cookies. <a href="https://openclassrooms.com/privacy-policy#personal-data-gathering">En savoir plus</a></span>
+            <span class="disclaimer__actions">
+                <a href="#" class="disclaimer__button  js-close-button">ok</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="mainHeader__wrapper">
+
+        <div class="mainHeader__topLine">
+                <a href="https://openclassrooms.com/pole-emploi/partenariat?utm_source=SiteWeb-OC&amp;utm_medium=Lien-PhraseHeader&amp;utm_campaign=relancePE"> Vous êtes demandeur d'emploi ? On vous offre le Premium Solo en 3 clics :) ! </a>
+
+        </div>
+
+        <div class="mainHeader__top">
+            <a href="https://openclassrooms.com/" class="mainHeader__logo" title="OpenClassrooms.com">OpenClassrooms.com</a>
+
+            
+<nav role="navigation" class="icoTabs  mainHeader__tabSet">
+    <span class="mainHeader__mobileNav">
+
+        
+        
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseEditMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" data-tabs-default="true" href="#tab-searchMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-search  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab" href="#tab-main">
+            <i class="icon-menu  icoTabs__icon"></i>
+        </a>
+    </span>
+
+</nav>
+        </div>
+
+                <div class="js-tabs-content  mainHeader__content"></div>
+
+        <div class="mainHeader__content">
+            <div id="tab-main" class="mainHeader__tabs">
+                <nav class="mainTopNav  scrollPanel  js-scrollPanel-mobileMenu">
+    <div class="mainTopNav__container  scrollPanel__container  js-scrollPanel-container">
+        <ul class="mainHeader__container  mainHeader__container--mainMenu  js-scrollPanel-content">
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="http://openclassrooms.com/paths/">Parcours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/courses">Cours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/forum/">Forums</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/partners">Partenaires</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/premium">Premium</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+                <div class="mainHeader__contentInner">
+                    <div class="mainHeader__container  mainHeader__container--search">
+                                                                                                                                                                            
+                                                                          
+ <div class="js-courseSearch  topSearchBox">
+     <form tabindex="0" class="js-courseSearch-form  oc-form" action="https://openclassrooms.com/courses" method="get">
+         <div class="js-courseSearch-inputGroup oc-form__widget  inputGroup  topSearchBox__inner">
+             <input id="algolia-search-input"
+                    type="search"
+                    class="js-courseSearch-input oc-form__control inputGroup__input  topSearchBox__input"
+                    title="Rechercher"
+                    autocomplete="off"
+                    data-option_source="/components/courses/search?q=<%= term %>"
+                    placeholder="Rechercher"
+                    name="q" />
+
+             <button class="js-courseSearch-button  oc-btn dark-btn  only-icon  inputGroup__button  topSearchBox__button" type="submit" title="Rechercher un cours">
+                 <i class="inputGroup__icon icon-search"></i>
+                 <i class="inputGroup__icon inputGroup__icon--load icon-spinner icon-spin"></i>
+             </button>
+         </div>
+     </form>
+ </div>
+                    </div>
+
+                                            <div class="mainHeader__container  mainHeader__container--separatorLarge  hidden-s"></div>
+                    
+
+
+                    
+                                            <div class="mainHeader__container  mainHeader__container--login">
+    <a href="https://openclassrooms.com/register" class="oc-btn orange-alt-btn js-popin-activator space-right" data-popin-selector="#popin-sign-in">
+    S&#039;inscrire
+</a>
+<a href="https://openclassrooms.com/login" class="oc-btn dark-btn js-popin-activator" data-popin-selector="#popin-log-in">
+    Se connecter
+</a>
+</div>
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-sign-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-sign-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-sign-in_popin_title" class="popin__title  js-popin-title">Inscription</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=fe02ad0a7e2099dcca4189af45191c50&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail">
+            <i class="icon-facebook"></i>S&#039;inscrire avec Facebook
+        </a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto">
+            <i class="icon-google"></i>S&#039;inscrire avec Google
+        </a>
+    </li>
+
+    <li class="formLogin__column">
+        
+            
+    
+    
+
+    <form name="register" method="post" action="https://openclassrooms.com/register" class="js-registerForm oc-form">
+
+        <div class="accessibility-hidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Wonder&nbsp;                        </span><span class="oc-form__widget"><input type="text" id="register_wonder" name="register[wonder]" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Prénom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_firstName" name="register[firstName]" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Nom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_lastName" name="register[lastName]" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="email" id="register_email" name="register[email]" required="required" class="" /></span></label>
+            <p>
+                <em>
+                    Vous recevrez votre mot de passe sur cette adresse email.
+                </em>
+            </p>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="register_terms" name="register[terms]" required="required" class="" value="1" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            J'ai lu et j'accepte les <a href="https://openclassrooms.com/terms-conditions/fr">Conditions Générales d'Utilisation</a>.&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span></span></label>
+        </div>
+
+
+        <div class="oc-form__group  center-text">
+            
+    <button type="submit" id="register_create" name="register[create]" class="oc-btn orange-alt-btn oc-btn"> S'inscrire</button>
+        </div>
+
+        <input type="hidden" id="register__target_path" name="register[_target_path]" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-persistance-des-donnees-avec-jpa" /><input type="hidden" id="register__token" name="register[_token]" value="LEhsW-IhokD4hQHYoHva_FZzYy-PP2cG-886IBpx9HY" /></form>
+    </li>
+</ul>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-log-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-log-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-log-in_popin_title" class="popin__title  js-popin-title">Connexion</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=fe02ad0a7e2099dcca4189af45191c50&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail"><i class="icon-facebook"></i> Se connecter avec Facebook</a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto"><i class="icon-google"></i> Se connecter avec Google</a>
+    </li>
+
+    <li class="formLogin__column">
+
+        
+            
+    
+    
+
+    <form name="" method="post" action="https://openclassrooms.com/login_check" class=" oc-form">
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email ou nom d'utilisateur&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="_username" name="_username" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Mot de passe&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="password" id="_password" name="_password" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="_remember_me" name="_remember_me" class="" value="1" checked="checked" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            Se souvenir de moi&nbsp;                        </span></span></label>
+        </div>
+
+        <div class="oc-form__group right-text">
+            <a href="https://openclassrooms.com/set-new-password">Mot de passe oublié</a>
+        </div>
+
+        <div class="oc-form__group  center-text">
+            <input type="hidden" id="_target_path" name="_target_path" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-persistance-des-donnees-avec-jpa" /><div>
+    <button type="submit" id="login" name="login" class="orange-alt-btn oc-btn"> Se connecter</button></div><input type="hidden" id="_csrf_token" name="_csrf_token" value="WFIVlYEKEcL5v9hnQC1z3quXwgYs14KEFOLh1GUmi_I" />
+        </div>
+
+        </form>
+    </li>
+</ul>
+<p class="text-center space-top">
+    Pas encore membre ? <a href="https://openclassrooms.com/register">Inscrivez-vous gratuitement</a> en 30s.
+</p>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+                    
+                    <div class="mainHeader__container  mainHeader__container--langSelector">
+                        <div class="js-popOut-header  popOut popOut--small  popOut--rightAlign" data-keep-it-mobile="true">
+    <span class="js-popOut-button  popOut__button">
+                    <a href="javascript:;" class="languageSelector__selected">Français</a>
+            </span>
+    <ul class="popOutList  popOut__content  popOutList--small">
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/en/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">English</a>
+            </li>
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/es/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">Español</a>
+            </li>
+            </ul>
+</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+        
+        <div id="mainSearch" class="centered search-content">
+        </div>
+
+        <div id="mainContentWithHeader">
+            <div id="pre-main-part">
+                
+                                        <section class="inset no-padding">
+        <div class="centered">
+
+            <h6 class="accessibility-hidden">Fil d&#039;Ariane</h6>
+
+            <nav class="breadcrumb">
+                <ul class="breadcrumbtrail">
+                                                                        <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/" itemprop="url">
+                                <span itemprop="title">Accueil</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses" itemprop="url">
+                                <span itemprop="title">Cours</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee?status=published" itemprop="url">
+                                <span itemprop="title">Créez votre application web avec Java EE</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li class="current" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            La persistance des données avec JPA
+                                                                        </li>
+                                    </ul>
+            </nav>
+        </div>
+    </section>
+
+                
+                            </div>
+
+            <div class="claire clearfix" >
+                    <article itemscope itemtype="http://schema.org/Article">
+
+                        
+<header class="course-header" xmlns="http://www.w3.org/1999/html">
+    <div class="centered"><div class="course-header__topPart"><div class="course-header__info"><a itemprop="url" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><h1 data-course-title="Créez votre application web avec Java EE">Créez votre application web avec Java EE</h1></a><span class="course-header__updatedTime visible-l">Mis à jour le lundi 13 juillet 2015</span></div></div></div><div class="course-header__details-container"><div class="centered"><div class="row"><div class="col12"><div class="course-header__details  iconBar"><div class="course-header__detailsGroup  course-header__detailsGroup--formats iconBar__group"><ul data-option_popinselector="#popin-formats-availables" class="course-types iconBar__list js-course-formats-bar"><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours est visible gratuitement en ligne."><a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><i class="icon-desktop  course-types__icon"></i><span class="course-header__format-current"></span></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore en vidéo."><span><i class="icon-video course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en livre papier."><a href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank"><i class="icon-book  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en eBook."><a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee"><i class="icon-ebook  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip"
+                                                                                            title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours."
+                                                                                ><a
+                                                                                        ><i class="icon-badge  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore diplômant et ne vous permet pas d&#039;obtenir des crédits universitaires européens (ECTS)."><span><i class="icon-hat  course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Vous pouvez être accompagné sur ce cours par un mentor dédié en visioconférence."><a  href="https://openclassrooms.com/premium#discover-premium-plus-offer" ><i class="icon-mentor  course-types__icon"></i></a></li></ul></div><div class="course-header__detailsGroup  course-header__detailsGroup--info  iconBar__group"><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-duration iconBar__icon js-tooltip" title="Ce cours demande en moyenne 40 heures de travail pour être réussi."></i><span class="iconBar__label">40 heures</span></li><li class="iconBar__item"><i class="icon-level iconBar__icon"></i><span class="iconBar__label">
+                                                                                                    Moyenne
+                                                                                            </span></li></ul></div><div class="course-header__detailsGroup course-header__detailsGroup--licences iconBar__group"><a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/2.0"><span class="iconBar__label">Licence</span><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-cc iconBar__icon" title="CC"></i></li><li class="iconBar__item"><i class="icon-ccby iconBar__icon" title="BY"></i></li><li class="iconBar__item"><i class="icon-ccnc iconBar__icon" title="NC"></i></li><li class="iconBar__item"><i class="icon-ccsa iconBar__icon" title="SA"></i></li></ul></a></div></div></div></div></div></div>
+    <div id="popin-formats-availables" class="popin popin--course-formats-availables">
+        <i class="popin__close-button icon-close js-close-button"></i>
+
+        <div class="course-types course-types--withSpace">
+                            <a class="course-types__item" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-desktop course-types__icon"></i>
+                </a>
+            
+            
+                            <a class="course-types__item" href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms">
+                    <i class="icon-book course-types__icon"></i>
+                </a>
+            
+                            <a class="course-types__item" href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-ebook course-types__icon"></i>
+                </a>
+            
+            
+                                        <a class="course-types__item" href="https://openclassrooms.com/premium#discover-premium-plus-offer">
+                    <i class="icon-mentor course-types__icon"></i>
+                </a>
+                    </div>
+
+                    <p>Ce cours est visible <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">gratuitement en ligne</a>.</p>
+        
+        
+                    <p>
+                Ce cours existe en livre papier.
+            </p>
+        
+                    <p>Ce cours existe <a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">en eBook</a>.</p>
+        
+        
+        
+                    <p>
+                Vous pouvez être <a href="https://openclassrooms.com/premium#discover-premium-plus-offer">accompagné et mentoré par un professeur particulier</a> par visioconférence sur ce cours.
+            </p>
+        
+        <a class="oc-btn orange-alt-btn js-close-button" href="#">J&#039;ai tout compris !</a>
+    </div>
+
+    
+</header>
+
+    <div class="centered">
+                            
+        
+            <div class="row">
+        <div class="col12 col11-s">
+                            <nav class="timeline">
+        <div class="timeline__inner">
+
+        <span class="timeline__iconContainer">
+            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+                <i class="icon-home roundIcon__icon"></i>
+            </a>
+        </span>
+            <div class="timeline__steps">
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-au-java-ee.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction au Java EE
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-java-ee-mis-a-nu.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le Java EE mis à nu !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="outils-et-environnement-de-developpement.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Outils et environnement de développement
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="la-servlet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La servlet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="servlet-avec-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Servlet avec vue…
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="transmission-de-donnees.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Transmission de données
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-javabean.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le JavaBean
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-1-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (1/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-2-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (2/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="des-problemes-de-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Des problèmes de vue ?
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-1.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 1
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="objectifs-et-configuration.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Objectifs et configuration
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-core.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque Core
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-core-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL core : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-xml.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque xml
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-xml-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL xml : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="faisons-le-point-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Faisons le point !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 2
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="formulaires-le-b-a-ba.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : le b.a.-ba
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-a-la-mode-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : à la mode MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-3.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 3
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-session-connectez-vos-clients.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La session : connectez vos clients
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-filtre-creez-un-espace-membre.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le filtre : créez un espace membre
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-cookie-le-navigateur-vous-ouvre-ses-portes.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le cookie : le navigateur vous ouvre ses portes
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-4.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 4
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-l-envoi-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : l&#039;envoi de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-telechargement-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le téléchargement de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-5.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 5
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-a-mysql-et-jdbc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction à MySQL et JDBC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="communiquez-avec-votre-bdd.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Communiquez avec votre BDD
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-modele-dao.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le modèle DAO
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-6.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 6
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="gerer-un-pool-de-connexions-avec-bonecp.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Gérer un pool de connexions avec BoneCP
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="les-annotations.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Les annotations
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-persistance-des-donnees-avec-jpa.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La persistance des données avec JPA
+                                </span>
+
+                                                                    <span class="timeline__progressMarker"></span>
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-7.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 7
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="introduction-aux-frameworks-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction aux frameworks MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="premiers-pas-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Premiers pas avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-gestion-d-un-formulaire-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La gestion d&#039;un formulaire avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="l-envoi-de-fichiers-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    L&#039;envoi de fichiers avec JSF
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="debugger-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Débugger un projet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="empaquetage-et-deploiement-d-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Empaquetage et déploiement d&#039;un projet
+                                </span>
+
+                                                            </a>
+                                            
+                
+                <span class="timeline__splitChapter"></span>
+
+            </div>
+
+        <span class="timeline__iconContainer">
+                            <span title="Ce cours n&#039;est pas encore certifiant." class="roundIcon roundIcon--disabled">
+                    <i class="icon-trophy roundIcon__icon"></i>
+                </span>
+                    </span>
+
+        </div>
+    </nav>
+        </div>
+    </div>
+    </div>
+
+        
+        <div class="centered">
+            <div class="contentWithSidebar  spacer  js-contentWithSidebar" >
+                <main class="contentWithSidebar__content" >
+                        
+
+        <div class="relative js-sidebar-container">
+        <div class="static">
+    <h2 itemprop="name" data-part-title="La persistance des données avec JPA" class="part-title">La persistance des données avec JPA</h2>
+
+    <section class="row space-bottom js-desktop-sticky-container">
+        <div class="col9 col11-s col__small-padding--right">
+
+                <div class="tooltipMessage tooltipMessage--noArrow">
+        <i class="tooltipMessage__icon  icon-lock"></i>
+        <a href="https://openclassrooms.com/login" class="js-popin-activator" data-popin-selector="#popin-log-in" >Connectez-vous</a> ou <a href="https://openclassrooms.com/register" class="js-popin-activator" data-popin-selector="#popin-sign-in" >inscrivez-vous</a> pour bénéficier de toutes les fonctionnalités de ce cours !
+    </div>
+
+            <div
+                itemprop="articleBody"
+                data-page-indentifier="/courses/creez-votre-application-web-avec-java-ee/la-persistance-des-donnees-avec-jpa"
+                class="js-isRestrictablePage course-content js-course-container js-smilize "
+
+                                    data-video-blocked-wrapper="<a href='https://openclassrooms.com/login#popin-log-in' class='js-popin-activator'>"
+                            >
+
+                <p id="r-2137496" data-claire-element-id="2354554">Incontournables pour beaucoup, décriées par certains, les solutions de persistance ont depuis quelques années le vent en poupe, dans les applications Java SE comme dans les applications Java EE. Nous allons dans ce chapitre nous frayer un chemin dans cette jungle de nouveautés, et découvrir comment appliquer correctement une telle solution à notre projet.</p><h3 id="r-625278" data-claire-element-id="2354581">Généralités</h3><div id="r-2137498" data-claire-element-id="2354556" data-claire-semantic="question"><p id="r-2137497" data-claire-element-id="2354555">Qu’est-ce qu’on appelle la “persistance” de données ?</p></div><p id="r-2137499" data-claire-element-id="2354557">Si vous ne connaissez pas ce mot, ne vous inquiétez surtout pas : au sens général, il s’agit simplement du terme utilisé pour décrire le fait de stocker des données d’une application de manière… persistante ! Autrement dit, de les sauvegarder afin qu’elles ne disparaissent pas lorsque le programme se termine. Rien de bien compliqué, en somme.</p><p id="r-2137500" data-claire-element-id="2354558">En Java, lorsqu’on parle d’une « solution de persistance des données », on évoque couramment un système permettant <strong>la sauvegarde des données contenues dans des objets</strong>. En réalité, vous connaissez donc déjà tous un moyen de persistance : le stockage dans une base de données relationnelle via JDBC !</p><div id="r-2137502" data-claire-element-id="2354560" data-claire-semantic="question"><p id="r-2137501" data-claire-element-id="2354559">Dans ce cas, pourquoi ne pas nous contenter de notre système actuel ?</p></div><p id="r-2137503" data-claire-element-id="2354561">En effet, notre tandem JDBC &amp; DAO fonctionne bien, et persiste correctement nos données dans notre base de données MySQL. C’est pourquoi <strong>dans l’absolu</strong>, ce que vous avez appris jusque-là est <strong>suffisant</strong> pour développer une application web Java EE de petite à moyenne envergure. En outre, c’est une solution légère, portable et pratique puisqu'elle ne nécessite qu'un simple conteneur de servlets pour fonctionner !</p><p id="r-2137504" data-claire-element-id="2354562">Toutefois, il faut bien vous rendre compte d’un aspect très important. Dans notre exemple - une très petite application - nous ne nous sommes pas inquiétés de devoir réécrire un DAO pour chaque table manipulée. Pourtant, c’est une belle perte de temps : dans chacune de nos classes, nous utilisons un code source très similaire pour récupérer les données des tables et les transformer en objets. Concrètement, mis à part le SQL, l'affectation des paramètres sur l'objet <code>PreparedStatement</code> et la récupération des résultats et leur affectation sur le bean, rien ne change : la structure générale du code reste toujours la même !</p><p id="r-2137505" data-claire-element-id="2354563">Maintenant, imaginez-vous devoir travailler sur un projet impliquant plusieurs centaines de tables… Vous êtes bons pour écrire autant de DAO ! Parce que, même si leur structure globale est identique, chacun d’eux contient des requêtes et attributs spécifiques. Et comme vous le savez tous, non seulement le développeur est fainéant mais, par-dessus tout, <strong>la duplication de code dans un projet, c’est le mal incarné</strong>.</p><p id="r-2137506" data-claire-element-id="2354564">Pour alléger cette tâche, vous pourriez bien évidemment commencer par rajouter de l’abstraction et de la généricité dans votre couche d’accès aux données (souvent raccourcie DAL, pour <em>Data Access Layer</em>) et ses interfaces, afin d’obtenir une interface unique pour tous vos DAO, et ne plus devoir écrire que les implémentations spécifiques à chaque table.</p><p id="r-2137507" data-claire-element-id="2354565">Pour alléger davantage la tâche, vous pourriez ensuite réaliser un générateur de DAO, un petit programme qui se chargerait d’écrire le code de base des implémentations pour chacune des tables à votre place, et vous n’auriez alors plus qu’à reprendre chaque méthode incomplète.</p><p id="r-2137508" data-claire-element-id="2354566">Avec un tel système en place, il deviendrait alors envisageable d’attaquer le développement d’une application de grande échelle plus sereinement.</p><p id="r-2137509" data-claire-element-id="2354567">Seulement, il resterait encore des choses très pénibles à réaliser, et surtout très chronophages. Il faudrait encore s’assurer que la correspondance entre les tables et les objets est correctement réalisée, et ce pour chaque action effectuée : lecture de données, mises à jour, insertions, suppressions… À chaque fois il faudrait écrire une requête SQL spécifique, à chaque fois il faudrait récupérer son résultat et éventuellement en extraire les données pour créer ou mettre à jour les attributs d’un bean, à chaque fois…</p><p id="r-2137510" data-claire-element-id="2354568">Vous voyez où je veux en venir ? Vous devez bien sentir que si un système global gérait pour vous ces actions récurrentes, votre travail serait bien plus agréable, n’est-ce pas ? Eh bien voilà pourquoi nous sommes en droit de ne pas nous contenter d’utiliser JDBC &amp; DAO. Et voilà pourquoi je vous présente dans ce chapitre <strong>la solution fournie par Java EE : JPA</strong>.</p><div id="r-2137512" data-claire-element-id="2354570" data-claire-semantic="question"><p id="r-2137511" data-claire-element-id="2354569">Qu’est-ce que JPA ?</p></div><p id="r-2137513" data-claire-element-id="2354571">Littéralement « Java Persistence API », il s’agit d’un standard faisant partie intégrante de la plate-forme Java EE, une spécification qui définit un ensemble de règles permettant la gestion de la correspondance entre des objets Java et une base de données, ou autrement formulé la gestion de la persistance.</p><p id="r-2137514" data-claire-element-id="2354572">Ce mécanisme qui gère la correspondance entre des objets d’une application et les tables d’une base de données se nomme ORM, pour « Object-Relational Mapping ». Ainsi dans le sens le plus simpliste du terme, ce que nous avons réalisé dans les chapitres précédents à travers nos DAO n’est rien d’autre qu’un ORM… manuel !</p><div id="r-2137516" data-claire-element-id="2354574" data-claire-semantic="question"><p id="r-2137515" data-claire-element-id="2354573">Et Hibernate, TopLink, EclipseLink, OpenJPA… ?</p></div><p id="r-2137517" data-claire-element-id="2354575">Peut-être avez-vous déjà entendu parler de ces solutions, les bien nommés « <em>frameworks</em> ORM ». Comprenez bien que lorsqu’on parle de JPA, il s’agit uniquement d’une API, c’est-à-dire une description d'un comportement à suivre, en l'occurrence pour respecter un standard en place.</p><p id="r-2137518" data-claire-element-id="2354576">C’est le même principe que la fameuse <code>DataSource</code> que nous avions découverte dans le dernier chapitre de la partie précédente : l’interface nous expliquait comment faire, mais pour mettre en place concrètement un pool de connexions, il nous a fallu utiliser une implémentation (BoneCP). Eh bien là c’est exactement pareil : les <strong>interfaces</strong> de JPA décrivent comment respecter le <strong>standard</strong>, mais nous devons utiliser une <strong>implémentation</strong> pour en tirer parti ! Voilà donc ce que sont <a href="http://www.hibernate.org/">Hibernate</a>, <a href="http://www.eclipse.org/eclipselink/">EclipseLink</a> &amp; <a href="http://fr.wikipedia.org/wiki/Mapping_objet-relationnel%23Frameworks_de_mapping_objet-relationnel">consorts</a> : des implémentations du standard JPA. En d’autres termes JPA constitue la théorie, et ces <em>frameworks</em> en sont la pratique.</p><p id="r-2137519" data-claire-element-id="2354577">À ce propos, comme toujours, il y a des différences entre la théorie et la pratique. En effet, la plupart de ces solutions sortent du cadre défini par JPA, et proposent des fonctionnalités annexes qui leur sont propres. Ainsi, le développeur doit être conscient de ce qu’il souhaite réaliser : s’il utilise des fonctionnalités spécifiques à un <em>framework</em> en particulier, c’est-à-dire une des fonctionnalités qui ne sont pas décrites dans le standard JPA, alors il s’expose au risque de ne plus pouvoir faire machine arrière (choisir une autre solution de persistance) sans devoir modifier le code de son application.</p><p id="r-2137520" data-claire-element-id="2354578">Voilà donc l’avantage de disposer d’un standard bien défini : à partir du moment où l’on fait du JPA, peu importe l’implémentation utilisée, le code applicatif sera identique, et donc portable.</p><aside id="r-2137522" data-claire-element-id="2354580" data-claire-semantic="information"><p id="r-2137521" data-claire-element-id="2354579">Pour la petite histoire, chronologiquement parlant certains de ces <em>frameworks</em> sont apparus avant JPA, c’est le cas notamment de Hibernate et TopLink. Le standard a en réalité été créé à l’époque dans le but d’harmoniser les solutions existantes, afin de coller à la devise du Java : « <em>write once, run everywhere</em> ».  Ainsi, vous pouvez voir ce standard comme le dénominateur commun entre toutes les solutions reconnues existantes.</p></aside><h3 id="r-2137551" data-claire-element-id="2354610">Principe</h3><p id="r-2137523" data-claire-element-id="2354582">Maintenant que nous savons de quoi il retourne, découvrons comment tout cela s’organise.</p><p id="r-2137524" data-claire-element-id="2354583">Attention ! Je vous préviens dès maintenant, dans ce chapitre ainsi que dans les chapitres à venir, je ne vais pas détailler mes explications aussi finement que dans les parties précédentes. La principale raison étant que pour travailler sur de tels concepts avancés, il est nécessaire que vous soyez curieux et un minimum autonomes. Des pans entiers de Java EE vont entrer en jeu, et vous allez devoir lire les documentations et liens que je vous fournis au fur et à mesure de votre découverte si vous souhaitez assimiler correctement toutes les informations que je vous transmets. En outre, une autre excellente raison qui me pousse à faire ce choix est que vous devez petit à petit vous libérer du format &quot;tutoriel&quot;, et prendre de l'aise avec l'utilisation de ressources en tous genres (documentations, forums, extraits de code, etc.), car plus vous irez loin dans une technologie, moins vous trouverez de personnes pour vous renseigner, et plus il vous faudra compter sur vos capacités à chercher les réponses par vous-mêmes !</p><h4 id="r-2137540" data-claire-element-id="2354599">Des EJB dans un conteneur</h4><p id="r-2137525" data-claire-element-id="2354584">Le concept mère qui se cache derrière JPA, c’est le fameux EJB ou « Enterprise JavaBean ». Voilà encore un terme dont vous avez déjà dû entendre parler à maintes reprises, et pas forcément en bien…</p><p id="r-2137526" data-claire-element-id="2354585">Si je vous dis ça, c’est parce que cette technologie a connu une évolution plutôt chaotique. À leur apparition en 1998, les objets EJB ont suscité l’enthousiasme des développeurs, enthousiasme qui a rapidement laissé place à de vives critiques de tous bords : « <em>Trop compliqué ! Trop lourd ! Trop de configuration ! Trop de fichiers XML !</em> », etc. Il aura fallu attendre jusqu’en 2006 pour que la troisième version des EJB gagne finalement ses galons et conquière les développeurs, grâce à un fonctionnement ultra simplifié.</p><p id="r-2137527" data-claire-element-id="2354586">Bien évidemment, nous n’allons pas nous intéresser aux méandres qui ont conduit à ce que sont les EJB aujourd’hui. Tout ce dont nous avons besoin, c’est de comprendre comment ils fonctionnent dans leur version actuelle.</p><aside id="r-2137529" data-claire-element-id="2354588" data-claire-semantic="warning"><p id="r-2137528" data-claire-element-id="2354587">Notez par ailleurs que la toile regorge d’informations dépassées sur ce sujet, et qu’il est parfois difficile de trouver des informations à jour ailleurs que dans les documentations et cours officiels, bien souvent disponibles en anglais uniquement. Gardez bien en tête que les EJB aujourd'hui, ce sont les EJB 3, et que les EJB 1 et 2 c'est de l'histoire ancienne.</p></aside><h5 id="r-2137536" data-claire-element-id="2354595">Principe général</h5><p id="r-2137530" data-claire-element-id="2354589">Les EJB sont des objets présentant une caractéristique bien particulière : <strong>ils sont gérés par le conteneur</strong>. Attention, quand on parle ici de conteneur il n’est plus question du simple conteneur de servlets que nous avons utilisé jusqu’à présent ! Non, il s’agit bien ici de « <strong>conteneur EJB</strong> », un élément dont le travail est de gérer entièrement le cycle de vie des EJB qu’il contient.</p><div id="r-2137532" data-claire-element-id="2354591" data-claire-semantic="question"><p id="r-2137531" data-claire-element-id="2354590">Qu’est-ce que cela signifie concrètement ?</p></div><p id="r-2137533" data-claire-element-id="2354592">Eh bien tout simplement qu’une grande partie de ce travail pénible, auparavant réalisé par le développeur, est dorénavant déléguée au conteneur, laissant ainsi, au bon fainéant qu'il est, le loisir de se concentrer sur le code métier de son application. Ne vous inquiétez pas si c’est encore flou dans votre esprit, vous comprendrez lorsque nous passerons à la pratique. ;)</p><aside id="r-2137535" data-claire-element-id="2354594" data-claire-semantic="information"><p id="r-2137534" data-claire-element-id="2354593">Par défaut, tout serveur d’applications Java EE au sens strict du terme contient un conteneur EJB. En revanche, pour ce qui est des serveurs légers comme Tomcat, ce n’est pas le cas ! Ainsi, vous ne pouvez pas manipuler d’EJB depuis Tomcat sans y ajouter un tel conteneur.</p></aside><h5 id="r-2137539" data-claire-element-id="2354598">JPA, ou les EJB Entity</h5><p id="r-2137537" data-claire-element-id="2354596">Il existe deux types d’EJB : les EJB Entity, et les EJB Session. Celui qui sert de pilier à JPA est le premier, et le plus simple à appréhender : l’EJB Entity. <strong>C’est lui qui définit quelles données doivent être sauvegardées, et c’est à travers lui qu’est effectuée la correspondance entre un objet et une table d’une base de données.</strong></p><p id="r-2137538" data-claire-element-id="2354597">En apparence, c’est un objet qui ressemble beaucoup à un simple Javabean, dans lequel on ajoute simplement quelques annotations. Souvenez-vous, je vous avais expliqué dans le chapitre précédent que celles-ci n’étaient rien d’autre que des méta-données… Eh bien en l’occurrence, ces informations sont ici utilisées pour informer le conteneur d’EJB de la manière dont l’objet devra être géré.</p><h4 id="r-2137550" data-claire-element-id="2354609">Un gestionnaire d’entités</h4><p id="r-2137541" data-claire-element-id="2354600">Définir quelles données doivent être sauvegardées en construisant des entités est une première étape. Mais elle ne servirait à rien s’il n’existait pas, derrière, un système définissant <strong>comment</strong> ces données doivent être sauvegardées !</p><p id="r-2137542" data-claire-element-id="2354601">Les méthodes permettant d’établir une connexion avec la base de données et de gérer la persistance se trouvent dans un objet particulier nommé <strong>EntityManager</strong>, ou gestionnaire d'entités.<strong> Il s’agit, là encore, d’un objet dont le cycle de vie est géré par le conteneur.</strong></p><p id="r-2137543" data-claire-element-id="2354602">Toutefois, qui dit connexion à une base de données, dit configuration manuelle. Voilà pourquoi cet objet se base sur des informations que le développeur doit saisir dans un fichier de configuration externe, que nous allons découvrir prochainement et qui n’est rien d’autre qu’un simple fichier XML.</p><p id="r-2137544" data-claire-element-id="2354603">Pour résumer, le fonctionnement de JPA est basé sur deux briques principales :</p><ul id="r-2137549" data-claire-element-id="2354608"><li id="r-2137546" data-claire-element-id="2354605"><p id="r-2137545" data-claire-element-id="2354604"><strong>des EJB « Entity »</strong> : ce sont des objets ressemblant très fortement à des JavaBeans, dans lesquels des annotations définissent des correspondances entre les objets et leurs attributs d'un côté, et les tables relationnelles de la base de données et leurs champs de l'autre (on parle alors de <strong>mapping relationnel/objet</strong>) ;</p></li><li id="r-2137548" data-claire-element-id="2354607"><p id="r-2137547" data-claire-element-id="2354606"><strong>un EntityManager</strong> : c'est une classe qui est chargée de mettre en musique les correspondances définies dans les entités, et qui réalise donc toutes les opérations CRUD (<em>Create, Read, Update, Delete</em>) sur la base de données.</p></li></ul><h3 id="r-2137728" data-claire-element-id="2838320">Mise en place</h3><h4 id="r-2137602" data-claire-element-id="2838299">Le serveur d’applications GlassFish</h4><h5 id="r-2137556" data-claire-element-id="2354615">Raisons de ce choix</h5><p id="r-2137552" data-claire-element-id="2354611">Comme je vous l’ai annoncé un peu plus tôt, Tomcat ne gère pas les EJB de manière native. Et comme vous le savez maintenant, sans EJB pas de JPA. Nous pourrions certes ajouter les jar des différentes solutions dont nous allons avoir besoin pour continuer à travailler sous Tomcat, mais ce n’est pas ce que nous allons faire. Je souhaite en effet profiter de cette occasion pour vous faire travailler sur un autre serveur, un vrai serveur d’applications Java EE cette fois : GlassFish. Pas n’importe quel serveur d’ailleurs : il s’agit du <strong>serveur de référence</strong>, celui qui implémente à la lettre les spécifications Java EE 6. Rien d'étonnant me direz-vous, puisque c'est Oracle - la maison mère de tout l'écosystème Java - qui édite ce serveur !</p><p id="r-2137553" data-claire-element-id="2354612">Si vous vous souvenez bien, je vous en avais déjà brièvement parlé lorsque nous avions découvert la JSTL. Je vous avais alors expliqué que GlassFish, contrairement à Tomcat pour lequel il est nécessaire de fournir un jar, embarquait par défaut la bibliothèque. Eh bien je pourrais vous faire exactement la même réflexion au sujet de JPA. GlassFish embarque par défaut son <strong>implémentation de référence</strong>, le <em>framework</em> de persistance nommé <a href="http://www.eclipse.org/eclipselink/">EclipseLink</a>, alors qu’il est nécessaire de fournir un jar externe à Tomcat pour qu’il permette de travailler avec JPA.</p><aside id="r-2137555" data-claire-element-id="2354614" data-claire-semantic="information"><p id="r-2137554" data-claire-element-id="2354613">En outre, sachez également qu’il est possible avec GlassFish de redéployer automatiquement une application après toute modification sur son code ou sa configuration, alors qu’il fallait souvent redémarrer Tomcat pour qu’il prenne en compte des modifications.</p></aside><h5 id="r-2137574" data-claire-element-id="2838295">Mise en place</h5><p id="r-2137557" data-claire-element-id="2354616">Vous l’aurez compris, avec GlassFish, tout est inclus par défaut. Actuellement, la dernière version en date est estampillée « GlassFish 3.1.2.2 ». Pour la récupérer, rendez-vous sur <a href="http://glassfish.java.net/downloads/3.1.2.2-final.html">cette page de téléchargement</a>, choisissez ensuite la version intitulée <em>WebProfile</em>, et enfin la version correspondant à votre système (dans l'encadré sur la figure suivante, première colonne pour Windows, seconde pour Mac &amp; Linux).</p><figure id="r-2137560" data-claire-element-id="2838291"><img id="r-2137558" data-claire-element-id="2354617" src="../../../user.oc-static.com/files/414001_415000/414708.png" alt="Image utilisateur" /></figure><aside id="r-2137562" data-claire-element-id="2354621" data-claire-semantic="warning"><p id="r-2137561" data-claire-element-id="2354620">Si une version plus récente est disponible lorsque vous lisez ce cours, vous pouvez opter pour cette dernière en lieu et place de la 3.1.2.2, mais ce n'est pas une obligation. Sachez par ailleurs que nous allons très bientôt intégrer notre serveur à Eclipse. Par conséquent, si vous tenez à utiliser une version plus récente, assurez-vous d'abord que son intégration à Eclipse est possible.</p></aside><p id="r-2137563" data-claire-element-id="2354622">Une fois téléchargée, installez-la en suivant simplement les consignes qui vous sont données par l’assistant. Quelques conseils pour la route :</p><ul id="r-2137573" data-claire-element-id="2838294"><li id="r-2137565" data-claire-element-id="2354624"><p id="r-2137564" data-claire-element-id="2354623">préférez un répertoire proche de la racine de votre disque. Amis windowsiens, n’allez surtout pas installer le serveur dans les traditionnels &quot;Program Files&quot; ou autres &quot;Documents And Settings&quot;… En ce qui me concerne, je l’ai installé dans un dossier intitulé <strong>glassfish3</strong> directement à la racine de mon disque <kbd>C:\</kbd>, et c'est d'ailleurs ce que propose l'installeur par défaut ;</p></li><li id="r-2137567" data-claire-element-id="2354626"><p id="r-2137566" data-claire-element-id="2354625">n'installez pas l'outil de mise à jour automatique (&quot;<em>Update tool</em>&quot;), cela vous évitera un délai supplémentaire lors de l'installation et quelques ennuis éventuels ;</p></li><li id="r-2137570" data-claire-element-id="2838293"><img id="r-2394617" data-claire-element-id="2838292" src="../../../user.oc-static.com/files/414001_415000/414717.png" alt="Image utilisateur" /><img id="r-2137569" data-claire-element-id="2354628" src="../../../user.oc-static.com/files/414001_415000/414717.png" alt="Image utilisateur" /><p id="r-2137568" data-claire-element-id="2354627">faites attention à ne pas donner au serveur les mêmes ports que ceux utilisés par Tomcat ; si vous avez gardé par défaut le port 8080 avec Tomcat, utilisez par exemple le port 8088 pour GlassFish, afin d’éviter les conflits en cas d’utilisation simultanée. De même pour le port de la console d’administration, pour lequel vous pouvez en principe laisser la valeur par défaut 4848, Tomcat utilisant par défaut un port différent (voir la figure suivante) ;</p></li><li id="r-2137572" data-claire-element-id="2354631"><p id="r-2137571" data-claire-element-id="2354630">si vous spécifiez un mot de passe pour la gestion du serveur, notez-le bien quelque part, pour pouvoir le retrouver en cas d’oubli.</p></li></ul><h5 id="r-2137582" data-claire-element-id="2838298">Intégration à Eclipse</h5><p id="r-2137575" data-claire-element-id="2354634">L'installation du serveur terminée, ouvrez (ou redémarrez) Eclipse. Dans le volet intitulé <strong>Servers</strong>, en bas de votre espace de travail Eclipse, faites un clic droit dans le vide et choisissez <kbd>New</kbd> &gt; <kbd>Server</kbd>. Dans la fenêtre qui s’ouvre alors s’affiche une liste des différents serveurs actuellement gérés par votre version d’Eclipse.</p><p id="r-2137576" data-claire-element-id="2354635">Si, dans cette liste, figure un dossier nommé <strong>GlassFish</strong>, alors votre Eclipse est déjà capable de prendre en charge votre serveur fraîchement installé. Si toutefois aucun dossier portant ce nom n’apparaît, vous devrez cliquer sur le lien intitulé <em>« Download additional servers adapters »</em>. Eclipse va alors scanner les différents outils disponibles, et une fois la recherche terminée vous devrez choisir l’entrée nommée <strong>« Oracle GlassFish »</strong> et la télécharger. Une fois la récupération terminée, vous pourrez alors poursuivre.</p><p id="r-2137577" data-claire-element-id="2354636">Une fois prêts à intégrer votre serveur à Eclipse, déroulez le dossier nommé <strong>GlassFish</strong> et cliquez sur l’entrée intitulée <strong>GlassFish 3.1.2.2</strong> (ou supérieure si une version plus récente est disponible lorsque vous lisez ce cours). Sur les écrans suivants, ne changez rien aux réglages par défaut et terminez en cliquant sur <kbd>Finish</kbd>.</p><p id="r-2137578" data-claire-element-id="2354637">Votre serveur apparaît alors dans le volet inférieur de votre espace de travail, aux côtés de votre serveur Tomcat utilisé jusqu’à présent dans le cours (voir la figure suivante).</p><figure id="r-2137581" data-claire-element-id="2838297"><img id="r-2137579" data-claire-element-id="2354638" src="../../../user.oc-static.com/files/414001_415000/414718.png" alt="Image utilisateur" /></figure><h5 id="r-2137601" data-claire-element-id="2354660">Configuration</h5><p id="r-2137583" data-claire-element-id="2354642">Commencez par vérifier que votre serveur se lance correctement en cliquant sur le bouton de démarrage intégré au volet serveur d’Eclipse. Si des erreurs surviennent, redémarrez Eclipse. Si des erreurs surviennent encore, redémarrez votre poste. Si après cela des erreurs surviennent toujours, alors vous devrez désinstaller proprement GlassFish et reprendre calmement les étapes précédentes.</p><p id="r-2137584" data-claire-element-id="2354643">Une fois le serveur lancé avec succès, vous allez pouvoir procéder à sa configuration. De quelle configuration est-il question exactement ? De celle du pool de connexions que vous allez mettre en place ! Eh oui, maintenant que vous savez mettre en place un pool, vous n’avez plus d’excuse…</p><div id="r-2137586" data-claire-element-id="2354645" data-claire-semantic="question"><p id="r-2137585" data-claire-element-id="2354644">Quand nous avons découvert les pools, nous n’avions rien configuré avec Tomcat ! Nous avions simplement ajouté quelques jar et codé quelques lignes dans l’initialisation de notre DAOFactory…</p></div><p id="r-2137587" data-claire-element-id="2354646">C'est vrai, seulement puisque nous allons travailler avec JPA, c’est dorénavant notre conteneur qui va s’occuper de manipuler la base de données pour nous ! Il va donc bien falloir que nous lui précisions quelque part comment faire. Il existe plusieurs manières de procéder. Celle que je vais vous présenter consiste à paramétrer le pool directement au niveau du serveur, et non plus au niveau de l’application.</p><p id="r-2137588" data-claire-element-id="2354647">Pour commencer, on prend les mêmes et on recommence ! Il faut récupérer les jar de BoneCP et les placer dans le répertoire <strong>/lib</strong> de GlassFish.</p><div id="r-2137590" data-claire-element-id="2354649" data-claire-semantic="question"><p id="r-2137589" data-claire-element-id="2354648">Où se trouve ce répertoire exactement ?</p></div><p id="r-2137591" data-claire-element-id="2354650">Vous remarquerez rapidement que l'organisation en interne d'un serveur GlassFish est sensiblement différente de celle d'un serveur Tomcat. Nous n'allons pas nous amuser à parcourir chaque dossier de l'arborescence, je vais simplement vous guider lorsque cela sera nécessaire. En l'occurrence, vous devez placer vos jar dans le dossier <strong>/glassfish3/glassfish/domains/domain1/lib/ext/</strong>.</p><p id="r-2137592" data-claire-element-id="2354651">Une fois ceci fait, il faut ensuite procéder au paramétrage du pool et de la connexion à la base de données. Plutôt que de vous perdre dans les formulaires de configuration de la console d’administration de GlassFish (qui, pour les curieux, est accessible à l'adresse <code>http://localhost:4848</code>), je vous ai préparé un fichier XML prêt à l’emploi, contenant toutes les informations dont nous avons besoin : <a href="http://course.oc-static.com/ftp-tutos/cours/java-ee/bonecp-datasource.xml">cliquez ici pour le télécharger</a> (clic droit &gt; Enregistrer sous...). Merci qui ? :-°</p><p id="r-2137593" data-claire-element-id="2354652">Pour information, ce fichier contient la déclaration d’une connexion MySQL via JDBC classique, référencée par le nom « <strong>jdbc/bonecp_resource</strong> », et son association à un pool de connexions basé sur BoneCP.</p><p id="r-2137594" data-claire-element-id="2354653">Une fois le fichier récupéré, vous allez devoir l’appliquer à votre serveur. Pour ce faire, rendez-vous dans le répertoire <strong>/glassfish3/bin</strong>, et copiez-y le fichier. Exécutez alors le fichier nommé <strong>asadmin</strong> (le fichier .bat si vous travaillez sous Windows, l'autre sinon). Une console de commandes s’ouvre alors. Sous Windows, vous allez devoir y taper la commande suivante :</p><pre id="r-2137595" data-claire-element-id="2354654"><samp>add-resources bonecp-datasource.xml</samp></pre><p id="r-2137596" data-claire-element-id="2354655">Sous Mac ou Linux, vous devrez probablement préciser le chemin complet vers le fichier XML pour que la commande localise correctement votre fichier XML :</p><pre id="r-2137597" data-claire-element-id="2354656"><samp>add-resources /chemin/complet/vers/glassfish3/bin/bonecp-datasource.xml</samp></pre><p id="r-2137598" data-claire-element-id="2354657">Si l’opération se déroule sans accrocs, vous verrez alors s’afficher un message confirmant le succès de l’opération. Vous pourrez finalement fermer la fenêtre.</p><aside id="r-2137600" data-claire-element-id="2354659" data-claire-semantic="information"><p id="r-2137599" data-claire-element-id="2354658">Voilà tout ce qu’il est nécessaire de configurer côté serveur. Dorénavant pour tout projet que vous développerez et déploierez sur ce serveur, vous pourrez profiter très simplement d’un pool de connexions BoneCP vers une base de données MySQL prêt à l’usage !</p></aside><h4 id="r-2137632" data-claire-element-id="2838306">Création du projet</h4><p id="r-2137603" data-claire-element-id="2354662">Nous sommes maintenant prêts à créer un nouveau projet sous Eclipse. Pour commencer, rendez-vous dans <strong>New</strong> &gt; <strong>Dynamic Web Project</strong>, et nommez par exemple votre projet <strong>pro_jpa</strong>. Copiez-y ensuite depuis l’ancien projet <strong>pro</strong> la JSP <strong>inscription.jsp</strong>, le fichier CSS et son répertoire <strong>/inc</strong>, le bean <strong>Utilisateur</strong>, le DAO <strong>UtilisateurDao</strong>, les classes <strong>DAOException</strong> et <strong>FormValidationException</strong>, l’objet métier <strong>InscriptionForm</strong> et enfin la servlet <strong>Inscription</strong>. En clair, tout ce qui va nous être utile pour mettre en place un système d’inscription basé cette fois sur JPA !</p><aside id="r-2137605" data-claire-element-id="2354664" data-claire-semantic="information"><p id="r-2137604" data-claire-element-id="2354663">Pour le moment, ne vous préoccupez pas des éventuelles erreurs ou avertissements affichés par Eclipse dans votre nouveau projet. Nous allons transformer cet embryon, étape par étape.</p></aside><p id="r-2137606" data-claire-element-id="2354665">Ensuite, nous allons devoir créer un fichier nommé <strong>glassfish-web.xml</strong> dans le répertoire <strong>/WEB-INF</strong> de notre application. Sans grande surprise, il s'agit d'un fichier ressemblant fortement au fichier web.xml, que nous allons ici utiliser pour définir le contexte de déploiement de notre application, ainsi qu'une option qui peut toujours servir. Regardons d'abord le code, et parlons-en ensuite :</p><pre id="r-2137607" data-claire-element-id="2838300"><code data-claire-semantic="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE glassfish-web-app PUBLIC &quot;-//GlassFish.org//DTD GlassFish Application Server 3.1 Servlet 3.0//EN&quot; &quot;http://glassfish.org/dtds/glassfish-web-app_3_0-1.dtd&quot;&gt;
+&lt;glassfish-web-app&gt;
+  &lt;context-root&gt;/pro_jpa&lt;/context-root&gt;
+  &lt;class-loader delegate=&quot;true&quot;/&gt;
+  &lt;jsp-config&gt;
+    &lt;property name=&quot;keepgenerated&quot; value=&quot;true&quot;&gt;
+      &lt;description&gt;Conserve une copie du code des servlets auto-générées.&lt;/description&gt;
+    &lt;/property&gt;
+  &lt;/jsp-config&gt;
+&lt;/glassfish-web-app&gt;</code></pre><p id="r-2137608" data-claire-element-id="2354667">Observez la syntaxe des quelques sections ici mises en place. Concernant la propriété <strong>keepgenerated</strong>, il s'agit d'une option permettant de demander au serveur de garder une copie du code Java des servlets auto-générées depuis vos JSP. Nous n'allons pas nous en servir, mais cela pourra toujours vous être utile dans la suite de votre apprentissage.</p><p id="r-2137609" data-claire-element-id="2354668">Créez ensuite un dossier nommé <strong>META-INF</strong> dans le répertoire <strong>src</strong> du projet, et créez-y un fichier nommé <strong>persistence.xml</strong>. Voici, sur la figure suivante, l'arborescence que vous êtes alors censés obtenir.</p><figure id="r-2137612" data-claire-element-id="2838302"><img id="r-2137610" data-claire-element-id="2354669" src="../../../user.oc-static.com/files/414001_415000/414720.png" alt="Image utilisateur" /></figure><p id="r-2137613" data-claire-element-id="2354672">Et voici son code de base :</p><pre id="r-2137614" data-claire-element-id="2838303"><code data-claire-semantic="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;persistence version=&quot;2.0&quot; xmlns=&quot;http://java.sun.com/xml/ns/persistence&quot;
+ xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+ xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/persistence 
+ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd&quot;&gt;
+
+&lt;/persistence&gt;</code></pre><p id="r-2137615" data-claire-element-id="2354674">Dans ce fichier nécessaire au bon fonctionnement de JPA, nous allons définir deux choses :</p><ul id="r-2137620" data-claire-element-id="2354679"><li id="r-2137617" data-claire-element-id="2354676"><p id="r-2137616" data-claire-element-id="2354675">les informations de connexion à la base de données dont auront besoin les <strong>EntityManager</strong> ;</p></li><li id="r-2137619" data-claire-element-id="2354678"><p id="r-2137618" data-claire-element-id="2354677">une unité de persistance pour chacune de nos entités.</p></li></ul><div id="r-2137622" data-claire-element-id="2354681" data-claire-semantic="question"><p id="r-2137621" data-claire-element-id="2354680">Qu’est-ce que c’est que cette histoire d’unité ?</p></div><p id="r-2137623" data-claire-element-id="2354682">Une unité de persistance est un contexte, une section qui permet de définir à quelles classes va s’appliquer un <strong>EntityManager</strong>, sur quelle connexion il va se baser et comment il va dialoguer avec la BDD pour persister les données.</p><div id="r-2137625" data-claire-element-id="2354684" data-claire-semantic="question"><p id="r-2137624" data-claire-element-id="2354683">Ne venons-nous pas de configurer la connexion directement depuis le serveur ?</p></div><p id="r-2137626" data-claire-element-id="2354685">Oui, tout à fait. Mais il est tout de même nécessaire de préciser à l’application quelle connexion elle doit utiliser ! Voilà d’ailleurs pourquoi la connexion porte un nom dans notre serveur : c’est pour lui permettre d’être retrouvée très simplement dans un annuaire, que l’on nomme <a href="https://openclassrooms.com/fr.wikipedia.org/wiki/Java_Naming_and_Directory_Interface">JNDI</a>. Nous n’allons pas nous attarder sur ce concept, qui fait partie de Java au sens large.</p><p id="r-2137627" data-claire-element-id="2354686">Nous allons donc mettre en place une unité que nous allons nommer &quot;bdd_sdzee_PU&quot; (PU pour « <em>Persistence Unit</em> » ), qui va s'appliquer à notre entité <strong>Utilisateur</strong> et qui va se baser sur la connexion nommée <strong>jdbc/bonecp_resource</strong>. Voici le code nécessaire :</p><pre id="r-2137628" data-claire-element-id="2838304"><code data-claire-semantic="xml">&lt;persistence-unit name=&quot;bdd_sdzee_PU&quot; transaction-type=&quot;JTA&quot;&gt;
+    &lt;jta-data-source&gt;jdbc/bonecp_resource&lt;/jta-data-source&gt;
+    &lt;class&gt;com.sdzee.entities.Utilisateur&lt;/class&gt;		
+&lt;/persistence-unit&gt;</code></pre><p id="r-2137629" data-claire-element-id="2354688">Je vous laisse observer la syntaxe à employer. Concernant le type de transaction, c'est un concept avancé que nous n'allons pas aborder dans ce cours, je vous demande de me faire aveuglément confiance ! ;-)</p><p id="r-2137630" data-claire-element-id="2354689">Pour terminer, nous avons la possibilité de définir des propriétés supplémentaires, concernant la connexion à établir par exemple. Je vous évoquais un peu plus tôt plusieurs manières de configurer une connexion, en voilà une seconde : si nous n’avions pas configuré le pool sur notre serveur, nous aurions dû préciser tout cela directement dans ce fichier. Dans notre cas, nous n’avons aucune propriété à ajouter, et voici le fichier complet :</p><pre id="r-2137631" data-claire-element-id="2838305"><code data-claire-semantic="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;persistence version=&quot;2.0&quot; xmlns=&quot;http://java.sun.com/xml/ns/persistence&quot;
+ xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+ xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/persistence 
+ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd&quot;&gt;
+    &lt;persistence-unit name=&quot;bdd_sdzee_PU&quot; transaction-type=&quot;JTA&quot;&gt;
+        &lt;jta-data-source&gt;jdbc/bonecp_resource&lt;/jta-data-source&gt;
+        &lt;class&gt;com.sdzee.entities.Utilisateur&lt;/class&gt;
+        &lt;properties/&gt;		
+    &lt;/persistence-unit&gt;   
+&lt;/persistence&gt;</code></pre><h4 id="r-2137645" data-claire-element-id="2838311">Création d’une entité Utilisateur</h4><p id="r-2137633" data-claire-element-id="2354692">Nous pouvons maintenant attaquer la transformation de notre projet. Notre première cible est le bean <strong>Utilisateur</strong>, dans lequel nous allons inclure quelques annotations. Attention, il n’est pas ici question des annotations Java EE que je vous ai présentées dans le chapitre précédent, mais bien d’<a href="http://docs.oracle.com/javaee/6/api/index.html?javax/persistence/package-summary.html">annotations propres à JPA</a>. Gardez ce lien vers la Javadoc officielle sous le coude, car vous allez en avoir besoin pour comprendre en détail chacune des annotations que nous allons mettre en jeu.</p><p id="r-2137634" data-claire-element-id="2354693">Pour commencer, nous allons indiquer à notre serveur, plus précisément à notre conteneur, que notre bean <strong>Utilisateur</strong> va devenir un EJB Entity. Pour cela, nous devons l'annoter avec <code>@Entity</code> :</p><pre id="r-2137635" data-claire-element-id="2838307"><code data-claire-semantic="java">@Entity
+public class Utilisateur {
+   ...
+}</code></pre><p id="r-2137636" data-claire-element-id="2354695">En théorie, il faudrait également indiquer via l'annotation <code>@Table(name = &quot;Utilisateur&quot;)</code> que l’entité est liée à la table nommée <strong>Utilisateur</strong> dans notre base. Toutefois, le comportement par défaut du conteneur, en l’absence de cette précision, est de considérer que le nom de la table est identique à celui de la classe. Dans notre cas, notre bean et notre table s’appellent tous deux <strong>Utilisateur</strong>, et nous pouvons donc nous passer de cette annotation superflue.</p><p id="r-2137637" data-claire-element-id="2354696">Il est ensuite nécessaire de définir la correspondance entre les données de l’entité <strong>Utilisateur</strong> et les données qui se trouvent dans la table. Nous allons donc devoir annoter les attributs de notre entité. Là encore, par défaut le conteneur sait identifier lui-même que tel attribut correspond à tel champ, à partir du moment où les champs portent le même nom que les attributs.</p><p id="r-2137638" data-claire-element-id="2354697">Lorsque ce n’est pas le cas par contre, il est nécessaire d’ajouter une annotation sur l’attribut pour préciser avec quel champ doit être établie une correspondance. Dans notre cas, nous avons deux attributs qui portent un nom différent de leur équivalent dans la table, et nous devons donc ajouter les annotations <code>@Column(name = &quot;…&quot;)</code> sur chacun d’eux :</p><pre id="r-2137639" data-claire-element-id="2838308"><code data-claire-semantic="java">@Column( name = &quot;mot_de_passe&quot; )
+private String    motDePasse;
+...
+@Column( name = &quot;date_inscription&quot; )
+private Timestamp dateInscription;</code></pre><p id="r-2137640" data-claire-element-id="2354699">Enfin, pour préciser qu'un attribut est associé à la clé primaire de la table, il est nécessaire de l’annoter avec <code>@Id</code>. En outre, pour que le conteneur puisse correctement gérer l’id auto-généré lors de la création d’un utilisateur en base, il faut ajouter l’annotation <code>@GeneratedValue</code> sur cet attribut (voyez <a href="http://docs.oracle.com/javaee/6/api/javax/persistence/GeneratedValue.html">sa documentation</a> pour plus de détails) :</p><pre id="r-2137641" data-claire-element-id="2838309"><code data-claire-semantic="java">@Id
+@GeneratedValue( strategy = GenerationType.IDENTITY )
+private Long      id;</code></pre><p id="r-2137642" data-claire-element-id="2354701">Et… c’est tout ! Eh oui, voilà tout ce qu’il est nécessaire de modifier pour transformer notre simple JavaBean en un EJB Entity, prêt à être géré par notre conteneur ! Par ailleurs, puisque nous venons de transformer notre bean en entité, nous allons en profiter pour renommer le package qui la contient par <code>com.sdzee.tp.entities</code>. Voici le code final de notre nouvelle entité, les getters/setters exclus :</p><pre id="r-2137643" data-claire-element-id="2838310"><code data-claire-semantic="java">package com.sdzee.entities;
+
+import java.sql.Timestamp;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Utilisateur {
+
+    @Id
+    @GeneratedValue( strategy = GenerationType.IDENTITY )
+    private Long      id;
+    private String    email;
+    @Column( name = &quot;mot_de_passe&quot; )
+    private String    motDePasse;
+    private String    nom;
+    @Column( name = &quot;date_inscription&quot; )
+    private Timestamp dateInscription;
+
+    ...  // couples de getters/setters pour chaque attribut déclaré
+}</code></pre><p id="r-2137644" data-claire-element-id="2354703">Remarquez la simplicité avec laquelle nous avons opéré les changements : cinq petites annotations et le tour est joué ! Si nos attributs portaient tous le même nom que leur équivalent dans la table, seules trois annotations auraient suffi !</p><h4 id="r-2137699" data-claire-element-id="2838315">Création d’un EJB Session</h4><p id="r-2137646" data-claire-element-id="2354705">Le moment est pour nous venu de découvrir le second type d’EJB : l’EJB Session. Vous ne savez pas encore de quoi il retourne, mais ne vous inquiétez pas, il n’y a rien de sorcier. Il s'agit simplement d'un objet qui donne accès aux services &amp; méthodes qu'il contient. Il existe deux types d’EJB Session : ceux qui sont <strong>Stateless</strong>, et ceux qui sont <strong>Stateful</strong>. Pour vous aider à comprendre la différence entre ces deux types d'EJB Session, prenons deux exemples :</p><h5 id="r-2137657" data-claire-element-id="2354716">Stateless : authentification sur un site marchand</h5><p id="r-2137647" data-claire-element-id="2354706">Premier exemple, un système d'authentification (connexion) à un site marchand. Dans sa version la plus simple, pour réaliser cette tâche il suffit d'un objet contenant une méthode qui compare un couple d'identifiants passés en paramètres à ceux qui sont stockés dans la table des clients en base, et qui retourne un code de succès ou d'erreur en retour. Cet objet ne présente donc pas de risques liés aux multiples <em>Threads</em> (en anglais, on parle de <em>thread-safety</em>), et une seule instance peut très bien être partagée par de multiples requêtes issues de clients différents.</p><p id="r-2137648" data-claire-element-id="2354707">De manière concise, voici les propriétés d'un EJB Stateless :</p><ul id="r-2137655" data-claire-element-id="2354714"><li id="r-2137650" data-claire-element-id="2354709"><p id="r-2137649" data-claire-element-id="2354708">aucune donnée n'est retenue ni enregistrée, c'est-à-dire qu'aucun état n'est retenu. On dit alors que l'objet est sans état, ou <em>Stateless</em> ;</p></li><li id="r-2137652" data-claire-element-id="2354711"><p id="r-2137651" data-claire-element-id="2354710">aucun mécanisme ne garantit que deux appels consécutifs à une méthode d'un tel EJB visent une seule et même instance <strong>**</strong> ;</p></li><li id="r-2137654" data-claire-element-id="2354713"><p id="r-2137653" data-claire-element-id="2354712">les accès concurrents sont impossibles, mais le système est <em>threadsafe</em> tout de même puisque le conteneur envoie les requêtes simultanées vers des instances différentes du même EJB <strong>**</strong> .</p></li></ul><p id="r-2137656" data-claire-element-id="2354715"><em>(<strong>**</strong> : nous allons y revenir lorsque nous modifierons notre servlet)</em></p><h5 id="r-2137698" data-claire-element-id="2838314">Stateful : panier sur un site marchand</h5><p id="r-2137658" data-claire-element-id="2354717">Second exemple, un système de panier sur un site marchand. Pour réaliser une telle tâche, nous avons besoin d'un objet qui soit capable de retenir les commandes effectuées par un client, et qui puisse être réutilisé par ce même client pendant sa session d'utilisation, sans risque qu'un autre client puisse y accéder. Cet objet présente donc un risque lié aux multiples <em>Threads</em> : une même instance ne doit surtout pas être partagée par plusieurs requêtes issues de clients différents, sans quoi le panier perd tout son intérêt.</p><p id="r-2137659" data-claire-element-id="2354718">De manière concise, voici les propriétés d'un EJB Stateful :</p><ul id="r-2137666" data-claire-element-id="2354725"><li id="r-2137661" data-claire-element-id="2354720"><p id="r-2137660" data-claire-element-id="2354719">des données sont retenues dans l'objet après un appel, c'est-à-dire qu'il conserve un état. On dit alors que l'objet est à état, ou <em>Stateful</em> ;</p></li><li id="r-2137663" data-claire-element-id="2354722"><p id="r-2137662" data-claire-element-id="2354721">l’accès à une instance de l’EJB est réservé à un seul client à la fois ;</p></li><li id="r-2137665" data-claire-element-id="2354724"><p id="r-2137664" data-claire-element-id="2354723">les accès concurrents sont impossibles, le conteneur gère une liste d’attente en cas de tentatives simultanées.</p></li></ul><p id="r-2137667" data-claire-element-id="2354726">Maintenant que nous connaissons le principe, réfléchissons un peu. À quoi va bien pouvoir nous servir un EJB Session dans notre application ? Je vous donne un indice : nous allons utiliser un EJB Session de type Stateless. Regardez rapidement le code de nos différents objets, et essayez de repérer lequel parmi eux correspond parfaitement à la définition d'un objet sans état.</p><p id="r-2137668" data-claire-element-id="2354727">Vous avez trouvé ? Eh bien oui, nous allons tout bonnement remplacer notre précédent DAO ! Après tout, il s’agit bien là d’une classe ne contenant que des méthodes d’interaction avec JDBC. Bien entendu cette fois, nous n’allons plus converser avec JDBC. Car cela, c’est le conteneur qui va s’en occuper pour nous grâce à JPA ! Dorénavant, nous allons simplement demander à notre <code><a href="http://docs.oracle.com/javaee/6/api/javax/persistence/EntityManager.html">EntityManager</a></code> de donner des ordres à notre base de données, via ses méthodes <code><a href="http://docs.oracle.com/javaee/6/api/javax/persistence/EntityManager.html#persist%28java.lang.Object%29">persist()</a></code>, <code><a href="http://docs.oracle.com/javaee/6/api/javax/persistence/EntityManager.html#find%28java.lang.Class,%20java.lang.Object%29">find()</a></code>, <code><a href="http://docs.oracle.com/javaee/6/api/javax/persistence/EntityManager.html#remove%28java.lang.Object%29">remove()</a></code>, etc. N'hésitez pas à parcourir en détail la Javadoc de cet objet afin de découvrir tous les trésors qu'il recèle.</p><p id="r-2137669" data-claire-element-id="2354728">Voici donc ce que va devenir notre classe <strong>UtilisateurDao</strong>. Je vous donne d'abord le code, les explications viennent après :</p><pre id="r-2137670" data-claire-element-id="2838312"><code data-claire-semantic="java">package com.sdzee.dao;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+
+import com.sdzee.entities.Utilisateur;
+
+@Stateless
+public class UtilisateurDao {
+    private static final String JPQL_SELECT_PAR_EMAIL = &quot;SELECT u FROM Utilisateur u WHERE u.email=:email&quot;;
+    private static final String PARAM_EMAIL           = &quot;email&quot;;
+
+    // Injection du manager, qui s'occupe de la connexion avec la BDD
+    @PersistenceContext( unitName = &quot;bdd_sdzee_PU&quot; )
+    private EntityManager       em;
+
+    // Enregistrement d'un nouvel utilisateur
+    public void creer( Utilisateur utilisateur ) throws DAOException {
+        try {
+            em.persist( utilisateur );
+        } catch ( Exception e ) {
+            throw new DAOException( e );
+        }
+    }
+
+    // Recherche d'un utilisateur à partir de son adresse email
+    public Utilisateur trouver( String email ) throws DAOException {
+        Utilisateur utilisateur = null;
+        Query requete = em.createQuery( JPQL_SELECT_PAR_EMAIL );
+        requete.setParameter( PARAM_EMAIL, email );
+        try {
+            utilisateur = (Utilisateur) requete.getSingleResult();
+        } catch ( NoResultException e ) {
+            return null;
+        } catch ( Exception e ) {
+            throw new DAOException( e );
+        }
+        return utilisateur;
+    }
+}</code></pre><aside id="r-2137672" data-claire-element-id="2354731" data-claire-semantic="information"><p id="r-2137671" data-claire-element-id="2354730">Quarante lignes, imports et sauts de ligne compris. On est bien loin des 100+ lignes de notre ancien <strong>UtilisateurDaoImpl</strong> !</p></aside><p id="r-2137673" data-claire-element-id="2354732">Première remarque, la structure globale de l'objet n'a pas changé : il est toujours constitué de deux méthodes, chargées respectivement de créer et de trouver un utilisateur en base. Afin de ne pas avoir à modifier les appels à ces deux méthodes depuis notre objet métier, j'ai pris soin de conserver leur nom et paramètres à l'identique : <code>creer( Utilisateur utilisateur )</code> et <code>trouver( String email )</code>.</p><p id="r-2137674" data-claire-element-id="2354733">Deuxièmement, remarquez avec quelle simplicité nous précisons à notre conteneur que l'objet est un EJB de type Stateless. Il suffit pour cela d'une annotation <code>@Stateless</code> placée avant la déclaration de la classe.</p><p id="r-2137675" data-claire-element-id="2354734">De même, remarquez avec quelle simplicité nous pouvons <strong>injecter</strong> dans notre EJB une instance d'un <strong>EntityManager</strong> dépendant d'une unité de persistance, via l'annotation <code>@PersistenceContext( unitName = &quot;...&quot; )</code>. Vous reconnaîtrez ici le nom de l'unité que nous avons déclarée dans le fichier <strong>persistence.xml</strong> : <strong>bdd_sdzee_PU</strong>.</p><div id="r-2137677" data-claire-element-id="2354736" data-claire-semantic="question"><p id="r-2137676" data-claire-element-id="2354735">« Injecter » ?</p></div><p id="r-2137678" data-claire-element-id="2354737">C’est le terme utilisé pour décrire le fait que le cycle de vie de l’objet annoté est géré par le conteneur. En d’autres termes, cela signifie que nous n’avons plus besoin de nous occuper de la création ni de l’initialisation de l’objet, c’est le conteneur qui va le faire pour nous ! En effet comme vous pouvez le voir dans ce code, nous faisons appel à des méthodes de l'objet <strong>em</strong> mais à aucun moment nous ne créons ni n'initialisons une instance d'objet, nous nous contentons uniquement de sa déclaration et de son annotation !</p><p id="r-2137679" data-claire-element-id="2354738">Analysons ensuite la méthode de création, la plus simple des deux. Alors qu'elle occupait auparavant une vingtaine de lignes et faisait appel à des méthodes utilitaires pour la création d'une requête préparée et la libération des ressources utilisées, elle est désormais réduite à peau de chagrin grâce à une seule et unique méthode : <code><a href="http://docs.oracle.com/javaee/6/api/javax/persistence/EntityManager.html#persist%28java.lang.Object%29">persist()</a></code>. C'est cette méthode de l'<strong>EntityManager</strong> qui va se charger de tout pour nous, nous avons uniquement besoin de lui transmettre notre entité <strong>Utilisateur</strong> et tout le reste s'effectue derrière les rideaux ! Et si nous n'avions pas mis en place une exception spécifique de type <strong>DAOException</strong>, notre méthode tiendrait sur une seule et unique ligne ! o_O</p><p id="r-2137680" data-claire-element-id="2354739">En ce qui concerne la méthode de récupération d'un utilisateur en se basant sur son adresse email, ce n'est pas aussi magique. En effet, comment notre <strong>EntityManager</strong> pourrait-il deviner que nous souhaitons utiliser l'argument passé en paramètre dans une clause <code>WHERE</code> appliquée à une requête sur la table <strong>Utilisateur</strong> ? La seule requête de lecture qu'il est possible de faire par défaut, c'est la plus basique, à savoir la recherche d’un élément en se basant sur sa clé primaire. Ce cas mis à part, l’<strong>EntityManager</strong> ne peut pas deviner ce que vous souhaitez récupérer : la clause <code>WHERE</code> permet à elle seule d’effectuer de nombreuses requêtes différentes sur une seule et même table.</p><p id="r-2137681" data-claire-element-id="2354740">Nous n'y coupons pas, nous devons écrire un minimum de SQL pour parvenir à nos fins. Toutefois, il n’est plus nécessaire d’écrire du SQL directement via JDBC comme nous le faisions dans nos DAO. Dorénavant, JPA nous facilite la tâche en encadrant notre travail, et nous propose pour cela deux méthodes différentes : le <a href="http://docs.oracle.com/cd/E11035_01/kodo41/full/html/ejb3_langref.html">langage JPQL</a>, et le système <a href="http://docs.oracle.com/javaee/6/tutorial/doc/gjitv.html">Criteria</a>. Le plus simple à prendre en mains est le JPQL, car il ressemble très fortement au langage SQL. Cependant, il présente une différence majeure : il n'est pas utilisé pour interagir avec la base de données, mais avec les entités de notre application. Et c'est bien là l'objectif de JPA : découpler l'application du système de stockage final.</p><p id="r-2137682" data-claire-element-id="2354741">Pour créer une telle requête, il suffit d'appeler la méthode <code><a href="http://docs.oracle.com/javaee/6/api/javax/persistence/EntityManager.html#createQuery%28java.lang.String%29">createQuery()</a></code> de l'<strong>EntityManager</strong>. Analysons brièvement la syntaxe de notre requête :</p><pre id="r-2137683" data-claire-element-id="2838313"><code data-claire-semantic="JPQL">SELECT u FROM Utilisateur u WHERE u.email=:email</code></pre><p id="r-2137684" data-claire-element-id="2354743">Tout d'abord, observez la ressemblance frappante avec le langage SQL. Voici les subtilités à noter :</p><ol id="r-2137691" data-claire-element-id="2354750"><li id="r-2137686" data-claire-element-id="2354745"><p id="r-2137685" data-claire-element-id="2354744">dans la section <code>FROM</code>, nous définissons le type de l'objet ciblé par la requête, <strong>Utilisateur</strong>, et son alias dans la requête courante, ici <strong>u</strong> ;</p></li><li id="r-2137688" data-claire-element-id="2354747"><p id="r-2137687" data-claire-element-id="2354746">dans la section <code>SELECT</code>, nous précisons simplement que nous souhaitons récupérer l'entité <strong>Utilisateur</strong> en notant son alias <strong>u</strong> ;</p></li><li id="r-2137690" data-claire-element-id="2354749"><p id="r-2137689" data-claire-element-id="2354748">dans la clause <code>WHERE</code>, nous ciblons l'attribut <strong>email</strong> de l'entité <strong>Utilisateur</strong> en concaténant simplement l'alias et le nom du champ, ici <strong>u.email</strong>. Enfin, nous spécifions que nous allons fournir un paramètre à la requête et le nommons <strong>email</strong> via la notation <strong>:email</strong>.</p></li></ol><p id="r-2137692" data-claire-element-id="2354751">Ainsi, après la construction de cette requête à la ligne 32, nous fournissons un paramètre nommé <strong>email</strong> et contenant l'adresse utilisée pour effectuer la recherche parmi les entités, grâce à la très explicite méthode <a href="http://docs.oracle.com/javaee/6/api/javax/persistence/Query.html#setParameter%28java.lang.String,%20java.lang.Object%29"><code>setParameter()</code>.</a> Ceci devrait vous rappeler le principe des requêtes préparées que nous avions auparavant mises en place dans nos DAO.</p><p id="r-2137693" data-claire-element-id="2354752">Enfin, nous réalisons l'appel qui va déclencher la requête JPQL via la méthode <code><a href="http://docs.oracle.com/javaee/6/api/javax/persistence/Query.html#getSingleResult%28%29">getSingleResult()</a></code>. Comme vous pouvez le lire dans sa documentation, celle-ci retourne un unique résultat. Nous aurions également pu utiliser la méthode <code><a href="http://docs.oracle.com/javaee/6/api/javax/persistence/Query.html#getResultList%28%29">getResultList()</a></code>, mais ce n'est pas nécessaire : nous savons qu'une adresse email est forcément unique dans notre base de données, et nous pouvons donc être certains qu'il n'existera jamais plus d'un résultat.</p><p id="r-2137694" data-claire-element-id="2354753">Par contre, puisque nous utilisons <code>getSingleResult()</code> nous devons faire attention au cas où aucun résultat ne serait retourné, c'est-à-dire lorsqu'une adresse n'existe pas encore en base. En effet, la documentation de la méthode nous prévient qu'elle envoie une exception de type <strong>NoResultException</strong> lorsque rien n'est trouvé. Voilà pourquoi nous entourons l'appel d'un bloc <code>try / catch</code>, dans lequel nous retournons <code>null</code> en cas d'absence de résultat.</p><p id="r-2137695" data-claire-element-id="2354754">Les autres exceptions possibles étant peu probables ou liées à des erreurs de configuration, nous nous contentons pour finir de les encapsuler dans notre exception spécifique <strong>DAOException</strong>.</p><aside id="r-2137697" data-claire-element-id="2354756" data-claire-semantic="information"><p id="r-2137696" data-claire-element-id="2354755">Nous en avons terminé avec notre EJB. Ne vous laissez pas méprendre par la longueur de mes explications : j'ai pris le temps de détailler chaque point pour que vous compreniez aisément comment s'utilisent les nouveaux éléments que vous avez découverts, mais si vous regardez maintenant à nouveau le code, vous vous rendrez compte qu'il est très simple et surtout très court !</p></aside><h4 id="r-2137721" data-claire-element-id="2838317">Modification de la servlet</h4><p id="r-2137700" data-claire-element-id="2354759">Auparavant, nous récupérions une instance de DAO lors de la création de la servlet, depuis une Factory qui était quant à elle initialisée au lancement de l’application. Avec JPA, nous allons pouvoir nous débarrasser de tout cet arsenal, et par conséquent nous n'allons plus avoir besoin de la méthode <code>init()</code> dans notre servlet !</p><div id="r-2137702" data-claire-element-id="2354761" data-claire-semantic="question"><p id="r-2137701" data-claire-element-id="2354760">Dans ce cas, comment allons-nous transmettre une unique instance d'objet qui sera partagée par toutes les requêtes entrantes, comme l'était notre DAO auparavant ?</p></div><p id="r-2137703" data-claire-element-id="2354762">Eh bien en réalité, nous n'allons plus nous contenter d'une seule instance, mais de plusieurs instances que le conteneur va gérer pour nous. Il va littéralement créer un pool d'EJB, similaire sur le principe à notre pool de connexions. Lorsque plusieurs requêtes quasi simultanées émanant de clients différents seront redirigées vers notre servlet, le conteneur va transmettre une instance différente de notre EJB à chacune d'elles tant qu'il en restera dans son pool. Quand le pool sera vide, il gérera une file d'attente et attendra le retour des instances déjà distribuées pour servir les requêtes en attente.</p><p id="r-2137704" data-claire-element-id="2354763">Sur le papier, tout cela paraît bien compliqué, n'est-ce pas ? Eh bien en pratique, figurez-vous qu'il n'y a rien de plus simple ! D'après vous, qu'est-ce qui permet de donner des informations au conteneur, et qui nécessite insolemment peu d'efforts ?... Bingo ! C'est à l'aide d’une simple mais puissante annotation que nous allons <strong>injecter</strong> notre EJB directement dans notre servlet : <code>@EJB</code>.</p><div id="r-2137706" data-claire-element-id="2354765" data-claire-semantic="question"><p id="r-2137705" data-claire-element-id="2354764">« Injecter » ?</p></div><p id="r-2137707" data-claire-element-id="2354766">Eh oui, là encore nous allons faire appel à un mécanisme d'injection similaire à celui que nous avons découvert un peu plus tôt dans notre EJB Stateless. Pour rappel, cela signifie que nous n’avons plus besoin de nous occuper de la création ni de l’initialisation de l’objet, c’est le conteneur qui va le faire pour nous ! Voyez plutôt :</p><pre id="r-2137708" data-claire-element-id="2838316"><code data-claire-semantic="java">package com.sdzee.servlets;
+
+import java.io.IOException;
+
+import javax.ejb.EJB;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.sdzee.dao.UtilisateurDao;
+import com.sdzee.entities.Utilisateur;
+import com.sdzee.forms.InscriptionForm;
+
+@WebServlet( urlPatterns = { &quot;/inscription&quot; } )
+public class Inscription extends HttpServlet {
+    public static final String ATT_USER = &quot;utilisateur&quot;;
+    public static final String ATT_FORM = &quot;form&quot;;
+    public static final String VUE      = &quot;/WEB-INF/inscription.jsp&quot;;
+
+    // Injection de notre EJB (Session Bean Stateless)
+    @EJB
+    private UtilisateurDao   utilisateurDao;
+
+    public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
+        /* Affichage de la page d'inscription */
+        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+    }
+
+    public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
+        /* Préparation de l'objet formulaire */
+        InscriptionForm form = new InscriptionForm( utilisateurDao );
+
+        /* Traitement de la requête et récupération du bean en résultant */
+        Utilisateur utilisateur = form.inscrireUtilisateur( request );
+
+        /* Stockage du formulaire et du bean dans l'objet request */
+        request.setAttribute( ATT_FORM, form );
+        request.setAttribute( ATT_USER, utilisateur );
+
+        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+    }
+}</code></pre><p id="r-2137709" data-claire-element-id="2354768">Comme vous pouvez le voir à la ligne 33, nous transmettons notre EJB - annoté à la ligne 23 - à notre objet métier, de la même manière que nous lui passions l’instance de DAO auparavant. Mais alors que nous devions initialiser manuellement le contenu de notre objet <strong>utilisateurDao</strong> dans notre version précédente, cette fois nous nous reposons entièrement sur le conteneur : à aucun moment nous ne créons ni n'initialisons une instance d'objet, nous nous contentons uniquement de sa déclaration et de son annotation !</p><aside id="r-2137711" data-claire-element-id="2354770" data-claire-semantic="warning"><p id="r-2137710" data-claire-element-id="2354769">Comprenez et retenez bien cet aspect fondamental de l'EJB : nous ne nous occupons plus de son cycle de vie, nous déléguons entièrement ce travail au conteneur.</p></aside><p id="r-2137712" data-claire-element-id="2354771">Avant de passer à la suite, il y a quelque chose de très important que vous devez comprendre au sujet de l'injection d'EJB dans une servlet : <strong>elle est exclusivement réservée aux EJB de type Stateless</strong>. Souvenez-vous : il n'existe qu'une seule et unique instance de votre servlet, que le conteneur initialise au chargement de votre application. Autrement dit, les variables d'instances sont partagées entre toutes les requêtes qui sont redirigées vers votre servlet !</p><p id="r-2137713" data-claire-element-id="2354772">Ainsi, déclarer et utiliser un objet localement dans une des méthodes <strong>doXXX()</strong> ne pose aucun problème, car chaque requête entrante - c'est-à-dire chaque <em>Thread</em> - va créer localement sa propre instance de l'objet. Par contre, déclarer un objet en dehors des méthodes <strong>doXXX()</strong> est à proscrire si l'objet en question conserve un état (en d'autres termes, s'il est Stateful), car il pourra alors être partagé par plusieurs requêtes issues de clients différents. Si vous ne comprenez pas le problème, souvenez-vous de l'exemple du panier d'achats sur un site marchand...</p><p id="r-2137714" data-claire-element-id="2354773">Bref, voilà pourquoi il ne faut jamais procéder à l'injection d'objets Stateful dans une servlet : cela causerait très probablement des comportements non souhaités, que vous ne pourrez déceler qu'après des tests poussés.</p><div id="r-2137716" data-claire-element-id="2354775" data-claire-semantic="question"><p id="r-2137715" data-claire-element-id="2354774">Dans ce cas, pourquoi nous ne nous sommes pas posé cette question lorsque nous partagions notre DAO entre toutes nos requêtes auparavant ?</p></div><p id="r-2137717" data-claire-element-id="2354776">Remarque pertinente : notre DAO était effectivement déclaré en tant que variable d'instance dans notre servlet. Eh bien l'explication, c'est que notre DAO était... sans état ! Eh oui, il ne conservait aucune donnée et pouvait très bien être rendu accessible à différents <em>threads</em>. Bien entendu, je m'étais bien gardé de vous parler de tout ça si tôt, vous aviez déjà bien assez de grain à moudre avec le reste. Disons que je vous avais conduits à me faire inconsciemment et aveuglément confiance ! ;)</p><aside id="r-2137719" data-claire-element-id="2354778" data-claire-semantic="information"><p id="r-2137718" data-claire-element-id="2354777">Dans un chapitre annexe à la fin du cours, vous en apprendrez davantage sur le cycle de vie d'une servlet et sur son caractère <em>multi-threads</em>, via des exemples simples et un déroulement pas à pas du cheminement des requêtes traitées.</p></aside><p id="r-2137720" data-claire-element-id="2354779">Enfin, mais vous l'avez probablement déjà remarqué dans le code, vous n'oublierez pas d'insérer l'annotation Java EE <code>@WebServlet</code> que nous avons découverte dans le chapitre précédent, afin de déclarer votre servlet et ainsi ne plus avoir à maintenir un pénible fichier web.xml !</p><h4 id="r-2137727" data-claire-element-id="2838319">Modification de l’objet métier</h4><p id="r-2137722" data-claire-element-id="2354781">Nous apercevons le bout du tunnel ! Dans notre objet métier, il nous reste une légère modification à apporter, afin de prendre en charge l’initialisation de la date d’inscription au sein du code. Eh oui, réfléchissez bien : puisque c’est maintenant un <strong>EntityManager</strong> qui va s’occuper pour nous de l’insertion en base, et que cette <strong>EntityManager</strong> fait tout derrière les rideaux de manière automatisée via la méthode <code>persist()</code>, nous n’avons plus la possibilité de préciser manuellement à MySQL d’initialiser le champ <strong>date_inscription</strong> via la fonction <code>NOW()</code> comme nous le faisions auparavant. Nous pourrions mettre en place une valeur par défaut pour le champ, en allant directement modifier la table SQL, mais nous sommes là pour faire du Java et un simple ajout suffit pour pallier ce manque :</p><pre id="r-2137723" data-claire-element-id="2838318"><code data-claire-semantic="java">public Utilisateur inscrireUtilisateur( HttpServletRequest request ) {
+    String email = getValeurChamp( request, CHAMP_EMAIL );
+    String motDePasse = getValeurChamp( request, CHAMP_PASS );
+    String confirmation = getValeurChamp( request, CHAMP_CONF );
+    String nom = getValeurChamp( request, CHAMP_NOM );
+    Timestamp date = new Timestamp( System.currentTimeMillis() );
+
+    Utilisateur utilisateur = new Utilisateur();
+    try {
+        traiterEmail( email, utilisateur );
+        traiterMotsDePasse( motDePasse, confirmation, utilisateur );
+        traiterNom( nom, utilisateur );
+        traiterDate( date, utilisateur );
+        ...
+    }
+...
+}
+
+/*
+ * Simple initialisation de la propriété dateInscription du bean avec la
+ * date courante.
+ */
+private void traiterDate( Timestamp date, Utilisateur utilisateur ) {
+    utilisateur.setDateInscription( date );
+}</code></pre><p id="r-2137724" data-claire-element-id="2354783">À la ligne 6, nous initialisons un objet <strong>Timestamp</strong> avec la date et l'heure courantes. Ligne 13, nous réalisons un appel à une méthode <code>traiterDate()</code>, que nous définissons ensuite aux lignes 23 à 25 et qui se contente d'appeler le <em>setter</em> de notre entité. Le reste du code est inchangé, je me suis donc permis de tronquer les blocs pour rester concis. Vous prendrez bien soin d'intégrer correctement ces légers ajouts au code existant de votre objet métier !</p><aside id="r-2137726" data-claire-element-id="2354785" data-claire-semantic="information"><p id="r-2137725" data-claire-element-id="2354784">Nous y voilà ! En prenant un peu de recul, vous vous apercevrez que le code gérant l'accès aux données est autrement plus léger qu’il ne l’était lorsque nous faisions tout à la main, et que le reste de l'application profite par la même occasion de ce régime. Paradoxalement, vous vous rendrez compte que cette nouvelle architecture est très proche de l’ancienne ! Eh oui, le code que je vous avais fait mettre en place était déjà plutôt bien organisé, n’est-ce pas ? ;-)</p></aside><h3 id="r-625519" data-claire-element-id="2838325">Tests et vérifications</h3><h4 id="r-2137741" data-claire-element-id="2354800">Vérification du bon fonctionnement d’une inscription</h4><p id="r-2137729" data-claire-element-id="2354788">Depuis Eclipse, déployez votre projet sur l'instance de GlassFish que vous y avez intégré précédemment, et démarrez le serveur. Rendez-vous ensuite sur la page <code>http://localhost:8088/pro_jpa/inscription</code> depuis votre navigateur, puis faites de simples tests : avec erreurs dans certains champs, puis sans erreur, et enfin avec une adresse déjà enregistrée en base. Si tout est correctement en place, absolument rien ne doit changer dans le comportement de votre application par rapport à notre dernier projet ! :D</p><p id="r-2137730" data-claire-element-id="2354789">Si vous obtenez une erreur quelconque, cela signifie que vous avez oublié quelque chose en cours de route. Assurez-vous que :</p><ul id="r-2137739" data-claire-element-id="2354798"><li id="r-2137732" data-claire-element-id="2354791"><p id="r-2137731" data-claire-element-id="2354790">votre serveur MySQL est bien démarré ;</p></li><li id="r-2137734" data-claire-element-id="2354793"><p id="r-2137733" data-claire-element-id="2354792">votre serveur GlassFish est bien configuré (le pool, notamment) et démarré ;</p></li><li id="r-2137736" data-claire-element-id="2354795"><p id="r-2137735" data-claire-element-id="2354794">vous avez bien copié et modifié toutes les classes et tous les fichiers nécessaires ;</p></li><li id="r-2137738" data-claire-element-id="2354797"><p id="r-2137737" data-claire-element-id="2354796">votre projet est bien déployé sur votre serveur.</p></li></ul><p id="r-2137740" data-claire-element-id="2354799">Dans les coulisses par contre, vous savez que beaucoup de choses ont changé, et que vous avez presque complètement abandonné MySQL et JDBC. D'ailleurs à ce sujet, si nous allions jeter un œil aux requêtes effectuées par EclipseLink - notre solution JPA - lors d'un appel aux méthodes présentes dans notre DAO, c'est-à-dire notre EJB Stateless ?</p><h4 id="r-2137762" data-claire-element-id="2838324">Analyse des requêtes SQL générées lors d’une inscription</h4><p id="r-2137742" data-claire-element-id="2354801">Vous pouvez analyser les requêtes SQL effectuées par un <strong>EntityManager</strong> en activant l'écriture de logs depuis son unité de persistance dans le fichier <strong>persistence.xml</strong>. Vous vous souvenez de ces propriétés dont je vous ai parlé ? Eh bien le moment est venu de nous en servir :</p><pre id="r-2137743" data-claire-element-id="2838321"><code data-claire-semantic="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;persistence version=&quot;2.0&quot; xmlns=&quot;http://java.sun.com/xml/ns/persistence&quot;
+ xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+ xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/persistence 
+ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd&quot;&gt;
+    &lt;persistence-unit name=&quot;bdd_sdzee_PU&quot; transaction-type=&quot;JTA&quot;&gt;
+        &lt;jta-data-source&gt;jdbc/bonecp_resource&lt;/jta-data-source&gt;
+        &lt;class&gt;com.sdzee.entities.Utilisateur&lt;/class&gt;
+        &lt;properties&gt;
+            &lt;property name=&quot;eclipselink.logging.level.sql&quot; value=&quot;FINE&quot;/&gt;
+            &lt;property name=&quot;eclipselink.logging.parameters&quot; value=&quot;true&quot;/&gt;
+        &lt;/properties&gt;		
+    &lt;/persistence-unit&gt;   
+&lt;/persistence&gt;</code></pre><p id="r-2137744" data-claire-element-id="2354803">En ajoutant cette section aux lignes 9 à 12 dans notre fichier <strong>persistence.xml</strong>, nous demandons explicitement à notre solution JPA - EclipseLink - d'écrire dans le fichier de logs du serveur les requêtes SQL qu'elle envoie à la base de données.</p><div id="r-2137746" data-claire-element-id="2354805" data-claire-semantic="question"><p id="r-2137745" data-claire-element-id="2354804">Où se trouve ce fichier de logs ?</p></div><p id="r-2137747" data-claire-element-id="2354806">Selon votre configuration, vous verrez peut-être s'afficher les requêtes effectuées dans l'onglet intitulé <strong>Console</strong> en bas de votre espace de travail Eclipse, aux côtés de l'onglet <strong>Servers</strong> dans lequel vous gérez le déploiement de votre application sur GlassFish. Vous avez en principe la possibilité de visualiser le contenu des logs du serveur en effectuant un clic droit sur son nom, et en suivant GlassFish &gt; View Log file, comme indiqué sur la figure suivante.</p><figure id="r-2137750" data-claire-element-id="2838323"><img id="r-2137748" data-claire-element-id="2354807" src="../../../user.oc-static.com/files/414001_415000/414991.png" alt="Image utilisateur" /></figure><p id="r-2137751" data-claire-element-id="2354810">Si cela ne fonctionne pas sur votre poste, alors il vous suffit d'aller regarder manuellement le fichier nommé <strong>server.log</strong> situé dans le répertoire <strong>/glassfish3/glassfish/domains/domain1/logs</strong>, avec votre éditeur de texte préféré. Si par exemple vous essayez de vous connecter avec une adresse email déjà enregistrée, vous devriez visualiser une requête de cette forme, qui correspond bien à la requête que nous avons écrite en JPQL dans notre EJB :</p><pre id="r-2137752" data-claire-element-id="2354811"><samp>[#|2012-12-03T23:27:09.358+0800|FINE|glassfish3.1.2|org.eclipse.persistence.session.file: 
+.../glassfish3/glassfish/domains/domain1/eclipseApps/pro_jpa/WEB-INF/classes/_bdd_sdzee_PU.sql|_ThreadID=18;_ThreadName=Thread-3;
+ClassName=null;MethodName=null;|SELECT ID, date_inscription, EMAIL, mot_de_passe, NOM FROM UTILISATEUR WHERE (EMAIL = ?)
+        bind =&gt; [coyote@gmail.com]|#]</samp></pre><p id="r-2137753" data-claire-element-id="2354812">Dans cet exemple, j'ai essayé de m'inscrire avec l'adresse coyote@gmail.com alors qu'elle existe déjà en base. Ne vous préoccupez pas des informations affichées en amont : ce sont simplement d'autres marqueurs qui ne nous intéressent pas pour notre étude. Si maintenant vous vous inscrivez avec succès, vous allez pouvoir observer les requêtes suivantes :</p><pre id="r-2137754" data-claire-element-id="2354813"><samp>[#| .... |INSERT INTO UTILISATEUR (date_inscription, EMAIL, mot_de_passe, NOM) VALUES (?, ?, ?, ?)
+        bind =&gt; [2012-12-03 23:37:31.582, coyote@test.com, wZdEPOFZ3KpA7qCanXtfeHtb0GDe66qEmh0FvLKnp00dP0PGKK70jQ==, test]|#]
+
+[#| .... |SELECT LAST_INSERT_ID()|#]</samp></pre><p id="r-2137755" data-claire-element-id="2354814">Dans cet exemple, j'ai utilisé pour m'inscrire l'adresse coyote@test.com, et j'ai renseigné mon nom avec le mot &quot;test&quot;. Il est intéressant de remarquer deux choses :</p><ul id="r-2137760" data-claire-element-id="2354819"><li id="r-2137757" data-claire-element-id="2354816"><p id="r-2137756" data-claire-element-id="2354815">la méthode <code>persist()</code> de l'EntityManager - que, pour rappel, nous appelons à la ligne 20 de notre EJB Stateless - s'occupe pour nous de générer automatiquement une requête d'insertion et d'y assigner les différentes valeurs des paramètres attendus. Nul besoin de le préciser, la requête générée est bien entendu une requête préparée ;</p></li><li id="r-2137759" data-claire-element-id="2354818"><p id="r-2137758" data-claire-element-id="2354817">afin de récupérer l'id auto-généré, vous pouvez voir ici la seconde requête SQL effectuée : <code>SELECT LAST_INSERT_ID()</code>.</p></li></ul><p id="r-2137761" data-claire-element-id="2354820">Je vous laisse analyser davantage par vous-mêmes les échanges ayant lieu dans les différents cas d'usage de notre petite application.</p><h3 id="r-625533" data-claire-element-id="2354836">Aller plus loin</h3><p id="r-2137763" data-claire-element-id="2354823">Vous devez être conscients d’une chose : je ne peux ici que guider vos premiers pas. Les <em>frameworks</em> ORM, même limités strictement au standard JPA, couvrent un panel d’applications si vaste qu'il est presque impossible d’être exhaustif sur le sujet. Par ailleurs, bien que vous soyez arrivés jusqu’ici, il va encore vous falloir acquérir de l’expérience avant de pouvoir saisir pleinement toutes les possibilités offertes par ces solutions.</p><aside id="r-2137765" data-claire-element-id="2354825" data-claire-semantic="information"><p id="r-2137764" data-claire-element-id="2354824">En aparté, voilà pourquoi il est extrêmement important à mes yeux que vous assimiliez les concepts dans l’ordre, en découvrant et appliquant les bonnes pratiques au fur et à mesure de votre apprentissage. Voilà donc pourquoi je vous ai fait apprendre étape par étape depuis le début de ce cours : pour que vous ayez une expérience concrète de ce qui se passe en coulisses. Et voilà pourquoi même si je n’ai fait ici que vous mettre dans la bonne direction, je vous ai donné les clés nécessaires à la bonne compréhension des principes mis en jeu.</p></aside><p id="r-2137766" data-claire-element-id="2354826">Vous aurez très vite l’occasion d’en découvrir davantage avec la prochaine et dernière étape du fil rouge, mais il reste un nombre conséquent d’informations importantes et d’outils très pratiques que nous n’allons pas aborder ensemble. En voici quelques-uns, pour vous mettre l’eau à la bouche :</p><ul id="r-2137775" data-claire-element-id="2354835"><li id="r-2137768" data-claire-element-id="2354828"><p id="r-2137767" data-claire-element-id="2354827">avec un <em>framework</em> ORM, il est possible de générer automatiquement le code des entités depuis les tables d’une base de données ! Encore moins de code à écrire, et donc moins de travail pour le développeur ;</p></li><li id="r-2137770" data-claire-element-id="2354830"><p id="r-2137769" data-claire-element-id="2354829">avec un <em>framework</em> ORM, il est possible de générer automatiquement les tables d’une base de données depuis les entités d’une application ! Eh oui, la réciproque est également possible : si un développeur préfère réaliser un modèle objet plutôt qu’un modèle de données, il lui est possible de ne pas avoir à s’occuper lui-même de la création des tables !</p></li><li id="r-2137772" data-claire-element-id="2354832"><p id="r-2137771" data-claire-element-id="2354831">avec un <em>framework</em> ORM, la gestion des transactions est automatisée. C'est un aspect que nous n'avons pas abordé dans ce cours, mais qui entre très vite en jeu dans une application un petit peu plus évoluée ;</p></li><li id="r-2137774" data-claire-element-id="2354834"><p id="r-2137773" data-claire-element-id="2354833">avec un <em>framework</em> ORM, …</p></li></ul><h3 id="r-625579" data-claire-element-id="2354882">ORM, ou ne pas ORM ?</h3><p id="r-2137776" data-claire-element-id="2354837">Beaucoup d’interrogations et de débats fusent sur la toile concernant le pour et le contre. Beaucoup de clichés, d’informations dépassées voire erronées, et surtout un manque d’information flagrant. Tentons de mettre au clair quand utiliser un ORM, et quand s’en passer…</p><h5 id="r-2137778" data-claire-element-id="2354839">Génération des requêtes</h5><p id="r-2137777" data-claire-element-id="2354838">Si les requêtes créées par une solution de persistance sont parfaites pour les actions de type CUD (<em>Create, Update, Delete</em>), elles sont plus discutables pour les requêtes de type R (les SELECT et toutes leurs clauses et jointures éventuelles).</p><h5 id="r-2137780" data-claire-element-id="2354841">Perte de contrôle sensible sur le SQL utilisé pour communiquer avec la BDD</h5><p id="r-2137779" data-claire-element-id="2354840">C'est un fait indiscutable : de par sa nature, un <em>framework</em> ORM masque les communications avec la BDD. S'il est possible de paramétrer finement une solution de persistance afin qu'elle produise des requêtes SQL au plus proche de ce que l'on aurait fait à la main, le jeu n'en vaut pas toujours la chandelle. Il faut parfois passer plus de temps à paramétrer le tout qu'à le faire soi-même. Certes, cette abstraction peut être acceptable dans certains cas, mais elle peut faire réfléchir sur de gros projets où les performances sont cruciales et dans le cadre desquels il faut optimiser au maximum les requêtes effectuées.</p><h5 id="r-2137782" data-claire-element-id="2354843">Fonctionnalités annexes, en dehors des bases de JPA</h5><p id="r-2137781" data-claire-element-id="2354842">La plupart des <em>frameworks</em> existant fournissent des fonctionnalités intéressantes n'existant pas (encore) dans le standard JPA, et permettent ainsi au développeur de s'affranchir de certaines contraintes, souvent chronophages lorsqu'elles doivent être prises en compte manuellement.</p><h5 id="r-2137784" data-claire-element-id="2354845">Envergure du projet</h5><p id="r-2137783" data-claire-element-id="2354844">Indubitablement, sur un projet de grande taille, l'utilisation d'un <em>framework</em> ORM entraîne un gain en temps de développement important.</p><h5 id="r-2137786" data-claire-element-id="2354847">Contexte du projet</h5><p id="r-2137785" data-claire-element-id="2354846">En règle générale, si le modèle de données d'un projet est préexistant, alors il est probablement plus sage de partir sans ORM. À l'opposé, si le modèle de données d'un projet change fréquemment durant son développement, alors partir sur un ORM offre un avantage considérable, avec la possibilité de regénérer entièrement et automatiquement la couche d’accès aux données.</p><h5 id="r-2137788" data-claire-element-id="2354849">Performances attendues</h5><p id="r-2137787" data-claire-element-id="2354848">Dans des projets où la performance est la préoccupation principale, il est plus sage de ne pas utiliser d'ORM. Je me permets ici un gros raccourci, mais dans ce contexte il est important de noter qu'un ORM n’est pas rapide, et que son tuning est complexe.</p><h5 id="r-2137790" data-claire-element-id="2354851">Possibilité de mixer avec et sans ORM</h5><p id="r-2137789" data-claire-element-id="2354850">Dans l'absolu, il ne faut pas perdre de vue qu'il est possible d'utiliser JPA pour tout ce qui est simple et barbant - les actions de type CUD et certaines actions de lecture - et du SQL fait main pour le reste. Il suffit pour cela d'une couche d'abstraction, un DAO par exemple, et il devient alors aisé de ne conserver que les avantages des deux solutions.</p><h5 id="r-2137820" data-claire-element-id="2354881">Solutions alternatives</h5><p id="r-2137791" data-claire-element-id="2354852">Il ne faut pas perdre de vue que d'autres moyens existent. C'est bien souvent une fausse bonne idée, mais il arrive que certaines grandes boîtes, sur certains grands projets, créent leur propre <em>framework</em> de persistance. En outre, des solutions plus légères et transparentes comme MyBatis reprennent ce que les développeurs apprécient dans un ORM, tout en conservant une transparence au niveau du SQL recherchée par bon nombre d'entre eux.</p><p id="r-2137792" data-claire-element-id="2354853">Voilà les principales pistes que vous serez amenés à explorer si vous êtes, un jour, contraints de vous poser la question &quot;ORM, ou pas ORM ?&quot;. Si je ne devais utiliser qu'un seul argument pour aiguiller votre choix, je vous conseillerais de vous poser la question suivante : est-ce que vous souhaitez passer une grande partie de votre temps sur la couche d’accès aux données, ou est-ce que vous préférez consacrer votre temps et votre énergie à développer une couche métier efficace ?</p><aside id="r-2137794" data-claire-element-id="2354855" data-claire-semantic="warning"><p id="r-2137793" data-claire-element-id="2354854">Enfin pour terminer et faire un aparté sur votre apprentissage, sachez que de très petits projets comme nous en créons dans le cadre de ce cours sont des opportunités en or pour apprendre calmement et efficacement comment fonctionne une solution de persistance. N'attendez surtout pas d'être parachutés sur des projets immenses ou même simplement déjà bien entamés, sans quoi vous allez passer un temps fou à réellement saisir tout ce qui mérite d'être assimilé.</p></aside><p id="r-2137795" data-claire-element-id="2354856">Nous allons nous arrêter ici en ce qui concerne la persistance de données. C’est à la fois trop et pas assez : trop, parce que beaucoup de concepts intervenant dans la bonne appréhension d’un tel système sont inconnus des novices, et pas assez parce que, même débutants, je suis certain que vous souhaitez en apprendre davantage sur cet aspect du développement !</p><p id="r-2137796" data-claire-element-id="2354857">Rassurez-vous, je ne vous abandonne pas en cours de route : comme je vous l’ai déjà expliqué, avec ce que vous avez appris dans ce chapitre - que vous allez par ailleurs mettre en pratique et compléter dans un cas plus complexe dans l’étape suivante du TP Fil rouge - vous avez les notions nécessaires pour voler de vos propres ailes ! Sans aucun doute, pour être complet sur le sujet, il faudrait un cours à part entière.</p><ul id="r-2137819" data-claire-element-id="2354880"><li id="r-2137798" data-claire-element-id="2354859"><p id="r-2137797" data-claire-element-id="2354858">JPA est un <strong>standard</strong> appartenant à Java EE, définissant un système de persistance de données.</p></li><li id="r-2137800" data-claire-element-id="2354861"><p id="r-2137799" data-claire-element-id="2354860">Hibernate, EclipseLink et consorts sont des <em>frameworks</em> ORM, des solutions qui <strong>implémentent</strong> ce standard.</p></li><li id="r-2137802" data-claire-element-id="2354863"><p id="r-2137801" data-claire-element-id="2354862">JPA masque intégralement le moyen de stockage au développeur, en lui permettant de travailler uniquement sur un <strong>modèle objet</strong>. C'est le framework qui se charge dans les coulisses de dialoguer avec la BDD pour assurer la correspondance avec le modèle.</p></li><li id="r-2137804" data-claire-element-id="2354865"><p id="r-2137803" data-claire-element-id="2354864">L'objet qui représente une table de la BDD est un <strong>EJB</strong> de type <strong>Entity</strong>. C'est un JavaBean déclaré auprès du conteneur par <code>@Entity</code>, et contenant un ensemble d'annotations sur ses propriétés, permettant de définir les contraintes et relations existantes.</p></li><li id="r-2137806" data-claire-element-id="2354867"><p id="r-2137805" data-claire-element-id="2354866">L'objet qui fournit des méthodes d'interaction avec la BDD est l'<strong>EntityManager</strong>, et il est entièrement géré par le conteneur.</p></li><li id="r-2137808" data-claire-element-id="2354869"><p id="r-2137807" data-claire-element-id="2354868">Le fichier de configuration de JPA se nomme <strong>persistence.xml</strong>, et doit être placé dans le répertoire <strong>src/META-INF</strong>.</p></li><li id="r-2137810" data-claire-element-id="2354871"><p id="r-2137809" data-claire-element-id="2354870">C'est une bonne pratique d'utiliser un <strong>EJB Stateless</strong> en guise de DAO. Il suffit alors d'y injecter l'EntityManager via <code>@PersistenceContext</code>, et d'appeler ses différentes méthodes d'interaction.</p></li><li id="r-2137812" data-claire-element-id="2354873"><p id="r-2137811" data-claire-element-id="2354872">Contrairement à un <strong>EJB Stateful</strong>, un EJB Stateless peut être injecté sans risques dans une servlet via <code>@EJB</code>.</p></li><li id="r-2137814" data-claire-element-id="2354875"><p id="r-2137813" data-claire-element-id="2354874">Les objets et EJB « injectés » sont entièrement gérés par le conteneur, le développeur ne fait que les utiliser.</p></li><li id="r-2137816" data-claire-element-id="2354877"><p id="r-2137815" data-claire-element-id="2354876">Le détail des requêtes SQL effectuées sur la BDD par le <em>framework</em> ORM peut être enregistré dans le fichier de logs du serveur, en activant le mode <strong>logging</strong> dans le fichier persistence.xml de l'application.</p></li><li id="r-2137818" data-claire-element-id="2354879"><p id="r-2137817" data-claire-element-id="2354878">Un <em>framework</em> ORM n'est ni une solution magique et réponse à tout, ni une machinerie lourde et inutilisable : une analyse rapide du contexte d'un projet permet de définir s'il est intéressant ou non d'y faire intervenir une telle solution.</p></li></ul>
+
+                <div class="js-courseSelementActions sideActions">
+    <ul class="sideActions__container">
+        <li>
+            <a class="sideActions__item  js-courseElementActions-copyUrl  js-tooltip"
+               href="#" data-tooltip="Copier le lien"
+               data-tooltip-done="Lien copié !">
+            #
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+
+            
+            <nav class="course-pagination    clearfix">
+
+            <a href="les-annotations.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--previous">
+            <i class="icon-previous"></i>
+            <span>Les annotations</span>
+        </a>
+    
+    <span class="course-pagination__separator"></span>
+
+            <a href="tp-fil-rouge-etape-7.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--next">
+            <span>TP Fil rouge - Étape 7</span>
+            <i class="icon-next"></i>
+        </a>
+    
+</nav>
+
+            
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-view-restriction_popin_title"
+                class="popin popin--illustrated  js-popin"
+        id="popin-view-restriction"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+                    <div class="popin__illustrationWrapper">
+                <div class="popin__illustration illustration--balloon"></div>
+            </div>
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-view-restriction_popin_title" class="popin__title  js-popin-title">Waouh !</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <p>
+            Très heureux de voir que nos cours vous plaisent, déjà 3 pages lues aujourd&#039;hui ! Vous pouvez continuer la lecture de nos cours en devenant un Roomie, un membre de la communauté d&#039;OpenClassrooms. C&#039;est gratuit !
+        </p>
+        <p>
+            Vous pourrez aussi suivre votre avancement dans le cours, faire les exercices et discuter avec les autres Roomies.
+        </p>
+                    </div>
+            </div>
+
+                            <div class="popin__actions  js-popin-actions">
+                                                                        <a class="oc-btn orange-alt-btn "  href="https://openclassrooms.com/register">S'inscrire</a>
+                                                    <a class="oc-btn dark-btn "  href="https://openclassrooms.com/login">Se connecter</a>
+                                                            </div>
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+        </div>
+
+
+    </section>
+</div>
+    </div>
+
+    
+    <div id="popin-not-certifying-yet"
+     class="popin"
+     data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <a href='https://openclassrooms.com/premium'><i class='icon-star'></i> Devenez Premium</a>
+                    ">
+    <img alt="Exemple de certificat de réussite" src="../../../static.oc-static.com/prod/images/courses/certif.jpg"/>
+</div>
+
+
+                </main>
+
+                <aside class="contentWithSidebar__sidebar  js-contentWithSidebar-slidingElement" >
+                        <nav class="col-nav">
+    <div id="tab-courseMenu" class="col-nav__inner js-sidebar-inner">
+        <div class="col-nav__block  col-nav__block--summary">
+
+            <div class="side-paginate">
+                                    <a href="les-annotations.html" class="side-paginate__previous">
+                        <i class="icon-previous"></i>
+                    </a>
+
+                    <span class="side-paginate__separator"></span>
+                
+                <h6 class="side-paginate__title">
+                    Aller plus loin avec JPA et JSF
+                </h6>
+
+                                    <span class="side-paginate__separator"></span>
+
+                    <a href="tp-fil-rouge-etape-7.html" class="side-paginate__next">
+                        <i class="icon-next"></i>
+                    </a>
+                            </div>
+
+                            <div class="col-nav__block--summary-list">
+                    <ol class="col-nav__chapters">
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="les-annotations.html">Les annotations</a>
+                                                            </li>
+                                                    <li class="selected">
+                                                                                                    <span class="col-nav__chapterTitle">La persistance des données avec JPA</span>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="tp-fil-rouge-etape-7.html">TP Fil rouge - Étape 7</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="introduction-aux-frameworks-mvc.html">Introduction aux frameworks MVC</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="premiers-pas-avec-jsf.html">Premiers pas avec JSF</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="la-gestion-d-un-formulaire-avec-jsf.html">La gestion d&#039;un formulaire avec JSF</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="l-envoi-de-fichiers-avec-jsf.html">L&#039;envoi de fichiers avec JSF</a>
+                                                            </li>
+                                            </ol>
+
+                                    </div>
+                    </div>
+
+        
+        
+            <div class="col-nav__block  col-nav__block--subscribe">
+            <a href="https://openclassrooms.com/login" class="oc-btn orange-alt-btn js-popin-activator" data-popin-selector="#popin-log-in">
+                <i class="icon-lock"></i>
+                Suivre ce cours
+            </a>
+
+            <a href="https://openclassrooms.com/how-does-it-work">
+                <small>Comment ça marche ?</small>
+            </a>
+        </div>
+    
+
+
+        
+                    <div class="col-nav__block col-nav__block--institution">
+    <h2>Créé par</h2>
+            <a  href="https://openclassrooms.com/partners/openclassrooms" target="_blank">
+            <img src="../../../sdz-upload.s3.amazonaws.com/prod/partners/img/logo_logo-oc.png" alt="logo OpenClassrooms" class="col-nav__institutionLogo"/>
+            <p class="col-nav__block--institutionDescription">
+                OpenClassrooms, 1ère plateforme  <span class='nowrap'>e-Education<span> en Europe
+            </p>
+        </a>
+    </div>
+        
+        
+        
+    
+                        
+            
+    <div class="socialNetwork col-nav__block">
+        <ul class="socialButtons  js-socialButtons"
+    data-options="
+                title: 'Découvrez le cours &quot;La persistance des données avec JPA&quot; sur @OpenClassrooms',
+        mailTitle: 'Cours &quot;La persistance des données avec JPA&quot; sur OpenClassrooms',
+        mailContent: 'Découvrez le cours &quot;La persistance des données avec JPA&quot; sur OpenClassrooms.'">
+
+    <li>
+        <a class="roundIcon  roundIcon--twitter addthis_button_twitter  js-socialButtons-btn" data-tooltip="Partagez sur Twitter" >
+            <i class="roundIcon__icon  icon-twitter"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--facebook  addthis_button_facebook  js-socialButtons-btn" data-tooltip="Partagez sur Facebook">
+            <i class="roundIcon__icon  icon-facebook"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--googlePlus  addthis_button_google_plusone_share  js-socialButtons-btn" data-tooltip="Partagez sur Google+" >
+            <i class="roundIcon__icon  icon-google"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  addthis_button_email  js-socialButtons-btn  js-socialButtons-email" data-tooltip="Partagez par e-mail">
+            <i class="roundIcon__icon  icon-letter"></i>
+        </a>
+    </li>
+
+</ul>
+
+    </div>
+    </div>
+</nav>
+                </aside>
+            </div>
+        </div>
+
+                    <footer class="alt-section">
+    <div class="centered">
+
+        <div class="row">
+                            <div class="col4 course-bottom__category">
+                    <h2 class="highlighted">
+                        L&#039;auteur
+                    </h2>
+                    <div>
+                                                    <a itemprop="author" itemscope itemtype="http://schema.org/Person" href="https://openclassrooms.com/membres/coyote-92394" class="no-underlined">
+                                <div class="course-bottom__text-illustrated">
+                                    <span data-author="Médéric Munier" style="background-image: url(../../../www.gravatar.com/avatar/15c349ac5313535fba91e5dbfa8803ec/indexd6dc.html?s=256&amp;r=g&amp;d=https%3A%2F%2Fopenclassrooms.com%2Fbundles%2Fcommon%2Fimages%2Favatar_defaut.png);"></span>
+                                    <h4 itemprop="name">Médéric Munier</h4>
+                                                                            <p itemprop="description">
+                                            Auteur du livre sur le Java EE.
+                                        </p>
+                                                                    </div>
+                            </a>
+                                            </div>
+                </div>
+            
+                            <div class="col8 course-bottom__category">
+                    <h2 class="highlighted">Découvrez aussi ce cours en...</h2>
+
+                    <ul class="course-bottom__format">
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">eBook</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-book"></i>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">Livre papier</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook pdf"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">PDF</div>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                    </div>
+
+    </div>
+</footer>
+
+
+    </article>
+            </div>
+        </div>
+
+                    <footer class="footer">
+    <div class="centered">
+        <div class="row">
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    OpenClassrooms
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/about-us" class="footer__link">Qui sommes-nous ?</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/how-does-it-work" class="footer__link">Fonctionnement de nos cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/jobs" class="footer__link">Recrutement</a>
+                    </li>
+                    <li>
+                        <a href="#" class="js-zendesk-show footer__link">Nous contacter</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Professionnels
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/affiliation" class="footer__link">
+                            Affiliation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/business" class="footer__link">Entreprises</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/universities" class="footer__link">Universités et écoles</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Participez
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/new-teachers" class="footer__link">Créer un cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/courses/courselab" class="footer__link">CourseLab</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/terms-conditions/fr" class="footer__link">
+                            <strong>Conditions Générales d&#039;Utilisation</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Suivez-nous
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+                                                                    <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="http://blog.openclassrooms.com/" class="footer__link">Le blog OpenClassrooms</a>
+                    </li>
+                    <li>
+                        <ul class="footer__socialNetwork">
+                            <li>
+                                <a href="https://www.facebook.com/openclassrooms" target="_blank" class="roundIcon roundIcon--facebook footer__socialButtons">
+                                    <i class="icon-facebook roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/openclassrooms" target="_blank" class="roundIcon roundIcon--twitter footer__socialButtons">
+                                    <i class="icon-twitter roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/+OpenClassrooms/posts" target="_blank" class="roundIcon roundIcon--youtube footer__socialButtons">
+                                    <i class="icon-google roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/openclassrooms" target="_blank" class="roundIcon roundIcon--instagram footer__socialButtons">
+                                    <i class="icon-instagram roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/TheOpenClassrooms" target="_blank" class="roundIcon roundIcon--googlePlus footer__socialButtons">
+                                    <i class="icon-youtube roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/openclassrooms" target="_blank" class="roundIcon roundIcon--linkedin footer__socialButtons">
+                                    <i class="icon-linkedin roundIcon__icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
+        
+        <!-- loaded javascript block -->
+
+            
+            <script type="text/javascript" src="../../js/maind0b3.js?095b5b3"></script>
+
+        
+
+    <script type="text/javascript" src="../../js/oc/courseViewd0b3.js?095b5b3"></script>
+
+
+        <!-- loaded javascript block -->
+
+        <script type="text/javascript">
+    window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+    window.analytics.load('mou95e6tdn');
+</script>
+
+                            
+        <!-- inlined javascript block -->
+
+        <script type="text/javascript">
+            
+            if (App.modules) {
+                App.modules.startAll();
+            }
+        </script>
+
+                        
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"90dc06697a","applicationID":"20302107","transactionName":"NANaYkJXC0ICAhdYVw1Je0NDQgpcTA4AblsPB1FEVWkGXhYTEFRnEwdKQm9GBEMXPhVYXRQ=","queueTime":0,"applicationTime":423,"atts":"GERZFApNGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-persistance-des-donnees-avec-jpa by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:52:17 GMT -->
+</html>

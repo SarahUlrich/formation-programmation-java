@@ -1,0 +1,1971 @@
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="fr" prefix="og: http://ogp.me/ns#">
+    
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/tp-fil-rouge-etape-1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:49:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(e,t){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,t)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var u=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(u,function(e,t){newrelic[t]=r(f+t,"api")}),i(c,function(e,t){newrelic[t]=r(f+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?u(e,a,i):i()}function n(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,c=0;u>c;c++)a[c].apply(i,r);var s=f[g[n]];return s&&s.push([m,n,r,i]),i}function p(e,t){w[e]=l(e).concat(t)}function l(e){return w[e]||[]}function d(e){return s[e]=s[e]||o(n)}function v(e,t){c(e,function(e,n){t=t||"feature",g[n]=t,t in f||(f[t]=[])})}var w={},g={},m={on:p,emit:n,get:d,listeners:l,context:t,buffer:v};return m}function i(){return new r}var a="nr@context",u=e("gos"),c=e(2),f={},s={},p=t.exports=o();p.backlog=f},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!w++){var e=v.info=NREUM.info,t=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){c(l,function(t,n){e[t]||(e[t]=n)});var n="https"===p.split(":")[0]||e.sslForHttp;v.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=v.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=window,s=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var p=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),v=t.exports={offset:a(),origin:p,features:{},xhrWrappable:d};s.addEventListener?(s.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(s.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),u("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader"]);</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="application-name" content="OpenClassrooms"/>
+        <meta name="msapplication-TileColor" content="#e95325"/>
+        <meta name="msapplication-TileImage" content="/fav-icon.png?v=1"/>
+
+        <meta name="theme-color" content="#E95325">
+        <link rel="icon" sizes="144x144" href="../../fav-icon3860.png?v=1">
+
+        
+        
+        <link href="../../bundles/common/css/masterd0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"  />
+        
+
+        <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="../../apple-touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-iphone-retina-display.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-ipad-retina-display.png" />
+
+        <link rel="apple-touch-icon-precomposed" href="../../apple-touch-icon-precomposed.png" />
+
+            <link href="../../bundles/course/css/maind0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" src="../../js/modernizrd0b3.js?095b5b3"></script>
+
+        <link rel="shortcut icon" href="https://openclassrooms.com/favicon.ico?095b5b3" />
+
+            
+    <meta property="og:locale" content="fr"/>
+    <meta property="og:type" content="website"/>
+
+    <meta property="og:title" content="Découvrez le cours &quot;TP Fil rouge - Étape 1&quot; sur @OpenClassrooms"/>
+    <meta property="og:url" content="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/tp-fil-rouge-etape-1"/>
+    <meta property="og:site_name" content="OpenClassrooms"/>
+    <meta property="og:image" content="https://static.oc-static.com/prod/courses/illustrations/illu_creez-votre-application-web-avec-java-ee.png"/>
+    <meta property="og:description" content="Pour réaliser des sites web en Java, on utilise l&#039;environnement Java EE (anciennement appelé J2EE). Celui-ci impose de développer de façon très structurée, ce qui explique certainement pour quoi on le retrouve dans un très grand nombre d&#039;applications web notamment en entreprise (banques, administrations...)."/>
+
+            
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@OpenClassrooms"/>
+    <meta name="twitter:title" content="Découvrez le cours &quot;TP Fil rouge - Étape 1&quot; sur @OpenClassrooms"/>
+    <meta name="twitter:description" content=""/>
+
+                
+        <title>TP Fil rouge - Étape 1</title>
+
+        <!-- inlined top javascript block -->
+
+
+        <script type="text/javascript">
+            var App = {
+                startTime: (new Date()).getTime(),
+                debug: false
+            };
+
+            App.user = {
+                
+                
+                
+                isPremium: false
+            };
+
+
+            App.preferences = {
+                assetVersion: '095b5b3',
+                contactMail: 'hello@openclassrooms.com',
+                adyenPublicKey: '10001|889EBFD4D434B82683E21DCA26E77C3E20E0EE09A5ECE3830B0ED51F2FA721A2F7E9EC871C6AB9A1E12C4492F4717673047757E02C5256D8E265CD51E413E5EFCCFEAC41B39C662A424ADC13EE187C38C372A7FCCEC1EA5DF841989437D78B252A8EB51008E60BB55B1E55A7A80DE1A9D60D998C128A576BFAE1DDB97D514AF0A073AEDDE84CEE40D1F8F6ECE85D0FFA50C95C06DB274021C1371376C6EB16561FD65C5E2704B570A7504D617D0F3820F176A0609F6162BDF5890533289FDC3DA7DB03B50BB3BD60A613E1FF72060F22987627E8F1A29F0128A94EC4C8FF7CF6B7AB9558D8433BF86D7A388AB927641CD6C02689139CEE3AAC9ACBFFE83806CB',
+                algolia: {
+                    appId: 'JGRXRFVQM0',
+                    apiKey: 'dfbdea500cb0b5f46e449ad334916c44', indexName: 'prod_COURSES_fr'
+                },
+                routes: {
+                    COURSE_EVENT: '/components/courses/:courseId',
+                    COURSE_PART_EVENT: '/components/courses/:courseId/parts/:partId',
+
+                    ACCEPT_COOKIE: '/components/user-accept-consent-cookie'
+                }
+
+                                            };
+
+            App.preferences.navigationPreference = {
+                            };
+
+            App.preferences.modules = {
+                'smiley': {
+                    basePath: '/bundles/common/images/smiley/'
+                }
+            };
+        </script>
+        <!-- inlined top javascript block end -->
+
+        <script>    App.preferences.modules['course/view/internalFolding'] = {
+        isBigCourse: true
+    };
+
+    App.data = App.data || {};
+App.data.currentCourse = {"partId":620852,"courseId":626954};
+App.preferences.modules['view/currentCoursePage'] = App.data.currentCourse;
+
+</script>
+
+        
+        
+    </head>
+
+    <body class="course oc-body ">
+
+        
+
+        
+    
+    
+    <script id="_EVENTS-PAGE" type="application/json">
+        {"type":"page"}
+    </script>
+
+
+        <!--[if lt IE 9]>
+<div class="disclaimer  disclaimer-error">
+    Vous utilisez un navigateur obsolète, veuillez le <a href="http://browsehappy.com/">mettre à jour</a>.
+</div>
+<![endif]-->
+
+<noscript>
+    <div class="disclaimer  disclaimer--error">
+        Veuillez utiliser un <a href="http://browsehappy.com/">navigateur internet moderne</a> avec JavaScript activé pour naviguer sur OpenClassrooms.com
+    </div>
+</noscript>
+
+
+                    
+
+<header id="oc-header" class="js-tabs-mobile mainHeader ">
+
+        <div class="disclaimer  disclaimer--info hidden  js-cookie-disclaimer">
+        <div class="disclaimer__wrapper">
+            <span class="disclaimer__content">Bienvenue sur OpenClassrooms ! En poursuivant votre navigation, vous acceptez l'utilisation de cookies. <a href="https://openclassrooms.com/privacy-policy#personal-data-gathering">En savoir plus</a></span>
+            <span class="disclaimer__actions">
+                <a href="#" class="disclaimer__button  js-close-button">ok</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="mainHeader__wrapper">
+
+        <div class="mainHeader__topLine">
+                <a href="https://openclassrooms.com/pole-emploi/partenariat?utm_source=SiteWeb-OC&amp;utm_medium=Lien-PhraseHeader&amp;utm_campaign=relancePE"> Vous êtes demandeur d'emploi ? On vous offre le Premium Solo en 3 clics :) ! </a>
+
+        </div>
+
+        <div class="mainHeader__top">
+            <a href="https://openclassrooms.com/" class="mainHeader__logo" title="OpenClassrooms.com">OpenClassrooms.com</a>
+
+            
+<nav role="navigation" class="icoTabs  mainHeader__tabSet">
+    <span class="mainHeader__mobileNav">
+
+        
+        
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseEditMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" data-tabs-default="true" href="#tab-searchMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-search  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab" href="#tab-main">
+            <i class="icon-menu  icoTabs__icon"></i>
+        </a>
+    </span>
+
+</nav>
+        </div>
+
+                <div class="js-tabs-content  mainHeader__content"></div>
+
+        <div class="mainHeader__content">
+            <div id="tab-main" class="mainHeader__tabs">
+                <nav class="mainTopNav  scrollPanel  js-scrollPanel-mobileMenu">
+    <div class="mainTopNav__container  scrollPanel__container  js-scrollPanel-container">
+        <ul class="mainHeader__container  mainHeader__container--mainMenu  js-scrollPanel-content">
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="http://openclassrooms.com/paths/">Parcours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/courses">Cours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/forum/">Forums</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/partners">Partenaires</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/premium">Premium</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+                <div class="mainHeader__contentInner">
+                    <div class="mainHeader__container  mainHeader__container--search">
+                                                                                                                                                                            
+                                                                          
+ <div class="js-courseSearch  topSearchBox">
+     <form tabindex="0" class="js-courseSearch-form  oc-form" action="https://openclassrooms.com/courses" method="get">
+         <div class="js-courseSearch-inputGroup oc-form__widget  inputGroup  topSearchBox__inner">
+             <input id="algolia-search-input"
+                    type="search"
+                    class="js-courseSearch-input oc-form__control inputGroup__input  topSearchBox__input"
+                    title="Rechercher"
+                    autocomplete="off"
+                    data-option_source="/components/courses/search?q=<%= term %>"
+                    placeholder="Rechercher"
+                    name="q" />
+
+             <button class="js-courseSearch-button  oc-btn dark-btn  only-icon  inputGroup__button  topSearchBox__button" type="submit" title="Rechercher un cours">
+                 <i class="inputGroup__icon icon-search"></i>
+                 <i class="inputGroup__icon inputGroup__icon--load icon-spinner icon-spin"></i>
+             </button>
+         </div>
+     </form>
+ </div>
+                    </div>
+
+                                            <div class="mainHeader__container  mainHeader__container--separatorLarge  hidden-s"></div>
+                    
+
+
+                    
+                                            <div class="mainHeader__container  mainHeader__container--login">
+    <a href="https://openclassrooms.com/register" class="oc-btn orange-alt-btn js-popin-activator space-right" data-popin-selector="#popin-sign-in">
+    S&#039;inscrire
+</a>
+<a href="https://openclassrooms.com/login" class="oc-btn dark-btn js-popin-activator" data-popin-selector="#popin-log-in">
+    Se connecter
+</a>
+</div>
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-sign-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-sign-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-sign-in_popin_title" class="popin__title  js-popin-title">Inscription</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=fe876f32bb9cffa660c172304145f7f9&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail">
+            <i class="icon-facebook"></i>S&#039;inscrire avec Facebook
+        </a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto">
+            <i class="icon-google"></i>S&#039;inscrire avec Google
+        </a>
+    </li>
+
+    <li class="formLogin__column">
+        
+            
+    
+    
+
+    <form name="register" method="post" action="https://openclassrooms.com/register" class="js-registerForm oc-form">
+
+        <div class="accessibility-hidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Wonder&nbsp;                        </span><span class="oc-form__widget"><input type="text" id="register_wonder" name="register[wonder]" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Prénom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_firstName" name="register[firstName]" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Nom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_lastName" name="register[lastName]" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="email" id="register_email" name="register[email]" required="required" class="" /></span></label>
+            <p>
+                <em>
+                    Vous recevrez votre mot de passe sur cette adresse email.
+                </em>
+            </p>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="register_terms" name="register[terms]" required="required" class="" value="1" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            J'ai lu et j'accepte les <a href="https://openclassrooms.com/terms-conditions/fr">Conditions Générales d'Utilisation</a>.&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span></span></label>
+        </div>
+
+
+        <div class="oc-form__group  center-text">
+            
+    <button type="submit" id="register_create" name="register[create]" class="oc-btn orange-alt-btn oc-btn"> S'inscrire</button>
+        </div>
+
+        <input type="hidden" id="register__target_path" name="register[_target_path]" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/tp-fil-rouge-etape-1" /><input type="hidden" id="register__token" name="register[_token]" value="LEhsW-IhokD4hQHYoHva_FZzYy-PP2cG-886IBpx9HY" /></form>
+    </li>
+</ul>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-log-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-log-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-log-in_popin_title" class="popin__title  js-popin-title">Connexion</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=fe876f32bb9cffa660c172304145f7f9&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail"><i class="icon-facebook"></i> Se connecter avec Facebook</a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto"><i class="icon-google"></i> Se connecter avec Google</a>
+    </li>
+
+    <li class="formLogin__column">
+
+        
+            
+    
+    
+
+    <form name="" method="post" action="https://openclassrooms.com/login_check" class=" oc-form">
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email ou nom d'utilisateur&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="_username" name="_username" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Mot de passe&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="password" id="_password" name="_password" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="_remember_me" name="_remember_me" class="" value="1" checked="checked" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            Se souvenir de moi&nbsp;                        </span></span></label>
+        </div>
+
+        <div class="oc-form__group right-text">
+            <a href="https://openclassrooms.com/set-new-password">Mot de passe oublié</a>
+        </div>
+
+        <div class="oc-form__group  center-text">
+            <input type="hidden" id="_target_path" name="_target_path" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/tp-fil-rouge-etape-1" /><div>
+    <button type="submit" id="login" name="login" class="orange-alt-btn oc-btn"> Se connecter</button></div><input type="hidden" id="_csrf_token" name="_csrf_token" value="WFIVlYEKEcL5v9hnQC1z3quXwgYs14KEFOLh1GUmi_I" />
+        </div>
+
+        </form>
+    </li>
+</ul>
+<p class="text-center space-top">
+    Pas encore membre ? <a href="https://openclassrooms.com/register">Inscrivez-vous gratuitement</a> en 30s.
+</p>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+                    
+                    <div class="mainHeader__container  mainHeader__container--langSelector">
+                        <div class="js-popOut-header  popOut popOut--small  popOut--rightAlign" data-keep-it-mobile="true">
+    <span class="js-popOut-button  popOut__button">
+                    <a href="javascript:;" class="languageSelector__selected">Français</a>
+            </span>
+    <ul class="popOutList  popOut__content  popOutList--small">
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/en/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">English</a>
+            </li>
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/es/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">Español</a>
+            </li>
+            </ul>
+</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+        
+        <div id="mainSearch" class="centered search-content">
+        </div>
+
+        <div id="mainContentWithHeader">
+            <div id="pre-main-part">
+                
+                                        <section class="inset no-padding">
+        <div class="centered">
+
+            <h6 class="accessibility-hidden">Fil d&#039;Ariane</h6>
+
+            <nav class="breadcrumb">
+                <ul class="breadcrumbtrail">
+                                                                        <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/" itemprop="url">
+                                <span itemprop="title">Accueil</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses" itemprop="url">
+                                <span itemprop="title">Cours</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee?status=published" itemprop="url">
+                                <span itemprop="title">Créez votre application web avec Java EE</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li class="current" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            TP Fil rouge - Étape 1
+                                                                        </li>
+                                    </ul>
+            </nav>
+        </div>
+    </section>
+
+                
+                            </div>
+
+            <div class="claire clearfix" >
+                    <article itemscope itemtype="http://schema.org/Article">
+
+                        
+<header class="course-header" xmlns="http://www.w3.org/1999/html">
+    <div class="centered"><div class="course-header__topPart"><div class="course-header__info"><a itemprop="url" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><h1 data-course-title="Créez votre application web avec Java EE">Créez votre application web avec Java EE</h1></a><span class="course-header__updatedTime visible-l">Mis à jour le lundi 13 juillet 2015</span></div></div></div><div class="course-header__details-container"><div class="centered"><div class="row"><div class="col12"><div class="course-header__details  iconBar"><div class="course-header__detailsGroup  course-header__detailsGroup--formats iconBar__group"><ul data-option_popinselector="#popin-formats-availables" class="course-types iconBar__list js-course-formats-bar"><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours est visible gratuitement en ligne."><a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><i class="icon-desktop  course-types__icon"></i><span class="course-header__format-current"></span></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore en vidéo."><span><i class="icon-video course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en livre papier."><a href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank"><i class="icon-book  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en eBook."><a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee"><i class="icon-ebook  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip"
+                                                                                            title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours."
+                                                                                ><a
+                                                                                        ><i class="icon-badge  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore diplômant et ne vous permet pas d&#039;obtenir des crédits universitaires européens (ECTS)."><span><i class="icon-hat  course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Vous pouvez être accompagné sur ce cours par un mentor dédié en visioconférence."><a  href="https://openclassrooms.com/premium#discover-premium-plus-offer" ><i class="icon-mentor  course-types__icon"></i></a></li></ul></div><div class="course-header__detailsGroup  course-header__detailsGroup--info  iconBar__group"><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-duration iconBar__icon js-tooltip" title="Ce cours demande en moyenne 40 heures de travail pour être réussi."></i><span class="iconBar__label">40 heures</span></li><li class="iconBar__item"><i class="icon-level iconBar__icon"></i><span class="iconBar__label">
+                                                                                                    Moyenne
+                                                                                            </span></li></ul></div><div class="course-header__detailsGroup course-header__detailsGroup--licences iconBar__group"><a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/2.0"><span class="iconBar__label">Licence</span><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-cc iconBar__icon" title="CC"></i></li><li class="iconBar__item"><i class="icon-ccby iconBar__icon" title="BY"></i></li><li class="iconBar__item"><i class="icon-ccnc iconBar__icon" title="NC"></i></li><li class="iconBar__item"><i class="icon-ccsa iconBar__icon" title="SA"></i></li></ul></a></div></div></div></div></div></div>
+    <div id="popin-formats-availables" class="popin popin--course-formats-availables">
+        <i class="popin__close-button icon-close js-close-button"></i>
+
+        <div class="course-types course-types--withSpace">
+                            <a class="course-types__item" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-desktop course-types__icon"></i>
+                </a>
+            
+            
+                            <a class="course-types__item" href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms">
+                    <i class="icon-book course-types__icon"></i>
+                </a>
+            
+                            <a class="course-types__item" href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-ebook course-types__icon"></i>
+                </a>
+            
+            
+                                        <a class="course-types__item" href="https://openclassrooms.com/premium#discover-premium-plus-offer">
+                    <i class="icon-mentor course-types__icon"></i>
+                </a>
+                    </div>
+
+                    <p>Ce cours est visible <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">gratuitement en ligne</a>.</p>
+        
+        
+                    <p>
+                Ce cours existe en livre papier.
+            </p>
+        
+                    <p>Ce cours existe <a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">en eBook</a>.</p>
+        
+        
+        
+                    <p>
+                Vous pouvez être <a href="https://openclassrooms.com/premium#discover-premium-plus-offer">accompagné et mentoré par un professeur particulier</a> par visioconférence sur ce cours.
+            </p>
+        
+        <a class="oc-btn orange-alt-btn js-close-button" href="#">J&#039;ai tout compris !</a>
+    </div>
+
+    
+</header>
+
+    <div class="centered">
+                            
+        
+            <div class="row">
+        <div class="col12 col11-s">
+                            <nav class="timeline">
+        <div class="timeline__inner">
+
+        <span class="timeline__iconContainer">
+            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+                <i class="icon-home roundIcon__icon"></i>
+            </a>
+        </span>
+            <div class="timeline__steps">
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-au-java-ee.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction au Java EE
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-java-ee-mis-a-nu.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le Java EE mis à nu !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="outils-et-environnement-de-developpement.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Outils et environnement de développement
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="la-servlet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La servlet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="servlet-avec-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Servlet avec vue…
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="transmission-de-donnees.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Transmission de données
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-javabean.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le JavaBean
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-1-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (1/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-2-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (2/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="des-problemes-de-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Des problèmes de vue ?
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-1.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 1
+                                </span>
+
+                                                                    <span class="timeline__progressMarker"></span>
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="objectifs-et-configuration.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Objectifs et configuration
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-core.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque Core
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-core-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL core : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-xml.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque xml
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-xml-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL xml : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="faisons-le-point-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Faisons le point !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 2
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="formulaires-le-b-a-ba.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : le b.a.-ba
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-a-la-mode-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : à la mode MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-3.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 3
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-session-connectez-vos-clients.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La session : connectez vos clients
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-filtre-creez-un-espace-membre.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le filtre : créez un espace membre
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-cookie-le-navigateur-vous-ouvre-ses-portes.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le cookie : le navigateur vous ouvre ses portes
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-4.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 4
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-l-envoi-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : l&#039;envoi de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-telechargement-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le téléchargement de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-5.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 5
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-a-mysql-et-jdbc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction à MySQL et JDBC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="communiquez-avec-votre-bdd.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Communiquez avec votre BDD
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-modele-dao.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le modèle DAO
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-6.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 6
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="gerer-un-pool-de-connexions-avec-bonecp.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Gérer un pool de connexions avec BoneCP
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="les-annotations.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Les annotations
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-persistance-des-donnees-avec-jpa.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La persistance des données avec JPA
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-7.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 7
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="introduction-aux-frameworks-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction aux frameworks MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="premiers-pas-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Premiers pas avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-gestion-d-un-formulaire-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La gestion d&#039;un formulaire avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="l-envoi-de-fichiers-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    L&#039;envoi de fichiers avec JSF
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="debugger-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Débugger un projet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="empaquetage-et-deploiement-d-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Empaquetage et déploiement d&#039;un projet
+                                </span>
+
+                                                            </a>
+                                            
+                
+                <span class="timeline__splitChapter"></span>
+
+            </div>
+
+        <span class="timeline__iconContainer">
+                            <span title="Ce cours n&#039;est pas encore certifiant." class="roundIcon roundIcon--disabled">
+                    <i class="icon-trophy roundIcon__icon"></i>
+                </span>
+                    </span>
+
+        </div>
+    </nav>
+        </div>
+    </div>
+    </div>
+
+        
+        <div class="centered">
+            <div class="contentWithSidebar  spacer  js-contentWithSidebar" >
+                <main class="contentWithSidebar__content" >
+                        
+
+        <div class="relative js-sidebar-container">
+        <div class="static">
+    <h2 itemprop="name" data-part-title="TP Fil rouge - Étape 1" class="part-title">TP Fil rouge - Étape 1</h2>
+
+    <section class="row space-bottom js-desktop-sticky-container">
+        <div class="col9 col11-s col__small-padding--right">
+
+                <div class="tooltipMessage tooltipMessage--noArrow">
+        <i class="tooltipMessage__icon  icon-lock"></i>
+        <a href="https://openclassrooms.com/login" class="js-popin-activator" data-popin-selector="#popin-log-in" >Connectez-vous</a> ou <a href="https://openclassrooms.com/register" class="js-popin-activator" data-popin-selector="#popin-sign-in" >inscrivez-vous</a> pour bénéficier de toutes les fonctionnalités de ce cours !
+    </div>
+
+            <div
+                itemprop="articleBody"
+                data-page-indentifier="/courses/creez-votre-application-web-avec-java-ee/tp-fil-rouge-etape-1"
+                class="js-isRestrictablePage course-content js-course-container js-smilize "
+
+                                    data-video-blocked-wrapper="<a href='https://openclassrooms.com/login#popin-log-in' class='js-popin-activator'>"
+                            >
+
+                <p id="r-2133046" data-claire-element-id="2350019">Comme je vous l’annonçais en avant-propos, vous êtes ici pour apprendre à créer un projet web, en y ajoutant de la complexité au fur et à mesure que le cours avance. Avec tout ce que vous venez de découvrir, vous voici prêts pour poser la première pierre de l'édifice ! Je vous propose, dans cette première étape de notre TP fil rouge qui vous accompagnera jusqu'au terme de votre apprentissage, de revoir et appliquer l'ensemble des notions abordées jusqu'à présent.</p><h3 id="r-2133078" data-claire-element-id="2837385">Objectifs</h3><h4 id="r-2133049" data-claire-element-id="2350022">Contexte</h4><p id="r-2133047" data-claire-element-id="2350020">J'ai choisi la thématique du commerce en ligne comme source d'inspiration : vous allez créer un embryon d'application qui va permettre la création et la visualisation de clients et de commandes. C'est à la fois assez global pour ne pas impliquer d'éléments qui vous sont encore inconnus, et assez spécifique pour coller avec ce que vous avez appris dans ces chapitres et êtes capables de réaliser.</p><p id="r-2133048" data-claire-element-id="2350021">L'objectif premier de cette étape, c'est de vous familiariser avec le développement web sous Eclipse. Vous allez devoir mettre en place un projet en partant de zéro dans votre environnement, et y créer vos différents fichiers. Le second objectif est que vous soyez à l'aise avec l'utilisation de servlets, de pages JSP et de beans, et de manière générale avec le principe général d'une application Java EE.</p><h4 id="r-2133068" data-claire-element-id="2350041">Fonctionnalités</h4><h5 id="r-2133058" data-claire-element-id="2350031">Création d'un client</h5><p id="r-2133050" data-claire-element-id="2350023">À travers notre petite application, l'utilisateur doit pouvoir créer un client en saisissant des données depuis un formulaire, et visualiser la fiche client en résultant. Puisque vous n'avez pas encore découvert les formulaires, je vais vous fournir une page qui vous servira de base. Votre travail sera de coder :</p><ul id="r-2133057" data-claire-element-id="2350030"><li id="r-2133052" data-claire-element-id="2350025"><p id="r-2133051" data-claire-element-id="2350024">un bean, représentant un client ;</p></li><li id="r-2133054" data-claire-element-id="2350027"><p id="r-2133053" data-claire-element-id="2350026">une servlet, chargée de récupérer les données envoyées par le formulaire, de les enregistrer dans le bean et de les transmettre à une JSP ;</p></li><li id="r-2133056" data-claire-element-id="2350029"><p id="r-2133055" data-claire-element-id="2350028">une JSP, chargée d'afficher la fiche du client créé, c'est-à-dire les données transmises par la servlet.</p></li></ul><h5 id="r-2133067" data-claire-element-id="2350040">Création d'une commande</h5><p id="r-2133059" data-claire-element-id="2350032">L'utilisateur doit également pouvoir créer une commande, en saisissant des données depuis un formulaire, et visualiser la fiche en résultant. De même, puisque vous n'avez pas encore découvert les formulaires, je vais vous fournir une page qui vous servira de base. Votre travail sera de coder :</p><ul id="r-2133066" data-claire-element-id="2350039"><li id="r-2133061" data-claire-element-id="2350034"><p id="r-2133060" data-claire-element-id="2350033">un bean, représentant une commande ;</p></li><li id="r-2133063" data-claire-element-id="2350036"><p id="r-2133062" data-claire-element-id="2350035">une servlet, chargée de récupérer les données envoyées par le formulaire, de les enregistrer dans le bean et de les transmettre à une JSP ;</p></li><li id="r-2133065" data-claire-element-id="2350038"><p id="r-2133064" data-claire-element-id="2350037">une JSP, chargée d'afficher la fiche de la commande créée, c'est-à-dire les données transmises par la servlet.</p></li></ul><h4 id="r-2133077" data-claire-element-id="2837384">Contraintes</h4><p id="r-2133069" data-claire-element-id="2350042">Comme je viens de vous l'annoncer, vous devez utiliser ces deux formulaires comme base pour votre application. Vous les placerez directement à la racine de votre application, sous le répertoire <strong>WebContent</strong> d'Eclipse.</p><h5 id="r-2133071" data-claire-element-id="2837379">Création d'un client</h5><pre id="r-2133070" data-claire-element-id="2837378"><code data-claire-semantic="jsp">&lt;%@ page pageEncoding=&quot;UTF-8&quot; %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;title&gt;Création d'un client&lt;/title&gt;
+        &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;inc/style.css&quot; /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;
+            &lt;form method=&quot;get&quot; action=&quot;creationClient&quot;&gt;
+                &lt;fieldset&gt;
+                    &lt;legend&gt;Informations client&lt;/legend&gt;
+    
+                    &lt;label for=&quot;nomClient&quot;&gt;Nom &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;nomClient&quot; name=&quot;nomClient&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+                    &lt;br /&gt;
+                    
+                    &lt;label for=&quot;prenomClient&quot;&gt;Prénom &lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;prenomClient&quot; name=&quot;prenomClient&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+                    &lt;br /&gt;
+    
+                    &lt;label for=&quot;adresseClient&quot;&gt;Adresse de livraison &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;adresseClient&quot; name=&quot;adresseClient&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+                    &lt;br /&gt;
+    
+                    &lt;label for=&quot;telephoneClient&quot;&gt;Numéro de téléphone &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;telephoneClient&quot; name=&quot;telephoneClient&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+                    &lt;br /&gt;
+                    
+                    &lt;label for=&quot;emailClient&quot;&gt;Adresse email&lt;/label&gt;
+                    &lt;input type=&quot;email&quot; id=&quot;emailClient&quot; name=&quot;emailClient&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;60&quot; /&gt;
+                    &lt;br /&gt;
+                &lt;/fieldset&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Valider&quot;  /&gt;
+                &lt;input type=&quot;reset&quot; value=&quot;Remettre à zéro&quot; /&gt; &lt;br /&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre><h5 id="r-2133073" data-claire-element-id="2837381">Création d'une commande</h5><pre id="r-2133072" data-claire-element-id="2837380"><code data-claire-semantic="jsp">&lt;%@ page pageEncoding=&quot;UTF-8&quot; %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;title&gt;Création d'une commande&lt;/title&gt;
+        &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;inc/style.css&quot; /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;
+            &lt;form method=&quot;get&quot; action=&quot;creationCommande&quot;&gt;
+                &lt;fieldset&gt;
+                    &lt;legend&gt;Informations client&lt;/legend&gt;
+    
+                    &lt;label for=&quot;nomClient&quot;&gt;Nom &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;nomClient&quot; name=&quot;nomClient&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+                    &lt;br /&gt;
+                    
+                    &lt;label for=&quot;prenomClient&quot;&gt;Prénom &lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;prenomClient&quot; name=&quot;prenomClient&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+                    &lt;br /&gt;
+    
+                    &lt;label for=&quot;adresseClient&quot;&gt;Adresse de livraison &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;adresseClient&quot; name=&quot;adresseClient&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+                    &lt;br /&gt;
+    
+                    &lt;label for=&quot;telephoneClient&quot;&gt;Numéro de téléphone &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;telephoneClient&quot; name=&quot;telephoneClient&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+                    &lt;br /&gt;
+                    
+                    &lt;label for=&quot;emailClient&quot;&gt;Adresse email&lt;/label&gt;
+                    &lt;input type=&quot;email&quot; id=&quot;emailClient&quot; name=&quot;emailClient&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;60&quot; /&gt;
+                    &lt;br /&gt;
+                &lt;/fieldset&gt;
+                &lt;fieldset&gt;
+                    &lt;legend&gt;Informations commande&lt;/legend&gt;
+                    
+                    &lt;label for=&quot;dateCommande&quot;&gt;Date &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;dateCommande&quot; name=&quot;dateCommande&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; disabled /&gt;
+                    &lt;br /&gt;
+                    
+                    &lt;label for=&quot;montantCommande&quot;&gt;Montant &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;montantCommande&quot; name=&quot;montantCommande&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+                    &lt;br /&gt;
+                    
+                    &lt;label for=&quot;modePaiementCommande&quot;&gt;Mode de paiement &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;modePaiementCommande&quot; name=&quot;modePaiementCommande&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+                    &lt;br /&gt;
+                    
+                    &lt;label for=&quot;statutPaiementCommande&quot;&gt;Statut du paiement&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;statutPaiementCommande&quot; name=&quot;statutPaiementCommande&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+                    &lt;br /&gt;
+                    
+                    &lt;label for=&quot;modeLivraisonCommande&quot;&gt;Mode de livraison &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;modeLivraisonCommande&quot; name=&quot;modeLivraisonCommande&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+                    &lt;br /&gt;
+                    
+                    &lt;label for=&quot;statutLivraisonCommande&quot;&gt;Statut de la livraison&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;statutLivraisonCommande&quot; name=&quot;statutLivraisonCommande&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;20&quot; /&gt;
+                    &lt;br /&gt;
+                &lt;/fieldset&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Valider&quot;  /&gt;
+                &lt;input type=&quot;reset&quot; value=&quot;Remettre à zéro&quot; /&gt; &lt;br /&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre><h5 id="r-2133076" data-claire-element-id="2837383">Feuille de style</h5><p id="r-2133074" data-claire-element-id="2350047">Voici pour finir une feuille de style que je vous propose d'utiliser pour ce TP. Toutefois, si vous êtes motivés vous pouvez très bien créer et utiliser vos propres styles, cela n'a pas d'importance.</p><pre id="r-2133075" data-claire-element-id="2837382"><code data-claire-semantic="css">/* Général ------------------------------------------------------------------------------------- */
+
+body, p, legend, label, input {
+    font: normal 8pt verdana, helvetica, sans-serif;
+}
+
+/* Forms --------------------------------------------------------------------------------------- */
+fieldset {
+    padding: 10px;
+    border: 1px #0568CD solid;
+    margin: 10px;
+}
+
+legend {
+    font-weight: bold;
+    color: #0568CD;
+}
+
+form label {
+    float: left;
+    width: 200px;
+    margin: 3px 0px 0px 0px;
+}
+
+form input {
+    margin: 3px 3px 0px 0px;
+    border: 1px #999 solid;
+}
+
+form input.sansLabel {
+    margin-left: 200px;
+}
+
+/* Styles et couleurs -------------------------------------------------------------------------- */
+.requis {
+    color: #c00;
+}
+
+.erreur {
+    color: #900;
+}
+
+.succes {
+    color: #090;
+}
+
+.info {
+    font-style: italic;
+    color: #E8A22B;
+}</code></pre><h3 id="r-620831" data-claire-element-id="2837411">Conseils</h3><h4 id="r-2133089" data-claire-element-id="2350062">À propos des formulaires</h4><p id="r-2133079" data-claire-element-id="2350052">Voici les seules informations que vous devez connaître pour attaquer :</p><ul id="r-2133088" data-claire-element-id="2350061"><li id="r-2133081" data-claire-element-id="2350054"><p id="r-2133080" data-claire-element-id="2350053">ces deux formulaires sont configurés pour envoyer les données saisies vers les adresses <strong>/creationClient</strong> et <strong>/creationCommande</strong>. Lorsque vous mettrez en place vos deux servlets, vous devrez donc effectuer un mapping respectivement sur chacune de ces deux adresses dans votre fichier <strong>web.xml</strong> ;</p></li><li id="r-2133083" data-claire-element-id="2350056"><p id="r-2133082" data-claire-element-id="2350055">les données seront envoyées via la méthode GET du protocole HTTP, vous devrez donc implémenter la méthode <code>doGet()</code> dans vos servlets ;</p></li><li id="r-2133085" data-claire-element-id="2350058"><p id="r-2133084" data-claire-element-id="2350057">le nom des paramètres créés lors de l'envoi des données correspond au contenu des attributs <code>&quot;name&quot;</code> de chaque balise <code>&lt;input&gt;</code> des formulaires. Par exemple, le nom du client étant saisi dans la balise <code>&lt;input name=&quot;nomClient&quot;... /&gt;</code> du formulaire, il sera accessible depuis votre servlet par un appel à <code>request.getParameter(&quot;nomClient&quot;)</code> ;</p></li><li id="r-2133087" data-claire-element-id="2350060"><p id="r-2133086" data-claire-element-id="2350059">j'ai volontairement désactivé le champ de saisie de la date dans le formulaire de création d'une commande. Nous intégrerons bien plus tard un petit calendrier permettant le choix d'une date, mais pour le moment nous ferons sans.</p></li></ul><h4 id="r-2133098" data-claire-element-id="2350071">Le modèle</h4><p id="r-2133090" data-claire-element-id="2350063">Vous n'allez travailler que sur deux entités, à savoir un client et une commande. Ainsi, deux objets suffiront :</p><ul id="r-2133095" data-claire-element-id="2350068"><li id="r-2133092" data-claire-element-id="2350065"><p id="r-2133091" data-claire-element-id="2350064">un bean <strong>Client</strong> représentant les données récupérées depuis le formulaire <strong>creerClient.jsp</strong> (nom, prénom, adresse, etc.) ;</p></li><li id="r-2133094" data-claire-element-id="2350067"><p id="r-2133093" data-claire-element-id="2350066">un bean <strong>Commande</strong> représentant les données récupérées depuis la seconde partie du formulaire <strong>creerCommande.jsp</strong> (date, montant, mode de paiement, etc.).</p></li></ul><p id="r-2133096" data-claire-element-id="2350069">N'hésitez pas à relire le chapitre sur les Javabeans pour vous rafraîchir la mémoire sur leur structure.</p><p id="r-2133097" data-claire-element-id="2350070"><strong>Note 1 :</strong> au sujet du type des propriétés de vos beans, je vous conseille de toutes les déclarer de type <code>String</code>, sauf le montant de la commande que vous pouvez éventuellement déclarer de type <code>double</code>.<br /><strong>Note 2 :</strong> lors de la création d'une commande, l'utilisateur va devoir saisir des informations relatives au client. Plutôt que de créer une propriété pour chaque champ relatif au client (nom, prénom, adresse, etc.) dans votre bean <strong>Commande</strong>, vous pouvez directement y inclure une propriété de type <strong>Client</strong>, qui à son tour contiendra les propriétés nom, prénom, etc.</p><h4 id="r-2133113" data-claire-element-id="2350086">Les contrôleurs</h4><p id="r-2133099" data-claire-element-id="2350072">Les deux formulaires que je vous fournis sont paramétrés pour envoyer les données saisies au serveur par le biais d'une requête de type GET. Vous aurez donc à créer deux servlets, que vous pouvez par exemple nommer <strong>CreationClient</strong> et <strong>CreationCommande</strong>, qui vont pour chaque formulaire :</p><ul id="r-2133111" data-claire-element-id="2350084"><li id="r-2133101" data-claire-element-id="2350074"><p id="r-2133100" data-claire-element-id="2350073">récupérer les paramètres saisis, en appelant <code>request.getParameter()</code> sur les noms des différents champs ;</p></li><li id="r-2133103" data-claire-element-id="2350076"><p id="r-2133102" data-claire-element-id="2350075">les convertir dans le type souhaité si certaines des propriétés de vos beans ne sont pas des <code>String</code>, puis les enregistrer dans le bean correspondant ;</p></li><li id="r-2133110" data-claire-element-id="2350083"><p id="r-2133104" data-claire-element-id="2350077">vérifier si l'utilisateur a oublié de saisir certains paramètres requis (ceux marqués d'une étoile sur le formulaire de saisie) :</p><ul id="r-2133109" data-claire-element-id="2350082"><li id="r-2133106" data-claire-element-id="2350079"><p id="r-2133105" data-claire-element-id="2350078">si oui, alors transmettre les beans et un message d'erreur à une page JSP pour affichage ;</p></li><li id="r-2133108" data-claire-element-id="2350081"><p id="r-2133107" data-claire-element-id="2350080">si non, alors transmettre les beans et un message de succès à une page JSP pour affichage.</p></li></ul></li></ul><p id="r-2133112" data-claire-element-id="2350085">Puisque le champ de saisie de la date est désactivé, vous allez devoir initialiser la propriété <strong>date</strong> du bean <strong>Commande</strong> avec la date courante. Autrement dit, vous allez considérer que la date d'une commande est simplement la date courante lors de la validation du formulaire. Vous devrez donc récupérer directement la date courante depuis votre servlet et l'enregistrer au format <code>String</code> dans le bean.</p><h4 id="r-2133116" data-claire-element-id="2350089">Les vues</h4><p id="r-2133114" data-claire-element-id="2350087">Je vous fournis les deux pages JSP contenant les formulaires de saisie des données. Les seules vues que vous avez à développer sont celles qui affichent les données saisies, après validation du formulaire. Vous pouvez par exemple les nommer <strong>afficherClient.jsp</strong> et <strong>afficherCommande.jsp</strong>. Elles vont recevoir un ou plusieurs beans et un message depuis leur servlet respective, et devront afficher les données contenues dans ces objets. Vous l'avez probablement déjà deviné, les expressions EL sont la solution idéale ici !</p><p id="r-2133115" data-claire-element-id="2350088">Vous êtes libres au niveau de la mise en forme des données et des messages affichés ; ce qui importe n'est pas le rendu graphique de vos pages, mais bien leur capacité à afficher correctement ce qu'on attend d'elles ! ;)</p><h4 id="r-2133123" data-claire-element-id="2837388">Création du projet</h4><p id="r-2133117" data-claire-element-id="2350090">Avant de vous lâcher dans la nature, revenons rapidement sur la mise en place du projet. N'hésitez pas à relire le chapitre sur la configuration d'un projet si vous avez encore des incertitudes à ce sujet. Je vous conseille de créer un projet dynamique en partant de zéro dans Eclipse, que vous pouvez par exemple nommer <strong>tp1</strong>, basé sur le serveur Tomcat 7 que nous avons déjà mis en place dans le cadre du cours. Vous devrez alors configurer le build-path comme nous avons appris à le faire dans le chapitre sur les Javabeans. Vous allez par ailleurs devoir manipuler une date lors de la création d'une commande : je vous encourage pour cela à utiliser la bibliothèque JodaTime que nous avons découverte dans le chapitre précédent.</p><p id="r-2133118" data-claire-element-id="2350091">Pour conclure, voici à la figure suivante ce à quoi est supposée ressembler l'architecture de votre projet fini si vous avez suivi mes conseils et exemples de nommage.</p><figure id="r-2133121" data-claire-element-id="2837387"><img id="r-2133119" data-claire-element-id="2350092" src="../../../user.oc-static.com/files/384001_385000/384545.png" alt="Image utilisateur" /></figure><p id="r-2133122" data-claire-element-id="2350095">Vous pouvez observer en encadré sur cette image le positionnement des trois fichiers dont je vous ai fourni le code.</p><h4 id="r-2133129" data-claire-element-id="2837391">Illustration du comportement attendu</h4><p id="r-2133124" data-claire-element-id="2350097">À la figure suivante, voici sous forme d'un schéma ce que vous devez réaliser dans le cas de la création d'un client.</p><figure id="r-2133127" data-claire-element-id="2837390"><img id="r-2133125" data-claire-element-id="2350098" src="../../../user.oc-static.com/files/385001_386000/385114.png" alt="Image utilisateur" /></figure><p id="r-2133128" data-claire-element-id="2350101">Je ne vous illustre pas la création d'une commande, le principe étant très similaire !</p><h4 id="r-2133160" data-claire-element-id="2837410">Exemples de rendu du comportement attendu</h4><h5 id="r-2133144" data-claire-element-id="2837400">Création d'un client</h5><p id="r-2133130" data-claire-element-id="2350103"><strong>Avec succès (voir les figures suivantes).</strong></p><figure id="r-2133133" data-claire-element-id="2837393"><img id="r-2133131" data-claire-element-id="2350104" src="../../../user.oc-static.com/files/384001_385000/384757.png" alt="Saisie de données valides dans le formulaire" /><figcaption>Saisie de données valides dans le formulaire</figcaption></figure><figure id="r-2133136" data-claire-element-id="2837395"><img id="r-2133134" data-claire-element-id="2350107" src="../../../user.oc-static.com/files/384001_385000/384758.png" alt="Affichage du message de succès et des données" /><figcaption>Affichage du message de succès et des données</figcaption></figure><p id="r-2133137" data-claire-element-id="2350110"><strong>Avec erreur (voir les figures suivantes).</strong></p><figure id="r-2133140" data-claire-element-id="2837397"><img id="r-2133138" data-claire-element-id="2350111" src="../../../user.oc-static.com/files/384001_385000/384763.png" alt="Oubli d'un champ obligatoire dans le formulaire" /><figcaption>Oubli d'un champ obligatoire dans le formulaire</figcaption></figure><figure id="r-2133143" data-claire-element-id="2837399"><img id="r-2133141" data-claire-element-id="2350114" src="../../../user.oc-static.com/files/384001_385000/384764.png" alt="Affichage du message d'erreur et des données" /><figcaption>Affichage du message d'erreur et des données</figcaption></figure><h5 id="r-2133159" data-claire-element-id="2837409">Création d'une commande</h5><p id="r-2133145" data-claire-element-id="2350118"><strong>Avec succès (voir les figures suivantes).</strong></p><figure id="r-2133148" data-claire-element-id="2837402"><img id="r-2133146" data-claire-element-id="2350119" src="../../../user.oc-static.com/files/384001_385000/384759.png" alt="Saisie de données valides dans le formulaire" /><figcaption>Saisie de données valides dans le formulaire</figcaption></figure><figure id="r-2133151" data-claire-element-id="2837404"><img id="r-2133149" data-claire-element-id="2350122" src="../../../user.oc-static.com/files/384001_385000/384760.png" alt="Affichage du message de succès et des données" /><figcaption>Affichage du message de succès et des données</figcaption></figure><p id="r-2133152" data-claire-element-id="2350125"><strong>Avec erreur (voir les figures suivantes).</strong></p><figure id="r-2133155" data-claire-element-id="2837406"><img id="r-2133153" data-claire-element-id="2350126" src="../../../user.oc-static.com/files/384001_385000/384761.png" alt="Oubli de champs obligatoires et saisie d'un montant erroné dans le formulaire" /><figcaption>Oubli de champs obligatoires et saisie d'un montant erroné dans le formulaire</figcaption></figure><figure id="r-2133158" data-claire-element-id="2837408"><img id="r-2133156" data-claire-element-id="2350129" src="../../../user.oc-static.com/files/384001_385000/384762.png" alt="Affichage du message d'erreur et des données" /><figcaption>Affichage du message d'erreur et des données</figcaption></figure><h3 id="r-620851" data-claire-element-id="2837422">Correction</h3><p id="r-2133161" data-claire-element-id="2350135">Je vous propose cette solution en guise de correction. Ce n'est pas la seule manière de faire. Ne vous inquiétez pas si vous avez procédé différemment, si vous avez nommé vos objets différemment ou si vous avez bloqué sur certains éléments. Le code est commenté et vous est parfaitement accessible : il ne contient que des instructions et expressions que nous avons déjà abordées dans les chapitres précédents.</p><aside id="r-2133163" data-claire-element-id="2350137" data-claire-semantic="warning"><p id="r-2133162" data-claire-element-id="2350136">Prenez le temps de créer votre projet depuis le début, puis de chercher et de coder par vous-mêmes. Si besoin, n'hésitez pas à relire le sujet ou à retourner lire certains chapitres. La pratique est très importante : ne vous jetez pas sur la solution avant d'avoir essayé réussi ! :)</p></aside><h4 id="r-2133166" data-claire-element-id="2837414">Le code des beans</h4><pre id="r-2133164" data-claire-element-id="2837412"><code data-claire-semantic="java">package com.sdzee.tp.beans;
+
+public class Client {
+    /* Propriétés du bean */
+    private String nom;
+    private String prenom;
+    private String adresse;
+    private String telephone;
+    private String email;
+
+    public void setNom( String nom ) {
+        this.nom = nom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setPrenom( String prenom ) {
+        this.prenom = prenom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setAdresse( String adresse ) {
+        this.adresse = adresse;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone( String telephone ) {
+        this.telephone = telephone;
+    }
+
+    public void setEmail( String email ) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+}</code></pre><pre id="r-2133165" data-claire-element-id="2837413"><code data-claire-semantic="java">package com.sdzee.tp.beans;
+
+
+public class Commande {
+    /* Propriétés du bean */
+    private Client client;
+    private String date;
+    private Double montant;
+    private String modePaiement;
+    private String statutPaiement;
+    private String modeLivraison;
+    private String statutLivraison;
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient( Client client ) {
+        this.client = client;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate( String date ) {
+        this.date = date;
+    }
+
+    public Double getMontant() {
+        return montant;
+    }
+
+    public void setMontant( Double montant ) {
+        this.montant = montant;
+    }
+
+    public String getModePaiement() {
+        return modePaiement;
+    }
+
+    public void setModePaiement( String modePaiement ) {
+        this.modePaiement = modePaiement;
+    }
+
+    public String getStatutPaiement() {
+        return statutPaiement;
+    }
+
+    public void setStatutPaiement( String statutPaiement ) {
+        this.statutPaiement = statutPaiement;
+    }
+
+    public String getModeLivraison() {
+        return modeLivraison;
+    }
+
+    public void setModeLivraison( String modeLivraison ) {
+        this.modeLivraison = modeLivraison;
+    }
+
+    public String getStatutLivraison() {
+        return statutLivraison;
+    }
+
+    public void setStatutLivraison( String statutLivraison ) {
+        this.statutLivraison = statutLivraison;
+    }
+}</code></pre><h4 id="r-2133173" data-claire-element-id="2837418">Le code des servlets</h4><p id="r-2133167" data-claire-element-id="2350141">Configuration des servlets dans le fichier <strong>web.xml</strong> :</p><pre id="r-2133168" data-claire-element-id="2837415"><code data-claire-semantic="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app&gt;
+	&lt;servlet&gt;
+		&lt;servlet-name&gt;CreationClient&lt;/servlet-name&gt;
+		&lt;servlet-class&gt;com.sdzee.tp.servlets.CreationClient&lt;/servlet-class&gt;
+	&lt;/servlet&gt;
+	&lt;servlet&gt;
+		&lt;servlet-name&gt;CreationCommande&lt;/servlet-name&gt;
+		&lt;servlet-class&gt;com.sdzee.tp.servlets.CreationCommande&lt;/servlet-class&gt;
+	&lt;/servlet&gt;
+	
+	&lt;servlet-mapping&gt;
+		&lt;servlet-name&gt;CreationClient&lt;/servlet-name&gt;
+		&lt;url-pattern&gt;/creationClient&lt;/url-pattern&gt;
+	&lt;/servlet-mapping&gt;
+	&lt;servlet-mapping&gt;
+		&lt;servlet-name&gt;CreationCommande&lt;/servlet-name&gt;
+		&lt;url-pattern&gt;/creationCommande&lt;/url-pattern&gt;
+	&lt;/servlet-mapping&gt;
+&lt;/web-app&gt;</code></pre><p id="r-2133169" data-claire-element-id="2350143">Servlet gérant le formulaire de création d'un client :</p><pre id="r-2133170" data-claire-element-id="2837416"><code data-claire-semantic="java">package com.sdzee.tp.servlets;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.sdzee.tp.beans.Client;
+
+public class CreationClient extends HttpServlet {
+
+    public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
+        /*
+         * Récupération des données saisies, envoyées en tant que paramètres de
+         * la requête GET générée à la validation du formulaire
+         */
+        String nom = request.getParameter( &quot;nomClient&quot; );
+        String prenom = request.getParameter( &quot;prenomClient&quot; );
+        String adresse = request.getParameter( &quot;adresseClient&quot; );
+        String telephone = request.getParameter( &quot;telephoneClient&quot; );
+        String email = request.getParameter( &quot;emailClient&quot; );
+
+        String message;
+        /*
+         * Initialisation du message à afficher : si un des champs obligatoires
+         * du formulaire n'est pas renseigné, alors on affiche un message
+         * d'erreur, sinon on affiche un message de succès
+         */
+        if ( nom.trim().isEmpty() || adresse.trim().isEmpty() || telephone.trim().isEmpty() ) {
+            message = &quot;Erreur - Vous n'avez pas rempli tous les champs obligatoires. &lt;br&gt; &lt;a href=\&quot;creerClient.jsp\&quot;&gt;Cliquez ici&lt;/a&gt; pour accéder au formulaire de création d'un client.&quot;;
+        } else {
+            message = &quot;Client créé avec succès !&quot;;
+        }
+        /*
+         * Création du bean Client et initialisation avec les données récupérées
+         */
+        Client client = new Client();
+        client.setNom( nom );
+        client.setPrenom( prenom );
+        client.setAdresse( adresse );
+        client.setTelephone( telephone );
+        client.setEmail( email );
+
+        /* Ajout du bean et du message à l'objet requête */
+        request.setAttribute( &quot;client&quot;, client );
+        request.setAttribute( &quot;message&quot;, message );
+
+        /* Transmission à la page JSP en charge de l'affichage des données */
+        this.getServletContext().getRequestDispatcher( &quot;/afficherClient.jsp&quot; ).forward( request, response );
+    }
+}</code></pre><p id="r-2133171" data-claire-element-id="2350145">Servlet gérant le formulaire de création d'une commande :</p><pre id="r-2133172" data-claire-element-id="2837417"><code data-claire-semantic="java">package com.sdzee.tp.servlets;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+
+import com.sdzee.tp.beans.Client;
+import com.sdzee.tp.beans.Commande;
+
+public class CreationCommande extends HttpServlet {
+
+    public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
+        /*
+         * Récupération des données saisies, envoyées en tant que paramètres de
+         * la requête GET générée à la validation du formulaire
+         */
+        String nom = request.getParameter( &quot;nomClient&quot; );
+        String prenom = request.getParameter( &quot;prenomClient&quot; );
+        String adresse = request.getParameter( &quot;adresseClient&quot; );
+        String telephone = request.getParameter( &quot;telephoneClient&quot; );
+        String email = request.getParameter( &quot;emailClient&quot; );
+
+        /* Récupération de la date courante */
+        DateTime dt = new DateTime();
+        /* Conversion de la date en String selon le format défini */
+        DateTimeFormatter formatter = DateTimeFormat.forPattern( &quot;dd/MM/yyyy HH:mm:ss&quot; );
+        String date = dt.toString( formatter );
+        double montant;
+        try {
+            /* Récupération du montant */
+            montant = Double.parseDouble( request.getParameter( &quot;montantCommande&quot; ) );
+        } catch ( NumberFormatException e ) {
+            /* Initialisation à -1 si le montant n'est pas un nombre correct */
+            montant = -1;
+        }
+        String modePaiement = request.getParameter( &quot;modePaiementCommande&quot; );
+        String statutPaiement = request.getParameter( &quot;statutPaiementCommande&quot; );
+        String modeLivraison = request.getParameter( &quot;modeLivraisonCommande&quot; );
+        String statutLivraison = request.getParameter( &quot;statutLivraisonCommande&quot; );
+
+        String message;
+        /*
+         * Initialisation du message à afficher : si un des champs obligatoires
+         * du formulaire n'est pas renseigné, alors on affiche un message
+         * d'erreur, sinon on affiche un message de succès
+         */
+        if ( nom.trim().isEmpty() || adresse.trim().isEmpty() || telephone.trim().isEmpty() || montant == -1
+                || modePaiement.isEmpty() || modeLivraison.isEmpty() ) {
+            message = &quot;Erreur - Vous n'avez pas rempli tous les champs obligatoires. &lt;br&gt; &lt;a href=\&quot;creerCommande.jsp\&quot;&gt;Cliquez ici&lt;/a&gt; pour accéder au formulaire de création d'une commande.&quot;;
+        } else {
+            message = &quot;Commande créée avec succès !&quot;;
+        }
+        /*
+         * Création des beans Client et Commande et initialisation avec les
+         * données récupérées
+         */
+        Client client = new Client();
+        client.setNom( nom );
+        client.setPrenom( prenom );
+        client.setAdresse( adresse );
+        client.setTelephone( telephone );
+        client.setEmail( email );
+
+        Commande commande = new Commande();
+        commande.setClient( client );
+        commande.setDate( date );
+        commande.setMontant( montant );
+        commande.setModePaiement( modePaiement );
+        commande.setStatutPaiement( statutPaiement );
+        commande.setModeLivraison( modeLivraison );
+        commande.setStatutLivraison( statutLivraison );
+
+        /* Ajout du bean et du message à l'objet requête */
+        request.setAttribute( &quot;commande&quot;, commande );
+        request.setAttribute( &quot;message&quot;, message );
+
+        /* Transmission à la page JSP en charge de l'affichage des données */
+        this.getServletContext().getRequestDispatcher( &quot;/afficherCommande.jsp&quot; ).forward( request, response );
+    }
+}</code></pre><h4 id="r-2133179" data-claire-element-id="2837421">Le code des JSP</h4><p id="r-2133174" data-claire-element-id="2350148">Page d'affichage d'un client :</p><pre id="r-2133175" data-claire-element-id="2837419"><code data-claire-semantic="jsp">&lt;%@ page pageEncoding=&quot;UTF-8&quot; %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;title&gt;Affichage d'un client&lt;/title&gt;
+        &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;inc/style.css&quot; /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;%-- Affichage de la chaîne &quot;message&quot; transmise par la servlet --%&gt;
+        &lt;p class=&quot;info&quot;&gt;${ message }&lt;/p&gt;
+        &lt;%-- Puis affichage des données enregistrées dans le bean &quot;client&quot; transmis par la servlet --%&gt;
+        &lt;p&gt;Nom : ${ client.nom }&lt;/p&gt;
+        &lt;p&gt;Prénom : ${ client.prenom }&lt;/p&gt;
+        &lt;p&gt;Adresse : ${ client.adresse }&lt;/p&gt;
+        &lt;p&gt;Numéro de téléphone : ${ client.telephone }&lt;/p&gt;
+        &lt;p&gt;Email : ${ client.email }&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre><p id="r-2133176" data-claire-element-id="2350150">Page d'affichage d'une commande :</p><pre id="r-2133177" data-claire-element-id="2837420"><code data-claire-semantic="jsp">&lt;%@ page pageEncoding=&quot;UTF-8&quot; %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;title&gt;Affichage d'une commande&lt;/title&gt;
+        &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;inc/style.css&quot; /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;%-- Affichage de la chaîne &quot;message&quot; transmise par la servlet --%&gt;
+        &lt;p class=&quot;info&quot;&gt;${ message }&lt;/p&gt;
+        &lt;%-- Puis affichage des données enregistrées dans le bean &quot;commande&quot; transmis par la servlet --%&gt;
+        &lt;p&gt;Client&lt;/p&gt;
+        &lt;%-- Les 5 expressions suivantes accèdent aux propriétés du client, qui est lui-même une propriété du bean commande --%&gt;
+        &lt;p&gt;Nom : ${ commande.client.nom }&lt;/p&gt;
+        &lt;p&gt;Prénom : ${ commande.client.prenom }&lt;/p&gt;
+        &lt;p&gt;Adresse : ${ commande.client.adresse }&lt;/p&gt;
+        &lt;p&gt;Numéro de téléphone : ${ commande.client.telephone }&lt;/p&gt;
+        &lt;p&gt;Email : ${ commande.client.email }&lt;/p&gt;
+        &lt;p&gt;Commande&lt;/p&gt;
+        &lt;p&gt;Date  : ${ commande.date }&lt;/p&gt; 
+        &lt;p&gt;Montant  : ${ commande.montant }&lt;/p&gt; 
+        &lt;p&gt;Mode de paiement  : ${ commande.modePaiement }&lt;/p&gt; 
+        &lt;p&gt;Statut du paiement  : ${ commande.statutPaiement }&lt;/p&gt; 
+        &lt;p&gt;Mode de livraison  : ${ commande.modeLivraison }&lt;/p&gt; 
+        &lt;p&gt;Statut de la livraison  : ${ commande.statutLivraison }&lt;/p&gt; 
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre><p id="r-2133178" data-claire-element-id="2350152">Encore une fois, prenez votre temps, lisez bien et analysez attentivement les codes. Ils vous serviront de base pour les prochaines étapes du fil rouge !</p>
+
+                <div class="js-courseSelementActions sideActions">
+    <ul class="sideActions__container">
+        <li>
+            <a class="sideActions__item  js-courseElementActions-copyUrl  js-tooltip"
+               href="#" data-tooltip="Copier le lien"
+               data-tooltip-done="Lien copié !">
+            #
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+
+            
+            <nav class="course-pagination    clearfix">
+
+            <a href="des-problemes-de-vue.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--previous">
+            <i class="icon-previous"></i>
+            <span>Des problèmes de vue ?</span>
+        </a>
+    
+    <span class="course-pagination__separator"></span>
+
+            <a href="objectifs-et-configuration.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--next">
+            <span>Objectifs et configuration</span>
+            <i class="icon-next"></i>
+        </a>
+    
+</nav>
+
+            
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-view-restriction_popin_title"
+                class="popin popin--illustrated  js-popin"
+        id="popin-view-restriction"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+                    <div class="popin__illustrationWrapper">
+                <div class="popin__illustration illustration--balloon"></div>
+            </div>
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-view-restriction_popin_title" class="popin__title  js-popin-title">Waouh !</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <p>
+            Très heureux de voir que nos cours vous plaisent, déjà 3 pages lues aujourd&#039;hui ! Vous pouvez continuer la lecture de nos cours en devenant un Roomie, un membre de la communauté d&#039;OpenClassrooms. C&#039;est gratuit !
+        </p>
+        <p>
+            Vous pourrez aussi suivre votre avancement dans le cours, faire les exercices et discuter avec les autres Roomies.
+        </p>
+                    </div>
+            </div>
+
+                            <div class="popin__actions  js-popin-actions">
+                                                                        <a class="oc-btn orange-alt-btn "  href="https://openclassrooms.com/register">S'inscrire</a>
+                                                    <a class="oc-btn dark-btn "  href="https://openclassrooms.com/login">Se connecter</a>
+                                                            </div>
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+        </div>
+
+
+    </section>
+</div>
+    </div>
+
+    
+    <div id="popin-not-certifying-yet"
+     class="popin"
+     data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <a href='https://openclassrooms.com/premium'><i class='icon-star'></i> Devenez Premium</a>
+                    ">
+    <img alt="Exemple de certificat de réussite" src="../../../static.oc-static.com/prod/images/courses/certif.jpg"/>
+</div>
+
+
+                </main>
+
+                <aside class="contentWithSidebar__sidebar  js-contentWithSidebar-slidingElement" >
+                        <nav class="col-nav">
+    <div id="tab-courseMenu" class="col-nav__inner js-sidebar-inner">
+        <div class="col-nav__block  col-nav__block--summary">
+
+            <div class="side-paginate">
+                                    <a href="des-problemes-de-vue.html" class="side-paginate__previous">
+                        <i class="icon-previous"></i>
+                    </a>
+
+                    <span class="side-paginate__separator"></span>
+                
+                <h6 class="side-paginate__title">
+                    Premiers pas avec Java EE
+                </h6>
+
+                                    <span class="side-paginate__separator"></span>
+
+                    <a href="objectifs-et-configuration.html" class="side-paginate__next">
+                        <i class="icon-next"></i>
+                    </a>
+                            </div>
+
+                            <div class="col-nav__block--summary-list">
+                    <ol class="col-nav__chapters">
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="la-servlet.html">La servlet</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="servlet-avec-vue.html">Servlet avec vue…</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="transmission-de-donnees.html">Transmission de données</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="le-javabean.html">Le JavaBean</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="la-technologie-jsp-1-2.html">La technologie JSP (1/2)</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="la-technologie-jsp-2-2.html">La technologie JSP (2/2)</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="des-problemes-de-vue.html">Des problèmes de vue ?</a>
+                                                            </li>
+                                                    <li class="selected">
+                                                                                                    <span class="col-nav__chapterTitle">TP Fil rouge - Étape 1</span>
+                                                            </li>
+                                            </ol>
+
+                                    </div>
+                    </div>
+
+        
+        
+            <div class="col-nav__block  col-nav__block--subscribe">
+            <a href="https://openclassrooms.com/login" class="oc-btn orange-alt-btn js-popin-activator" data-popin-selector="#popin-log-in">
+                <i class="icon-lock"></i>
+                Suivre ce cours
+            </a>
+
+            <a href="https://openclassrooms.com/how-does-it-work">
+                <small>Comment ça marche ?</small>
+            </a>
+        </div>
+    
+
+
+        
+                    <div class="col-nav__block col-nav__block--institution">
+    <h2>Créé par</h2>
+            <a  href="https://openclassrooms.com/partners/openclassrooms" target="_blank">
+            <img src="../../../sdz-upload.s3.amazonaws.com/prod/partners/img/logo_logo-oc.png" alt="logo OpenClassrooms" class="col-nav__institutionLogo"/>
+            <p class="col-nav__block--institutionDescription">
+                OpenClassrooms, 1ère plateforme  <span class='nowrap'>e-Education<span> en Europe
+            </p>
+        </a>
+    </div>
+        
+        
+        
+    
+                        
+            
+    <div class="socialNetwork col-nav__block">
+        <ul class="socialButtons  js-socialButtons"
+    data-options="
+                title: 'Découvrez le cours &quot;TP Fil rouge - Étape 1&quot; sur @OpenClassrooms',
+        mailTitle: 'Cours &quot;TP Fil rouge - Étape 1&quot; sur OpenClassrooms',
+        mailContent: 'Découvrez le cours &quot;TP Fil rouge - Étape 1&quot; sur OpenClassrooms.'">
+
+    <li>
+        <a class="roundIcon  roundIcon--twitter addthis_button_twitter  js-socialButtons-btn" data-tooltip="Partagez sur Twitter" >
+            <i class="roundIcon__icon  icon-twitter"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--facebook  addthis_button_facebook  js-socialButtons-btn" data-tooltip="Partagez sur Facebook">
+            <i class="roundIcon__icon  icon-facebook"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--googlePlus  addthis_button_google_plusone_share  js-socialButtons-btn" data-tooltip="Partagez sur Google+" >
+            <i class="roundIcon__icon  icon-google"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  addthis_button_email  js-socialButtons-btn  js-socialButtons-email" data-tooltip="Partagez par e-mail">
+            <i class="roundIcon__icon  icon-letter"></i>
+        </a>
+    </li>
+
+</ul>
+
+    </div>
+    </div>
+</nav>
+                </aside>
+            </div>
+        </div>
+
+                    <footer class="alt-section">
+    <div class="centered">
+
+        <div class="row">
+                            <div class="col4 course-bottom__category">
+                    <h2 class="highlighted">
+                        L&#039;auteur
+                    </h2>
+                    <div>
+                                                    <a itemprop="author" itemscope itemtype="http://schema.org/Person" href="https://openclassrooms.com/membres/coyote-92394" class="no-underlined">
+                                <div class="course-bottom__text-illustrated">
+                                    <span data-author="Médéric Munier" style="background-image: url(../../../www.gravatar.com/avatar/15c349ac5313535fba91e5dbfa8803ec/indexd6dc.html?s=256&amp;r=g&amp;d=https%3A%2F%2Fopenclassrooms.com%2Fbundles%2Fcommon%2Fimages%2Favatar_defaut.png);"></span>
+                                    <h4 itemprop="name">Médéric Munier</h4>
+                                                                            <p itemprop="description">
+                                            Auteur du livre sur le Java EE.
+                                        </p>
+                                                                    </div>
+                            </a>
+                                            </div>
+                </div>
+            
+                            <div class="col8 course-bottom__category">
+                    <h2 class="highlighted">Découvrez aussi ce cours en...</h2>
+
+                    <ul class="course-bottom__format">
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">eBook</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-book"></i>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">Livre papier</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook pdf"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">PDF</div>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                    </div>
+
+    </div>
+</footer>
+
+
+    </article>
+            </div>
+        </div>
+
+                    <footer class="footer">
+    <div class="centered">
+        <div class="row">
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    OpenClassrooms
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/about-us" class="footer__link">Qui sommes-nous ?</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/how-does-it-work" class="footer__link">Fonctionnement de nos cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/jobs" class="footer__link">Recrutement</a>
+                    </li>
+                    <li>
+                        <a href="#" class="js-zendesk-show footer__link">Nous contacter</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Professionnels
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/affiliation" class="footer__link">
+                            Affiliation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/business" class="footer__link">Entreprises</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/universities" class="footer__link">Universités et écoles</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Participez
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/new-teachers" class="footer__link">Créer un cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/courses/courselab" class="footer__link">CourseLab</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/terms-conditions/fr" class="footer__link">
+                            <strong>Conditions Générales d&#039;Utilisation</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Suivez-nous
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+                                                                    <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="http://blog.openclassrooms.com/" class="footer__link">Le blog OpenClassrooms</a>
+                    </li>
+                    <li>
+                        <ul class="footer__socialNetwork">
+                            <li>
+                                <a href="https://www.facebook.com/openclassrooms" target="_blank" class="roundIcon roundIcon--facebook footer__socialButtons">
+                                    <i class="icon-facebook roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/openclassrooms" target="_blank" class="roundIcon roundIcon--twitter footer__socialButtons">
+                                    <i class="icon-twitter roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/+OpenClassrooms/posts" target="_blank" class="roundIcon roundIcon--youtube footer__socialButtons">
+                                    <i class="icon-google roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/openclassrooms" target="_blank" class="roundIcon roundIcon--instagram footer__socialButtons">
+                                    <i class="icon-instagram roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/TheOpenClassrooms" target="_blank" class="roundIcon roundIcon--googlePlus footer__socialButtons">
+                                    <i class="icon-youtube roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/openclassrooms" target="_blank" class="roundIcon roundIcon--linkedin footer__socialButtons">
+                                    <i class="icon-linkedin roundIcon__icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
+        
+        <!-- loaded javascript block -->
+
+            
+            <script type="text/javascript" src="../../js/maind0b3.js?095b5b3"></script>
+
+        
+
+    <script type="text/javascript" src="../../js/oc/courseViewd0b3.js?095b5b3"></script>
+
+
+        <!-- loaded javascript block -->
+
+        <script type="text/javascript">
+    window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+    window.analytics.load('mou95e6tdn');
+</script>
+
+                            
+        <!-- inlined javascript block -->
+
+        <script type="text/javascript">
+            
+            if (App.modules) {
+                App.modules.startAll();
+            }
+        </script>
+
+                        
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"90dc06697a","applicationID":"20302107","transactionName":"NANaYkJXC0ICAhdYVw1Je0NDQgpcTA4AblsPB1FEVWkGXhYTEFRnEwdKQm9GBEMXPhVYXRQ=","queueTime":0,"applicationTime":401,"atts":"GERZFApNGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/tp-fil-rouge-etape-1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:49:57 GMT -->
+</html>

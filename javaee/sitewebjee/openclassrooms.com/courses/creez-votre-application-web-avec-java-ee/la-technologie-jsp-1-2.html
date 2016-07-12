@@ -1,0 +1,1602 @@
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="fr" prefix="og: http://ogp.me/ns#">
+    
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-technologie-jsp-1-2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:49:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(e,t){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,t)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var u=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(u,function(e,t){newrelic[t]=r(f+t,"api")}),i(c,function(e,t){newrelic[t]=r(f+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?u(e,a,i):i()}function n(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,c=0;u>c;c++)a[c].apply(i,r);var s=f[g[n]];return s&&s.push([m,n,r,i]),i}function p(e,t){w[e]=l(e).concat(t)}function l(e){return w[e]||[]}function d(e){return s[e]=s[e]||o(n)}function v(e,t){c(e,function(e,n){t=t||"feature",g[n]=t,t in f||(f[t]=[])})}var w={},g={},m={on:p,emit:n,get:d,listeners:l,context:t,buffer:v};return m}function i(){return new r}var a="nr@context",u=e("gos"),c=e(2),f={},s={},p=t.exports=o();p.backlog=f},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!w++){var e=v.info=NREUM.info,t=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){c(l,function(t,n){e[t]||(e[t]=n)});var n="https"===p.split(":")[0]||e.sslForHttp;v.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=v.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=window,s=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var p=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),v=t.exports={offset:a(),origin:p,features:{},xhrWrappable:d};s.addEventListener?(s.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(s.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),u("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader"]);</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="application-name" content="OpenClassrooms"/>
+        <meta name="msapplication-TileColor" content="#e95325"/>
+        <meta name="msapplication-TileImage" content="/fav-icon.png?v=1"/>
+
+        <meta name="theme-color" content="#E95325">
+        <link rel="icon" sizes="144x144" href="../../fav-icon3860.png?v=1">
+
+        
+        
+        <link href="../../bundles/common/css/masterd0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"  />
+        
+
+        <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="../../apple-touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-iphone-retina-display.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-ipad-retina-display.png" />
+
+        <link rel="apple-touch-icon-precomposed" href="../../apple-touch-icon-precomposed.png" />
+
+            <link href="../../bundles/course/css/maind0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" src="../../js/modernizrd0b3.js?095b5b3"></script>
+
+        <link rel="shortcut icon" href="https://openclassrooms.com/favicon.ico?095b5b3" />
+
+            
+    <meta property="og:locale" content="fr"/>
+    <meta property="og:type" content="website"/>
+
+    <meta property="og:title" content="Découvrez le cours &quot;La technologie JSP (1/2)&quot; sur @OpenClassrooms"/>
+    <meta property="og:url" content="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-technologie-jsp-1-2"/>
+    <meta property="og:site_name" content="OpenClassrooms"/>
+    <meta property="og:image" content="https://static.oc-static.com/prod/courses/illustrations/illu_creez-votre-application-web-avec-java-ee.png"/>
+    <meta property="og:description" content="Pour réaliser des sites web en Java, on utilise l&#039;environnement Java EE (anciennement appelé J2EE). Celui-ci impose de développer de façon très structurée, ce qui explique certainement pour quoi on le retrouve dans un très grand nombre d&#039;applications web notamment en entreprise (banques, administrations...)."/>
+
+            
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@OpenClassrooms"/>
+    <meta name="twitter:title" content="Découvrez le cours &quot;La technologie JSP (1/2)&quot; sur @OpenClassrooms"/>
+    <meta name="twitter:description" content=""/>
+
+                
+        <title>La technologie JSP (1/2)</title>
+
+        <!-- inlined top javascript block -->
+
+
+        <script type="text/javascript">
+            var App = {
+                startTime: (new Date()).getTime(),
+                debug: false
+            };
+
+            App.user = {
+                
+                
+                
+                isPremium: false
+            };
+
+
+            App.preferences = {
+                assetVersion: '095b5b3',
+                contactMail: 'hello@openclassrooms.com',
+                adyenPublicKey: '10001|889EBFD4D434B82683E21DCA26E77C3E20E0EE09A5ECE3830B0ED51F2FA721A2F7E9EC871C6AB9A1E12C4492F4717673047757E02C5256D8E265CD51E413E5EFCCFEAC41B39C662A424ADC13EE187C38C372A7FCCEC1EA5DF841989437D78B252A8EB51008E60BB55B1E55A7A80DE1A9D60D998C128A576BFAE1DDB97D514AF0A073AEDDE84CEE40D1F8F6ECE85D0FFA50C95C06DB274021C1371376C6EB16561FD65C5E2704B570A7504D617D0F3820F176A0609F6162BDF5890533289FDC3DA7DB03B50BB3BD60A613E1FF72060F22987627E8F1A29F0128A94EC4C8FF7CF6B7AB9558D8433BF86D7A388AB927641CD6C02689139CEE3AAC9ACBFFE83806CB',
+                algolia: {
+                    appId: 'JGRXRFVQM0',
+                    apiKey: 'dfbdea500cb0b5f46e449ad334916c44', indexName: 'prod_COURSES_fr'
+                },
+                routes: {
+                    COURSE_EVENT: '/components/courses/:courseId',
+                    COURSE_PART_EVENT: '/components/courses/:courseId/parts/:partId',
+
+                    ACCEPT_COOKIE: '/components/user-accept-consent-cookie'
+                }
+
+                                            };
+
+            App.preferences.navigationPreference = {
+                            };
+
+            App.preferences.modules = {
+                'smiley': {
+                    basePath: '/bundles/common/images/smiley/'
+                }
+            };
+        </script>
+        <!-- inlined top javascript block end -->
+
+        <script>    App.preferences.modules['course/view/internalFolding'] = {
+        isBigCourse: true
+    };
+
+    App.data = App.data || {};
+App.data.currentCourse = {"partId":620111,"courseId":626954};
+App.preferences.modules['view/currentCoursePage'] = App.data.currentCourse;
+
+</script>
+
+        
+        
+    </head>
+
+    <body class="course oc-body ">
+
+        
+
+        
+    
+    
+    <script id="_EVENTS-PAGE" type="application/json">
+        {"type":"page"}
+    </script>
+
+
+        <!--[if lt IE 9]>
+<div class="disclaimer  disclaimer-error">
+    Vous utilisez un navigateur obsolète, veuillez le <a href="http://browsehappy.com/">mettre à jour</a>.
+</div>
+<![endif]-->
+
+<noscript>
+    <div class="disclaimer  disclaimer--error">
+        Veuillez utiliser un <a href="http://browsehappy.com/">navigateur internet moderne</a> avec JavaScript activé pour naviguer sur OpenClassrooms.com
+    </div>
+</noscript>
+
+
+                    
+
+<header id="oc-header" class="js-tabs-mobile mainHeader ">
+
+        <div class="disclaimer  disclaimer--info hidden  js-cookie-disclaimer">
+        <div class="disclaimer__wrapper">
+            <span class="disclaimer__content">Bienvenue sur OpenClassrooms ! En poursuivant votre navigation, vous acceptez l'utilisation de cookies. <a href="https://openclassrooms.com/privacy-policy#personal-data-gathering">En savoir plus</a></span>
+            <span class="disclaimer__actions">
+                <a href="#" class="disclaimer__button  js-close-button">ok</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="mainHeader__wrapper">
+
+        <div class="mainHeader__topLine">
+                <a href="https://openclassrooms.com/pole-emploi/partenariat?utm_source=SiteWeb-OC&amp;utm_medium=Lien-PhraseHeader&amp;utm_campaign=relancePE"> Vous êtes demandeur d'emploi ? On vous offre le Premium Solo en 3 clics :) ! </a>
+
+        </div>
+
+        <div class="mainHeader__top">
+            <a href="https://openclassrooms.com/" class="mainHeader__logo" title="OpenClassrooms.com">OpenClassrooms.com</a>
+
+            
+<nav role="navigation" class="icoTabs  mainHeader__tabSet">
+    <span class="mainHeader__mobileNav">
+
+        
+        
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseEditMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" data-tabs-default="true" href="#tab-searchMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-search  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab" href="#tab-main">
+            <i class="icon-menu  icoTabs__icon"></i>
+        </a>
+    </span>
+
+</nav>
+        </div>
+
+                <div class="js-tabs-content  mainHeader__content"></div>
+
+        <div class="mainHeader__content">
+            <div id="tab-main" class="mainHeader__tabs">
+                <nav class="mainTopNav  scrollPanel  js-scrollPanel-mobileMenu">
+    <div class="mainTopNav__container  scrollPanel__container  js-scrollPanel-container">
+        <ul class="mainHeader__container  mainHeader__container--mainMenu  js-scrollPanel-content">
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="http://openclassrooms.com/paths/">Parcours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/courses">Cours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/forum/">Forums</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/partners">Partenaires</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/premium">Premium</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+                <div class="mainHeader__contentInner">
+                    <div class="mainHeader__container  mainHeader__container--search">
+                                                                                                                                                                            
+                                                                          
+ <div class="js-courseSearch  topSearchBox">
+     <form tabindex="0" class="js-courseSearch-form  oc-form" action="https://openclassrooms.com/courses" method="get">
+         <div class="js-courseSearch-inputGroup oc-form__widget  inputGroup  topSearchBox__inner">
+             <input id="algolia-search-input"
+                    type="search"
+                    class="js-courseSearch-input oc-form__control inputGroup__input  topSearchBox__input"
+                    title="Rechercher"
+                    autocomplete="off"
+                    data-option_source="/components/courses/search?q=<%= term %>"
+                    placeholder="Rechercher"
+                    name="q" />
+
+             <button class="js-courseSearch-button  oc-btn dark-btn  only-icon  inputGroup__button  topSearchBox__button" type="submit" title="Rechercher un cours">
+                 <i class="inputGroup__icon icon-search"></i>
+                 <i class="inputGroup__icon inputGroup__icon--load icon-spinner icon-spin"></i>
+             </button>
+         </div>
+     </form>
+ </div>
+                    </div>
+
+                                            <div class="mainHeader__container  mainHeader__container--separatorLarge  hidden-s"></div>
+                    
+
+
+                    
+                                            <div class="mainHeader__container  mainHeader__container--login">
+    <a href="https://openclassrooms.com/register" class="oc-btn orange-alt-btn js-popin-activator space-right" data-popin-selector="#popin-sign-in">
+    S&#039;inscrire
+</a>
+<a href="https://openclassrooms.com/login" class="oc-btn dark-btn js-popin-activator" data-popin-selector="#popin-log-in">
+    Se connecter
+</a>
+</div>
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-sign-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-sign-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-sign-in_popin_title" class="popin__title  js-popin-title">Inscription</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=14911777a5f222ebf187e08ea9bbd097&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail">
+            <i class="icon-facebook"></i>S&#039;inscrire avec Facebook
+        </a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto">
+            <i class="icon-google"></i>S&#039;inscrire avec Google
+        </a>
+    </li>
+
+    <li class="formLogin__column">
+        
+            
+    
+    
+
+    <form name="register" method="post" action="https://openclassrooms.com/register" class="js-registerForm oc-form">
+
+        <div class="accessibility-hidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Wonder&nbsp;                        </span><span class="oc-form__widget"><input type="text" id="register_wonder" name="register[wonder]" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Prénom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_firstName" name="register[firstName]" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Nom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_lastName" name="register[lastName]" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="email" id="register_email" name="register[email]" required="required" class="" /></span></label>
+            <p>
+                <em>
+                    Vous recevrez votre mot de passe sur cette adresse email.
+                </em>
+            </p>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="register_terms" name="register[terms]" required="required" class="" value="1" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            J'ai lu et j'accepte les <a href="https://openclassrooms.com/terms-conditions/fr">Conditions Générales d'Utilisation</a>.&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span></span></label>
+        </div>
+
+
+        <div class="oc-form__group  center-text">
+            
+    <button type="submit" id="register_create" name="register[create]" class="oc-btn orange-alt-btn oc-btn"> S'inscrire</button>
+        </div>
+
+        <input type="hidden" id="register__target_path" name="register[_target_path]" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-technologie-jsp-1-2" /><input type="hidden" id="register__token" name="register[_token]" value="LEhsW-IhokD4hQHYoHva_FZzYy-PP2cG-886IBpx9HY" /></form>
+    </li>
+</ul>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-log-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-log-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-log-in_popin_title" class="popin__title  js-popin-title">Connexion</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=14911777a5f222ebf187e08ea9bbd097&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail"><i class="icon-facebook"></i> Se connecter avec Facebook</a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto"><i class="icon-google"></i> Se connecter avec Google</a>
+    </li>
+
+    <li class="formLogin__column">
+
+        
+            
+    
+    
+
+    <form name="" method="post" action="https://openclassrooms.com/login_check" class=" oc-form">
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email ou nom d'utilisateur&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="_username" name="_username" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Mot de passe&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="password" id="_password" name="_password" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="_remember_me" name="_remember_me" class="" value="1" checked="checked" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            Se souvenir de moi&nbsp;                        </span></span></label>
+        </div>
+
+        <div class="oc-form__group right-text">
+            <a href="https://openclassrooms.com/set-new-password">Mot de passe oublié</a>
+        </div>
+
+        <div class="oc-form__group  center-text">
+            <input type="hidden" id="_target_path" name="_target_path" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-technologie-jsp-1-2" /><div>
+    <button type="submit" id="login" name="login" class="orange-alt-btn oc-btn"> Se connecter</button></div><input type="hidden" id="_csrf_token" name="_csrf_token" value="WFIVlYEKEcL5v9hnQC1z3quXwgYs14KEFOLh1GUmi_I" />
+        </div>
+
+        </form>
+    </li>
+</ul>
+<p class="text-center space-top">
+    Pas encore membre ? <a href="https://openclassrooms.com/register">Inscrivez-vous gratuitement</a> en 30s.
+</p>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+                    
+                    <div class="mainHeader__container  mainHeader__container--langSelector">
+                        <div class="js-popOut-header  popOut popOut--small  popOut--rightAlign" data-keep-it-mobile="true">
+    <span class="js-popOut-button  popOut__button">
+                    <a href="javascript:;" class="languageSelector__selected">Français</a>
+            </span>
+    <ul class="popOutList  popOut__content  popOutList--small">
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/en/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">English</a>
+            </li>
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/es/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">Español</a>
+            </li>
+            </ul>
+</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+        
+        <div id="mainSearch" class="centered search-content">
+        </div>
+
+        <div id="mainContentWithHeader">
+            <div id="pre-main-part">
+                
+                                        <section class="inset no-padding">
+        <div class="centered">
+
+            <h6 class="accessibility-hidden">Fil d&#039;Ariane</h6>
+
+            <nav class="breadcrumb">
+                <ul class="breadcrumbtrail">
+                                                                        <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/" itemprop="url">
+                                <span itemprop="title">Accueil</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses" itemprop="url">
+                                <span itemprop="title">Cours</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee?status=published" itemprop="url">
+                                <span itemprop="title">Créez votre application web avec Java EE</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li class="current" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            La technologie JSP (1/2)
+                                                                        </li>
+                                    </ul>
+            </nav>
+        </div>
+    </section>
+
+                
+                            </div>
+
+            <div class="claire clearfix" >
+                    <article itemscope itemtype="http://schema.org/Article">
+
+                        
+<header class="course-header" xmlns="http://www.w3.org/1999/html">
+    <div class="centered"><div class="course-header__topPart"><div class="course-header__info"><a itemprop="url" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><h1 data-course-title="Créez votre application web avec Java EE">Créez votre application web avec Java EE</h1></a><span class="course-header__updatedTime visible-l">Mis à jour le lundi 13 juillet 2015</span></div></div></div><div class="course-header__details-container"><div class="centered"><div class="row"><div class="col12"><div class="course-header__details  iconBar"><div class="course-header__detailsGroup  course-header__detailsGroup--formats iconBar__group"><ul data-option_popinselector="#popin-formats-availables" class="course-types iconBar__list js-course-formats-bar"><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours est visible gratuitement en ligne."><a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><i class="icon-desktop  course-types__icon"></i><span class="course-header__format-current"></span></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore en vidéo."><span><i class="icon-video course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en livre papier."><a href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank"><i class="icon-book  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en eBook."><a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee"><i class="icon-ebook  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip"
+                                                                                            title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours."
+                                                                                ><a
+                                                                                        ><i class="icon-badge  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore diplômant et ne vous permet pas d&#039;obtenir des crédits universitaires européens (ECTS)."><span><i class="icon-hat  course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Vous pouvez être accompagné sur ce cours par un mentor dédié en visioconférence."><a  href="https://openclassrooms.com/premium#discover-premium-plus-offer" ><i class="icon-mentor  course-types__icon"></i></a></li></ul></div><div class="course-header__detailsGroup  course-header__detailsGroup--info  iconBar__group"><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-duration iconBar__icon js-tooltip" title="Ce cours demande en moyenne 40 heures de travail pour être réussi."></i><span class="iconBar__label">40 heures</span></li><li class="iconBar__item"><i class="icon-level iconBar__icon"></i><span class="iconBar__label">
+                                                                                                    Moyenne
+                                                                                            </span></li></ul></div><div class="course-header__detailsGroup course-header__detailsGroup--licences iconBar__group"><a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/2.0"><span class="iconBar__label">Licence</span><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-cc iconBar__icon" title="CC"></i></li><li class="iconBar__item"><i class="icon-ccby iconBar__icon" title="BY"></i></li><li class="iconBar__item"><i class="icon-ccnc iconBar__icon" title="NC"></i></li><li class="iconBar__item"><i class="icon-ccsa iconBar__icon" title="SA"></i></li></ul></a></div></div></div></div></div></div>
+    <div id="popin-formats-availables" class="popin popin--course-formats-availables">
+        <i class="popin__close-button icon-close js-close-button"></i>
+
+        <div class="course-types course-types--withSpace">
+                            <a class="course-types__item" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-desktop course-types__icon"></i>
+                </a>
+            
+            
+                            <a class="course-types__item" href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms">
+                    <i class="icon-book course-types__icon"></i>
+                </a>
+            
+                            <a class="course-types__item" href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-ebook course-types__icon"></i>
+                </a>
+            
+            
+                                        <a class="course-types__item" href="https://openclassrooms.com/premium#discover-premium-plus-offer">
+                    <i class="icon-mentor course-types__icon"></i>
+                </a>
+                    </div>
+
+                    <p>Ce cours est visible <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">gratuitement en ligne</a>.</p>
+        
+        
+                    <p>
+                Ce cours existe en livre papier.
+            </p>
+        
+                    <p>Ce cours existe <a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">en eBook</a>.</p>
+        
+        
+        
+                    <p>
+                Vous pouvez être <a href="https://openclassrooms.com/premium#discover-premium-plus-offer">accompagné et mentoré par un professeur particulier</a> par visioconférence sur ce cours.
+            </p>
+        
+        <a class="oc-btn orange-alt-btn js-close-button" href="#">J&#039;ai tout compris !</a>
+    </div>
+
+    
+</header>
+
+    <div class="centered">
+                            
+        
+            <div class="row">
+        <div class="col12 col11-s">
+                            <nav class="timeline">
+        <div class="timeline__inner">
+
+        <span class="timeline__iconContainer">
+            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+                <i class="icon-home roundIcon__icon"></i>
+            </a>
+        </span>
+            <div class="timeline__steps">
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-au-java-ee.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction au Java EE
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-java-ee-mis-a-nu.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le Java EE mis à nu !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="outils-et-environnement-de-developpement.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Outils et environnement de développement
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="la-servlet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La servlet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="servlet-avec-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Servlet avec vue…
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="transmission-de-donnees.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Transmission de données
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-javabean.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le JavaBean
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-1-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (1/2)
+                                </span>
+
+                                                                    <span class="timeline__progressMarker"></span>
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-2-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (2/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="des-problemes-de-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Des problèmes de vue ?
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-1.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 1
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="objectifs-et-configuration.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Objectifs et configuration
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-core.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque Core
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-core-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL core : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-xml.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque xml
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-xml-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL xml : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="faisons-le-point-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Faisons le point !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 2
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="formulaires-le-b-a-ba.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : le b.a.-ba
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-a-la-mode-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : à la mode MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-3.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 3
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-session-connectez-vos-clients.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La session : connectez vos clients
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-filtre-creez-un-espace-membre.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le filtre : créez un espace membre
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-cookie-le-navigateur-vous-ouvre-ses-portes.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le cookie : le navigateur vous ouvre ses portes
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-4.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 4
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-l-envoi-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : l&#039;envoi de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-telechargement-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le téléchargement de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-5.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 5
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-a-mysql-et-jdbc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction à MySQL et JDBC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="communiquez-avec-votre-bdd.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Communiquez avec votre BDD
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-modele-dao.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le modèle DAO
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-6.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 6
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="gerer-un-pool-de-connexions-avec-bonecp.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Gérer un pool de connexions avec BoneCP
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="les-annotations.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Les annotations
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-persistance-des-donnees-avec-jpa.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La persistance des données avec JPA
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-7.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 7
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="introduction-aux-frameworks-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction aux frameworks MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="premiers-pas-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Premiers pas avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-gestion-d-un-formulaire-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La gestion d&#039;un formulaire avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="l-envoi-de-fichiers-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    L&#039;envoi de fichiers avec JSF
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="debugger-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Débugger un projet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="empaquetage-et-deploiement-d-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Empaquetage et déploiement d&#039;un projet
+                                </span>
+
+                                                            </a>
+                                            
+                
+                <span class="timeline__splitChapter"></span>
+
+            </div>
+
+        <span class="timeline__iconContainer">
+                            <span title="Ce cours n&#039;est pas encore certifiant." class="roundIcon roundIcon--disabled">
+                    <i class="icon-trophy roundIcon__icon"></i>
+                </span>
+                    </span>
+
+        </div>
+    </nav>
+        </div>
+    </div>
+    </div>
+
+        
+        <div class="centered">
+            <div class="contentWithSidebar  spacer  js-contentWithSidebar" >
+                <main class="contentWithSidebar__content" >
+                        
+
+        <div class="relative js-sidebar-container">
+        <div class="static">
+    <h2 itemprop="name" data-part-title="La technologie JSP (1/2)" class="part-title">La technologie JSP (1/2)</h2>
+
+    <section class="row space-bottom js-desktop-sticky-container">
+        <div class="col9 col11-s col__small-padding--right">
+
+                <div class="tooltipMessage tooltipMessage--noArrow">
+        <i class="tooltipMessage__icon  icon-lock"></i>
+        <a href="https://openclassrooms.com/login" class="js-popin-activator" data-popin-selector="#popin-log-in" >Connectez-vous</a> ou <a href="https://openclassrooms.com/register" class="js-popin-activator" data-popin-selector="#popin-sign-in" >inscrivez-vous</a> pour bénéficier de toutes les fonctionnalités de ce cours !
+    </div>
+
+            <div
+                itemprop="articleBody"
+                data-page-indentifier="/courses/creez-votre-application-web-avec-java-ee/la-technologie-jsp-1-2"
+                class="js-isRestrictablePage course-content js-course-container js-smilize "
+
+                                    data-video-blocked-wrapper="<a href='https://openclassrooms.com/login#popin-log-in' class='js-popin-activator'>"
+                            >
+
+                <p id="r-2132279" data-claire-element-id="2349239">Cet ensemble est consacré à l'apprentissage de la technologie JSP : nous y étudierons la syntaxe des balises, directives et actions JSP ainsi que le fonctionnement des expressions EL, et enfin nous établirons une liste de documentations utiles sur le sujet. Trop volumineux pour entrer dans un unique chapitre, j'ai préféré le scinder en deux chapitres distincts.</p><p id="r-2132280" data-claire-element-id="2349240">Ce premier opus a pour objectif de vous présenter les bases de la syntaxe JSP et ses actions dites standard, toutes illustrées par de brefs exemples.</p><h3 id="r-619956" data-claire-element-id="2837289">Les balises</h3><h5 id="r-2132283" data-claire-element-id="2837280">Balises de commentaire</h5><p id="r-2132281" data-claire-element-id="2349241">Tout comme dans les langages Java et HTML, il est possible d'écrire des commentaires dans le code de vos pages JSP. Ils doivent être compris entre les balises <code>&lt;%-- et --%&gt;</code>. Vous pouvez les placer où vous voulez dans votre code source. Ils sont uniquement destinés au(x) développeur(s), et ne sont donc pas visibles par l'utilisateur final dans la page HTML générée :</p><pre id="r-2132282" data-claire-element-id="2837279"><code data-claire-semantic="jsp">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;title&gt;Exemple&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;%-- Ceci est un commentaire JSP, non visible dans la page HTML finale.  --%&gt;
+        &lt;!-- Ceci est un simple commentaire HTML. --&gt;
+        &lt;p&gt;Ceci est un simple texte.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre><h5 id="r-2132288" data-claire-element-id="2837283">Balises de déclaration</h5><p id="r-2132284" data-claire-element-id="2349244">Cette balise vous permet de déclarer une variable à l'intérieur d'une JSP. Vous savez déjà et nous y reviendrons par la suite qu'il est déconseillé d'écrire du code Java dans vos JSP mais, la balise existant, je préfère vous la présenter. Si vous tombez dessus un jour, ne soyez pas déstabilisés :</p><pre id="r-2132285" data-claire-element-id="2837281"><code data-claire-semantic="jsp">&lt;%! String chaine = &quot;Salut les zéros.&quot;;  %&gt;</code></pre><p id="r-2132286" data-claire-element-id="2349246">Il est possible d'effectuer plusieurs déclarations au sein d'un même bloc. Ci-dessous, les déclarations d'une variable puis d'une méthode :</p><pre id="r-2132287" data-claire-element-id="2837282"><code data-claire-semantic="jsp">&lt;%! String test = null;
+
+public boolean jeSuisUnZero() {
+  return true;
+}
+%&gt;</code></pre><h5 id="r-2132292" data-claire-element-id="2837285">Balises de scriptlet</h5><p id="r-2132289" data-claire-element-id="2349249">Derrière ce mot étrange, un mélange atroce entre &quot;script&quot; et &quot;servlet&quot;, se cache simplement du code Java. Cette balise, vous la connaissez déjà, puisque nous l'avons utilisée dans le chapitre précédent. Elle sert en effet à inclure du code Java au sein de vos pages mais, tout comme la balise précédente, elle est à proscrire dans la mesure du possible ! À titre d'information seulement donc, voici le tag en question, ici au sein d'une balise HTML <code>&lt;form&gt;</code> :</p><pre id="r-2132290" data-claire-element-id="2837284"><code data-claire-semantic="jsp">&lt;form action=&quot;/tirage&quot; method=&quot;post&quot;&gt;
+  &lt;%
+    for(int i = 1; i &lt; 3; i++){
+      out.println(&quot;Numéro &quot; + i + &quot;: &lt;select name=\&quot;number&quot;+i+&quot;\&quot;&gt;&quot;);
+      for(int j = 1; j &lt;= 10; j++){
+        out.println(&quot;&lt;option value=\&quot;&quot;+j+&quot;\&quot;&gt;&quot;+ j + &quot;&lt;/option&gt;&quot;);
+      }
+      out.println(&quot;&lt;/select&gt;&lt;br /&gt;&quot;);
+    }
+    %&gt;
+    &lt;br /&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Valider&quot; /&gt;
+&lt;/form&gt;</code></pre><p id="r-2132291" data-claire-element-id="2349251">Oui je sais, c'est un exemple très moche, car il y a du code Java dans une JSP, code qui contient à son tour des éléments de présentation HTML… Mais c'est juste pour l'exemple ! Je vous préviens : le premier que je vois coder comme ça, je le pends à un arbre ! :D</p><h5 id="r-2132298" data-claire-element-id="2837288">Balises d'expression</h5><p id="r-2132293" data-claire-element-id="2349253">La balise d'expression est en quelque sorte un raccourci de la scriptlet suivante :</p><pre id="r-2132294" data-claire-element-id="2837286"><code data-claire-semantic="jsp">&lt;% out.println(&quot;Bip bip !&quot;); %&gt;</code></pre><p id="r-2132295" data-claire-element-id="2349255">Elle retourne simplement le contenu d'une chaîne. Voici sa syntaxe :</p><pre id="r-2132296" data-claire-element-id="2837287"><code data-claire-semantic="jsp">&lt;%= &quot;Bip bip !&quot; %&gt;</code></pre><p id="r-2132297" data-claire-element-id="2349257">Notez bien l'<strong>absence de point-virgule</strong> lors de l'utilisation de ce raccourci.</p><h3 id="r-620014" data-claire-element-id="2837302">Les directives</h3><p id="r-2132299" data-claire-element-id="2349260">Les directives JSP permettent :</p><ul id="r-2132308" data-claire-element-id="2349269"><li id="r-2132301" data-claire-element-id="2349262"><p id="r-2132300" data-claire-element-id="2349261">d'importer un package ;</p></li><li id="r-2132303" data-claire-element-id="2349264"><p id="r-2132302" data-claire-element-id="2349263">d'inclure d'autres pages JSP ;</p></li><li id="r-2132305" data-claire-element-id="2349266"><p id="r-2132304" data-claire-element-id="2349265">d'inclure des bibliothèques de balises (nous y reviendrons dans un prochain chapitre) ;</p></li><li id="r-2132307" data-claire-element-id="2349268"><p id="r-2132306" data-claire-element-id="2349267">de définir des propriétés et informations relatives à une page JSP.</p></li></ul><p id="r-2132309" data-claire-element-id="2349270">Pour généraliser, elles contrôlent comment le conteneur de servlets va gérer votre JSP. Il en existe trois : <strong>taglib</strong>, <strong>page</strong> et <strong>include</strong>. <br /> Elles sont toujours comprises entre les balises <code>&lt;%@ et %&gt;</code>, et hormis la directive d'inclusion de page qui peut être placée n'importe où, elles sont à placer <strong>en tête de page JSP</strong>.</p><h5 id="r-2132313" data-claire-element-id="2837291">Directive taglib</h5><p id="r-2132310" data-claire-element-id="2349271">Le code ci-dessous inclut une bibliothèque personnalisée nommée <em>maTagLib</em> :</p><pre id="r-2132311" data-claire-element-id="2837290"><code data-claire-semantic="jsp">&lt;%@ taglib uri=&quot;maTagLib.tld&quot; prefix=&quot;tagExemple&quot; %&gt;</code></pre><p id="r-2132312" data-claire-element-id="2349273">Je ne détaille pas, nous reviendrons plus tard sur ce qu'est exactement une bibliothèque et sur cet attribut &quot;prefix&quot;.</p><h5 id="r-2132320" data-claire-element-id="2837294">Directive page</h5><p id="r-2132314" data-claire-element-id="2349275">La directive page définit des informations relatives à la page JSP. Voici par exemple comment importer des classes Java :</p><pre id="r-2132315" data-claire-element-id="2837292"><code data-claire-semantic="jsp">&lt;%@ page import=&quot;java.util.List, java.util.Date&quot;  %&gt;</code></pre><p id="r-2132316" data-claire-element-id="2349277">Ici, l'import de deux classes est réalisé : <code>List</code> et <code>Date</code>. Cette fonctionnalité n'est utile que si vous mettez en place du code Java dans votre page JSP, afin de rendre disponibles les différentes classes et interfaces des API Java. En ce qui nous concerne, puisque notre objectif est de faire disparaître le Java de nos vues, nous allons très vite apprendre à nous en passer !</p><p id="r-2132317" data-claire-element-id="2349278">D'autres options sont utilisables via cette balise <strong>page</strong>, comme le <strong>contentType</strong> ou l'activation de la session. Toutes ont des valeurs par défaut, et je ne vais pas m'attarder sur les détails de chacune d'elles ici. Vous ne vous en servirez que dans des cas très spécifiques que nous découvrirons au cas par cas dans ce cours. Voici à titre d'information l'ensemble des propriétés accessibles via cette directive :</p><pre id="r-2132318" data-claire-element-id="2837293"><code data-claire-semantic="jsp">&lt;%@ page 
+          language=&quot;...&quot; 
+          extends=&quot;...&quot; 
+          import=&quot;...&quot; 
+          session=&quot;true | false&quot; 
+          buffer=&quot;none | 8kb | sizekb&quot; 
+          autoFlush=&quot;true | false&quot; 
+          isThreadSafe=&quot;true | false&quot; 
+          isELIgnored =&quot;true | false&quot;
+          info=&quot;...&quot; 
+          errorPage=&quot;...&quot; 
+          contentType=&quot;...&quot; 
+          pageEncoding=&quot;...&quot;
+          isErrorPage=&quot;true | false&quot; 
+%&gt;</code></pre><p id="r-2132319" data-claire-element-id="2349280">Vous retrouvez ici celle que je vous ai fait utiliser depuis la mise en place de votre première JSP : le <strong>pageEncoding</strong>. C'est à travers cette option que vous pouvez spécifier l'encodage qui va être précisé dans l'en-tête de la réponse HTTP envoyée par votre page JSP.</p><h5 id="r-2132328" data-claire-element-id="2837296">Directive include</h5><p id="r-2132321" data-claire-element-id="2349282">Lorsque vous développez une vue, elle correspond rarement à une JSP constituée d'un seul bloc. En pratique, il est très courant de découper littéralement une page web en plusieurs fragments, qui sont ensuite rassemblés dans la page finale à destination de l'utilisateur. Cela permet notamment de pouvoir réutiliser certains blocs dans plusieurs vues différentes ! Regardez par exemple le menu des cours sur le site du zéro : c'est un bloc à part entière, qui est réutilisé dans l'ensemble des pages du site.</p><p id="r-2132322" data-claire-element-id="2349283">Pour permettre un tel découpage, la technologie JSP met à votre disposition une balise qui inclut le contenu d'un autre fichier dans le fichier courant. Via le code suivant par exemple, vous allez inclure une page interne à votre application (en l'occurrence une page JSP nommée <em>uneAutreJSP</em>, mais cela pourrait très bien être une page HTML ou autre) dans votre JSP courante :</p><pre id="r-2132323" data-claire-element-id="2837295"><code data-claire-semantic="jsp">&lt;%@ include file=&quot;uneAutreJSP.jsp&quot; %&gt;</code></pre><p id="r-2132324" data-claire-element-id="2349285">La subtilité à retenir, c'est que cette directive ne doit être utilisée que pour inclure du contenu &quot;statique&quot; dans votre page : l'exemple le plus courant pour un site web étant par exemple le <em>header</em> ou le <em>footer</em> de la page, très souvent identiques sur l'intégralité des pages du site.</p><aside id="r-2132326" data-claire-element-id="2349287" data-claire-semantic="warning"><p id="r-2132325" data-claire-element-id="2349286">Attention, ici quand je vous parle de contenu &quot;statique&quot;, je n'insinue pas que ce contenu est figé et ne peut pas contenir de code dynamique… Non, si je vous parle d'inclusion &quot;statique&quot;, c'est parce qu'en utilisant cette directive pour inclure un fichier, <strong>l'inclusion est réalisée au moment de la compilation</strong> ; par conséquent, si le code du fichier est changé par la suite, les répercussions sur la page l'incluant n'auront lieu qu'après une nouvelle compilation !</p></aside><p id="r-2132327" data-claire-element-id="2349288">Pour simplifier, <strong>cette directive peut être vue comme un simple copier-coller d'un fichier dans l'autre</strong> : c'est comme si vous preniez l'intégralité de votre premier fichier, et que vous le colliez dans le second. Vous pouvez donc bien visualiser ici qu'il est nécessaire de procéder à cette copie avant la compilation de la page : on ne va pas copier un morceau de page JSP dans une servlet déjà compilée…</p><h5 id="r-2132355" data-claire-element-id="2837301">Action standard include</h5><p id="r-2132329" data-claire-element-id="2349290">Une autre balise d'inclusion dite &quot;standard&quot; existe, et permet d'inclure du contenu de manière &quot;dynamique&quot;. Le contenu sera ici chargé à l'exécution, et non à la compilation comme c'est le cas avec la directive précédente :</p><pre id="r-2132330" data-claire-element-id="2837297"><code data-claire-semantic="jsp">&lt;%-- L'inclusion dynamique d'une page fonctionne par URL relative : --%&gt;
+&lt;jsp:include page=&quot;page.jsp&quot; /&gt;
+
+&lt;%-- Son équivalent en code Java  est : --%&gt;
+&lt;% request.getRequestDispatcher( &quot;page.jsp&quot; ).include( request, response ); %&gt;
+
+&lt;%-- Et il est impossible d'inclure une page externe comme ci-dessous :  --%&gt;
+&lt;jsp:include page=&quot;http://www.siteduzero.com&quot; /&gt;</code></pre><p id="r-2132331" data-claire-element-id="2349292">Cela dit, ce type d'inclusion a un autre inconvénient : il ne prend pas en compte les imports et inclusions faits dans la page réceptrice. Pour clarifier, prenons un exemple. Si vous utilisez un type <code>List</code> dans une première page, et que vous comptez utiliser une liste dans une seconde page que vous souhaitez inclure dans cette première page, il vous faudra importer le type <code>List</code> dans cette seconde page…</p><p id="r-2132332" data-claire-element-id="2349293">Je vous ai perdus ? :D Voyons tout cela au travers d'un exemple très simple. Créez une page <strong>test_inc.jsp</strong> contenant le code suivant, sous le répertoire <strong>WebContent</strong> de votre projet Eclipse, c'est-à-dire à la racine de votre application :</p><pre id="r-2132333" data-claire-element-id="2837298"><code data-claire-semantic="jsp">&lt;%
+	ArrayList&lt;Integer&gt; liste = new ArrayList&lt;Integer&gt;();
+	liste.add( 12 );
+	out.println( liste.get( 0 ) );
+%&gt;</code></pre><p id="r-2132334" data-claire-element-id="2349295">Ce code ne fait qu'ajouter un entier à une liste vide, puis l'affiche. Cependant cette page ne contient pas de directive d'import, et ne peut par conséquent pas fonctionner directement : l'import de la classe <code>ArrayList</code> doit obligatoirement être réalisé auparavant pour que nous puissions l'utiliser dans le code. Si vous tentez d'accéder directement à cette page via <a href="http://localhost:8080/test/test_inc.jsp">http://localhost:8080/test/test_inc.jsp</a>, vous aurez droit à une jolie exception :</p><p id="r-2132335" data-claire-element-id="2349296"><cite>Citation : Exception</cite></p><blockquote id="r-2132338" data-claire-element-id="2349299"><p id="r-2132336" data-claire-element-id="2349297">org.apache.jasper.JasperException: Unable to compile class for JSP:</p><p id="r-2132337" data-claire-element-id="2349298">An error occurred at line: 2 in the jsp file: /test_inc.jsp<br /> ArrayList cannot be resolved to a type</p></blockquote><p id="r-2132339" data-claire-element-id="2349300">Créez maintenant une page <strong>test_host.jsp</strong>, toujours à la racine de votre application, qui va réaliser l'import de la classe <code>ArrayList</code> puis inclure la page <strong>test_inc.jsp</strong> :</p><pre id="r-2132340" data-claire-element-id="2837299"><code data-claire-semantic="jsp">&lt;%@ page import=&quot;java.util.ArrayList&quot; %&gt;
+&lt;%@ include file=&quot;test_inc.jsp&quot; %&gt;</code></pre><p id="r-2132341" data-claire-element-id="2349302">Pour commencer, vous découvrez ici en première ligne une application de la directive <strong>page</strong>, utilisée ici pour importer la classe <code>ArrayList</code>. À la seconde ligne, comme je vous l'ai expliqué plus haut, la directive d'inclusion peut être vue comme un copier-coller : ici, le contenu de la page <strong>test_inc.jsp</strong> est copié dans la page <strong>test_host.jsp</strong>, puis la nouvelle page <strong>test_host.jsp</strong> contenant tout le code est compilée. Vous pouvez donc appeler la page <strong>test_host.jsp</strong>, et la page web finale affichera bien &quot;12&quot; !</p><p id="r-2132342" data-claire-element-id="2349303">Mais si maintenant nous décidons de remplacer la directive présente dans notre page <strong>test_host.jsp</strong> par la balise standard d'inclusion :</p><pre id="r-2132343" data-claire-element-id="2837300"><code data-claire-semantic="jsp">&lt;%@ page import=&quot;java.util.ArrayList&quot; %&gt;
+&lt;jsp:include page=&quot;test_inc.jsp&quot; /&gt;</code></pre><p id="r-2132344" data-claire-element-id="2349305">Eh bien lorsque nous allons tenter d'accéder à la page <strong>test_host.jsp</strong>, nous retrouverons la même erreur que lorsque nous avons tenté d'accéder directement à <strong>test_inc.jsp</strong> ! La raison est la suivante : les deux pages sont compilées séparément, et l'inclusion ne se fera que lors de l’exécution. Ainsi fatalement, la compilation de la page <strong>test_inc.jsp</strong> ne peut qu'échouer, puisque l'import nécessaire au bon fonctionnement du code n'est réalisé que dans la page hôte.</p><aside id="r-2132346" data-claire-element-id="2349307" data-claire-semantic="information"><p id="r-2132345" data-claire-element-id="2349306">Pour faire simple, les pages incluses via la balise <code>&lt;jsp:include ... /&gt;</code> doivent en quelque sorte être &quot;indépendantes&quot; ; elles ne peuvent pas dépendre les unes des autres et doivent pouvoir être compilées séparément. Ce n'est pas le cas des pages incluses via la directive <code>&lt;%@ include ... %&gt;</code> .</p></aside><p id="r-2132347" data-claire-element-id="2349308">Pour terminer sur ces problématiques d'inclusions, je vous donne ici quelques informations et conseils supplémentaires.</p><ul id="r-2132354" data-claire-element-id="2349315"><li id="r-2132349" data-claire-element-id="2349310"><p id="r-2132348" data-claire-element-id="2349309">Certains serveurs d'applications sont capables de recompiler une page JSP incluant une autre page via la directive d'inclusion, et ainsi éclipser sa principale contrainte. Ce n'est toutefois pas toujours le cas, et ça reste donc à éviter si vous n'êtes pas sûrs de votre coup…</p></li><li id="r-2132351" data-claire-element-id="2349312"><p id="r-2132350" data-claire-element-id="2349311">Pour inclure un même <em>header</em> et un même <em>footer</em> dans toutes les pages de votre application ou site web, il est préférable de ne pas utiliser ces techniques d'inclusion, mais de spécifier directement ces portions communes dans le fichier <strong>web.xml</strong> de votre projet. J'en reparlerai dans un prochain chapitre.</p></li><li id="r-2132353" data-claire-element-id="2349314"><p id="r-2132352" data-claire-element-id="2349313">Très bientôt, nous allons découvrir une meilleure technique d'inclusion de pages avec la JSTL !</p></li></ul><h3 id="r-620054" data-claire-element-id="2837305">La portée des objets</h3><p id="r-2132356" data-claire-element-id="2349318">Un concept important intervient dans la gestion des objets par la technologie JSP : <strong>la portée des objets</strong>. Souvent appelée visibilité, ou <em>scope</em> en anglais, elle définit tout simplement leur <strong>durée de vie</strong>.</p><p id="r-2132357" data-claire-element-id="2349319">Dans le chapitre traitant de la transmission de données, nous avions découvert un premier type d'attributs : les attributs de requête. Eh bien de tels objets, qui je vous le rappelle sont accessibles via l'objet <code>HttpServletRequest</code>, ne sont <strong>visibles</strong> que durant le traitement d'une même requête. Ils sont créés par le conteneur lors de la réception d'une requête HTTP, et disparaissent dès lors que le traitement de la requête est terminé.</p><aside id="r-2132359" data-claire-element-id="2349321" data-claire-semantic="information"><p id="r-2132358" data-claire-element-id="2349320">Ainsi, nous avions donc, sans le savoir, créé des objets ayant pour portée la requête !</p></aside><p id="r-2132360" data-claire-element-id="2349322">Il existe au total quatre portées différentes dans une application :</p><ul id="r-2132369" data-claire-element-id="2349331"><li id="r-2132362" data-claire-element-id="2349324"><p id="r-2132361" data-claire-element-id="2349323"><strong>page</strong> (JSP seulement) : les objets dans cette portée sont uniquement accessibles dans la page JSP en question ;</p></li><li id="r-2132364" data-claire-element-id="2349326"><p id="r-2132363" data-claire-element-id="2349325"><strong>requête</strong> : les objets dans cette portée sont uniquement accessibles durant l'existence de la requête en cours ;</p></li><li id="r-2132366" data-claire-element-id="2349328"><p id="r-2132365" data-claire-element-id="2349327"><strong>session</strong> : les objets dans cette portée sont accessibles durant l'existence de la session en cours ;</p></li><li id="r-2132368" data-claire-element-id="2349330"><p id="r-2132367" data-claire-element-id="2349329"><strong>application</strong> : les objets dans cette portée sont accessibles durant toute l'existence de l'application.</p></li></ul><div id="r-2132371" data-claire-element-id="2349333" data-claire-semantic="question"><p id="r-2132370" data-claire-element-id="2349332">Pourquoi préciser &quot;JSP seulement&quot; pour la portée page ?</p></div><p id="r-2132372" data-claire-element-id="2349334">Eh bien c'est très simple : il est possible de créer et manipuler des objets de portées requête, session ou application depuis une page JSP ou depuis une servlet. Nous avions d'ailleurs dans le chapitre traitant de la transmission de données créé un objet de portée requête depuis notre servlet, puis utilisé cet objet depuis notre page JSP. En revanche, il n'est possible de créer et manipuler des objets de portée page que depuis une page JSP, ce n'est pas possible via une servlet.</p><div id="r-2132374" data-claire-element-id="2349336" data-claire-semantic="question"><p id="r-2132373" data-claire-element-id="2349335">Qu'est-ce qu'une session ?</p></div><p id="r-2132375" data-claire-element-id="2349337"><strong>Une session est un objet associé à un utilisateur</strong> en particulier. Elle existe pour la durée pendant laquelle un visiteur va utiliser l'application, cette durée se terminant lorsque l'utilisateur ferme son navigateur, reste inactif trop longtemps, ou encore lorsqu'il se déconnecte du site.</p><p id="r-2132376" data-claire-element-id="2349338">Ainsi, il est possible de garder en mémoire des données concernant un visiteur d'une requête à l'autre, autrement dit de page en page : la session permet donc de garder une trace de la visite effectuée. Plus précisément, une session correspond en réalité à un navigateur particulier, plutôt qu'à un utilisateur : par exemple, si à un même instant vous utilisez deux navigateurs différents pour vous rendre sur le même site, le site créera deux sessions distinctes, une pour chacun des navigateurs.</p><p id="r-2132377" data-claire-element-id="2349339">Un objet session concernant un utilisateur est conservé jusqu'à ce qu'une certaine durée d’inactivité soit atteinte. Passé ce délai, le conteneur considère que ce client n'est plus en train de visiter le site, et détruit alors sa session.</p><p id="r-2132378" data-claire-element-id="2349340">Pour que vous visualisiez bien le principe, voici à la figure suivante un schéma regroupant les différentes portées existantes.</p><figure id="r-2132381" data-claire-element-id="2837304"><img id="r-2132379" data-claire-element-id="2349341" src="../../../user.oc-static.com/files/373001_374000/373030.png" alt="Portées des objets" /><figcaption>Portées des objets</figcaption></figure><p id="r-2132382" data-claire-element-id="2349344">Remarquez bien les points suivants :</p><ul id="r-2132391" data-claire-element-id="2349353"><li id="r-2132384" data-claire-element-id="2349346"><p id="r-2132383" data-claire-element-id="2349345">un objet de <strong>portée page</strong> n'est accessible que sur une page JSP donnée ;</p></li><li id="r-2132386" data-claire-element-id="2349348"><p id="r-2132385" data-claire-element-id="2349347">un objet de <strong>portée requête</strong> n'est accessible que durant le cheminement d'une requête dans l'application, et n'existe plus dès lors qu'une réponse est renvoyée au client ;</p></li><li id="r-2132388" data-claire-element-id="2349350"><p id="r-2132387" data-claire-element-id="2349349">un objet de <strong>portée session</strong> est accessible durant l'intégralité de la visite d'un client donné, à condition bien sûr que le temps d'inactivité défini par le conteneur ne soit pas dépassé durant cette visite ;</p></li><li id="r-2132390" data-claire-element-id="2349352"><p id="r-2132389" data-claire-element-id="2349351">un objet de <strong>portée application</strong> est accessible durant toute l'existence de l'application et par tous les clients.</p></li></ul><aside id="r-2132393" data-claire-element-id="2349355" data-claire-semantic="warning"><p id="r-2132392" data-claire-element-id="2349354">Vous devez bien réaliser que l'utilisation dans votre code d'objets ayant pour portée l'application est délicate. Rendez-vous compte : ces objets sont accessibles partout, tout le temps et par tout le monde ! Afin d'éviter notamment des problèmes de modifications concurrentes, si vous avez besoin de mettre en place de tels objets, il est recommandé de les initialiser dès le chargement de l'application, puis de ne plus toucher à leur contenu et d'y accéder depuis vos classes et pages <strong>uniquement en lecture seule</strong>. Nous étudierons ce scénario dans un prochain chapitre.</p></aside><p id="r-2132394" data-claire-element-id="2349356">Nous reviendrons au cas par cas sur chacune de ces portées dans certains exemples des chapitres à venir.</p><h3 id="r-620110" data-claire-element-id="2837318">Les actions standard</h3><aside id="r-2132396" data-claire-element-id="2349359" data-claire-semantic="information"><p id="r-2132395" data-claire-element-id="2349358">Autant vous prévenir tout de suite, le déroulement de ce chapitre peut vous perturber : je vais dans cette partie du chapitre vous présenter une certaine manière de faire pour accéder à des objets depuis une page JSP. Ensuite, je vais vous expliquer dans la partie suivante qu'il existe un autre moyen, plus simple et plus propre, et que nous n'utiliserons alors plus jamais cette première façon de faire… :-°</p></aside><p id="r-2132397" data-claire-element-id="2349360">Maintenant que vous connaissez les beans et les portées, vous avez presque tout en main pour constituer le modèle de votre application (le M de MVC) ! C'est lui et uniquement lui qui va contenir les données de votre application, et les traitements à y appliquer. La seule chose qui vous manque encore, c'est la manipulation de ces beans depuis une page JSP.</p><p id="r-2132398" data-claire-element-id="2349361">Vous avez déjà fait connaissance avec l'action standard <code>&lt;jsp:include&gt;</code>, je vais vous en présenter quatre autres : <code>&lt;jsp:useBean&gt;</code>, <code>&lt;jsp:getProperty&gt;</code>, <code>&lt;jsp:setProperty&gt;</code> et enfin <code>&lt;jsp:forward&gt;</code>.</p><h4 id="r-2132415" data-claire-element-id="2837308">L'action standard useBean</h4><p id="r-2132399" data-claire-element-id="2349362">Voici pour commencer l'action standard permettant d'utiliser un bean, ou de le créer s'il n'existe pas, depuis une page JSP :</p><pre id="r-2132400" data-claire-element-id="2837306"><code data-claire-semantic="jsp">&lt;%-- L'action suivante récupère un bean de type Coyote et nommé &quot;coyote&quot; dans
+la portée requête s'il existe, ou en crée un sinon. --%&gt;
+&lt;jsp:useBean id=&quot;coyote&quot; class=&quot;com.sdzee.beans.Coyote&quot; scope=&quot;request&quot; /&gt;
+
+&lt;%-- Elle a le même effet que le code Java suivant : --%&gt;
+&lt;% 
+com.sdzee.beans.Coyote coyote = (com.sdzee.beans.Coyote) request.getAttribute( &quot;coyote&quot; ); 
+if ( coyote == null ){
+    coyote = new com.sdzee.beans.Coyote();
+    request.setAttribute( &quot;coyote&quot;, coyote );
+}
+%&gt;</code></pre><p id="r-2132401" data-claire-element-id="2349364">Étudions les différents attributs de cette action.</p><ul id="r-2132410" data-claire-element-id="2349373"><li id="r-2132403" data-claire-element-id="2349366"><p id="r-2132402" data-claire-element-id="2349365">La valeur de l'attribut <strong>id</strong> est le nom du bean à récupérer, ou le nom que vous souhaitez donner au bean à créer.</p></li><li id="r-2132405" data-claire-element-id="2349368"><p id="r-2132404" data-claire-element-id="2349367">L'attribut <strong>class</strong> correspond logiquement à la classe du bean. Il doit obligatoirement être spécifié si vous souhaitez créer un bean, mais pas si vous souhaitez simplement récupérer un bean existant.</p></li><li id="r-2132407" data-claire-element-id="2349370"><p id="r-2132406" data-claire-element-id="2349369">L'attribut optionnel <strong>scope</strong> correspond à la portée de l'objet. Si un bean du nom spécifié en id <strong>existe déjà</strong> dans ce <em>scope</em>, et qu'il est du type ou de la classe précisé(e), alors il est récupéré, sinon une erreur survient. Si aucun bean de ce nom n'existe dans ce <em>scope</em>, alors un nouveau bean est créé. Enfin, <strong>si cet attribut n'est pas renseigné, alors le <em>scope</em> par défaut sera limité à la page</strong> en cours.</p></li><li id="r-2132409" data-claire-element-id="2349372"><p id="r-2132408" data-claire-element-id="2349371">L'attribut optionnel <strong>type</strong> doit indiquer le type de déclaration du bean. Il doit être une superclasse de la classe du bean, ou une interface implémentée par le bean. Cet attribut doit être spécifié si <strong>class</strong> ne l'est pas, et vice-versa.</p></li></ul><p id="r-2132411" data-claire-element-id="2349374">En résumé, <strong>cette action permet de stocker un bean (nouveau ou existant) dans une variable</strong>, qui sera identifiée par la valeur saisie dans l'attribut <strong>id</strong>.</p><p id="r-2132412" data-claire-element-id="2349375">Il est également possible de donner un corps à cette balise, qui ne sera exécuté que si le bean est créé :</p><pre id="r-2132413" data-claire-element-id="2837307"><code data-claire-semantic="jsp">&lt;jsp:useBean id=&quot;coyote&quot; class=&quot;com.sdzee.beans.Coyote&quot;&gt;
+   &lt;%-- Ici, vous pouvez placer ce que vous voulez : 
+        définir des propriétés, créer d'autres objets, etc. --%&gt;
+   &lt;p&gt;Nouveau bean !&lt;/p&gt;
+&lt;/jsp:useBean&gt;</code></pre><p id="r-2132414" data-claire-element-id="2349377">Ici, le texte qui est présent entre les balises ne sera affiché que si un bean est bel et bien créé, autrement dit si la balise <code>&lt;jsp:useBean&gt;</code> est appelée avec succès. À l'inverse, si un bean du même nom existe déjà dans cette page, alors le bean sera simplement récupéré et le texte ne sera pas affiché.</p><h4 id="r-2132424" data-claire-element-id="2837310">L'action standard getProperty</h4><p id="r-2132416" data-claire-element-id="2349379">Lorsque l'on utilise un bean au sein d'une page, il est possible par le biais de cette action d'obtenir la valeur d'une de ses propriétés :</p><pre id="r-2132417" data-claire-element-id="2837309"><code data-claire-semantic="jsp">&lt;jsp:useBean id=&quot;coyote&quot; class=&quot;com.sdzee.beans.Coyote&quot; /&gt;
+
+&lt;%-- L'action suivante affiche le contenu de la propriété 'prenom' du bean 'coyote' : --%&gt;
+&lt;jsp:getProperty name=&quot;coyote&quot; property=&quot;prenom&quot; /&gt;
+
+&lt;%-- Elle a le même effet que le code Java suivant : --%&gt;
+&lt;%= coyote.getPrenom() %&gt;</code></pre><p id="r-2132418" data-claire-element-id="2349381">Faites bien attention à la subtilité suivante ! Alors que <code>&lt;jsp:useBean&gt;</code> récupère une instance dans une variable accessible par l'id défini, cette action standard ne récupère rien, mais réalise seulement l'affichage du contenu de la propriété ciblée. Deux attributs sont utiles ici :</p><ul id="r-2132423" data-claire-element-id="2349386"><li id="r-2132420" data-claire-element-id="2349383"><p id="r-2132419" data-claire-element-id="2349382"><strong>name</strong> : contient le nom réel du bean, en l'occurrence l'id que l'on a saisi auparavant dans la balise de récupération du bean ;</p></li><li id="r-2132422" data-claire-element-id="2349385"><p id="r-2132421" data-claire-element-id="2349384"><strong>property</strong> : contient le nom de la propriété dont on souhaite afficher le contenu.</p></li></ul><h4 id="r-2132430" data-claire-element-id="2837315">L'action standard setProperty</h4><p id="r-2132425" data-claire-element-id="2349388">Il est enfin possible de modifier une propriété du bean utilisé. Il existe pour cela quatre façons de faire via l'action standard dédiée à cette tâche :</p><pre id="r-2132426" data-claire-element-id="2837311"><code data-claire-semantic="jsp">&lt;%-- L'action suivante associe une valeur à la propriété 'prenom' du bean 'coyote' : --%&gt;
+&lt;jsp:setProperty name=&quot;coyote&quot; property=&quot;prenom&quot; value=&quot;Wile E.&quot; /&gt;
+
+&lt;%-- Elle a le même effet que le code Java suivant : --%&gt;
+&lt;% coyote.setPrenom(&quot;Wile E.&quot;); %&gt;</code></pre><pre id="r-2132427" data-claire-element-id="2837312"><code data-claire-semantic="jsp">&lt;%-- L'action suivante associe directement la valeur récupérée
+depuis le paramètre de la requête nommé ici 'prenomCoyote' à la propriété 'prenom' : --%&gt;
+&lt;jsp:setProperty name=&quot;coyote&quot; property=&quot;prenom&quot; param=&quot;prenomCoyote&quot;/&gt;
+
+&lt;%-- Elle a le même effet que le code Java suivant : --%&gt;
+&lt;% coyote.setPrenom( request.getParameter(&quot;prenomCoyote&quot;) ); %&gt;</code></pre><pre id="r-2132428" data-claire-element-id="2837313"><code data-claire-semantic="jsp">&lt;%-- L'action suivante associe directement la valeur récupérée
+depuis le paramètre de la requête nommé ici 'prenom' à la propriété de même nom : --%&gt;
+&lt;jsp:setProperty name=&quot;coyote&quot; property=&quot;prenom&quot; /&gt;
+
+&lt;%-- Elle a le même effet que le code Java suivant : --%&gt;
+&lt;% coyote.setPrenom( request.getParameter(&quot;prenom&quot;) ); %&gt;</code></pre><pre id="r-2132429" data-claire-element-id="2837314"><code data-claire-semantic="jsp">&lt;%-- L'action suivante associe automatiquement la valeur récupérée
+depuis chaque paramètre de la requête à la propriété de même nom : --%&gt;
+&lt;jsp:setProperty name=&quot;coyote&quot; property=&quot;*&quot; /&gt;
+ 
+&lt;%-- Elle a le même effet que le code Java suivant : --%&gt; 
+&lt;% coyote.setNom( request.getParameter(&quot;nom&quot;) ); %&gt;
+&lt;% coyote.setPrenom( request.getParameter(&quot;prenom&quot;) ); %&gt;
+&lt;% coyote.setGenius( Boolean.valueOf( request.getParameter(&quot;genius&quot;) ) ); %&gt;</code></pre><h4 id="r-2132449" data-claire-element-id="2837317">L'action standard forward</h4><p id="r-2132431" data-claire-element-id="2349394">La dernière action que nous allons découvrir permet d'effectuer une redirection vers une autre page. Comme toutes les actions standard, elle s'effectue côté serveur et pour cette raison <strong>il est impossible via cette balise de rediriger vers une page extérieure à l'application</strong>. L'action de <em>forwarding</em> est ainsi limitée aux pages présentes dans le contexte de la servlet ou de la JSP utilisée :</p><pre id="r-2132432" data-claire-element-id="2837316"><code data-claire-semantic="jsp">&lt;%-- Le forwarding vers une page de l'application fonctionne par URL relative : --%&gt;
+&lt;jsp:forward page=&quot;/page.jsp&quot; /&gt;
+
+&lt;%-- Son équivalent en code Java  est : --%&gt;
+&lt;% request.getRequestDispatcher( &quot;/page.jsp&quot; ).forward( request, response ); %&gt;
+
+&lt;%-- Et il est impossible de rediriger vers un site externe comme ci-dessous :  --%&gt;
+&lt;jsp:forward page=&quot;http://www.siteduzero.com&quot; /&gt;</code></pre><p id="r-2132433" data-claire-element-id="2349396">Une particularité du <em>forwarding</em> est qu'il n'implique pas d'aller/retour passant par le navigateur de l'utilisateur final. Autrement dit, l'utilisateur final n'est pas au courant que sa requête a été redirigée vers une ou plusieurs JSP différentes, puisque l'URL qui est affichée dans son navigateur ne change pas. Pas d'inquiétude, nous y reviendrons en détail lorsque nous étudierons un cas particulier, dans le chapitre concernant les sessions.</p><p id="r-2132434" data-claire-element-id="2349397">Sachez enfin que lorsque vous utilisez le <em>forwarding</em>,<strong> le code présent après cette balise dans la page n'est pas exécuté.</strong><br /> Je vous présente toutes ces notations afin que vous sachiez qu'elles existent, mais vous devez comprendre que la plupart de celles-ci étaient d'actualité… il y a une petite dizaine d'années maintenant ! Depuis, d'importantes évolutions ont changé la donne et tout cela n'est aujourd'hui utilisé que dans des cas bien spécifiques.</p><p id="r-2132435" data-claire-element-id="2349398">La vraie puissance de la technologie JSP, c'est dans le chapitre suivant que vous allez la découvrir !</p><ul id="r-2132448" data-claire-element-id="2349411"><li id="r-2132437" data-claire-element-id="2349400"><p id="r-2132436" data-claire-element-id="2349399">Les commentaires compris entre <code>&lt;%-- et --%&gt;</code> ne sont pas visibles dans la page finale générée.</p></li><li id="r-2132439" data-claire-element-id="2349402"><p id="r-2132438" data-claire-element-id="2349401">L'insertion directe de code Java dans une JSP est possible mais très déconseillée.</p></li><li id="r-2132441" data-claire-element-id="2349404"><p id="r-2132440" data-claire-element-id="2349403">Les directives se placent en début de fichier et permettent de configurer une JSP sous différents angles.</p></li><li id="r-2132443" data-claire-element-id="2349406"><p id="r-2132442" data-claire-element-id="2349405">Il existe 4 portées d'objets différentes, représentant 4 durées de vie différentes : page, request, session et application.</p></li><li id="r-2132445" data-claire-element-id="2349408"><p id="r-2132444" data-claire-element-id="2349407">Une session suit un visiteur de son arrivée sur le site jusqu'à son départ.</p></li><li id="r-2132447" data-claire-element-id="2349410"><p id="r-2132446" data-claire-element-id="2349409">Les actions standard permettent pour la plupart de manipuler des objets au sein d'une JSP, mais sont aujourd'hui de l'histoire ancienne.</p></li></ul>
+
+                <div class="js-courseSelementActions sideActions">
+    <ul class="sideActions__container">
+        <li>
+            <a class="sideActions__item  js-courseElementActions-copyUrl  js-tooltip"
+               href="#" data-tooltip="Copier le lien"
+               data-tooltip-done="Lien copié !">
+            #
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+
+            
+            <nav class="course-pagination    clearfix">
+
+            <a href="le-javabean.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--previous">
+            <i class="icon-previous"></i>
+            <span>Le JavaBean</span>
+        </a>
+    
+    <span class="course-pagination__separator"></span>
+
+            <a href="la-technologie-jsp-2-2.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--next">
+            <span>La technologie JSP (2/2)</span>
+            <i class="icon-next"></i>
+        </a>
+    
+</nav>
+
+            
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-view-restriction_popin_title"
+                class="popin popin--illustrated  js-popin"
+        id="popin-view-restriction"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+                    <div class="popin__illustrationWrapper">
+                <div class="popin__illustration illustration--balloon"></div>
+            </div>
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-view-restriction_popin_title" class="popin__title  js-popin-title">Waouh !</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <p>
+            Très heureux de voir que nos cours vous plaisent, déjà 3 pages lues aujourd&#039;hui ! Vous pouvez continuer la lecture de nos cours en devenant un Roomie, un membre de la communauté d&#039;OpenClassrooms. C&#039;est gratuit !
+        </p>
+        <p>
+            Vous pourrez aussi suivre votre avancement dans le cours, faire les exercices et discuter avec les autres Roomies.
+        </p>
+                    </div>
+            </div>
+
+                            <div class="popin__actions  js-popin-actions">
+                                                                        <a class="oc-btn orange-alt-btn "  href="https://openclassrooms.com/register">S'inscrire</a>
+                                                    <a class="oc-btn dark-btn "  href="https://openclassrooms.com/login">Se connecter</a>
+                                                            </div>
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+        </div>
+
+
+    </section>
+</div>
+    </div>
+
+    
+    <div id="popin-not-certifying-yet"
+     class="popin"
+     data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <a href='https://openclassrooms.com/premium'><i class='icon-star'></i> Devenez Premium</a>
+                    ">
+    <img alt="Exemple de certificat de réussite" src="../../../static.oc-static.com/prod/images/courses/certif.jpg"/>
+</div>
+
+
+                </main>
+
+                <aside class="contentWithSidebar__sidebar  js-contentWithSidebar-slidingElement" >
+                        <nav class="col-nav">
+    <div id="tab-courseMenu" class="col-nav__inner js-sidebar-inner">
+        <div class="col-nav__block  col-nav__block--summary">
+
+            <div class="side-paginate">
+                                    <a href="le-javabean.html" class="side-paginate__previous">
+                        <i class="icon-previous"></i>
+                    </a>
+
+                    <span class="side-paginate__separator"></span>
+                
+                <h6 class="side-paginate__title">
+                    Premiers pas avec Java EE
+                </h6>
+
+                                    <span class="side-paginate__separator"></span>
+
+                    <a href="la-technologie-jsp-2-2.html" class="side-paginate__next">
+                        <i class="icon-next"></i>
+                    </a>
+                            </div>
+
+                            <div class="col-nav__block--summary-list">
+                    <ol class="col-nav__chapters">
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="la-servlet.html">La servlet</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="servlet-avec-vue.html">Servlet avec vue…</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="transmission-de-donnees.html">Transmission de données</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="le-javabean.html">Le JavaBean</a>
+                                                            </li>
+                                                    <li class="selected">
+                                                                                                    <span class="col-nav__chapterTitle">La technologie JSP (1/2)</span>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="la-technologie-jsp-2-2.html">La technologie JSP (2/2)</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="des-problemes-de-vue.html">Des problèmes de vue ?</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="tp-fil-rouge-etape-1.html">TP Fil rouge - Étape 1</a>
+                                                            </li>
+                                            </ol>
+
+                                    </div>
+                    </div>
+
+        
+        
+            <div class="col-nav__block  col-nav__block--subscribe">
+            <a href="https://openclassrooms.com/login" class="oc-btn orange-alt-btn js-popin-activator" data-popin-selector="#popin-log-in">
+                <i class="icon-lock"></i>
+                Suivre ce cours
+            </a>
+
+            <a href="https://openclassrooms.com/how-does-it-work">
+                <small>Comment ça marche ?</small>
+            </a>
+        </div>
+    
+
+
+        
+                    <div class="col-nav__block col-nav__block--institution">
+    <h2>Créé par</h2>
+            <a  href="https://openclassrooms.com/partners/openclassrooms" target="_blank">
+            <img src="../../../sdz-upload.s3.amazonaws.com/prod/partners/img/logo_logo-oc.png" alt="logo OpenClassrooms" class="col-nav__institutionLogo"/>
+            <p class="col-nav__block--institutionDescription">
+                OpenClassrooms, 1ère plateforme  <span class='nowrap'>e-Education<span> en Europe
+            </p>
+        </a>
+    </div>
+        
+        
+        
+    
+                        
+            
+    <div class="socialNetwork col-nav__block">
+        <ul class="socialButtons  js-socialButtons"
+    data-options="
+                title: 'Découvrez le cours &quot;La technologie JSP (1/2)&quot; sur @OpenClassrooms',
+        mailTitle: 'Cours &quot;La technologie JSP (1/2)&quot; sur OpenClassrooms',
+        mailContent: 'Découvrez le cours &quot;La technologie JSP (1/2)&quot; sur OpenClassrooms.'">
+
+    <li>
+        <a class="roundIcon  roundIcon--twitter addthis_button_twitter  js-socialButtons-btn" data-tooltip="Partagez sur Twitter" >
+            <i class="roundIcon__icon  icon-twitter"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--facebook  addthis_button_facebook  js-socialButtons-btn" data-tooltip="Partagez sur Facebook">
+            <i class="roundIcon__icon  icon-facebook"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--googlePlus  addthis_button_google_plusone_share  js-socialButtons-btn" data-tooltip="Partagez sur Google+" >
+            <i class="roundIcon__icon  icon-google"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  addthis_button_email  js-socialButtons-btn  js-socialButtons-email" data-tooltip="Partagez par e-mail">
+            <i class="roundIcon__icon  icon-letter"></i>
+        </a>
+    </li>
+
+</ul>
+
+    </div>
+    </div>
+</nav>
+                </aside>
+            </div>
+        </div>
+
+                    <footer class="alt-section">
+    <div class="centered">
+
+        <div class="row">
+                            <div class="col4 course-bottom__category">
+                    <h2 class="highlighted">
+                        L&#039;auteur
+                    </h2>
+                    <div>
+                                                    <a itemprop="author" itemscope itemtype="http://schema.org/Person" href="https://openclassrooms.com/membres/coyote-92394" class="no-underlined">
+                                <div class="course-bottom__text-illustrated">
+                                    <span data-author="Médéric Munier" style="background-image: url(../../../www.gravatar.com/avatar/15c349ac5313535fba91e5dbfa8803ec/indexd6dc.html?s=256&amp;r=g&amp;d=https%3A%2F%2Fopenclassrooms.com%2Fbundles%2Fcommon%2Fimages%2Favatar_defaut.png);"></span>
+                                    <h4 itemprop="name">Médéric Munier</h4>
+                                                                            <p itemprop="description">
+                                            Auteur du livre sur le Java EE.
+                                        </p>
+                                                                    </div>
+                            </a>
+                                            </div>
+                </div>
+            
+                            <div class="col8 course-bottom__category">
+                    <h2 class="highlighted">Découvrez aussi ce cours en...</h2>
+
+                    <ul class="course-bottom__format">
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">eBook</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-book"></i>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">Livre papier</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook pdf"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">PDF</div>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                    </div>
+
+    </div>
+</footer>
+
+
+    </article>
+            </div>
+        </div>
+
+                    <footer class="footer">
+    <div class="centered">
+        <div class="row">
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    OpenClassrooms
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/about-us" class="footer__link">Qui sommes-nous ?</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/how-does-it-work" class="footer__link">Fonctionnement de nos cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/jobs" class="footer__link">Recrutement</a>
+                    </li>
+                    <li>
+                        <a href="#" class="js-zendesk-show footer__link">Nous contacter</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Professionnels
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/affiliation" class="footer__link">
+                            Affiliation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/business" class="footer__link">Entreprises</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/universities" class="footer__link">Universités et écoles</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Participez
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/new-teachers" class="footer__link">Créer un cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/courses/courselab" class="footer__link">CourseLab</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/terms-conditions/fr" class="footer__link">
+                            <strong>Conditions Générales d&#039;Utilisation</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Suivez-nous
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+                                                                    <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="http://blog.openclassrooms.com/" class="footer__link">Le blog OpenClassrooms</a>
+                    </li>
+                    <li>
+                        <ul class="footer__socialNetwork">
+                            <li>
+                                <a href="https://www.facebook.com/openclassrooms" target="_blank" class="roundIcon roundIcon--facebook footer__socialButtons">
+                                    <i class="icon-facebook roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/openclassrooms" target="_blank" class="roundIcon roundIcon--twitter footer__socialButtons">
+                                    <i class="icon-twitter roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/+OpenClassrooms/posts" target="_blank" class="roundIcon roundIcon--youtube footer__socialButtons">
+                                    <i class="icon-google roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/openclassrooms" target="_blank" class="roundIcon roundIcon--instagram footer__socialButtons">
+                                    <i class="icon-instagram roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/TheOpenClassrooms" target="_blank" class="roundIcon roundIcon--googlePlus footer__socialButtons">
+                                    <i class="icon-youtube roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/openclassrooms" target="_blank" class="roundIcon roundIcon--linkedin footer__socialButtons">
+                                    <i class="icon-linkedin roundIcon__icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
+        
+        <!-- loaded javascript block -->
+
+            
+            <script type="text/javascript" src="../../js/maind0b3.js?095b5b3"></script>
+
+        
+
+    <script type="text/javascript" src="../../js/oc/courseViewd0b3.js?095b5b3"></script>
+
+
+        <!-- loaded javascript block -->
+
+        <script type="text/javascript">
+    window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+    window.analytics.load('mou95e6tdn');
+</script>
+
+                            
+        <!-- inlined javascript block -->
+
+        <script type="text/javascript">
+            
+            if (App.modules) {
+                App.modules.startAll();
+            }
+        </script>
+
+                        
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"90dc06697a","applicationID":"20302107","transactionName":"NANaYkJXC0ICAhdYVw1Je0NDQgpcTA4AblsPB1FEVWkGXhYTEFRnEwdKQm9GBEMXPhVYXRQ=","queueTime":0,"applicationTime":655,"atts":"GERZFApNGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-technologie-jsp-1-2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:49:44 GMT -->
+</html>

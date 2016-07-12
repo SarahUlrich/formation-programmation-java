@@ -1,0 +1,1755 @@
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="fr" prefix="og: http://ogp.me/ns#">
+    
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-bibliotheque-core by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:50:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(e,t){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,t)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var u=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(u,function(e,t){newrelic[t]=r(f+t,"api")}),i(c,function(e,t){newrelic[t]=r(f+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?u(e,a,i):i()}function n(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,c=0;u>c;c++)a[c].apply(i,r);var s=f[g[n]];return s&&s.push([m,n,r,i]),i}function p(e,t){w[e]=l(e).concat(t)}function l(e){return w[e]||[]}function d(e){return s[e]=s[e]||o(n)}function v(e,t){c(e,function(e,n){t=t||"feature",g[n]=t,t in f||(f[t]=[])})}var w={},g={},m={on:p,emit:n,get:d,listeners:l,context:t,buffer:v};return m}function i(){return new r}var a="nr@context",u=e("gos"),c=e(2),f={},s={},p=t.exports=o();p.backlog=f},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!w++){var e=v.info=NREUM.info,t=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){c(l,function(t,n){e[t]||(e[t]=n)});var n="https"===p.split(":")[0]||e.sslForHttp;v.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=v.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=window,s=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var p=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),v=t.exports={offset:a(),origin:p,features:{},xhrWrappable:d};s.addEventListener?(s.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(s.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),u("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader"]);</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="application-name" content="OpenClassrooms"/>
+        <meta name="msapplication-TileColor" content="#e95325"/>
+        <meta name="msapplication-TileImage" content="/fav-icon.png?v=1"/>
+
+        <meta name="theme-color" content="#E95325">
+        <link rel="icon" sizes="144x144" href="../../fav-icon3860.png?v=1">
+
+        
+        
+        <link href="../../bundles/common/css/masterd0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"  />
+        
+
+        <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="../../apple-touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-iphone-retina-display.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-ipad-retina-display.png" />
+
+        <link rel="apple-touch-icon-precomposed" href="../../apple-touch-icon-precomposed.png" />
+
+            <link href="../../bundles/course/css/maind0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" src="../../js/modernizrd0b3.js?095b5b3"></script>
+
+        <link rel="shortcut icon" href="https://openclassrooms.com/favicon.ico?095b5b3" />
+
+            
+    <meta property="og:locale" content="fr"/>
+    <meta property="og:type" content="website"/>
+
+    <meta property="og:title" content="Découvrez le cours &quot;La bibliothèque Core&quot; sur @OpenClassrooms"/>
+    <meta property="og:url" content="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-bibliotheque-core"/>
+    <meta property="og:site_name" content="OpenClassrooms"/>
+    <meta property="og:image" content="https://static.oc-static.com/prod/courses/illustrations/illu_creez-votre-application-web-avec-java-ee.png"/>
+    <meta property="og:description" content="Pour réaliser des sites web en Java, on utilise l&#039;environnement Java EE (anciennement appelé J2EE). Celui-ci impose de développer de façon très structurée, ce qui explique certainement pour quoi on le retrouve dans un très grand nombre d&#039;applications web notamment en entreprise (banques, administrations...)."/>
+
+            
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@OpenClassrooms"/>
+    <meta name="twitter:title" content="Découvrez le cours &quot;La bibliothèque Core&quot; sur @OpenClassrooms"/>
+    <meta name="twitter:description" content=""/>
+
+                
+        <title>La bibliothèque Core</title>
+
+        <!-- inlined top javascript block -->
+
+
+        <script type="text/javascript">
+            var App = {
+                startTime: (new Date()).getTime(),
+                debug: false
+            };
+
+            App.user = {
+                
+                
+                
+                isPremium: false
+            };
+
+
+            App.preferences = {
+                assetVersion: '095b5b3',
+                contactMail: 'hello@openclassrooms.com',
+                adyenPublicKey: '10001|889EBFD4D434B82683E21DCA26E77C3E20E0EE09A5ECE3830B0ED51F2FA721A2F7E9EC871C6AB9A1E12C4492F4717673047757E02C5256D8E265CD51E413E5EFCCFEAC41B39C662A424ADC13EE187C38C372A7FCCEC1EA5DF841989437D78B252A8EB51008E60BB55B1E55A7A80DE1A9D60D998C128A576BFAE1DDB97D514AF0A073AEDDE84CEE40D1F8F6ECE85D0FFA50C95C06DB274021C1371376C6EB16561FD65C5E2704B570A7504D617D0F3820F176A0609F6162BDF5890533289FDC3DA7DB03B50BB3BD60A613E1FF72060F22987627E8F1A29F0128A94EC4C8FF7CF6B7AB9558D8433BF86D7A388AB927641CD6C02689139CEE3AAC9ACBFFE83806CB',
+                algolia: {
+                    appId: 'JGRXRFVQM0',
+                    apiKey: 'dfbdea500cb0b5f46e449ad334916c44', indexName: 'prod_COURSES_fr'
+                },
+                routes: {
+                    COURSE_EVENT: '/components/courses/:courseId',
+                    COURSE_PART_EVENT: '/components/courses/:courseId/parts/:partId',
+
+                    ACCEPT_COOKIE: '/components/user-accept-consent-cookie'
+                }
+
+                                            };
+
+            App.preferences.navigationPreference = {
+                            };
+
+            App.preferences.modules = {
+                'smiley': {
+                    basePath: '/bundles/common/images/smiley/'
+                }
+            };
+        </script>
+        <!-- inlined top javascript block end -->
+
+        <script>    App.preferences.modules['course/view/internalFolding'] = {
+        isBigCourse: true
+    };
+
+    App.data = App.data || {};
+App.data.currentCourse = {"partId":621269,"courseId":626954};
+App.preferences.modules['view/currentCoursePage'] = App.data.currentCourse;
+
+</script>
+
+        
+        
+    </head>
+
+    <body class="course oc-body ">
+
+        
+
+        
+    
+    
+    <script id="_EVENTS-PAGE" type="application/json">
+        {"type":"page"}
+    </script>
+
+
+        <!--[if lt IE 9]>
+<div class="disclaimer  disclaimer-error">
+    Vous utilisez un navigateur obsolète, veuillez le <a href="http://browsehappy.com/">mettre à jour</a>.
+</div>
+<![endif]-->
+
+<noscript>
+    <div class="disclaimer  disclaimer--error">
+        Veuillez utiliser un <a href="http://browsehappy.com/">navigateur internet moderne</a> avec JavaScript activé pour naviguer sur OpenClassrooms.com
+    </div>
+</noscript>
+
+
+                    
+
+<header id="oc-header" class="js-tabs-mobile mainHeader ">
+
+        <div class="disclaimer  disclaimer--info hidden  js-cookie-disclaimer">
+        <div class="disclaimer__wrapper">
+            <span class="disclaimer__content">Bienvenue sur OpenClassrooms ! En poursuivant votre navigation, vous acceptez l'utilisation de cookies. <a href="https://openclassrooms.com/privacy-policy#personal-data-gathering">En savoir plus</a></span>
+            <span class="disclaimer__actions">
+                <a href="#" class="disclaimer__button  js-close-button">ok</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="mainHeader__wrapper">
+
+        <div class="mainHeader__topLine">
+                <a href="https://openclassrooms.com/pole-emploi/partenariat?utm_source=SiteWeb-OC&amp;utm_medium=Lien-PhraseHeader&amp;utm_campaign=relancePE"> Vous êtes demandeur d'emploi ? On vous offre le Premium Solo en 3 clics :) ! </a>
+
+        </div>
+
+        <div class="mainHeader__top">
+            <a href="https://openclassrooms.com/" class="mainHeader__logo" title="OpenClassrooms.com">OpenClassrooms.com</a>
+
+            
+<nav role="navigation" class="icoTabs  mainHeader__tabSet">
+    <span class="mainHeader__mobileNav">
+
+        
+        
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseEditMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" data-tabs-default="true" href="#tab-searchMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-search  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab" href="#tab-main">
+            <i class="icon-menu  icoTabs__icon"></i>
+        </a>
+    </span>
+
+</nav>
+        </div>
+
+                <div class="js-tabs-content  mainHeader__content"></div>
+
+        <div class="mainHeader__content">
+            <div id="tab-main" class="mainHeader__tabs">
+                <nav class="mainTopNav  scrollPanel  js-scrollPanel-mobileMenu">
+    <div class="mainTopNav__container  scrollPanel__container  js-scrollPanel-container">
+        <ul class="mainHeader__container  mainHeader__container--mainMenu  js-scrollPanel-content">
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="http://openclassrooms.com/paths/">Parcours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/courses">Cours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/forum/">Forums</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/partners">Partenaires</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/premium">Premium</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+                <div class="mainHeader__contentInner">
+                    <div class="mainHeader__container  mainHeader__container--search">
+                                                                                                                                                                            
+                                                                          
+ <div class="js-courseSearch  topSearchBox">
+     <form tabindex="0" class="js-courseSearch-form  oc-form" action="https://openclassrooms.com/courses" method="get">
+         <div class="js-courseSearch-inputGroup oc-form__widget  inputGroup  topSearchBox__inner">
+             <input id="algolia-search-input"
+                    type="search"
+                    class="js-courseSearch-input oc-form__control inputGroup__input  topSearchBox__input"
+                    title="Rechercher"
+                    autocomplete="off"
+                    data-option_source="/components/courses/search?q=<%= term %>"
+                    placeholder="Rechercher"
+                    name="q" />
+
+             <button class="js-courseSearch-button  oc-btn dark-btn  only-icon  inputGroup__button  topSearchBox__button" type="submit" title="Rechercher un cours">
+                 <i class="inputGroup__icon icon-search"></i>
+                 <i class="inputGroup__icon inputGroup__icon--load icon-spinner icon-spin"></i>
+             </button>
+         </div>
+     </form>
+ </div>
+                    </div>
+
+                                            <div class="mainHeader__container  mainHeader__container--separatorLarge  hidden-s"></div>
+                    
+
+
+                    
+                                            <div class="mainHeader__container  mainHeader__container--login">
+    <a href="https://openclassrooms.com/register" class="oc-btn orange-alt-btn js-popin-activator space-right" data-popin-selector="#popin-sign-in">
+    S&#039;inscrire
+</a>
+<a href="https://openclassrooms.com/login" class="oc-btn dark-btn js-popin-activator" data-popin-selector="#popin-log-in">
+    Se connecter
+</a>
+</div>
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-sign-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-sign-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-sign-in_popin_title" class="popin__title  js-popin-title">Inscription</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=87559484b9f1e827d1df62108fa47dba&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail">
+            <i class="icon-facebook"></i>S&#039;inscrire avec Facebook
+        </a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto">
+            <i class="icon-google"></i>S&#039;inscrire avec Google
+        </a>
+    </li>
+
+    <li class="formLogin__column">
+        
+            
+    
+    
+
+    <form name="register" method="post" action="https://openclassrooms.com/register" class="js-registerForm oc-form">
+
+        <div class="accessibility-hidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Wonder&nbsp;                        </span><span class="oc-form__widget"><input type="text" id="register_wonder" name="register[wonder]" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Prénom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_firstName" name="register[firstName]" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Nom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_lastName" name="register[lastName]" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="email" id="register_email" name="register[email]" required="required" class="" /></span></label>
+            <p>
+                <em>
+                    Vous recevrez votre mot de passe sur cette adresse email.
+                </em>
+            </p>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="register_terms" name="register[terms]" required="required" class="" value="1" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            J'ai lu et j'accepte les <a href="https://openclassrooms.com/terms-conditions/fr">Conditions Générales d'Utilisation</a>.&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span></span></label>
+        </div>
+
+
+        <div class="oc-form__group  center-text">
+            
+    <button type="submit" id="register_create" name="register[create]" class="oc-btn orange-alt-btn oc-btn"> S'inscrire</button>
+        </div>
+
+        <input type="hidden" id="register__target_path" name="register[_target_path]" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-bibliotheque-core" /><input type="hidden" id="register__token" name="register[_token]" value="LEhsW-IhokD4hQHYoHva_FZzYy-PP2cG-886IBpx9HY" /></form>
+    </li>
+</ul>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-log-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-log-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-log-in_popin_title" class="popin__title  js-popin-title">Connexion</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=87559484b9f1e827d1df62108fa47dba&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail"><i class="icon-facebook"></i> Se connecter avec Facebook</a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto"><i class="icon-google"></i> Se connecter avec Google</a>
+    </li>
+
+    <li class="formLogin__column">
+
+        
+            
+    
+    
+
+    <form name="" method="post" action="https://openclassrooms.com/login_check" class=" oc-form">
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email ou nom d'utilisateur&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="_username" name="_username" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Mot de passe&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="password" id="_password" name="_password" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="_remember_me" name="_remember_me" class="" value="1" checked="checked" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            Se souvenir de moi&nbsp;                        </span></span></label>
+        </div>
+
+        <div class="oc-form__group right-text">
+            <a href="https://openclassrooms.com/set-new-password">Mot de passe oublié</a>
+        </div>
+
+        <div class="oc-form__group  center-text">
+            <input type="hidden" id="_target_path" name="_target_path" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-bibliotheque-core" /><div>
+    <button type="submit" id="login" name="login" class="orange-alt-btn oc-btn"> Se connecter</button></div><input type="hidden" id="_csrf_token" name="_csrf_token" value="WFIVlYEKEcL5v9hnQC1z3quXwgYs14KEFOLh1GUmi_I" />
+        </div>
+
+        </form>
+    </li>
+</ul>
+<p class="text-center space-top">
+    Pas encore membre ? <a href="https://openclassrooms.com/register">Inscrivez-vous gratuitement</a> en 30s.
+</p>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+                    
+                    <div class="mainHeader__container  mainHeader__container--langSelector">
+                        <div class="js-popOut-header  popOut popOut--small  popOut--rightAlign" data-keep-it-mobile="true">
+    <span class="js-popOut-button  popOut__button">
+                    <a href="javascript:;" class="languageSelector__selected">Français</a>
+            </span>
+    <ul class="popOutList  popOut__content  popOutList--small">
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/en/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">English</a>
+            </li>
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/es/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">Español</a>
+            </li>
+            </ul>
+</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+        
+        <div id="mainSearch" class="centered search-content">
+        </div>
+
+        <div id="mainContentWithHeader">
+            <div id="pre-main-part">
+                
+                                        <section class="inset no-padding">
+        <div class="centered">
+
+            <h6 class="accessibility-hidden">Fil d&#039;Ariane</h6>
+
+            <nav class="breadcrumb">
+                <ul class="breadcrumbtrail">
+                                                                        <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/" itemprop="url">
+                                <span itemprop="title">Accueil</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses" itemprop="url">
+                                <span itemprop="title">Cours</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee?status=published" itemprop="url">
+                                <span itemprop="title">Créez votre application web avec Java EE</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li class="current" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            La bibliothèque Core
+                                                                        </li>
+                                    </ul>
+            </nav>
+        </div>
+    </section>
+
+                
+                            </div>
+
+            <div class="claire clearfix" >
+                    <article itemscope itemtype="http://schema.org/Article">
+
+                        
+<header class="course-header" xmlns="http://www.w3.org/1999/html">
+    <div class="centered"><div class="course-header__topPart"><div class="course-header__info"><a itemprop="url" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><h1 data-course-title="Créez votre application web avec Java EE">Créez votre application web avec Java EE</h1></a><span class="course-header__updatedTime visible-l">Mis à jour le lundi 13 juillet 2015</span></div></div></div><div class="course-header__details-container"><div class="centered"><div class="row"><div class="col12"><div class="course-header__details  iconBar"><div class="course-header__detailsGroup  course-header__detailsGroup--formats iconBar__group"><ul data-option_popinselector="#popin-formats-availables" class="course-types iconBar__list js-course-formats-bar"><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours est visible gratuitement en ligne."><a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><i class="icon-desktop  course-types__icon"></i><span class="course-header__format-current"></span></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore en vidéo."><span><i class="icon-video course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en livre papier."><a href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank"><i class="icon-book  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en eBook."><a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee"><i class="icon-ebook  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip"
+                                                                                            title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours."
+                                                                                ><a
+                                                                                        ><i class="icon-badge  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore diplômant et ne vous permet pas d&#039;obtenir des crédits universitaires européens (ECTS)."><span><i class="icon-hat  course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Vous pouvez être accompagné sur ce cours par un mentor dédié en visioconférence."><a  href="https://openclassrooms.com/premium#discover-premium-plus-offer" ><i class="icon-mentor  course-types__icon"></i></a></li></ul></div><div class="course-header__detailsGroup  course-header__detailsGroup--info  iconBar__group"><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-duration iconBar__icon js-tooltip" title="Ce cours demande en moyenne 40 heures de travail pour être réussi."></i><span class="iconBar__label">40 heures</span></li><li class="iconBar__item"><i class="icon-level iconBar__icon"></i><span class="iconBar__label">
+                                                                                                    Moyenne
+                                                                                            </span></li></ul></div><div class="course-header__detailsGroup course-header__detailsGroup--licences iconBar__group"><a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/2.0"><span class="iconBar__label">Licence</span><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-cc iconBar__icon" title="CC"></i></li><li class="iconBar__item"><i class="icon-ccby iconBar__icon" title="BY"></i></li><li class="iconBar__item"><i class="icon-ccnc iconBar__icon" title="NC"></i></li><li class="iconBar__item"><i class="icon-ccsa iconBar__icon" title="SA"></i></li></ul></a></div></div></div></div></div></div>
+    <div id="popin-formats-availables" class="popin popin--course-formats-availables">
+        <i class="popin__close-button icon-close js-close-button"></i>
+
+        <div class="course-types course-types--withSpace">
+                            <a class="course-types__item" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-desktop course-types__icon"></i>
+                </a>
+            
+            
+                            <a class="course-types__item" href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms">
+                    <i class="icon-book course-types__icon"></i>
+                </a>
+            
+                            <a class="course-types__item" href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-ebook course-types__icon"></i>
+                </a>
+            
+            
+                                        <a class="course-types__item" href="https://openclassrooms.com/premium#discover-premium-plus-offer">
+                    <i class="icon-mentor course-types__icon"></i>
+                </a>
+                    </div>
+
+                    <p>Ce cours est visible <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">gratuitement en ligne</a>.</p>
+        
+        
+                    <p>
+                Ce cours existe en livre papier.
+            </p>
+        
+                    <p>Ce cours existe <a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">en eBook</a>.</p>
+        
+        
+        
+                    <p>
+                Vous pouvez être <a href="https://openclassrooms.com/premium#discover-premium-plus-offer">accompagné et mentoré par un professeur particulier</a> par visioconférence sur ce cours.
+            </p>
+        
+        <a class="oc-btn orange-alt-btn js-close-button" href="#">J&#039;ai tout compris !</a>
+    </div>
+
+    
+</header>
+
+    <div class="centered">
+                            
+        
+            <div class="row">
+        <div class="col12 col11-s">
+                            <nav class="timeline">
+        <div class="timeline__inner">
+
+        <span class="timeline__iconContainer">
+            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+                <i class="icon-home roundIcon__icon"></i>
+            </a>
+        </span>
+            <div class="timeline__steps">
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-au-java-ee.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction au Java EE
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-java-ee-mis-a-nu.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le Java EE mis à nu !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="outils-et-environnement-de-developpement.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Outils et environnement de développement
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="la-servlet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La servlet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="servlet-avec-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Servlet avec vue…
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="transmission-de-donnees.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Transmission de données
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-javabean.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le JavaBean
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-1-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (1/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-2-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (2/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="des-problemes-de-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Des problèmes de vue ?
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-1.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 1
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="objectifs-et-configuration.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Objectifs et configuration
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-core.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque Core
+                                </span>
+
+                                                                    <span class="timeline__progressMarker"></span>
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-core-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL core : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-xml.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque xml
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-xml-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL xml : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="faisons-le-point-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Faisons le point !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 2
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="formulaires-le-b-a-ba.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : le b.a.-ba
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-a-la-mode-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : à la mode MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-3.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 3
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-session-connectez-vos-clients.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La session : connectez vos clients
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-filtre-creez-un-espace-membre.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le filtre : créez un espace membre
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-cookie-le-navigateur-vous-ouvre-ses-portes.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le cookie : le navigateur vous ouvre ses portes
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-4.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 4
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-l-envoi-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : l&#039;envoi de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-telechargement-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le téléchargement de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-5.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 5
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-a-mysql-et-jdbc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction à MySQL et JDBC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="communiquez-avec-votre-bdd.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Communiquez avec votre BDD
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-modele-dao.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le modèle DAO
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-6.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 6
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="gerer-un-pool-de-connexions-avec-bonecp.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Gérer un pool de connexions avec BoneCP
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="les-annotations.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Les annotations
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-persistance-des-donnees-avec-jpa.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La persistance des données avec JPA
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-7.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 7
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="introduction-aux-frameworks-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction aux frameworks MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="premiers-pas-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Premiers pas avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-gestion-d-un-formulaire-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La gestion d&#039;un formulaire avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="l-envoi-de-fichiers-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    L&#039;envoi de fichiers avec JSF
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="debugger-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Débugger un projet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="empaquetage-et-deploiement-d-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Empaquetage et déploiement d&#039;un projet
+                                </span>
+
+                                                            </a>
+                                            
+                
+                <span class="timeline__splitChapter"></span>
+
+            </div>
+
+        <span class="timeline__iconContainer">
+                            <span title="Ce cours n&#039;est pas encore certifiant." class="roundIcon roundIcon--disabled">
+                    <i class="icon-trophy roundIcon__icon"></i>
+                </span>
+                    </span>
+
+        </div>
+    </nav>
+        </div>
+    </div>
+    </div>
+
+        
+        <div class="centered">
+            <div class="contentWithSidebar  spacer  js-contentWithSidebar" >
+                <main class="contentWithSidebar__content" >
+                        
+
+        <div class="relative js-sidebar-container">
+        <div class="static">
+    <h2 itemprop="name" data-part-title="La bibliothèque Core" class="part-title">La bibliothèque Core</h2>
+
+    <section class="row space-bottom js-desktop-sticky-container">
+        <div class="col9 col11-s col__small-padding--right">
+
+                <div class="tooltipMessage tooltipMessage--noArrow">
+        <i class="tooltipMessage__icon  icon-lock"></i>
+        <a href="https://openclassrooms.com/login" class="js-popin-activator" data-popin-selector="#popin-log-in" >Connectez-vous</a> ou <a href="https://openclassrooms.com/register" class="js-popin-activator" data-popin-selector="#popin-sign-in" >inscrivez-vous</a> pour bénéficier de toutes les fonctionnalités de ce cours !
+    </div>
+
+            <div
+                itemprop="articleBody"
+                data-page-indentifier="/courses/creez-votre-application-web-avec-java-ee/la-bibliotheque-core"
+                class="js-isRestrictablePage course-content js-course-container js-smilize "
+
+                                    data-video-blocked-wrapper="<a href='https://openclassrooms.com/login#popin-log-in' class='js-popin-activator'>"
+                            >
+
+                <p id="r-2133283" data-claire-element-id="2350263">Nous voici prêts à étudier la bibliothèque <em>Core</em>, offrant des balises pour les principales actions nécessaires dans la couche présentation d'une application web. Ce chapitre va en quelque sorte faire office de documentation : je vais vous y présenter les principales balises de la bibliothèque, et expliciter leur rôle et comportement via des exemples simples.</p><p id="r-2133284" data-claire-element-id="2350264">Lorsque ces bases seront posées, nous appliquerons ce que nous aurons découvert ici dans un TP. S'il est vrai que l'on ne peut se passer de la théorie, pratiquer est également indispensable si vous souhaitez assimiler et progresser. ;)</p><h3 id="r-621038" data-claire-element-id="2837462">Les variables et expressions</h3><p id="r-2133285" data-claire-element-id="2350265">Pour commencer, nous allons apprendre comment afficher le contenu d'une variable ou d'une expression, et comment gérer une variable et sa portée. Avant cela, je vous donne ici <strong>la directive JSP nécessaire</strong> pour permettre l'utilisation des balises de la bibliothèque Core dans vos pages :</p><pre id="r-2133286" data-claire-element-id="2837443"><code data-claire-semantic="jsp">&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot; %&gt;</code></pre><p id="r-2133287" data-claire-element-id="2350267">Cette directive devra <strong>être présente sur chacune des pages de votre projet</strong> utilisant les balises JSTL que je vous présente dans ce chapitre. Dans un prochain chapitre, nous verrons comment il est possible de ne plus avoir à se soucier de cette commande. En attendant, ne l'oubliez pas !</p><h4 id="r-2133308" data-claire-element-id="2837448">Affichage d'une expression</h4><p id="r-2133288" data-claire-element-id="2350268">La balise utilisée pour l'affichage est <code>&lt;c:out value=&quot;&quot; /&gt;</code>. Le seul attribut obligatoirement requis pour ce <em>tag</em> est <strong>value</strong>. Cet attribut peut contenir une chaîne de caractères simple, ou une expression EL. Voici quelques exemples :</p><pre id="r-2133289" data-claire-element-id="2837444"><code data-claire-semantic="jsp">&lt;c:out value=&quot;test&quot; /&gt; &lt;%-- Affiche test --%&gt;
+&lt;c:out value=&quot;${ 'a' &lt; 'b' }&quot; /&gt; &lt;%-- Affiche true --%&gt;</code></pre><p id="r-2133290" data-claire-element-id="2350270">À celui-ci s'ajoutent deux attributs optionnels :</p><ul id="r-2133295" data-claire-element-id="2350275"><li id="r-2133292" data-claire-element-id="2350272"><p id="r-2133291" data-claire-element-id="2350271"><strong>default</strong> : permet de définir une valeur affichée par défaut si le contenu de l'expression évaluée est vide ;</p></li><li id="r-2133294" data-claire-element-id="2350274"><p id="r-2133293" data-claire-element-id="2350273"><strong>escapeXml</strong> : permet de remplacer les caractères de scripts &lt; , &gt; , &quot; , ' et &amp; par leurs équivalents en code html <code>&amp;lt;</code>, <code>&amp;gt;</code>, <code>&amp;#034;</code>, <code>&amp;#039;</code>, <code>&amp;amp;</code>. Cette option est activée par défaut, et vous devez expliciter <code>&lt;c:out ... escapeXml=&quot;false&quot; /&gt;</code> pour la désactiver.</p></li></ul><div id="r-2133297" data-claire-element-id="2350277" data-claire-semantic="question"><p id="r-2133296" data-claire-element-id="2350276">Pourquoi utiliser une balise pour afficher simplement du texte ou une expression ?</p></div><p id="r-2133298" data-claire-element-id="2350278">C'est une question légitime. Après tout c'est vrai, pourquoi ne pas directement écrire le texte ou l'expression dans notre page JSP ? Pourquoi s'embêter à inclure le texte ou l'expression dans cette balise ? Eh bien la réponse se trouve dans l'explication de l'attribut optionnel <strong>escapeXml</strong> : celui-ci est <strong>activé par défaut</strong> ! Cela signifie que l'utilisation de la balise <code>&lt;c:out&gt;</code> permet d'échapper automatiquement les caractères spéciaux de nos textes et rendus d'expressions, et c'est là une excellente raison d'utilisation (voir ci-dessous l'avertissement concernant les failles XSS).</p><p id="r-2133299" data-claire-element-id="2350279">Voici des exemples d'utilisation de l'attribut <strong>default</strong> :</p><pre id="r-2133300" data-claire-element-id="2837445"><code data-claire-semantic="jsp">&lt;%-- Cette balise affichera le mot 'test' si le bean n'existe pas : --%&gt;
+&lt;c:out value=&quot;${bean}&quot;&gt;
+    test
+&lt;/c:out&gt;
+
+&lt;%-- Elle peut également s'écrire sous cette forme : --%&gt;
+&lt;c:out value=&quot;${bean}&quot; default=&quot;test&quot; /&gt;
+
+&lt;%-- Et il est interdit d'écrire : --%&gt;
+&lt;c:out value=&quot;${bean}&quot; default=&quot;test&quot;&gt;
+    une autre chaine
+&lt;/c:out&gt;</code></pre><p id="r-2133301" data-claire-element-id="2350281">Pour le dernier cas, l'explication est simple : l'attribut <strong>default</strong> jouant déjà le rôle de valeur par défaut, le corps du <em>tag</em> ne peut exister que lorsqu'aucune valeur par défaut n'est définie. Pour information, Eclipse vous signalera une erreur si vous tentez d'écrire la balise sous cette forme.</p><p id="r-2133302" data-claire-element-id="2350282">Pour en finir avec cette balise, voici un exemple d'utilisation de l'attribut <strong>escapeXml</strong> :</p><pre id="r-2133303" data-claire-element-id="2837446"><code data-claire-semantic="jsp">&lt;%-- Sans préciser d'attribut escapeXml : --%&gt;
+&lt;c:out value=&quot;&lt;p&gt;Je suis un 'paragraphe'.&lt;/p&gt;&quot; /&gt;
+
+&lt;%-- La balise affichera : --%&gt;
+&amp;lt;p&amp;gt;Je suis un &amp;#039;paragraphe&amp;#039;.&amp;lt;/p&amp;gt;
+
+&lt;%-- Et en précisant l'attribut à false :--%&gt;
+&lt;c:out value=&quot;&lt;p&gt;Je suis un 'paragraphe'.&lt;/p&gt;&quot; escapeXml=&quot;false&quot; /&gt;
+
+&lt;%-- La balise affichera : --%&gt;
+&lt;p&gt;Je suis un 'paragraphe'.&lt;/p&gt;</code></pre><p id="r-2133304" data-claire-element-id="2350284">Vous pouvez constater dans cet exemple l'importance de l'activation par défaut de l'option <strong>escapeXml</strong> : elle empêche l'interprétation de ce qui est affiché par le navigateur, en modifiant les éléments de code HTML présents dans le contenu traité (en l'occurrence les caractères &lt;, &gt; et ').</p><p id="r-2133305" data-claire-element-id="2350285">Vous devez prendre l'habitude d'utiliser ce tag JSTL lorsque vous affichez des variables, notamment lorsqu'elles sont récupérées depuis le navigateur, c'est-à-dire lorsqu'elles sont saisies par l'utilisateur. Prenons l'exemple d'un formulaire :</p><pre id="r-2133306" data-claire-element-id="2837447"><code data-claire-semantic="jsp">&lt;%-- Mauvais exemple --%&gt;
+&lt;input type=&quot;text&quot; name=&quot;donnee&quot; value=&quot;${donneeSaisieParUnUtilisateur}&quot; /&gt;
+
+&lt;%-- Bon exemple --%&gt;
+&lt;input type=&quot;text&quot; name=&quot;donnee&quot; value=&quot;&lt;c:out value=&quot;${donneeSaisieParUnUtilisateur}&quot;/&gt;&quot; /&gt;</code></pre><p id="r-2133307" data-claire-element-id="2350287">Nous le découvrirons plus tard, mais sachez que les données récupérées depuis un formulaire sont potentiellement dangereuses, puisqu'elles permettent <a href="http://fr.wikipedia.org/wiki/Cross-site_scripting">des attaques de type XSS ou d'injection de code</a>. L'utilisation du tag <code>&lt;c:out&gt;</code> permet d'échapper les caractères spéciaux responsables de cette faille, et ainsi de prévenir tout risque à ce niveau. Ne vous posez pas trop de questions au sujet de cet exemple, nous reviendrons en détail sur cette faille dans le chapitre sur les formulaires.</p><h4 id="r-2133360" data-claire-element-id="2837461">Gestion d'une variable</h4><p id="r-2133309" data-claire-element-id="2350289">Avant de parler variable, revenons sur leur <strong>portée</strong> ! La portée (ou visibilité) d'une variable correspond concrètement à l'endroit dans lequel elle est stockée, et par corollaire aux endroits depuis lesquels elle est accessible. Selon la portée affectée à votre variable, elle sera par exemple accessible depuis toute votre application, ou seulement depuis une page particulière, etc. Il y a quatre portées différentes (ou <em>scopes</em> en anglais), que <a href="http://www.siteduzero.com/tutoriel-3-285014-la-technologie-jsp-1-2.html#ss_part_3">vous connaissez déjà</a> et redécouvrirez au fur et à mesure des exemples de ce chapitre :</p><ul id="r-2133318" data-claire-element-id="2350298"><li id="r-2133311" data-claire-element-id="2350291"><p id="r-2133310" data-claire-element-id="2350290"><strong>la page</strong> : les objets créés avec la portée <strong>page</strong> ne sont accessibles que depuis cette même page, et une fois la réponse retournée au navigateur ces données ne sont plus accessibles ;</p></li><li id="r-2133313" data-claire-element-id="2350293"><p id="r-2133312" data-claire-element-id="2350292"><strong>la requête</strong> : les objets créés avec la portée <strong>request</strong> ne sont accessibles que depuis les pages qui traitent cette même requête. Si la requête est transmise à une autre page, les données sont conservées, mais sont perdues en cas de redirection ;</p></li><li id="r-2133315" data-claire-element-id="2350295"><p id="r-2133314" data-claire-element-id="2350294"><strong>la session</strong> : les objets créés avec la portée <strong>session</strong> ne sont accessibles que depuis les pages traitant les requêtes créées dans cette même session. Concrètement, une session correspond à la durée pendant laquelle un visiteur va utiliser l'application, cette durée se terminant lorsque l'utilisateur ferme son navigateur ou encore lorsque l'application le décide (le développeur, pour être exact) ; par exemple via un lien de déconnexion ou encore un temps maximum de validité imposé après lequel la session est automatiquement détruite. Les données ainsi créées ne sont plus accessibles une fois que le visiteur quitte le site ;</p></li><li id="r-2133317" data-claire-element-id="2350297"><p id="r-2133316" data-claire-element-id="2350296"><strong>l'application</strong> : les objets créés avec la portée <strong>application</strong> sont accessibles depuis toutes les pages JSP de l'application web ! C'est en quelque sorte une variable globale, accessible partout.</p></li></ul><h5 id="r-2133329" data-claire-element-id="2837451">Création</h5><p id="r-2133319" data-claire-element-id="2350299">La balise utilisée pour la création d'une variable est <code>&lt;c:set&gt;</code>. Abordons pour commencer la mise en place d'un attribut dans la requête. En JSP/servlets, vous savez tous faire ça, mais qu'en est-il avec la JSTL ? Il suffit d'utiliser les trois attributs suivants : <strong>var</strong>, <strong>value</strong> et <strong>scope</strong>.</p><pre id="r-2133320" data-claire-element-id="2837449"><code data-claire-semantic="jsp">&lt;%-- Cette balise met l'expression &quot;Salut les zéros !&quot; dans l'attribut &quot;message&quot; de la requête : --%&gt;
+&lt;c:set var=&quot;message&quot; value=&quot;Salut les zéros !&quot; scope=&quot;request&quot; /&gt;
+
+&lt;%-- Et est l'équivalent du scriplet Java suivant : --%&gt;
+&lt;% request.setAttribute( &quot;message&quot;, &quot;Salut les zéros !&quot; ); %&gt;</code></pre><p id="r-2133321" data-claire-element-id="2350301">L'attribut <strong>var</strong> contient le nom de la variable que l'on veut stocker, <strong>value</strong> sa valeur, et <strong>scope</strong> la portée de cette variable. Simple, rapide et efficace ! Voyons maintenant comment récupérer cette valeur pour l'afficher à l'utilisateur, par exemple :</p><pre id="r-2133322" data-claire-element-id="2837450"><code data-claire-semantic="jsp">&lt;%-- Affiche l'expression contenue dans la variable &quot;message&quot; de la requête --%&gt;
+&lt;c:out value=&quot;${requestScope.message}&quot; /&gt;</code></pre><div id="r-2133324" data-claire-element-id="2350304" data-claire-semantic="question"><p id="r-2133323" data-claire-element-id="2350303">Vous remarquerez que nous utilisons ici dans l'expression EL l'objet implicite <strong>requestScope</strong>, qui permet de rechercher un objet dans la portée requête uniquement. Les plus avertis d'entre vous ont peut-être tenté d'accéder à la valeur fraîchement créée via un simple <code>&lt;c:out value=&quot;${ message }&quot;/&gt;</code>. Et effectivement, dans ce cas cela fonctionne également. Pourquoi ?</p></div><p id="r-2133325" data-claire-element-id="2350305">Nous retrouvons ici une illustration du mécanisme dont je vous ai parlé lorsque nous avons <a href="http://www.siteduzero.com/tutoriel-3-655536-des-problemes-de-vue.html#ss_part_1">appliqué les EL dans notre code d'exemple</a>. Par défaut, si le terme de l'expression n'est ni un type primitif (<code>int</code>, <code>char</code>, <code>boolean</code>, etc.) ni un objet implicite de la technologie EL, l'expression va d'elle-même chercher un attribut correspondant à ce terme dans les différentes portées de votre application : <strong>page</strong>, puis <strong>request</strong>, puis <strong>session</strong> et enfin <strong>application</strong>.</p><p id="r-2133326" data-claire-element-id="2350306">Souvenez-vous : je vous avais expliqué que c'est grâce à l'objet implicite <strong>pageContext</strong> que le mécanisme parcourt toutes les portées, et qu'il renvoie alors automatiquement le premier objet trouvé lors de son parcours. Voilà donc pourquoi cela fonctionne avec la seconde écriture : puisque nous ne précisons pas de portée, l'expression EL les parcourt automatiquement une par une jusqu'à ce qu'elle trouve un objet nommé <strong>message</strong>, et nous le renvoie !</p><aside id="r-2133328" data-claire-element-id="2350308" data-claire-semantic="information"><p id="r-2133327" data-claire-element-id="2350307">N'oubliez pas : la bonne pratique veut que vous ne donniez pas le même nom à deux variables différentes, présentes dans des portées différentes. Toutefois, afin d'éviter toute confusion si jamais des variables aux noms identiques venaient à coexister, il est également conseillé de n'utiliser la seconde écriture que lorsque vous souhaitez faire référence à des attributs de portée <strong>page</strong>, et d'utiliser la première écriture que je vous ai présentée pour le reste (<strong>session</strong>, <strong>request</strong> et <strong>application</strong>).</p></aside><h5 id="r-2133344" data-claire-element-id="2837455">Modification</h5><p id="r-2133330" data-claire-element-id="2350310">La modification d'une variable s'effectue de la même manière que sa création. Ainsi, le code suivant créera une variable nommée &quot;maVariable&quot; si elle n'existe pas déjà, et initialisera son contenu à &quot;12&quot; :</p><pre id="r-2133331" data-claire-element-id="2837452"><code data-claire-semantic="jsp">&lt;%-- L'attribut scope n'est pas obligatoire. Rappelez-vous, le scope par défaut est dans ce cas la page, 
+puisque c'est le premier dans la liste des scopes parcourus --%&gt;
+&lt;c:set var=&quot;maVariable&quot; value=&quot;12&quot; /&gt;</code></pre><p id="r-2133332" data-claire-element-id="2350312">Pour information, il est également possible d'initialiser une variable en utilisant le corps de la balise, plutôt qu'en utilisant l'attribut <strong>value</strong> :</p><pre id="r-2133333" data-claire-element-id="2837453"><code data-claire-semantic="jsp">&lt;c:set var=&quot;maVariable&quot;&gt; 12 &lt;/c:set&gt;</code></pre><p id="r-2133334" data-claire-element-id="2350314">À ce sujet, sachez d'ailleurs qu'il est possible d'imbriquer d'autres balises dans le corps de cette balise, et pas seulement d'utiliser de simples chaînes de caractères ou expressions. Voici par exemple comment vous pourriez initialiser la valeur d'une variable de session depuis une valeur lue dans un paramètre de l'URL :</p><pre id="r-2133335" data-claire-element-id="2837454"><code data-claire-semantic="jsp">&lt;c:set var=&quot;locale&quot; scope=&quot;session&quot;&gt;
+   &lt;c:out value=&quot;${param.lang}&quot; default=&quot;FR&quot;/&gt;
+&lt;/c:set&gt;</code></pre><p id="r-2133336" data-claire-element-id="2350316">Plusieurs points importants ici :</p><ul id="r-2133343" data-claire-element-id="2350323"><li id="r-2133338" data-claire-element-id="2350318"><p id="r-2133337" data-claire-element-id="2350317">vous constatez bien ici l'utilisation de la balise <code>&lt;c:out&gt;</code> à l'intérieur du corps de la balise <code>&lt;c:set&gt;</code> ;</p></li><li id="r-2133340" data-claire-element-id="2350320"><p id="r-2133339" data-claire-element-id="2350319">vous pouvez remarquer l'utilisation de l'objet implicite <strong>param</strong>, pour récupérer la valeur du paramètre de la requête nommé <strong>lang</strong> ;</p></li><li id="r-2133342" data-claire-element-id="2350322"><p id="r-2133341" data-claire-element-id="2350321">si le paramètre <strong>lang</strong> n'existe pas ou s'il est vide, c'est la valeur par défaut &quot;FR&quot; spécifiée dans notre balise <code>&lt;c:out&gt;</code> qui sera utilisée pour initialiser notre variable en session.</p></li></ul><h5 id="r-2133355" data-claire-element-id="2837458">Modification des propriétés d'un objet</h5><p id="r-2133345" data-claire-element-id="2350325">Certains d'entre vous se demandent probablement comment il est possible de définir ou modifier une valeur particulière lorsqu'on travaille sur certains types d'objets... Et ils ont bien raison ! En effet, avec ce que je vous ai présenté pour le moment, vous êtes capables de définir une variable de n'importe quel type, type qui est défini par l'expression que vous écrivez dans l'attribut <strong>value</strong> du tag <code>&lt;c:set&gt;</code> :</p><pre id="r-2133346" data-claire-element-id="2837456"><code data-claire-semantic="jsp">&lt;%-- Crée un objet de type String --%&gt;
+&lt;c:set scope=&quot;session&quot; var=&quot;description&quot; value=&quot;Je suis une loutre.&quot; /&gt;
+
+&lt;%-- Crée un objet du type du bean ici spécifié dans l'attribut 'value'--%&gt;
+&lt;c:set scope=&quot;session&quot; var=&quot;tonBean&quot; value=&quot;${monBean}&quot; /&gt;</code></pre><p id="r-2133347" data-claire-element-id="2350327">Et c'est ici que vous devez vous poser la question suivante : comment modifier les propriétés du bean créé dans cet exemple ? En effet, il vous manque deux attributs pour y parvenir ! Regardons donc de plus près quels sont ces attributs, et comment ils fonctionnent :</p><ul id="r-2133352" data-claire-element-id="2350332"><li id="r-2133349" data-claire-element-id="2350329"><p id="r-2133348" data-claire-element-id="2350328"><strong>target</strong> : contient le nom de l'objet dont la propriété sera modifiée ;</p></li><li id="r-2133351" data-claire-element-id="2350331"><p id="r-2133350" data-claire-element-id="2350330"><strong>property</strong> : contient le nom de la propriété qui sera modifiée.</p></li></ul><pre id="r-2133353" data-claire-element-id="2837457"><code data-claire-semantic="jsp">&lt;!-- Définir ou modifier la propriété 'prenom' du bean 'coyote' --&gt;
+&lt;c:set target=&quot;${coyote}&quot; property=&quot;prenom&quot; value=&quot;Wile E.&quot;/&gt;
+
+&lt;!-- Définir ou modifier la propriété 'prenom' du bean 'coyote' via le corps de la balise --&gt;
+&lt;c:set target=&quot;${coyote}&quot; property=&quot;prenom&quot;&gt;
+   Wile E.
+&lt;/c:set&gt;
+
+&lt;!-- Passer à null la valeur de la propriété 'prenom' du bean 'coyote' --&gt;
+&lt;c:set target=&quot;${coyote}&quot; property=&quot;prenom&quot; value=&quot;${null}&quot; /&gt;</code></pre><p id="r-2133354" data-claire-element-id="2350334">Remarquez dans le dernier exemple qu'il suffit d'utiliser une EL avec pour mot-clé <strong>null</strong> dans l'attribut <strong>value</strong> pour faire passer la valeur d'une propriété à <code>null</code>. Pour information, lorsque l'objet traité n'est pas un bean mais une simple <code>Map</code>, cette action a pour effet de directement supprimer l'entrée de la <code>Map</code> concernée : le comportement est alors identique avec la balise présentée dans le paragraphe suivant.</p><h5 id="r-2133359" data-claire-element-id="2837460">Suppression</h5><p id="r-2133356" data-claire-element-id="2350336">Dernière étape : supprimer une variable. Une balise est dédiée à cette tâche, avec pour seul attribut requis <strong>var</strong>. Par défaut toujours, c'est le <em>scope</em> page qui sera parcouru si l'attribut <strong>scope</strong> n'est pas explicité :</p><pre id="r-2133357" data-claire-element-id="2837459"><code data-claire-semantic="jsp">&lt;%-- Supprime la variable &quot;maVariable&quot; de la session --%&gt;
+&lt;c:remove var=&quot;maVariable&quot; scope=&quot;session&quot; /&gt;</code></pre><p id="r-2133358" data-claire-element-id="2350338">Voilà déjà un bon morceau de fait ! Ne soyez pas abattus si vous n'avez pas tout compris lorsque nous avons utilisé des objets implicites. Nous y reviendrons de toute manière quand nous en aurons besoin dans nos exemples, et vous comprendrez alors avec la pratique.</p><h3 id="r-621051" data-claire-element-id="2837467">Les conditions</h3><h4 id="r-2133365" data-claire-element-id="2837464">Une condition simple</h4><p id="r-2133361" data-claire-element-id="2350342">La JSTL fournit deux moyens d'effectuer des tests conditionnels. Le premier, simple et direct, permet de tester une seule expression, et correspond au bloc <code>if()</code> du langage Java. Le seul attribut obligatoire est <strong>test</strong>.</p><pre id="r-2133362" data-claire-element-id="2837463"><code data-claire-semantic="jsp">&lt;c:if test=&quot;${ 12 &gt; 7 }&quot; var=&quot;maVariable&quot; scope=&quot;session&quot;&gt;
+    Ce test est vrai.
+&lt;/c:if&gt;</code></pre><p id="r-2133363" data-claire-element-id="2350344">Ici, le corps de la balise est une simple chaîne de caractères. Elle ne sera affichée dans la page finale que si la condition est vraie, à savoir si l'expression contenue dans l'attribut <strong>test</strong> renvoie <strong>true</strong>. Ici, c'est bien entendu le cas, 12 est bien supérieur à 7. ^^</p><p id="r-2133364" data-claire-element-id="2350345">Les attributs optionnels <strong>var</strong> et <strong>scope</strong> ont ici sensiblement le même rôle que dans la balise <code>&lt;c:set&gt;</code>. Le résultat du test conditionnel sera stocké dans la variable et dans le <em>scope</em> défini, et sinon dans le <em>scope</em> page par défaut. L'intérêt de cette utilisation réside principalement dans le stockage des résultats de tests coûteux, un peu à la manière d'un cache, afin de pouvoir les réutiliser en accédant simplement à des variables de <em>scope</em>.</p><h4 id="r-2133372" data-claire-element-id="2837466">Des conditions multiples</h4><p id="r-2133366" data-claire-element-id="2350347">La seconde méthode fournie par la JSTL est utile pour traiter les conditions mutuellement exclusives, équivalentes en Java à une suite de <code>if() / else if()</code> ou au bloc <code>switch()</code>. Elle est en réalité constituée de plusieurs balises :</p><pre id="r-2133367" data-claire-element-id="2837465"><code data-claire-semantic="jsp">&lt;c:choose&gt;
+    &lt;c:when test=&quot;${expression}&quot;&gt;Action ou texte.&lt;/c:when&gt;
+    ...
+    &lt;c:otherwise&gt;Autre action ou texte.&lt;/c:otherwise&gt;
+&lt;/c:choose&gt;</code></pre><p id="r-2133368" data-claire-element-id="2350349">La balise <code>&lt;c:choose&gt;</code> ne peut contenir aucun attribut, et son corps ne peut contenir qu'une ou plusieurs balises <code>&lt;c:when&gt;</code> et une ou zéro balise <code>&lt;c:otherwise&gt;</code>.</p><p id="r-2133369" data-claire-element-id="2350350">La balise <code>&lt;c:when&gt;</code> ne peut exister qu'à l'intérieur d'une balise <code>&lt;c:choose&gt;</code>. Elle est l'équivalent du mot-clé <strong>case</strong> en Java, dans un bloc <code>switch()</code>. Tout comme la balise <code>&lt;c:if&gt;</code>, elle doit obligatoirement se voir définir un attribut <strong>test</strong> contenant la condition. À l'intérieur d'un même bloc <code>&lt;c:choose&gt;</code>, un seul <code>&lt;c:when&gt;</code> verra son corps évalué, les conditions étant mutuellement exclusives.</p><p id="r-2133370" data-claire-element-id="2350351">La balise <code>&lt;c:otherwise&gt;</code> ne peut également exister qu'à l'intérieur d'une balise <code>&lt;c:choose&gt;</code>, et après la dernière balise <code>&lt;c:when&gt;</code>. Elle est l'équivalent du mot-clé <strong>default</strong> en Java, dans un bloc <code>switch()</code>. Elle ne peut contenir aucun attribut, et son corps ne sera évalué que si aucune des conditions la précédant dans le bloc n'est vérifiée.</p><p id="r-2133371" data-claire-element-id="2350352">Voilà pour les conditions avec la JSTL. Je ne pense pas qu'il soit nécessaire de prendre plus de temps ici, la principale différence avec les conditions en Java étant la syntaxe utilisée.</p><h3 id="r-621170" data-claire-element-id="2837481">Les boucles</h3><p id="r-2133373" data-claire-element-id="2350355">Abordons à présent la question des boucles. Dans la plupart des langages, les boucles ont une syntaxe similaire : <strong>for</strong>, <strong>while</strong>, <strong>do</strong>/<strong>while</strong>... Avec la JSTL, deux choix vous sont offerts, en fonction du type d'élément que vous souhaitez parcourir avec votre boucle : <code>&lt;c:forEach&gt;</code> pour parcourir une collection, et <code>&lt;c:forTokens&gt;</code> pour parcourir une chaîne de caractères.</p><h4 id="r-2133391" data-claire-element-id="2837471">Boucle &quot;classique&quot;</h4><p id="r-2133374" data-claire-element-id="2350356">Prenons pour commencer une simple boucle <code>for</code> en scriptlet Java, affichant un résultat formaté dans un tableau HTML par exemple :</p><pre id="r-2133375" data-claire-element-id="2837468"><code data-claire-semantic="jsp">&lt;%-- Boucle calculant le cube des entiers de 0 à 7 et les affichant dans un tableau HTML --%&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Valeur&lt;/th&gt;
+    &lt;th&gt;Cube&lt;/th&gt;
+  &lt;/tr&gt;
+
+&lt;%
+int[] cube= new int[8];
+/* Boucle calculant et affichant le cube des entiers de 0 à 7 */
+for(int i = 0 ; i &lt; 8 ; i++)
+{
+  cube[i] = i * i * i;
+  out.println(&quot;&lt;tr&gt;&lt;td&gt;&quot; + i  + &quot;&lt;/td&gt; &lt;td&gt;&quot; + cube[i] + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;);
+}
+%&gt;
+
+&lt;/table&gt;</code></pre><p id="r-2133376" data-claire-element-id="2350358">Avec la JSTL, si l'on souhaite réaliser quelque chose d'équivalent, il faudrait utiliser la syntaxe suivante :</p><pre id="r-2133377" data-claire-element-id="2837469"><code data-claire-semantic="jsp">&lt;%-- Boucle calculant le cube des entiers de 0 à 7 et les affichant dans un tableau HTML --%&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Valeur&lt;/th&gt;
+    &lt;th&gt;Cube&lt;/th&gt;
+  &lt;/tr&gt;
+
+&lt;c:forEach var=&quot;i&quot; begin=&quot;0&quot; end=&quot;7&quot; step=&quot;1&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;c:out value=&quot;${i}&quot;/&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;c:out value=&quot;${i * i * i}&quot;/&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/c:forEach&gt;
+
+&lt;/table&gt;</code></pre><p id="r-2133378" data-claire-element-id="2350360">Avant tout, on peut déjà remarquer la clarté du second code par rapport au premier : les balises JSTL s'intègrent très bien au formatage HTML englobant les résultats. On devine rapidement ce que produira cette boucle, ce qui était bien moins évident avec le code en Java, pourtant tout aussi basique. Étudions donc les attributs de cette fameuse boucle :</p><ul id="r-2133387" data-claire-element-id="2350369"><li id="r-2133380" data-claire-element-id="2350362"><p id="r-2133379" data-claire-element-id="2350361"><strong>begin</strong> : la valeur de début de notre compteur (la valeur de <strong>i</strong> dans la boucle en Java, initialisée à zéro en l'occurrence) ;</p></li><li id="r-2133382" data-claire-element-id="2350364"><p id="r-2133381" data-claire-element-id="2350363"><strong>end</strong> : la valeur de fin de notre compteur. Vous remarquez ici que la valeur de fin est 7 et non pas 8, comme c'est le cas dans la boucle Java. La raison est simple : dans la boucle Java en exemple j'ai utilisé une comparaison stricte (i strictement inférieur à 8), alors que la boucle JSTL ne procède pas par comparaison stricte (i inférieur ou égal à 7). J'aurais certes pu écrire <code>i &lt;= 7</code> dans ma boucle Java, mais je n'ai par contre pas le choix dans ma boucle JSTL, c'est uniquement ainsi. Pensez-y, c'est une erreur bête mais facile à commettre si l'on oublie ce comportement ;</p></li><li id="r-2133384" data-claire-element-id="2350366"><p id="r-2133383" data-claire-element-id="2350365"><strong>step</strong> : c'est le pas d'incrémentation de la boucle. Concrètement, si vous changez cette valeur de 1 à 3 par exemple, alors le compteur de la boucle ira de 3 en 3 et non plus de 1 en 1. Par défaut, si vous ne spécifiez pas l'attribut <strong>step</strong>, la valeur 1 sera utilisée ;</p></li><li id="r-2133386" data-claire-element-id="2350368"><p id="r-2133385" data-claire-element-id="2350367"><strong>var</strong> : cet attribut est, contrairement à ce qu'on pourrait croire <em>a priori</em>, non obligatoire. Si vous ne le spécifiez pas, vous ne pourrez simplement pas accéder à la valeur du compteur en cours (via la variable <strong>i</strong> dans notre exemple). Vous pouvez choisir de ne pas préciser cet attribut si vous n'avez pas besoin de la valeur du compteur à l'intérieur de votre boucle. Par ailleurs, tout comme en Java lorsqu'on utilise une syntaxe équivalente à l'exemple précédent (déclaration de l'entier <strong>i</strong> à l'intérieur du <code>for</code>), la variable n'est accessible qu'à l'intérieur de la boucle, autrement dit dans le corps de la balise <code>&lt;c:forEach&gt;</code>.</p></li></ul><p id="r-2133388" data-claire-element-id="2350370">Vous remarquerez bien évidemment que l'utilisation de tags JSTL dans le corps de la balise est autorisée : nous utilisons ici dans cet exemple l'affichage via des balises <code>&lt;c:out&gt;</code>.</p><p id="r-2133389" data-claire-element-id="2350371">Voici, mais cela doit vous paraître évident, le code HTML produit par cette page JSP :</p><pre id="r-2133390" data-claire-element-id="2837470"><code data-claire-semantic="html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Valeur&lt;/th&gt;
+    &lt;th&gt;Cube&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;1&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;2&lt;/td&gt;
+    &lt;td&gt;8&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;3&lt;/td&gt;
+    &lt;td&gt;27&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;4&lt;/td&gt;
+    &lt;td&gt;64&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;5&lt;/td&gt;
+    &lt;td&gt;125&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;6&lt;/td&gt;
+    &lt;td&gt;216&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;7&lt;/td&gt;
+    &lt;td&gt;343&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre><h4 id="r-2133481" data-claire-element-id="2837477">Itération sur une collection</h4><p id="r-2133392" data-claire-element-id="2350374">Passons maintenant à quelque chose de plus intéressant et utilisé dans la création de pages web : les itérations sur les <strong>collections</strong>. Si ce terme ne vous parle pas, c'est que vous avez besoin d'une bonne piqûre de rappel en Java ! Et ce n'est pas moi qui vous la donnerai, si vous en sentez le besoin, allez faire un tour sur <a href="http://www.siteduzero.com/tutoriel-3-10409-les-collections-d-objets.html">ce chapitre du tuto de Java</a>.</p><p id="r-2133393" data-claire-element-id="2350375">La syntaxe utilisée pour parcourir une collection est similaire à celle d'une boucle simple, sauf que cette fois, un attribut <strong>items</strong> est requis. Et pour cause, c'est lui qui indiquera la collection à parcourir. Imaginons ici que nous souhaitions réaliser l'affichage de news sur une page web. Imaginons pour cela que nous ayons à disposition un <code>ArrayList</code> ici nommé <em>maListe</em>, contenant simplement des <code>HashMap</code>. Chaque <code>HashMap</code> ici associera le titre d'une news à son contenu. Nous souhaitons alors parcourir cette liste afin d'afficher ces informations dans une page web :</p><pre id="r-2133394" data-claire-element-id="2837472"><code data-claire-semantic="jsp">&lt;%@ page import=&quot;java.util.*&quot; %&gt;
+&lt;%
+  /* Création de la liste et des données */
+  List&lt;Map&lt;String, String&gt;&gt; maListe = new ArrayList&lt;Map&lt;String, String&gt;&gt;();
+  Map&lt;String, String&gt; news = new HashMap&lt;String, String&gt;();
+  news.put(&quot;titre&quot;, &quot;Titre de ma première news&quot;);
+  news.put(&quot;contenu&quot;, &quot;corps de ma première news&quot;);
+  maListe.add(news);
+  news = new HashMap&lt;String, String&gt;();
+  news.put(&quot;titre&quot;, &quot;Titre de ma seconde news&quot;);
+  news.put(&quot;contenu&quot;, &quot;corps de ma seconde news&quot;);
+  maListe.add(news);
+  pageContext.setAttribute(&quot;maListe&quot;, maListe);
+%&gt;
+
+&lt;c:forEach items=&quot;${maListe}&quot; var=&quot;news&quot;&gt;
+&lt;div class=&quot;news&quot;&gt;
+  &lt;div class=&quot;titreNews&quot;&gt;
+      &lt;c:out value=&quot;${news['titre']}&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;corpsNews&quot;&gt;
+      &lt;c:out value=&quot;${news['contenu']}&quot; /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/c:forEach&gt;</code></pre><p id="r-2133395" data-claire-element-id="2350377">Je sens que certains vont m'attendre au tournant... Eh oui, j'ai utilisé du code Java ! Et du code sale en plus ! Mais attention à ne pas vous y méprendre : je n'ai recours à du code Java ici que pour l'exemple, afin de vous procurer un moyen simple et rapide pour initialiser des données de test, et afin de vérifier le bon fonctionnement de notre boucle. :ange:</p><aside id="r-2133397" data-claire-element-id="2350379" data-claire-semantic="information"><p id="r-2133396" data-claire-element-id="2350378">Il va de soi que dans une vraie application web, ces données seront initialisées correctement, et non pas comme je l'ai fait ici. Qu'elles soient récupérées depuis une base de données, depuis un fichier, voire codées en dur dans la couche métier de votre application, ces données ne doivent jamais et en aucun cas, je répète, elles ne doivent jamais et en aucun cas, être initialisées directement depuis vos JSP ! Le rôle d'une page JSP, je le rappelle, c'est de présenter l'information, un point c'est tout. Ce n'est pas pour rien que la couche dans laquelle se trouvent les JSP s’appelle la couche de présentation.</p></aside><p id="r-2133398" data-claire-element-id="2350380">Revenons à notre boucle : ici, je n'ai pas encombré la syntaxe, en utilisant les seuls attributs <strong>items</strong> et <strong>var</strong>. Le premier indique la collection sur laquelle la boucle porte, en l'occurrence notre <code>List</code> nommée <em>maListe</em>, et le second indique quant à lui le nom de la variable qui sera liée à l’élément courant de la collection parcourue par la boucle, que j'ai ici de manière très originale nommée &quot;news&quot;, nos <code>HashMap</code> contenant... des news. Ainsi, pour accéder respectivement aux titres et contenus de nos news, il suffit, via la notation avec crochets, de préciser les éléments visés dans notre Map, ici aux lignes 19 et 22. Nous aurions très bien pu utiliser à la place des crochets l'opérateur <em>point</em> : <code>${news.titre}</code> et <code>${news.contenu}</code>.</p><p id="r-2133399" data-claire-element-id="2350381">Voici le rendu HTML de cet exemple :</p><pre id="r-2133400" data-claire-element-id="2837473"><code data-claire-semantic="html">&lt;div class=&quot;news&quot;&gt;
+  &lt;div class=&quot;titreNews&quot;&gt;
+      Titre de ma première news
+  &lt;/div&gt;
+  &lt;div class=&quot;corpsNews&quot;&gt;
+      corps de ma première news
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;news&quot;&gt;
+  &lt;div class=&quot;titreNews&quot;&gt;
+      Titre de ma seconde news
+  &lt;/div&gt;
+  &lt;div class=&quot;corpsNews&quot;&gt;
+      corps de ma seconde news
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre><p id="r-2133401" data-claire-element-id="2350383">Les attributs présentés précédemment lors de l'étude d'une boucle simple sont là aussi valables : si vous souhaitez par exemple n'afficher que les dix premières news sur votre page, vous pouvez limiter le parcours de votre liste aux dix premiers éléments ainsi :</p><pre id="r-2133402" data-claire-element-id="2837474"><code data-claire-semantic="jsp">&lt;c:forEach items=&quot;${maListe}&quot; var=&quot;news&quot; begin=&quot;0&quot; end=&quot;9&quot;&gt;
+   ...
+&lt;/c:forEach&gt;</code></pre><aside id="r-2133404" data-claire-element-id="2350386" data-claire-semantic="information"><p id="r-2133403" data-claire-element-id="2350385">Si les attributs <strong>begin</strong> et <strong>end</strong> spécifiés dépassent le contenu réel de la collection, par exemple si vous voulez afficher les dix premiers éléments d'une liste mais qu'elle n'en contient que trois, la boucle s'arrêtera automatiquement lorsque le parcours de la liste sera terminé, peu importe l'indice <strong>end</strong> spécifié.</p></aside><p id="r-2133405" data-claire-element-id="2350387">Simple, n'est-ce pas ? :)</p><p id="r-2133406" data-claire-element-id="2350388">À titre d'information, voici enfin les différentes collections sur lesquelles il est possible d'itérer avec la boucle <code>&lt;c:forEach&gt;</code> de la bibliothèque <em>Core</em> :</p><ul id="r-2133419" data-claire-element-id="2350401"><li id="r-2133408" data-claire-element-id="2350390"><p id="r-2133407" data-claire-element-id="2350389"><code>java.util.Collection</code> ;</p></li><li id="r-2133410" data-claire-element-id="2350392"><p id="r-2133409" data-claire-element-id="2350391"><code>java.util.Map</code> ;</p></li><li id="r-2133412" data-claire-element-id="2350394"><p id="r-2133411" data-claire-element-id="2350393"><code>java.util.Iterator</code> ;</p></li><li id="r-2133414" data-claire-element-id="2350396"><p id="r-2133413" data-claire-element-id="2350395"><code>java.util.Enumeration</code> ;</p></li><li id="r-2133416" data-claire-element-id="2350398"><p id="r-2133415" data-claire-element-id="2350397">Array d'objets ou de types primitifs ;</p></li><li id="r-2133418" data-claire-element-id="2350400"><p id="r-2133417" data-claire-element-id="2350399">(Chaînes de caractères séparées par des séparateurs définis).</p></li></ul><p id="r-2133420" data-claire-element-id="2350402">Si j'ai mis entre parenthèses le dernier élément, c'est parce qu'il est déconseillé d'utiliser cette boucle pour parcourir une chaîne de caractères dont les éléments sont séparés par des caractères séparateurs définis. Voyez le paragraphe suivant pour en savoir plus à ce sujet.</p><p id="r-2133421" data-claire-element-id="2350403">Enfin, sachez qu'il est également possible d'itérer directement sur le résultat d'une requête SQL. Cependant, volontairement, je n'aborderai pas ce cas, pour deux raisons :</p><ul id="r-2133426" data-claire-element-id="2350408"><li id="r-2133423" data-claire-element-id="2350405"><p id="r-2133422" data-claire-element-id="2350404">je ne vous ai pas encore présenté la bibliothèque sql de la JSTL, permettant d'effectuer des requêtes SQL depuis vos JSP ;</p></li><li id="r-2133425" data-claire-element-id="2350407"><p id="r-2133424" data-claire-element-id="2350406">je ne vous présenterai pas la bibliothèque sql de la JSTL, ne souhaitant pas vous voir effectuer des requêtes SQL depuis vos JSP !</p></li></ul><h5 id="r-2133480" data-claire-element-id="2837476">L'attribut varStatus</h5><p id="r-2133427" data-claire-element-id="2350409">Il reste un attribut que je n'ai pas encore évoqué et qui est, comme les autres, utilisable pour tout type d'itérations, que ce soit sur des entiers ou sur des collections : l'attribut <strong>varStatus</strong>. Tout comme l'attribut <strong>var</strong>, il est utilisé pour créer une variable de <em>scope</em>, mais présente une différence majeure : alors que <strong>var</strong> permet de stocker la valeur de l'index courant ou l'élément courant de la collection parcourue, le <strong>varStatus</strong> permet de stocker un objet <code><a href="http://docs.oracle.com/javaee/5/jstl/1.1/docs/api/javax/servlet/jsp/jstl/core/LoopTagStatus.html">LoopTagStatus</a></code>, qui définit un ensemble de propriétés définissant l'état courant d'une itération :</p><table id="r-2133475" data-claire-element-id="2350457"><thead id="r-2133433" data-claire-element-id="2350415"><tr id="r-2133432" data-claire-element-id="2350414"><th id="r-2133429" data-claire-element-id="2350411"><p id="r-2133428" data-claire-element-id="2350410">Propriété</p></th><th id="r-2133431" data-claire-element-id="2350413"><p id="r-2133430" data-claire-element-id="2350412">Description</p></th></tr></thead><tbody id="r-2133474" data-claire-element-id="2350456"><tr id="r-2133438" data-claire-element-id="2350420"><td id="r-2133435" data-claire-element-id="2350417"><p id="r-2133434" data-claire-element-id="2350416"><strong>begin</strong></p></td><td id="r-2133437" data-claire-element-id="2350419"><p id="r-2133436" data-claire-element-id="2350418">La valeur de l'attribut begin.</p></td></tr><tr id="r-2133443" data-claire-element-id="2350425"><td id="r-2133440" data-claire-element-id="2350422"><p id="r-2133439" data-claire-element-id="2350421"><strong>end</strong></p></td><td id="r-2133442" data-claire-element-id="2350424"><p id="r-2133441" data-claire-element-id="2350423">La valeur de l'attribut end.</p></td></tr><tr id="r-2133448" data-claire-element-id="2350430"><td id="r-2133445" data-claire-element-id="2350427"><p id="r-2133444" data-claire-element-id="2350426"><strong>step</strong></p></td><td id="r-2133447" data-claire-element-id="2350429"><p id="r-2133446" data-claire-element-id="2350428">La valeur de l'attribut step.</p></td></tr><tr id="r-2133453" data-claire-element-id="2350435"><td id="r-2133450" data-claire-element-id="2350432"><p id="r-2133449" data-claire-element-id="2350431"><strong>first</strong></p></td><td id="r-2133452" data-claire-element-id="2350434"><p id="r-2133451" data-claire-element-id="2350433">Booléen précisant si l'itération courante est la première.</p></td></tr><tr id="r-2133458" data-claire-element-id="2350440"><td id="r-2133455" data-claire-element-id="2350437"><p id="r-2133454" data-claire-element-id="2350436"><strong>last</strong></p></td><td id="r-2133457" data-claire-element-id="2350439"><p id="r-2133456" data-claire-element-id="2350438">Booléen précisant si l'itération courante est la dernière.</p></td></tr><tr id="r-2133463" data-claire-element-id="2350445"><td id="r-2133460" data-claire-element-id="2350442"><p id="r-2133459" data-claire-element-id="2350441"><strong>count</strong></p></td><td id="r-2133462" data-claire-element-id="2350444"><p id="r-2133461" data-claire-element-id="2350443">Compteur d'itérations (commence à 1).</p></td></tr><tr id="r-2133468" data-claire-element-id="2350450"><td id="r-2133465" data-claire-element-id="2350447"><p id="r-2133464" data-claire-element-id="2350446"><strong>index</strong></p></td><td id="r-2133467" data-claire-element-id="2350449"><p id="r-2133466" data-claire-element-id="2350448">Index d'itérations (commence à 0).</p></td></tr><tr id="r-2133473" data-claire-element-id="2350455"><td id="r-2133470" data-claire-element-id="2350452"><p id="r-2133469" data-claire-element-id="2350451"><strong>current</strong></p></td><td id="r-2133472" data-claire-element-id="2350454"><p id="r-2133471" data-claire-element-id="2350453">Élément courant de la collection parcourue.</p></td></tr></tbody></table><p id="r-2133476" data-claire-element-id="2350458">Reprenons l'exemple utilisé précédemment, mais cette fois-ci en mettant en jeu l’attribut <strong>varStatus</strong> :</p><pre id="r-2133477" data-claire-element-id="2837475"><code data-claire-semantic="jsp">&lt;c:forEach items=&quot;${maListe}&quot; var=&quot;news&quot; varStatus=&quot;status&quot;&gt;
+&lt;div class=&quot;news&quot;&gt;
+  News n° &lt;c:out value=&quot;${status.count}&quot;/&gt; :
+  &lt;div class=&quot;titreNews&quot;&gt;
+      &lt;c:out value=&quot;${news['titre']}&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;corpsNews&quot;&gt;
+      &lt;c:out value=&quot;${news['contenu']}&quot; /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/c:forEach&gt;</code></pre><p id="r-2133478" data-claire-element-id="2350460">J'ai utilisé ici la propriété <strong>count</strong> de l'attribut <strong>varStatus</strong>, affichée simplement en tant que numéro de news. Cet exemple est simple, mais suffit à vous faire comprendre comment utiliser cet attribut : il suffit d'appeler directement une propriété de l'objet <strong>varStatus</strong>, que j'ai ici de manière très originale nommée... <strong>status</strong>.</p><p id="r-2133479" data-claire-element-id="2350461">Pour terminer, sachez enfin que l'objet créé par cet attribut <strong>varStatus</strong> n'est visible que dans le corps de la boucle, tout comme l'attribut <strong>var</strong>.</p><h4 id="r-2133487" data-claire-element-id="2837480">Itération sur une chaîne de caractères</h4><p id="r-2133482" data-claire-element-id="2350464">Une variante de la boucle <code>&lt;c:forEach&gt;</code> existe, spécialement dédiée aux chaînes de caractères. La syntaxe est presque identique :</p><pre id="r-2133483" data-claire-element-id="2837478"><code data-claire-semantic="jsp">&lt;p&gt;
+&lt;%-- Affiche les différentes sous-chaînes séparées par une virgule ou un point-virgule --%&gt;
+&lt;c:forTokens var=&quot;sousChaine&quot; items=&quot;salut; je suis un,gros;zéro+!&quot; delims=&quot;;,+&quot;&gt;
+  ${sousChaine}&lt;br/&gt;
+&lt;/c:forTokens&gt;
+&lt;/p&gt;</code></pre><p id="r-2133484" data-claire-element-id="2350466">Un seul attribut apparaît : <strong>delims</strong>. C'est ici que l'on doit spécifier quels sont les caractères qui serviront de séparateurs dans la chaîne que la boucle parcourra. Il suffit de les spécifier les uns à la suite des autres, comme c'est le cas ici dans notre exemple. Tous les autres attributs vus précédemment peuvent également s'appliquer ici (<strong>begin</strong>, <strong>end</strong>, <strong>step</strong>...).</p><p id="r-2133485" data-claire-element-id="2350467">Le rendu HTML de ce dernier exemple est donc :</p><pre id="r-2133486" data-claire-element-id="2837479"><code data-claire-semantic="html">&lt;p&gt;
+  salut&lt;br/&gt;
+   je suis un&lt;br/&gt;
+  gros&lt;br/&gt;
+  zero&lt;br/&gt;
+  !&lt;br/&gt;
+&lt;/p&gt;</code></pre><h4 id="r-2133490" data-claire-element-id="2350472">Ce que la JSTL ne permet pas (encore) de faire</h4><p id="r-2133488" data-claire-element-id="2350470">Il est possible en Java d'utiliser les commandes <code>break</code> et <code>continue</code> pour sortir d'une boucle en cours de parcours. Eh bien sachez que ces fonctionnalités ne sont pas implémentées dans la JSTL. Par conséquent, il est impossible la plupart du temps de sortir d'une boucle en cours d'itération.</p><p id="r-2133489" data-claire-element-id="2350471">Il existe dans certains cas des moyens plus ou moins efficaces de sortir d'une boucle, via l'utilisation de conditions <code>&lt;c:if&gt;</code> notamment. Quant aux cas d'itérations sur des collections, la meilleure solution si le besoin de sortir en cours de boucle se fait ressentir, est de déporter le travail de la boucle dans une classe Java. Pour résumer, ce genre de situations se résout au cas par cas, selon vos besoins. Mais n'oubliez pas : votre vue doit se consacrer à l'affichage uniquement. Si vous sentez que vous avez besoin de fonctionnalités qui n'existent pas dans la JSTL, il y a de grandes chances pour que vous soyez en train de trop en demander à votre vue, et éventuellement de bafouer MVC !</p><h3 id="r-621243" data-claire-element-id="2837500">Les liens</h3><h4 id="r-2133545" data-claire-element-id="2837493">Liens</h4><p id="r-2133491" data-claire-element-id="2350474">La balise <code>&lt;c:url&gt;</code> a pour objectif de générer des <a href="http://fr.wikipedia.org/wiki/Uniform_Resource_Locator">URL</a>. En lisant ceci, j'imagine que vous vous demandez ce qu'il peut bien y avoir de particulier à gérer dans la création d'une URL ! Dans une page HTML simple, lorsque l'on crée un lien on se contente en effet d'écrire directement l'adresse au sein de la balise <code>&lt;a&gt;</code> :</p><pre id="r-2133492" data-claire-element-id="2837482"><code data-claire-semantic="html">&lt;a href=&quot;url&quot;&gt;lien&lt;/a&gt;</code></pre><div id="r-2133494" data-claire-element-id="2350477" data-claire-semantic="question"><p id="r-2133493" data-claire-element-id="2350476">Dans ce cas, qu'est-ce qui peut motiver le développeur à utiliser la balise <code>&lt;c:url&gt;</code> ?</p></div><p id="r-2133495" data-claire-element-id="2350478">Eh bien vous devez savoir qu'en réalité, une adresse n'est pas qu'une simple chaîne de caractères, elle est soumise à plusieurs contraintes.<br /> Voici les trois fonctionnalités associées à la balise :</p><ul id="r-2133502" data-claire-element-id="2350485"><li id="r-2133497" data-claire-element-id="2350480"><p id="r-2133496" data-claire-element-id="2350479">ajouter le nom du contexte aux URL absolues ;</p></li><li id="r-2133499" data-claire-element-id="2350482"><p id="r-2133498" data-claire-element-id="2350481">réécrire l'adresse pour la gestion des sessions (si les cookies sont désactivés ou absents, par exemple) ;</p></li><li id="r-2133501" data-claire-element-id="2350484"><p id="r-2133500" data-claire-element-id="2350483">encoder les noms et contenus des paramètres de l'URL.</p></li></ul><p id="r-2133503" data-claire-element-id="2350486">L'attribut <strong>value</strong> contient logiquement l'adresse, et l'attribut <strong>var</strong> permet comme pour les tags vus auparavant de stocker le résultat dans une variable. Voici un premier jeu d'exemples :</p><pre id="r-2133504" data-claire-element-id="2837483"><code data-claire-semantic="jsp">&lt;%-- Génère une url simple, positionnée dans un lien HTML --%&gt;
+&lt;a href=&quot;&lt;c:url value=&quot;test.jsp&quot; /&gt;&quot;&gt;lien&lt;/a&gt;
+
+&lt;%-- Génère une url et la stocke dans la variable lien --%&gt;
+&lt;c:url value=&quot;test.jsp&quot; var=&quot;lien&quot; /&gt;</code></pre><p id="r-2133505" data-claire-element-id="2350488">Reprenons maintenant les trois propriétés en détail, et analysons leur fonctionnement.</p><h5 id="r-2133509" data-claire-element-id="2837485">1. Ajout du contexte</h5><p id="r-2133506" data-claire-element-id="2350489">Lorsqu'une URL est absolue, c'est-à-dire lorsqu'elle fait référence à la racine de l'application et commence par le caractère / , le contexte de l'application sera par défaut ajouté en début d'adresse. Ceci est principalement dû au fait que lors du développement d'une application, le nom du contexte importe peu et on y écrit souvent un nom par défaut, faute de mieux. Il n'est généralement choisi définitivement que lors du déploiement de l'application, qui intervient en fin de cycle.</p><p id="r-2133507" data-claire-element-id="2350490">Lors de l'utilisation d'adresses relatives, pas de soucis puisqu'elles ne font pas référence au contexte, et pointeront, quoi qu'il arrive, vers le répertoire courant. Mais pour les adresses absolues, pointant à la racine, sans cette fonctionnalité il serait nécessaire d'écrire en dur le contexte de l'application dans les URL lors du développement, et de toutes les modifier si le contexte est changé par la suite lors du déploiement. Vous comprenez donc mieux l'intérêt d'un tel système.</p><pre id="r-2133508" data-claire-element-id="2837484"><code data-claire-semantic="jsp">&lt;%-- L'url absolue ainsi générée --%&gt;
+&lt;c:url value=&quot;/test.jsp&quot; /&gt;
+
+&lt;%-- Sera rendue ainsi dans la page web finale si le contextPath est &quot;Test&quot; --%&gt;
+/Test/test.jsp
+
+&lt;%-- Et une url relative ainsi générée --%&gt;
+&lt;c:url value=&quot;test.jsp&quot; /&gt;
+
+&lt;%-- Ne sera pas modifiée lors du rendu --%&gt;
+test.jsp</code></pre><h5 id="r-2133513" data-claire-element-id="2837487">2. Gestion des sessions</h5><p id="r-2133510" data-claire-element-id="2350493">Si le conteneur JSP détecte un cookie stockant l'identifiant de session dans le navigateur de l'utilisateur, alors aucune modification ne sera apportée à l'URL. Par contre, si ce cookie est absent, les URL générées via la balise <code>&lt;c:url&gt;</code> seront réécrites pour intégrer l'identifiant de session en question. Regardez ces exemples, afin de bien visualiser la forme de ce paramètre :</p><pre id="r-2133511" data-claire-element-id="2837486"><code data-claire-semantic="jsp">&lt;%-- L'url ainsi générée --%&gt;
+&lt;c:url value=&quot;test.jsp&quot; /&gt;
+
+&lt;%-- Sera rendue ainsi dans la page web finale,
+si le cookie est présent --%&gt;
+test.jsp
+
+&lt;%-- Et sera rendue sous cette forme si le cookie est absent --%&gt;
+test.jsp;jsessionid=A6B57CE08012FB431D</code></pre><p id="r-2133512" data-claire-element-id="2350495">Ainsi, via ce système une application Java EE ne dépendra pas de l'activation des cookies du côté utilisateur. Ne vous inquiétez pas si vous ne saisissez pas le principe ici, nous reviendrons sur cette histoire de cookies et de sessions plus tard. Pour le moment, essayez simplement de retenir que la balise <code>&lt;c:url&gt;</code> est équipée pour leur gestion automatique !</p><h5 id="r-2133529" data-claire-element-id="2837490">3. Encodage</h5><p id="r-2133514" data-claire-element-id="2350497">En utilisant la balise <code>&lt;c:url&gt;</code>, les paramètres que vous souhaitez passer à cette URL seront encodés : les caractères spéciaux qu'ils contiennent éventuellement vont être transformés en leurs codes HTML respectifs. Toutefois, il ne faut pas faire de confusion ici : <strong>ce sont seulement les paramètres (leur nom et contenu) qui seront encodés, le reste de l'URL ne sera pas modifié</strong>. La raison de ce comportement est de pouvoir assurer la compatibilité avec l'action standard d'inclusion <code>&lt;jsp:include&gt;</code>, qui ne sait pas gérer une URL encodée.</p><div id="r-2133516" data-claire-element-id="2350499" data-claire-semantic="question"><p id="r-2133515" data-claire-element-id="2350498">D'accord, mais comment faire pour passer des paramètres ?</p></div><p id="r-2133517" data-claire-element-id="2350500">Pour transmettre proprement des paramètres à une URL, une balise particulière existe : <code>&lt;c:param&gt;</code>. Elle ne peut exister que dans le corps des balises <code>&lt;c:url&gt;</code>, <code>&lt;c:import&gt;</code> ou <code>&lt;c:redirect&gt;</code>. Elle se présente sous cette forme assez intuitive :</p><pre id="r-2133518" data-claire-element-id="2837488"><code data-claire-semantic="jsp">&lt;c:url value=&quot;/monSiteWeb/countZeros.jsp&quot;&gt;
+  &lt;c:param name=&quot;nbZeros&quot; value=&quot;${countZerosBean.nbZeros}&quot;/&gt;
+  &lt;c:param name=&quot;date&quot; value=&quot;22/06/2010&quot;/&gt;
+&lt;/c:url&gt;</code></pre><p id="r-2133519" data-claire-element-id="2350502">L'attribut <strong>name</strong> contient donc le nom du paramètre, et <strong>value</strong> son contenu. C'est en réalité cette balise, ici fille de la balise <code>&lt;c:url&gt;</code>, qui se charge de l'encodage des paramètres, et non directement la balise <code>&lt;c:url&gt;</code>. Retenez enfin qu'une telle balise ne peut exister qu'entre deux balises d'URL, de redirection ou d'import, et qu'il est possible d'en utiliser autant que nécessaire.</p><pre id="r-2133520" data-claire-element-id="2837489"><code data-claire-semantic="jsp">&lt;%-- Une URL générée de cette manière --%&gt;
+&lt;a href=&quot;&lt;c:url value=&quot;/monSiteWeb/test.jsp&quot;&gt;
+  &lt;c:param name=&quot;date&quot; value=&quot;22/06/2010&quot;/&gt;
+  &lt;c:param name=&quot;donnees&quot; value=&quot;des données contenant des c@r#ct%res bi&amp;a**es...&quot;/&gt;
+&lt;/c:url&gt;&quot;&gt;Lien HTML&lt;/a&gt;
+
+&lt;%-- Sera rendue ainsi dans la page web finale --%&gt;
+&lt;a href=&quot;/test/monSiteWeb/test.jsp?date=22%2f06%2f2010&amp;donnees=des+donn%e9es+contenant+des+c%40r%23ct%25res+bi%26a**es...&quot;&gt;Lien HTML&lt;/a&gt;</code></pre><p id="r-2133521" data-claire-element-id="2350504">Vous voyez bien dans cet exemple que :</p><ul id="r-2133526" data-claire-element-id="2350509"><li id="r-2133523" data-claire-element-id="2350506"><p id="r-2133522" data-claire-element-id="2350505">les caractères spéciaux contenus dans les paramètres de l'URL ont été transformés : <strong>/</strong> est devenu <strong>%2f</strong>, <strong>é</strong> est devenu <strong>%e9</strong>, etc ;</p></li><li id="r-2133525" data-claire-element-id="2350508"><p id="r-2133524" data-claire-element-id="2350507">les caractères <strong>&amp;</strong> séparant les différents paramètres, qui font quant à eux partie intégrante de l'URL, n'ont pas été modifiés en leur code HTML <code>&amp;amp;</code> .</p></li></ul><aside id="r-2133528" data-claire-element-id="2350511" data-claire-semantic="warning"><p id="r-2133527" data-claire-element-id="2350510">Si vous travaillez sur une page XML ou une page XHTML stricte, alors vous devez savoir qu'afin de respecter les normes qui régissent ces technologies, il est impératif d'encoder proprement l'URL. Cela dit, je viens de vous expliquer que la balise <code>&lt;c:url&gt;</code> n'effectue pas cette opération, elle ne s'occupe que des paramètres... Par conséquent, vous devrez transformer vous-mêmes les caractères spéciaux, comme le &amp; séparant les paramètres d'une URL, en leur code HTML équivalent (en l'occurrence, &amp; doit devenir <code>&amp;amp;</code> pour que la syntaxe soit valide). Si vous avez bien suivi, vous savez qu'il est possible d'effectuer ces transformations à l'aide de la balise <code>&lt;c:out&gt;</code> !</p></aside><h5 id="r-2133544" data-claire-element-id="2837492">Pour résumer</h5><p id="r-2133530" data-claire-element-id="2350513">Récapitulons tout cela avec un exemple assez complet :</p><pre id="r-2133531" data-claire-element-id="2837491"><code data-claire-semantic="jsp">&lt;%-- L'url avec paramètres ainsi générée --%&gt;
+&lt;c:url value=&quot;/monSiteWeb/countZeros.jsp&quot;&gt;
+  &lt;c:param name=&quot;nbZeros&quot; value=&quot;123&quot;/&gt;
+  &lt;c:param name=&quot;date&quot; value=&quot;22/06/2010&quot;/&gt;
+&lt;/c:url&gt;
+
+&lt;%-- Sera rendue ainsi dans la page web finale,
+si le cookie est présent et le contexte est Test --%&gt;
+/Test/monSiteWeb/countZeros.jsp?nbZeros=123&amp;date=22%2f06%2f2010 
+
+&lt;%-- Et sera rendue sous cette forme si le cookie est absent --%&gt;
+/Test/monSiteWeb/countZeros.jsp;jsessionid=A6B57CE08012FB431D?nbZeros=123&amp;date=22%2f06%2f2010</code></pre><p id="r-2133532" data-claire-element-id="2350515">Vous pouvez ici observer :</p><ul id="r-2133543" data-claire-element-id="2350526"><li id="r-2133534" data-claire-element-id="2350517"><p id="r-2133533" data-claire-element-id="2350516">la mise en place de paramètres via <code>&lt;c:param&gt;</code> ;</p></li><li id="r-2133536" data-claire-element-id="2350519"><p id="r-2133535" data-claire-element-id="2350518">l'ajout automatique du contexte en début de l'URL absolue ;</p></li><li id="r-2133538" data-claire-element-id="2350521"><p id="r-2133537" data-claire-element-id="2350520">l'encodage automatique des paramètres (ici les caractères / dans la date sont transformés en %2f) ;</p></li><li id="r-2133540" data-claire-element-id="2350523"><p id="r-2133539" data-claire-element-id="2350522">le non-encodage de l'URL (le caractère &amp; séparant les paramètres n'est pas transformé) ;</p></li><li id="r-2133542" data-claire-element-id="2350525"><p id="r-2133541" data-claire-element-id="2350524">l'ajout automatique de l'identifiant de session. Remarquez d'ailleurs ici sa présence avant les paramètres de la requête, et non après.</p></li></ul><h4 id="r-2133551" data-claire-element-id="2837495">Redirection</h4><p id="r-2133546" data-claire-element-id="2350529">La balise <code>&lt;c:redirect&gt;</code> est utilisée pour envoyer un message de redirection HTTP au navigateur de l'utilisateur. Si elle ressemble à l'action <code>&lt;jsp:forward&gt;</code>, il existe toutefois une grosse différence, qui réside dans le fait qu'elle va entraîner un changement de l'URL dans le navigateur de l'utilisateur final, contrairement à <code>&lt;jsp:forward&gt;</code> qui est transparente du point de vue de l'utilisateur (l'URL dans la barre de navigation du navigateur n'est pas modifiée).</p><p id="r-2133547" data-claire-element-id="2350530">La raison de cette différence de comportement est simple : le <em>forwarding</em> se fait côté serveur, contrairement à la redirection qui est effectuée par le navigateur. Cela limite par conséquent la portée de l'action de <em>forwarding</em> qui, puisque exécutée côté serveur, est limitée aux pages présentes dans le contexte de la servlet utilisée. La redirection étant exécutée côté client, rien ne vous empêche de rediriger l'utilisateur vers n'importe quelle page web.</p><p id="r-2133548" data-claire-element-id="2350531">Au final, le <em>forwarding</em> est plus performant, ne nécessitant pas d'aller-retour passant par le navigateur de l'utilisateur final, mais il est moins flexible que la redirection. De plus, utiliser le <em>forwarding</em> impose certaines contraintes : concrètement, <strong>l'utilisateur final n'est pas au courant que sa requête a été redirigée vers une ou plusieurs servlets ou JSP différentes, puisque l'URL qui est affichée dans son navigateur ne change pas.</strong> En d'autres termes, cela veut dire que l'utilisateur ne sait pas si le contenu qu'il visualise dans son navigateur a été produit par la page qu'il a appelée via l'URL d'origine, ou par une autre page vers laquelle la première servlet ou JSP appelée a effectué un <em>forwarding</em> ! Ceci peut donc poser problème si l'utilisateur rafraîchit la page par exemple, puisque cela appellera à nouveau la servlet ou JSP d'origine... Sachez enfin que lorsque vous utilisez le <em>forwarding</em>, le code présent après cette instruction dans la page n'est pas exécuté.</p><p id="r-2133549" data-claire-element-id="2350532">Bref, je vous conseille, pour débuter, d'utiliser la redirection via la balise <code>&lt;c:redirect&gt;</code> plutôt que l'action standard JSP, cela vous évitera bien des ennuis. Voyons pour terminer quelques exemples d'utilisation :</p><pre id="r-2133550" data-claire-element-id="2837494"><code data-claire-semantic="jsp">&lt;%-- Forwarding avec l'action standard JSP --%&gt;
+&lt;jsp:forward page=&quot;/monSiteWeb/erreur.jsp&quot;&gt;
+
+&lt;%-- Redirection avec la balise redirect --%&gt;
+&lt;c:redirect url=&quot;http://www.siteduzero.com&quot;/&gt;
+
+
+&lt;%-- Les attributs valables pour &lt;c:url/&gt; le sont aussi pour la redirection. 
+Ici par exemple, l'utilisation de paramètres --%&gt;
+&lt;c:redirect url=&quot;http://www.siteduzero.com&quot;&gt;
+  &lt;c:param name=&quot;mascotte&quot; value=&quot;zozor&quot;/&gt;
+  &lt;c:param name=&quot;langue&quot; value=&quot;fr&quot;/&gt;
+&lt;/c:redirect&gt;
+
+&lt;%-- Redirigera vers --%&gt;
+http://www.siteduzero.com?mascotte=zozor&amp;langue=fr</code></pre><h4 id="r-2133562" data-claire-element-id="2837499">Imports</h4><p id="r-2133552" data-claire-element-id="2350535">La balise <code>&lt;c:import&gt;</code> est en quelque sorte un équivalent à <code>&lt;jsp:include&gt;</code>, mais qui propose plus d'options, et pallie ainsi les manques de l'inclusion standard.</p><p id="r-2133553" data-claire-element-id="2350536">L'attribut <strong>url</strong> est le seul paramètre obligatoire lors de l'utilisation de cette balise, et il désigne logiquement le fichier à importer :</p><pre id="r-2133554" data-claire-element-id="2837496"><code data-claire-semantic="jsp">&lt;%-- Copie le contenu du fichier ciblé dans la page actuelle --%&gt;
+&lt;c:import url=&quot;exemple.html&quot;/&gt;</code></pre><p id="r-2133555" data-claire-element-id="2350538">Un des avantages majeurs de la fonction d'import est qu'elle permet d'utiliser une variable pour stocker le flux récupéré, et ne propose pas simplement de l'inclure dans votre JSP comme c'est le cas avec <code>&lt;jsp:include&gt;</code>. Cette fonctionnalité est importante, puisqu'elle permet d'effectuer des traitements sur les pages importées. L'attribut utilisé pour ce faire est nommé <strong>varReader</strong>. Nous reverrons cela en détail lorsque nous découvrirons la bibliothèque xml de la JSTL, où ce système prend toute son importance lorsqu'il s'agit de lire et de parser des fichiers XML :</p><pre id="r-2133556" data-claire-element-id="2837497"><code data-claire-semantic="jsp">&lt;%-- Copie le contenu d'un fichier xml dans une variable (fileReader),
+puis parse le flux récupéré dans une autre variable (doc). --%&gt;
+&lt;c:import url=&quot;test.xml&quot; varReader=&quot;fileReader&quot;&gt;
+  &lt;x:parse var=&quot;doc&quot; doc=&quot;${fileReader}&quot; /&gt;
+&lt;/c:import&gt;</code></pre><p id="r-2133557" data-claire-element-id="2350540">Ne vous inquiétez pas si la ligne <code>&lt;x:parse var=&quot;doc&quot; doc=&quot;${fileReader}&quot; /&gt;</code> vous est inconnue, c'est une balise de la bibliothèque xml de la JSTL que je vous présenterai dans le chapitre suivant. Vous pouvez cependant retenir l'utilisation du <code>&lt;c:import&gt;</code> pour récupérer un flux xml.</p><aside id="r-2133559" data-claire-element-id="2350542" data-claire-semantic="information"><p id="r-2133558" data-claire-element-id="2350541"><strong>Note</strong> : le contenu du <strong>varReader</strong> utilisé, autrement dit la variable dans laquelle est stocké le contenu de votre fichier, n'est accessible qu'à l'intérieur du corps de la balise d'import, entre les tags <code>&lt;c:import&gt;</code> et <code>&lt;/c:import&gt;</code>. Il n'est par conséquent pas possible de s'en servir en dehors. Dans le chapitre portant sur la bibliothèque xml, nous découvrirons un autre moyen, permettant de pouvoir travailler sur le contenu du fichier en dehors de l'import, au travers d'une variable de <em>scope</em>.</p></aside><p id="r-2133560" data-claire-element-id="2350543">De la même manière que la redirection par rapport au <em>forwarding</em>, <code>&lt;c:import&gt;</code> permet d'inclure des pages extérieures au contexte de votre servlet ou à votre serveur, contrairement à l'action standard JSP. Voyons une nouvelle fois quelques exemples d'utilisation :</p><pre id="r-2133561" data-claire-element-id="2837498"><code data-claire-semantic="jsp">&lt;%-- Inclusion d'une page avec l'action standard JSP. --%&gt;
+&lt;jsp:include page=&quot;index.html&quot; /&gt;
+
+&lt;%-- Importer une page distante dans une variable 
+Le scope par défaut est ici page si non précisé. --%&gt;
+&lt;c:import url=&quot;http://www.siteduzero.com/zozor/biographie.html&quot; var=&quot;bio&quot; scope=&quot;page&quot;/&gt;
+
+&lt;%-- Les attributs valables pour &lt;c:url/&gt; le sont aussi pour la redirection. 
+Ici par exemple, l'utilisation de paramètres --%&gt;
+&lt;c:import url=&quot;footer.jsp&quot;&gt;
+  &lt;c:param name=&quot;design&quot; value=&quot;bleu&quot;/&gt;
+&lt;/c:import&gt;</code></pre><h3 id="r-621268" data-claire-element-id="2350571">Les autres bibliothèques de la JSTL</h3><p id="r-2133563" data-claire-element-id="2350547">Au terme de ce chapitre, vous devez être capables de transformer des scriptlets Java contenant variables, boucles et conditions en une jolie page JSP basée sur des tags JSTL.<br /> Testez maintenant vos connaissances dans le TP qui suit ce chapitre !</p><p id="r-2133564" data-claire-element-id="2350548">Sachez avant de continuer, que d'autres bibliothèques de base existent, la JSTL ne contenant en réalité pas une bibliothèque mais cinq ! Voici une brève description des quatre autres :</p><ul id="r-2133573" data-claire-element-id="2350557"><li id="r-2133566" data-claire-element-id="2350550"><p id="r-2133565" data-claire-element-id="2350549"><strong>fmt</strong> : destinée au formatage et au parsage des données. Permet notamment la localisation de l'affichage ;</p></li><li id="r-2133568" data-claire-element-id="2350552"><p id="r-2133567" data-claire-element-id="2350551"><strong>fn</strong> : destinée au traitement de chaînes de caractères ;</p></li><li id="r-2133570" data-claire-element-id="2350554"><p id="r-2133569" data-claire-element-id="2350553"><strong>sql</strong> : destinée à l'interaction avec une base de données. Celle-ci ne trouve pour moi son sens que dans une petite application <em>standalone</em>, ou une feuille de tests. En effet, le code ayant trait au stockage des données dans une application web Java EE suivant le modèle MVC doit être masqué de la vue, et être encapsulé dans le modèle, éventuellement dans une couche dédiée (voir <a href="http://www.siteduzero.com/tutoriel-3-706680-le-modele-dao.html">le modèle de conception DAO</a> pour plus d'information à ce sujet). Bref, je vous laisse parcourir par vous-mêmes les liens de documentation si vous souhaitez en faire usage dans vos projets. En ce qui nous concerne, nous suivons MVC à la lettre et je ne souhaite clairement pas vous voir toucher aux données de la base directement depuis vos pages JSP... Une fois n'est pas coutume, le premier que je vois coder ainsi, je le pends à un arbre ! :D</p></li><li id="r-2133572" data-claire-element-id="2350556"><p id="r-2133571" data-claire-element-id="2350555"><strong>xml</strong> : destinée au traitement de fichiers et données XML. À l'instar de la bibliothèque <strong>sql</strong>, celle-ci trouve difficilement sa place dans une application MVC, ces traitements ayant bien souvent leur place dans des objets du modèle, et pas dans la vue. Cela dit, dans certains cas elle peut s'avérer très utile, ce format étant très répandu dans les applications et communications web : c'est pour cela que j'ai décidé d'en faire l'objet du prochain chapitre !</p></li></ul><ul id="r-2133586" data-claire-element-id="2350570"><li id="r-2133575" data-claire-element-id="2350559"><p id="r-2133574" data-claire-element-id="2350558">On affiche le contenu d'une variable ou d'un objet avec <code>&lt;c:out&gt;</code>.</p></li><li id="r-2133577" data-claire-element-id="2350561"><p id="r-2133576" data-claire-element-id="2350560">On effectue un test avec <code>&lt;c:if&gt;</code> ou <code>&lt;c:choose&gt;</code>.</p></li><li id="r-2133579" data-claire-element-id="2350563"><p id="r-2133578" data-claire-element-id="2350562">On réalise une boucle sur une collection avec <code>&lt;c:forEach&gt;</code>.</p></li><li id="r-2133581" data-claire-element-id="2350565"><p id="r-2133580" data-claire-element-id="2350564">On génère un lien de manière automatique avec <code>&lt;c:url&gt;</code>.</p></li><li id="r-2133583" data-claire-element-id="2350567"><p id="r-2133582" data-claire-element-id="2350566">On redirige vers une autre page avec <code>&lt;c:redirect&gt;</code>.</p></li><li id="r-2133585" data-claire-element-id="2350569"><p id="r-2133584" data-claire-element-id="2350568">On importe une autre page avec <code>&lt;c:import&gt;</code>.</p></li></ul>
+
+                <div class="js-courseSelementActions sideActions">
+    <ul class="sideActions__container">
+        <li>
+            <a class="sideActions__item  js-courseElementActions-copyUrl  js-tooltip"
+               href="#" data-tooltip="Copier le lien"
+               data-tooltip-done="Lien copié !">
+            #
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+
+            
+            <nav class="course-pagination    clearfix">
+
+            <a href="objectifs-et-configuration.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--previous">
+            <i class="icon-previous"></i>
+            <span>Objectifs et configuration</span>
+        </a>
+    
+    <span class="course-pagination__separator"></span>
+
+            <a href="jstl-core-exercice-d-application.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--next">
+            <span>JSTL core : exercice d&#039;application</span>
+            <i class="icon-next"></i>
+        </a>
+    
+</nav>
+
+            
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-view-restriction_popin_title"
+                class="popin popin--illustrated  js-popin"
+        id="popin-view-restriction"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+                    <div class="popin__illustrationWrapper">
+                <div class="popin__illustration illustration--balloon"></div>
+            </div>
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-view-restriction_popin_title" class="popin__title  js-popin-title">Waouh !</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <p>
+            Très heureux de voir que nos cours vous plaisent, déjà 3 pages lues aujourd&#039;hui ! Vous pouvez continuer la lecture de nos cours en devenant un Roomie, un membre de la communauté d&#039;OpenClassrooms. C&#039;est gratuit !
+        </p>
+        <p>
+            Vous pourrez aussi suivre votre avancement dans le cours, faire les exercices et discuter avec les autres Roomies.
+        </p>
+                    </div>
+            </div>
+
+                            <div class="popin__actions  js-popin-actions">
+                                                                        <a class="oc-btn orange-alt-btn "  href="https://openclassrooms.com/register">S'inscrire</a>
+                                                    <a class="oc-btn dark-btn "  href="https://openclassrooms.com/login">Se connecter</a>
+                                                            </div>
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+        </div>
+
+
+    </section>
+</div>
+    </div>
+
+    
+    <div id="popin-not-certifying-yet"
+     class="popin"
+     data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <a href='https://openclassrooms.com/premium'><i class='icon-star'></i> Devenez Premium</a>
+                    ">
+    <img alt="Exemple de certificat de réussite" src="../../../static.oc-static.com/prod/images/courses/certif.jpg"/>
+</div>
+
+
+                </main>
+
+                <aside class="contentWithSidebar__sidebar  js-contentWithSidebar-slidingElement" >
+                        <nav class="col-nav">
+    <div id="tab-courseMenu" class="col-nav__inner js-sidebar-inner">
+        <div class="col-nav__block  col-nav__block--summary">
+
+            <div class="side-paginate">
+                                    <a href="objectifs-et-configuration.html" class="side-paginate__previous">
+                        <i class="icon-previous"></i>
+                    </a>
+
+                    <span class="side-paginate__separator"></span>
+                
+                <h6 class="side-paginate__title">
+                    Une bonne vue grâce à la JSTL
+                </h6>
+
+                                    <span class="side-paginate__separator"></span>
+
+                    <a href="jstl-core-exercice-d-application.html" class="side-paginate__next">
+                        <i class="icon-next"></i>
+                    </a>
+                            </div>
+
+                            <div class="col-nav__block--summary-list">
+                    <ol class="col-nav__chapters">
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="objectifs-et-configuration.html">Objectifs et configuration</a>
+                                                            </li>
+                                                    <li class="selected">
+                                                                                                    <span class="col-nav__chapterTitle">La bibliothèque Core</span>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="jstl-core-exercice-d-application.html">JSTL core : exercice d&#039;application</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="la-bibliotheque-xml.html">La bibliothèque xml</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="jstl-xml-exercice-d-application.html">JSTL xml : exercice d&#039;application</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="faisons-le-point-2.html">Faisons le point !</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="tp-fil-rouge-etape-2.html">TP Fil rouge - Étape 2</a>
+                                                            </li>
+                                            </ol>
+
+                                    </div>
+                    </div>
+
+        
+        
+            <div class="col-nav__block  col-nav__block--subscribe">
+            <a href="https://openclassrooms.com/login" class="oc-btn orange-alt-btn js-popin-activator" data-popin-selector="#popin-log-in">
+                <i class="icon-lock"></i>
+                Suivre ce cours
+            </a>
+
+            <a href="https://openclassrooms.com/how-does-it-work">
+                <small>Comment ça marche ?</small>
+            </a>
+        </div>
+    
+
+
+        
+                    <div class="col-nav__block col-nav__block--institution">
+    <h2>Créé par</h2>
+            <a  href="https://openclassrooms.com/partners/openclassrooms" target="_blank">
+            <img src="../../../sdz-upload.s3.amazonaws.com/prod/partners/img/logo_logo-oc.png" alt="logo OpenClassrooms" class="col-nav__institutionLogo"/>
+            <p class="col-nav__block--institutionDescription">
+                OpenClassrooms, 1ère plateforme  <span class='nowrap'>e-Education<span> en Europe
+            </p>
+        </a>
+    </div>
+        
+        
+        
+    
+                        
+            
+    <div class="socialNetwork col-nav__block">
+        <ul class="socialButtons  js-socialButtons"
+    data-options="
+                title: 'Découvrez le cours &quot;La bibliothèque Core&quot; sur @OpenClassrooms',
+        mailTitle: 'Cours &quot;La bibliothèque Core&quot; sur OpenClassrooms',
+        mailContent: 'Découvrez le cours &quot;La bibliothèque Core&quot; sur OpenClassrooms.'">
+
+    <li>
+        <a class="roundIcon  roundIcon--twitter addthis_button_twitter  js-socialButtons-btn" data-tooltip="Partagez sur Twitter" >
+            <i class="roundIcon__icon  icon-twitter"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--facebook  addthis_button_facebook  js-socialButtons-btn" data-tooltip="Partagez sur Facebook">
+            <i class="roundIcon__icon  icon-facebook"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--googlePlus  addthis_button_google_plusone_share  js-socialButtons-btn" data-tooltip="Partagez sur Google+" >
+            <i class="roundIcon__icon  icon-google"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  addthis_button_email  js-socialButtons-btn  js-socialButtons-email" data-tooltip="Partagez par e-mail">
+            <i class="roundIcon__icon  icon-letter"></i>
+        </a>
+    </li>
+
+</ul>
+
+    </div>
+    </div>
+</nav>
+                </aside>
+            </div>
+        </div>
+
+                    <footer class="alt-section">
+    <div class="centered">
+
+        <div class="row">
+                            <div class="col4 course-bottom__category">
+                    <h2 class="highlighted">
+                        L&#039;auteur
+                    </h2>
+                    <div>
+                                                    <a itemprop="author" itemscope itemtype="http://schema.org/Person" href="https://openclassrooms.com/membres/coyote-92394" class="no-underlined">
+                                <div class="course-bottom__text-illustrated">
+                                    <span data-author="Médéric Munier" style="background-image: url(../../../www.gravatar.com/avatar/15c349ac5313535fba91e5dbfa8803ec/indexd6dc.html?s=256&amp;r=g&amp;d=https%3A%2F%2Fopenclassrooms.com%2Fbundles%2Fcommon%2Fimages%2Favatar_defaut.png);"></span>
+                                    <h4 itemprop="name">Médéric Munier</h4>
+                                                                            <p itemprop="description">
+                                            Auteur du livre sur le Java EE.
+                                        </p>
+                                                                    </div>
+                            </a>
+                                            </div>
+                </div>
+            
+                            <div class="col8 course-bottom__category">
+                    <h2 class="highlighted">Découvrez aussi ce cours en...</h2>
+
+                    <ul class="course-bottom__format">
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">eBook</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-book"></i>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">Livre papier</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook pdf"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">PDF</div>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                    </div>
+
+    </div>
+</footer>
+
+
+    </article>
+            </div>
+        </div>
+
+                    <footer class="footer">
+    <div class="centered">
+        <div class="row">
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    OpenClassrooms
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/about-us" class="footer__link">Qui sommes-nous ?</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/how-does-it-work" class="footer__link">Fonctionnement de nos cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/jobs" class="footer__link">Recrutement</a>
+                    </li>
+                    <li>
+                        <a href="#" class="js-zendesk-show footer__link">Nous contacter</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Professionnels
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/affiliation" class="footer__link">
+                            Affiliation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/business" class="footer__link">Entreprises</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/universities" class="footer__link">Universités et écoles</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Participez
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/new-teachers" class="footer__link">Créer un cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/courses/courselab" class="footer__link">CourseLab</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/terms-conditions/fr" class="footer__link">
+                            <strong>Conditions Générales d&#039;Utilisation</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Suivez-nous
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+                                                                    <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="http://blog.openclassrooms.com/" class="footer__link">Le blog OpenClassrooms</a>
+                    </li>
+                    <li>
+                        <ul class="footer__socialNetwork">
+                            <li>
+                                <a href="https://www.facebook.com/openclassrooms" target="_blank" class="roundIcon roundIcon--facebook footer__socialButtons">
+                                    <i class="icon-facebook roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/openclassrooms" target="_blank" class="roundIcon roundIcon--twitter footer__socialButtons">
+                                    <i class="icon-twitter roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/+OpenClassrooms/posts" target="_blank" class="roundIcon roundIcon--youtube footer__socialButtons">
+                                    <i class="icon-google roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/openclassrooms" target="_blank" class="roundIcon roundIcon--instagram footer__socialButtons">
+                                    <i class="icon-instagram roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/TheOpenClassrooms" target="_blank" class="roundIcon roundIcon--googlePlus footer__socialButtons">
+                                    <i class="icon-youtube roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/openclassrooms" target="_blank" class="roundIcon roundIcon--linkedin footer__socialButtons">
+                                    <i class="icon-linkedin roundIcon__icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
+        
+        <!-- loaded javascript block -->
+
+            
+            <script type="text/javascript" src="../../js/maind0b3.js?095b5b3"></script>
+
+        
+
+    <script type="text/javascript" src="../../js/oc/courseViewd0b3.js?095b5b3"></script>
+
+
+        <!-- loaded javascript block -->
+
+        <script type="text/javascript">
+    window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+    window.analytics.load('mou95e6tdn');
+</script>
+
+                            
+        <!-- inlined javascript block -->
+
+        <script type="text/javascript">
+            
+            if (App.modules) {
+                App.modules.startAll();
+            }
+        </script>
+
+                        
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"90dc06697a","applicationID":"20302107","transactionName":"NANaYkJXC0ICAhdYVw1Je0NDQgpcTA4AblsPB1FEVWkGXhYTEFRnEwdKQm9GBEMXPhVYXRQ=","queueTime":0,"applicationTime":703,"atts":"GERZFApNGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-bibliotheque-core by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:50:00 GMT -->
+</html>

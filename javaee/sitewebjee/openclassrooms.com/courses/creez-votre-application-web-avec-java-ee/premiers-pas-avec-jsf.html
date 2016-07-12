@@ -1,0 +1,1602 @@
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="fr" prefix="og: http://ogp.me/ns#">
+    
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:47:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(e,t){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,t)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var u=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(u,function(e,t){newrelic[t]=r(f+t,"api")}),i(c,function(e,t){newrelic[t]=r(f+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?u(e,a,i):i()}function n(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,c=0;u>c;c++)a[c].apply(i,r);var s=f[g[n]];return s&&s.push([m,n,r,i]),i}function p(e,t){w[e]=l(e).concat(t)}function l(e){return w[e]||[]}function d(e){return s[e]=s[e]||o(n)}function v(e,t){c(e,function(e,n){t=t||"feature",g[n]=t,t in f||(f[t]=[])})}var w={},g={},m={on:p,emit:n,get:d,listeners:l,context:t,buffer:v};return m}function i(){return new r}var a="nr@context",u=e("gos"),c=e(2),f={},s={},p=t.exports=o();p.backlog=f},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!w++){var e=v.info=NREUM.info,t=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){c(l,function(t,n){e[t]||(e[t]=n)});var n="https"===p.split(":")[0]||e.sslForHttp;v.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=v.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=window,s=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var p=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),v=t.exports={offset:a(),origin:p,features:{},xhrWrappable:d};s.addEventListener?(s.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(s.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),u("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader"]);</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="application-name" content="OpenClassrooms"/>
+        <meta name="msapplication-TileColor" content="#e95325"/>
+        <meta name="msapplication-TileImage" content="/fav-icon.png?v=1"/>
+
+        <meta name="theme-color" content="#E95325">
+        <link rel="icon" sizes="144x144" href="../../fav-icon3860.png?v=1">
+
+        
+        
+        <link href="../../bundles/common/css/masterd0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"  />
+        
+
+        <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="../../apple-touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-iphone-retina-display.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-ipad-retina-display.png" />
+
+        <link rel="apple-touch-icon-precomposed" href="../../apple-touch-icon-precomposed.png" />
+
+            <link href="../../bundles/course/css/maind0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" src="../../js/modernizrd0b3.js?095b5b3"></script>
+
+        <link rel="shortcut icon" href="https://openclassrooms.com/favicon.ico?095b5b3" />
+
+            
+    <meta property="og:locale" content="fr"/>
+    <meta property="og:type" content="website"/>
+
+    <meta property="og:title" content="Découvrez le cours &quot;Premiers pas avec JSF&quot; sur @OpenClassrooms"/>
+    <meta property="og:url" content="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf"/>
+    <meta property="og:site_name" content="OpenClassrooms"/>
+    <meta property="og:image" content="https://static.oc-static.com/prod/courses/illustrations/illu_creez-votre-application-web-avec-java-ee.png"/>
+    <meta property="og:description" content="Pour réaliser des sites web en Java, on utilise l&#039;environnement Java EE (anciennement appelé J2EE). Celui-ci impose de développer de façon très structurée, ce qui explique certainement pour quoi on le retrouve dans un très grand nombre d&#039;applications web notamment en entreprise (banques, administrations...)."/>
+
+            
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@OpenClassrooms"/>
+    <meta name="twitter:title" content="Découvrez le cours &quot;Premiers pas avec JSF&quot; sur @OpenClassrooms"/>
+    <meta name="twitter:description" content=""/>
+
+                
+        <title>Premiers pas avec JSF</title>
+
+        <!-- inlined top javascript block -->
+
+
+        <script type="text/javascript">
+            var App = {
+                startTime: (new Date()).getTime(),
+                debug: false
+            };
+
+            App.user = {
+                
+                
+                
+                isPremium: false
+            };
+
+
+            App.preferences = {
+                assetVersion: '095b5b3',
+                contactMail: 'hello@openclassrooms.com',
+                adyenPublicKey: '10001|889EBFD4D434B82683E21DCA26E77C3E20E0EE09A5ECE3830B0ED51F2FA721A2F7E9EC871C6AB9A1E12C4492F4717673047757E02C5256D8E265CD51E413E5EFCCFEAC41B39C662A424ADC13EE187C38C372A7FCCEC1EA5DF841989437D78B252A8EB51008E60BB55B1E55A7A80DE1A9D60D998C128A576BFAE1DDB97D514AF0A073AEDDE84CEE40D1F8F6ECE85D0FFA50C95C06DB274021C1371376C6EB16561FD65C5E2704B570A7504D617D0F3820F176A0609F6162BDF5890533289FDC3DA7DB03B50BB3BD60A613E1FF72060F22987627E8F1A29F0128A94EC4C8FF7CF6B7AB9558D8433BF86D7A388AB927641CD6C02689139CEE3AAC9ACBFFE83806CB',
+                algolia: {
+                    appId: 'JGRXRFVQM0',
+                    apiKey: 'dfbdea500cb0b5f46e449ad334916c44', indexName: 'prod_COURSES_fr'
+                },
+                routes: {
+                    COURSE_EVENT: '/components/courses/:courseId',
+                    COURSE_PART_EVENT: '/components/courses/:courseId/parts/:partId',
+
+                    ACCEPT_COOKIE: '/components/user-accept-consent-cookie'
+                }
+
+                                            };
+
+            App.preferences.navigationPreference = {
+                            };
+
+            App.preferences.modules = {
+                'smiley': {
+                    basePath: '/bundles/common/images/smiley/'
+                }
+            };
+        </script>
+        <!-- inlined top javascript block end -->
+
+        <script>    App.preferences.modules['course/view/internalFolding'] = {
+        isBigCourse: true
+    };
+
+    App.data = App.data || {};
+App.data.currentCourse = {"partId":626126,"courseId":626954};
+App.preferences.modules['view/currentCoursePage'] = App.data.currentCourse;
+
+</script>
+
+        
+        
+    </head>
+
+    <body class="course oc-body ">
+
+        
+
+        
+    
+    
+    <script id="_EVENTS-PAGE" type="application/json">
+        {"type":"page"}
+    </script>
+
+
+        <!--[if lt IE 9]>
+<div class="disclaimer  disclaimer-error">
+    Vous utilisez un navigateur obsolète, veuillez le <a href="http://browsehappy.com/">mettre à jour</a>.
+</div>
+<![endif]-->
+
+<noscript>
+    <div class="disclaimer  disclaimer--error">
+        Veuillez utiliser un <a href="http://browsehappy.com/">navigateur internet moderne</a> avec JavaScript activé pour naviguer sur OpenClassrooms.com
+    </div>
+</noscript>
+
+
+                    
+
+<header id="oc-header" class="js-tabs-mobile mainHeader ">
+
+        <div class="disclaimer  disclaimer--info hidden  js-cookie-disclaimer">
+        <div class="disclaimer__wrapper">
+            <span class="disclaimer__content">Bienvenue sur OpenClassrooms ! En poursuivant votre navigation, vous acceptez l'utilisation de cookies. <a href="https://openclassrooms.com/privacy-policy#personal-data-gathering">En savoir plus</a></span>
+            <span class="disclaimer__actions">
+                <a href="#" class="disclaimer__button  js-close-button">ok</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="mainHeader__wrapper">
+
+        <div class="mainHeader__topLine">
+                <a href="https://openclassrooms.com/pole-emploi/partenariat?utm_source=SiteWeb-OC&amp;utm_medium=Lien-PhraseHeader&amp;utm_campaign=relancePE"> Vous êtes demandeur d'emploi ? On vous offre le Premium Solo en 3 clics :) ! </a>
+
+        </div>
+
+        <div class="mainHeader__top">
+            <a href="https://openclassrooms.com/" class="mainHeader__logo" title="OpenClassrooms.com">OpenClassrooms.com</a>
+
+            
+<nav role="navigation" class="icoTabs  mainHeader__tabSet">
+    <span class="mainHeader__mobileNav">
+
+        
+        
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseEditMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" data-tabs-default="true" href="#tab-searchMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-search  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab" href="#tab-main">
+            <i class="icon-menu  icoTabs__icon"></i>
+        </a>
+    </span>
+
+</nav>
+        </div>
+
+                <div class="js-tabs-content  mainHeader__content"></div>
+
+        <div class="mainHeader__content">
+            <div id="tab-main" class="mainHeader__tabs">
+                <nav class="mainTopNav  scrollPanel  js-scrollPanel-mobileMenu">
+    <div class="mainTopNav__container  scrollPanel__container  js-scrollPanel-container">
+        <ul class="mainHeader__container  mainHeader__container--mainMenu  js-scrollPanel-content">
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="http://openclassrooms.com/paths/">Parcours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/courses">Cours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/forum/">Forums</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/partners">Partenaires</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/premium">Premium</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+                <div class="mainHeader__contentInner">
+                    <div class="mainHeader__container  mainHeader__container--search">
+                                                                                                                                                                            
+                                                                          
+ <div class="js-courseSearch  topSearchBox">
+     <form tabindex="0" class="js-courseSearch-form  oc-form" action="https://openclassrooms.com/courses" method="get">
+         <div class="js-courseSearch-inputGroup oc-form__widget  inputGroup  topSearchBox__inner">
+             <input id="algolia-search-input"
+                    type="search"
+                    class="js-courseSearch-input oc-form__control inputGroup__input  topSearchBox__input"
+                    title="Rechercher"
+                    autocomplete="off"
+                    data-option_source="/components/courses/search?q=<%= term %>"
+                    placeholder="Rechercher"
+                    name="q" />
+
+             <button class="js-courseSearch-button  oc-btn dark-btn  only-icon  inputGroup__button  topSearchBox__button" type="submit" title="Rechercher un cours">
+                 <i class="inputGroup__icon icon-search"></i>
+                 <i class="inputGroup__icon inputGroup__icon--load icon-spinner icon-spin"></i>
+             </button>
+         </div>
+     </form>
+ </div>
+                    </div>
+
+                                            <div class="mainHeader__container  mainHeader__container--separatorLarge  hidden-s"></div>
+                    
+
+
+                    
+                                            <div class="mainHeader__container  mainHeader__container--login">
+    <a href="https://openclassrooms.com/register" class="oc-btn orange-alt-btn js-popin-activator space-right" data-popin-selector="#popin-sign-in">
+    S&#039;inscrire
+</a>
+<a href="https://openclassrooms.com/login" class="oc-btn dark-btn js-popin-activator" data-popin-selector="#popin-log-in">
+    Se connecter
+</a>
+</div>
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-sign-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-sign-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-sign-in_popin_title" class="popin__title  js-popin-title">Inscription</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=b734b847cd926b0cb09f413b292c96d9&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail">
+            <i class="icon-facebook"></i>S&#039;inscrire avec Facebook
+        </a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto">
+            <i class="icon-google"></i>S&#039;inscrire avec Google
+        </a>
+    </li>
+
+    <li class="formLogin__column">
+        
+            
+    
+    
+
+    <form name="register" method="post" action="https://openclassrooms.com/register" class="js-registerForm oc-form">
+
+        <div class="accessibility-hidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Wonder&nbsp;                        </span><span class="oc-form__widget"><input type="text" id="register_wonder" name="register[wonder]" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Prénom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_firstName" name="register[firstName]" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Nom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_lastName" name="register[lastName]" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="email" id="register_email" name="register[email]" required="required" class="" /></span></label>
+            <p>
+                <em>
+                    Vous recevrez votre mot de passe sur cette adresse email.
+                </em>
+            </p>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="register_terms" name="register[terms]" required="required" class="" value="1" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            J'ai lu et j'accepte les <a href="https://openclassrooms.com/terms-conditions/fr">Conditions Générales d'Utilisation</a>.&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span></span></label>
+        </div>
+
+
+        <div class="oc-form__group  center-text">
+            
+    <button type="submit" id="register_create" name="register[create]" class="oc-btn orange-alt-btn oc-btn"> S'inscrire</button>
+        </div>
+
+        <input type="hidden" id="register__target_path" name="register[_target_path]" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf" /><input type="hidden" id="register__token" name="register[_token]" value="LEhsW-IhokD4hQHYoHva_FZzYy-PP2cG-886IBpx9HY" /></form>
+    </li>
+</ul>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-log-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-log-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-log-in_popin_title" class="popin__title  js-popin-title">Connexion</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=b734b847cd926b0cb09f413b292c96d9&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail"><i class="icon-facebook"></i> Se connecter avec Facebook</a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto"><i class="icon-google"></i> Se connecter avec Google</a>
+    </li>
+
+    <li class="formLogin__column">
+
+        
+            
+    
+    
+
+    <form name="" method="post" action="https://openclassrooms.com/login_check" class=" oc-form">
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email ou nom d'utilisateur&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="_username" name="_username" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Mot de passe&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="password" id="_password" name="_password" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="_remember_me" name="_remember_me" class="" value="1" checked="checked" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            Se souvenir de moi&nbsp;                        </span></span></label>
+        </div>
+
+        <div class="oc-form__group right-text">
+            <a href="https://openclassrooms.com/set-new-password">Mot de passe oublié</a>
+        </div>
+
+        <div class="oc-form__group  center-text">
+            <input type="hidden" id="_target_path" name="_target_path" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf" /><div>
+    <button type="submit" id="login" name="login" class="orange-alt-btn oc-btn"> Se connecter</button></div><input type="hidden" id="_csrf_token" name="_csrf_token" value="WFIVlYEKEcL5v9hnQC1z3quXwgYs14KEFOLh1GUmi_I" />
+        </div>
+
+        </form>
+    </li>
+</ul>
+<p class="text-center space-top">
+    Pas encore membre ? <a href="https://openclassrooms.com/register">Inscrivez-vous gratuitement</a> en 30s.
+</p>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+                    
+                    <div class="mainHeader__container  mainHeader__container--langSelector">
+                        <div class="js-popOut-header  popOut popOut--small  popOut--rightAlign" data-keep-it-mobile="true">
+    <span class="js-popOut-button  popOut__button">
+                    <a href="javascript:;" class="languageSelector__selected">Français</a>
+            </span>
+    <ul class="popOutList  popOut__content  popOutList--small">
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/en/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">English</a>
+            </li>
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/es/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">Español</a>
+            </li>
+            </ul>
+</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+        
+        <div id="mainSearch" class="centered search-content">
+        </div>
+
+        <div id="mainContentWithHeader">
+            <div id="pre-main-part">
+                
+                                        <section class="inset no-padding">
+        <div class="centered">
+
+            <h6 class="accessibility-hidden">Fil d&#039;Ariane</h6>
+
+            <nav class="breadcrumb">
+                <ul class="breadcrumbtrail">
+                                                                        <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/" itemprop="url">
+                                <span itemprop="title">Accueil</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses" itemprop="url">
+                                <span itemprop="title">Cours</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee?status=published" itemprop="url">
+                                <span itemprop="title">Créez votre application web avec Java EE</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li class="current" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            Premiers pas avec JSF
+                                                                        </li>
+                                    </ul>
+            </nav>
+        </div>
+    </section>
+
+                
+                            </div>
+
+            <div class="claire clearfix" >
+                    <article itemscope itemtype="http://schema.org/Article">
+
+                        
+<header class="course-header" xmlns="http://www.w3.org/1999/html">
+    <div class="centered"><div class="course-header__topPart"><div class="course-header__info"><a itemprop="url" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><h1 data-course-title="Créez votre application web avec Java EE">Créez votre application web avec Java EE</h1></a><span class="course-header__updatedTime visible-l">Mis à jour le lundi 13 juillet 2015</span></div></div></div><div class="course-header__details-container"><div class="centered"><div class="row"><div class="col12"><div class="course-header__details  iconBar"><div class="course-header__detailsGroup  course-header__detailsGroup--formats iconBar__group"><ul data-option_popinselector="#popin-formats-availables" class="course-types iconBar__list js-course-formats-bar"><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours est visible gratuitement en ligne."><a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><i class="icon-desktop  course-types__icon"></i><span class="course-header__format-current"></span></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore en vidéo."><span><i class="icon-video course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en livre papier."><a href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank"><i class="icon-book  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en eBook."><a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee"><i class="icon-ebook  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip"
+                                                                                            title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours."
+                                                                                ><a
+                                                                                        ><i class="icon-badge  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore diplômant et ne vous permet pas d&#039;obtenir des crédits universitaires européens (ECTS)."><span><i class="icon-hat  course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Vous pouvez être accompagné sur ce cours par un mentor dédié en visioconférence."><a  href="https://openclassrooms.com/premium#discover-premium-plus-offer" ><i class="icon-mentor  course-types__icon"></i></a></li></ul></div><div class="course-header__detailsGroup  course-header__detailsGroup--info  iconBar__group"><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-duration iconBar__icon js-tooltip" title="Ce cours demande en moyenne 40 heures de travail pour être réussi."></i><span class="iconBar__label">40 heures</span></li><li class="iconBar__item"><i class="icon-level iconBar__icon"></i><span class="iconBar__label">
+                                                                                                    Moyenne
+                                                                                            </span></li></ul></div><div class="course-header__detailsGroup course-header__detailsGroup--licences iconBar__group"><a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/2.0"><span class="iconBar__label">Licence</span><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-cc iconBar__icon" title="CC"></i></li><li class="iconBar__item"><i class="icon-ccby iconBar__icon" title="BY"></i></li><li class="iconBar__item"><i class="icon-ccnc iconBar__icon" title="NC"></i></li><li class="iconBar__item"><i class="icon-ccsa iconBar__icon" title="SA"></i></li></ul></a></div></div></div></div></div></div>
+    <div id="popin-formats-availables" class="popin popin--course-formats-availables">
+        <i class="popin__close-button icon-close js-close-button"></i>
+
+        <div class="course-types course-types--withSpace">
+                            <a class="course-types__item" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-desktop course-types__icon"></i>
+                </a>
+            
+            
+                            <a class="course-types__item" href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms">
+                    <i class="icon-book course-types__icon"></i>
+                </a>
+            
+                            <a class="course-types__item" href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-ebook course-types__icon"></i>
+                </a>
+            
+            
+                                        <a class="course-types__item" href="https://openclassrooms.com/premium#discover-premium-plus-offer">
+                    <i class="icon-mentor course-types__icon"></i>
+                </a>
+                    </div>
+
+                    <p>Ce cours est visible <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">gratuitement en ligne</a>.</p>
+        
+        
+                    <p>
+                Ce cours existe en livre papier.
+            </p>
+        
+                    <p>Ce cours existe <a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">en eBook</a>.</p>
+        
+        
+        
+                    <p>
+                Vous pouvez être <a href="https://openclassrooms.com/premium#discover-premium-plus-offer">accompagné et mentoré par un professeur particulier</a> par visioconférence sur ce cours.
+            </p>
+        
+        <a class="oc-btn orange-alt-btn js-close-button" href="#">J&#039;ai tout compris !</a>
+    </div>
+
+    
+</header>
+
+    <div class="centered">
+                            
+        
+            <div class="row">
+        <div class="col12 col11-s">
+                            <nav class="timeline">
+        <div class="timeline__inner">
+
+        <span class="timeline__iconContainer">
+            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+                <i class="icon-home roundIcon__icon"></i>
+            </a>
+        </span>
+            <div class="timeline__steps">
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-au-java-ee.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction au Java EE
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-java-ee-mis-a-nu.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le Java EE mis à nu !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="outils-et-environnement-de-developpement.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Outils et environnement de développement
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="la-servlet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La servlet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="servlet-avec-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Servlet avec vue…
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="transmission-de-donnees.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Transmission de données
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-javabean.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le JavaBean
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-1-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (1/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-2-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (2/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="des-problemes-de-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Des problèmes de vue ?
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-1.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 1
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="objectifs-et-configuration.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Objectifs et configuration
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-core.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque Core
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-core-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL core : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-xml.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque xml
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-xml-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL xml : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="faisons-le-point-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Faisons le point !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 2
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="formulaires-le-b-a-ba.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : le b.a.-ba
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-a-la-mode-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : à la mode MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-3.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 3
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-session-connectez-vos-clients.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La session : connectez vos clients
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-filtre-creez-un-espace-membre.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le filtre : créez un espace membre
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-cookie-le-navigateur-vous-ouvre-ses-portes.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le cookie : le navigateur vous ouvre ses portes
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-4.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 4
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-l-envoi-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : l&#039;envoi de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-telechargement-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le téléchargement de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-5.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 5
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-a-mysql-et-jdbc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction à MySQL et JDBC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="communiquez-avec-votre-bdd.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Communiquez avec votre BDD
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-modele-dao.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le modèle DAO
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-6.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 6
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="gerer-un-pool-de-connexions-avec-bonecp.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Gérer un pool de connexions avec BoneCP
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="les-annotations.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Les annotations
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-persistance-des-donnees-avec-jpa.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La persistance des données avec JPA
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-7.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 7
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="introduction-aux-frameworks-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction aux frameworks MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="premiers-pas-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Premiers pas avec JSF
+                                </span>
+
+                                                                    <span class="timeline__progressMarker"></span>
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-gestion-d-un-formulaire-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La gestion d&#039;un formulaire avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="l-envoi-de-fichiers-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    L&#039;envoi de fichiers avec JSF
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="debugger-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Débugger un projet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="empaquetage-et-deploiement-d-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Empaquetage et déploiement d&#039;un projet
+                                </span>
+
+                                                            </a>
+                                            
+                
+                <span class="timeline__splitChapter"></span>
+
+            </div>
+
+        <span class="timeline__iconContainer">
+                            <span title="Ce cours n&#039;est pas encore certifiant." class="roundIcon roundIcon--disabled">
+                    <i class="icon-trophy roundIcon__icon"></i>
+                </span>
+                    </span>
+
+        </div>
+    </nav>
+        </div>
+    </div>
+    </div>
+
+        
+        <div class="centered">
+            <div class="contentWithSidebar  spacer  js-contentWithSidebar" >
+                <main class="contentWithSidebar__content" >
+                        
+
+        <div class="relative js-sidebar-container">
+        <div class="static">
+    <h2 itemprop="name" data-part-title="Premiers pas avec JSF" class="part-title">Premiers pas avec JSF</h2>
+
+    <section class="row space-bottom js-desktop-sticky-container">
+        <div class="col9 col11-s col__small-padding--right">
+
+                <div class="tooltipMessage tooltipMessage--noArrow">
+        <i class="tooltipMessage__icon  icon-lock"></i>
+        <a href="https://openclassrooms.com/login" class="js-popin-activator" data-popin-selector="#popin-log-in" >Connectez-vous</a> ou <a href="https://openclassrooms.com/register" class="js-popin-activator" data-popin-selector="#popin-sign-in" >inscrivez-vous</a> pour bénéficier de toutes les fonctionnalités de ce cours !
+    </div>
+
+            <div
+                itemprop="articleBody"
+                data-page-indentifier="/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf"
+                class="js-isRestrictablePage course-content js-course-container js-smilize "
+
+                                    data-video-blocked-wrapper="<a href='https://openclassrooms.com/login#popin-log-in' class='js-popin-activator'>"
+                            >
+
+                <p id="r-2137989" data-claire-element-id="2355056">Dans cette introduction au framework JSF, nous allons découvrir en quoi il consiste dans les grandes lignes, étudier ses composants de base, puis mettre en place un exemple très simple et enfin le comparer à son équivalent réalisé avec la technologie JSP.</p><h3 id="r-625819" data-claire-element-id="2355122">Qu'est-ce que JSF ?</h3><h4 id="r-2137996" data-claire-element-id="2355063">Présentation</h4><p id="r-2137990" data-claire-element-id="2355057">Nous l'avons évoqué dans le chapitre précédent, JSF (JavaServer Faces) est un <strong><em>framework</em> MVC basé sur les composants</strong>. Il est construit sur l'API Servlet et fournit des composants sous forme de bibliothèques de balises ressemblant très fortement à la JSTL. Celles-ci peuvent être utilisées dans des pages JSP comme dans toute autre technologie de vue basée sur le Java, car le framework JSF ne limite pas le développeur à une technologie particulière pour la vue. Cependant, il existe une technologie relativement récente baptisée la Facelet, qui fait partie du standard et qu'il est recommandé d'utiliser dès lors que l'on travaille avec JSF, celle-ci étant bien plus adaptée que les pages JSP. Ces dernières sont d'ailleurs considérées comme une technologie de présentation dépréciée pour JSF depuis la sortie de Java EE 6 en 2009.</p><p id="r-2137991" data-claire-element-id="2355058">Hormis les avantages inhérents à tout <em>framework</em> MVC basé sur les composants, que nous avons listés dans le chapitre précédent, JSF offre notamment de grandes capacités de création de <em>templates</em> (ou gabarits), telles que les composants composites.</p><div id="r-2137993" data-claire-element-id="2355060" data-claire-semantic="question"><p id="r-2137992" data-claire-element-id="2355059">Qu'est-ce que la création de templates ?</p></div><p id="r-2137994" data-claire-element-id="2355061">Il s'agit tout simplement de la possibilité de découper une page en plusieurs composants indépendants, assemblés ensuite pour former une page finale. À cet égard, la technologie JSP fournit seulement le tag <code>&lt;jsp:include/&gt;</code>, que nous avons déjà rencontré dans notre TP pour une tâche très simple, à savoir inclure automatiquement un menu sur chacune de nos pages.</p><p id="r-2137995" data-claire-element-id="2355062">Pour rester concis, JSF permet comme la plupart des <em>frameworks</em> MVC de gérer les événements et la validation des données saisies par l'utilisateur, de contrôler la navigation entre les pages, de créer des vues accessibles, de faciliter l'internationalisation des pages, etc. En outre, puisqu'il est basé sur les composants et non sur les requêtes, il permet de gérer un état pour une vue donnée. Pas de panique, nous allons revenir sur ces aspects importants en temps voulu et par la pratique.</p><h4 id="r-2138004" data-claire-element-id="2355071">Principe</h4><p id="r-2137997" data-claire-element-id="2355064">JSF est un framework MVC et propose, en guise de contrôleur unique du cycle de vie du traitement des requêtes, la FacesServlet.</p><div id="r-2137999" data-claire-element-id="2355066" data-claire-semantic="question"><p id="r-2137998" data-claire-element-id="2355065">Un contrôleur unique ?</p></div><p id="r-2138000" data-claire-element-id="2355067">Eh oui vous avez bien lu, il n'y a qu'une seule servlet chargée d'aiguiller l'intégralité des requêtes entrantes vers les bons composants, et ce pour l'application tout entière ! Cette architecture porte un nom, il s'agit du <em>pattern</em> Front Controller, qui lui-même est une spécialisation du <em>pattern</em> Médiateur.</p><p id="r-2138001" data-claire-element-id="2355068">JSF vous évite d'avoir à écrire le code - standard, passe-partout et pénible - responsable du regroupement des saisies utilisateurs (paramètres de requêtes HTTP), de leur conversion &amp; validation, de la mise à jour des données du modèle, de l'invocation d'actions métiers et de la génération de la réponse. Ainsi vous vous retrouvez uniquement avec une page JSP ou une page XHTML (une Facelet) en guise de vue, et un JavaBean en tant que modèle. Cela accélère le développement de manière significative ! Les composants JSF sont utilisés pour lier la vue avec le modèle, et la FacesServlet utilise l'arbre des composants JSF pour effectuer tout le travail.</p><aside id="r-2138003" data-claire-element-id="2355070" data-claire-semantic="information"><p id="r-2138002" data-claire-element-id="2355069">Tout cela semble bien compliqué, mais en réalité si vous devez n'en retenir qu'une chose, c'est celle-ci : <strong>avec JSF, vous n'avez plus besoin d'écrire de servlets ! </strong> Ne soyez pas inquiets face à toutes ces nouveautés, nous allons y revenir calmement et en détail un peu plus loin dans ce chapitre.</p></aside><h4 id="r-2138037" data-claire-element-id="2355104">Historique</h4><p id="r-2138005" data-claire-element-id="2355072">Avant de passer à la suite, penchons-nous un instant sur le passé de la solution. Certains d'entre vous le savent peut-être déjà, JSF jouit d'une certaine réputation auprès des développeurs... une mauvaise réputation ! Pourtant, si l'on y regarde d'un peu plus près, on se rend très vite compte que la plupart des reproches faits à JSF sont sans fondements.</p><p id="r-2138006" data-claire-element-id="2355073">Afin de casser cette mauvaise réputation, hormis lorsqu'il est question de la relative difficulté d'apprentissage quand on ne dispose pas de solides connaissances en Java EE (servlets notamment), nous allons faire un rapide état des lieux de l'évolution du <em>framework</em>, de sa naissance à aujourd'hui. Bien qu'actuellement dans sa version 2.1, il a toujours besoin de se débarrasser de l'image négative qu'il dégageait lorsqu'il n'était pas encore mature. Et c'est vrai que si l'on se penche sur son histoire, on relève des inconvénients majeurs...</p><aside id="r-2138008" data-claire-element-id="2355075" data-claire-semantic="warning"><p id="r-2138007" data-claire-element-id="2355074">Cet historique contient certaines informations et certains détails qui vous échapperont certainement à la première lecture, si vous n'avez jamais travaillé avec JSF par le passé. Ne vous y attardez pas pour le moment, tâchez simplement de saisir l'évolution générale du <em>framework</em>. Si vous rencontrez un jour un projet basé sur une ancienne version de JSF, vous trouverez ici les différences majeures avec la version actuelle et les inconvénients importants.</p></aside><h5 id="r-2138010" data-claire-element-id="2355077">JSF 1.0 (mars 2004)</h5><p id="r-2138009" data-claire-element-id="2355076">Ce fut la version initiale. Bien qu'estampillée 1.0, elle était pleine de bugs à la fois au niveau des performances et du noyau, vous n'imaginez pas. Les applications ne fonctionnaient pas toujours comme attendu. En tant que développeur, vous auriez fui cette solution en hurlant !</p><h5 id="r-2138012" data-claire-element-id="2355079">JSF 1.1 (mai 2004)</h5><p id="r-2138011" data-claire-element-id="2355078">Il s'agissait ici d'une mise à jour destinée à corriger les bugs de la version initiale... Et les performances n'étaient toujours pas au rendez-vous. En outre, <strong>énorme inconvénient : il était impossible d'insérer du HTML dans une page JSF</strong> sans défauts ! Étrange décision dans un framework destiné à la création d'applications web que de laisser de côté les designers web... Pour faire court, l'intégralité du code HTML brut était rendue <strong>avant</strong> les balises JSF ! Il fallait alors entourer chaque portion de code HTML par une balise JSF (<code>&lt;f:verbatim&gt;</code>) pour qu'elle soit incluse correctement dans l'arbre des composants (l'enchaînement des balises JSF) et rendue proprement. Bien que cela respecte les spécifications écrites à l'époque, cela a valu au framework un flot de critiques ! Imaginez vous devoir entourer chaque balise HTML intervenant dans vos pages JSP par une autre balise, juste pour qu'elle soit correctement prise en compte... Bref, c'était une vraie horreur.</p><h5 id="r-2138018" data-claire-element-id="2355085">JSF 1.2 (mai 2006)</h5><p id="r-2138013" data-claire-element-id="2355080">Ce fut la première version préparée par la nouvelle équipe de développement de JSF, menée par Ryan Lubke. L'équipe a fourni un travail énorme, et les spécifications ont beaucoup évolué. L'amélioration de la gestion de la vue a été le principal axe de changement. Elle n'a pas seulement rendu la vue JSF indépendante des JSP, mais elle a également permis aux développeurs d'insérer du HTML dans une page JSF sans avoir à dupliquer sans cesse ces satanées balises <code>&lt;f:verbatim&gt;</code> nécessaires dans les versions précédentes. Un autre centre d'intérêt de l'équipe à l'époque fut l'amélioration des performances. Presque chaque version corrective mineure était alors accompagnée d'améliorations notables des performances globales du framework.</p><p id="r-2138014" data-claire-element-id="2355081">Le seul réel inconvénient commun à toutes les versions JSF 1.x (1.2 inclus) était l'absence d'une portée se plaçant entre la requête et la session (celle qui est souvent nommée &quot;scope de conversation&quot;). Cela forçait les développeurs à jouer avec des champs de formulaires cachés, des requêtes sur la BDD non nécessaires et/ou à abuser des sessions à chaque fois que quelqu'un voulait retenir le modèle de données initial pour les requêtes suivantes afin de procéder aux validations/conversions/mises à jour du modèle et aux invocations d'actions dans des applications web plus complexes. En somme, le développeur devait faire comme nous lorsque nous travaillons à la main sans framework. Il n'avait aucun moyen standard pour donner un état à une vue en particulier. Ce problème pouvait à l'époque être partiellement évité en utilisant une bibliothèque tierce qui sauvegardait l'état des données nécessaires pour les requêtes suivantes, notamment la balise <code>&lt;t:saveState&gt;</code> de la bibliothèque <a href="http://myfaces.apache.org/tomahawk/">MyFaces Tomahawk</a>, ou encore le framework de conversation <a href="http://myfaces.apache.org/orchestra/">MyFaces Orchestra</a>.</p><p id="r-2138015" data-claire-element-id="2355082">Un autre point très pénalisant pour les webdesigners était le fait que JSF utilisait le caractère <kbd>:</kbd> en tant que séparateur d'identifiant afin d'assurer l'unicité des id des éléments HTML générés lors du rendu des balises, notamment lorsqu'un composant était utilisé plus d'une fois dans la vue (création de templates, boucles sur les composants, etc.). Si vous connaissez un petit peu CSS, vous devez savoir que ce caractère n'est pas autorisé dans les identifiants CSS, et les <em>webdesigners</em> devaient alors utiliser le caractère <kbd>\</kbd> pour échapper les <kbd>:</kbd> dans les sélecteurs CSS qu'ils mettaient en place, ce qui produisait des sélecteurs étranges et sales tels que <code>#formulaireId\:champId { ... }</code> dans les feuilles CSS.</p><p id="r-2138016" data-claire-element-id="2355083">En outre, JSF 1.x n'était livré avec aucune fonctionnalité Ajax prête à l'emploi. Ce n'était pas vraiment un inconvénient technique, mais l'explosion du web 2.0 en a fait un inconvénient fonctionnel. Exadel introduisait alors rapidement la bibliothèque <strong>Ajax4jsf</strong>, qui a été activement développée durant les années suivantes puis intégrée au noyau de la bibliothèque de composants JBoss RichFaces. D'autres bibliothèques offrent depuis des composants ajaxisés, <a href="http://www.icefaces.org/">IceFaces</a> étant probablement la plus connue.</p><p id="r-2138017" data-claire-element-id="2355084">Quand JSF 1.2 a atteint la moitié de sa vie, une nouvelle technologie pour la vue basée sur le XML a été introduite : les <strong>Facelets</strong>. Cela a offert d'énormes avantages sur les JSP, particulièrement pour la création de templates et pour les performances.</p><h5 id="r-2138023" data-claire-element-id="2355090">JSF 2.0 (juin 2009)</h5><p id="r-2138019" data-claire-element-id="2355086">Ce fut la seconde version majeure. Il y eut énormément de changements à la fois techniques et fonctionnels. La technologie JSP a été remplacée par les Facelets en tant que technologie de vue par défaut, et aux Facelets ont été greffées des fonctionnalités permettant la création de composants purement XML (appelés composants composites). Ajax a été introduit notamment, via un composant qui montre des similarités avec Ajax4jsf. Les annotations et améliorations favorisant le concept convention-plutôt-que-configuration ont été introduites pour éliminer les volumineux et verbeux fichiers de configuration autant que possible. En outre, le caractère séparateur d'identifiant <kbd>:</kbd> est devenu configurable.</p><p id="r-2138020" data-claire-element-id="2355087">Dernière évolution, mais non des moindres, une nouvelle portée a été introduite : le <strong>scope view</strong>, se plaçant entre la requête et la session. Cela a pallié un autre inconvénient majeur de JSF 1.x, comme nous l'avons vu précédemment. Nous allons y revenir en détail dans un prochain exemple pratique.</p><p id="r-2138021" data-claire-element-id="2355088">Jusque-là, tout paraît idyllique, et cette version estampillée 2.0 semble salvatrice. Cependant, bien que la plupart des inconvénients de JSF 1.x ont disparu avec cette version, il subsiste des bugs spécifiques à JSF 2.0 qui peuvent être un facteur bloquant dans le développement d'une application. Si le cœur vous en dit, vous pouvez jeter un œil aux <a href="http://java.net/jira/browse/JAVASERVERFACES">bugs JSF 2.x en cours</a> pour vous faire une idée, mais ils concernent une utilisation avancée du <em>framework</em>, et la plupart de ces bugs sont de toute manière contournables.</p><p id="r-2138022" data-claire-element-id="2355089">Enfin pour terminer sur une note plus gaie, c'est avec JSF 2.0 que sont apparues de nouvelles bibliothèques de composants plus graphiques. On peut notamment citer l'impressionnant <a href="http://primefaces.org/">PrimeFaces</a> et <a href="http://openfaces.org/">OpenFaces</a>.</p><h5 id="r-2138036" data-claire-element-id="2355103">MVC basé sur les composants vs MVC basé sur les requêtes</h5><p id="r-2138024" data-claire-element-id="2355091">Certains avancent que le plus gros inconvénient de JSF est qu'il n'autorise que peu de contrôle sur le code HTML/CSS/JS généré. Cela ne tient en réalité pas à JSF en lui-même, mais simplement au fait que c'est un framework MVC basé sur les composants, et pas sur les requêtes (actions). Si vous êtes perdus, je vous renvoie au chapitre précédent pour les définitions.</p><p id="r-2138025" data-claire-element-id="2355092">En réalité, c'est très simple : si un haut niveau de contrôle sur le rendu HTML/CSS/JS est votre principale exigence lorsque vous choisissez un framework MVC, alors vous devez regarder du côté des frameworks basés sur les requêtes comme <a href="http://static.springsource.org/spring/docs/3.0.x/reference/mvc.html">Spring MVC</a>.</p><p id="r-2138026" data-claire-element-id="2355093">Après ce long aparté sur l'histoire de JSF, dont vous pouvez trouver la version originale anglaise sur <a href="http://stackoverflow.com/questions/3623911/what-are-the-main-disadvantages-of-java-server-faces-2-0/3646940#3646940">cette page</a>, résumons la situation en quelques lignes :</p><ul id="r-2138033" data-claire-element-id="2355100"><li id="r-2138028" data-claire-element-id="2355095"><p id="r-2138027" data-claire-element-id="2355094">JSF 2.0 est un <em>framework</em> web MVC qui se focalise sur la simplification de la construction d'interfaces utilisateur, autrement dit la vue. Il propose nativement plus d'une centaine de balises à cet égard, et facilite la réutilisation des composants d'une interface utilisateur à l'autre ;</p></li><li id="r-2138030" data-claire-element-id="2355097"><p id="r-2138029" data-claire-element-id="2355096">avec JSF 1, tout devait être déclaré dans un fichier de configuration, et le développeur devait donc maintenir un énième fichier XML... Avec JSF 2, c'en est terminé de ces fichiers (inter)minables : les annotations remplacent les fichiers externes, et le développement s'en retrouve donc grandement accéléré et simplifié !</p></li><li id="r-2138032" data-claire-element-id="2355099"><p id="r-2138031" data-claire-element-id="2355098">dans ce cours, je ne ferai dorénavant plus jamais la distinction entre JSF 1 et JSF 2, tout bonnement parce que JSF aujourd'hui, c'est JSF 2 et rien d'autre. Dans votre tête, cela doit être tout aussi clair : JSF 1 est de l'histoire ancienne, et je n'y ferai allusion que ponctuellement pour vous informer des différences importantes avec la version actuelle, afin que vous ne soyez pas trop surpris si jamais vous devez un jour travailler sur une application développée avec JSF 1 (ce que je ne vous souhaite bien évidemment pas !).</p></li></ul><aside id="r-2138035" data-claire-element-id="2355102" data-claire-semantic="warning"><p id="r-2138034" data-claire-element-id="2355101">Les ressources <strong>périmées</strong> concernant JSF sont légion sur le web ! Énormément de cours, tutos, sujets de forums et documentations traitent de JSF 1, alors que JSF 2 a changé énormément de choses. Faites bien attention aux liens que vous parcourez, et basez-vous sur les dates clés de l'histoire de JSF pour déterminer si les informations que vous lisez sont d'actualité ou non. En règle générale, vous devez donc vous méfier de tout ce qui a été publié avant 2009 !</p></aside><h4 id="r-2138054" data-claire-element-id="2355121">Structure d'une application JSF</h4><p id="r-2138038" data-claire-element-id="2355105">Étudions brièvement comment se construit une application basée sur JSF. Cela ne devrait pas bouleverser vos habitudes, la structure globale est très similaire à celle d'une application web Java EE MVC traditionnelle :</p><ul id="r-2138052" data-claire-element-id="2355119"><li id="r-2138040" data-claire-element-id="2355107"><p id="r-2138039" data-claire-element-id="2355106">la vue est généralement assurée par des pages JSP ou par des pages XHTML (on parle alors de Facelets) ;</p></li><li id="r-2138042" data-claire-element-id="2355109"><p id="r-2138041" data-claire-element-id="2355108">le modèle est assuré par des entités ou des JavaBeans ;</p></li><li id="r-2138049" data-claire-element-id="2355116"><p id="r-2138043" data-claire-element-id="2355110">le contrôleur, auparavant incarné par nos servlets, est dorénavant décomposé en deux éléments :</p><ul id="r-2138048" data-claire-element-id="2355115"><li id="r-2138045" data-claire-element-id="2355112"><p id="r-2138044" data-claire-element-id="2355111">une unique servlet mère servant de point d'entrée à toute requête, la FacesServlet ;</p></li><li id="r-2138047" data-claire-element-id="2355114"><p id="r-2138046" data-claire-element-id="2355113">un JavaBean particulier, déclaré via une annotation et désigné par le terme <em>managed-bean</em>.</p></li></ul></li><li id="r-2138051" data-claire-element-id="2355118"><p id="r-2138050" data-claire-element-id="2355117">le tout est mis en musique par des fichiers de configuration : le classique web.xml, mais également un nouveau fichier nommé faces-config.xml.</p></li></ul><p id="r-2138053" data-claire-element-id="2355120">Nous observons que la différence majeure qui ressort jusqu'à présent est l'absence de servlets spécifiques à chaque page, comme nous devions en écrire dans nos applications MVC faites maison.</p><h3 id="r-625911" data-claire-element-id="3312546">Facelets et composants</h3><h4 id="r-2138061" data-claire-element-id="2355129">La page JSP mise au placard ?</h4><p id="r-2138055" data-claire-element-id="2355123">Comme je vous l'ai annoncé à plusieurs reprises déjà, la page JSP n'est plus la technologie de référence pour la création de vues dans une application Java EE. Avec JSF, ce sont maintenant de simples pages XHTML qui sont utilisées, pages que l'on nomme des <strong>Facelets</strong>. Partant de ce constat, si vous avez bien suivi, vous êtes en droit de vous poser la question suivante :</p><div id="r-2138057" data-claire-element-id="2355125" data-claire-semantic="question"><p id="r-2138056" data-claire-element-id="2355124">Nous avons déjà découvert que les servlets n'allaient plus être nécessaires dans notre application, voilà maintenant que les JSP non plus ne vont plus nous servir... Pourquoi avoir passé des chapitres entiers à apprendre à créer et manier des servlets et des JSP, si c'est pour les laisser tomber ensuite ?</p></div><p id="r-2138058" data-claire-element-id="2355126">Premièrement, <strong>ces technologies sont loin d'être à la retraite</strong>, car comme nous l'avons déjà abordé les <em>frameworks</em> MVC ne sont pas utilisés partout. En outre, il existe dans le monde de l'entreprise énormément d'applications basées sur les servlets et les JSP, applications qui ne sont pas prêtes d'être migrées ni réécrites vers un <em>framework</em> MVC, bien souvent pour des raisons de coût. Plus important encore, il existe <strong>énormément</strong> d'applications basées sur des <em>frameworks</em> MVC différents de JSF, notamment le très populaire Spring MVC, qui utilisent encore massivement les pages JSP en guise de vue.</p><p id="r-2138059" data-claire-element-id="2355127">Deuxièmement, l'apprentissage des <em>frameworks</em> et de leur fonctionnement est bien plus facile lorsque vous disposez déjà des bases. Bien entendu, dans l'absolu il est possible d'attaquer directement par les solutions de haut niveau - c'est-à-dire celles qui masquent les technologies de base comme les servlets, les JSP ou encore JDBC - mais tôt ou tard vous devrez regarder sous la couverture... Et quand ce jour arrivera, vous serez alors bien plus aptes à comprendre les rouages de toute cette machinerie en connaissant les fondements que si vous découvriez le tout pour la première fois !</p><p id="r-2138060" data-claire-element-id="2355128">Enfin, dans les cas d'applications de faible envergure, d'applications nécessitant d'excellentes performances et d'applications devant être aisément déployables à très large échelle, il est encore relativement courant de ne pas utiliser de <em>frameworks</em>. Bref, rassurez-vous, vous n'avez pas perdu votre temps en arrivant jusqu'ici ! ;)</p><h4 id="r-2138111" data-claire-element-id="2838360">Structure et syntaxe</h4><p id="r-2138062" data-claire-element-id="2355130">Nous allons aborder la structure d'une Facelet en la comparant avec la structure d'une technologie que nous connaissons déjà : la page JSP.</p><h5 id="r-2138069" data-claire-element-id="2838354">Généralités</h5><p id="r-2138063" data-claire-element-id="2355131">La différence la plus importante se situe au niveau du contenu. Alors qu'une page JSP est un objet complexe, pouvant contenir à la fois des balises JSP ou JSTL et du code Java par l'intermédiaire de scriptlets, <strong>une Facelet est un fichier XML pur</strong> ! Elle ne peut par conséquent contenir que des balises, et il est impossible d'y inclure des scriplets : le Java est donc définitivement banni de la vue avec cette technologie.</p><p id="r-2138064" data-claire-element-id="2355132">Au niveau du format et du rendu, la situation n'a pas changé : tout comme les servlets et les pages JSP sont le plus souvent utilisées pour générer des pages HTML, c'est le langage XHTML qui est le plus utilisé pour créer des Facelets (XHTML étant une version de la syntaxe HTML conforme au standard XML). Toutefois, sachez que le <em>framework</em> JSF est <em>markup</em>-agnostique : cela signifie qu'il peut s'adapter à n'importe quel langage, à partir du moment où ce langage respecte la structure décrite par le standard XML. Ainsi, il est également possible de construire une Facelet avec du langage XML pur, par exemple pour créer un flux RSS, ou avec le langage XUL pour n'en citer qu'un.</p><p id="r-2138065" data-claire-element-id="2355133">Au niveau de l'aspect extérieur du fichier, une Facelet porte en général une de ces trois extensions : <strong>.jsf</strong>, <strong>.xhtml</strong> ou <strong>.faces</strong>. Il n'existe pas une unique extension pour la simple raison que nous venons de découvrir, à savoir le fait qu'une Facelet n'est rien d'autre qu'un document XML. Dans l'absolu, c'est par défaut l'extension .xml qui pourrait être utilisée... Cela dit, il est utile de pouvoir reconnaître facilement une Facelet parmi d'autres fichiers du même type, pour la démarquer du reste. Voilà pourquoi ces trois extensions ont <em>de facto</em> été retenues par les développeurs. Ne vous inquiétez pas, nous découvrirons très bientôt comment le <em>framework</em> est capable de savoir quelles extensions de fichiers lui sont destinées.</p><p id="r-2138066" data-claire-element-id="2355134">Ainsi, voici la structure à vide d'une Facelet :</p><pre id="r-2138067" data-claire-element-id="2838353"><code data-claire-semantic="html">&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt; 
+    ...
+&lt;/html&gt;</code></pre><p id="r-2138068" data-claire-element-id="2355136">Vous retrouvez bien le <em>doctype</em> HTML, suivi de la balise <code>&lt;html&gt;</code> conforme au <a href="http://www.w3schools.com/tags/att_html_xmlns.asp">standard XHTML</a>. Bref, en apparence ce n'est qu'une page web toute simple !</p><h5 id="r-2138088" data-claire-element-id="2838357">Bibliothèques et balises</h5><p id="r-2138070" data-claire-element-id="2355138">Une Facelet est donc constituée de balises, dont la syntaxe est très similaire à celles des balises JSTL utilisées dans une page JSP.</p><p id="r-2138071" data-claire-element-id="2355139">Avant de poursuivre sur la forme des balises JSF, intéressons-nous aux bibliothèques. Tout comme il existe des directives permettant d'importer des bibliothèques de balises JSTL dans une page JSP, il existe un moyen pour inclure les bibliothèques de balises JSF dans une Facelet. Toutefois, il vous faut oublier le concept même de la directive JSP : il s'agissait là littéralement d'un ordre donné au conteneur, lui précisant comment il devait gérer une page JSP et générer sa servlet Java associée. Voilà pourquoi il était non seulement possible via une directive d'inclure des bibliothèques, mais également d'importer des classes Java, d'activer ou non les sessions HTTP, les expressions EL, etc.</p><p id="r-2138072" data-claire-element-id="2355140">Dans une Facelet, une bibliothèque de balises est incluse via l'ajout d'un attribut <a href="http://www.w3schools.com/tags/att_html_xmlns.asp">xmlns</a> à la balise <code>&lt;html&gt;</code> qui ouvre le corps de la page. Il s'agit là d'un <em>namespace</em> XML. Je vous invite à vous renseigner sur cette notion si vous souhaitez comprendre comment cela fonctionne en détail. En ce qui nous concerne, nous allons simplement retenir qu'un tel attribut permet de déclarer une bibliothèque dans une Facelet ! Le <em>framework</em> JSF intègre nativement trois bibliothèques standard : <strong>HTML</strong>, <strong>Core</strong> et <strong>UI</strong>. Voici comment les inclure dans une Facelet :</p><pre id="r-2138073" data-claire-element-id="2838355"><code data-claire-semantic="html">&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; 
+       xmlns:f=&quot;http://java.sun.com/jsf/core&quot; 
+       xmlns:h=&quot;http://java.sun.com/jsf/html&quot;
+       xmlns:ui=&quot;http://java.sun.com/jsf/facelets&quot;&gt; 
+    ...
+&lt;/html&gt;</code></pre><p id="r-2138074" data-claire-element-id="2355142">Vous reconnaissez ici le système de liens utilisé également par la JSTL. De même, vous retrouvez le système de préfixe identifiant une bibliothèque : traditionnellement, <kbd>h:</kbd> désigne la bibliothèque HTML, <kbd>ui:</kbd> la bibliothèque de <em>templating</em> et de composition, et <kbd>f:</kbd> la bibliothèque Core. Au passage, ne confondez pas cette dernière avec la bibliothèque Core de la JSTL, nous parlons bien ici de balises JSF !</p><p id="r-2138075" data-claire-element-id="2355143">Pour terminer et revenir sur les balises JSF à proprement parler, sur la forme elles ressemblent comme deux gouttes d'eau aux balises JSTL. Par exemple, voici une balise issue de la bibliothèque HTML :</p><pre id="r-2138076" data-claire-element-id="2838356"><code data-claire-semantic="html">&lt;h:outputLabel for=&quot;confirmation&quot;&gt;Confirmation du mot de passe &lt;span class=&quot;requis&quot;&gt;*&lt;/span&gt;&lt;/h:outputLabel&gt;</code></pre><p id="r-2138077" data-claire-element-id="2355145">Vous pouvez d'ores et déjà remarquer les similitudes avec les balises JSTL : il est possible d'y préciser des attributs, une balise possède un corps, il est possible d'y inclure d'autres balises, etc.</p><p id="r-2138078" data-claire-element-id="2355146">Dans nos exemples à venir, nous allons utiliser de nombreuses balises qui vous sont encore inconnues. Si j'ai pris le temps de vous décrire les balises JSP et JSTL les plus couramment utilisées lors de nos premiers pas avec Java EE, je ne vais cette fois pas rédiger d'inventaire des balises JSF, et ce pour trois raisons :</p><ol id="r-2138085" data-claire-element-id="2355153"><li id="r-2138080" data-claire-element-id="2355148"><p id="r-2138079" data-claire-element-id="2355147">vous êtes à l'aise avec le concept de balises, vous savez comment elles se construisent ;</p></li><li id="r-2138082" data-claire-element-id="2355150"><p id="r-2138081" data-claire-element-id="2355149">vous êtes à l'aise avec la recherche d'informations, vous êtes capables de trouver et parcourir les ressources et documentations par vous-mêmes ;</p></li><li id="r-2138084" data-claire-element-id="2355152"><p id="r-2138083" data-claire-element-id="2355151">les bibliothèques standard de JSF contiennent beaucoup de balises, certaines dédiées à des tâches bien différentes de ce que vous connaissez et avez manipulé jusqu'à présent, et en faire l'inventaire détaillé et expliqué par l'exemple serait chronophage et en fin de compte peu efficace.</p></li></ol><p id="r-2138086" data-claire-element-id="2355154">Pour vous faciliter la tâche, je vous communique quelques ressources extrêmement utiles :<br /><a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/">la documentation officielle des balises JSF</a>, par Oracle ; <a href="http://www.jsftoolbox.com/documentation/help/12-TagReference/index.jsf">une documentation similaire</a>, qui date un peu mais qui est présentée de manière un peu plus conviviale que le format Javadoc, par JSFToolbox ; <a href="http://stackoverflow.com/tags/jsf/info">la page JSF</a> de Stackoverflow, contenant des généralités, des exemples basiques et une liste de liens fournie et à jour sur le sujet.</p><p id="r-2138087" data-claire-element-id="2355155">Gardez ces liens accessibles dans les favoris de votre navigateur, vous allez en avoir besoin pour découvrir toutes les balises proposées par JSF !</p><h5 id="r-2138110" data-claire-element-id="2838359">Expressions EL</h5><p id="r-2138089" data-claire-element-id="2355157">Une Facelet peut, tout comme une page JSP, contenir des expressions EL. Toutefois, celles-ci sont un peu différentes de celles que nous avons utilisées jusqu'à présent. Voyez dans cet exemple la forme d'une expression EL avec JSF :</p><pre id="r-2138090" data-claire-element-id="2838358"><code data-claire-semantic="html">#{inscrireBean.utilisateur.motDePasse}</code></pre><p id="r-2138091" data-claire-element-id="2355159">Vous allez me dire, à part le symbole <strong>#</strong> qui remplace le symbole <strong>$</strong> auparavant utilisé, a priori le reste ne change pas : les accolades, l'accès aux beans, à ses propriétés, l'opérateur <kbd>.</kbd> en guise de séparateur... Eh bien en réalité, c'est un peu plus compliqué que ça. Pour mieux comprendre, faisons un rapide historique de la technologie EL :</p><ul id="r-2138102" data-claire-element-id="2355170"><li id="r-2138093" data-claire-element-id="2355161"><p id="r-2138092" data-claire-element-id="2355160">en juin 2002, la première version de la JSTL paraît et introduit le concept des expressions EL pour la toute première fois. Celles-ci étaient alors construites pour appeler les méthodes <em>getter</em> de JavaBeans, uniquement via la syntaxe <code>${...}</code> et uniquement depuis les balises JSTL ;</p></li><li id="r-2138095" data-claire-element-id="2355163"><p id="r-2138094" data-claire-element-id="2355162">en novembre 2003, la seconde mouture de la technologie JSP fait son apparition et les expressions EL deviennent partie intégrante du standard J2EE 1.4. La JSTL en version 1.1 ne contient alors plus la technologie EL, et la syntaxe <code>${...}</code> fonctionne désormais en dehors des balises JSTL, dans le corps des pages JSP ;</p></li><li id="r-2138097" data-claire-element-id="2355165"><p id="r-2138096" data-claire-element-id="2355164">en mars 2004, la première version de JSF est publiée, et introduit le concept des expressions EL dites &quot;différées&quot;. Il s'agissait alors d'expressions sous la forme <code>#{...}</code> et ne fonctionnant que dans des balises JSF. La principale différence avec les expressions de la forme <code>${...}</code> décrites par le standard JSP est qu'elles permettent non seulement d'appeler les méthodes <em>getter</em> des beans, mais également leurs méthodes <em>setter</em> ;</p></li><li id="r-2138099" data-claire-element-id="2355167"><p id="r-2138098" data-claire-element-id="2355166">en mai 2005, les deux technologies EL coexistantes sont combinées en une seule spécification : les expressions EL sont alors dites &quot;unifiées&quot;, et font partie intégrante du standard Java EE 5. La syntaxe <code>#{...}</code> devient de fait utilisable également depuis une page JSP, mais y est toujours limitée à l'accès aux méthodes <em>getter</em>, seul l'usage depuis JSF permet d'appeler les méthodes <em>setter</em> ;</p></li><li id="r-2138101" data-claire-element-id="2355169"><p id="r-2138100" data-claire-element-id="2355168">en décembre 2009, une évolution des expressions EL est introduite avec le standard Java EE 6. Celles-ci permettent désormais, depuis la syntaxe <code>#{...}</code>, d'appeler n'importe quelle méthode d'un bean, et non plus seulement ses <em>getters</em>/<em>setters</em>. C'est par ailleurs à cette occasion que les Facelets sont devenues partie intégrante du standard Java EE 6.</p></li></ul><p id="r-2138103" data-claire-element-id="2355171">De cette longue épopée, vous devez retenir deux choses importantes :</p><ol id="r-2138108" data-claire-element-id="2355176"><li id="r-2138105" data-claire-element-id="2355173"><p id="r-2138104" data-claire-element-id="2355172">il est possible d'utiliser la syntaxe <code>#{...}</code> depuis vos pages JSP ! Je ne vous l'ai pas présentée plus tôt pour ne pas vous embrouiller, et surtout pour ne pas vous voir appeler des méthodes Java dans tous les sens sans comprendre ce que MVC implique et impose, ni comprendre comment doit être construit un bean...</p></li><li id="r-2138107" data-claire-element-id="2355175"><p id="r-2138106" data-claire-element-id="2355174">nous allons dorénavant utiliser la syntaxe <code>#{...}</code> avec JSF, car contrairement à ce que nous faisions avec la syntaxe <code>${...}</code> depuis nos pages JSP, nous allons avoir besoin d'initialiser des valeurs et non plus seulement d'accéder en lecture à des valeurs.</p></li></ol><p id="r-2138109" data-claire-element-id="2355177">Vous voilà au point sur les aspects superficiels de la technologie Facelet. Il est grand temps maintenant de passer derrière les rideaux, et de découvrir comment tout cela fonctionne dans les coulisses...</p><h4 id="r-2138133" data-claire-element-id="2355201">Comment ça marche ?</h4><p id="r-2138112" data-claire-element-id="2355180">Avant tout, et parce que vous en aurez forcément un jour besoin si vous travaillez avec JSF, voici l'outil le plus utile pour comprendre les rouages du système : <a href="http://jcp.org/aboutJava/communityprocess/final/jsr245/index.html">la documentation officielle du <em>framework</em> JSF</a> dans sa version actuelle (2.1).</p><p id="r-2138113" data-claire-element-id="2355181">Vous savez déjà comment fonctionne une page JSP, mais un petit rappel ne fait jamais de mal. La technologie JSP fournit un langage de <em>templating</em>, permettant de créer des pages qui sont - par un procédé que vous connaissez - traduites en servlets Java, puis compilées. Pour faire court, le corps d'une page JSP devient l'équivalent de la méthode <code>service()</code>, la méthode mère des méthodes <code>doGet()</code> et <code>doPost()</code>. Les balises JSP et JSTL qui y sont utilisées sont directement transformées en code Java et intégrées dans la servlet générée, vous pouvez d'ailleurs vous en rendre compte par vous-mêmes en allant regarder le code des servlets auto-générées par Tomcat dans nos précédents exemples.</p><p id="r-2138114" data-claire-element-id="2355182">Dans une Facelet par contre, qui comme nous venons de le voir n'est qu'un fichier XML, les balises JSF ne sont que des appels à des composants JSF qui sont entièrement autonomes. Autrement formulé, lorsqu'un composant JSF est appelé, il génère son propre rendu dans son état courant. Le cycle de vie des composants JSF n'a par conséquent <strong>aucune relation avec le cycle de vie d'une page JSP</strong> et de sa servlet auto-générée. Une Facelet est donc une page constituée d'une suite d'appels à des composants JSF (réalisés par l'intermédiaire de balises), et ceux-ci forment ce que l'on appelle <strong>un arbre de composants</strong>, ou <em>component tree</em> en anglais.</p><aside id="r-2138116" data-claire-element-id="2355184" data-claire-semantic="warning"><p id="r-2138115" data-claire-element-id="2355183">Ainsi, ne vous laissez pas tromper par les apparences : même si JSF vous permet de travailler avec des balises JSF qui ressemblent comme deux gouttes d'eau à des balises JSTL, retenez bien que JSF ne fonctionne pas comme fonctionnaient nos exemples MVC basés sur des servlets et des JSP. Ces similitudes ont par contre un avantage certain : puisque vous connaissez déjà MVC avec les JSP, vous pouvez attaquer le développement avec JSF très rapidement !</p></aside><p id="r-2138117" data-claire-element-id="2355185">En prenant un peu de recul, JSF s'apparente dans son fonctionnement à Swing ou AWT : c'est un <em>framework</em> qui fournit une collection de composants standards et réutilisables, permettant la création d'interfaces utilisateur (web, en l'occurrence). À la différence des JSP, les Facelets JSF conservent un état (on dit alors que la vue est <em>stateful</em>) : ce sont les composants autonomes appelés par l'intermédiaire des balises contenues dans les Facelets qui permettent de maintenir cet état. De la même manière que Swing et AWT, les composants JSF suivent le <a href="http://fr.wikipedia.org/wiki/Objet_composite"><em>pattern</em> de l'objet composite</a> pour gérer un arbre de composants : en clair, cela signifie à la fois qu'un objet conteneur contient un composant, et qu'un objet conteneur est lui-même un composant. La vue lie ces composants graphiques à la page XHTML, et permet ainsi au développeur de directement lier des champs HTML d'interaction utilisateur (saisie de données, listes, etc.) à des propriétés de beans, et des boutons à leurs méthodes d'action.</p><h5 id="r-2138132" data-claire-element-id="2355200">Un processus en 6 étapes</h5><p id="r-2138118" data-claire-element-id="2355186">Arrêtons les comparaisons avec d'autres solutions, et étudions concrètement le fonctionnement du <em>framework</em>. Avec JSF, le traitement d'une requête entrant sur le serveur est découpé en six étapes, que nous allons parcourir sommairement :</p><p id="r-2138119" data-claire-element-id="2355187"><strong>1. La restauration de la vue</strong><br /> La requête entrante est redirigée vers l'unique servlet jouant le rôle de super-contrôleur, la <a href="http://docs.oracle.com/javaee/6/api/javax/faces/webapp/FacesServlet.html">FacesServlet</a>. Celle-ci examine son contenu, en extrait le nom de la page ciblée et détermine s'il existe déjà une vue associée à cette page (eh oui, rappelez-vous bien qu'avec JSF la vue conserve un état). Voilà pourquoi cette étape s'intitule &quot;restauration de la vue&quot; : il s'agit en réalité de restaurer les éventuels composants déjà chargés si l'utilisateur a déjà accédé à la page par le passé.</p><p id="r-2138120" data-claire-element-id="2355188">La FacesServlet va donc chercher les composants utilisés par la vue courante. Si la vue n'existe pas déjà, elle va la créer. Si elle existe déjà, elle la réutilise. La vue contient tous les composants de l'interface utilisateur intervenant dans la page. La vue (c'est-à-dire l'ensemble des composants qui y interviennent, et donc son état) est sauvegardée dans l'objet <code><a href="http://docs.oracle.com/javaee/6/api/javax/faces/context/FacesContext.html">FacesContext</a></code>.</p><p id="r-2138121" data-claire-element-id="2355189"><strong>2. L'application des valeurs contenues dans la requête</strong><br /> Arrivés à cette étape, les composants de la vue courante ont tout juste été récupérés ou créés depuis l'objet <strong>FacesContext</strong>. Chacun d'eux va maintenant récupérer la valeur qui lui est assignée depuis les paramètres de la requête, ou éventuellement depuis des cookies ou headers.</p><p id="r-2138122" data-claire-element-id="2355190">Ces valeurs vont alors être converties. Ainsi, si un champ est lié à une propriété de type <code>Integer</code>, alors son contenu va être converti en <code>Integer</code>. Si cette conversion échoue, un message d'erreur va être placé dans le <strong>FacesContext</strong>, et sera utilisé lors du futur rendu de la réponse.</p><p id="r-2138123" data-claire-element-id="2355191">À noter qu'à cette étape peut intervenir la &quot;prise en charge immédiate des événements&quot; : cela veut dire que si un composant est marqué comme tel, sa valeur va directement être convertie puis validée dans la foulée. Si aucun composant n'arbore cette propriété, alors les valeurs de tous les composants sont d'abord converties, puis intervient ensuite l'étape de validation sur l'ensemble des valeurs.</p><p id="r-2138124" data-claire-element-id="2355192"><strong>3. La validation des données</strong><br /> Les valeurs tout juste converties vont ensuite être validées, en suivant les règles de validation définies par le développeur. Si la validation d'une valeur échoue, un message d'erreur est ajouté au FacesContext, et le composant concerné est marqué comme &quot;invalide&quot; par JSF. La prochaine étape est alors directement le rendu de la réponse, il n'y aura aucune autre étape intermédiaire.</p><p id="r-2138125" data-claire-element-id="2355193">Si les valeurs sont correctes vis-à-vis des règles de validation en place, alors la prochaine étape est la mise à jour des valeurs du modèle.</p><p id="r-2138126" data-claire-element-id="2355194"><strong>4. La mise à jour des valeurs du modèle</strong><br /> Les composants peuvent être directement liés, par l'intermédiaire des balises présentes dans la vue, à des propriétés de beans. Ces beans sont qualifiés de <em>managed-beans</em> ou <em>backing-beans</em>, car ils sont gérés par JSF et la vue s'appuie sur eux. Si de tels liens existent, alors les propriétés de ces beans sont mises à jour avec les nouvelles valeurs des composants correspondants, fraîchement validées. Puisque la validation a eu lieu en premier lieu, le développeur est certain que les données enregistrées dans le modèle sont valides, au sens format du champ du formulaire. Il n'est par contre pas exclu que les données ne soient pas valides d'un point de vue de ce qu'attend le code métier de l'application, mais c'est tout à fait normal, puisque cette étape est la suivante dans le processus...</p><p id="r-2138127" data-claire-element-id="2355195"><strong>5. L'appel aux actions, le code métier de l'application</strong><br /> Les actions associées à la soumission du formulaire sont alors appelées par JSF. Il s'agit enfin de l'entrée en jeu du code métier : maintenant que les données ont été converties, validées et enregistrées dans le modèle, elles peuvent être utilisées par l'application.</p><p id="r-2138128" data-claire-element-id="2355196">La fin de cette étape se concrétise par la redirection vers la vue correspondante, qui peut dépendre ou non du résultat produit par le code métier. Il s'agit donc de définir la navigation au sein des vues existantes, ce qui est réalisé directement depuis le bouton de validation dans la page, ou depuis un fichier de configuration XML externe nommé faces-config.xml.</p><p id="r-2138129" data-claire-element-id="2355197"><strong>6. Le rendu de la réponse</strong><br /> La dernière et ultime étape est le rendu de la réponse. La vue définie dans la navigation est finalement affichée à l'utilisateur : tous les composants qui la composent effectuent alors leur propre rendu, dans leur état courant. La page HTML ainsi générée est finalement envoyée au client, mais ça, vous vous en doutiez !</p><p id="r-2138130" data-claire-element-id="2355198">Voilà comment se déroule le traitement d'une requête avec JSF. Comme vous pouvez le voir, ça change du mode de traitement linéaire que nous avions adopté dans nos exemples MVC faits maison, notamment au niveau de la possibilité de prise en charge immédiate d'un événement qui permet le court-circuitage du processus global pour un composant en particulier ! Si tout ceci est encore très flou dans votre tête, c'est normal : beaucoup de choses vous semblent encore bien abstraites. Ne vous découragez surtout pas, car comprendre le fonctionnement de JSF est l'effort le plus intense qu'il vous faudra fournir. Dès lors que vous aurez assimilé comment se goupille toute cette mécanique, vous aurez fait plus de la moitié du chemin vers l'adoption de JSF ! ;)</p><p id="r-2138131" data-claire-element-id="2355199">Pour vous aider à bien comprendre, je vous propose de découvrir ce processus dans un exemple pratique très simple. Mais avant cela, je vous propose de vous détendre un peu en découvrant une petite astuce sous Eclipse, permettant de préparer rapidement votre espace de travail au développement de Facelets, les fameuses pages que nous allons créer à la place de nos pages JSP.</p><h4 id="r-2138145" data-claire-element-id="3312545">Créer un template de Facelet par défaut avec Eclipse</h4><p id="r-2138134" data-claire-element-id="2355202">Avec Eclipse, il est possible de définir quel sera le contenu généré par défaut lors de la création d'un nouveau fichier. Pour préparer facilement nos vues JSF, il nous suffit donc de créer un nouveau type de fichier nommé &quot;Facelet&quot; et de personnaliser son contenu par défaut. Pour ce faire, rendez-vous dans les préférences d'Eclipse, puis suivez Web &gt; HTML Files &gt; Editor &gt; Templates et cliquez enfin sur <kbd>New</kbd>.</p><p id="r-2138135" data-claire-element-id="2355203">Entrez alors comme nom &quot;New Facelet Page&quot;, puis sélectionnez le contexte &quot;New HTML&quot;, entrez comme description &quot;Creates a new Facelet page&quot;, puis copiez le code suivant dans le champ pattern et validez enfin en cliquant sur <kbd>OK</kbd> (voir la figure suivante).</p><pre id="r-2138136" data-claire-element-id="2838361"><code data-claire-semantic="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;fr&quot;
+    xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+    xmlns:f=&quot;http://java.sun.com/jsf/core&quot;
+    xmlns:h=&quot;http://java.sun.com/jsf/html&quot;
+    xmlns:ui=&quot;http://java.sun.com/jsf/facelets&quot;&gt;
+    &lt;h:head&gt;
+        &lt;title&gt;Insérer le titre ici&lt;/title&gt;
+    &lt;/h:head&gt;
+    &lt;h:body&gt;
+        ${cursor}
+    &lt;/h:body&gt;
+&lt;/html&gt;</code></pre><figure id="r-2138139" data-claire-element-id="3312542"><img id="r-2138137" data-claire-element-id="2355205" src="../../../user.oc-static.com/files/418001_419000/418995.png" alt="Image utilisateur" /></figure><p id="r-2138140" data-claire-element-id="2355208">Une fois cette configuration en place, vous pourrez simplement créer une nouvelle Facelet prête à être codée ! Il vous suffira de faire un clic droit dans un projet, puis de suivre New &gt; HTML File. Puis de donner un nom à votre fichier et de cliquer sur <kbd>Next</kbd> dans la fenêtre qui s'affiche alors, avant de choisir votre template fraîchement créé dans la liste qui s'affiche enfin et de valider en cliquant sur <kbd>Finish</kbd>, comme indiqué à la figure suivante.</p><figure id="r-2138143" data-claire-element-id="3312544"><img id="r-2138141" data-claire-element-id="2355209" src="../../../user.oc-static.com/files/418001_419000/418997.png" alt="Image utilisateur" /></figure><p id="r-2138144" data-claire-element-id="2355212">Le nouveau fichier que vous venez de créer contient alors automatiquement le code de base que vous avez défini plus tôt dans les options d'Eclipse.</p><h3 id="r-626076" data-claire-element-id="3312560">Premier projet</h3><h4 id="r-2138165" data-claire-element-id="3312518">De quoi avons-nous besoin ?</h4><p id="r-2138146" data-claire-element-id="2355215">Puisque nous travaillons avec GlassFish, nous n'avons en apparence besoin de rien : tout y est déjà inclus ! En réalité, c'est encore une fois le même refrain : JSF n'est qu'une spécification, et pour utiliser JSF il faut donc disposer d'une implémentation. Souvenez-vous de JPA, c'était exactement pareil : l'implémentation de référence de JPA utilisée par défaut par GlassFish était EclipseLink, mais il existait d'autres implémentations très utilisées comme Hibernate notamment. En ce qui concerne JSF, il existe deux principales implémentations :</p><ul id="r-2138151" data-claire-element-id="2355220"><li id="r-2138148" data-claire-element-id="2355217"><p id="r-2138147" data-claire-element-id="2355216"><a href="http://javaserverfaces.java.net/">Oracle Mojarra</a>, l'implémentation de référence, utilisée par défaut par GlassFish ;</p></li><li id="r-2138150" data-claire-element-id="2355219"><p id="r-2138149" data-claire-element-id="2355218"><a href="http://myfaces.apache.org/">Apache MyFaces</a>, l'implémentation éditée par Apache.</p></li></ul><div id="r-2138153" data-claire-element-id="2355222" data-claire-semantic="question"><p id="r-2138152" data-claire-element-id="2355221">Quelle implémentation choisir ?</p></div><p id="r-2138154" data-claire-element-id="3312517">Les différences entre ces deux solutions sont minimes aux premiers abords. Seule une utilisation très poussée d'une solution ou de l'autre vous fera prendre conscience des écarts existants entre ces deux implémentations, et de l'intérêt de préférer l'une à l'autre. Ainsi, il n'y a pas de réponse empirique à la question : selon le contexte de votre projet, vous serez <strong>peut-être</strong> amenés à changer d'une implémentation vers l'autre, en raison d'un comportement qui pose problème chez l'une mais pas chez l'autre.</p><p id="r-2138155" data-claire-element-id="2355224">Qui plus est, puisque ces deux implémentations respectent la spécification JSF, elles sont interchangeables très simplement. L'éventuel besoin de changer d'implémentation en cours de route dans un projet n'est donc pas un réel problème.</p><p id="r-2138156" data-claire-element-id="2355225">Bref, en ce qui nous concerne, nous n'en sommes qu'aux balbutiements et allons partir par défaut sur l'implémentation Mojarra, puisque c'est celle que GlassFish embarque nativement.</p><div id="r-2138158" data-claire-element-id="2355227" data-claire-semantic="question"><p id="r-2138157" data-claire-element-id="2355226">Et si nous n'utilisions pas GlassFish ?</p></div><p id="r-2138159" data-claire-element-id="2355228">Si le serveur utilisé est un serveur d'applications Java EE au sens strict du terme, alors une implémentation JSF doit être fournie par défaut. Si par contre c'est un serveur léger comme Tomcat qui est utilisé, alors il est nécessaire d'ajouter au projet les jar de l'implémentation JSF pour pouvoir l'utiliser dans votre application. Ces archives jar sont bien entendu disponibles au téléchargement sur les sites respectifs des deux solutions.</p><div id="r-2138161" data-claire-element-id="2355230" data-claire-semantic="question"><p id="r-2138160" data-claire-element-id="2355229">Et si nous souhaitions utiliser MyFaces sur un serveur GlassFish ?</p></div><p id="r-2138162" data-claire-element-id="2355231">Si nous voulions changer d'implémentation JSF et utiliser MyFaces au lieu de Mojarra, il nous suffirait alors d'importer les archives jar de l'implémentation dans notre projet, de la même manière que nous devons les importer sur un serveur léger.</p><aside id="r-2138164" data-claire-element-id="2355233" data-claire-semantic="information"><p id="r-2138163" data-claire-element-id="2355232">Au final, retenez bien que GlassFish est livré par défaut avec une implémentation de JSF, et donc que nous pouvons travailler avec JSF sans aucun ajout.</p></aside><h4 id="r-2138175" data-claire-element-id="2355244">Création du projet</h4><p id="r-2138166" data-claire-element-id="2355235">Nous pouvons maintenant attaquer la création de notre premier exemple : nous allons très modestement créer une page qui demande à l'utilisateur de saisir son nom dans un champ de formulaire, et une seconde page qui se chargera d'afficher le nom saisi à l'utilisateur. Rien de transcendant je vous l'accorde, mais c'est déjà assez pour que vous puissiez découvrir en douceur le fonctionnement de JSF.</p><p id="r-2138167" data-claire-element-id="2355236">Avant tout, nous devons mettre en place un projet web sous Eclipse. La démarche est la même que pour nos précédents travaux :</p><ul id="r-2138174" data-claire-element-id="2355243"><li id="r-2138169" data-claire-element-id="2355238"><p id="r-2138168" data-claire-element-id="2355237">créez un projet web dynamique ;</p></li><li id="r-2138171" data-claire-element-id="2355240"><p id="r-2138170" data-claire-element-id="2355239">nommez-le pour cet exemple <strong>test_jsf</strong> ;</p></li><li id="r-2138173" data-claire-element-id="2355242"><p id="r-2138172" data-claire-element-id="2355241">validez, et le projet est prêt !</p></li></ul><h4 id="r-2138192" data-claire-element-id="3312548">Création du bean</h4><p id="r-2138176" data-claire-element-id="2355245">Pour commencer, nous allons créer un simple bean pour stocker le nom saisi par l'utilisateur. Je vous donne le code, et vous explique les quelques nouveautés ensuite :</p><pre id="r-2138177" data-claire-element-id="3312547"><code data-claire-semantic="java">package com.sdzee.exemple;
+
+import java.io.Serializable;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+@ManagedBean
+@RequestScoped
+public class BonjourBean implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private String            nom;
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom( String nom ) {
+        this.nom = nom;
+    }
+}</code></pre><p id="r-2138178" data-claire-element-id="2355247">Vous pouvez observer deux choses qui diffèrent des simples beans que nous utilisions dans nos exemples MVC traditionnels :</p><ul id="r-2138188" data-claire-element-id="2355257"><li id="r-2138180" data-claire-element-id="2355249"><p id="r-2138179" data-claire-element-id="2355248">le bean implémente l'interface <strong>Serializable</strong>. En réalité, je vous avais déjà prévenu que nos beans pouvaient tirer parti de cette interface lorsque nous avons découvert le JavaBean pour la première fois, mais je ne vous avais alors pas expliqué à quoi cela pouvait bien servir. En réalité c'est très simple : en rendant un bean sérialisable, vous lui donnez la capacité de survivre à un redémarrage du serveur. Cela ne va pas plus loin que cela, c'est un détail qui n'a aucune importance dans notre exemple, et j'ai simplement fait intervenir cette interface pour vous expliquer son rôle. Au passage, votre IDE Eclipse vous fera remarquer la nécessité de préciser un attribut <strong>serialVersionUID</strong>, qu'il peut générer automatiquement pour vous.</p></li><li id="r-2138187" data-claire-element-id="2355256"><p id="r-2138181" data-claire-element-id="2355250">le bean contient deux annotations spécifiques à JSF :</p><ul id="r-2138186" data-claire-element-id="2355255"><li id="r-2138183" data-claire-element-id="2355252"><p id="r-2138182" data-claire-element-id="2355251"><code>@ManagedBean</code> : permet de préciser au serveur que ce bean est dorénavant géré par JSF. Cela signifie simplement que JSF va utiliser ce bean en tant que modèle associé à une ou plusieurs vues. Par défaut, le nom du bean correspond au nom de la classe, la majuscule en moins : en l'occurrence le nom de notre bean est donc <strong>bonjourBean</strong>. Si nous voulions désigner ce bean par un autre nom, par exemple <strong>direBonjour</strong>, alors il nous faudrait annoter le bean en précisant le nom souhaité, via <code>@ManagedBean(name=&quot;direBonjour&quot;)</code> ;</p></li><li id="r-2138185" data-claire-element-id="2355254"><p id="r-2138184" data-claire-element-id="2355253"><code>@RequestScoped</code> : permet de préciser au serveur que ce bean a pour portée la requête. Il s'agit en l’occurrence de la portée utilisée par défaut en cas d'absence d'annotation. Ainsi, si vous omettez de l'écrire, le bean sera de toute manière placé dans la portée requête. C'est toutefois une bonne pratique de toujours écrire cette annotation, afin de clarifier le code. Il existe autant d'annotations que de portées disponibles dans JSF : <code>@NoneScoped</code>, <code>@RequestScoped</code>, <code>@ViewScoped</code>, <code>@SessionScoped</code>, <code>@ApplicationScoped</code>, et <code>@CustomScope</code>. Ne vous inquiétez pas, nous y reviendrons en détail très prochainement.</p></li></ul></li></ul><aside id="r-2138190" data-claire-element-id="2355259" data-claire-semantic="information"><p id="r-2138189" data-claire-element-id="2355258">Pour information, avec JSF 1.x ces annotations n'existaient pas, il fallait déclarer chaque bean dans un fichier de configuration externe nommé <strong>faces-config.xml</strong>. Grâce aux annotations, ce n'est désormais plus nécessaire avec JSF 2.x !</p></aside><p id="r-2138191" data-claire-element-id="2355260">Vous savez maintenant ce qu'est le fameux <em>managed-bean</em> ou <em>backing-bean</em> dont je vous avais parlé un peu plus tôt : un simple bean annoté pour le déclarer comme tel auprès de JSF. Un pas de plus vers la compréhension de JSF... ;)</p><h4 id="r-2138229" data-claire-element-id="2838373">Création des facelets</h4><p id="r-2138193" data-claire-element-id="2355262">La seconde étape consiste à créer les vues de notre petite application. Nous allons donc créer deux Facelets, qui pour rappel ne sont rien d'autre que des pages XHTML et contenant des balises propres à JSF, chargées respectivement d'afficher un champ de formulaire à l'utilisateur, et de lui afficher les données saisies.</p><p id="r-2138194" data-claire-element-id="2355263">Nous allons nommer la page contenant le formulaire <strong>bonjour.xhtml</strong>, et la page chargée de l'affichage <strong>bienvenue.xhtml</strong>. Toutes deux doivent être placées directement à la racine de votre application, symbolisée par le dossier <strong>/WebContent</strong> dans Eclipse :</p><pre id="r-2138195" data-claire-element-id="2838370"><code data-claire-semantic="html">&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+      xmlns:h=&quot;http://java.sun.com/jsf/html&quot;&gt;
+    &lt;h:head&gt;
+        &lt;title&gt;Premier exemple JSF 2.0&lt;/title&gt;
+    &lt;/h:head&gt;
+    &lt;h:body&gt;
+    	&lt;h1&gt;Premier exemple JSF 2.0 - bonjour.xhtml&lt;/h1&gt;
+    	&lt;h:form&gt;
+    	   &lt;h:inputText value=&quot;#{bonjourBean.nom}&quot; /&gt;
+    	   &lt;h:commandButton value=&quot;Souhaiter la bienvenue&quot; action=&quot;bienvenue&quot; /&gt;
+    	&lt;/h:form&gt;
+    &lt;/h:body&gt;
+&lt;/html&gt;</code></pre><p id="r-2138196" data-claire-element-id="2355265">Cette page génère :</p><ul id="r-2138201" data-claire-element-id="2355270"><li id="r-2138198" data-claire-element-id="2355267"><p id="r-2138197" data-claire-element-id="2355266">un champ de texte JSF, et le lie avec la propriété <strong>nom</strong> du bean <strong>bonjourBean</strong> (notre <em>managed-bean</em>, géré par JSF) ;</p></li><li id="r-2138200" data-claire-element-id="2355269"><p id="r-2138199" data-claire-element-id="2355268">un bouton de formulaire, chargé d'afficher la page <strong>bienvenue.xhtml</strong> lorsqu'il est cliqué.</p></li></ul><p id="r-2138202" data-claire-element-id="2355271">Observons la constitution de cette page. En premier lieu, vous retrouvez logiquement l'en-tête html particulier dont je vous ai parlé lorsque nous avons abordé la constitution d'une Facelet, qui contient le type de la page ainsi que les éventuelles déclarations de bibliothèques de balises JSF. En l'occurrence, nous avons ici simplement déclaré la bibliothèque HTML à la ligne 3, puisque nous n'utilisons dans la page que des balises de la bibliothèque HTML.</p><p id="r-2138203" data-claire-element-id="2355272">Vous observez ensuite des balises JSF, préfixées par <kbd>h:</kbd> comme déclaré dans l'en-tête html. Étudions-les dans leur ordre d'apparition :</p><h5 id="r-2138206" data-claire-element-id="2355275">Le header</h5><p id="r-2138204" data-claire-element-id="2355273">La section header est créée par <a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/h/head.html">la balise <code>&lt;h:head&gt;</code></a>. Il s'agit d'un composant JSF qui permet notamment d'inclure des ressources JS ou CSS dans le contenu généré entre les balises HTML <code>&lt;head&gt;</code> et <code>&lt;/head&gt;</code>, de manière automatisée depuis votre code Java.</p><p id="r-2138205" data-claire-element-id="2355274">Dans notre exemple, nous n'avons rien de particulier à y inclure, nous nous contentons d'y définir un titre pour notre page via la balise HTML <code>&lt;title&gt;</code>. Vous pouvez également y déclarer un charset via la balise HTML <code>&lt;meta&gt;</code>, etc., comme vous le faisiez dans vos pages JSP.</p><h5 id="r-2138209" data-claire-element-id="2355278">Le formulaire</h5><p id="r-2138207" data-claire-element-id="2355276">Le formulaire est créé par <a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/h/form.html">la balise <code>&lt;h:form&gt;</code></a>. Il s'agit du composant JSF permettant de générer un formulaire, contenant d'éventuels champs de saisies. La méthode HTTP utilisée pour l'envoi des données est toujours <strong>POST</strong>. Si vous souhaitez utiliser la méthode GET, alors le plus simple est de ne pas utiliser le composant JSF et d'écrire directement votre formulaire en HTML brut en y spécifiant l'attribut <code>&lt;form... method=&quot;get&quot;&gt;</code>.</p><p id="r-2138208" data-claire-element-id="2355277">Les données sont par défaut renvoyées à la page contenant le formulaire.</p><h5 id="r-2138216" data-claire-element-id="2355285">Le champ de saisie</h5><p id="r-2138210" data-claire-element-id="2355279">Le champ de type texte est créé par <a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/h/inputText.html">la balise <code>&lt;h:inputText&gt;</code></a>. Son attribut <strong>value</strong> permet de définir deux choses :</p><ul id="r-2138215" data-claire-element-id="2355284"><li id="r-2138212" data-claire-element-id="2355281"><p id="r-2138211" data-claire-element-id="2355280">la valeur contenue dans cet attribut sera par défaut affichée dans le champ texte, il s'agit ici du même principe que pour un champ de texte HTML classique <code>&lt;input type=&quot;text&quot; value=&quot;...&quot; /&gt;</code> ;</p></li><li id="r-2138214" data-claire-element-id="2355283"><p id="r-2138213" data-claire-element-id="2355282">la valeur contenue dans cet attribut sera utilisée pour initialiser la propriété <strong>nom</strong> du bean <strong>BonjourBean</strong>, par l'intermédiaire de l'expression EL <code>#{bonjourBean.nom}</code>. En l'occurrence, JSF va évaluer l'expression lorsque le formulaire sera validé, c'est-à-dire lorsque le bouton sera cliqué, et va alors chercher l'objet nommé <strong>bonjourBean</strong>, puis utiliser sa méthode <em>setter</em><code>setNom()</code> pour enregistrer dans la propriété <strong>nom</strong> la valeur contenue dans le champ texte.</p></li></ul><h5 id="r-2138228" data-claire-element-id="2838372">Le bouton de validation</h5><p id="r-2138217" data-claire-element-id="2355286">Le bouton d'envoi des données du formulaire est créé par <a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/h/commandButton.html">la balise <code>&lt;h:commandButton&gt;</code></a> :</p><ul id="r-2138222" data-claire-element-id="2355291"><li id="r-2138219" data-claire-element-id="2355288"><p id="r-2138218" data-claire-element-id="2355287">son attribut <strong>value</strong> contient la valeur affichée à l'utilisateur en guise de texte du bouton, tout comme un bouton HTML classique ;</p></li><li id="r-2138221" data-claire-element-id="2355290"><p id="r-2138220" data-claire-element-id="2355289">son attribut <strong>action</strong> permet quant à lui de définir où rediriger l'utilisateur : en l'occurrence, nous allons le rediriger vers la page qui affiche le texte saisi, c'est-à-dire <strong>bienvenue.xhtml</strong>. Il nous suffit pour cela d'écrire <strong>bienvenue</strong> dans le champ <strong>action</strong> de la balise, et le composant se chargera automatiquement derrière les rideaux d'appeler la page nommée <strong>bienvenue.xhtml</strong>.</p></li></ul><aside id="r-2138224" data-claire-element-id="2355293" data-claire-semantic="information"><p id="r-2138223" data-claire-element-id="2355292">Sous JSF 1.x, il était nécessaire de déclarer une <em>navigation-rule</em> dans le fichier <strong>faces-config.xml</strong>, afin de définir quelle page serait affichée une fois le bouton cliqué. Avec JSF 2.x, vous constatez qu'il est dorénavant possible de directement placer le nom de la page dans l'attribut <strong>action</strong> du bouton. Pour une navigation simple, c'est très pratique et plus que suffisant ! Toutefois, sachez que pour mettre en place une navigation un peu plus complexe, il nous faudra toujours utiliser une section <em>navigation-rule</em> dans le <strong>faces-config.xml</strong>.</p></aside><p id="r-2138225" data-claire-element-id="2355294">Voilà ensuite le code de la page de bienvenue, extrêmement simple :</p><pre id="r-2138226" data-claire-element-id="2838371"><code data-claire-semantic="html">&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;    
+      xmlns:h=&quot;http://java.sun.com/jsf/html&quot;&gt;
+    &lt;h:head&gt;
+    	&lt;title&gt;Premier exemple JSF 2.0&lt;/title&gt;
+    &lt;/h:head&gt;
+    &lt;h:body&gt;
+    	&lt;h1&gt;Premier exemple JSF 2.0 - bienvenue.xhtml&lt;/h1&gt;
+    	&lt;p&gt;Bienvenue #{bonjourBean.nom} !&lt;/p&gt;
+    &lt;/h:body&gt;
+&lt;/html&gt;</code></pre><p id="r-2138227" data-claire-element-id="2355296">Lors de l'affichage de la page, JSF va évaluer l'expression EL <code>#{bonjourBean.nom}</code> située à la ligne 9, et chercher l'objet intitulé <strong>bonjourBean</strong> pour afficher sa propriété <strong>nom</strong>, récupérée automatiquement via la méthode <em>getter</em><code>getNom()</code>.</p><h4 id="r-2138250" data-claire-element-id="2838376">Configuration de l'application</h4><p id="r-2138230" data-claire-element-id="2355299">Afin de mettre ce petit monde en musique, il nous faut pour finir écrire un peu de configuration dans le fichier <strong>web.xml</strong> :</p><pre id="r-2138231" data-claire-element-id="2838374"><code data-claire-semantic="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app&gt;
+	&lt;!-- Changer cette valeur à &quot;Production&quot; lors du déploiement final de l'application --&gt;
+	&lt;context-param&gt;
+		&lt;param-name&gt;javax.faces.PROJECT_STAGE&lt;/param-name&gt;
+		&lt;param-value&gt;Development&lt;/param-value&gt;
+	&lt;/context-param&gt;
+ 
+	&lt;!-- Déclaration du contrôleur central de JSF : la FacesServlet --&gt;
+	&lt;servlet&gt;
+		&lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+		&lt;servlet-class&gt;javax.faces.webapp.FacesServlet&lt;/servlet-class&gt;
+		&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+	&lt;/servlet&gt;
+ 
+	&lt;!-- Mapping : association des requêtes dont le fichier porte l'extension .xhtml à la FacesServlet --&gt;
+	&lt;servlet-mapping&gt;
+		&lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+		&lt;url-pattern&gt;*.xhtml&lt;/url-pattern&gt;
+	&lt;/servlet-mapping&gt;
+&lt;/web-app&gt;</code></pre><p id="r-2138232" data-claire-element-id="2355301">Aux lignes 10 à 14, nous déclarons tout simplement la servlet mère de JSF, celle qui joue le rôle du <em>Front Controller</em> : la <strong>FacesServlet</strong>. C'est exactement le même principe que lorsque nous définissions nos propres servlets à la main auparavant. Il suffit de préciser un nom, en l'occurrence je l'ai nommée &quot;<strong>Faces Servlet</strong>&quot;, et sa localisation dans l'application, en l'occurrence <code>javax.faces.webapp.FacesServlet</code>.</p><p id="r-2138233" data-claire-element-id="2355302">Aux lignes 17 à 20, nous procédons ensuite au mapping d'un <em>pattern</em> d'URL sur cette seule et unique <strong>FacesServlet</strong>. L'objectif est de rediriger <strong>toutes les requêtes entrantes</strong> vers elle. Dans notre exemple, nous nous contentons d'associer les vues portant l'extension <strong>.xhtml</strong> à la FacesServlet, puisque toutes nos vues sont ainsi constituées.</p><p id="r-2138234" data-claire-element-id="2355303">À ce sujet, sachez que tous les développeurs n'utilisent pas l'extension <strong>.xhtml</strong> pour leurs vues, et il est courant dans les projets JSF existants de rencontrer quatre types d'URL différentes : /faces/*, *.jsf, *.xhtml et *.faces. Si vous devez un jour manipuler des vues portant une de ces extensions, il vous faudra simplement ajouter des mappings dans votre web.xml :</p><pre id="r-2138235" data-claire-element-id="2838375"><code data-claire-semantic="xml">&lt;!-- Mapping des différents patterns d'URL devant être associés à la FacesServlet --&gt;
+&lt;servlet-mapping&gt;
+	&lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+	&lt;url-pattern&gt;/faces/*&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+&lt;servlet-mapping&gt;
+	&lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+	&lt;url-pattern&gt;*.jsf&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+&lt;servlet-mapping&gt;
+	&lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+	&lt;url-pattern&gt;*.faces&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+&lt;servlet-mapping&gt;
+	&lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+	&lt;url-pattern&gt;*.xhtml&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;</code></pre><p id="r-2138236" data-claire-element-id="2355305">Ainsi avec une telle configuration, dans notre projet les quatre URLs suivantes pointeraient toutes vers la même page <strong>/bonjour.xhtml</strong> :</p><ul id="r-2138245" data-claire-element-id="2355314"><li id="r-2138238" data-claire-element-id="2355307"><p id="r-2138237" data-claire-element-id="2355306"><code>http://localhost:8088/test_jsf/bonjour.jsf</code></p></li><li id="r-2138240" data-claire-element-id="2355309"><p id="r-2138239" data-claire-element-id="2355308"><code>http://localhost:8088/test_jsf/bonjour.faces</code></p></li><li id="r-2138242" data-claire-element-id="2355311"><p id="r-2138241" data-claire-element-id="2355310"><code>http://localhost:8088/test_jsf/bonjour.xhtml</code></p></li><li id="r-2138244" data-claire-element-id="2355313"><p id="r-2138243" data-claire-element-id="2355312"><code>http://localhost:8088/test_jsf/faces/bonjour.jsf</code></p></li></ul><p id="r-2138246" data-claire-element-id="2355315">Je me répète, mais en ce qui nous concerne le seul mapping des vues portant l'extension <strong>.xhtml</strong> est suffisant, nous n'avons pas besoin de mettre en place tous ces autres mappings.</p><p id="r-2138247" data-claire-element-id="2355316">Enfin, vous remarquerez la déclaration d'un paramètre particulier aux lignes 4 à 7. Il s'agit d'une fonctionnalité utile proposée par JSF. Lors du développement d'une application, il est recommandé d'initialiser le paramètre nommé <code>javax.faces.PROJECT_STAGE</code> avec la valeur “<strong>Development</strong>“. Ceci va rendre disponibles de nombreuses informations de debugging et les afficher directement au sein de vos pages en cas de problème, permettant ainsi de tracer les erreurs rapidement. Lors du déploiement final, une fois l'application achevée, il suffit alors de changer la valeur du paramètre à “<strong>Production</strong>“, et toutes ces informations non destinées au public ne seront alors plus affichées.</p><aside id="r-2138249" data-claire-element-id="2355318" data-claire-semantic="information"><p id="r-2138248" data-claire-element-id="2355317">Le fichier web.xml que je vous donne ici en exemple est donc générique, il ne contient rien de spécifique à ce projet en particulier et se contente d'établir les propriétés nécessaires au bon fonctionnement de JSF. En d'autres termes, vous pourrez réutiliser ce fichier tel quel pour tous vos projets JSF !</p></aside><h4 id="r-2138309" data-claire-element-id="3312559">Tests &amp; observations</h4><p id="r-2138251" data-claire-element-id="2355320">Notre projet est maintenant prêt pour utilisation : seuls ces deux Facelets et ce bean suffisent ! Vérifions pour commencer le bon fonctionnement de l'application en nous rendant sur l'URL <code>http://localhost:8088/test_jsf/bonjour.xhtml</code> depuis notre navigateur. Vous devez observer un champ de formulaire et un bouton de validation, comme indiqué sur la figure suivante.</p><figure id="r-2138254" data-claire-element-id="3312550"><img id="r-2138252" data-claire-element-id="2355321" src="../../../user.oc-static.com/files/418001_419000/418421.png" alt="Image utilisateur" /></figure><p id="r-2138255" data-claire-element-id="2355324">Après un clic sur le bouton, vous devez alors être redirigés vers la page de bienvenue affichant ce que vous avez tapé dans le champ texte (voir la figure suivante).</p><figure id="r-2138258" data-claire-element-id="3312552"><img id="r-2138256" data-claire-element-id="2355325" src="../../../user.oc-static.com/files/418001_419000/418422.png" alt="Image utilisateur" /></figure><p id="r-2138259" data-claire-element-id="2355328">Essayons maintenant de changer la cible précisée dans l'attribut <strong>action</strong> du bouton par une page qui n'existe pas dans notre application. Modifiez par exemple la ligne 12 de la page <strong>bonjour.xhtml</strong> par :</p><pre id="r-2138260" data-claire-element-id="2838381"><code data-claire-semantic="html">&lt;h:commandButton value=&quot;Souhaiter la bienvenue&quot; action=&quot;connexion&quot; /&gt;</code></pre><p id="r-2138261" data-claire-element-id="2355330">Rendez-vous alors à nouveau sur la page <code>http://localhost:8088/test_jsf/bonjour.xhtml</code>, cliquez sur le bouton et observez l'erreur affichée sur la figure suivante.</p><figure id="r-2138264" data-claire-element-id="3312554"><img id="r-2138262" data-claire-element-id="2355331" src="../../../user.oc-static.com/files/418001_419000/418423.png" alt="Image utilisateur" /></figure><p id="r-2138265" data-claire-element-id="2355334">Vous voilà face au type d'informations dont je vous ai parlé lorsque je vous ai expliqué l'intérêt du paramètre <strong>PROJECT_STAGE</strong>, que nous avons mis en place dans notre web.xml. Le contrôleur JSF - la FacesServlet - est incapable de trouver une Facelet nommée <strong>connexion.xhtml</strong>, et JSF vous affiche donc automatiquement l'erreur, directement au sein de votre page ! Pratique pour identifier ce qui pose problème au premier coup d'œil, n'est-ce pas ?</p><p id="r-2138266" data-claire-element-id="2355335">Faisons maintenant le même essai, mais cette fois en passant le paramètre <code>javax.faces.PROJECT_STAGE</code> à &quot;Production&quot;. Effectuez la modification dans le fichier web.xml, puis rendez-vous une nouvelle fois sur la page depuis votre navigateur. Dorénavant lorsque vous cliquez sur le bouton, aucune erreur ne s'affiche ! Et c'est normal, puisque le mode de production est destiné à une utilisation publique de l'application.</p><aside id="r-2138268" data-claire-element-id="2355337" data-claire-semantic="information"><p id="r-2138267" data-claire-element-id="2355336">Vous comprenez maintenant mieux l'intérêt de ce paramètre : il permet de définir le mode de fonctionnement de l'application, et donc de définir si les messages de debug seront affichés ou non sur les pages affichées par l'utilisateur.</p></aside><p id="r-2138269" data-claire-element-id="2355338">Nous allons maintenant annuler nos précédentes modifications : remettons à &quot;Development&quot; le paramètre dans le fichier web.xml, et remettons &quot;bienvenue&quot; dans le champ <strong>action</strong> de notre formulaire. Nous allons ensuite modifier l'expression EL contenue dans notre champ texte, en y précisant un bean qui n'existe pas dans notre application. Modifiez par exemple la ligne 11 de la page <strong>bonjour.xhtml</strong> par :</p><pre id="r-2138270" data-claire-element-id="2838384"><code data-claire-semantic="html">&lt;h:inputText value=&quot;#{inscriptionBean.nom}&quot; /&gt;</code></pre><p id="r-2138271" data-claire-element-id="2355340">Rendez-vous alors à nouveau sur la page <code>http://localhost:8088/test_jsf/bonjour.xhtml</code>, cliquez sur le bouton et observez l'erreur affichée sur la figure suivante.</p><figure id="r-2138274" data-claire-element-id="3312556"><img id="r-2138272" data-claire-element-id="2355341" src="../../../user.oc-static.com/files/418001_419000/418424.png" alt="Image utilisateur" /></figure><p id="r-2138275" data-claire-element-id="2355344">Lors de l'évaluation de l'expression EL, JSF ne trouve aucun bean nommé <strong>inscriptionBean</strong> et affiche donc une page d'erreur détaillant le problème rencontré.</p><p id="r-2138276" data-claire-element-id="2355345">Pour terminer, annulons cette dernière modification en mettant à nouveau le bean <strong>bonjourBean</strong> dans l'expression EL, puis essayons de changer le nom de la méthode <em>setter</em> dans le bean. Modifiez par exemple les lignes 20 à 22 de la classe <strong>BonjourBean</strong> par :</p><pre id="r-2138277" data-claire-element-id="2838387"><code data-claire-semantic="java">public void setPrenom( String nom ) {
+    this.nom = nom;
+}</code></pre><p id="r-2138278" data-claire-element-id="2355347">Rendez-vous alors à nouveau sur la page <code>http://localhost:8088/test_jsf/bonjour.xhtml</code>, cliquez sur le bouton et observez l'erreur affichée sur la figure suivante.</p><figure id="r-2138281" data-claire-element-id="3312558"><img id="r-2138279" data-claire-element-id="2355348" src="../../../user.oc-static.com/files/418001_419000/418425.png" alt="Image utilisateur" /></figure><p id="r-2138282" data-claire-element-id="2355351">Lors de l'évaluation de l'expression EL, JSF ne trouve aucune méthode <em>setter</em> pour la propriété <strong>nom</strong> du bean <strong>bonjourBean</strong>. En effet, la règle pour un JavaBean impose que la méthode soit correctement nommée, et puisque nous avons changé sa dénomination, JSF considère alors qu'il n'existe pas de méthode <em>setter</em>. Il nous prévient donc logiquement qu'une exception <code>javax.el.PropertyNotWritableException</code> est levée, et que la propriété <em>nom</em> est considérée comme étant en lecture seule.</p><p id="r-2138283" data-claire-element-id="2355352">Nous y voilà, nous avons observé le fonctionnement correct de notre application et fait le tour des erreurs les plus courantes. Avant de passer aux bonnes pratiques, analysons brièvement ce qui a changé par rapport à notre ancienne méthode, sans JSF :</p><ul id="r-2138293" data-claire-element-id="2355362"><li id="r-2138285" data-claire-element-id="2355354"><p id="r-2138284" data-claire-element-id="2355353">auparavant, nous aurions dû écrire deux pages JSP, en lieu de place de nos deux simples Facelets ;</p></li><li id="r-2138292" data-claire-element-id="2355361"><p id="r-2138286" data-claire-element-id="2355355">auparavant, nous aurions dû écrire une servlet, chargée :</p><ul id="r-2138291" data-claire-element-id="2355360"><li id="r-2138288" data-claire-element-id="2355357"><p id="r-2138287" data-claire-element-id="2355356">d'afficher la page bonjour.jsp lors de la réception d'une requête GET ;</p></li><li id="r-2138290" data-claire-element-id="2355359"><p id="r-2138289" data-claire-element-id="2355358">de récupérer le contenu du champ texte du formulaire lors de la réception d'une requête POST, puis de s'en servir pour initialiser la propriété du bean BonjourBean, que nous aurions d'ailleurs dû créer, avant de transmettre le tout sous forme d'attributs à la page bienvenue.jsp pour affichage.</p></li></ul></li></ul><p id="r-2138294" data-claire-element-id="2355363">Ça paraît peu a priori, mais rendez-vous bien compte de ce dont nous n'avons plus à nous soucier avec JSF :</p><ol id="r-2138305" data-claire-element-id="2355374"><li id="r-2138296" data-claire-element-id="2355365"><p id="r-2138295" data-claire-element-id="2355364"><strong>la manipulation des objets requête et réponse</strong> : avec JSF, nous n'avons pas conscience de ces objets, leur existence nous est masquée par le <em>framework</em>.</p></li><li id="r-2138298" data-claire-element-id="2355367"><p id="r-2138297" data-claire-element-id="2355366"><strong>l'extraction des paramètres contenus dans une requête HTTP</strong> : avec JSF, il nous suffit d'écrire une EL au sein d'une Facelet, et le tour est joué.</p></li><li id="r-2138300" data-claire-element-id="2355369"><p id="r-2138299" data-claire-element-id="2355368"><strong>l'initialisation manuelle des beans</strong> : avec JSF, le cycle de vie des beans annotés est entièrement géré par le <em>framework</em> ! À aucun moment nous n'avons initialisé un bean, et à vrai dire, à aucun moment nous n'avons créé une classe Java susceptible de pouvoir procéder à cette initialisation ! Tout ce que nous avons mis en place, ce sont deux Facelets et un bean...</p></li><li id="r-2138302" data-claire-element-id="2355371"><p id="r-2138301" data-claire-element-id="2355370"><strong>la mise en place d'attributs dans un objet <code>HttpServletRequest</code> pour transmission à une page JSP</strong> : avec JSF, il suffit d'écrire une EL dans un composant de notre Facelet, et le <em>framework</em> s'occupe du reste.</p></li><li id="r-2138304" data-claire-element-id="2355373"><p id="r-2138303" data-claire-element-id="2355372"><strong>la redirection manuelle vers une page JSP pour affichage</strong> : avec JSF, il suffit de préciser la page ciblée dans l'attribut <strong>action</strong> du composant <code>&lt;h:commandButton&gt;</code>.</p></li></ol><aside id="r-2138307" data-claire-element-id="2355376" data-claire-semantic="information"><p id="r-2138306" data-claire-element-id="2355375">Ainsi, vous pouvez déjà vous rendre compte de la simplification opérée par JSF : rien que sur ce petit exemple extrêmement simple, le code à produire est bien plus léger que si nous avions fait du MVC à la main !</p></aside><p id="r-2138308" data-claire-element-id="2355377">Enfin, je vous invite à examiner le code source HTML de la page <strong>bonjour.xhtml</strong> que vous visualisez depuis votre navigateur. Vous y trouverez le code HTML produit par le rendu des différents composants de votre Facelet, c'est-à-dire le rendu des balises <code>&lt;h:form&gt;</code>, <code>&lt;h:inputText&gt;</code>, etc. Vous comprendrez alors mieux ce que je vous annonçais dans le chapitre précédent : avec un <em>framework</em> basé sur les composants, vous n'êtes plus aussi maîtres du HTML final envoyé à l'utilisateur que vous l'étiez lorsque vous créiez vos vues entièrement à la main par l'intermédiaire de pages JSP.</p><h3 id="r-626097" data-claire-element-id="3312565">Les ressources</h3><p id="r-2138310" data-claire-element-id="2355380">Pour terminer ce chapitre difficile et relativement abstrait sur une note plus légère, nous allons découvrir le système des ressources mis en place dans les projets JSF.</p><p id="r-2138311" data-claire-element-id="2355381">Vous avez dû vous en rendre compte, nous n'avons pas utilisé de styles CSS dans notre précédent exemple. Je vous rassure tout de suite, nous aurions pu faire comme nous en avions l'habitude, et déclarer une feuille CSS dans la section header de notre Facelet <strong>bonjour.xhtml</strong> :</p><pre id="r-2138312" data-claire-element-id="2838392"><code data-claire-semantic="html">&lt;h:head&gt;
+    &lt;title&gt;Premier exemple JSF 2.0&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;inc/form.css&quot; /&gt;
+&lt;/h:head&gt;</code></pre><p id="r-2138313" data-claire-element-id="2355383">Nous aurions alors bien évidemment dû prendre soin de recopier la feuille <strong>form.css</strong> et le dossier <strong>/inc</strong> que nous utilisions dans nos précédents exemples, et de les placer à la racine du projet, comme indiqué sur la figure suivante.</p><figure id="r-2138316" data-claire-element-id="3312562"><img id="r-2138314" data-claire-element-id="2355384" src="../../../user.oc-static.com/files/418001_419000/418434.png" alt="Image utilisateur" /></figure><p id="r-2138317" data-claire-element-id="2355387">Faites ces modifications, rendez-vous une nouvelle fois sur la page <code>http://localhost:8088/test_jsf/bonjour.xhtml</code> depuis votre navigateur, et constatez les légers changements intervenant dans l'affichage des éléments HTML.</p><p id="r-2138318" data-claire-element-id="2355388">Tout est donc normal, cependant <strong>nous n'allons pas procéder de cette manière dans la suite du cours</strong>. Avec JSF 2.x, une bonne pratique est de placer toutes les ressources web telles que les fichiers CSS, les images ou les fichiers JavaScript, dans un répertoire intitulé <strong>resources</strong> et placé directement à la racine de votre application, c'est-à-dire au même niveau que le dossier <strong>/WEB-INF</strong>.</p><p id="r-2138319" data-claire-element-id="2355389">Cette bonne pratique veut que nous mettions en place ce dossier <strong>resources</strong>, et que nous y créions des sous-dossiers pour délimiter les différentes ressources web que nous souhaitons utiliser. Si par exemple nous avions des images, des feuilles CSS et des scripts JS, pour respecter la bonne pratique nous pourrions par exemple créer l'arborescence indiquée sur la figure suivante et y placer nos différentes ressources.</p><figure id="r-2138322" data-claire-element-id="3312564"><img id="r-2138320" data-claire-element-id="2355390" src="../../../user.oc-static.com/files/418001_419000/418437.png" alt="Image utilisateur" /></figure><p id="r-2138323" data-claire-element-id="2355393">Pour le moment, nous n'avons que le fichier <strong>form.css</strong> à y mettre.</p><p id="r-2138324" data-claire-element-id="2355394">Une fois ceci en place, nous pouvons maintenant utiliser un composant dédié à l'inclusion de ressources depuis nos Facelets. Par exemple, pour utiliser la feuille CSS <strong>form.css</strong> placée dans le dossier <strong>/resources/default/css</strong>, il suffit de remplacer l'inclusion traditionnelle via <code>&lt;link type=&quot;text/css&quot; ... &gt;</code> par :</p><pre id="r-2138325" data-claire-element-id="2838397"><code data-claire-semantic="html">&lt;h:outputStylesheet library=&quot;default&quot; name=&quot;css/form.css&quot;  /&gt;</code></pre><p id="r-2138326" data-claire-element-id="2355396">Ce composant JSF permet de cibler directement le sous-dossier du répertoire <strong>resources</strong> via le contenu de son attribut <strong>library</strong>, que nous avons donc renseigné par &quot;default&quot; afin d'accéder au sous-dossier que nous avons mis en place. Il cible enfin le fichier souhaité via le contenu de son attribut <strong>name</strong>.</p><p id="r-2138327" data-claire-element-id="2355397">Effectuez les modifications (création du dossier <strong>/resources/default/css</strong>, déplacement du fichier <strong>form.css</strong> et suppression de l'ancien dossier <strong>/inc</strong>, puis modification de l'appel au fichier CSS depuis votre Facelet) et rendez-vous à nouveau sur la page depuis votre navigateur. Vous n'observerez aucun changement, preuve que le composant a bien fonctionné et a correctement inclus votre feuille CSS !</p><aside id="r-2138329" data-claire-element-id="2355399" data-claire-semantic="information"><p id="r-2138328" data-claire-element-id="2355398">Le composant JSF ici utilisé est dédié à l'inclusion de feuilles CSS. Il en existe d'autres similaires, pour l'inclusion des fichiers JavaScript et des images. Nous y reviendrons le moment venu dans la suite du cours.</p></aside><h3 id="r-626125" data-claire-element-id="2355428">JSF, ou ne pas JSF ?</h3><div id="r-2138331" data-claire-element-id="2355402" data-claire-semantic="question"><p id="r-2138330" data-claire-element-id="2355401">Faut-il opter pour JSF, ou du MVC avec des servlets/JSP faites maison ?</p></div><p id="r-2138332" data-claire-element-id="2355403">Dans le cas d'une application web destinée à votre apprentissage personnel, créer votre propre <em>framework</em> n'est pas une mauvaise idée, c'est un très bon exercice. Cela dit, si le long terme est envisagé pour votre application, ce n'est clairement pas judicieux. La plupart des <em>frameworks</em> MVC existants sont bien pensés, et la majorité des imprévus y sont pris en compte. En outre, l'API d'un <em>framework</em> public reconnu est bien documentée et maintenue par une communauté tierce.</p><p id="r-2138333" data-claire-element-id="2355404">Dans un autre registre, si jamais votre application devient populaire et que vous devez intégrer des développeurs supplémentaires à votre projet, afin par exemple de satisfaire aux divers besoins du client, il est bien plus aisé de trouver quelqu'un qui est déjà familier avec un <em>framework</em> existant. Avec un <em>framework</em> fait maison et probablement buggé, vous trouverez peu de développeurs prêts à se former sur une telle technologie et à prendre en charge la maintenance sachant pertinemment qu'ils ne réutiliseront probablement jamais cette technologie dans leurs projets futurs...</p><p id="r-2138334" data-claire-element-id="2355405">Enfin, sachez que tout cela ne s'applique pas uniquement à JSF, mais également à tous les autres <em>frameworks</em> populaires existant, comme Spring MVC par exemple.</p><div id="r-2138336" data-claire-element-id="2355407" data-claire-semantic="question"><p id="r-2138335" data-claire-element-id="2355406">Quelle est la différence entre JSF et Servlets/JSP/HTML/CSS/JS ?</p></div><p id="r-2138337" data-claire-element-id="2355408">Pour faire une analogie avec une technologie d'actualité dans le domaine du web, comparer JSF au pur combo Servlets/JSP/HTML/CSS/JS revient à comparer jQuery à du pur JavaScript : faire plus avec moins de code. Pour prendre <a href="http://www.primefaces.org/">PrimeFaces</a> comme exemple, explorez sa <a href="http://www.primefaces.org/showcase/ui/home.jsf">vitrine</a> et découvrez des exemples de codes complets. <a href="http://jboss.org/richfaces">RichFaces</a> propose lui aussi une <a href="http://richfaces-showcase.appspot.com/">vitrine</a> avec des exemples de codes complets. Si vous étudiez avec attention ces exemples, vous comprendrez alors que vous n'avez bien souvent pas à vous soucier de la qualité du rendu HTML/CSS/JS d'une part, et d'autre part que vous n'avez besoin que d'un simple bean pour réaliser le modèle et d'une simple page XHTML pour la vue.</p><p id="r-2138338" data-claire-element-id="2355409">Remarquez toutefois que vous ne devez pas voir JSF comme une alternative à HTML/CSS/JS uniquement, mais bien prendre en compte également la partie serveur (typiquement JSP/Servlets). JSF permet d'éviter tout le code passe-partout en charge du regroupement des paramètres de requêtes HTTP, de leur conversion/validation, de la mise à jour des données du modèle et de l'exécution de la bonne méthode Java pour réaliser les traitements métiers. Avec JSF, vous n'avez plus qu'une page XHTML en guise de vue, et un JavaBean en tant que modèle. Cela accélère le développement de manière significative !</p><p id="r-2138339" data-claire-element-id="2355410">Bien entendu, comme c'est le cas avec tous les <em>frameworks</em> MVC basés sur les composants, vous disposez avec JSF d'une faible marge de contrôle sur le rendu HTML/CSS/JS. Ajouter du code JS personnalisé n'est par exemple pas chose aisée. Si c'est un obstacle pour votre projet, regardez plutôt du côté des <em>frameworks</em> MVC basés sur les actions comme <a href="http://static.springsource.org/spring/docs/3.0.x/reference/mvc.html">Spring MVC</a>. Vous devez toutefois savoir que vous allez devoir écrire tout ce code HTML/CSS/JS vous-mêmes et par le biais de pages JSP, là où les Facelets de JSF vous offriraient des templates avancés.</p><ul id="r-2138356" data-claire-element-id="2355427"><li id="r-2138341" data-claire-element-id="2355412"><p id="r-2138340" data-claire-element-id="2355411">JSF est un <em>framework</em> MVC basé sur les composants. C'est un <strong>standard</strong>, car il fait partie intégrante de la plate-forme Java EE 6.</p></li><li id="r-2138343" data-claire-element-id="2355414"><p id="r-2138342" data-claire-element-id="2355413">Avec JSF, une unique servlet joue entre autres le rôle d'aiguilleur géant : la <strong>FacesServlet</strong>.</p></li><li id="r-2138345" data-claire-element-id="2355416"><p id="r-2138344" data-claire-element-id="2355415">Avec JSF, il n'est plus nécessaire d'écrire de servlets : seuls des <strong>Facelets</strong> et des <strong>backing-beans</strong> sont nécessaires.</p></li><li id="r-2138347" data-claire-element-id="2355418"><p id="r-2138346" data-claire-element-id="2355417">Dans sa version actuelle, JSF tire partie des annotations Java pour simplifier grandement le développement et la configuration.</p></li><li id="r-2138349" data-claire-element-id="2355420"><p id="r-2138348" data-claire-element-id="2355419">Une Facelet est une simple page XHTML, contenant des balises qui lient littéralement la vue aux composants JSF, et leur associe d'éventuelles valeurs via des expressions EL.</p></li><li id="r-2138351" data-claire-element-id="2355422"><p id="r-2138350" data-claire-element-id="2355421">L'ensemble des balises d'une vue, qui peut être constituée d'une ou plusieurs Facelets, constitue l'arbre des composants associé à cette vue.</p></li><li id="r-2138353" data-claire-element-id="2355424"><p id="r-2138352" data-claire-element-id="2355423">Avec JSF, le processus de traitement d'une requête rassemble les étapes de récupération, conversion, validation et sauvegarde des données.</p></li><li id="r-2138355" data-claire-element-id="2355426"><p id="r-2138354" data-claire-element-id="2355425">Lors du développement d'une application JSF, il est possible d'activer un mode de debug pour faciliter le pistage des erreurs rencontrées.</p></li></ul>
+
+                <div class="js-courseSelementActions sideActions">
+    <ul class="sideActions__container">
+        <li>
+            <a class="sideActions__item  js-courseElementActions-copyUrl  js-tooltip"
+               href="#" data-tooltip="Copier le lien"
+               data-tooltip-done="Lien copié !">
+            #
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+
+            
+            <nav class="course-pagination    clearfix">
+
+            <a href="introduction-aux-frameworks-mvc.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--previous">
+            <i class="icon-previous"></i>
+            <span>Introduction aux frameworks MVC</span>
+        </a>
+    
+    <span class="course-pagination__separator"></span>
+
+            <a href="la-gestion-d-un-formulaire-avec-jsf.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--next">
+            <span>La gestion d&#039;un formulaire avec JSF</span>
+            <i class="icon-next"></i>
+        </a>
+    
+</nav>
+
+            
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-view-restriction_popin_title"
+                class="popin popin--illustrated  js-popin"
+        id="popin-view-restriction"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+                    <div class="popin__illustrationWrapper">
+                <div class="popin__illustration illustration--balloon"></div>
+            </div>
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-view-restriction_popin_title" class="popin__title  js-popin-title">Waouh !</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <p>
+            Très heureux de voir que nos cours vous plaisent, déjà 3 pages lues aujourd&#039;hui ! Vous pouvez continuer la lecture de nos cours en devenant un Roomie, un membre de la communauté d&#039;OpenClassrooms. C&#039;est gratuit !
+        </p>
+        <p>
+            Vous pourrez aussi suivre votre avancement dans le cours, faire les exercices et discuter avec les autres Roomies.
+        </p>
+                    </div>
+            </div>
+
+                            <div class="popin__actions  js-popin-actions">
+                                                                        <a class="oc-btn orange-alt-btn "  href="https://openclassrooms.com/register">S'inscrire</a>
+                                                    <a class="oc-btn dark-btn "  href="https://openclassrooms.com/login">Se connecter</a>
+                                                            </div>
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+        </div>
+
+
+    </section>
+</div>
+    </div>
+
+    
+    <div id="popin-not-certifying-yet"
+     class="popin"
+     data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <a href='https://openclassrooms.com/premium'><i class='icon-star'></i> Devenez Premium</a>
+                    ">
+    <img alt="Exemple de certificat de réussite" src="../../../static.oc-static.com/prod/images/courses/certif.jpg"/>
+</div>
+
+
+                </main>
+
+                <aside class="contentWithSidebar__sidebar  js-contentWithSidebar-slidingElement" >
+                        <nav class="col-nav">
+    <div id="tab-courseMenu" class="col-nav__inner js-sidebar-inner">
+        <div class="col-nav__block  col-nav__block--summary">
+
+            <div class="side-paginate">
+                                    <a href="introduction-aux-frameworks-mvc.html" class="side-paginate__previous">
+                        <i class="icon-previous"></i>
+                    </a>
+
+                    <span class="side-paginate__separator"></span>
+                
+                <h6 class="side-paginate__title">
+                    Aller plus loin avec JPA et JSF
+                </h6>
+
+                                    <span class="side-paginate__separator"></span>
+
+                    <a href="la-gestion-d-un-formulaire-avec-jsf.html" class="side-paginate__next">
+                        <i class="icon-next"></i>
+                    </a>
+                            </div>
+
+                            <div class="col-nav__block--summary-list">
+                    <ol class="col-nav__chapters">
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="les-annotations.html">Les annotations</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="la-persistance-des-donnees-avec-jpa.html">La persistance des données avec JPA</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="tp-fil-rouge-etape-7.html">TP Fil rouge - Étape 7</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="introduction-aux-frameworks-mvc.html">Introduction aux frameworks MVC</a>
+                                                            </li>
+                                                    <li class="selected">
+                                                                                                    <span class="col-nav__chapterTitle">Premiers pas avec JSF</span>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="la-gestion-d-un-formulaire-avec-jsf.html">La gestion d&#039;un formulaire avec JSF</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="l-envoi-de-fichiers-avec-jsf.html">L&#039;envoi de fichiers avec JSF</a>
+                                                            </li>
+                                            </ol>
+
+                                    </div>
+                    </div>
+
+        
+        
+            <div class="col-nav__block  col-nav__block--subscribe">
+            <a href="https://openclassrooms.com/login" class="oc-btn orange-alt-btn js-popin-activator" data-popin-selector="#popin-log-in">
+                <i class="icon-lock"></i>
+                Suivre ce cours
+            </a>
+
+            <a href="https://openclassrooms.com/how-does-it-work">
+                <small>Comment ça marche ?</small>
+            </a>
+        </div>
+    
+
+
+        
+                    <div class="col-nav__block col-nav__block--institution">
+    <h2>Créé par</h2>
+            <a  href="https://openclassrooms.com/partners/openclassrooms" target="_blank">
+            <img src="../../../sdz-upload.s3.amazonaws.com/prod/partners/img/logo_logo-oc.png" alt="logo OpenClassrooms" class="col-nav__institutionLogo"/>
+            <p class="col-nav__block--institutionDescription">
+                OpenClassrooms, 1ère plateforme  <span class='nowrap'>e-Education<span> en Europe
+            </p>
+        </a>
+    </div>
+        
+        
+        
+    
+                        
+            
+    <div class="socialNetwork col-nav__block">
+        <ul class="socialButtons  js-socialButtons"
+    data-options="
+                title: 'Découvrez le cours &quot;Premiers pas avec JSF&quot; sur @OpenClassrooms',
+        mailTitle: 'Cours &quot;Premiers pas avec JSF&quot; sur OpenClassrooms',
+        mailContent: 'Découvrez le cours &quot;Premiers pas avec JSF&quot; sur OpenClassrooms.'">
+
+    <li>
+        <a class="roundIcon  roundIcon--twitter addthis_button_twitter  js-socialButtons-btn" data-tooltip="Partagez sur Twitter" >
+            <i class="roundIcon__icon  icon-twitter"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--facebook  addthis_button_facebook  js-socialButtons-btn" data-tooltip="Partagez sur Facebook">
+            <i class="roundIcon__icon  icon-facebook"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--googlePlus  addthis_button_google_plusone_share  js-socialButtons-btn" data-tooltip="Partagez sur Google+" >
+            <i class="roundIcon__icon  icon-google"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  addthis_button_email  js-socialButtons-btn  js-socialButtons-email" data-tooltip="Partagez par e-mail">
+            <i class="roundIcon__icon  icon-letter"></i>
+        </a>
+    </li>
+
+</ul>
+
+    </div>
+    </div>
+</nav>
+                </aside>
+            </div>
+        </div>
+
+                    <footer class="alt-section">
+    <div class="centered">
+
+        <div class="row">
+                            <div class="col4 course-bottom__category">
+                    <h2 class="highlighted">
+                        L&#039;auteur
+                    </h2>
+                    <div>
+                                                    <a itemprop="author" itemscope itemtype="http://schema.org/Person" href="https://openclassrooms.com/membres/coyote-92394" class="no-underlined">
+                                <div class="course-bottom__text-illustrated">
+                                    <span data-author="Médéric Munier" style="background-image: url(../../../www.gravatar.com/avatar/15c349ac5313535fba91e5dbfa8803ec/indexd6dc.html?s=256&amp;r=g&amp;d=https%3A%2F%2Fopenclassrooms.com%2Fbundles%2Fcommon%2Fimages%2Favatar_defaut.png);"></span>
+                                    <h4 itemprop="name">Médéric Munier</h4>
+                                                                            <p itemprop="description">
+                                            Auteur du livre sur le Java EE.
+                                        </p>
+                                                                    </div>
+                            </a>
+                                            </div>
+                </div>
+            
+                            <div class="col8 course-bottom__category">
+                    <h2 class="highlighted">Découvrez aussi ce cours en...</h2>
+
+                    <ul class="course-bottom__format">
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">eBook</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-book"></i>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">Livre papier</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook pdf"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">PDF</div>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                    </div>
+
+    </div>
+</footer>
+
+
+    </article>
+            </div>
+        </div>
+
+                    <footer class="footer">
+    <div class="centered">
+        <div class="row">
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    OpenClassrooms
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/about-us" class="footer__link">Qui sommes-nous ?</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/how-does-it-work" class="footer__link">Fonctionnement de nos cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/jobs" class="footer__link">Recrutement</a>
+                    </li>
+                    <li>
+                        <a href="#" class="js-zendesk-show footer__link">Nous contacter</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Professionnels
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/affiliation" class="footer__link">
+                            Affiliation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/business" class="footer__link">Entreprises</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/universities" class="footer__link">Universités et écoles</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Participez
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/new-teachers" class="footer__link">Créer un cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/courses/courselab" class="footer__link">CourseLab</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/terms-conditions/fr" class="footer__link">
+                            <strong>Conditions Générales d&#039;Utilisation</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Suivez-nous
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+                                                                    <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="http://blog.openclassrooms.com/" class="footer__link">Le blog OpenClassrooms</a>
+                    </li>
+                    <li>
+                        <ul class="footer__socialNetwork">
+                            <li>
+                                <a href="https://www.facebook.com/openclassrooms" target="_blank" class="roundIcon roundIcon--facebook footer__socialButtons">
+                                    <i class="icon-facebook roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/openclassrooms" target="_blank" class="roundIcon roundIcon--twitter footer__socialButtons">
+                                    <i class="icon-twitter roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/+OpenClassrooms/posts" target="_blank" class="roundIcon roundIcon--youtube footer__socialButtons">
+                                    <i class="icon-google roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/openclassrooms" target="_blank" class="roundIcon roundIcon--instagram footer__socialButtons">
+                                    <i class="icon-instagram roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/TheOpenClassrooms" target="_blank" class="roundIcon roundIcon--googlePlus footer__socialButtons">
+                                    <i class="icon-youtube roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/openclassrooms" target="_blank" class="roundIcon roundIcon--linkedin footer__socialButtons">
+                                    <i class="icon-linkedin roundIcon__icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
+        
+        <!-- loaded javascript block -->
+
+            
+            <script type="text/javascript" src="../../js/maind0b3.js?095b5b3"></script>
+
+        
+
+    <script type="text/javascript" src="../../js/oc/courseViewd0b3.js?095b5b3"></script>
+
+
+        <!-- loaded javascript block -->
+
+        <script type="text/javascript">
+    window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+    window.analytics.load('mou95e6tdn');
+</script>
+
+                            
+        <!-- inlined javascript block -->
+
+        <script type="text/javascript">
+            
+            if (App.modules) {
+                App.modules.startAll();
+            }
+        </script>
+
+                        
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"90dc06697a","applicationID":"20302107","transactionName":"NANaYkJXC0ICAhdYVw1Je0NDQgpcTA4AblsPB1FEVWkGXhYTEFRnEwdKQm9GBEMXPhVYXRQ=","queueTime":0,"applicationTime":461,"atts":"GERZFApNGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:48:31 GMT -->
+</html>

@@ -1,0 +1,1981 @@
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="fr" prefix="og: http://ogp.me/ns#">
+    
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/le-modele-dao by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:52:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(e,t){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,t)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var u=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(u,function(e,t){newrelic[t]=r(f+t,"api")}),i(c,function(e,t){newrelic[t]=r(f+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?u(e,a,i):i()}function n(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,c=0;u>c;c++)a[c].apply(i,r);var s=f[g[n]];return s&&s.push([m,n,r,i]),i}function p(e,t){w[e]=l(e).concat(t)}function l(e){return w[e]||[]}function d(e){return s[e]=s[e]||o(n)}function v(e,t){c(e,function(e,n){t=t||"feature",g[n]=t,t in f||(f[t]=[])})}var w={},g={},m={on:p,emit:n,get:d,listeners:l,context:t,buffer:v};return m}function i(){return new r}var a="nr@context",u=e("gos"),c=e(2),f={},s={},p=t.exports=o();p.backlog=f},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!w++){var e=v.info=NREUM.info,t=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){c(l,function(t,n){e[t]||(e[t]=n)});var n="https"===p.split(":")[0]||e.sslForHttp;v.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=v.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=window,s=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var p=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),v=t.exports={offset:a(),origin:p,features:{},xhrWrappable:d};s.addEventListener?(s.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(s.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),u("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader"]);</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="application-name" content="OpenClassrooms"/>
+        <meta name="msapplication-TileColor" content="#e95325"/>
+        <meta name="msapplication-TileImage" content="/fav-icon.png?v=1"/>
+
+        <meta name="theme-color" content="#E95325">
+        <link rel="icon" sizes="144x144" href="../../fav-icon3860.png?v=1">
+
+        
+        
+        <link href="../../bundles/common/css/masterd0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"  />
+        
+
+        <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="../../apple-touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-iphone-retina-display.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-ipad-retina-display.png" />
+
+        <link rel="apple-touch-icon-precomposed" href="../../apple-touch-icon-precomposed.png" />
+
+            <link href="../../bundles/course/css/maind0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" src="../../js/modernizrd0b3.js?095b5b3"></script>
+
+        <link rel="shortcut icon" href="https://openclassrooms.com/favicon.ico?095b5b3" />
+
+            
+    <meta property="og:locale" content="fr"/>
+    <meta property="og:type" content="website"/>
+
+    <meta property="og:title" content="Découvrez le cours &quot;Le modèle DAO&quot; sur @OpenClassrooms"/>
+    <meta property="og:url" content="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/le-modele-dao"/>
+    <meta property="og:site_name" content="OpenClassrooms"/>
+    <meta property="og:image" content="https://static.oc-static.com/prod/courses/illustrations/illu_creez-votre-application-web-avec-java-ee.png"/>
+    <meta property="og:description" content="Pour réaliser des sites web en Java, on utilise l&#039;environnement Java EE (anciennement appelé J2EE). Celui-ci impose de développer de façon très structurée, ce qui explique certainement pour quoi on le retrouve dans un très grand nombre d&#039;applications web notamment en entreprise (banques, administrations...)."/>
+
+            
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@OpenClassrooms"/>
+    <meta name="twitter:title" content="Découvrez le cours &quot;Le modèle DAO&quot; sur @OpenClassrooms"/>
+    <meta name="twitter:description" content=""/>
+
+                
+        <title>Le modèle DAO</title>
+
+        <!-- inlined top javascript block -->
+
+
+        <script type="text/javascript">
+            var App = {
+                startTime: (new Date()).getTime(),
+                debug: false
+            };
+
+            App.user = {
+                
+                
+                
+                isPremium: false
+            };
+
+
+            App.preferences = {
+                assetVersion: '095b5b3',
+                contactMail: 'hello@openclassrooms.com',
+                adyenPublicKey: '10001|889EBFD4D434B82683E21DCA26E77C3E20E0EE09A5ECE3830B0ED51F2FA721A2F7E9EC871C6AB9A1E12C4492F4717673047757E02C5256D8E265CD51E413E5EFCCFEAC41B39C662A424ADC13EE187C38C372A7FCCEC1EA5DF841989437D78B252A8EB51008E60BB55B1E55A7A80DE1A9D60D998C128A576BFAE1DDB97D514AF0A073AEDDE84CEE40D1F8F6ECE85D0FFA50C95C06DB274021C1371376C6EB16561FD65C5E2704B570A7504D617D0F3820F176A0609F6162BDF5890533289FDC3DA7DB03B50BB3BD60A613E1FF72060F22987627E8F1A29F0128A94EC4C8FF7CF6B7AB9558D8433BF86D7A388AB927641CD6C02689139CEE3AAC9ACBFFE83806CB',
+                algolia: {
+                    appId: 'JGRXRFVQM0',
+                    apiKey: 'dfbdea500cb0b5f46e449ad334916c44', indexName: 'prod_COURSES_fr'
+                },
+                routes: {
+                    COURSE_EVENT: '/components/courses/:courseId',
+                    COURSE_PART_EVENT: '/components/courses/:courseId/parts/:partId',
+
+                    ACCEPT_COOKIE: '/components/user-accept-consent-cookie'
+                }
+
+                                            };
+
+            App.preferences.navigationPreference = {
+                            };
+
+            App.preferences.modules = {
+                'smiley': {
+                    basePath: '/bundles/common/images/smiley/'
+                }
+            };
+        </script>
+        <!-- inlined top javascript block end -->
+
+        <script>    App.preferences.modules['course/view/internalFolding'] = {
+        isBigCourse: true
+    };
+
+    App.data = App.data || {};
+App.data.currentCourse = {"partId":624784,"courseId":626954};
+App.preferences.modules['view/currentCoursePage'] = App.data.currentCourse;
+
+</script>
+
+        
+        
+    </head>
+
+    <body class="course oc-body ">
+
+        
+
+        
+    
+    
+    <script id="_EVENTS-PAGE" type="application/json">
+        {"type":"page"}
+    </script>
+
+
+        <!--[if lt IE 9]>
+<div class="disclaimer  disclaimer-error">
+    Vous utilisez un navigateur obsolète, veuillez le <a href="http://browsehappy.com/">mettre à jour</a>.
+</div>
+<![endif]-->
+
+<noscript>
+    <div class="disclaimer  disclaimer--error">
+        Veuillez utiliser un <a href="http://browsehappy.com/">navigateur internet moderne</a> avec JavaScript activé pour naviguer sur OpenClassrooms.com
+    </div>
+</noscript>
+
+
+                    
+
+<header id="oc-header" class="js-tabs-mobile mainHeader ">
+
+        <div class="disclaimer  disclaimer--info hidden  js-cookie-disclaimer">
+        <div class="disclaimer__wrapper">
+            <span class="disclaimer__content">Bienvenue sur OpenClassrooms ! En poursuivant votre navigation, vous acceptez l'utilisation de cookies. <a href="https://openclassrooms.com/privacy-policy#personal-data-gathering">En savoir plus</a></span>
+            <span class="disclaimer__actions">
+                <a href="#" class="disclaimer__button  js-close-button">ok</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="mainHeader__wrapper">
+
+        <div class="mainHeader__topLine">
+                <a href="https://openclassrooms.com/pole-emploi/partenariat?utm_source=SiteWeb-OC&amp;utm_medium=Lien-PhraseHeader&amp;utm_campaign=relancePE"> Vous êtes demandeur d'emploi ? On vous offre le Premium Solo en 3 clics :) ! </a>
+
+        </div>
+
+        <div class="mainHeader__top">
+            <a href="https://openclassrooms.com/" class="mainHeader__logo" title="OpenClassrooms.com">OpenClassrooms.com</a>
+
+            
+<nav role="navigation" class="icoTabs  mainHeader__tabSet">
+    <span class="mainHeader__mobileNav">
+
+        
+        
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseEditMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" data-tabs-default="true" href="#tab-searchMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-search  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab" href="#tab-main">
+            <i class="icon-menu  icoTabs__icon"></i>
+        </a>
+    </span>
+
+</nav>
+        </div>
+
+                <div class="js-tabs-content  mainHeader__content"></div>
+
+        <div class="mainHeader__content">
+            <div id="tab-main" class="mainHeader__tabs">
+                <nav class="mainTopNav  scrollPanel  js-scrollPanel-mobileMenu">
+    <div class="mainTopNav__container  scrollPanel__container  js-scrollPanel-container">
+        <ul class="mainHeader__container  mainHeader__container--mainMenu  js-scrollPanel-content">
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="http://openclassrooms.com/paths/">Parcours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/courses">Cours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/forum/">Forums</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/partners">Partenaires</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/premium">Premium</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+                <div class="mainHeader__contentInner">
+                    <div class="mainHeader__container  mainHeader__container--search">
+                                                                                                                                                                            
+                                                                          
+ <div class="js-courseSearch  topSearchBox">
+     <form tabindex="0" class="js-courseSearch-form  oc-form" action="https://openclassrooms.com/courses" method="get">
+         <div class="js-courseSearch-inputGroup oc-form__widget  inputGroup  topSearchBox__inner">
+             <input id="algolia-search-input"
+                    type="search"
+                    class="js-courseSearch-input oc-form__control inputGroup__input  topSearchBox__input"
+                    title="Rechercher"
+                    autocomplete="off"
+                    data-option_source="/components/courses/search?q=<%= term %>"
+                    placeholder="Rechercher"
+                    name="q" />
+
+             <button class="js-courseSearch-button  oc-btn dark-btn  only-icon  inputGroup__button  topSearchBox__button" type="submit" title="Rechercher un cours">
+                 <i class="inputGroup__icon icon-search"></i>
+                 <i class="inputGroup__icon inputGroup__icon--load icon-spinner icon-spin"></i>
+             </button>
+         </div>
+     </form>
+ </div>
+                    </div>
+
+                                            <div class="mainHeader__container  mainHeader__container--separatorLarge  hidden-s"></div>
+                    
+
+
+                    
+                                            <div class="mainHeader__container  mainHeader__container--login">
+    <a href="https://openclassrooms.com/register" class="oc-btn orange-alt-btn js-popin-activator space-right" data-popin-selector="#popin-sign-in">
+    S&#039;inscrire
+</a>
+<a href="https://openclassrooms.com/login" class="oc-btn dark-btn js-popin-activator" data-popin-selector="#popin-log-in">
+    Se connecter
+</a>
+</div>
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-sign-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-sign-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-sign-in_popin_title" class="popin__title  js-popin-title">Inscription</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=c2eba69aa9ebd2e19f35a76681fdc0ac&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail">
+            <i class="icon-facebook"></i>S&#039;inscrire avec Facebook
+        </a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto">
+            <i class="icon-google"></i>S&#039;inscrire avec Google
+        </a>
+    </li>
+
+    <li class="formLogin__column">
+        
+            
+    
+    
+
+    <form name="register" method="post" action="https://openclassrooms.com/register" class="js-registerForm oc-form">
+
+        <div class="accessibility-hidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Wonder&nbsp;                        </span><span class="oc-form__widget"><input type="text" id="register_wonder" name="register[wonder]" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Prénom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_firstName" name="register[firstName]" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Nom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_lastName" name="register[lastName]" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="email" id="register_email" name="register[email]" required="required" class="" /></span></label>
+            <p>
+                <em>
+                    Vous recevrez votre mot de passe sur cette adresse email.
+                </em>
+            </p>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="register_terms" name="register[terms]" required="required" class="" value="1" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            J'ai lu et j'accepte les <a href="https://openclassrooms.com/terms-conditions/fr">Conditions Générales d'Utilisation</a>.&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span></span></label>
+        </div>
+
+
+        <div class="oc-form__group  center-text">
+            
+    <button type="submit" id="register_create" name="register[create]" class="oc-btn orange-alt-btn oc-btn"> S'inscrire</button>
+        </div>
+
+        <input type="hidden" id="register__target_path" name="register[_target_path]" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/le-modele-dao" /><input type="hidden" id="register__token" name="register[_token]" value="LEhsW-IhokD4hQHYoHva_FZzYy-PP2cG-886IBpx9HY" /></form>
+    </li>
+</ul>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-log-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-log-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-log-in_popin_title" class="popin__title  js-popin-title">Connexion</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=c2eba69aa9ebd2e19f35a76681fdc0ac&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail"><i class="icon-facebook"></i> Se connecter avec Facebook</a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto"><i class="icon-google"></i> Se connecter avec Google</a>
+    </li>
+
+    <li class="formLogin__column">
+
+        
+            
+    
+    
+
+    <form name="" method="post" action="https://openclassrooms.com/login_check" class=" oc-form">
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email ou nom d'utilisateur&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="_username" name="_username" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Mot de passe&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="password" id="_password" name="_password" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="_remember_me" name="_remember_me" class="" value="1" checked="checked" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            Se souvenir de moi&nbsp;                        </span></span></label>
+        </div>
+
+        <div class="oc-form__group right-text">
+            <a href="https://openclassrooms.com/set-new-password">Mot de passe oublié</a>
+        </div>
+
+        <div class="oc-form__group  center-text">
+            <input type="hidden" id="_target_path" name="_target_path" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/le-modele-dao" /><div>
+    <button type="submit" id="login" name="login" class="orange-alt-btn oc-btn"> Se connecter</button></div><input type="hidden" id="_csrf_token" name="_csrf_token" value="WFIVlYEKEcL5v9hnQC1z3quXwgYs14KEFOLh1GUmi_I" />
+        </div>
+
+        </form>
+    </li>
+</ul>
+<p class="text-center space-top">
+    Pas encore membre ? <a href="https://openclassrooms.com/register">Inscrivez-vous gratuitement</a> en 30s.
+</p>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+                    
+                    <div class="mainHeader__container  mainHeader__container--langSelector">
+                        <div class="js-popOut-header  popOut popOut--small  popOut--rightAlign" data-keep-it-mobile="true">
+    <span class="js-popOut-button  popOut__button">
+                    <a href="javascript:;" class="languageSelector__selected">Français</a>
+            </span>
+    <ul class="popOutList  popOut__content  popOutList--small">
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/en/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">English</a>
+            </li>
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/es/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">Español</a>
+            </li>
+            </ul>
+</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+        
+        <div id="mainSearch" class="centered search-content">
+        </div>
+
+        <div id="mainContentWithHeader">
+            <div id="pre-main-part">
+                
+                                        <section class="inset no-padding">
+        <div class="centered">
+
+            <h6 class="accessibility-hidden">Fil d&#039;Ariane</h6>
+
+            <nav class="breadcrumb">
+                <ul class="breadcrumbtrail">
+                                                                        <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/" itemprop="url">
+                                <span itemprop="title">Accueil</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses" itemprop="url">
+                                <span itemprop="title">Cours</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee?status=published" itemprop="url">
+                                <span itemprop="title">Créez votre application web avec Java EE</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li class="current" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            Le modèle DAO
+                                                                        </li>
+                                    </ul>
+            </nav>
+        </div>
+    </section>
+
+                
+                            </div>
+
+            <div class="claire clearfix" >
+                    <article itemscope itemtype="http://schema.org/Article">
+
+                        
+<header class="course-header" xmlns="http://www.w3.org/1999/html">
+    <div class="centered"><div class="course-header__topPart"><div class="course-header__info"><a itemprop="url" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><h1 data-course-title="Créez votre application web avec Java EE">Créez votre application web avec Java EE</h1></a><span class="course-header__updatedTime visible-l">Mis à jour le lundi 13 juillet 2015</span></div></div></div><div class="course-header__details-container"><div class="centered"><div class="row"><div class="col12"><div class="course-header__details  iconBar"><div class="course-header__detailsGroup  course-header__detailsGroup--formats iconBar__group"><ul data-option_popinselector="#popin-formats-availables" class="course-types iconBar__list js-course-formats-bar"><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours est visible gratuitement en ligne."><a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><i class="icon-desktop  course-types__icon"></i><span class="course-header__format-current"></span></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore en vidéo."><span><i class="icon-video course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en livre papier."><a href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank"><i class="icon-book  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en eBook."><a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee"><i class="icon-ebook  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip"
+                                                                                            title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours."
+                                                                                ><a
+                                                                                        ><i class="icon-badge  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore diplômant et ne vous permet pas d&#039;obtenir des crédits universitaires européens (ECTS)."><span><i class="icon-hat  course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Vous pouvez être accompagné sur ce cours par un mentor dédié en visioconférence."><a  href="https://openclassrooms.com/premium#discover-premium-plus-offer" ><i class="icon-mentor  course-types__icon"></i></a></li></ul></div><div class="course-header__detailsGroup  course-header__detailsGroup--info  iconBar__group"><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-duration iconBar__icon js-tooltip" title="Ce cours demande en moyenne 40 heures de travail pour être réussi."></i><span class="iconBar__label">40 heures</span></li><li class="iconBar__item"><i class="icon-level iconBar__icon"></i><span class="iconBar__label">
+                                                                                                    Moyenne
+                                                                                            </span></li></ul></div><div class="course-header__detailsGroup course-header__detailsGroup--licences iconBar__group"><a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/2.0"><span class="iconBar__label">Licence</span><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-cc iconBar__icon" title="CC"></i></li><li class="iconBar__item"><i class="icon-ccby iconBar__icon" title="BY"></i></li><li class="iconBar__item"><i class="icon-ccnc iconBar__icon" title="NC"></i></li><li class="iconBar__item"><i class="icon-ccsa iconBar__icon" title="SA"></i></li></ul></a></div></div></div></div></div></div>
+    <div id="popin-formats-availables" class="popin popin--course-formats-availables">
+        <i class="popin__close-button icon-close js-close-button"></i>
+
+        <div class="course-types course-types--withSpace">
+                            <a class="course-types__item" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-desktop course-types__icon"></i>
+                </a>
+            
+            
+                            <a class="course-types__item" href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms">
+                    <i class="icon-book course-types__icon"></i>
+                </a>
+            
+                            <a class="course-types__item" href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-ebook course-types__icon"></i>
+                </a>
+            
+            
+                                        <a class="course-types__item" href="https://openclassrooms.com/premium#discover-premium-plus-offer">
+                    <i class="icon-mentor course-types__icon"></i>
+                </a>
+                    </div>
+
+                    <p>Ce cours est visible <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">gratuitement en ligne</a>.</p>
+        
+        
+                    <p>
+                Ce cours existe en livre papier.
+            </p>
+        
+                    <p>Ce cours existe <a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">en eBook</a>.</p>
+        
+        
+        
+                    <p>
+                Vous pouvez être <a href="https://openclassrooms.com/premium#discover-premium-plus-offer">accompagné et mentoré par un professeur particulier</a> par visioconférence sur ce cours.
+            </p>
+        
+        <a class="oc-btn orange-alt-btn js-close-button" href="#">J&#039;ai tout compris !</a>
+    </div>
+
+    
+</header>
+
+    <div class="centered">
+                            
+        
+            <div class="row">
+        <div class="col12 col11-s">
+                            <nav class="timeline">
+        <div class="timeline__inner">
+
+        <span class="timeline__iconContainer">
+            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+                <i class="icon-home roundIcon__icon"></i>
+            </a>
+        </span>
+            <div class="timeline__steps">
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-au-java-ee.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction au Java EE
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-java-ee-mis-a-nu.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le Java EE mis à nu !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="outils-et-environnement-de-developpement.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Outils et environnement de développement
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="la-servlet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La servlet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="servlet-avec-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Servlet avec vue…
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="transmission-de-donnees.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Transmission de données
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-javabean.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le JavaBean
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-1-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (1/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-2-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (2/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="des-problemes-de-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Des problèmes de vue ?
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-1.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 1
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="objectifs-et-configuration.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Objectifs et configuration
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-core.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque Core
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-core-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL core : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-xml.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque xml
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-xml-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL xml : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="faisons-le-point-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Faisons le point !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 2
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="formulaires-le-b-a-ba.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : le b.a.-ba
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-a-la-mode-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : à la mode MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-3.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 3
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-session-connectez-vos-clients.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La session : connectez vos clients
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-filtre-creez-un-espace-membre.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le filtre : créez un espace membre
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-cookie-le-navigateur-vous-ouvre-ses-portes.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le cookie : le navigateur vous ouvre ses portes
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-4.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 4
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-l-envoi-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : l&#039;envoi de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-telechargement-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le téléchargement de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-5.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 5
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-a-mysql-et-jdbc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction à MySQL et JDBC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="communiquez-avec-votre-bdd.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Communiquez avec votre BDD
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-modele-dao.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le modèle DAO
+                                </span>
+
+                                                                    <span class="timeline__progressMarker"></span>
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-6.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 6
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="gerer-un-pool-de-connexions-avec-bonecp.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Gérer un pool de connexions avec BoneCP
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="les-annotations.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Les annotations
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-persistance-des-donnees-avec-jpa.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La persistance des données avec JPA
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-7.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 7
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="introduction-aux-frameworks-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction aux frameworks MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="premiers-pas-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Premiers pas avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-gestion-d-un-formulaire-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La gestion d&#039;un formulaire avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="l-envoi-de-fichiers-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    L&#039;envoi de fichiers avec JSF
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="debugger-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Débugger un projet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="empaquetage-et-deploiement-d-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Empaquetage et déploiement d&#039;un projet
+                                </span>
+
+                                                            </a>
+                                            
+                
+                <span class="timeline__splitChapter"></span>
+
+            </div>
+
+        <span class="timeline__iconContainer">
+                            <span title="Ce cours n&#039;est pas encore certifiant." class="roundIcon roundIcon--disabled">
+                    <i class="icon-trophy roundIcon__icon"></i>
+                </span>
+                    </span>
+
+        </div>
+    </nav>
+        </div>
+    </div>
+    </div>
+
+        
+        <div class="centered">
+            <div class="contentWithSidebar  spacer  js-contentWithSidebar" >
+                <main class="contentWithSidebar__content" >
+                        
+
+        <div class="relative js-sidebar-container">
+        <div class="static">
+    <h2 itemprop="name" data-part-title="Le modèle DAO" class="part-title">Le modèle DAO</h2>
+
+    <section class="row space-bottom js-desktop-sticky-container">
+        <div class="col9 col11-s col__small-padding--right">
+
+                <div class="tooltipMessage tooltipMessage--noArrow">
+        <i class="tooltipMessage__icon  icon-lock"></i>
+        <a href="https://openclassrooms.com/login" class="js-popin-activator" data-popin-selector="#popin-log-in" >Connectez-vous</a> ou <a href="https://openclassrooms.com/register" class="js-popin-activator" data-popin-selector="#popin-sign-in" >inscrivez-vous</a> pour bénéficier de toutes les fonctionnalités de ce cours !
+    </div>
+
+            <div
+                itemprop="articleBody"
+                data-page-indentifier="/courses/creez-votre-application-web-avec-java-ee/le-modele-dao"
+                class="js-isRestrictablePage course-content js-course-container js-smilize "
+
+                                    data-video-blocked-wrapper="<a href='https://openclassrooms.com/login#popin-log-in' class='js-popin-activator'>"
+                            >
+
+                <p id="r-2136649" data-claire-element-id="2353696">Nous avons fait un grand pas en avant en découvrant la technologie JDBC, mais il est déjà nécessaire de nous poser certaines questions. Dans ce chapitre, nous allons :</p><ul id="r-2136656" data-claire-element-id="2353703"><li id="r-2136651" data-claire-element-id="2353698"><p id="r-2136650" data-claire-element-id="2353697">lister les problèmes liés à la liaison directe entre nos objets métier et notre base de données ;</p></li><li id="r-2136653" data-claire-element-id="2353700"><p id="r-2136652" data-claire-element-id="2353699">découvrir et mettre en place le <em>design pattern</em> DAO, qui répond parfaitement à cette problématique ;</p></li><li id="r-2136655" data-claire-element-id="2353702"><p id="r-2136654" data-claire-element-id="2353701">apprendre à l'intégrer proprement dans notre application web.</p></li></ul><h3 id="r-2136690" data-claire-element-id="3312477">Objectifs</h3><h4 id="r-2136679" data-claire-element-id="3312473">Inconvénients de notre solution</h4><p id="r-2136657" data-claire-element-id="2353704">Dans le précédent chapitre, nous avons uniquement testé JDBC dans un bac à sable, sans vraiment nous soucier de son intégration dans le cas d'une vraie application. Nous avons certes pris la peine de découper un minimum notre exemple, en séparant nettement le trio vue, contrôleur et modèle, mais ce n'est pas suffisant.</p><p id="r-2136658" data-claire-element-id="2353705">Voilà à la figure suivante une représentation globale de ce que nous avons actuellement, avec en rouge les objets de notre couche modèle directement en contact avec le système de stockage.</p><figure id="r-2136661" data-claire-element-id="3312472"><img id="r-2136659" data-claire-element-id="2353706" src="../../../user.oc-static.com/files/395001_396000/395090.png" alt="Image utilisateur" /></figure><div id="r-2136663" data-claire-element-id="2353710" data-claire-semantic="question"><p id="r-2136662" data-claire-element-id="2353709">Pourquoi n'est-ce pas suffisant ? La gestion des données est bien effectuée dans le modèle !</p></div><p id="r-2136664" data-claire-element-id="2353711">En effet, en théorie MVC est ainsi bien respecté. Mais dans la pratique, dans une application qui est constituée de plusieurs centaines voire milliers de classes, cela constitue un réel problème de conception : si nous codons une vraie application de cette manière, nous lions alors très fortement - pour ne pas dire mélangeons - le code responsable des traitements métier au code responsable du stockage des données. Si bien qu'en fin de compte, il devient impossible d'exécuter séparément l'un ou l'autre. Et ceci est fâcheux pour plusieurs raisons :</p><ul id="r-2136674" data-claire-element-id="2353721"><li id="r-2136671" data-claire-element-id="2353718"><p id="r-2136665" data-claire-element-id="2353712">il est impossible de mettre en place des tests unitaires :</p><ul id="r-2136670" data-claire-element-id="2353717"><li id="r-2136667" data-claire-element-id="2353714"><p id="r-2136666" data-claire-element-id="2353713">impossible de tester le code métier de l'application sans faire intervenir le stockage (BDD, etc.) ;</p></li><li id="r-2136669" data-claire-element-id="2353716"><p id="r-2136668" data-claire-element-id="2353715">impossible de ne tester que le code relatif au stockage des données, obligation de lancer le code métier.</p></li></ul></li><li id="r-2136673" data-claire-element-id="2353720"><p id="r-2136672" data-claire-element-id="2353719">il est impossible de changer de mode de stockage. Que ce soit vers un autre SGBD, voire vers un système complètement différent d'une base de données, cela impliquerait une réécriture complète de tout le modèle, car le code métier est mêlé avec et dépendant du code assurant le stockage.</p></li></ul><p id="r-2136675" data-claire-element-id="2353722">Vous trouverez toujours quelqu'un qui vous dira que si chaque composant n'est pas testable séparément ce n'est pas un drame, quelqu'un d'autre qui vous dira que lorsque l'on crée une application on ne change pas de mode de stockage du jour au lendemain, etc. Ces gens-là, je vous conseille de ne les écouter que d'une oreille : écrire un code orienté objet et bien organisé est une excellente pratique, et c'est ce que je vais vous enseigner dans cette partie du cours.</p><p id="r-2136676" data-claire-element-id="2353723">Je pourrais continuer la liste des inconvénients, en insistant notamment sur le fait qu'un code mélangé dans une couche &quot;modèle&quot; monolithique est bien plus difficile à maintenir et à faire évoluer qu'un code proprement découpé et organisé, mais je pense que vous avez déjà compris et êtes déjà convaincus. ;)</p><aside id="r-2136678" data-claire-element-id="2353725" data-claire-semantic="information"><p id="r-2136677" data-claire-element-id="2353724">Pour information, ce constat n'est absolument pas limité à la plate-forme Java. Vous trouverez des solutions qui répondent à ce besoin dans n'importe quelle technologie web, citons par exemple les « <em>fat model</em> » avec Ruby on Rails.</p></aside><h4 id="r-2136689" data-claire-element-id="3312476">Isoler le stockage des données</h4><p id="r-2136680" data-claire-element-id="2353727">L'idée est qu'au lieu de faire communiquer directement nos objets métier avec la base de données, ou le système de fichiers, ou les <em>webservices</em>, ou peu importe ce qui fait office de système de stockage, ceux-ci vont parler avec la couche DAO. Et c'est cette couche DAO qui va ensuite de son côté communiquer avec le système de stockage.</p><p id="r-2136681" data-claire-element-id="2353728">L'objectif de l'architecture que nous devons mettre en place n'est donc rien d'autre que l'isolement pur et simple du code responsable du stockage des données. Nous souhaitons en effet littéralement encapsuler ce code dans une couche plus ou moins hermétique, de laquelle aucune information concernant le mode de stockage utilisé ne s'échappe. En d'autres termes, notre objectif est de cacher la manière dont sont stockées les données au reste de l'application.</p><p id="r-2136682" data-claire-element-id="2353729">Voilà cette fois une représentation de ce que nous souhaitons mettre en place (voir figure suivante).</p><figure id="r-2136685" data-claire-element-id="3312475"><img id="r-2136683" data-claire-element-id="2353730" src="../../../user.oc-static.com/files/395001_396000/395088.png" alt="Image utilisateur" /></figure><p id="r-2136686" data-claire-element-id="2353733">Vous visualisez bien que seul le DAO est en contact avec le système de stockage, et donc que seul lui en a connaissance. Le revers de la médaille, si c'en est un, c'est qu'afin de réaliser le cloisonnement du stockage des données, la création d'une nouvelle couche est nécessaire, c'est-à-dire l'écriture de codes supplémentaires et répétitifs.</p><aside id="r-2136688" data-claire-element-id="2353735" data-claire-semantic="information"><p id="r-2136687" data-claire-element-id="2353734">En résumé, l'objectif du pattern DAO tient en une phrase : il permet de faire la distinction entre les données auxquelles vous souhaitez accéder, et la manière dont elles sont stockées.</p></aside><h3 id="r-624453" data-claire-element-id="3312481">Principe</h3><h4 id="r-2136704" data-claire-element-id="3312480">Constitution</h4><p id="r-2136691" data-claire-element-id="2353738">Le principe du pattern DAO est de séparer la couche modèle d'une application en deux sous-couches distinctes :</p><ul id="r-2136696" data-claire-element-id="2353743"><li id="r-2136693" data-claire-element-id="2353740"><p id="r-2136692" data-claire-element-id="2353739">une couche gérant les traitements métier appliqués aux données, souvent nommée couche service ou métier. Typiquement, tout le travail de validation réalisé dans nos objets <strong>InscriptionForm</strong> et <strong>ConnexionForm</strong> en fait partie ;</p></li><li id="r-2136695" data-claire-element-id="2353742"><p id="r-2136694" data-claire-element-id="2353741">une couche gérant le stockage des données, logiquement nommée couche de données. Il s'agit là des opérations classiques de stockage : la création, la lecture, la modification et la suppression. Ces quatre tâches basiques sont souvent raccourcies à l'anglaise en <em>CRUD</em>.</p></li></ul><p id="r-2136697" data-claire-element-id="2353744">Pour réaliser efficacement une telle opération, il est nécessaire d'encapsuler les exceptions spécifiques au mode de stockage dans des exceptions personnalisées et propres à la couche DAO. Dans notre cas par exemple, nous allons devoir faire en sorte que les exceptions propres à SQL ou à JDBC ne soient pas vues comme telles par nos objets métier, mais uniquement comme des exceptions émanant de la « boîte noire » qu'est notre DAO.</p><p id="r-2136698" data-claire-element-id="2353745">De même, il va falloir masquer le code responsable du stockage au code « extérieur », et l'exposer uniquement via des interfaces. Dans notre cas, il s'agira donc de faire en sorte que le code basé sur JDBC soit bien à l'abri dans des implémentations de DAO, et que nos objets métier n'aient connaissance que des interfaces qui les décrivent.</p><p id="r-2136699" data-claire-element-id="2353746">Reprenons le schéma précédent et zoomons sur la couche DAO (voir la figure suivante).</p><figure id="r-2136702" data-claire-element-id="3312479"><img id="r-2136700" data-claire-element-id="2353747" src="../../../user.oc-static.com/files/395001_396000/395092.png" alt="Image utilisateur" /></figure><p id="r-2136703" data-claire-element-id="2353750">La couche modèle est constituée de la couche métier (en rouge) et de la couche données (en vert). La couche métier n'a connaissance que des interfaces décrivant les objets de la couche données. Ainsi, peu importe le système de stockage final utilisé, du point de vue du code métier les méthodes à appeler ne changent pas, elles seront toujours celles décrites dans l'interface. C'est uniquement l'implémentation qui sera spécifique au mode de stockage.</p><h4 id="r-2136708" data-claire-element-id="2353755">Intégration</h4><p id="r-2136705" data-claire-element-id="2353752">Ne soyez pas leurrés par le schéma précédent, la couche DAO ne va pas seulement contenir les interfaces et implémentations des méthodes <em>CRUD</em>. Elle va également renfermer quelques classes dédiées à l'isolement des concepts liés au mode de stockage, comme les exceptions dont nous avons déjà brièvement parlé, mais également le chargement du driver et l'obtention d'une connexion. Pour ce faire, nous allons créer une <em>Factory</em> (une fabrique) qui sera unique dans l'application, ne sera instanciée que si les informations de configuration sont correctes et aura pour rôle de fournir les implémentations des différents DAO.</p><p id="r-2136706" data-claire-element-id="2353753">En ce qui concerne la relation entre la couche métier et le DAO, c'est très simple : les objets métier appellent les méthodes <em>CRUD</em>, qui ont pour rôle de communiquer avec le système de stockage et de peupler les beans représentant les données.</p><p id="r-2136707" data-claire-element-id="2353754">Assez gambergé, du code vaut mieux qu'un long discours ! ;)</p><h3 id="r-2136910" data-claire-element-id="3312484">Création</h3><p id="r-2136709" data-claire-element-id="2353757">Pour commencer, nous allons laisser tomber le bac à sable dans lequel nous avons évolué dans le chapitre précédent, et allons reprendre les systèmes d'inscription et de connexion que nous avions utilisés jusqu'à présent. Je vous demande donc de supprimer de votre projet les classes <strong>GestionTestJDBC.java</strong> et <strong>TestJDBC.java</strong> ainsi que la JSP <strong>test_jdbc.jsp</strong>, car nous n'allons pas les réutiliser.</p><h4 id="r-2136734" data-claire-element-id="2838152">Modification de la table Utilisateur</h4><p id="r-2136710" data-claire-element-id="2353758">En ce qui concerne la BDD, nous allons conserver la base de données <strong>bdd_sdzee</strong> et le compte <strong>java</strong> que nous y avons créé, mais allons modifier la table d'exemple <strong>Utilisateur</strong>. Plus précisément, nous allons modifier le type du champ <strong>mot_de_passe</strong>.</p><div id="r-2136712" data-claire-element-id="2353760" data-claire-semantic="question"><p id="r-2136711" data-claire-element-id="2353759">Pourquoi ? Qu'est-ce qui ne va pas avec le type utilisé dans notre bac à sable ?</p></div><p id="r-2136713" data-claire-element-id="2353761">Je ne vous en ai volontairement pas parlé jusqu'ici pour ne pas compliquer votre apprentissage de JDBC, mais maintenant que vous êtes à l'aise, discutons-en ! :)</p><p id="r-2136714" data-claire-element-id="2353762">Dans l'exemple du chapitre précédent, j'ai choisi de déléguer le chiffrement du mot de passe de l'utilisateur à la fonction <code>MD5()</code> de MySQL afin de ne pas encombrer inutilement le code. Seulement c'est une mauvaise pratique, notamment parce que :</p><ul id="r-2136719" data-claire-element-id="2353767"><li id="r-2136716" data-claire-element-id="2353764"><p id="r-2136715" data-claire-element-id="2353763">d'une part, c'est une fonction propre à MySQL. Si vous optez pour un autre SGBD, voire pour un autre système de stockage, vous n'êtes pas certains de pouvoir lui trouver un équivalent ;</p></li><li id="r-2136718" data-claire-element-id="2353766"><p id="r-2136717" data-claire-element-id="2353765">d'autre part, et c'est là le point le plus important, c'est un algorithme rapide et peu sûr qu'il est déconseillé d'utiliser pour la sécurisation de mots de passe.</p></li></ul><p id="r-2136720" data-claire-element-id="2353768">Je ne vais pas vous faire un cours de cryptographie, vous trouverez à ce sujet d'excellentes bases sur le Site du Zéro et plus largement sur le web. Sachez simplement que pour sécuriser de manière efficace les mots de passe de vos utilisateurs, il est préférable aujourd'hui :</p><ul id="r-2136727" data-claire-element-id="2353775"><li id="r-2136722" data-claire-element-id="2353770"><p id="r-2136721" data-claire-element-id="2353769">d'utiliser un algorithme de <em>hashage</em> relativement fort et lent. Typiquement, une des variantes de SHA-2 (SHA-224, SHA-256, SHA-384 ou SHA-512) est un excellent choix ;</p></li><li id="r-2136724" data-claire-element-id="2353772"><p id="r-2136723" data-claire-element-id="2353771">d'associer au mot de passe un « grain de sel » aléatoire et suffisamment long : 1) pour faire en sorte que deux mots de passe identiques aient une empreinte différente ; 2) afin d'empêcher un éventuel pirate d'utiliser des structures de données comme les fameuses <em>rainbow tables</em> pour déchiffrer rapidement une empreinte ;</p></li><li id="r-2136726" data-claire-element-id="2353774"><p id="r-2136725" data-claire-element-id="2353773">d'itérer récursivement la fonction de <em>hashage</em> un très grand nombre de fois, mais surtout pas uniquement sur l'empreinte résultant du <em>hashage</em> précédent afin de ne pas augmenter les risques de collisions, en veillant bien à réintroduire à chaque itération des données comme le sel et le mot de passe d'origine, avec pour objectif de rendre le travail d'un éventuel pirate autant de fois plus lent.</p></li></ul><p id="r-2136728" data-claire-element-id="2353776">Bref, vous l'aurez compris, pour un débutant c'est presque mission impossible de protéger efficacement les mots de passe de ses utilisateurs ! Heureusement, il existe des solutions simplifiant grandement cette opération, et notre choix va se porter sur <a href="http://www.jasypt.org/index.html">la bibliothèque Jasypt</a>. En quelques mots, il s'agit d'une surcouche aux API de cryptographie existant nativement dans Java, qui fournit des objets et méthodes très faciles d'accès afin de chiffrer des données.</p><div id="r-2136730" data-claire-element-id="2353778" data-claire-semantic="question"><p id="r-2136729" data-claire-element-id="2353777">Très bien, mais en quoi cela va-t-il impacter le type de notre champ <strong>mot_de_passe</strong> dans notre table <strong>Utilisateur</strong> ?</p></div><p id="r-2136731" data-claire-element-id="2353779">Eh bien comme je vous l'ai dit, nous n'allons plus utiliser l'algorithme MD5, mais lui préférer cette fois SHA-256. Le premier générait des empreintes longues de 32 caractères, voilà pourquoi nous les stockions dans un champ SQL de taille 32. Le second génère des empreintes longues de 64 caractères, que Jasypt encode pour finir à l'aide de <a href="http://fr.wikipedia.org/wiki/Base64">Base64</a> en chaînes longues de 56 caractères. Celles-ci ne vont donc pas rentrer dans le champ <strong>mot_de_passe</strong> que nous avions défini, et nous devons donc le modifier via la commande suivante à exécuter depuis l'invite de commandes de votre serveur MySQL :</p><pre id="r-2136732" data-claire-element-id="2838151"><code data-claire-semantic="sql">ALTER TABLE Utilisateur CHANGE mot_de_passe mot_de_passe CHAR(56) NOT NULL;</code></pre><p id="r-2136733" data-claire-element-id="2353781">Bien entendu, avant d'effectuer cette modification, vous n'oublierez pas de vous positionner sur la bonne base en exécutant la commande <code>USE bdd_sdzee;</code> après connexion à votre serveur MySQL.</p><h4 id="r-2136744" data-claire-element-id="2838154">Reprise du bean Utilisateur</h4><p id="r-2136735" data-claire-element-id="2353783">Nous disposons déjà d'un bean <strong>Utilisateur</strong>, sur lequel nous avons travaillé jusqu'à présent, mais celui-ci ne contient pour l'instant qu'une adresse mail, un nom et un mot de passe. Afin qu'il devienne utilisable pour effectuer la correspondance avec les données stockées dans notre table <strong>Utilisateur</strong>, il nous faut réaliser quelques ajouts :</p><pre id="r-2136736" data-claire-element-id="2838153"><code data-claire-semantic="java">package com.sdzee.beans;
+
+import java.sql.Timestamp;
+
+public class Utilisateur {
+
+    private Long      id;
+    private String    email;
+    private String    motDePasse;
+    private String    nom;
+    private Timestamp dateInscription;
+
+    public Long getId() {
+        return id;
+    }
+    public void setId( Long id ) {
+        this.id = id;
+    }
+
+    public void setEmail( String email ) {
+        this.email = email;
+    }
+    public String getEmail() {
+        return email;
+    }
+
+    public void setMotDePasse( String motDePasse ) {
+        this.motDePasse = motDePasse;
+    }
+    public String getMotDePasse() {
+        return motDePasse;
+    }
+
+    public void setNom( String nom ) {
+        this.nom = nom;
+    }
+    public String getNom() {
+        return nom;
+    }
+
+    public Timestamp getDateInscription() {
+        return dateInscription;
+    }
+    public void setDateInscription( Timestamp dateInscription ) {
+        this.dateInscription = dateInscription;
+    }
+}</code></pre><p id="r-2136737" data-claire-element-id="2353785">C'est simple, nous avons simplement créé deux nouvelles propriétés <strong>id</strong> et <strong>dateInscription</strong> stockant logiquement l'id et la date d'inscription, et nous disposons maintenant d'un bean qui représente parfaitement une ligne de notre table <strong>Utilisateur</strong>.</p><div id="r-2136739" data-claire-element-id="2353787" data-claire-semantic="question"><p id="r-2136738" data-claire-element-id="2353786">Pourquoi avoir utilisé un objet <code>Long</code> pour stocker l'<strong>id</strong> ?</p></div><p id="r-2136740" data-claire-element-id="2353788">En effet, nous aurions pu a priori nous contenter d'un type primitif <code>long</code>. Seulement dans une base de données les valeurs peuvent être initialisées à <code>NULL</code>, alors qu'un type primitif en Java ne peut pas valoir <code>null</code>. Voilà pourquoi il est déconseillé de travailler directement avec les types primitifs, et de leur préférer les objets « enveloppeurs » (les fameux <em>Wrapper</em>) : ceux-ci peuvent en effet être initialisés à <code>null</code>.</p><aside id="r-2136742" data-claire-element-id="2353790" data-claire-semantic="information"><p id="r-2136741" data-claire-element-id="2353789">En l'occurrence, les champs de notre table SQL se voient tous appliquer une contrainte <code>NOT NULL</code>, il n'y a donc pas de risque de valeurs nulles. Cependant, c'est une bonne pratique de toujours utiliser les objets <em>Wrapper</em> dans les beans dont les propriétés correspondent à des champs d'une base de données, afin d'éviter ce genre d'erreurs !</p></aside><p id="r-2136743" data-claire-element-id="2353791">Maintenant que nous avons créé les différentes représentations d'un utilisateur dans notre application, nous allons pouvoir nous attaquer au fameux cloisonnement de la couche de données, autrement dit à la création à proprement parler de notre DAO.</p><h4 id="r-2136757" data-claire-element-id="2838157">Création des exceptions du DAO</h4><p id="r-2136745" data-claire-element-id="2353793">Afin de cacher la nature du mode de stockage des données au reste de l'application, c'est une bonne pratique de masquer les exceptions spécifiques (celles qui surviennent au <em>runtime</em>, c'est-à-dire lors de l'exécution) derrière des exceptions propres au DAO. Je m'explique. Typiquement, nous allons dans notre application avoir besoin de gérer deux types d'exceptions concernant les données :</p><ul id="r-2136750" data-claire-element-id="2353798"><li id="r-2136747" data-claire-element-id="2353795"><p id="r-2136746" data-claire-element-id="2353794">celles qui sont liées à la configuration du DAO et du driver JDBC ;</p></li><li id="r-2136749" data-claire-element-id="2353797"><p id="r-2136748" data-claire-element-id="2353796">celles qui sont liées à l'interaction avec la base de données.</p></li></ul><p id="r-2136751" data-claire-element-id="2353799">Dans la couche modèle actuelle de notre système d'inscription, nous nous apprêtons à introduire le stockage des données. Puisque nous avons décidé de suivre le modèle de conception DAO, nous n'allons pas réaliser les manipulations sur la base de données directement depuis les traitements métier, nous allons appeler des méthodes de notre DAO, qui à leur tour la manipuleront. Nous obtiendrons ainsi un modèle divisé en deux sous-couches : une couche métier et une couche de données.</p><p id="r-2136752" data-claire-element-id="2353800">Seulement vous vous en doutez, lors d'une tentative de lecture ou d'écriture dans la base de données, il peut survenir de nombreux types d'incidents : des soucis de connexions, des requêtes incorrectes, des données absentes, la base qui ne répond plus, etc. Et à chacune de ces erreurs correspond une exception SQL ou JDBC particulière. Eh bien notre objectif ici, c'est de faire en sorte que depuis l'extérieur de la couche de données, aucune de ces exceptions ne sorte directement sous cette forme.</p><p id="r-2136753" data-claire-element-id="2353801">Pour ce faire, c'est extrêmement simple, il nous suffit de créer une exception personnalisée qui va encapsuler les exceptions liées à SQL ou JDBC. Voici donc le code de nos deux nouvelles exceptions :</p><pre id="r-2136754" data-claire-element-id="2838155"><code data-claire-semantic="java">package com.sdzee.dao;
+
+public class DAOException extends RuntimeException {
+    /*
+     * Constructeurs
+     */
+    public DAOException( String message ) {
+        super( message );
+    }
+
+    public DAOException( String message, Throwable cause ) {
+        super( message, cause );
+    }
+
+    public DAOException( Throwable cause ) {
+        super( cause );
+    }
+}</code></pre><pre id="r-2136755" data-claire-element-id="2838156"><code data-claire-semantic="java">package com.sdzee.dao;
+
+public class DAOConfigurationException extends RuntimeException {
+    /*
+     * Constructeurs
+     */
+    public DAOConfigurationException( String message ) {
+        super( message );
+    }
+
+    public DAOConfigurationException( String message, Throwable cause ) {
+        super( message, cause );
+    }
+
+    public DAOConfigurationException( Throwable cause ) {
+        super( cause );
+    }
+}</code></pre><p id="r-2136756" data-claire-element-id="2353804">Comme vous pouvez le constater, il s'agit uniquement de classes héritant de <code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/RuntimeException.html">RuntimeException</a></code>, qui se contentent de redéfinir les constructeurs. Ne vous inquiétez pas si vous ne saisissez pas encore bien pourquoi nous avons besoin de ces deux exceptions, vous allez très vite vous en rendre compte dans les codes qui suivent !</p><h4 id="r-2136767" data-claire-element-id="2838159">Création d'un fichier de configuration</h4><p id="r-2136758" data-claire-element-id="2353806">Dans le chapitre précédent, nous avions directement stocké en dur l'adresse et les identifiants de connexion à notre base de données, dans le code Java de notre objet. C'était pratique pour l'exemple, mais vous vous doutez bien que nous n'allons pas procéder de manière aussi brute dans une vraie application.</p><p id="r-2136759" data-claire-element-id="2353807">Afin de séparer les informations de configuration du reste de l’application, il est recommandé de les placer dans un endroit accessible par le code Java et aisément modifiable à la main. Une bonne pratique très courante dans ce genre de cas est la mise en place d'un fichier <em>properties</em>, qui n'est rien d'autre qu'un fichier texte dont les lignes respectent un certain format.</p><p id="r-2136760" data-claire-element-id="2353808">Nous allons donc créer un fichier nommé <strong>dao.properties</strong>, que nous allons placer dans le package <code>com.sdzee.dao</code> :</p><pre id="r-2136761" data-claire-element-id="2838158"><code data-claire-semantic="Fichier">url = jdbc:mysql://localhost:3306/bdd_sdzee
+driver = com.mysql.jdbc.Driver
+nomutilisateur = java
+motdepasse = $dZ_£E</code></pre><p id="r-2136762" data-claire-element-id="2353810">Vous retrouvez dans ce fichier les informations de connexion à notre base. Chacune d'elles est associée à une <strong>clé</strong>, représentée par la chaîne de caractères placée à gauche du signe égal sur chacune des lignes.</p><aside id="r-2136764" data-claire-element-id="2353812" data-claire-semantic="warning"><p id="r-2136763" data-claire-element-id="2353811">Puisque ce fichier contient des informations confidentielles, comme le mot de passe de connexion à la base de données, il est hors de question de le placer dans un répertoire public de l'application ; il est impératif de le placer sous <strong>/WEB-INF</strong> ou un de ses sous-répertoires ! Si vous le mettiez par exemple directement à la racine, sous le répertoire <strong>WebContent</strong> d'Eclipse, alors ce fichier deviendrait accessible depuis le navigateur du client...</p></aside><aside id="r-2136766" data-claire-element-id="2353814" data-claire-semantic="information"><p id="r-2136765" data-claire-element-id="2353813">Dans une vraie application, les fichiers de configuration ne sont pas stockés au sein de l'application web, mais en dehors. Il devient ainsi très facile d'y modifier une valeur sans avoir à naviguer dans le contenu de l'application. En outre, mais nous étudierons cela en annexe de ce cours, cela permet de ne pas avoir besoin de redéployer l'application à chaque modification, et de se contenter de simplement redémarrer le serveur. Toutefois dans notre cas, nous n'en sommes qu'au stade de l'apprentissage et n'allons donc pas nous embêter avec ces considérations : placer le fichier sous <strong>/WEB-INF</strong> nous convient très bien !</p></aside><h4 id="r-2136814" data-claire-element-id="2838161">Création d'une Factory</h4><p id="r-2136768" data-claire-element-id="2353816">Nous arrivons maintenant à une étape un peu plus délicate de la mise en place de notre couche de données. Il nous faut créer la <strong>Factory</strong> qui va être en charge de l'instanciation des différents DAO de notre application. Alors certes, pour le moment nous n'avons qu'une seule table en base et donc un seul DAO à mettre en place. Mais rappelez-vous : l'important est de créer un code facile à maintenir et à faire évoluer. En outre, maintenant que nous avons placé nos informations de connexion dans un fichier à part, cette <strong>Factory</strong> va être responsable de :</p><ul id="r-2136775" data-claire-element-id="2353823"><li id="r-2136770" data-claire-element-id="2353818"><p id="r-2136769" data-claire-element-id="2353817">lire les informations de configuration depuis le fichier <em>properties</em> ;</p></li><li id="r-2136772" data-claire-element-id="2353820"><p id="r-2136771" data-claire-element-id="2353819">charger le driver JDBC du SGBD utilisé ;</p></li><li id="r-2136774" data-claire-element-id="2353822"><p id="r-2136773" data-claire-element-id="2353821">fournir une connexion à la base de données.</p></li></ul><p id="r-2136776" data-claire-element-id="2353824">Je vous donne le code, relativement bref, et je vous commente le tout ensuite :</p><pre id="r-2136777" data-claire-element-id="2838160"><code data-claire-semantic="java">package com.sdzee.dao;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
+
+public class DAOFactory {
+
+    private static final String FICHIER_PROPERTIES       = &quot;/com/sdzee/dao/dao.properties&quot;;
+    private static final String PROPERTY_URL             = &quot;url&quot;;
+    private static final String PROPERTY_DRIVER          = &quot;driver&quot;;
+    private static final String PROPERTY_NOM_UTILISATEUR = &quot;nomutilisateur&quot;;
+    private static final String PROPERTY_MOT_DE_PASSE    = &quot;motdepasse&quot;;
+
+    private String              url;
+    private String              username;
+    private String              password;
+
+    DAOFactory( String url, String username, String password ) {
+        this.url = url;
+        this.username = username;
+        this.password = password;
+    }
+
+    /*
+     * Méthode chargée de récupérer les informations de connexion à la base de
+     * données, charger le driver JDBC et retourner une instance de la Factory
+     */
+    public static DAOFactory getInstance() throws DAOConfigurationException {
+        Properties properties = new Properties();
+        String url;
+        String driver;
+        String nomUtilisateur;
+        String motDePasse;
+
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        InputStream fichierProperties = classLoader.getResourceAsStream( FICHIER_PROPERTIES );
+
+        if ( fichierProperties == null ) {
+            throw new DAOConfigurationException( &quot;Le fichier properties &quot; + FICHIER_PROPERTIES + &quot; est introuvable.&quot; );
+        }
+
+        try {
+            properties.load( fichierProperties );
+            url = properties.getProperty( PROPERTY_URL );
+            driver = properties.getProperty( PROPERTY_DRIVER );
+            nomUtilisateur = properties.getProperty( PROPERTY_NOM_UTILISATEUR );
+            motDePasse = properties.getProperty( PROPERTY_MOT_DE_PASSE );
+        } catch ( IOException e ) {
+            throw new DAOConfigurationException( &quot;Impossible de charger le fichier properties &quot; + FICHIER_PROPERTIES, e );
+        }
+
+        try {
+            Class.forName( driver );
+        } catch ( ClassNotFoundException e ) {
+            throw new DAOConfigurationException( &quot;Le driver est introuvable dans le classpath.&quot;, e );
+        }
+
+        DAOFactory instance = new DAOFactory( url, nomUtilisateur, motDePasse );
+        return instance;
+    }
+
+    /* Méthode chargée de fournir une connexion à la base de données */
+     /* package */ Connection getConnection() throws SQLException {
+        return DriverManager.getConnection( url, username, password );
+    }
+
+    /*
+     * Méthodes de récupération de l'implémentation des différents DAO (un seul
+     * pour le moment)
+     */
+    public UtilisateurDao getUtilisateurDao() {
+        return new UtilisateurDaoImpl( this );
+    }
+}</code></pre><p id="r-2136778" data-claire-element-id="2353826">Pour commencer, analysons la méthode <code>getInstance()</code> qui, comme son nom l'indique, a pour principal objectif d'instancier la classe <strong>DAOFactory</strong>. En premier lieu, remarquez qu'il s'agit là d'une méthode statique. Il n'y a ici rien de compliqué, ça tient tout simplement du bon sens : si nous n'avions pas déclaré cette méthode <code>static</code>, alors nous ne pourrions pas l'appeler avant d'avoir instancié la classe <strong>DAOFactory</strong>... Alors que c'est justement là le but de la méthode !</p><div id="r-2136780" data-claire-element-id="2353828" data-claire-semantic="question"><p id="r-2136779" data-claire-element-id="2353827">Pourquoi avoir utilisé une telle méthode statique, et pas simplement un constructeur public ?</p></div><p id="r-2136781" data-claire-element-id="2353829">En effet, la plupart du temps lorsque vous souhaitez créer un objet, vous vous contentez d'appeler un de ses constructeurs publics. Typiquement, pour créer un objet de type A, vous écrivez <code>A monObjet = new A();</code> . La limite de cette technique, c'est qu'à chaque appel un nouvel objet va être créé quoi qu'il arrive.</p><p id="r-2136782" data-claire-element-id="2353830">Dans notre cas, ce n'est pas ce que nous souhaitons ! Je vous l'ai déjà expliqué, nous voulons instancier notre <strong>DAOFactory</strong> uniquement sous certaines conditions :</p><ul id="r-2136789" data-claire-element-id="2353837"><li id="r-2136784" data-claire-element-id="2353832"><p id="r-2136783" data-claire-element-id="2353831">si le fichier <strong>dao.properties</strong> est accessible ;</p></li><li id="r-2136786" data-claire-element-id="2353834"><p id="r-2136785" data-claire-element-id="2353833">si les données qu'il contient sont valides ;</p></li><li id="r-2136788" data-claire-element-id="2353836"><p id="r-2136787" data-claire-element-id="2353835">si le driver JDBC est bien présent dans l'application.</p></li></ul><p id="r-2136790" data-claire-element-id="2353838">Voilà pourquoi nous utilisons une méthode statique et pas un simple constructeur. Pour information, sachez que c'est une pratique courante dans énormément de projets et de bibliothèques. Voilà tout pour cet aparté, revenons à notre analyse du code.</p><p id="r-2136791" data-claire-element-id="2353839">À la ligne 34, nous initialisons un objet <code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Properties.html">Properties</a></code> qui, comme son nom l'indique, va nous permettre de gérer notre fichier de configuration. Ensuite, nous procédons à l'ouverture du fichier <strong>dao.properties</strong> aux lignes 40 et 41.</p><div id="r-2136793" data-claire-element-id="2353841" data-claire-semantic="question"><p id="r-2136792" data-claire-element-id="2353840">Qu'est-ce que c'est que cet objet <code>ClassLoader</code> et cette méthode <code>getResourceAsStream()</code> ? Pourquoi ne pas avoir utilisé un traditionnel <code>FileInputStream</code> pour ouvrir notre fichier <em>properties</em> ?</p></div><p id="r-2136794" data-claire-element-id="2353842">En effet, nous aurions pu confier cette tâche à un simple <code>FileInputStream</code>, seulement il nous aurait alors fallu :</p><ul id="r-2136799" data-claire-element-id="2353847"><li id="r-2136796" data-claire-element-id="2353844"><p id="r-2136795" data-claire-element-id="2353843">donner le chemin complet vers le fichier dans le système, pour procéder à l'ouverture du flux ;</p></li><li id="r-2136798" data-claire-element-id="2353846"><p id="r-2136797" data-claire-element-id="2353845">gérer une éventuelle <code>FileNotFoundException</code> dans un bloc <code>catch</code>, et procéder à la fermeture du flux dans un bloc <code>finally</code>.</p></li></ul><p id="r-2136800" data-claire-element-id="2353848">En lieu et place de cette technique, j'utilise ici une méthode plus sophistiquée à première vue mais qui en réalité est très simple : elle consiste à appeler la méthode <code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ClassLoader.html#getResourceAsStream%28java.lang.String%29">getResourceAsStream()</a></code> de l'objet <code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ClassLoader.html">ClassLoader</a></code>, qui se charge pour nous d'ouvrir le flux demandé et de retourner <code>null</code> en cas d'erreur. Comme vous pouvez l'observer dans le code, nous récupérons le <code>ClassLoader</code> depuis le <em>thread</em> courant grâce à la méthode <code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Thread.html#getContextClassLoader%28%29">getContextClassLoader()</a></code>.</p><aside id="r-2136802" data-claire-element-id="2353850" data-claire-semantic="information"><p id="r-2136801" data-claire-element-id="2353849">Nous aurions pu écrire le tout en une ligne, mais la décomposition en deux actions distinctes vous permet de comprendre plus facilement de quoi il s'agit. Si vous n'êtes pas familiers avec les objets manipulés ici, qui font partie de la plate-forme Java SE, la Javadoc est là pour vous renseigner : n'hésitez pas à parcourir les liens que je vous donne ! ;)</p></aside><p id="r-2136803" data-claire-element-id="2353851">Une fois l'appel à la méthode <code>getResourceAsStream()</code> réalisé, nous vérifions à la ligne 43 si elle a retourné <code>null</code>, ce qui signifierait alors que le flux n'a pas pu être ouvert. Si tel est le cas, nous envoyons une exception personnalisée <strong>DAOConfigurationException</strong> stipulant que le fichier n'a pas été trouvé.</p><p id="r-2136804" data-claire-element-id="2353852">Nous procédons ensuite au chargement des propriétés contenues dans le fichier à la ligne 48, puis à leur lecture aux lignes 49 à 52. Je vous laisse parcourir les documentations des méthodes <code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Properties.html#load%28java.io.InputStream%29">Properties.load()</a></code> et <code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Properties.html#getProperty%28java.lang.String%29">Properties.getProperty()</a></code> si vous n'êtes pas à l'aise avec ces manipulations. Après tout, ceci n'est pas l'objet de ce cours et vous devriez déjà connaître cette fonctionnalité si vous avez correctement étudié Java SE ! ;)</p><p id="r-2136805" data-claire-element-id="2353853">Observez alors attentivement ce que nous effectuons au niveau du bloc <code>catch</code> : nous interceptons l'exception éventuellement envoyée en cas d'erreur lors du chargement des propriétés (format du fichier <em>properties</em> incorrect), et l'encapsulons dans une exception <strong>DAOConfigurationException</strong>. Vous devez ici commencer à mieux comprendre pourquoi nous avons pris la peine de créer des exceptions personnalisées, mais ne vous inquiétez pas si vous n'avez pas encore bien saisi, nous y reviendrons plus tard.</p><p id="r-2136806" data-claire-element-id="2353854">Une fois les informations lues avec succès, nous tentons de charger le driver JDBC dont le nom est précisé dans le fichier <strong>dao.properties</strong>, en l'occurrence dans notre cas il s'agit du driver pour MySQL. Le principe est le même que dans le chapitre précédent, nous effectuons un simple appel à <code>Class.forName()</code>. Là encore, observez l'encapsulation de l'exception envoyée en cas d'erreur (driver introuvable) dans une exception personnalisée de type <strong>DAOConfigurationException</strong>.</p><p id="r-2136807" data-claire-element-id="2353855">Pour en terminer avec cette méthode <code>getInstance()</code>, en cas de succès des étapes précédentes nous instancions la <strong>DAOFactory</strong> en faisant appel au constructeur défini aux lignes 23 à 27.</p><p id="r-2136808" data-claire-element-id="2353856">Nous créons ensuite la méthode <code>getConnection()</code> chargée de fournir une connexion à la base de données, aux lignes 68 à 70. Là encore pas de surprise, nous utilisons le même principe que dans le chapitre précédent, à savoir un appel à <code>DriverManager.getConnection()</code>.</p><aside id="r-2136810" data-claire-element-id="2353858" data-claire-semantic="information"><p id="r-2136809" data-claire-element-id="2353857">Par ailleurs, vous avez là un bel exemple de l'utilisation d'une méthode statique à la place d'un constructeur public. En effet, nous ne récupérons pas un objet de type <code>Connection</code> en appelant un constructeur public, mais en faisant appel à une méthode statique de l'objet <code>DriverManager</code> !</p></aside><p id="r-2136811" data-claire-element-id="2353859">Enfin, nous devons écrire les <em>getters</em> retournant les différentes implémentations de DAO contenues dans notre application, ce qui, ne l'oublions pas est le rôle d'origine de notre <strong>DAOFactory</strong>. Comme je vous l'ai déjà précisé, pour le moment nous ne travaillons que sur une seule table et n'allons donc créer qu'un seul DAO ; voilà pourquoi nous n'avons qu'un seul <em>getter</em> à mettre en place, aux lignes 76 à 78.</p><aside id="r-2136813" data-claire-element-id="2353861" data-claire-semantic="warning"><p id="r-2136812" data-claire-element-id="2353860">Ne vous préoccupez pas du code de ce <em>getter</em> pour le moment, j'y reviendrai après vous avoir expliqué les interfaces et implémentations du DAO Utilisateur. De même, ne vous inquiétez pas si le code ne compile pas encore, il compilera lorsque nous aurons créé les classes mises en jeu !</p></aside><h4 id="r-2136826" data-claire-element-id="2838163">Création de l'interface du DAO Utilisateur</h4><p id="r-2136815" data-claire-element-id="2353863">Avant de créer une implémentation de notre DAO Utilisateur, il nous faut écrire le contrat qui va définir toutes les actions qui devront être effectuées sur les données, c'est-à-dire sur le bean <strong>Utilisateur</strong>. Qui dit contrat dit interface, et c'est donc une interface que nous allons mettre en place.</p><p id="r-2136816" data-claire-element-id="2353864">En ce qui concerne le nommage des classes et interfaces, il existe différentes bonnes pratiques. Pour ma part, je nomme <strong>AbcDao</strong> l'interface d'un DAO correspondant à la table Abc, et <strong>AbcDaoImpl</strong> son implémentation. Je vous conseille de suivre cette règle également, cela permet de s'y retrouver rapidement dans une application qui contient beaucoup de DAO différents ! Nous créons ici un DAO correspondant à la table Utilisateur, nous allons donc créer une interface nommée <strong>UtilisateurDao</strong> :</p><pre id="r-2136817" data-claire-element-id="2838162"><code data-claire-semantic="java">package com.sdzee.dao;
+
+import com.sdzee.beans.Utilisateur;
+
+public interface UtilisateurDao {
+
+    void creer( Utilisateur utilisateur ) throws DAOException;
+
+    Utilisateur trouver( String email ) throws DAOException;
+
+}</code></pre><p id="r-2136818" data-claire-element-id="2353866">Vous retrouvez ici les deux méthodes mises en jeu par nos formulaires d'inscription et de connexion :</p><ul id="r-2136823" data-claire-element-id="2353871"><li id="r-2136820" data-claire-element-id="2353868"><p id="r-2136819" data-claire-element-id="2353867">la création d'un utilisateur, lors de son inscription ;</p></li><li id="r-2136822" data-claire-element-id="2353870"><p id="r-2136821" data-claire-element-id="2353869">la recherche d'un utilisateur, lors de la connexion.</p></li></ul><p id="r-2136824" data-claire-element-id="2353872">Ces méthodes font partie du fameux CRUD dont je vous ai parlé auparavant ! Notre système se limitant à ces deux fonctionnalités, nous n'allons volontairement pas implémenter les méthodes de mise à jour et de suppression d'un utilisateur. Dans une vraie application toutefois, il va de soi que l'interface de chaque DAO se doit d'être complète.</p><p id="r-2136825" data-claire-element-id="2353873">Petite information au passage : en Java, les méthodes d'une interface sont obligatoirement publiques et abstraites, inutile donc de préciser les mots-clés <code>public</code> et <code>abstract</code> dans leurs signatures. L'écriture reste permise, mais elle est déconseillée dans les <a href="http://docs.oracle.com/javase/specs/jls/se7/html/jls-9.html#jls-9.4">spécifications Java SE</a> publiées par Oracle, dans le chapitre concernant les interfaces.</p><h4 id="r-2136909" data-claire-element-id="3312483">Création de l'implémentation du DAO</h4><p id="r-2136827" data-claire-element-id="2353875">Nous voilà arrivés à l'étape finale : la création de l'implémentation de notre DAO Utilisateur. Il s'agit de la classe qui va manipuler la table <strong>Utilisateur</strong> de notre base de données. C'est donc elle qui va contenir le code des méthodes <code>creer()</code> et <code>trouver()</code> définies dans le contrat que nous venons tout juste de mettre en place.</p><p id="r-2136828" data-claire-element-id="2353876">La première chose à faire, c'est de créer une classe qui implémente l'interface <strong>UtilisateurDao</strong>. Nous allons bien entendu suivre la convention de nommage que nous avons adoptée, et nommer cette implémentation <strong>UtilisateurDaoImpl</strong> :</p><pre id="r-2136829" data-claire-element-id="2838164"><code data-claire-semantic="java">public class UtilisateurDaoImpl implements UtilisateurDao {
+    /* Implémentation de la méthode trouver() définie dans l'interface UtilisateurDao */
+    @Override
+    public Utilisateur trouver( String email ) throws DAOException {
+        return null;
+    }
+
+    /* Implémentation de la méthode creer() définie dans l'interface UtilisateurDao */
+    @Override
+    public void creer( Utilisateur utilisateur ) throws IllegalArgumentException, DAOException {
+    }
+}</code></pre><p id="r-2136830" data-claire-element-id="2353878">Vous le savez très bien, en Java lorsqu'une classe implémente une interface, elle doit impérativement définir toutes les méthodes qui y sont décrites. En l'occurrence notre interface <strong>UtilisateurDao</strong> contient deux méthodes <code>creer()</code> et <code>trouver()</code>, voilà pourquoi nous devons écrire leur code dans notre implémentation.</p><p id="r-2136831" data-claire-element-id="2353879">Nous devons maintenant réfléchir un peu. Dans l'architecture que nous sommes en train de construire, nous avons mis en place une <em>Factory</em>. En plus d'assurer sa fonction principale, c'est-à-dire créer le DAO via le <em>getter</em><code>getUtilisateurDao()</code>, elle joue le rôle de pierre angulaire : c'est par son intermédiaire que le DAO va pouvoir acquérir une connexion à la base de données, en appelant sa méthode <code>getConnection()</code>.</p><div id="r-2136833" data-claire-element-id="2353881" data-claire-semantic="question"><p id="r-2136832" data-claire-element-id="2353880">Pour pouvoir appeler cette méthode et ainsi récupérer une connexion, le DAO doit donc avoir accès à une instance de la DAOFactory. Comment faire ?</p></div><p id="r-2136834" data-claire-element-id="3312482">C'est simple, nous avons déjà préparé le terrain à la ligne 77 du code de notre <strong>DAOFactory</strong> ! Si vous regardez bien, nous passons une instance de la classe (via le mot-clé <code>this</code>) à l'implémentation du DAO lors de sa construction. Ainsi, il nous suffit de créer un constructeur qui prend en argument un objet de type <strong>DAOFactory</strong> dans notre DAO :</p><pre id="r-2136835" data-claire-element-id="2838165"><code data-claire-semantic="java">public class UtilisateurDaoImpl implements UtilisateurDao {
+    private DAOFactory          daoFactory;
+
+    UtilisateurDaoImpl( DAOFactory daoFactory ) {
+        this.daoFactory = daoFactory;
+    }
+
+    ...
+}</code></pre><p id="r-2136836" data-claire-element-id="2353884">Jusque-là, rien de bien compliqué. Mais ne vous endormez surtout pas, le gros du travail reste à faire ! Nous devons maintenant écrire le code des méthodes <code>creer()</code> et <code>trouver()</code>, autrement dit le code à travers lequel nous allons communiquer avec notre base de données ! Vous connaissez déjà le principe : connexion, requête préparée, etc. ! ;)</p><p id="r-2136837" data-claire-element-id="2353885">Plutôt que d'écrire bêtement du code à la chaîne en recopiant et adaptant ce que nous avions écrit dans le chapitre précédent, nous allons étudier les besoins de nos méthodes et réfléchir à ce qu'il est possible de factoriser dans des méthodes utilitaires. Mieux encore, nous n'allons pas nous concentrer sur ces deux méthodes en particulier, mais réfléchir plus globalement à ce que toute méthode communiquant avec une base de données doit faire intervenir. Nous pouvons d'ores et déjà noter :</p><ul id="r-2136844" data-claire-element-id="2353892"><li id="r-2136839" data-claire-element-id="2353887"><p id="r-2136838" data-claire-element-id="2353886">initialiser une requête préparée avec des paramètres ;</p></li><li id="r-2136841" data-claire-element-id="2353889"><p id="r-2136840" data-claire-element-id="2353888">récupérer une ligne d'une table et enregistrer son contenu dans un bean ;</p></li><li id="r-2136843" data-claire-element-id="2353891"><p id="r-2136842" data-claire-element-id="2353890">fermer proprement les ressources ouvertes (<code>Connection</code>, <code>PreparedStatement</code>, <code>ResultSet</code>).</p></li></ul><p id="r-2136845" data-claire-element-id="2353893">Pour accomplir ces différentes tâches, a priori nous allons avoir besoin de trois méthodes utilitaires :</p><ol id="r-2136852" data-claire-element-id="2353900"><li id="r-2136847" data-claire-element-id="2353895"><p id="r-2136846" data-claire-element-id="2353894">une qui récupère une liste de paramètres et les ajoute à une requête préparée donnée ;</p></li><li id="r-2136849" data-claire-element-id="2353897"><p id="r-2136848" data-claire-element-id="2353896">une qui récupère un <code>ResultSet</code> et enregistre ses données dans un bean ;</p></li><li id="r-2136851" data-claire-element-id="2353899"><p id="r-2136850" data-claire-element-id="2353898">une qui ferme toutes les ressources ouvertes.</p></li></ol><p id="r-2136853" data-claire-element-id="2353901">Étudions tout cela étape par étape.</p><h5 id="r-2136883" data-claire-element-id="2838169">1. Initialisation d'une requête préparée</h5><p id="r-2136854" data-claire-element-id="2353902">Nous avons besoin d'une méthode qui va prendre en argument une connexion, une requête SQL et une liste d'objets, et s'en servir pour initialiser une requête préparée via un appel à <code>connexion.prepareStatement()</code>. À ce propos, rappelez-vous de ce que nous avons découvert dans le chapitre précédent : c'est lors de cet appel qu'il faut préciser si la requête doit retourner un champ auto-généré ou non ! Le problème, c'est que nous ne pouvons pas savoir à l'avance si notre requête a besoin de retourner cette information ou non. Voilà pourquoi nous allons ajouter un quatrième argument à notre méthode, dont voici le code complet :</p><pre id="r-2136855" data-claire-element-id="2838166"><code data-claire-semantic="java">/*
+ * Initialise la requête préparée basée sur la connexion passée en argument,
+ * avec la requête SQL et les objets donnés.
+ */
+public static PreparedStatement initialisationRequetePreparee( Connection connexion, String sql, boolean returnGeneratedKeys, Object... objets ) throws SQLException {
+    PreparedStatement preparedStatement = connexion.prepareStatement( sql, returnGeneratedKeys ? Statement.RETURN_GENERATED_KEYS : Statement.NO_GENERATED_KEYS );
+    for ( int i = 0; i &lt; objets.length; i++ ) {
+        preparedStatement.setObject( i + 1, objets[i] );
+    }
+    return preparedStatement;
+}</code></pre><p id="r-2136856" data-claire-element-id="2353904">Observez les quatre arguments passés à la méthode :</p><ul id="r-2136865" data-claire-element-id="2353913"><li id="r-2136858" data-claire-element-id="2353906"><p id="r-2136857" data-claire-element-id="2353905">la connexion, dont nous avons besoin pour appeler la méthode <code>connexion.prepareStatement()</code> ;</p></li><li id="r-2136860" data-claire-element-id="2353908"><p id="r-2136859" data-claire-element-id="2353907">la requête SQL, que nous passons en argument lors de l'appel pour construire l'objet <code>PreparedStatement</code> ;</p></li><li id="r-2136862" data-claire-element-id="2353910"><p id="r-2136861" data-claire-element-id="2353909">un booléen, indiquant s'il faut ou non retourner d'éventuelles valeurs auto-générées. Nous l'utilisons alors directement au sein de l'appel à <code>connexion.prepareStatement()</code> grâce à une simple expression ternaire ;</p></li><li id="r-2136864" data-claire-element-id="2353912"><p id="r-2136863" data-claire-element-id="2353911">une succession d'objets... de tailles variables ! Eh oui, là encore nous n'avons aucun moyen d'anticiper et de savoir à l'avance combien de paramètres attend notre requête préparée.</p></li></ul><div id="r-2136867" data-claire-element-id="2353915" data-claire-semantic="question"><p id="r-2136866" data-claire-element-id="2353914">Que signifient ces '...' dans le type du dernier argument de la méthode ?</p></div><p id="r-2136868" data-claire-element-id="2353916">C'est une notation purement Java, dite <em><strong>varargs</strong></em>. Vous pouvez la voir comme un joker : en déclarant ainsi votre méthode, vous pourrez ensuite l'appeler avec autant de paramètres que vous voulez (tant qu'ils respectent le type déclaré), et l'appel fonctionnera toujours ! La seule différence sera la taille de l'objet passé en tant que quatrième et dernier argument ici. Exemples :</p><pre id="r-2136869" data-claire-element-id="2838167"><code data-claire-semantic="java">initialisationRequetePreparee( connexion, requeteSQL, true, email);
+initialisationRequetePreparee( connexion, requeteSQL, true, email, motDePasse );
+initialisationRequetePreparee( connexion, requeteSQL, true, email, motDePasse, nom );
+initialisationRequetePreparee( connexion, requeteSQL, true, email, motDePasse, nom, dateInscription );</code></pre><p id="r-2136870" data-claire-element-id="2353918">Bien qu'ils ne présentent pas tous le même nombre d'arguments, tous ces appels font bien référence à une seule et même méthode : celle que nous avons précédemment définie, et dont la signature ne mentionne que quatre arguments ! En réalité sous la couverture, le compilateur regroupera lui-même tous les arguments supplémentaires dans un simple tableau. En fin de compte, cette notation <strong><em>varargs</em></strong> s'apparente en quelque sorte à un tableau implicite.</p><div id="r-2136872" data-claire-element-id="2353920" data-claire-semantic="question"><p id="r-2136871" data-claire-element-id="2353919">Dans ce cas, pourquoi ne pas utiliser directement un tableau, en déclarant à la place de <code>Object...</code> un argument de type <code>Object[]</code> ?</p></div><p id="r-2136873" data-claire-element-id="2353921">Tout simplement parce que cela compliquerait l'utilisation de la méthode. En effet, si nous devions absolument passer un objet de type tableau, alors il faudrait prendre la peine d’initialiser un tableau avant d'appeler la méthode. Nos exemples précédents deviendraient alors :</p><pre id="r-2136874" data-claire-element-id="2838168"><code data-claire-semantic="java">Object[] objets = { email };
+initialisationRequetePreparee( connexion, requeteSQL, true, objets);
+objets = { email, motDePasse };
+initialisationRequetePreparee( connexion, requeteSQL, true, objets);
+objets = { email, motDePasse, nom };
+initialisationRequetePreparee( connexion, requeteSQL, true, objets);
+objets = { email, motDePasse, nom, dateInscription };
+initialisationRequetePreparee( connexion, requeteSQL, true, objets);</code></pre><p id="r-2136875" data-claire-element-id="2353923">Observez la différence avec l'exemple précédent : les appels à la méthode sont, cette fois, tous identiques, mais le fait de devoir initialiser des tableaux avant chaque appel est pénible et complique la lecture du code.</p><div id="r-2136877" data-claire-element-id="2353925" data-claire-semantic="question"><p id="r-2136876" data-claire-element-id="2353924">Au sujet de la nature de ce tableau implicite, pourquoi le déclarer de type <code>Object</code> ?</p></div><p id="r-2136878" data-claire-element-id="2353926">Eh bien parce que là encore, nous n'avons aucun moyen d'anticiper et de déterminer à l'avance ce que notre requête attend en guise de paramètres ! Voilà pourquoi nous devons utiliser le type le plus global possible, à savoir <code>Object</code>.</p><p id="r-2136879" data-claire-element-id="2353927">D'ailleurs, en conséquence nous n'allons pas pouvoir faire appel aux méthodes <code>preparedStatement.setString()</code>, <code>preparedStatement.setInt()</code>, etc. que nous avions découvertes et utilisées dans le chapitre précédent, puisque nous n'aurons ici aucun moyen simple de savoir de quel type est chaque objet. Heureusement, il existe une méthode <code>preparedStatement.setObject()</code> qui prend en argument un objet de type <code>Object</code>, et qui s'occupe ensuite derrière les rideaux d'effectuer la conversion vers le type SQL du paramètre attendu avant d'envoyer la requête à la base de données. Sympathique, n'est-ce pas ? :)</p><p id="r-2136880" data-claire-element-id="2353928">Nous y voilà : ce grand aparté sur les <strong><em>varargs</em></strong> vous donne toutes les clés pour comprendre ce qui se passe dans la boucle <code>for</code> qui conclut notre méthode. Nous y parcourons le tableau implicite des arguments passés à la méthode lors de son appel, et plaçons chacun d'eux dans la requête préparée via un appel à la méthode <code>preparedStatement.setObject()</code>.</p><aside id="r-2136882" data-claire-element-id="2353930" data-claire-semantic="information"><p id="r-2136881" data-claire-element-id="2353929">En fin de compte, c'est ici une méthode courte que nous avons réalisée, mais qui fait intervenir des concepts intéressants et qui va nous être très utile par la suite. Par ailleurs, notez qu'il s'agit d'une méthode purement utilitaire, que nous pourrons réutiliser telle quelle dans n'importe quel DAO !</p></aside><h5 id="r-2136887" data-claire-element-id="2838171">2. Mapping d'un ResultSet dans un bean</h5><p id="r-2136884" data-claire-element-id="2353932">Abordons maintenant notre seconde méthode utilitaire, qui va nous permettre de faire la correspondance entre une ligne d'un <code>ResultSet</code> et un bean. Contrairement à notre précédente méthode, nous n'allons cette fois pas pouvoir totalement découpler la méthode de notre DAO en particulier, puisque nous travaillons directement sur un <code>ResultSet</code> issu de notre table d'utilisateurs et sur un bean de type <strong>Utilisateur</strong>. Voici le code :</p><pre id="r-2136885" data-claire-element-id="2838170"><code data-claire-semantic="java">/*
+ * Simple méthode utilitaire permettant de faire la correspondance (le
+ * mapping) entre une ligne issue de la table des utilisateurs (un
+ * ResultSet) et un bean Utilisateur.
+ */
+private static Utilisateur map( ResultSet resultSet ) throws SQLException {
+    Utilisateur utilisateur = new Utilisateur();
+    utilisateur.setId( resultSet.getLong( &quot;id&quot; ) );
+    utilisateur.setEmail( resultSet.getString( &quot;email&quot; ) );
+    utilisateur.setMotDePasse( resultSet.getString( &quot;mot_de_passe&quot; ) );
+    utilisateur.setNom( resultSet.getString( &quot;nom&quot; ) );
+    utilisateur.setDateInscription( resultSet.getTimestamp( &quot;date_inscription&quot; ) );
+    return utilisateur;
+}</code></pre><p id="r-2136886" data-claire-element-id="2353934">Rien de bien compliqué ici : notre méthode prend en argument un <code>ResultSet</code> dont le curseur a déjà été correctement positionné, et place chaque champ lu dans la propriété correspondante du nouveau bean créé.</p><h5 id="r-2136891" data-claire-element-id="2838173">3. Fermeture des ressources</h5><p id="r-2136888" data-claire-element-id="2353936">Pour terminer, nous allons gérer proprement la fermeture des différentes ressources qui peuvent intervenir dans une communication avec la base de données. Plutôt que de tout mettre dans une seule et même méthode, nous allons écrire une méthode pour fermer chaque type de ressource :</p><pre id="r-2136889" data-claire-element-id="2838172"><code data-claire-semantic="java">/* Fermeture silencieuse du resultset */
+public static void fermetureSilencieuse( ResultSet resultSet ) {
+    if ( resultSet != null ) {
+        try {
+            resultSet.close();
+        } catch ( SQLException e ) {
+            System.out.println( &quot;Échec de la fermeture du ResultSet : &quot; + e.getMessage() );
+        }
+    }
+}
+
+/* Fermeture silencieuse du statement */
+public static void fermetureSilencieuse( Statement statement ) {
+    if ( statement != null ) {
+        try {
+            statement.close();
+        } catch ( SQLException e ) {
+            System.out.println( &quot;Échec de la fermeture du Statement : &quot; + e.getMessage() );
+        }
+    }
+}
+
+/* Fermeture silencieuse de la connexion */
+public static void fermetureSilencieuse( Connection connexion ) {
+    if ( connexion != null ) {
+        try {
+            connexion.close();
+        } catch ( SQLException e ) {
+            System.out.println( &quot;Échec de la fermeture de la connexion : &quot; + e.getMessage() );
+        }
+    }
+}
+
+/* Fermetures silencieuses du statement et de la connexion */
+public static void fermeturesSilencieuses( Statement statement, Connection connexion ) {
+    fermetureSilencieuse( statement );
+    fermetureSilencieuse( connexion );
+}
+
+/* Fermetures silencieuses du resultset, du statement et de la connexion */
+public static void fermeturesSilencieuses( ResultSet resultSet, Statement statement, Connection connexion ) {
+    fermetureSilencieuse( resultSet );
+    fermetureSilencieuse( statement );
+    fermetureSilencieuse( connexion );
+}</code></pre><p id="r-2136890" data-claire-element-id="2353938">Vous connaissez déjà le principe des trois premières méthodes, puisque nous avons effectué sensiblement la même chose dans le chapitre précédent. Nous créons ensuite deux méthodes qui font appel à tout ou partie des trois premières, tout bonnement parce que certaines requêtes font intervenir un <code>ResultSet</code>, d'autres non ! En outre, notez que tout comme la méthode <code>initialisationRequetePreparee()</code>, ces méthodes sont purement utilitaires et nous pouvons les réutiliser dans n'importe quel DAO.</p><h5 id="r-2136894" data-claire-element-id="2353942">4. Récapitulons</h5><p id="r-2136892" data-claire-element-id="2353940">Les méthodes purement utilitaires peuvent être placées dans une classe à part entière, une classe utilitaire donc, et être utilisées depuis n'importe quel DAO. Voilà pourquoi j'ai donc créé une classe finale que j'ai nommée <strong>DAOUtilitaire</strong> et placée dans le package <code>com.sdzee.dao</code>. Vous pouvez la mettre en place vous-mêmes, ou bien la télécharger en cliquant sur <a href="http://course.oc-static.com/ftp-tutos/cours/java-ee/DAOUtilitaire.java">ce lien</a> et l'ajouter à votre projet.</p><p id="r-2136893" data-claire-element-id="2353941">En ce qui concerne la méthode <code>map()</code>, celle-ci doit simplement être placée dans la classe <strong>UtilisateurDaoImpl</strong>.</p><h5 id="r-2136902" data-claire-element-id="2838176">La méthode trouver()</h5><p id="r-2136895" data-claire-element-id="2353943">Maintenant que nos méthodes utilitaires sont prêtes, nous pouvons finalement écrire le code de la méthode <code>trouver()</code> :</p><pre id="r-2136896" data-claire-element-id="2838174"><code data-claire-semantic="java">private static final String SQL_SELECT_PAR_EMAIL = &quot;SELECT id, email, nom, mot_de_passe, date_inscription FROM Utilisateur WHERE email = ?&quot;;
+
+/* Implémentation de la méthode définie dans l'interface UtilisateurDao */
+@Override
+private Utilisateur trouver( String email ) throws DAOException {
+    Connection connexion = null;
+    PreparedStatement preparedStatement = null;
+    ResultSet resultSet = null;
+    Utilisateur utilisateur = null;
+
+    try {
+        /* Récupération d'une connexion depuis la Factory */
+        connexion = daoFactory.getConnection();
+        preparedStatement = initialisationRequetePreparee( connexion, SQL_SELECT_PAR_EMAIL, false, email );
+        resultSet = preparedStatement.executeQuery();
+        /* Parcours de la ligne de données de l'éventuel ResulSet retourné */
+        if ( resultSet.next() ) {
+            utilisateur = map( resultSet );
+        }
+    } catch ( SQLException e ) {
+        throw new DAOException( e );
+    } finally {
+        fermeturesSilencieuses( resultSet, preparedStatement, connexion );
+    }
+
+    return utilisateur;
+}</code></pre><p id="r-2136897" data-claire-element-id="2353945">Vous retrouvez ici les principes découverts et appliqués dans le chapitre précédent : l'obtention d'une connexion, la préparation d'une requête de lecture, son exécution, puis la récupération et l'analyse du <code>ResultSet</code> retourné, et enfin la fermeture des ressources mises en jeu.</p><p id="r-2136898" data-claire-element-id="2353946">Les trois lignes surlignées font intervenir chacune des méthodes utilitaires que nous avons développées. À ce propos, vous n'oublierez pas d'importer le contenu de la classe <strong>DAOUtilitaire</strong> afin de rendre disponibles ses méthodes ! Pour ce faire, il vous suffit d'ajouter la ligne suivante dans les imports de votre classe <strong>UtilisateurDaoImpl</strong> :</p><pre id="r-2136899" data-claire-element-id="2838175"><code data-claire-semantic="java">import static com.sdzee.dao.DAOUtilitaire.*;</code></pre><p id="r-2136900" data-claire-element-id="2353948">En précisant directement dans l'import le mot-clé <code>static</code>, vous pourrez appeler vos méthodes comme si elles faisaient directement partie de votre classe courante. Par exemple, vous n'aurez pas besoin d'écrire <code>DAOUtilitaire.fermeturesSilencieuses( ... )</code>, mais simplement <code>fermeturesSilencieuses( ... )</code>. Pratique, n'est-ce pas ? :)</p><p id="r-2136901" data-claire-element-id="2353949">En outre, vous retrouvez également dans ce code la bonne pratique que je vous ai enseignée en début de cours, à savoir la mise en place d'une constante. Elle détient en l'occurrence l'instruction SQL utilisée pour préparer notre requête.</p><h5 id="r-2136908" data-claire-element-id="2838178">La méthode creer()</h5><p id="r-2136903" data-claire-element-id="2353951">Dernière pierre à notre édifice, nous devons écrire le code de la méthode <code>creer()</code> :</p><pre id="r-2136904" data-claire-element-id="2838177"><code data-claire-semantic="java">private static final String SQL_INSERT = &quot;INSERT INTO Utilisateur (email, mot_de_passe, nom, date_inscription) VALUES (?, ?, ?, NOW())&quot;;
+
+/* Implémentation de la méthode définie dans l'interface UtilisateurDao */
+@Override
+public void creer( Utilisateur utilisateur ) throws DAOException {
+    Connection connexion = null;
+    PreparedStatement preparedStatement = null;
+    ResultSet valeursAutoGenerees = null;
+
+    try {
+        /* Récupération d'une connexion depuis la Factory */
+        connexion = daoFactory.getConnection();
+        preparedStatement = initialisationRequetePreparee( connexion, SQL_INSERT, true, utilisateur.getEmail(), utilisateur.getMotDePasse(), utilisateur.getNom() );
+        int statut = preparedStatement.executeUpdate();
+        /* Analyse du statut retourné par la requête d'insertion */
+        if ( statut == 0 ) {
+            throw new DAOException( &quot;Échec de la création de l'utilisateur, aucune ligne ajoutée dans la table.&quot; );
+        }
+        /* Récupération de l'id auto-généré par la requête d'insertion */
+        valeursAutoGenerees = preparedStatement.getGeneratedKeys();
+        if ( valeursAutoGenerees.next() ) {
+            /* Puis initialisation de la propriété id du bean Utilisateur avec sa valeur */
+            utilisateur.setId( valeursAutoGenerees.getLong( 1 ) );
+        } else {
+            throw new DAOException( &quot;Échec de la création de l'utilisateur en base, aucun ID auto-généré retourné.&quot; );
+        }
+    } catch ( SQLException e ) {
+        throw new DAOException( e );
+    } finally {
+        fermeturesSilencieuses( valeursAutoGenerees, preparedStatement, connexion );
+    }
+}</code></pre><p id="r-2136905" data-claire-element-id="2353953">Là encore, vous retrouvez les principes découverts jusqu'à présent : l'obtention d'une connexion, la préparation d'une requête d'insertion avec demande de renvoi de l'id auto-généré grâce au booléen à <code>true</code> passé à notre méthode utilitaire <code>DAOUtilitaire.initialisationRequetePreparee()</code>, son exécution et la récupération de son statut, la récupération de l'id auto-généré via l'appel à la méthode <code>preparedStatement.getGeneratedKeys()</code>, et enfin la fermeture des ressources mises en jeu.</p><aside id="r-2136907" data-claire-element-id="2353955" data-claire-semantic="information"><p id="r-2136906" data-claire-element-id="2353954">Dans ces deux méthodes, vous observerez bien l'utilisation de l'exception personnalisée <strong>DAOException</strong> que nous avons créée auparavant. Si vous avez encore un peu de mal à voir où nous voulons en venir avec nos exceptions, ne vous inquiétez pas : vous allez comprendre dans la suite de ce chapitre !</p></aside><h3 id="r-624734" data-claire-element-id="2838194">Intégration</h3><p id="r-2136911" data-claire-element-id="2353959">Nous allons maintenant tâcher d'intégrer proprement cette nouvelle couche dans notre application. Pour l'exemple, nous allons travailler avec notre système d'inscription et laisser de côté le système de connexion pour le moment.</p><h4 id="r-2136934" data-claire-element-id="2838185">Chargement de la DAOFactory</h4><p id="r-2136912" data-claire-element-id="2353960">Notre <strong>DAOFactory</strong> est un objet que nous ne souhaitons instancier qu'une seule fois, le démarrage de l'application semble donc l'instant approprié pour procéder à son initialisation.</p><div id="r-2136914" data-claire-element-id="2353962" data-claire-semantic="question"><p id="r-2136913" data-claire-element-id="2353961">Dans une application Java classique, il nous suffirait de placer quelques lignes de code en tête de la méthode <code>main()</code>, et le tour serait joué. Mais dans une application Java EE, comment faire ?</p></div><p id="r-2136915" data-claire-element-id="2353963">La solution, c'est l'interface <code><a href="http://docs.oracle.com/javaee/6/api/javax/servlet/ServletContextListener.html">ServletContextListener</a></code>. Lisez sa très courte documentation, vous observerez qu'elle fournit une méthode <code>contextInitialized()</code> qui est appelée dès le démarrage de l'application, avant le chargement des servlets et filtres du projet. Il s'agit exactement de ce dont nous avons besoin !</p><h5 id="r-2136929" data-claire-element-id="2838182">Création du Listener</h5><p id="r-2136916" data-claire-element-id="2353964">Nous allons donc mettre en place un nouveau package <code>com.sdzee.config</code> et y créer une classe nommée <strong>InitialisationDaoFactory</strong> qui implémente l'interface <code>ServletContextListener</code> :</p><pre id="r-2136917" data-claire-element-id="2838181"><code data-claire-semantic="java">package com.sdzee.config;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+import com.sdzee.dao.DAOFactory;
+
+public class InitialisationDaoFactory implements ServletContextListener {
+    private static final String ATT_DAO_FACTORY = &quot;daofactory&quot;;
+
+    private DAOFactory          daoFactory;
+
+    @Override
+    public void contextInitialized( ServletContextEvent event ) {
+        /* Récupération du ServletContext lors du chargement de l'application */
+        ServletContext servletContext = event.getServletContext();
+        /* Instanciation de notre DAOFactory */
+        this.daoFactory = DAOFactory.getInstance();
+        /* Enregistrement dans un attribut ayant pour portée toute l'application */
+        servletContext.setAttribute( ATT_DAO_FACTORY, this.daoFactory );
+    }
+
+    @Override
+    public void contextDestroyed( ServletContextEvent event ) {
+        /* Rien à réaliser lors de la fermeture de l'application... */
+    }
+}</code></pre><p id="r-2136918" data-claire-element-id="2353966">Comme d'habitude en Java, puisque nous implémentons une interface nous devons définir toutes ses méthodes, en l'occurrence elle en contient deux : une qui est lancée au démarrage de l'application, et une autre à sa fermeture. Vous l'aurez deviné, seule la méthode appelée lors du démarrage nous intéresse ici.</p><p id="r-2136919" data-claire-element-id="2353967">Le code est très simple et très court, comme vous pouvez l'observer. Si vous avez été très assidus, vous devez vous souvenir que le <code>ServletContext</code> n'est rien d'autre que l'objet qui agit dans les coulisses de <a href="http://www.siteduzero.com/tutoriel-3-655550-la-technologie-jsp-2-2.html#ss_part_2">l'objet implicite</a><strong>application</strong> ! Sachant cela, vous devez maintenant comprendre sans problème ce que nous faisons ici :</p><ul id="r-2136926" data-claire-element-id="2353974"><li id="r-2136921" data-claire-element-id="2353969"><p id="r-2136920" data-claire-element-id="2353968">nous récupérons le <code>ServletContext</code> à la ligne 16 ;</p></li><li id="r-2136923" data-claire-element-id="2353971"><p id="r-2136922" data-claire-element-id="2353970">nous obtenons une instance de notre DAOFactory via un appel à sa méthode statique <code>DAOFactory.getInstance()</code> ;</p></li><li id="r-2136925" data-claire-element-id="2353973"><p id="r-2136924" data-claire-element-id="2353972">nous plaçons cette instance dans un attribut du <code>ServletContext</code> via sa méthode <code>setAttribute()</code>, qui a donc pour portée l'application entière !</p></li></ul><aside id="r-2136928" data-claire-element-id="2353976" data-claire-semantic="warning"><p id="r-2136927" data-claire-element-id="2353975">Il faut être très prudent lors de la manipulation d'objets de portée <strong>application</strong>. En effet, puisque de tels objets sont partagés par tous les composants durant toute la durée de vie de l'application, il est recommandé de les utiliser uniquement en lecture seule. Autrement dit, il est recommandé de les initialiser au démarrage de l'application et de ne plus jamais les modifier ensuite - que ce soit depuis une servlet, un filtre ou une JSP - afin d'éviter les modifications concurrentes et les problèmes de cohérence que cela pourrait impliquer. Dans notre cas, il n'y a aucun risque : notre objet est bien créé dès le démarrage de l'application, et il sera ensuite uniquement lu.</p></aside><h5 id="r-2136933" data-claire-element-id="2838184">Configuration du Listener</h5><p id="r-2136930" data-claire-element-id="2353978">Pour que notre <strong>Listener</strong> fraîchement créé soit pris en compte lors du démarrage de notre application, il nous faut ajouter une section au fichier <strong>web.xml</strong> :</p><pre id="r-2136931" data-claire-element-id="2838183"><code data-claire-semantic="xml">&lt;listener&gt;
+    &lt;listener-class&gt;com.sdzee.config.InitialisationDaoFactory&lt;/listener-class&gt;
+&lt;/listener&gt;</code></pre><p id="r-2136932" data-claire-element-id="2353980">Voilà tout ce qu'il est nécessaire d'écrire. N'oubliez pas de redémarrer Tomcat pour que la modification soit prise en compte !</p><h4 id="r-2136956" data-claire-element-id="2838187">Utilisation depuis la servlet</h4><p id="r-2136935" data-claire-element-id="2353983">Notre <strong>DAOFactory</strong> étant prête à l'emploi dans notre projet, nous pouvons maintenant récupérer une instance de notre DAO Utilisateur depuis notre servlet d'inscription.</p><pre id="r-2136936" data-claire-element-id="2838186"><code data-claire-semantic="java">package com.sdzee.servlets;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.sdzee.beans.Utilisateur;
+import com.sdzee.dao.DAOFactory;
+import com.sdzee.dao.UtilisateurDao;
+import com.sdzee.forms.InscriptionForm;
+
+public class Inscription extends HttpServlet {
+    public static final String CONF_DAO_FACTORY = &quot;daofactory&quot;;
+    public static final String ATT_USER         = &quot;utilisateur&quot;;
+    public static final String ATT_FORM         = &quot;form&quot;;
+    public static final String VUE              = &quot;/WEB-INF/inscription.jsp&quot;;
+
+    private UtilisateurDao     utilisateurDao;
+
+    public void init() throws ServletException {
+        /* Récupération d'une instance de notre DAO Utilisateur */
+        this.utilisateurDao = ( (DAOFactory) getServletContext().getAttribute( CONF_DAO_FACTORY ) ).getUtilisateurDao();
+    }
+
+    public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
+        /* Affichage de la page d'inscription */
+        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+    }
+
+    public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
+        /* Préparation de l'objet formulaire */
+        InscriptionForm form = new InscriptionForm( utilisateurDao );
+
+        /* Traitement de la requête et récupération du bean en résultant */
+        Utilisateur utilisateur = form.inscrireUtilisateur( request );
+
+        /* Stockage du formulaire et du bean dans l'objet request */
+        request.setAttribute( ATT_FORM, form );
+        request.setAttribute( ATT_USER, utilisateur );
+
+        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+    }
+}</code></pre><p id="r-2136937" data-claire-element-id="2353985">La première étape consiste à récupérer une instance de notre <strong>DAOFactory</strong>. Puisque nous en avons placé une dans un attribut de portée application lors de son chargement, il nous suffit depuis notre servlet de récupérer le <code>ServletContext</code> et d'appeler sa méthode <code>getAttribute()</code>. En réalité, le principe est exactement le même que pour un attribut de requête ou de session, seul l'objet de référence change.</p><p id="r-2136938" data-claire-element-id="2353986">Cette méthode retournant un objet de type <code>Object</code>, nous devons ensuite effectuer un <em>cast</em> vers le type <strong>DAOFactory</strong> pour pouvoir appeler sa méthode <code>getUtilisateurDao()</code>. Nous enregistrons finalement l'instance de notre DAO Utilisateur dans un attribut de notre servlet.</p><div id="r-2136940" data-claire-element-id="2353988" data-claire-semantic="question"><p id="r-2136939" data-claire-element-id="2353987">Quelle est cette méthode nommée <code>init()</code> ?</p></div><p id="r-2136941" data-claire-element-id="2353989">Cette méthode fait partie de celles que je ne vous avais volontairement pas expliquées lorsque je vous ai présenté les servlets. Je vous avais d'ailleurs précisé alors, que vous n'étiez pas encore assez à l'aise avec le concept de servlet lui-même, pour avoir besoin d'intervenir sur son cycle de vie. Le temps est venu pour vous d'en savoir un petit peu plus.</p><p id="r-2136942" data-claire-element-id="2353990">Pour rappel, une servlet n'est créée qu'une seule et unique fois par le conteneur, lors du démarrage de l'application ou bien lors de son premier accès (ceci dépendant de la présence ou non d'une section <code>&lt;load-on-startup&gt;</code> dans la déclaration de la servlet au sein du fichier <strong>web.xml</strong>). Eh bien sachez que lorsque la servlet est instanciée, cette fameuse méthode <code>init()</code> va être appelée, une seule et unique fois donc. Ainsi, vous avez la possibilité à travers cette méthode d'effectuer des tâches uniques, qui ne sont pas destinées à être lancées à chaque appel aux méthodes <code>doGet()</code> ou <code>doPost()</code> par exemple.</p><div id="r-2136944" data-claire-element-id="2353992" data-claire-semantic="question"><p id="r-2136943" data-claire-element-id="2353991">Pourquoi créer notre instance de DAO depuis cette méthode <code>init()</code> ?</p></div><p id="r-2136945" data-claire-element-id="2353993">Eh bien tout simplement parce que si nous en créions une depuis nos méthodes <code>doXXX()</code>, une nouvelle instance serait créée à chaque requête reçue ! En l'occurrence, ce n'est pas nécessaire puisque notre DAO est bien écrit : il manipule les ressources dont il a besoin au plus près de la requête SQL à effectuer, et les ferme correctement de la même manière.</p><p id="r-2136946" data-claire-element-id="2353994">Par contre, notre DAO pourrait très bien être construit d'une manière différente et nécessiter alors une nouvelle instance à chaque utilisation. Par exemple, imaginez que notre DAO partage une seule et même connexion à la base de données pour l'ensemble de ses méthodes CRUD. Eh bien dans ce cas, il serait impensable de ne créer qu'une seule instance du DAO et de la partager à tous les clients qui enverraient des requêtes vers la servlet, car cela reviendrait à partager une seule connexion à la BDD pour tous les clients ! :o</p><aside id="r-2136948" data-claire-element-id="2353996" data-claire-semantic="information"><p id="r-2136947" data-claire-element-id="2353995">Ce type de problématiques porte un nom : il s'agit de la <em><strong>thread-safety</strong></em>. En quelques mots, il s'agit de la possibilité ou non de partager des ressources à l'ensemble des <em>threads</em> intervenant sur un objet ou une classe. C'est un concept particulièrement important dans le cas d'une application web, parce qu'il y a bien souvent un nombre conséquent de clients utilisant une seule et même application centralisée.</p></aside><div id="r-2136950" data-claire-element-id="2353998" data-claire-semantic="question"><p id="r-2136949" data-claire-element-id="2353997">Qu'est-ce qu'un attribut de servlet a de particulier face à un attribut déclaré au sein d'une méthode <code>doXXX()</code> ?</p></div><p id="r-2136951" data-claire-element-id="2353999">La différence est majeure : un attribut de servlet est partagé par tous les <em>threads</em> utilisant l'instance de la servlet, autrement dit par tous les clients qui y font appel ! Alors qu'un simple attribut déclaré par exemple dans une méthode <code>doGet()</code> n'existe que pour un seul <em>thread</em>, et se matérialise ainsi par un objet différent d'un <em>thread</em> à l'autre.</p><p id="r-2136952" data-claire-element-id="2354000">Voilà pourquoi dans notre cas, nous enregistrons notre instance de DAO dans un attribut de servlet : il peut tout à fait être partagé par l'ensemble des clients faisant appel à la servlet, puisque je vous le rappelle il est correctement écrit et gère proprement les ressources. L'intérêt est avant tout d'économiser les ressources du serveur : ré-instancier un nouveau DAO à chaque requête reçue serait un beau gâchis en termes de mémoire et de performances !</p><aside id="r-2136954" data-claire-element-id="2354002" data-claire-semantic="warning"><p id="r-2136953" data-claire-element-id="2354001">Bref, vous comprenez maintenant mieux pourquoi je n'ai pas souhaité vous présenter le cycle de vie d'une servlet trop tôt. Il implique des mécanismes qui ne sont pas triviaux, et il est nécessaire de bien comprendre le contexte d'utilisation d'une servlet avant d'intervenir sur son cycle de vie. Là encore, je ne vous dis pas tout et me limite volontairement à cette méthode <code>init()</code>. Ne vous inquiétez pas, le reste du mystère sera levé en annexe !</p></aside><p id="r-2136955" data-claire-element-id="2354003">Pour finir, il faut transmettre notre instance DAO Utilisateur à l'objet métier <strong>InscriptionForm</strong>. Eh oui, c'est bien lui qui va gérer l'inscription d'un utilisateur, et c'est donc bien lui qui va en avoir besoin pour communiquer avec la base de données ! Nous lui passons ici à la ligne 35 par l'intermédiaire de son constructeur, qu'il va donc nous falloir modifier par la suite pour que notre code compile...</p><h4 id="r-2136984" data-claire-element-id="2838191">Reprise de l'objet métier</h4><p id="r-2136957" data-claire-element-id="2354005">Comme je viens de vous le dire, la première étape consiste ici à modifier le constructeur de l'objet <strong>InscriptionForm</strong> pour qu'il prenne en compte le DAO transmis. En l'occurrence, nous n'avions jusqu'à présent créé aucun constructeur, et nous étions contentés de celui par défaut. Nous allons donc devoir ajouter le constructeur suivant, ainsi que la variable d'instance associée permettant de stocker le DAO passé en argument :</p><pre id="r-2136958" data-claire-element-id="2838188"><code data-claire-semantic="java">private UtilisateurDao      utilisateurDao;
+
+public InscriptionForm( UtilisateurDao utilisateurDao ) {
+    this.utilisateurDao = utilisateurDao;
+}</code></pre><p id="r-2136959" data-claire-element-id="2354007">Le DAO étant maintenant disponible au sein de notre objet, nous allons pouvoir l'utiliser dans notre méthode d'inscription pour appeler la méthode <code>creer()</code> définie dans l'interface <strong>UtilisateurDao</strong>. Il faudra alors bien penser à intercepter une éventuelle <strong>DAOException</strong> envoyée par le DAO, et agir en conséquence !</p><pre id="r-2136960" data-claire-element-id="2838189"><code data-claire-semantic="java">public Utilisateur inscrireUtilisateur( HttpServletRequest request ) {
+    String email = getValeurChamp( request, CHAMP_EMAIL );
+    String motDePasse = getValeurChamp( request, CHAMP_PASS );
+    String confirmation = getValeurChamp( request, CHAMP_CONF );
+    String nom = getValeurChamp( request, CHAMP_NOM );
+
+    Utilisateur utilisateur = new Utilisateur();
+    try {
+        traiterEmail( email, utilisateur );
+        traiterMotsDePasse( motDePasse, confirmation, utilisateur );
+        traiterNom( nom, utilisateur );
+
+        if ( erreurs.isEmpty() ) {
+            utilisateurDao.creer( utilisateur );
+            resultat = &quot;Succès de l'inscription.&quot;;
+        } else {
+            resultat = &quot;Échec de l'inscription.&quot;;
+        }
+    } catch ( DAOException e ) {
+        resultat = &quot;Échec de l'inscription : une erreur imprévue est survenue, merci de réessayer dans quelques instants.&quot;;
+        e.printStackTrace();
+    }
+
+    return utilisateur;
+}</code></pre><p id="r-2136961" data-claire-element-id="2354009">Vous pouvez observer plusieurs choses ici :</p><ul id="r-2136968" data-claire-element-id="2354016"><li id="r-2136963" data-claire-element-id="2354011"><p id="r-2136962" data-claire-element-id="2354010">j'appelle la méthode <code>utilisateurDao.creer()</code> à la ligne 14, uniquement si aucune erreur de validation n'a eu lieu. En effet, inutile d'aller faire une requête sur la BDD si les critères de validation des champs du formulaire n'ont pas été respectés ;</p></li><li id="r-2136965" data-claire-element-id="2354013"><p id="r-2136964" data-claire-element-id="2354012">il est alors nécessaire de mettre en place un <code>try/catch</code> pour gérer une éventuelle <strong>DAOException</strong> retournée par cet appel ! En l'occurrence, j'initialise la chaîne <strong>resultat</strong> avec un message d'échec ;</p></li><li id="r-2136967" data-claire-element-id="2354015"><p id="r-2136966" data-claire-element-id="2354014">enfin, j'ai regroupé le travail de validation des paramètres et d'initialisation des propriétés du bean dans des méthodes <code>traiterXXX()</code>. Cela me permet d'aérer le code, qui commençait à devenir sérieusement chargé avec tout cet enchevêtrement de blocs <code>try/catch</code> , sans oublier les ajouts que nous devons y apporter !</p></li></ul><div id="r-2136970" data-claire-element-id="2354018" data-claire-semantic="question"><p id="r-2136969" data-claire-element-id="2354017">Quels ajouts ? Qu'est-il nécessaire de modifier dans nos méthodes de validation ?</p></div><p id="r-2136971" data-claire-element-id="2354019">La gestion de l'adresse mail doit subir quelques modifications, car nous savons dorénavant qu'une adresse doit être unique en base, et le mot de passe doit absolument être chiffré avant d'être envoyé en base. En plus de cela, nous allons mettre en place une exception personnalisée pour la validation des champs afin de rendre notre code plus clair. Voici donc le code des méthodes gérant ces fonctionnalités :</p><pre id="r-2136972" data-claire-element-id="2838190"><code data-claire-semantic="java">private static final String ALGO_CHIFFREMENT = &quot;SHA-256&quot;;
+
+...
+
+/*
+ * Appel à la validation de l'adresse email reçue et initialisation de la
+ * propriété email du bean
+ */
+private void traiterEmail( String email, Utilisateur utilisateur ) {
+    try {
+        validationEmail( email );
+    } catch ( FormValidationException e ) {
+        setErreur( CHAMP_EMAIL, e.getMessage() );
+    }
+    utilisateur.setEmail( email );
+}
+
+/*
+ * Appel à la validation des mots de passe reçus, chiffrement du mot de
+ * passe et initialisation de la propriété motDePasse du bean
+ */
+private void traiterMotsDePasse( String motDePasse, String confirmation, Utilisateur utilisateur ) {
+    try {
+        validationMotsDePasse( motDePasse, confirmation );
+    } catch ( FormValidationException e ) {
+        setErreur( CHAMP_PASS, e.getMessage() );
+        setErreur( CHAMP_CONF, null );
+    }
+
+    /*
+     * Utilisation de la bibliothèque Jasypt pour chiffrer le mot de passe
+     * efficacement.
+     * 
+     * L'algorithme SHA-256 est ici utilisé, avec par défaut un salage
+     * aléatoire et un grand nombre d'itérations de la fonction de hashage.
+     * 
+     * La String retournée est de longueur 56 et contient le hash en Base64.
+     */
+    ConfigurablePasswordEncryptor passwordEncryptor = new ConfigurablePasswordEncryptor();
+    passwordEncryptor.setAlgorithm( ALGO_CHIFFREMENT );
+    passwordEncryptor.setPlainDigest( false );
+    String motDePasseChiffre = passwordEncryptor.encryptPassword( motDePasse );
+
+    utilisateur.setMotDePasse( motDePasseChiffre );
+}
+
+/* Validation de l'adresse email */
+private void validationEmail( String email ) throws FormValidationException {
+    if ( email != null ) {
+        if ( !email.matches( &quot;([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)&quot; ) ) {
+            throw new FormValidationException( &quot;Merci de saisir une adresse mail valide.&quot; );
+        } else if ( utilisateurDao.trouver( email ) != null ) {
+            throw new FormValidationException( &quot;Cette adresse email est déjà utilisée, merci d'en choisir une autre.&quot; );
+        }
+    } else {
+        throw new FormValidationException( &quot;Merci de saisir une adresse mail.&quot; );
+    }
+}</code></pre><p id="r-2136973" data-claire-element-id="2354021">Pour commencer, remarquez la structure des méthodes <code>traiterXXX()</code> créées : comme je vous l'ai déjà annoncé, celles-ci renferment simplement l'appel à la méthode de validation d'un champ et l'initialisation de la propriété du bean correspondante.</p><p id="r-2136974" data-claire-element-id="2354022">Ensuite dans la méthode de traitement des mots de passe, j'ai ajouté la procédure de chiffrement à l'aide de la bibliothèque <a href="http://www.jasypt.org/index.html">Jasypt</a> aux lignes 39 à 42. Vous pouvez la télécharger directement en cliquant sur <a href="http://course.oc-static.com/ftp-tutos/cours/java-ee/jasypt-1.9.0.jar">ce lien</a>. De la même manière que pour les bibliothèques que nous avons déjà manipulées dans le passé, il suffit de placer le fichier .jar récupéré sous <strong>/WEB-INF/lib</strong>.</p><p id="r-2136975" data-claire-element-id="2354023">Je vous laisse parcourir sa documentation et découvrir les méthodes et objets disponibles, en l'occurrence le code que je vous donne est suffisamment commenté pour que vous compreniez comment ce que j'ai mis en place fonctionne.</p><aside id="r-2136977" data-claire-element-id="2354025" data-claire-semantic="information"><p id="r-2136976" data-claire-element-id="2354024">Il est important de réaliser cette sécurisation du mot de passe en amont, afin d'initialiser la propriété du bean avec l'empreinte ainsi générée et non pas directement avec le mot de passe en clair. Par la suite, lorsque nous souhaiterons vérifier si un utilisateur entre le bon mot de passe lors de sa connexion, il nous suffira de le comparer directement à l'empreinte stockée grâce à la méthode <code>passwordEncryptor.checkPassword()</code>. De manière générale, la règle veut qu'on ne travaille jamais directement sur les mots de passe en clair.</p></aside><p id="r-2136978" data-claire-element-id="2354026">Enfin, j'ai ajouté dans la méthode de validation de l'adresse email un appel à la méthode <code>trouver()</code> du DAO, afin de renvoyer une exception en cas d'adresse déjà existante. Cela veut dire que nous effectuons deux requêtes sur la base lors d'une inscription utilisateur : une pour vérifier si l'adresse n'existe pas déjà via l'appel à <code>trouver()</code>, et une pour l'insérer via l'appel à <code>creer()</code>.</p><div id="r-2136980" data-claire-element-id="2354028" data-claire-semantic="question"><p id="r-2136979" data-claire-element-id="2354027">Est-ce bien nécessaire d'effectuer deux requêtes ? Économiser une requête vers la BDD ne serait pas préférable ?</p></div><p id="r-2136981" data-claire-element-id="2354029">Eh bien oui, c'est bien plus pratique pour nous d'effectuer une vérification avant de procéder à l'insertion. Si nous ne le faisions pas, alors nous devrions nous contenter d'analyser le statut retourné par notre requête <code>INSERT</code> et d'envoyer une exception en cas d'un statut valant zéro. Le souci, c'est qu'un échec de l'insertion peut être dû à de nombreuses causes différentes, et pas seulement au fait qu'une adresse email existe déjà en base ! Ainsi en cas d'échec nous ne pourrions pas avertir l'utilisateur que le problème vient de son adresse mail, nous pourrions simplement l'informer que la création de son compte à échoué. Il tenterait alors à nouveau de s'inscrire avec les mêmes coordonnées en pensant que le problème vient de l'application, et recevrait une nouvelle fois la même erreur, etc.</p><p id="r-2136982" data-claire-element-id="2354030">En testant en amont la présence de l'adresse en base via une bête requête de lecture, nous sommes capables de renvoyer une erreur précise à l'utilisateur. Si l'appel à <code>trouver()</code> retourne quelque chose, alors cela signifie que son adresse existe déjà : nous envoyons alors une exception contenant un message lui demandant d'en choisir une autre, qui provoque dans <code>traiterEmail()</code> la mise en place du message dans la <code>Map</code> des erreurs, et qui ainsi permet de ne pas appeler la méthode <code>creer()</code> en cas d'adresse déjà existante.</p><p id="r-2136983" data-claire-element-id="2354031">En outre, chercher à économiser ici une requête SQL relève du détail. Premièrement parce qu'il s'agit ici d'un simple <code>SELECT</code> très peu gourmand, et deuxièmement parce qu'à moins de travailler sur un site extrêmement populaire, l'inscription reste une opération effectuée relativement peu fréquemment en comparaison du reste des fonctionnalités. Bref, pas de problème ! :)</p><h4 id="r-2136988" data-claire-element-id="2838193">Création d'une exception dédiée aux erreurs de validation</h4><p id="r-2136985" data-claire-element-id="2354033">Enfin, vous remarquez que nos méthodes renvoient dorénavant des <strong>FormValidationException</strong>, et non plus de banales <strong>Exception</strong>. J'ai en effet pris soin de créer une nouvelle exception personnalisée, qui hérite d'<strong>Exception</strong> et que j'ai placée dans <code>com.sdzee.forms</code> :</p><pre id="r-2136986" data-claire-element-id="2838192"><code data-claire-semantic="java">package com.sdzee.forms;
+
+public class FormValidationException extends Exception {
+    /*
+     * Constructeur
+     */
+    public FormValidationException( String message ) {
+        super( message );
+    }
+}</code></pre><p id="r-2136987" data-claire-element-id="2354035">Ce n'est pas une modification nécessaire en soit, mais cela rend le code plus compréhensible à la lecture, car nous savons ainsi quel type d’erreur est manipulé par une méthode au premier coup d’œil.</p><h3 id="r-624783" data-claire-element-id="3312495">Vérifications</h3><h4 id="r-2137000" data-claire-element-id="3312487">Le code final</h4><p id="r-2136989" data-claire-element-id="2354038">Avant tout, je vous propose de vérifier que vous avez bien reporté toutes les modifications nécessaires au code existant, et réalisé tous les ajouts demandés. Voici sur la figure suivante l'arborescence que vous êtes censés obtenir.</p><figure id="r-2136992" data-claire-element-id="3312486"><img id="r-2136990" data-claire-element-id="2354039" src="../../../user.oc-static.com/files/396001_397000/396653.png" alt="Image utilisateur" /></figure><p id="r-2136993" data-claire-element-id="2354042">Certaines classes ayant subi beaucoup de retouches, j'ai dû fractionner leur code en plusieurs sections, afin de vous l'expliquer le plus clairement possible et ainsi de vous en faciliter la compréhension. Ne souhaitant pas vous voir vous emmêler les pinceaux, je vous propose de télécharger les codes complets des deux classes les plus massives :</p><ul id="r-2136998" data-claire-element-id="2354047"><li id="r-2136995" data-claire-element-id="2354044"><p id="r-2136994" data-claire-element-id="2354043"><a href="http://course.oc-static.com/ftp-tutos/cours/java-ee/UtilisateurDaoImpl.java">UtilisateurDaoImpl.java</a></p></li><li id="r-2136997" data-claire-element-id="2354046"><p id="r-2136996" data-claire-element-id="2354045"><a href="http://course.oc-static.com/ftp-tutos/cours/java-ee/InscriptionForm.java">InscriptionForm.java</a></p></li></ul><p id="r-2136999" data-claire-element-id="2354048">Vous pourrez ainsi vous assurer que vous n'avez omis aucun changement.</p><h4 id="r-2137036" data-claire-element-id="3312494">Le scénario de tests</h4><p id="r-2137001" data-claire-element-id="2354050">Après toutes ces nouveautés, tous ces ajouts et toutes ces modifications, il est temps de tester le bon fonctionnement de notre application. Le scénario est relativement léger, il suffit de tester ce qui se passe lorsqu'un utilisateur tente de s'inscrire deux fois avec la même adresse email. Je vous laisse reprendre les scénarios des chapitres précédents, afin de vous assurer que tout ce que nous avions mis en place dans les chapitres précédents fonctionne toujours.</p><aside id="r-2137003" data-claire-element-id="2354052" data-claire-semantic="information"><p id="r-2137002" data-claire-element-id="2354051">Pour information, cela s'appelle un <strong>test de régression</strong>. Cela consiste à vérifier que les modifications apportées sur le code n'ont pas modifié le fonctionnement de la page ou de l'application, et c'est bien entendu un processus récurrent et extrêmement important dans le développement d'une application !</p></aside><p id="r-2137004" data-claire-element-id="2354053">Voici à la figure suivante le formulaire avant soumission des données.</p><figure id="r-2137007" data-claire-element-id="3312489"><img id="r-2137005" data-claire-element-id="2354054" src="../../../user.oc-static.com/files/396001_397000/396436.png" alt="Formulaire avant soumission des données" /></figure><p id="r-2137008" data-claire-element-id="2354057">Voici à la figure suivante le formulaire après soumission la première fois.</p><figure id="r-2137011" data-claire-element-id="3312491"><img id="r-2137009" data-claire-element-id="2354058" src="../../../user.oc-static.com/files/396001_397000/396437.png" alt="Formulaire après soumission la première fois" /></figure><p id="r-2137012" data-claire-element-id="2354061">Voici à la figure suivante le formulaire après soumission une seconde fois.</p><figure id="r-2137015" data-claire-element-id="3312493"><img id="r-2137013" data-claire-element-id="2354062" src="../../../user.oc-static.com/files/396001_397000/396438.png" alt="Formulaire après soumission une seconde fois" /></figure><p id="r-2137016" data-claire-element-id="2354065">Comme prévu, la méthode de validation de l'adresse email a correctement fait son travail. Elle a reçu un résultat lors de l'appel à la méthode <code>trouver()</code>, et a par conséquent placé un message d'erreur sur le champ <strong>email</strong>.</p><p id="r-2137017" data-claire-element-id="2354066">En outre, vous pouvez regarder le contenu de votre table <strong>Utilisateur</strong> depuis la console de votre serveur MySQL, via un simple <code>SELECT * FROM Utilisateur;</code>. Vous constaterez alors que les informations que vous avez saisies depuis votre navigateur ont bien été enregistrées dans la base de données, et que le mot de passe a bien été chiffré.</p><p id="r-2137018" data-claire-element-id="2354067">Voilà tout ce qu'il est nécessaire de vérifier pour le moment. En apparence, cela paraît peu par rapport à tout le code que nous avons dû mettre en place, je vous l'accorde. Mais ne vous en faites pas, nous n'avons pas uniquement rendu notre premier DAO opérationnel, nous avons préparé le terrain pour tous les futurs DAO de notre application ! ;)</p><ul id="r-2137035" data-claire-element-id="2354084"><li id="r-2137020" data-claire-element-id="2354069"><p id="r-2137019" data-claire-element-id="2354068">Le pattern DAO permet d'isoler l'accès aux données et leur stockage du reste de l'application.</p></li><li id="r-2137022" data-claire-element-id="2354071"><p id="r-2137021" data-claire-element-id="2354070">Mettre en place des exceptions spécifiques au DAO permet de masquer le type du stockage sous-jascent.</p></li><li id="r-2137024" data-claire-element-id="2354073"><p id="r-2137023" data-claire-element-id="2354072">Mettre en place une Factory initialisée au démarrage de l'application via un <code>ServletContextListener</code> permet de ne charger qu'une seule et unique fois le driver JDBC.</p></li><li id="r-2137026" data-claire-element-id="2354075"><p id="r-2137025" data-claire-element-id="2354074">Mettre en place des utilitaires pour la préparation des requêtes et la libération des ressources permet de limiter la duplication et d'alléger grandement le code.</p></li><li id="r-2137028" data-claire-element-id="2354077"><p id="r-2137027" data-claire-element-id="2354076">Notre DAO libérant proprement les ressources qu'il met en jeu, une seule et unique instance de notre DAO peut être partagée par toutes les requêtes entrantes.</p></li><li id="r-2137030" data-claire-element-id="2354079"><p id="r-2137029" data-claire-element-id="2354078">Récupérer une telle instance de DAO de manière unique depuis une servlet, et non pas à chaque requête entrante, peut se faire simplement en utilisant sa méthode <code>init()</code>.</p></li><li id="r-2137032" data-claire-element-id="2354081"><p id="r-2137031" data-claire-element-id="2354080">Notre servlet transmet alors simplement l'instance du DAO à l'objet métier, qui sera responsable de la gestion des données.</p></li><li id="r-2137034" data-claire-element-id="2354083"><p id="r-2137033" data-claire-element-id="2354082">Notre objet métier ne connaît pas le système de stockage final utilisé : il ne fait qu'appeler les méthodes définies dans l'interface de notre DAO.</p></li></ul>
+
+                <div class="js-courseSelementActions sideActions">
+    <ul class="sideActions__container">
+        <li>
+            <a class="sideActions__item  js-courseElementActions-copyUrl  js-tooltip"
+               href="#" data-tooltip="Copier le lien"
+               data-tooltip-done="Lien copié !">
+            #
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+
+            
+            <nav class="course-pagination    clearfix">
+
+            <a href="communiquez-avec-votre-bdd.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--previous">
+            <i class="icon-previous"></i>
+            <span>Communiquez avec votre BDD</span>
+        </a>
+    
+    <span class="course-pagination__separator"></span>
+
+            <a href="tp-fil-rouge-etape-6.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--next">
+            <span>TP Fil rouge - Étape 6</span>
+            <i class="icon-next"></i>
+        </a>
+    
+</nav>
+
+            
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-view-restriction_popin_title"
+                class="popin popin--illustrated  js-popin"
+        id="popin-view-restriction"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+                    <div class="popin__illustrationWrapper">
+                <div class="popin__illustration illustration--balloon"></div>
+            </div>
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-view-restriction_popin_title" class="popin__title  js-popin-title">Waouh !</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <p>
+            Très heureux de voir que nos cours vous plaisent, déjà 3 pages lues aujourd&#039;hui ! Vous pouvez continuer la lecture de nos cours en devenant un Roomie, un membre de la communauté d&#039;OpenClassrooms. C&#039;est gratuit !
+        </p>
+        <p>
+            Vous pourrez aussi suivre votre avancement dans le cours, faire les exercices et discuter avec les autres Roomies.
+        </p>
+                    </div>
+            </div>
+
+                            <div class="popin__actions  js-popin-actions">
+                                                                        <a class="oc-btn orange-alt-btn "  href="https://openclassrooms.com/register">S'inscrire</a>
+                                                    <a class="oc-btn dark-btn "  href="https://openclassrooms.com/login">Se connecter</a>
+                                                            </div>
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+        </div>
+
+
+    </section>
+</div>
+    </div>
+
+    
+    <div id="popin-not-certifying-yet"
+     class="popin"
+     data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <a href='https://openclassrooms.com/premium'><i class='icon-star'></i> Devenez Premium</a>
+                    ">
+    <img alt="Exemple de certificat de réussite" src="../../../static.oc-static.com/prod/images/courses/certif.jpg"/>
+</div>
+
+
+                </main>
+
+                <aside class="contentWithSidebar__sidebar  js-contentWithSidebar-slidingElement" >
+                        <nav class="col-nav">
+    <div id="tab-courseMenu" class="col-nav__inner js-sidebar-inner">
+        <div class="col-nav__block  col-nav__block--summary">
+
+            <div class="side-paginate">
+                                    <a href="communiquez-avec-votre-bdd.html" class="side-paginate__previous">
+                        <i class="icon-previous"></i>
+                    </a>
+
+                    <span class="side-paginate__separator"></span>
+                
+                <h6 class="side-paginate__title">
+                    Les bases de données avec Java EE
+                </h6>
+
+                                    <span class="side-paginate__separator"></span>
+
+                    <a href="tp-fil-rouge-etape-6.html" class="side-paginate__next">
+                        <i class="icon-next"></i>
+                    </a>
+                            </div>
+
+                            <div class="col-nav__block--summary-list">
+                    <ol class="col-nav__chapters">
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="introduction-a-mysql-et-jdbc.html">Introduction à MySQL et JDBC</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="communiquez-avec-votre-bdd.html">Communiquez avec votre BDD</a>
+                                                            </li>
+                                                    <li class="selected">
+                                                                                                    <span class="col-nav__chapterTitle">Le modèle DAO</span>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="tp-fil-rouge-etape-6.html">TP Fil rouge - Étape 6</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="gerer-un-pool-de-connexions-avec-bonecp.html">Gérer un pool de connexions avec BoneCP</a>
+                                                            </li>
+                                            </ol>
+
+                                    </div>
+                    </div>
+
+        
+        
+            <div class="col-nav__block  col-nav__block--subscribe">
+            <a href="https://openclassrooms.com/login" class="oc-btn orange-alt-btn js-popin-activator" data-popin-selector="#popin-log-in">
+                <i class="icon-lock"></i>
+                Suivre ce cours
+            </a>
+
+            <a href="https://openclassrooms.com/how-does-it-work">
+                <small>Comment ça marche ?</small>
+            </a>
+        </div>
+    
+
+
+        
+                    <div class="col-nav__block col-nav__block--institution">
+    <h2>Créé par</h2>
+            <a  href="https://openclassrooms.com/partners/openclassrooms" target="_blank">
+            <img src="../../../sdz-upload.s3.amazonaws.com/prod/partners/img/logo_logo-oc.png" alt="logo OpenClassrooms" class="col-nav__institutionLogo"/>
+            <p class="col-nav__block--institutionDescription">
+                OpenClassrooms, 1ère plateforme  <span class='nowrap'>e-Education<span> en Europe
+            </p>
+        </a>
+    </div>
+        
+        
+        
+    
+                        
+            
+    <div class="socialNetwork col-nav__block">
+        <ul class="socialButtons  js-socialButtons"
+    data-options="
+                title: 'Découvrez le cours &quot;Le modèle DAO&quot; sur @OpenClassrooms',
+        mailTitle: 'Cours &quot;Le modèle DAO&quot; sur OpenClassrooms',
+        mailContent: 'Découvrez le cours &quot;Le modèle DAO&quot; sur OpenClassrooms.'">
+
+    <li>
+        <a class="roundIcon  roundIcon--twitter addthis_button_twitter  js-socialButtons-btn" data-tooltip="Partagez sur Twitter" >
+            <i class="roundIcon__icon  icon-twitter"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--facebook  addthis_button_facebook  js-socialButtons-btn" data-tooltip="Partagez sur Facebook">
+            <i class="roundIcon__icon  icon-facebook"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--googlePlus  addthis_button_google_plusone_share  js-socialButtons-btn" data-tooltip="Partagez sur Google+" >
+            <i class="roundIcon__icon  icon-google"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  addthis_button_email  js-socialButtons-btn  js-socialButtons-email" data-tooltip="Partagez par e-mail">
+            <i class="roundIcon__icon  icon-letter"></i>
+        </a>
+    </li>
+
+</ul>
+
+    </div>
+    </div>
+</nav>
+                </aside>
+            </div>
+        </div>
+
+                    <footer class="alt-section">
+    <div class="centered">
+
+        <div class="row">
+                            <div class="col4 course-bottom__category">
+                    <h2 class="highlighted">
+                        L&#039;auteur
+                    </h2>
+                    <div>
+                                                    <a itemprop="author" itemscope itemtype="http://schema.org/Person" href="https://openclassrooms.com/membres/coyote-92394" class="no-underlined">
+                                <div class="course-bottom__text-illustrated">
+                                    <span data-author="Médéric Munier" style="background-image: url(../../../www.gravatar.com/avatar/15c349ac5313535fba91e5dbfa8803ec/indexd6dc.html?s=256&amp;r=g&amp;d=https%3A%2F%2Fopenclassrooms.com%2Fbundles%2Fcommon%2Fimages%2Favatar_defaut.png);"></span>
+                                    <h4 itemprop="name">Médéric Munier</h4>
+                                                                            <p itemprop="description">
+                                            Auteur du livre sur le Java EE.
+                                        </p>
+                                                                    </div>
+                            </a>
+                                            </div>
+                </div>
+            
+                            <div class="col8 course-bottom__category">
+                    <h2 class="highlighted">Découvrez aussi ce cours en...</h2>
+
+                    <ul class="course-bottom__format">
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">eBook</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-book"></i>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">Livre papier</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook pdf"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">PDF</div>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                    </div>
+
+    </div>
+</footer>
+
+
+    </article>
+            </div>
+        </div>
+
+                    <footer class="footer">
+    <div class="centered">
+        <div class="row">
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    OpenClassrooms
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/about-us" class="footer__link">Qui sommes-nous ?</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/how-does-it-work" class="footer__link">Fonctionnement de nos cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/jobs" class="footer__link">Recrutement</a>
+                    </li>
+                    <li>
+                        <a href="#" class="js-zendesk-show footer__link">Nous contacter</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Professionnels
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/affiliation" class="footer__link">
+                            Affiliation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/business" class="footer__link">Entreprises</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/universities" class="footer__link">Universités et écoles</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Participez
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/new-teachers" class="footer__link">Créer un cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/courses/courselab" class="footer__link">CourseLab</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/terms-conditions/fr" class="footer__link">
+                            <strong>Conditions Générales d&#039;Utilisation</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Suivez-nous
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+                                                                    <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="http://blog.openclassrooms.com/" class="footer__link">Le blog OpenClassrooms</a>
+                    </li>
+                    <li>
+                        <ul class="footer__socialNetwork">
+                            <li>
+                                <a href="https://www.facebook.com/openclassrooms" target="_blank" class="roundIcon roundIcon--facebook footer__socialButtons">
+                                    <i class="icon-facebook roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/openclassrooms" target="_blank" class="roundIcon roundIcon--twitter footer__socialButtons">
+                                    <i class="icon-twitter roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/+OpenClassrooms/posts" target="_blank" class="roundIcon roundIcon--youtube footer__socialButtons">
+                                    <i class="icon-google roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/openclassrooms" target="_blank" class="roundIcon roundIcon--instagram footer__socialButtons">
+                                    <i class="icon-instagram roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/TheOpenClassrooms" target="_blank" class="roundIcon roundIcon--googlePlus footer__socialButtons">
+                                    <i class="icon-youtube roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/openclassrooms" target="_blank" class="roundIcon roundIcon--linkedin footer__socialButtons">
+                                    <i class="icon-linkedin roundIcon__icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
+        
+        <!-- loaded javascript block -->
+
+            
+            <script type="text/javascript" src="../../js/maind0b3.js?095b5b3"></script>
+
+        
+
+    <script type="text/javascript" src="../../js/oc/courseViewd0b3.js?095b5b3"></script>
+
+
+        <!-- loaded javascript block -->
+
+        <script type="text/javascript">
+    window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+    window.analytics.load('mou95e6tdn');
+</script>
+
+                            
+        <!-- inlined javascript block -->
+
+        <script type="text/javascript">
+            
+            if (App.modules) {
+                App.modules.startAll();
+            }
+        </script>
+
+                        
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"90dc06697a","applicationID":"20302107","transactionName":"NANaYkJXC0ICAhdYVw1Je0NDQgpcTA4AblsPB1FEVWkGXhYTEFRnEwdKQm9GBEMXPhVYXRQ=","queueTime":0,"applicationTime":459,"atts":"GERZFApNGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/le-modele-dao by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:52:08 GMT -->
+</html>

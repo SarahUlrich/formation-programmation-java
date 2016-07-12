@@ -1,0 +1,1621 @@
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="fr" prefix="og: http://ogp.me/ns#">
+    
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/gerer-un-pool-de-connexions-avec-bonecp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:52:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(e,t){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,t)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var u=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(u,function(e,t){newrelic[t]=r(f+t,"api")}),i(c,function(e,t){newrelic[t]=r(f+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?u(e,a,i):i()}function n(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,c=0;u>c;c++)a[c].apply(i,r);var s=f[g[n]];return s&&s.push([m,n,r,i]),i}function p(e,t){w[e]=l(e).concat(t)}function l(e){return w[e]||[]}function d(e){return s[e]=s[e]||o(n)}function v(e,t){c(e,function(e,n){t=t||"feature",g[n]=t,t in f||(f[t]=[])})}var w={},g={},m={on:p,emit:n,get:d,listeners:l,context:t,buffer:v};return m}function i(){return new r}var a="nr@context",u=e("gos"),c=e(2),f={},s={},p=t.exports=o();p.backlog=f},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!w++){var e=v.info=NREUM.info,t=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){c(l,function(t,n){e[t]||(e[t]=n)});var n="https"===p.split(":")[0]||e.sslForHttp;v.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=v.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=window,s=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var p=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),v=t.exports={offset:a(),origin:p,features:{},xhrWrappable:d};s.addEventListener?(s.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(s.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),u("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader"]);</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="application-name" content="OpenClassrooms"/>
+        <meta name="msapplication-TileColor" content="#e95325"/>
+        <meta name="msapplication-TileImage" content="/fav-icon.png?v=1"/>
+
+        <meta name="theme-color" content="#E95325">
+        <link rel="icon" sizes="144x144" href="../../fav-icon3860.png?v=1">
+
+        
+        
+        <link href="../../bundles/common/css/masterd0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"  />
+        
+
+        <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="../../apple-touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-iphone-retina-display.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-ipad-retina-display.png" />
+
+        <link rel="apple-touch-icon-precomposed" href="../../apple-touch-icon-precomposed.png" />
+
+            <link href="../../bundles/course/css/maind0b3.css?095b5b3" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" src="../../js/modernizrd0b3.js?095b5b3"></script>
+
+        <link rel="shortcut icon" href="https://openclassrooms.com/favicon.ico?095b5b3" />
+
+            
+    <meta property="og:locale" content="fr"/>
+    <meta property="og:type" content="website"/>
+
+    <meta property="og:title" content="Découvrez le cours &quot;Gérer un pool de connexions avec BoneCP&quot; sur @OpenClassrooms"/>
+    <meta property="og:url" content="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/gerer-un-pool-de-connexions-avec-bonecp"/>
+    <meta property="og:site_name" content="OpenClassrooms"/>
+    <meta property="og:image" content="https://static.oc-static.com/prod/courses/illustrations/illu_creez-votre-application-web-avec-java-ee.png"/>
+    <meta property="og:description" content="Pour réaliser des sites web en Java, on utilise l&#039;environnement Java EE (anciennement appelé J2EE). Celui-ci impose de développer de façon très structurée, ce qui explique certainement pour quoi on le retrouve dans un très grand nombre d&#039;applications web notamment en entreprise (banques, administrations...)."/>
+
+            
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@OpenClassrooms"/>
+    <meta name="twitter:title" content="Découvrez le cours &quot;Gérer un pool de connexions avec BoneCP&quot; sur @OpenClassrooms"/>
+    <meta name="twitter:description" content=""/>
+
+                
+        <title>Gérer un pool de connexions avec BoneCP</title>
+
+        <!-- inlined top javascript block -->
+
+
+        <script type="text/javascript">
+            var App = {
+                startTime: (new Date()).getTime(),
+                debug: false
+            };
+
+            App.user = {
+                
+                
+                
+                isPremium: false
+            };
+
+
+            App.preferences = {
+                assetVersion: '095b5b3',
+                contactMail: 'hello@openclassrooms.com',
+                adyenPublicKey: '10001|889EBFD4D434B82683E21DCA26E77C3E20E0EE09A5ECE3830B0ED51F2FA721A2F7E9EC871C6AB9A1E12C4492F4717673047757E02C5256D8E265CD51E413E5EFCCFEAC41B39C662A424ADC13EE187C38C372A7FCCEC1EA5DF841989437D78B252A8EB51008E60BB55B1E55A7A80DE1A9D60D998C128A576BFAE1DDB97D514AF0A073AEDDE84CEE40D1F8F6ECE85D0FFA50C95C06DB274021C1371376C6EB16561FD65C5E2704B570A7504D617D0F3820F176A0609F6162BDF5890533289FDC3DA7DB03B50BB3BD60A613E1FF72060F22987627E8F1A29F0128A94EC4C8FF7CF6B7AB9558D8433BF86D7A388AB927641CD6C02689139CEE3AAC9ACBFFE83806CB',
+                algolia: {
+                    appId: 'JGRXRFVQM0',
+                    apiKey: 'dfbdea500cb0b5f46e449ad334916c44', indexName: 'prod_COURSES_fr'
+                },
+                routes: {
+                    COURSE_EVENT: '/components/courses/:courseId',
+                    COURSE_PART_EVENT: '/components/courses/:courseId/parts/:partId',
+
+                    ACCEPT_COOKIE: '/components/user-accept-consent-cookie'
+                }
+
+                                            };
+
+            App.preferences.navigationPreference = {
+                            };
+
+            App.preferences.modules = {
+                'smiley': {
+                    basePath: '/bundles/common/images/smiley/'
+                }
+            };
+        </script>
+        <!-- inlined top javascript block end -->
+
+        <script>    App.preferences.modules['course/view/internalFolding'] = {
+        isBigCourse: true
+    };
+
+    App.data = App.data || {};
+App.data.currentCourse = {"partId":625096,"courseId":626954};
+App.preferences.modules['view/currentCoursePage'] = App.data.currentCourse;
+
+</script>
+
+        
+        
+    </head>
+
+    <body class="course oc-body ">
+
+        
+
+        
+    
+    
+    <script id="_EVENTS-PAGE" type="application/json">
+        {"type":"page"}
+    </script>
+
+
+        <!--[if lt IE 9]>
+<div class="disclaimer  disclaimer-error">
+    Vous utilisez un navigateur obsolète, veuillez le <a href="http://browsehappy.com/">mettre à jour</a>.
+</div>
+<![endif]-->
+
+<noscript>
+    <div class="disclaimer  disclaimer--error">
+        Veuillez utiliser un <a href="http://browsehappy.com/">navigateur internet moderne</a> avec JavaScript activé pour naviguer sur OpenClassrooms.com
+    </div>
+</noscript>
+
+
+                    
+
+<header id="oc-header" class="js-tabs-mobile mainHeader ">
+
+        <div class="disclaimer  disclaimer--info hidden  js-cookie-disclaimer">
+        <div class="disclaimer__wrapper">
+            <span class="disclaimer__content">Bienvenue sur OpenClassrooms ! En poursuivant votre navigation, vous acceptez l'utilisation de cookies. <a href="https://openclassrooms.com/privacy-policy#personal-data-gathering">En savoir plus</a></span>
+            <span class="disclaimer__actions">
+                <a href="#" class="disclaimer__button  js-close-button">ok</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="mainHeader__wrapper">
+
+        <div class="mainHeader__topLine">
+                <a href="https://openclassrooms.com/pole-emploi/partenariat?utm_source=SiteWeb-OC&amp;utm_medium=Lien-PhraseHeader&amp;utm_campaign=relancePE"> Vous êtes demandeur d'emploi ? On vous offre le Premium Solo en 3 clics :) ! </a>
+
+        </div>
+
+        <div class="mainHeader__top">
+            <a href="https://openclassrooms.com/" class="mainHeader__logo" title="OpenClassrooms.com">OpenClassrooms.com</a>
+
+            
+<nav role="navigation" class="icoTabs  mainHeader__tabSet">
+    <span class="mainHeader__mobileNav">
+
+        
+        
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" href="#tab-courseEditMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-plus  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab  is-disabled" data-tabs-default="true" href="#tab-searchMenu">
+            <span class="icoTabs__inner--mobileRightSeparator">
+                <i class="icon-search  icoTabs__icon"></i>
+            </span>
+        </a>
+
+        <a class="js-tabs-tab  icoTabs__tab" href="#tab-main">
+            <i class="icon-menu  icoTabs__icon"></i>
+        </a>
+    </span>
+
+</nav>
+        </div>
+
+                <div class="js-tabs-content  mainHeader__content"></div>
+
+        <div class="mainHeader__content">
+            <div id="tab-main" class="mainHeader__tabs">
+                <nav class="mainTopNav  scrollPanel  js-scrollPanel-mobileMenu">
+    <div class="mainTopNav__container  scrollPanel__container  js-scrollPanel-container">
+        <ul class="mainHeader__container  mainHeader__container--mainMenu  js-scrollPanel-content">
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="http://openclassrooms.com/paths/">Parcours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/courses">Cours</a>
+            </li>
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/forum/">Forums</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/partners">Partenaires</a>
+            </li>
+
+            <li class="mainHeader__containerItem">
+                <a class="mainTopNav__item" href="https://openclassrooms.com/premium">Premium</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+                <div class="mainHeader__contentInner">
+                    <div class="mainHeader__container  mainHeader__container--search">
+                                                                                                                                                                            
+                                                                          
+ <div class="js-courseSearch  topSearchBox">
+     <form tabindex="0" class="js-courseSearch-form  oc-form" action="https://openclassrooms.com/courses" method="get">
+         <div class="js-courseSearch-inputGroup oc-form__widget  inputGroup  topSearchBox__inner">
+             <input id="algolia-search-input"
+                    type="search"
+                    class="js-courseSearch-input oc-form__control inputGroup__input  topSearchBox__input"
+                    title="Rechercher"
+                    autocomplete="off"
+                    data-option_source="/components/courses/search?q=<%= term %>"
+                    placeholder="Rechercher"
+                    name="q" />
+
+             <button class="js-courseSearch-button  oc-btn dark-btn  only-icon  inputGroup__button  topSearchBox__button" type="submit" title="Rechercher un cours">
+                 <i class="inputGroup__icon icon-search"></i>
+                 <i class="inputGroup__icon inputGroup__icon--load icon-spinner icon-spin"></i>
+             </button>
+         </div>
+     </form>
+ </div>
+                    </div>
+
+                                            <div class="mainHeader__container  mainHeader__container--separatorLarge  hidden-s"></div>
+                    
+
+
+                    
+                                            <div class="mainHeader__container  mainHeader__container--login">
+    <a href="https://openclassrooms.com/register" class="oc-btn orange-alt-btn js-popin-activator space-right" data-popin-selector="#popin-sign-in">
+    S&#039;inscrire
+</a>
+<a href="https://openclassrooms.com/login" class="oc-btn dark-btn js-popin-activator" data-popin-selector="#popin-log-in">
+    Se connecter
+</a>
+</div>
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-sign-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-sign-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-sign-in_popin_title" class="popin__title  js-popin-title">Inscription</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=b1ee4b6d24168c0ee25b5ef208998303&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail">
+            <i class="icon-facebook"></i>S&#039;inscrire avec Facebook
+        </a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto">
+            <i class="icon-google"></i>S&#039;inscrire avec Google
+        </a>
+    </li>
+
+    <li class="formLogin__column">
+        
+            
+    
+    
+
+    <form name="register" method="post" action="https://openclassrooms.com/register" class="js-registerForm oc-form">
+
+        <div class="accessibility-hidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Wonder&nbsp;                        </span><span class="oc-form__widget"><input type="text" id="register_wonder" name="register[wonder]" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Prénom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_firstName" name="register[firstName]" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Nom&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="register_lastName" name="register[lastName]" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="email" id="register_email" name="register[email]" required="required" class="" /></span></label>
+            <p>
+                <em>
+                    Vous recevrez votre mot de passe sur cette adresse email.
+                </em>
+            </p>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="register_terms" name="register[terms]" required="required" class="" value="1" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            J'ai lu et j'accepte les <a href="https://openclassrooms.com/terms-conditions/fr">Conditions Générales d'Utilisation</a>.&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span></span></label>
+        </div>
+
+
+        <div class="oc-form__group  center-text">
+            
+    <button type="submit" id="register_create" name="register[create]" class="oc-btn orange-alt-btn oc-btn"> S'inscrire</button>
+        </div>
+
+        <input type="hidden" id="register__target_path" name="register[_target_path]" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/gerer-un-pool-de-connexions-avec-bonecp" /><input type="hidden" id="register__token" name="register[_token]" value="LEhsW-IhokD4hQHYoHva_FZzYy-PP2cG-886IBpx9HY" /></form>
+    </li>
+</ul>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+
+
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-log-in_popin_title"
+                class="popin popin--small  js-popin"
+        id="popin-log-in"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-log-in_popin_title" class="popin__title  js-popin-title">Connexion</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <div class="formLogin formLogin--smallSize">
+            
+<ul class="table table--fullwidth u--noMargin">
+    <li class="formLogin__column">
+        <a class="facebook-btn oc-btn fullwidth formLogin__facebook" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=277769842283905&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_facebook&amp;state=b1ee4b6d24168c0ee25b5ef208998303&amp;sdk=php-sdk-4.0.23&amp;scope=public_profile%2Cemail"><i class="icon-facebook"></i> Se connecter avec Facebook</a>
+        <a class="google-btn oc-btn fullwidth formLogin__google" href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fopenclassrooms.com%2Flogin_check_google&amp;client_id=132418960718-jdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;access_type=online&amp;approval_prompt=auto"><i class="icon-google"></i> Se connecter avec Google</a>
+    </li>
+
+    <li class="formLogin__column">
+
+        
+            
+    
+    
+
+    <form name="" method="post" action="https://openclassrooms.com/login_check" class=" oc-form">
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Adresse email ou nom d'utilisateur&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="text" id="_username" name="_username" required="required" autofocus="autofocus" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group oc-form--requiredHidden">
+                <label class="oc-form__row    "><span class="oc-form__label-text ">
+                            Mot de passe&nbsp;<abbr class="oc-form__required" title="requis"><span>*</span></abbr></span><span class="oc-form__widget"><input type="password" id="_password" name="_password" required="required" class="" /></span></label>
+        </div>
+
+        <div class="oc-form__group">
+                <label class="oc-form__row  oc-form__row--reversed  "><span class="oc-form__widget"><span class="ocCheckbox"><input type="checkbox" id="_remember_me" name="_remember_me" class="" value="1" checked="checked" /><span class="ocCheckbox__check"></span></span></span><span class="oc-form__label-text"><span class="oc-form__label-text ">
+                            Se souvenir de moi&nbsp;                        </span></span></label>
+        </div>
+
+        <div class="oc-form__group right-text">
+            <a href="https://openclassrooms.com/set-new-password">Mot de passe oublié</a>
+        </div>
+
+        <div class="oc-form__group  center-text">
+            <input type="hidden" id="_target_path" name="_target_path" value="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/gerer-un-pool-de-connexions-avec-bonecp" /><div>
+    <button type="submit" id="login" name="login" class="orange-alt-btn oc-btn"> Se connecter</button></div><input type="hidden" id="_csrf_token" name="_csrf_token" value="WFIVlYEKEcL5v9hnQC1z3quXwgYs14KEFOLh1GUmi_I" />
+        </div>
+
+        </form>
+    </li>
+</ul>
+<p class="text-center space-top">
+    Pas encore membre ? <a href="https://openclassrooms.com/register">Inscrivez-vous gratuitement</a> en 30s.
+</p>
+        </div>
+                    </div>
+            </div>
+
+            
+                        
+                    </div>
+    </div>
+</aside>
+                    
+                    <div class="mainHeader__container  mainHeader__container--langSelector">
+                        <div class="js-popOut-header  popOut popOut--small  popOut--rightAlign" data-keep-it-mobile="true">
+    <span class="js-popOut-button  popOut__button">
+                    <a href="javascript:;" class="languageSelector__selected">Français</a>
+            </span>
+    <ul class="popOutList  popOut__content  popOutList--small">
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/en/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">English</a>
+            </li>
+                    <li class="popOutList__item">
+                <a class="popOutList__link" href="https://openclassrooms.com/change-locale/es/wsADDEtTJgeOfRBlmygmpV2y0eneCLAuyYJYnverVSQ">Español</a>
+            </li>
+            </ul>
+</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+        
+        <div id="mainSearch" class="centered search-content">
+        </div>
+
+        <div id="mainContentWithHeader">
+            <div id="pre-main-part">
+                
+                                        <section class="inset no-padding">
+        <div class="centered">
+
+            <h6 class="accessibility-hidden">Fil d&#039;Ariane</h6>
+
+            <nav class="breadcrumb">
+                <ul class="breadcrumbtrail">
+                                                                        <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/" itemprop="url">
+                                <span itemprop="title">Accueil</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses" itemprop="url">
+                                <span itemprop="title">Cours</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee?status=published" itemprop="url">
+                                <span itemprop="title">Créez votre application web avec Java EE</span>
+                            </a>
+                                                                            <div class="arrow-right"></div>
+                                                </li>
+                                                                        <li class="current" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                                                            Gérer un pool de connexions avec BoneCP
+                                                                        </li>
+                                    </ul>
+            </nav>
+        </div>
+    </section>
+
+                
+                            </div>
+
+            <div class="claire clearfix" >
+                    <article itemscope itemtype="http://schema.org/Article">
+
+                        
+<header class="course-header" xmlns="http://www.w3.org/1999/html">
+    <div class="centered"><div class="course-header__topPart"><div class="course-header__info"><a itemprop="url" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><h1 data-course-title="Créez votre application web avec Java EE">Créez votre application web avec Java EE</h1></a><span class="course-header__updatedTime visible-l">Mis à jour le lundi 13 juillet 2015</span></div></div></div><div class="course-header__details-container"><div class="centered"><div class="row"><div class="col12"><div class="course-header__details  iconBar"><div class="course-header__detailsGroup  course-header__detailsGroup--formats iconBar__group"><ul data-option_popinselector="#popin-formats-availables" class="course-types iconBar__list js-course-formats-bar"><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours est visible gratuitement en ligne."><a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee"><i class="icon-desktop  course-types__icon"></i><span class="course-header__format-current"></span></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore en vidéo."><span><i class="icon-video course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en livre papier."><a href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank"><i class="icon-book  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item  js-tooltip" title="Ce cours existe en eBook."><a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee"><i class="icon-ebook  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip"
+                                                                                            title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours."
+                                                                                ><a
+                                                                                        ><i class="icon-badge  course-types__icon"></i></a></li><li class="iconBar__item  course-types__item iconBar__item--dimmed js-tooltip" title="Ce cours n&#039;est pas encore diplômant et ne vous permet pas d&#039;obtenir des crédits universitaires européens (ECTS)."><span><i class="icon-hat  course-types__icon"></i></span></li><li class="iconBar__item  course-types__item  js-tooltip" title="Vous pouvez être accompagné sur ce cours par un mentor dédié en visioconférence."><a  href="https://openclassrooms.com/premium#discover-premium-plus-offer" ><i class="icon-mentor  course-types__icon"></i></a></li></ul></div><div class="course-header__detailsGroup  course-header__detailsGroup--info  iconBar__group"><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-duration iconBar__icon js-tooltip" title="Ce cours demande en moyenne 40 heures de travail pour être réussi."></i><span class="iconBar__label">40 heures</span></li><li class="iconBar__item"><i class="icon-level iconBar__icon"></i><span class="iconBar__label">
+                                                                                                    Moyenne
+                                                                                            </span></li></ul></div><div class="course-header__detailsGroup course-header__detailsGroup--licences iconBar__group"><a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/2.0"><span class="iconBar__label">Licence</span><ul class="iconBar__list"><li class="iconBar__item"><i class="icon-cc iconBar__icon" title="CC"></i></li><li class="iconBar__item"><i class="icon-ccby iconBar__icon" title="BY"></i></li><li class="iconBar__item"><i class="icon-ccnc iconBar__icon" title="NC"></i></li><li class="iconBar__item"><i class="icon-ccsa iconBar__icon" title="SA"></i></li></ul></a></div></div></div></div></div></div>
+    <div id="popin-formats-availables" class="popin popin--course-formats-availables">
+        <i class="popin__close-button icon-close js-close-button"></i>
+
+        <div class="course-types course-types--withSpace">
+                            <a class="course-types__item" href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-desktop course-types__icon"></i>
+                </a>
+            
+            
+                            <a class="course-types__item" href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms">
+                    <i class="icon-book course-types__icon"></i>
+                </a>
+            
+                            <a class="course-types__item" href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">
+                    <i class="icon-ebook course-types__icon"></i>
+                </a>
+            
+            
+                                        <a class="course-types__item" href="https://openclassrooms.com/premium#discover-premium-plus-offer">
+                    <i class="icon-mentor course-types__icon"></i>
+                </a>
+                    </div>
+
+                    <p>Ce cours est visible <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee">gratuitement en ligne</a>.</p>
+        
+        
+                    <p>
+                Ce cours existe en livre papier.
+            </p>
+        
+                    <p>Ce cours existe <a href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee">en eBook</a>.</p>
+        
+        
+        
+                    <p>
+                Vous pouvez être <a href="https://openclassrooms.com/premium#discover-premium-plus-offer">accompagné et mentoré par un professeur particulier</a> par visioconférence sur ce cours.
+            </p>
+        
+        <a class="oc-btn orange-alt-btn js-close-button" href="#">J&#039;ai tout compris !</a>
+    </div>
+
+    
+</header>
+
+    <div class="centered">
+                            
+        
+            <div class="row">
+        <div class="col12 col11-s">
+                            <nav class="timeline">
+        <div class="timeline__inner">
+
+        <span class="timeline__iconContainer">
+            <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+                <i class="icon-home roundIcon__icon"></i>
+            </a>
+        </span>
+            <div class="timeline__steps">
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-au-java-ee.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction au Java EE
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-java-ee-mis-a-nu.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le Java EE mis à nu !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="outils-et-environnement-de-developpement.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Outils et environnement de développement
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="la-servlet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La servlet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="servlet-avec-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Servlet avec vue…
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="transmission-de-donnees.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Transmission de données
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-javabean.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le JavaBean
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-1-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (1/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-technologie-jsp-2-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La technologie JSP (2/2)
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="des-problemes-de-vue.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Des problèmes de vue ?
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-1.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 1
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="objectifs-et-configuration.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Objectifs et configuration
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-core.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque Core
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-core-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL core : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-bibliotheque-xml.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La bibliothèque xml
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="jstl-xml-exercice-d-application.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    JSTL xml : exercice d&#039;application
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="faisons-le-point-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Faisons le point !
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-2.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 2
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="formulaires-le-b-a-ba.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : le b.a.-ba
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-a-la-mode-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : à la mode MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-3.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 3
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-session-connectez-vos-clients.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La session : connectez vos clients
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-filtre-creez-un-espace-membre.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le filtre : créez un espace membre
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-cookie-le-navigateur-vous-ouvre-ses-portes.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le cookie : le navigateur vous ouvre ses portes
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-4.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 4
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="formulaires-l-envoi-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Formulaires : l&#039;envoi de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-telechargement-de-fichiers.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le téléchargement de fichiers
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-5.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 5
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="introduction-a-mysql-et-jdbc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction à MySQL et JDBC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="communiquez-avec-votre-bdd.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Communiquez avec votre BDD
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="le-modele-dao.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Le modèle DAO
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-6.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 6
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="gerer-un-pool-de-connexions-avec-bonecp.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Gérer un pool de connexions avec BoneCP
+                                </span>
+
+                                                                    <span class="timeline__progressMarker"></span>
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="les-annotations.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Les annotations
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-persistance-des-donnees-avec-jpa.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La persistance des données avec JPA
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="tp-fil-rouge-etape-7.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    TP Fil rouge - Étape 7
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="introduction-aux-frameworks-mvc.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Introduction aux frameworks MVC
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="premiers-pas-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Premiers pas avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="la-gestion-d-un-formulaire-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    La gestion d&#039;un formulaire avec JSF
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="l-envoi-de-fichiers-avec-jsf.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    L&#039;envoi de fichiers avec JSF
+                                </span>
+
+                                                            </a>
+                                            
+                
+                    <span class="timeline__splitChapter"></span>
+
+                                            
+                                                        
+                            <a
+                                                                    href="debugger-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Débugger un projet
+                                </span>
+
+                                                            </a>
+                                                                    
+                                                        
+                            <a
+                                                                    href="empaquetage-et-deploiement-d-un-projet.html" class="timeline__step"
+                                                            >
+                                <span class="timeline__stepName">
+                                    Empaquetage et déploiement d&#039;un projet
+                                </span>
+
+                                                            </a>
+                                            
+                
+                <span class="timeline__splitChapter"></span>
+
+            </div>
+
+        <span class="timeline__iconContainer">
+                            <span title="Ce cours n&#039;est pas encore certifiant." class="roundIcon roundIcon--disabled">
+                    <i class="icon-trophy roundIcon__icon"></i>
+                </span>
+                    </span>
+
+        </div>
+    </nav>
+        </div>
+    </div>
+    </div>
+
+        
+        <div class="centered">
+            <div class="contentWithSidebar  spacer  js-contentWithSidebar" >
+                <main class="contentWithSidebar__content" >
+                        
+
+        <div class="relative js-sidebar-container">
+        <div class="static">
+    <h2 itemprop="name" data-part-title="Gérer un pool de connexions avec BoneCP" class="part-title">Gérer un pool de connexions avec BoneCP</h2>
+
+    <section class="row space-bottom js-desktop-sticky-container">
+        <div class="col9 col11-s col__small-padding--right">
+
+                <div class="tooltipMessage tooltipMessage--noArrow">
+        <i class="tooltipMessage__icon  icon-lock"></i>
+        <a href="https://openclassrooms.com/login" class="js-popin-activator" data-popin-selector="#popin-log-in" >Connectez-vous</a> ou <a href="https://openclassrooms.com/register" class="js-popin-activator" data-popin-selector="#popin-sign-in" >inscrivez-vous</a> pour bénéficier de toutes les fonctionnalités de ce cours !
+    </div>
+
+            <div
+                itemprop="articleBody"
+                data-page-indentifier="/courses/creez-votre-application-web-avec-java-ee/gerer-un-pool-de-connexions-avec-bonecp"
+                class="js-isRestrictablePage course-content js-course-container js-smilize "
+
+                                    data-video-blocked-wrapper="<a href='https://openclassrooms.com/login#popin-log-in' class='js-popin-activator'>"
+                            >
+
+                <p id="r-2137222" data-claire-element-id="2354274">La solution que nous avons mise en place souffre d'une carence importante : elle manque cruellement d'ambition ! Je n'ai fait qu'effleurer la question lors de notre apprentissage de JDBC, il est maintenant temps de nous y attarder et d'y apporter une solution simple et efficace.</p><h3 id="r-624991" data-claire-element-id="2838256">Contexte</h3><p id="r-2137223" data-claire-element-id="2354275">Dans le second chapitre de cette partie, je vous ai avertis que l'ouverture d'une connexion avec la BDD avait un coût non négligeable en termes de performances, et que dans une application très fréquentée, il était hors de question de procéder à des ouvertures/fermetures à chaque requête effectuée sans signer l'arrêt de mort de votre serveur ! À quoi faisais-je allusion ? Penchons-nous un instant sur le contexte du problème.</p><h4 id="r-2137226" data-claire-element-id="2354278">Une application multi-utilisateurs</h4><p id="r-2137224" data-claire-element-id="2354276">Une application web est une application centralisée à laquelle tous les utilisateurs accèdent à distance depuis leurs navigateurs. Partant de cette définition simpliste, il est aisé de deviner les limites du système. Si un nombre conséquent d'utilisateurs différents réalise des actions sur le site dans un intervalle de temps restreint, voire de manière simultanée, le serveur va devoir traiter l'ensemble des requêtes reçues à une vitesse folle pour assurer un certain confort de navigation au visiteur d'une part, et pour ne pas s'écrouler sous la charge d'autre part.</p><p id="r-2137225" data-claire-element-id="2354277">Ceci étant dit, il ne faut pas s'alarmer pour autant : tous les composants d'un serveur d'applications ne sont pas critiques. Sans plus attendre, voyons celui qui pèche le premier...</p><h4 id="r-2137233" data-claire-element-id="2354285">Le coût d'une connexion à la BDD</h4><p id="r-2137227" data-claire-element-id="2354279">Le maillon faible de la chaîne est sans surprise la liaison entre l'application (pour généraliser, disons le conteneur web) et la base de données. C'est ici que la dégradation des performances sera la plus importante, tant par sa rapidité que par sa lourdeur de conséquences.</p><div id="r-2137229" data-claire-element-id="2354281" data-claire-semantic="question"><p id="r-2137228" data-claire-element-id="2354280">De quel problème exactement sommes-nous en train de parler ?</p></div><p id="r-2137230" data-claire-element-id="2354282">L'établissement d'une connexion entre notre application et notre base de données MySQL a un coût en temps non négligeable, qui peut monter jusqu'à plusieurs centaines de millisecondes. Les principales raisons de cette latence sont la nécessité d'établir une connexion TCP/IP entre le conteneur et le SGBD d'une part, avec les contraintes naturelles que cela pose (lenteur du réseau, pare-feu, filtrages, etc.), et le fait que le SGBD va devoir préparer des informations relatives à l'utilisateur entrant à chaque nouvelle connexion.</p><p id="r-2137231" data-claire-element-id="2354283">Alors certes, à l'échelle d'une connexion cela reste tout à fait négligeable : quelques dixièmes de seconde de ralentissement sont presque anecdotiques... Oui, mais imaginez maintenant que cinquante utilisateurs effectuent simultanément des actions faisant intervenir une communication avec la base de données sur notre site : notre SGBD doit alors créer autant de nouvelles connexions, et nous passons ainsi de quelques dixièmes de secondes à plusieurs secondes de latence ! Et ça bien évidemment, c'est inacceptable. Sans parler de l'attente côté utilisateur, votre application va de son côté continuer à recevoir des requêtes et à tenter d'établir des connexions avec votre base, jusqu'au moment où la limite sera atteinte et votre SGBD cessera de répondre, causant tout bonnement le plantage lamentable de votre application. :-°</p><p id="r-2137232" data-claire-element-id="2354284">En revanche, le reste des opérations effectuées sur une base de données est très rapide ! Typiquement, la plupart de celles basées sur une connexion déjà ouverte s'effectuent en quelques millisecondes seulement.</p><h4 id="r-2137241" data-claire-element-id="2838255">La structure actuelle de notre solution</h4><p id="r-2137234" data-claire-element-id="2354286">Pour couronner le tout, la solution que nous avons mise en place fonctionne très bien pour effectuer des tests sur notre poste de développement, mais n'est pas du tout adaptée à une utilisation en production ! Eh oui, réfléchissez bien : alors que nous aurions pu nous contenter d'ouvrir une seule connexion et de la partager à l'ensemble des méthodes d'un DAO, nous procédons à l'ouverture/fermeture d'une connexion à chaque requête effectuée ! Pour vous rafraîchir la mémoire, voici mis à plat le squelette basique que nous avons appliqué :</p><pre id="r-2137235" data-claire-element-id="2838253"><code data-claire-semantic="java">Connection connexion = null;
+PreparedStatement preparedStatement = null;
+ResultSet resultat = null;
+
+try {
+    connexion = daoFactory.getConnection();
+    preparedStatement = connexion.prepareStatement( REQUETE_SQL );
+    ...
+    resultat = preparedStatement.executeQuery();
+    ...
+} finally {
+    if (resultat != null) try { resultat.close(); } catch (SQLException ignore) {}
+    if (preparedStatement != null) try { preparedStatement.close(); } catch (SQLException ignore) {}
+    if (connexion != null) try { connexion.close(); } catch (SQLException ignore) {}
+}</code></pre><div id="r-2137237" data-claire-element-id="2354289" data-claire-semantic="question"><p id="r-2137236" data-claire-element-id="2354288">Dans ce cas, pourquoi vous avoir fait développer une structure si peu adaptée à une utilisation en conditions réelles ?</p></div><p id="r-2137238" data-claire-element-id="2354290">En réalité, le tableau n'est pas aussi sombre qu'il n'y paraît. Certes, l'obtention d'une nouvelle connexion à chaque requête est une catastrophe en termes de performances. Mais le bon point, c'est que notre code est correctement organisé et découpé ! Regardez de plus près, nos DAO ne font pas directement appel à la méthode JDBC <code>DriverManager.getConnection()</code> pour établir une connexion. Ils le font par l'intermédiaire de la méthode <code>getConnection()</code> de notre <strong>DAOFactory</strong> :</p><pre id="r-2137239" data-claire-element-id="2838254"><code data-claire-semantic="java">/* Méthode chargée de fournir une connexion à la base de données */
+/* package */Connection getConnection() throws SQLException {
+    return DriverManager.getConnection( url, username, password );
+}</code></pre><p id="r-2137240" data-claire-element-id="2354292">Ainsi notre solution est clairement mauvaise pour le moment, mais nous sentons bien qu'en modifiant la manière dont notre <strong>DAOFactory</strong> obtient une connexion, nous pouvons améliorer grandement la situation, et ce sans rien avoir à changer dans nos DAO ! Bref, je ne vous ai pas fait coder n'importe quoi... ;)</p><h3 id="r-2137274" data-claire-element-id="2354327">Principe</h3><h4 id="r-2137251" data-claire-element-id="2354304">Réutilisation des connexions</h4><p id="r-2137242" data-claire-element-id="2354295">Afin d'alléger la charge que le SGBD doit actuellement supporter à chaque requête, nous allons utiliser une technique très simple : nous allons précharger un certain nombre de connexions à la base de données, et les réutiliser. L'expression employée pour nommer cette pratique est le « <em><strong>connection pooling</strong></em> », souvent très sauvagement francisée « <em><strong>pool de connexions</strong></em> ».</p><div id="r-2137244" data-claire-element-id="2354297" data-claire-semantic="question"><p id="r-2137243" data-claire-element-id="2354296">Comment fonctionne ce mécanisme de réutilisation ?</p></div><p id="r-2137245" data-claire-element-id="2354298">Pour faire simple, le pool de connexions va pré-initialiser un nombre donné de connexions au SGBD lorsque l'application démarre. Autrement dit, il va créer plusieurs objets <strong>Connection</strong> et les garder ouverts et bien au chaud.</p><p id="r-2137246" data-claire-element-id="2354299">Ensuite, le pool de connexions va se charger de distribuer ses objets <strong>Connection</strong> aux méthodes de l'application qui en ont besoin. Concrètement, cela signifie que ces méthodes ne vont plus faire appel à <code>DriverManager.getConnection()</code>, mais plutôt à quelque chose comme <code>pool.getConnection()</code>.</p><p id="r-2137247" data-claire-element-id="2354300">Enfin, puisque l'objectif du système est de partager un nombre prédéfini de ressources, un appel à la méthode <code>Connection.close()</code> ne devra bien entendu pas provoquer la fermeture réelle d'une connexion ! En lieu et place, c'est tout simplement un renvoi dans le pool de l'objet <code>Connection</code> qui va avoir lieu. De cette manière, et seulement de cette manière, la boucle est bouclée : l'objet <code>Connection</code> inutilisé retourne à la source, et est alors prêt à être à nouveau distribué.</p><p id="r-2137248" data-claire-element-id="2354301">De manière imagée, vous pouvez voir le pool comme un système de location de véhicules. Il dispose d'une flotte de véhicules dont il est le seul à pouvoir autoriser la sortie, sortie qu'il autorise à chaque demande d'un client. Cette sortie est par nature prévue pour être de courte durée : si un ou plusieurs clients ne rendent pas le véhicule rapidement, voire ne le rendent pas du tout, alors petit à petit la flotte de véhicules disponibles va se réduire comme peau de chagrin, et le pool n'aura bientôt plus aucun véhicule disponible...</p><aside id="r-2137250" data-claire-element-id="2354303" data-claire-semantic="information"><p id="r-2137249" data-claire-element-id="2354302">Bref, la libération des ressources dont je vous ai parlé avec insistance dans les précédents chapitres prend ici tout son intérêt : elle est la clé de voûte du système. Si une ressource inutilisée ne retourne pas au pool, les performances de l'application vont inévitablement se dégrader.</p></aside><h4 id="r-2137260" data-claire-element-id="2354313">Remplacement du DriverManager par une DataSource</h4><p id="r-2137252" data-claire-element-id="2354305">Maintenant que nous savons comment tout cela fonctionne en théorie, intéressons-nous à la pratique. Jusqu'à présent, nous avons utilisé le <code><a href="http://docs.oracle.com/javase/6/docs/api/java/sql/DriverManager.html">DriverManager</a></code> du package <code>java.sql</code> pour obtenir une connexion à notre base de données. Or nous venons de découvrir qu'afin de mettre en place un pool de connexions, il ne faut plus passer par cet objet...</p><div id="r-2137254" data-claire-element-id="2354307" data-claire-semantic="question"><p id="r-2137253" data-claire-element-id="2354306">Quel est le problème avec le <code>DriverManager</code> ?</p></div><p id="r-2137255" data-claire-element-id="2354308">Sur une application Java classique, avec un utilisateur unique et donc une seule connexion vers une base de données, il convient très bien. Mais une application Java EE est multi-threads et multi-utilisateurs, et sous ces contraintes cet objet ne convient plus. Dans une application Java EE en conditions réelles, plusieurs connexions parallèles sont ouvertes avec la base de données et pour les raisons évoquées un peu plus tôt, il n'est pas envisageable d'ouvrir des connexions à la volée pour chaque objet ou méthode agissant sur la base.</p><p id="r-2137256" data-claire-element-id="2354309">Nous avons besoin d'une gestion des ressources plus efficace, et notre choix va se porter sur l'objet <code><a href="http://docs.oracle.com/javase/6/docs/api/javax/sql/DataSource.html">DataSource</a></code> du nouveau package <code>javax.sql</code>. Il s'agit en réalité d'une interface qu'Oracle recommande d'utiliser en lieu de place du <code>DriverManager</code>, et ce peu importe le cas d'utilisation.</p><div id="r-2137258" data-claire-element-id="2354311" data-claire-semantic="question"><p id="r-2137257" data-claire-element-id="2354310">Dans ce cas, pourquoi ne pas avoir directement appris à manipuler une DataSource ?</p></div><p id="r-2137259" data-claire-element-id="2354312">Tout simplement parce qu'encore aujourd'hui, l'objet <code>DriverManager</code> est très répandu dans beaucoup de projets de faible ou moyenne envergure, et il est préférable que vous sachiez comment il fonctionne. En outre, vous allez bientôt découvrir que la manipulation d'une <code>DataSource</code> n'est pas si différente !</p><h4 id="r-2137273" data-claire-element-id="2354326">Choix d'une implémentation</h4><p id="r-2137261" data-claire-element-id="2354314">Une <code>DataSource</code> n'est qu'une interface, il est donc nécessaire d'en écrire une implémentation. Rassurez-vous, nous n'allons pas nous occuper de cette tâche : il existe plusieurs bibliothèques, libres et gratuites, qui ont été créées par des équipes de développeurs expérimentés et validées par des années d'utilisation. Sans être exhaustif, voici une liste des solutions les plus couramment rencontrées :</p><ul id="r-2137270" data-claire-element-id="2354323"><li id="r-2137263" data-claire-element-id="2354316"><p id="r-2137262" data-claire-element-id="2354315"><a href="http://commons.apache.org/dbcp/">Apache DBCP</a></p></li><li id="r-2137265" data-claire-element-id="2354318"><p id="r-2137264" data-claire-element-id="2354317"><a href="http://jolbox.com/">BoneCP</a></p></li><li id="r-2137267" data-claire-element-id="2354320"><p id="r-2137266" data-claire-element-id="2354319"><a href="http://sourceforge.net/projects/c3p0/">c3p0</a></p></li><li id="r-2137269" data-claire-element-id="2354322"><p id="r-2137268" data-claire-element-id="2354321"><a href="http://www.snaq.net/java/DBPool/">DBPool</a></p></li></ul><p id="r-2137271" data-claire-element-id="2354324">Le seul petit souci, c'est que toutes ces bibliothèques ne disposent pas d'une communauté active, et toutes n'offrent pas les mêmes performances. Je vous épargne la recherche d'informations sur chacune des solutions et leurs <em>benchmarks</em> respectifs, et vous annonce que nous allons utiliser <strong>BoneCP</strong> !</p><p id="r-2137272" data-claire-element-id="2354325">Quoi qu'il en soit, peu importe la solution que vous choisissez dans vos projets, le principe de base ne change pas et le processus de configuration que nous allons apprendre dans le paragraphe suivant reste sensiblement le même.</p><h3 id="r-2137345" data-claire-element-id="3312673">Mise en place</h3><h4 id="r-2137277" data-claire-element-id="3312672">Ajout des jar au projet</h4><p id="r-2137275" data-claire-element-id="3312671">Comme pour toute bibliothèque, il va nous falloir placer l'archive jar de la solution dans notre environnement. De la même manière que nous l'avions fait pour le driver JDBC, nous allons déposer le jar de BoneCP, téléchargeable en <a href="http://central.maven.org/maven2/com/jolbox/bonecp/0.8.0.RELEASE/bonecp-0.8.0.RELEASE.jar">cliquant ici</a>, dans le répertoire <strong>/lib</strong> de Tomcat.</p><p id="r-2137276" data-claire-element-id="2354329">En outre, <a href="http://jolbox.com/index.html?page=http://jolbox.com/requirements.html">la page listant les conditions requises</a> à un bon fonctionnement de la solution nous signale qu'il faut également inclure les bibliothèques SLF4J et Google Guava à notre projet, car la solution BoneCP en dépend. Vous devez donc télécharger les deux archives en cliquant sur <a href="http://course.oc-static.com/ftp-tutos/cours/java-ee/slf4j-api-1.6.6.jar">ce lien</a> pour SLF4J et sur <a href="http://course.oc-static.com/ftp-tutos/cours/java-ee/guava-13.0.1.jar">celui-ci</a> pour Guava, et les placer sous le répertoire <strong>/WEB-INF/lib</strong> aux côtés de l'archive de BoneCP.</p><h4 id="r-2137296" data-claire-element-id="2838258">Prise en main de la bibliothèque</h4><p id="r-2137278" data-claire-element-id="2354331">Nous devons ensuite étudier <a href="http://jolbox.com/index.html?page=http://jolbox.com/configuration.html">la documentation de BoneCP</a> pour comprendre comment tout cela fonctionne. Il existe plusieurs méthodes de configuration, chacune propre à un usage particulier. Ainsi, il est possible de paramétrer l'outil à la main, via un DataSource, pour une utilisation avec le <em>framework</em> Spring ou encore pour une utilisation avec le duo de <em>frameworks</em> Spring et Hibernate.</p><p id="r-2137279" data-claire-element-id="2354332">Quoi qu'il en soit, peu importe le contexte, les propriétés accessibles sont sensiblement les mêmes et nous allons toujours retrouver :</p><ul id="r-2137292" data-claire-element-id="2354345"><li id="r-2137281" data-claire-element-id="2354334"><p id="r-2137280" data-claire-element-id="2354333"><strong>jdbcUrl</strong>, contenant l'URL de connexion JDBC ;</p></li><li id="r-2137283" data-claire-element-id="2354336"><p id="r-2137282" data-claire-element-id="2354335"><strong>username</strong>, contenant le nom d'utilisateur du compte à utiliser sur la BDD ;</p></li><li id="r-2137285" data-claire-element-id="2354338"><p id="r-2137284" data-claire-element-id="2354337"><strong>password</strong>, contenant le mot de passe du compte à utiliser sur la BDD ;</p></li><li id="r-2137287" data-claire-element-id="2354340"><p id="r-2137286" data-claire-element-id="2354339"><strong>partitionCount</strong>, contenant un entier de 1 à N symbolisant le nombre de partitions du pool. C'est un paramètre spécifique à BoneCP, qui n'existe pas dans des solutions comme c3p0 ou DBCP ;</p></li><li id="r-2137289" data-claire-element-id="2354342"><p id="r-2137288" data-claire-element-id="2354341"><strong>maxConnectionsPerPartition</strong>, contenant le nombre maximum de connexions pouvant être créées par partition. Concrètement, cela signifie que si cette valeur vaut 5 et qu'il y a 3 partitions, alors il y aura en tout 15 connexions uniques disponibles et partagées via le pool. À noter que BoneCP ne va pas initialiser l'ensemble de ces connexions d'une traite, mais va commencer par en créer autant que spécifié dans la propriété <strong>minConnectionsPerPartition</strong>, puis il va graduellement augmenter le nombre de connexions disponibles au fur et à mesure que la charge va monter ;</p></li><li id="r-2137291" data-claire-element-id="2354344"><p id="r-2137290" data-claire-element-id="2354343"><strong>minConnectionsPerPartition</strong>, contenant le nombre minimum de connexions par partition.</p></li></ul><p id="r-2137293" data-claire-element-id="2354346">En ce qui nous concerne, nous allons dans le cadre de ce cours mettre en place un pool de connexions à la main. Toujours en suivant la documentation de BoneCP, nous apprenons qu'il faut passer par l'objet <code><a href="http://www.jarvana.com/jarvana/view/com/jolbox/bonecp/0.7.1-rc4/bonecp-0.7.1-rc4-javadoc.jar!/com/jolbox/bonecp/BoneCPConfig.html">BoneCPConfig</a></code> pour initialiser les différentes propriétés que nous venons de découvrir. Il suffit ensuite de créer un pool via l'objet <code><a href="http://www.jarvana.com/jarvana/view/com/jolbox/bonecp/0.7.1-rc4/bonecp-0.7.1-rc4-javadoc.jar!/com/jolbox/bonecp/BoneCP.html">BoneCP</a></code>. Voici le code d'exemple :</p><pre id="r-2137294" data-claire-element-id="2838257"><code data-claire-semantic="java">Class.forName( &quot;com.mysql.jdbc.Driver&quot; ); 	// chargement du driver JDBC (ici MySQL)
+BoneCPConfig config = new BoneCPConfig();	// création d'un objet BoneCPConfig
+config.setJdbcUrl( url );			// définition de l'URL JDBC
+config.setUsername( nomUtilisateur );		// définition du nom d'utilisateur
+config.setPassword( motDePasse );		// définition du mot de passe
+	
+config.setMinConnectionsPerPartition( 5 );	// définition du nombre min de connexions par partition
+config.setMaxConnectionsPerPartition( 10 );	// définition du nombre max de connexions par partition
+config.setPartitionCount( 2 );			// définition du nombre de partitions
+	
+BoneCP connectionPool = new BoneCP( config ); 	// création du pool à partir de l'objet BoneCPConfig
+	
+...</code></pre><p id="r-2137295" data-claire-element-id="2354348">Voilà tout ce que nous avons besoin de savoir. Pour le reste, la documentation est plutôt exhaustive. :)</p><h4 id="r-2137316" data-claire-element-id="2838260">Modification de la DAOFactory</h4><p id="r-2137297" data-claire-element-id="2354350">Maintenant que nous savons comment procéder, nous devons modifier le code de notre <strong>DAOFactory</strong> pour qu'elle travaille non plus en se basant sur l'objet <code>DriverManager</code>, mais sur un pool de connexions. Je vous donne le code pour commencer, et vous explique le tout ensuite :</p><pre id="r-2137298" data-claire-element-id="2838259"><code data-claire-semantic="java">package com.sdzee.dao;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Properties;
+
+import com.jolbox.bonecp.BoneCP;
+import com.jolbox.bonecp.BoneCPConfig;
+
+public class DAOFactory {
+
+    private static final String FICHIER_PROPERTIES       = &quot;/com/sdzee/dao/dao.properties&quot;;
+    private static final String PROPERTY_URL             = &quot;url&quot;;
+    private static final String PROPERTY_DRIVER          = &quot;driver&quot;;
+    private static final String PROPERTY_NOM_UTILISATEUR = &quot;nomutilisateur&quot;;
+    private static final String PROPERTY_MOT_DE_PASSE    = &quot;motdepasse&quot;;
+
+    /* package */BoneCP                      connectionPool           = null;
+
+    /* package */DAOFactory( BoneCP connectionPool ) {
+        this.connectionPool = connectionPool;
+    }
+
+    /*
+     * Méthode chargée de récupérer les informations de connexion à la base de
+     * données, charger le driver JDBC et retourner une instance de la Factory
+     */
+    public static DAOFactory getInstance() throws DAOConfigurationException {
+        Properties properties = new Properties();
+        String url;
+        String driver;
+        String nomUtilisateur;
+        String motDePasse;
+        BoneCP connectionPool = null;
+
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        InputStream fichierProperties = classLoader.getResourceAsStream( FICHIER_PROPERTIES );
+
+        if ( fichierProperties == null ) {
+            throw new DAOConfigurationException( &quot;Le fichier properties &quot; + FICHIER_PROPERTIES + &quot; est introuvable.&quot; );
+        }
+
+        try {
+            properties.load( fichierProperties );
+            url = properties.getProperty( PROPERTY_URL );
+            driver = properties.getProperty( PROPERTY_DRIVER );
+            nomUtilisateur = properties.getProperty( PROPERTY_NOM_UTILISATEUR );
+            motDePasse = properties.getProperty( PROPERTY_MOT_DE_PASSE );
+        } catch ( FileNotFoundException e ) {
+            throw new DAOConfigurationException( &quot;Le fichier properties &quot; + FICHIER_PROPERTIES + &quot; est introuvable.&quot;, e );
+        } catch ( IOException e ) {
+            throw new DAOConfigurationException( &quot;Impossible de charger le fichier properties &quot; + FICHIER_PROPERTIES, e );
+        }
+
+        try {
+            Class.forName( driver );
+        } catch ( ClassNotFoundException e ) {
+            throw new DAOConfigurationException( &quot;Le driver est introuvable dans le classpath.&quot;, e );
+        }
+
+        try {
+            /*
+             * Création d'une configuration de pool de connexions via l'objet
+             * BoneCPConfig et les différents setters associés.
+             */
+            BoneCPConfig config = new BoneCPConfig();
+            /* Mise en place de l'URL, du nom et du mot de passe */
+            config.setJdbcUrl( url );
+            config.setUsername( nomUtilisateur );
+            config.setPassword( motDePasse );
+            /* Paramétrage de la taille du pool */
+            config.setMinConnectionsPerPartition( 5 );
+            config.setMaxConnectionsPerPartition( 10 );
+            config.setPartitionCount( 2 );
+            /* Création du pool à partir de la configuration, via l'objet BoneCP */
+            connectionPool = new BoneCP( config );
+        } catch ( SQLException e ) {
+            e.printStackTrace();
+            throw new DAOConfigurationException( &quot;Erreur de configuration du pool de connexions.&quot;, e );
+        }
+        /*
+         * Enregistrement du pool créé dans une variable d'instance via un appel
+         * au constructeur de DAOFactory
+         */
+        DAOFactory instance = new DAOFactory( connectionPool );
+        return instance;
+    }
+
+    /* Méthode chargée de fournir une connexion à la base de données */
+    /* package */Connection getConnection() throws SQLException {
+        return connectionPool.getConnection();
+    }
+
+    /*
+     * Méthodes de récupération de l'implémentation des différents DAO (un seul
+     * pour le moment)
+     */
+    public UtilisateurDao getUtilisateurDao() {
+        return new UtilisateurDaoImpl( this );
+    }
+}</code></pre><p id="r-2137299" data-claire-element-id="2354352">Comme vous pouvez le constater, le principe est très légèrement différent. Auparavant lors d'un appel à <code>getInstance()</code>, nous enregistrions les informations de connexion à la base de données dans des variables d'instance et nous les réutilisions à chaque appel à <code>getConnection()</code>. Dorénavant, lors d'un appel à <code>getInstance()</code> nous procédons directement à l'initialisation du pool de connexions, et nous enregistrons uniquement le pool ainsi obtenu dans une variable d'instance, qui est alors réutilisée à chaque appel à <code>getConnection()</code>.</p><p id="r-2137300" data-claire-element-id="2354353">Ainsi, seuls quelques éléments changent dans le code :</p><ul id="r-2137311" data-claire-element-id="2354364"><li id="r-2137302" data-claire-element-id="2354355"><p id="r-2137301" data-claire-element-id="2354354">le constructeur se base maintenant sur l'objet <code>BoneCP</code>, ici aux lignes 23 à 25 ;</p></li><li id="r-2137304" data-claire-element-id="2354357"><p id="r-2137303" data-claire-element-id="2354356">la lecture des informations depuis le fichier <strong>Properties</strong> ne change pas ;</p></li><li id="r-2137306" data-claire-element-id="2354359"><p id="r-2137305" data-claire-element-id="2354358">le chargement du driver ne change pas ;</p></li><li id="r-2137308" data-claire-element-id="2354361"><p id="r-2137307" data-claire-element-id="2354360">avant d'appeler le constructeur, nous procédons aux lignes 64 à 83 à la création du pool de connexions ;</p></li><li id="r-2137310" data-claire-element-id="2354363"><p id="r-2137309" data-claire-element-id="2354362">enfin, la méthode <code>getConnection()</code> se base maintenant sur le pool, et non plus sur le <strong>DriverManager</strong> !</p></li></ul><p id="r-2137312" data-claire-element-id="2354365">Voilà tout ce qu'il est nécessaire de modifier pour mettre en place un pool de connexions dans notre application ! Simple et rapide, n'est-ce pas ? ;)</p><aside id="r-2137314" data-claire-element-id="2354367" data-claire-semantic="information"><p id="r-2137313" data-claire-element-id="2354366">Vous voilà devant un autre exemple de l'intérêt de bien organiser et découper le code d'une application. Dans cet exemple, la transparence est totale lors de l'utilisation des connexions, il nous suffit uniquement de modifier la méthode <code>getConnection()</code> de la classe <strong>DAOFactory</strong> ! Si nous n'avions pas mis en place cette <em>Factory</em> et avions procédé directement à l'ouverture d'une connexion depuis nos servlets ou objets métier, nous aurions dû reprendre l'intégralité du code concerné pour mettre en place notre pool...</p></aside><p id="r-2137315" data-claire-element-id="2354368">À noter également l'importance dans le code existant d'avoir correctement fermé/libéré les ressources utilisées (et notamment les objets <code>Connection</code>) lors des requêtes dans nos DAO, car si les connexions utilisées n'étaient pas systématiquement renvoyées au pool, alors nous nous heurterions très rapidement à un problème d'épuisement de stock, menant inéluctablement au plantage du serveur !</p><h4 id="r-2137325" data-claire-element-id="2354378">Vérifications</h4><p id="r-2137317" data-claire-element-id="2354370">Une fois toutes les modifications effectuées, il ne vous reste plus qu'à vérifier que votre code compile correctement et à redémarrer Tomcat ! Effectuez alors quelques tests de routine sur la page <a href="http://localhost:8080/pro/inscription">http://localhost:8080/pro/inscription</a> pour vous assurer du bon fonctionnement de votre application :</p><ul id="r-2137324" data-claire-element-id="2354377"><li id="r-2137319" data-claire-element-id="2354372"><p id="r-2137318" data-claire-element-id="2354371">essayez de vous inscrire en oubliant de confirmer votre mot de passe ;</p></li><li id="r-2137321" data-claire-element-id="2354374"><p id="r-2137320" data-claire-element-id="2354373">essayez de vous inscrire avec une adresse mail déjà utilisée ;</p></li><li id="r-2137323" data-claire-element-id="2354376"><p id="r-2137322" data-claire-element-id="2354375">enfin, inscrivez-vous avec des informations valides.</p></li></ul><h4 id="r-2137329" data-claire-element-id="2354382">Configuration fine du pool</h4><p id="r-2137326" data-claire-element-id="2354379">Ce dernier paragraphe va peut-être vous décevoir, mais il n'existe pas de règles empiriques à appliquer pour « bien » configurer un pool de connexions. C'est un processus qui est fortement lié à la fois au nombre moyen d'utilisateurs simultanés sur le site, à la complexité des requêtes effectuées sur la base, aux capacités matérielles du serveur, au SGBD utilisé, à la qualité de service souhaitée, etc.</p><p id="r-2137327" data-claire-element-id="2354380">En somme, la configuration fine d'un pool s'effectue au cas par cas. Cela passe par une série de tests grandeur nature, durant lesquels un certain nombre de connexions et utilisations simultanées sont simulées en accord avec les spécifications du projet, afin de vérifier comment réagit la base de données, comment réagit le pool et comment sont impactées les performances globales de l'application en période de charge faible, moyenne et forte, le tout pour une configuration donnée. Si les tests sont convaincants, alors la configuration est validée. Sinon, elle est modifiée - changement du nombre de connexions minimum et maximum, et du nombre de partitions - et une autre série de tests est lancée.</p><p id="r-2137328" data-claire-element-id="2354381">Bref, aller plus loin ici n'a aucun intérêt pédagogique pour nous : nous sommes ici pour apprendre à développer une application, pas pour devenir des experts en déploiement ! ;)</p><h4 id="r-2137344" data-claire-element-id="2354397">En résumé</h4><ul id="r-2137342" data-claire-element-id="2354395"><li id="r-2137331" data-claire-element-id="2354384"><p id="r-2137330" data-claire-element-id="2354383">La connexion à une base de données est une étape coûteuse en termes de temps et de performances.</p></li><li id="r-2137333" data-claire-element-id="2354386"><p id="r-2137332" data-claire-element-id="2354385">Il est nécessaire d'initialiser un nombre prédéfini de connexions, et de les partager/distribuer/réutiliser pour chaque requête entrante : c'est le principe du <strong>pool de connexions</strong>.</p></li><li id="r-2137335" data-claire-element-id="2354388"><p id="r-2137334" data-claire-element-id="2354387">Lorsqu'un pool de connexions est en place, un appel à la méthode <code>connexion.close()</code> ne ferme pas littéralement une connexion, mais la renvoie simplement au pool.</p></li><li id="r-2137337" data-claire-element-id="2354390"><p id="r-2137336" data-claire-element-id="2354389">La méthode <code>getConnection()</code> étant centralisée et définie dans notre Factory, il nous est très aisé de modifier son comportement.</p></li><li id="r-2137339" data-claire-element-id="2354392"><p id="r-2137338" data-claire-element-id="2354391">Un pool de connexions se base sur le principe d'une <code>DataSource</code>, objet qu'il est vivement recommandé d'utiliser en lieu et place du <code>DriverManager</code>.</p></li><li id="r-2137341" data-claire-element-id="2354394"><p id="r-2137340" data-claire-element-id="2354393">BoneCP est une solution de pooling très efficace, aisément configurable et intégrable à n'importe quelle application Java EE.</p></li></ul><p id="r-2137343" data-claire-element-id="2354396">Nous voilà enfin aptes à créer une application de A à Z ! Nous n'avons pas encore pris connaissance des autres moyens existant pour créer et gérer plus simplement une application, mais avec notre bagage nous sommes d'ores et déjà capables de produire une application complète et fonctionnelle.</p>
+
+                <div class="js-courseSelementActions sideActions">
+    <ul class="sideActions__container">
+        <li>
+            <a class="sideActions__item  js-courseElementActions-copyUrl  js-tooltip"
+               href="#" data-tooltip="Copier le lien"
+               data-tooltip-done="Lien copié !">
+            #
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+
+            
+            <nav class="course-pagination    clearfix">
+
+            <a href="tp-fil-rouge-etape-6.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--previous">
+            <i class="icon-previous"></i>
+            <span>TP Fil rouge - Étape 6</span>
+        </a>
+    
+    <span class="course-pagination__separator"></span>
+
+            <a href="les-annotations.html" class="oc-btn dark-btn course-pagination__btn course-pagination__btn--next">
+            <span>Les annotations</span>
+            <i class="icon-next"></i>
+        </a>
+    
+</nav>
+
+            
+<aside  tabindex="-1"
+        role="dialog"
+                    aria-labelledby="popin-view-restriction_popin_title"
+                class="popin popin--illustrated  js-popin"
+        id="popin-view-restriction"
+>
+    <i class="popin__close-button icon-close js-close-button"></i>
+
+    <div class="popin__inner">
+                    <div class="popin__illustrationWrapper">
+                <div class="popin__illustration illustration--balloon"></div>
+            </div>
+        
+        <div class="popin__mainContainer">
+                            <h3 id="popin-view-restriction_popin_title" class="popin__title  js-popin-title">Waouh !</h3>
+            
+            
+            
+            <div class="popin__content  js-popin-content">
+                <div class="popin__contentWrapper">
+                                                <p>
+            Très heureux de voir que nos cours vous plaisent, déjà 3 pages lues aujourd&#039;hui ! Vous pouvez continuer la lecture de nos cours en devenant un Roomie, un membre de la communauté d&#039;OpenClassrooms. C&#039;est gratuit !
+        </p>
+        <p>
+            Vous pourrez aussi suivre votre avancement dans le cours, faire les exercices et discuter avec les autres Roomies.
+        </p>
+                    </div>
+            </div>
+
+                            <div class="popin__actions  js-popin-actions">
+                                                                        <a class="oc-btn orange-alt-btn "  href="https://openclassrooms.com/register">S'inscrire</a>
+                                                    <a class="oc-btn dark-btn "  href="https://openclassrooms.com/login">Se connecter</a>
+                                                            </div>
+            
+                        
+                    </div>
+    </div>
+</aside>
+
+        </div>
+
+
+    </section>
+</div>
+    </div>
+
+    
+    <div id="popin-not-certifying-yet"
+     class="popin"
+     data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <a href='https://openclassrooms.com/premium'><i class='icon-star'></i> Devenez Premium</a>
+                    ">
+    <img alt="Exemple de certificat de réussite" src="../../../static.oc-static.com/prod/images/courses/certif.jpg"/>
+</div>
+
+
+                </main>
+
+                <aside class="contentWithSidebar__sidebar  js-contentWithSidebar-slidingElement" >
+                        <nav class="col-nav">
+    <div id="tab-courseMenu" class="col-nav__inner js-sidebar-inner">
+        <div class="col-nav__block  col-nav__block--summary">
+
+            <div class="side-paginate">
+                                    <a href="tp-fil-rouge-etape-6.html" class="side-paginate__previous">
+                        <i class="icon-previous"></i>
+                    </a>
+
+                    <span class="side-paginate__separator"></span>
+                
+                <h6 class="side-paginate__title">
+                    Les bases de données avec Java EE
+                </h6>
+
+                                    <span class="side-paginate__separator"></span>
+
+                    <a href="les-annotations.html" class="side-paginate__next">
+                        <i class="icon-next"></i>
+                    </a>
+                            </div>
+
+                            <div class="col-nav__block--summary-list">
+                    <ol class="col-nav__chapters">
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="introduction-a-mysql-et-jdbc.html">Introduction à MySQL et JDBC</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="communiquez-avec-votre-bdd.html">Communiquez avec votre BDD</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="le-modele-dao.html">Le modèle DAO</a>
+                                                            </li>
+                                                    <li class="">
+                                                                                                    <a class="col-nav__chapterTitle" href="tp-fil-rouge-etape-6.html">TP Fil rouge - Étape 6</a>
+                                                            </li>
+                                                    <li class="selected">
+                                                                                                    <span class="col-nav__chapterTitle">Gérer un pool de connexions avec BoneCP</span>
+                                                            </li>
+                                            </ol>
+
+                                    </div>
+                    </div>
+
+        
+        
+            <div class="col-nav__block  col-nav__block--subscribe">
+            <a href="https://openclassrooms.com/login" class="oc-btn orange-alt-btn js-popin-activator" data-popin-selector="#popin-log-in">
+                <i class="icon-lock"></i>
+                Suivre ce cours
+            </a>
+
+            <a href="https://openclassrooms.com/how-does-it-work">
+                <small>Comment ça marche ?</small>
+            </a>
+        </div>
+    
+
+
+        
+                    <div class="col-nav__block col-nav__block--institution">
+    <h2>Créé par</h2>
+            <a  href="https://openclassrooms.com/partners/openclassrooms" target="_blank">
+            <img src="../../../sdz-upload.s3.amazonaws.com/prod/partners/img/logo_logo-oc.png" alt="logo OpenClassrooms" class="col-nav__institutionLogo"/>
+            <p class="col-nav__block--institutionDescription">
+                OpenClassrooms, 1ère plateforme  <span class='nowrap'>e-Education<span> en Europe
+            </p>
+        </a>
+    </div>
+        
+        
+        
+    
+                        
+            
+    <div class="socialNetwork col-nav__block">
+        <ul class="socialButtons  js-socialButtons"
+    data-options="
+                title: 'Découvrez le cours &quot;Gérer un pool de connexions avec BoneCP&quot; sur @OpenClassrooms',
+        mailTitle: 'Cours &quot;Gérer un pool de connexions avec BoneCP&quot; sur OpenClassrooms',
+        mailContent: 'Découvrez le cours &quot;Gérer un pool de connexions avec BoneCP&quot; sur OpenClassrooms.'">
+
+    <li>
+        <a class="roundIcon  roundIcon--twitter addthis_button_twitter  js-socialButtons-btn" data-tooltip="Partagez sur Twitter" >
+            <i class="roundIcon__icon  icon-twitter"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--facebook  addthis_button_facebook  js-socialButtons-btn" data-tooltip="Partagez sur Facebook">
+            <i class="roundIcon__icon  icon-facebook"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  roundIcon--googlePlus  addthis_button_google_plusone_share  js-socialButtons-btn" data-tooltip="Partagez sur Google+" >
+            <i class="roundIcon__icon  icon-google"></i>
+        </a>
+    </li>
+
+    <li>
+        <a class="roundIcon  addthis_button_email  js-socialButtons-btn  js-socialButtons-email" data-tooltip="Partagez par e-mail">
+            <i class="roundIcon__icon  icon-letter"></i>
+        </a>
+    </li>
+
+</ul>
+
+    </div>
+    </div>
+</nav>
+                </aside>
+            </div>
+        </div>
+
+                    <footer class="alt-section">
+    <div class="centered">
+
+        <div class="row">
+                            <div class="col4 course-bottom__category">
+                    <h2 class="highlighted">
+                        L&#039;auteur
+                    </h2>
+                    <div>
+                                                    <a itemprop="author" itemscope itemtype="http://schema.org/Person" href="https://openclassrooms.com/membres/coyote-92394" class="no-underlined">
+                                <div class="course-bottom__text-illustrated">
+                                    <span data-author="Médéric Munier" style="background-image: url(../../../www.gravatar.com/avatar/15c349ac5313535fba91e5dbfa8803ec/indexd6dc.html?s=256&amp;r=g&amp;d=https%3A%2F%2Fopenclassrooms.com%2Fbundles%2Fcommon%2Fimages%2Favatar_defaut.png);"></span>
+                                    <h4 itemprop="name">Médéric Munier</h4>
+                                                                            <p itemprop="description">
+                                            Auteur du livre sur le Java EE.
+                                        </p>
+                                                                    </div>
+                            </a>
+                                            </div>
+                </div>
+            
+                            <div class="col8 course-bottom__category">
+                    <h2 class="highlighted">Découvrez aussi ce cours en...</h2>
+
+                    <ul class="course-bottom__format">
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">eBook</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="http://www.eyrolles.com/Informatique/Livre/creez-des-applications-web-avec-java-ee-9791090085244?societe=openclassrooms" target="_blank" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-book"></i>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">Livre papier</div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a
+                                                                                    href="https://openclassrooms.com/ebooks/creez-votre-application-web-avec-java-ee" class="text-decoration-none"
+                                                                        >
+                                    <div class="circle circle--x-small">
+                                        <span class="circle__content"></span>
+                                        <i class="icon-ebook pdf"></i>
+                                                                                    <div class="ribbon ribbon--orange">
+                                                <div class="ribbon__content">
+                                                    <span>Premium</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                    <div class="course-bottom__format-entitled">PDF</div>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                    </div>
+
+    </div>
+</footer>
+
+
+    </article>
+            </div>
+        </div>
+
+                    <footer class="footer">
+    <div class="centered">
+        <div class="row">
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    OpenClassrooms
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/about-us" class="footer__link">Qui sommes-nous ?</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/how-does-it-work" class="footer__link">Fonctionnement de nos cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/jobs" class="footer__link">Recrutement</a>
+                    </li>
+                    <li>
+                        <a href="#" class="js-zendesk-show footer__link">Nous contacter</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Professionnels
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/affiliation" class="footer__link">
+                            Affiliation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/business" class="footer__link">Entreprises</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/universities" class="footer__link">Universités et écoles</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Participez
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+
+                <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="https://openclassrooms.com/new-teachers" class="footer__link">Créer un cours</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/courses/courselab" class="footer__link">CourseLab</a>
+                    </li>
+                    <li>
+                        <a href="https://openclassrooms.com/terms-conditions/fr" class="footer__link">
+                            <strong>Conditions Générales d&#039;Utilisation</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3 col6-s  footer__item  linksList  foldable  js-foldable" data-options="mobileOnly: true, disableOnLargeScreen: true, initialState: 'closed'">
+                <h2 class="linksList__title  foldable__button  js-foldable-button">
+                    Suivez-nous
+                    <i class="icon-next  foldable__icon"></i>
+                </h2>
+                                                                    <ul class="linksList__content foldable__content">
+                    <li>
+                        <a href="http://blog.openclassrooms.com/" class="footer__link">Le blog OpenClassrooms</a>
+                    </li>
+                    <li>
+                        <ul class="footer__socialNetwork">
+                            <li>
+                                <a href="https://www.facebook.com/openclassrooms" target="_blank" class="roundIcon roundIcon--facebook footer__socialButtons">
+                                    <i class="icon-facebook roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/openclassrooms" target="_blank" class="roundIcon roundIcon--twitter footer__socialButtons">
+                                    <i class="icon-twitter roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/+OpenClassrooms/posts" target="_blank" class="roundIcon roundIcon--youtube footer__socialButtons">
+                                    <i class="icon-google roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/openclassrooms" target="_blank" class="roundIcon roundIcon--instagram footer__socialButtons">
+                                    <i class="icon-instagram roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/TheOpenClassrooms" target="_blank" class="roundIcon roundIcon--googlePlus footer__socialButtons">
+                                    <i class="icon-youtube roundIcon__icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/openclassrooms" target="_blank" class="roundIcon roundIcon--linkedin footer__socialButtons">
+                                    <i class="icon-linkedin roundIcon__icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
+        
+        <!-- loaded javascript block -->
+
+            
+            <script type="text/javascript" src="../../js/maind0b3.js?095b5b3"></script>
+
+        
+
+    <script type="text/javascript" src="../../js/oc/courseViewd0b3.js?095b5b3"></script>
+
+
+        <!-- loaded javascript block -->
+
+        <script type="text/javascript">
+    window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+    window.analytics.load('mou95e6tdn');
+</script>
+
+                            
+        <!-- inlined javascript block -->
+
+        <script type="text/javascript">
+            
+            if (App.modules) {
+                App.modules.startAll();
+            }
+        </script>
+
+                        
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"90dc06697a","applicationID":"20302107","transactionName":"NANaYkJXC0ICAhdYVw1Je0NDQgpcTA4AblsPB1FEVWkGXhYTEFRnEwdKQm9GBEMXPhVYXRQ=","queueTime":0,"applicationTime":620,"atts":"GERZFApNGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/gerer-un-pool-de-connexions-avec-bonecp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 09:52:09 GMT -->
+</html>
