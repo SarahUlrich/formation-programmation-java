@@ -1,0 +1,39 @@
+= Exercices Programmation Java EE
+:author: Arnaud Tournier
+:email: ltearno@gmail.com
+:toc: macro
+:toc-title: Exercices de programmation avec Java EE
+:source-highlighter: highlightjs
+
+LTE Consulting (C) - 2016
+
+toc::[]
+
+== Au préalable
+
+Vous pouvez consulter ceci :
+
+- https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML[Mon premier formulaire] de chez Mozilla Developper Network,
+- https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/formulaires-le-b-a-ba[Formulaire B-A BA] sur Open Class Rooms.
+
+== Formulaire de connexion
+
+Cet exercice vous permettra d'acquérir et d'être familier avec les notions suivantes :
+
+- Servlet,
+- JSP,
+- Dispatch de servlet vers JSP,
+- Attributs de requête,
+- Session,
+- Les formulaires HTML.
+
+Il s'agit dans cette exercice de construire une mini application Web.
+
+Son unique fonctionnalité est de permettre à l'utilisateur de renseigner son nom, et que l'application se souvienne de celui-ci lorsque l'utilisateur revient sur le site.
+
+Notre application ne propose qu'une URL à l'utilisateur : `/home`.
+
+Sur cette URL est branchée une servlet (que vous écrirez) qui implémente l'algorithme suivant :
+
+image::exercice-jee-1.jpg[]
+

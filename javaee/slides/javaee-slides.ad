@@ -1,0 +1,267 @@
+= Java EE
+:author: Arnaud Tournier
+:email: ltearno@gmail.com
+:backend: revealjs
+:deckjs_theme: neon
+:revealjs_theme: beige
+:revealjs_history: true
+:imagesdir: images
+:source-highlighter: highlightjs
+////
+:revealjs_transition: zoom
+Java EE
+2016 - LTE Consulting
+:source-highlighter: pygments
+////
+
+== Java EE
+
+**Définition**, serveur d'application.
+
+Plateforme Java Enterprise Edition, sur ensemble de la plateforme standard.
+
+Facilite le développement et le déploiement d'applications web distribuées exécutées au sein des serveurs d'application.
+
+=== Quelques implémentations
+
+JavaEE est une norme, il faut choisir l'implémentation : Tomcat, JBoss, Glassfish, ...
+
+Application divisées en couches, souvent trois (presentation, business, data).
+
+En pratique on a des pages htmls + servlets + jsp en frontal et ejb dans les couches internes (métier, processus et données).
+
+=== Structure d'une application Java EE
+
+```
+/
+|- fichiers publiques **.html**, **.jsp**, **.css**, **.js**, ...
+|- WEB-INF/ (_cachés à l'utilisateur_)
+  |- classes
+    |- fichiers **.class**
+  |- lib
+    |- fichiers **.jar**
+  |- **web.xml** : C'est un fichier de configuration de l'application
+```
+
+== Développement avec Eclipse
+
+Installation de Tomcat, déclaration dans Eclipse, création d'un projet Dynamic Web Application et du serveur dans Eclipse.
+
+Démarrage d'une application avec un fichier index.html dedans.
+
+== HTTP
+
+Rappels HTTP, requête, méthode (GET, POST), headers, cookies.
+
+== Servlet
+
+Une classe qui traite les requêtes HTTP.
+
+=== Mise en place
+
+Une servlet est une simple classe Java...
+
+- Elle hérite de `javax.servlet.http.HttpServlet`,
+- On implémente une des méthodes choisies `doGet`, `doPost` (l'implémentation par défaut renvoie une page 404).
+- On indique au serveur quels sont l(es) URL(s) traitées par la servlet. Ceci se fait dans le fichier `web.xml` ou par annotation.
+
+=== HttpServletRequest
+
+Représente la requête
+
+Paramètres, cookies
+
+Attributs...
+
+=== HttpServletResponse
+
+Représente la réponse.
+
+=== Cycle de vie
+
+Le cycle de vie est géré par le serveur d'application (_d'où son nom_).
+
+Celui-ci _crée_ et _détruit_ des instances de la classe.
+
+=== Exemple
+
+[source]
+----
+class MaServlet extends HttpServlet
+{
+	protected void doGet( HttpServletRequest r, HttpServletResponse re )
+	{
+		re.setContentType( "text/html; charset=utf8" );
+		re.getWriter().print( "Hello world !" );
+	}
+}
+----
+
+
+== JSP
+
+=== Définition
+
+L'écriture de la vue (en HTML) est _pénible_ dans un fichier Java. Les `JSP` permet au contraire d'écrire en HTML et d'injecter du Java.
+
+=== Fonctionnement
+
+Vous écrivez des fichiers `.jsp`.
+
+Ces fichiers sont compilés vers des servlets Java.
+
+La servlet est accessible à l'URL correspondant au nom du fichier JSP (sauf quand il est dans `WEB-INF`).
+
+Les variables `request`, `response` sont accessibles.
+
+=== Exercice
+
+Faire une page de login.
+
+
+NOTE: Mettre `<%@ page pageEncoding="UTF-8" %>` pour utf8.
+
+Poser du code : `<% ... %>`
+
+Faire un echo : `<%= ... %>`
+
+Commentaires : `<%-- ... --%>`
+
+Directive : `<%@ page import="package.class"%>`, ...
+
+=== Délégation 1
+
+Délégation à partir d'une servlet :
+
+[source]
+----
+void doGet( HttpServletRequest request, HttpServletResponse response )
+{
+	this.getServletContext()
+		.getRequestDispatcher( "/WEB-INF/test.jsp" )
+		.forward( request, response );
+}
+----
+
+=== Délégation 2
+
+Transmission d'information. Dans la servlet :
+
+[source,language="java"]
+----
+request.setAttribute( "test", message );
+----
+
+Dans la JSP, on écrira :
+
+[source,language="jsp"]
+----
+<% String attribut = (String) request.getAttribute("test"); out.println( attribut );%>
+----
+
+=== Formulaires
+
+L'envoi de données au moment de la requête se fait grâce aux formulaires HTML.
+
+Les valeurs des formulaires sont récupérées grâce à la méthode `getParameter( String name )` de la classe `HttpServletRequest`.
+
+=== Méthode GET et POST
+
+=== Pattern MVC
+
+Le meilleur : peu de Java dans la JSP et peu de HTML dans le Java.
+
+On arrive naturellement au pattern _MVC_ ou apparentés.
+
+==== Scope
+
+JSP définit quatre _scopes_ (portées ou cycles de vie) pour les objets :
+
+- `application`
+- `session`
+- `request`
+- `page`
+
+Ceci sont implémentés grâce aux sessions, attributs et paramètres de requête.
+
+== JavaBean
+
+Une convention pour exprimer la notion de _propriété_. En écriture et/ou lecture.
+
+Exemple, la propriété `Longueur` :
+
+[source,language="java"]
+----
+int getLongueur() { ... }
+void setLongueur( int valeur ) { ... }
+----
+
+Il peut y avoir une notion d'abonnement (pattern _Observer_).
+
+
+
+Les directives
+
+
+
+
+
+
+Import d'une tag lib : `<%@ taglib uri="maTagLib.tld" prefix="tagExemple" %>`
+
+Import d'un package : `<%@ page import="java.util.List, java.util.Date" %>`
+
+Inclusion : `<%@ include file="uneAutreJSP.jsp" %>`
+
+*Apparte* Scopes de vie : page / requete / session / application
+
+Les tags `<jsp:useBean>`, `<jsp:getProperty>`,  `<jsp:setProperty>`, `<jsp:forward>`.
+
+Les *expression language* : `${ monEjb.propriete }`
+
+- JSTL
+
+En JSP :
+
+		<%@ page import="java.util.List, java.util.ArrayList" %>
+		<%
+		List<Integer> list = (ArrayList<Integer>)request.getAttribute("tirage");
+		for(int i = 0; i < list.size();i++)
+			out.println(list.get(i));
+		%>
+
+EN JSTL :
+
+		<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+		...
+
+		<c:forEach var="item" items="${tirage}" >
+			<c:out value="${item}" />
+		</c:forEach>
+
+
+[source]
+----
+mvn archetype:generate \
+  -DarchetypeGroupId=fr.lteconsulting \
+  -DarchetypeArtifactId=angular2-gwt.archetype \
+  -DarchetypeVersion=1.1
+  
+mvn clean install
+
+java -jar target/YOUR_ARTIFACT_ID.jar
+----
+
+[data-background="images/ingredients.jpg"]
+== Ingrédients
+
+== Architecture et Fonctionnement
+
+[%notitle]
+[data-transition=fade]
+[data-background="images/archi-survol.png"]
+[data-background-size=contain]
+=== .
+
+Tooo

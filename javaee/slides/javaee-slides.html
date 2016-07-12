@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="author" content="Arnaud Tournier"><title>Java EE</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="reveal.js/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme"><link href="reveal.js/lib/css/zenburn.css" rel="stylesheet"><script type="text/javascript">document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section><h1>Java EE</h1><p><small>Arnaud Tournier</small></p></section><section><section id="_java_ee"><h2>Java EE</h2><div class="paragraph"><p><strong>Définition</strong>, serveur d&#8217;application.</p></div><div class="paragraph"><p>Plateforme Java Enterprise Edition, sur ensemble de la plateforme standard.</p></div><div class="paragraph"><p>Facilite le développement et le déploiement d&#8217;applications web distribuées exécutées au sein des serveurs d&#8217;application.</p></div></section><section id="_quelques_implémentations"><h2>Quelques implémentations</h2><div class="paragraph"><p>JavaEE est une norme, il faut choisir l&#8217;implémentation : Tomcat, JBoss, Glassfish, &#8230;&#8203;</p></div>
+<div class="paragraph"><p>Application divisées en couches, souvent trois (presentation, business, data).</p></div>
+<div class="paragraph"><p>En pratique on a des pages htmls + servlets + jsp en frontal et ejb dans les couches internes (métier, processus et données).</p></div></section><section id="_structure_d_une_application_java_ee"><h2>Structure d&#8217;une application Java EE</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>/
+|- fichiers publiques **.html**, **.jsp**, **.css**, **.js**, ...
+|- WEB-INF/ (_cachés à l'utilisateur_)
+  |- classes
+    |- fichiers **.class**
+  |- lib
+    |- fichiers **.jar**
+  |- **web.xml** : C'est un fichier de configuration de l'application</code></pre></div></div></section></section>
+<section id="_développement_avec_eclipse"><h2>Développement avec Eclipse</h2><div class="paragraph"><p>Installation de Tomcat, déclaration dans Eclipse, création d&#8217;un projet Dynamic Web Application et du serveur dans Eclipse.</p></div>
+<div class="paragraph"><p>Démarrage d&#8217;une application avec un fichier index.html dedans.</p></div></section>
+<section id="_http"><h2>HTTP</h2><div class="paragraph"><p>Rappels HTTP, requête, méthode (GET, POST), headers, cookies.</p></div></section>
+<section><section id="_servlet"><h2>Servlet</h2><div class="paragraph"><p>Une classe qui traite les requêtes HTTP.</p></div></section><section id="_mise_en_place"><h2>Mise en place</h2><div class="paragraph"><p>Une servlet est une simple classe Java&#8230;&#8203;</p></div>
+<div class="ulist"><ul><li><p>Elle hérite de <code>javax.servlet.http.HttpServlet</code>,</p></li><li><p>On implémente une des méthodes choisies <code>doGet</code>, <code>doPost</code> (l&#8217;implémentation par défaut renvoie une page 404).</p></li><li><p>On indique au serveur quels sont l(es) URL(s) traitées par la servlet. Ceci se fait dans le fichier <code>web.xml</code> ou par annotation.</p></li></ul></div></section><section id="_httpservletrequest"><h2>HttpServletRequest</h2><div class="paragraph"><p>Représente la requête</p></div>
+<div class="paragraph"><p>Paramètres, cookies</p></div>
+<div class="paragraph"><p>Attributs&#8230;&#8203;</p></div></section><section id="_httpservletresponse"><h2>HttpServletResponse</h2><div class="paragraph"><p>Représente la réponse.</p></div></section><section id="_cycle_de_vie"><h2>Cycle de vie</h2><div class="paragraph"><p>Le cycle de vie est géré par le serveur d&#8217;application (<em>d&#8217;où son nom</em>).</p></div>
+<div class="paragraph"><p>Celui-ci <em>crée</em> et <em>détruit</em> des instances de la classe.</p></div></section><section id="_exemple"><h2>Exemple</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>class MaServlet extends HttpServlet
+{
+	protected void doGet( HttpServletRequest r, HttpServletResponse re )
+	{
+		re.setContentType( "text/html; charset=utf8" );
+		re.getWriter().print( "Hello world !" );
+	}
+}</code></pre></div></div></section></section>
+<section><section id="_jsp"><h2>JSP</h2></section><section id="_définition"><h2>Définition</h2><div class="paragraph"><p>L&#8217;écriture de la vue (en HTML) est <em>pénible</em> dans un fichier Java. Les <code>JSP</code> permet au contraire d&#8217;écrire en HTML et d&#8217;injecter du Java.</p></div></section><section id="_fonctionnement"><h2>Fonctionnement</h2><div class="paragraph"><p>Vous écrivez des fichiers <code>.jsp</code>.</p></div>
+<div class="paragraph"><p>Ces fichiers sont compilés vers des servlets Java.</p></div>
+<div class="paragraph"><p>La servlet est accessible à l&#8217;URL correspondant au nom du fichier JSP (sauf quand il est dans <code>WEB-INF</code>).</p></div>
+<div class="paragraph"><p>Les variables <code>request</code>, <code>response</code> sont accessibles.</p></div></section><section id="_exercice"><h2>Exercice</h2><div class="paragraph"><p>Faire une page de login.</p></div>
+<div class="admonitionblock note"><table><tr><td class="icon"><div class="title">Note</div></td><td class="content">Mettre <code>&lt;%@ page pageEncoding="UTF-8" %&gt;</code> pour utf8.</td></tr></table></div>
+<div class="paragraph"><p>Poser du code : <code>&lt;% &#8230;&#8203; %&gt;</code></p></div>
+<div class="paragraph"><p>Faire un echo : <code>&lt;%= &#8230;&#8203; %&gt;</code></p></div>
+<div class="paragraph"><p>Commentaires : <code>&lt;%-- &#8230;&#8203; --%&gt;</code></p></div>
+<div class="paragraph"><p>Directive : <code>&lt;%@ page import="package.class"%&gt;</code>, &#8230;&#8203;</p></div></section><section id="_délégation_1"><h2>Délégation 1</h2><div class="paragraph"><p>Délégation à partir d&#8217;une servlet :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code>void doGet( HttpServletRequest request, HttpServletResponse response )
+{
+	this.getServletContext()
+		.getRequestDispatcher( "/WEB-INF/test.jsp" )
+		.forward( request, response );
+}</code></pre></div></div></section><section id="_délégation_2"><h2>Délégation 2</h2><div class="paragraph"><p>Transmission d&#8217;information. Dans la servlet :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">request.setAttribute( "test", message );</code></pre></div></div>
+<div class="paragraph"><p>Dans la JSP, on écrira :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="jsp language-jsp">&lt;% String attribut = (String) request.getAttribute("test"); out.println( attribut );%&gt;</code></pre></div></div></section><section id="_formulaires"><h2>Formulaires</h2><div class="paragraph"><p>L&#8217;envoi de données au moment de la requête se fait grâce aux formulaires HTML.</p></div>
+<div class="paragraph"><p>Les valeurs des formulaires sont récupérées grâce à la méthode <code>getParameter( String name )</code> de la classe <code>HttpServletRequest</code>.</p></div></section><section id="_méthode_get_et_post"><h2>Méthode GET et POST</h2></section><section id="_pattern_mvc"><h2>Pattern MVC</h2><div class="paragraph"><p>Le meilleur : peu de Java dans la JSP et peu de HTML dans le Java.</p></div>
+<div class="paragraph"><p>On arrive naturellement au pattern <em>MVC</em> ou apparentés.</p></div>
+<h3>Scope</h3><div class="paragraph"><p>JSP définit quatre <em>scopes</em> (portées ou cycles de vie) pour les objets :</p></div>
+<div class="ulist"><ul><li><p><code>application</code></p></li><li><p><code>session</code></p></li><li><p><code>request</code></p></li><li><p><code>page</code></p></li></ul></div>
+<div class="paragraph"><p>Ceci sont implémentés grâce aux sessions, attributs et paramètres de requête.</p></div></section></section>
+<section id="_javabean"><h2>JavaBean</h2><div class="paragraph"><p>Une convention pour exprimer la notion de <em>propriété</em>. En écriture et/ou lecture.</p></div>
+<div class="paragraph"><p>Exemple, la propriété <code>Longueur</code> :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">int getLongueur() { ... }
+void setLongueur( int valeur ) { ... }</code></pre></div></div>
+<div class="paragraph"><p>Il peut y avoir une notion d&#8217;abonnement (pattern <em>Observer</em>).</p></div>
+<div class="paragraph"><p>Les directives</p></div>
+<div class="paragraph"><p>Import d&#8217;une tag lib : <code>&lt;%@ taglib uri="maTagLib.tld" prefix="tagExemple" %&gt;</code></p></div>
+<div class="paragraph"><p>Import d&#8217;un package : <code>&lt;%@ page import="java.util.List, java.util.Date" %&gt;</code></p></div>
+<div class="paragraph"><p>Inclusion : <code>&lt;%@ include file="uneAutreJSP.jsp" %&gt;</code></p></div>
+<div class="paragraph"><p><strong>Apparte</strong> Scopes de vie : page / requete / session / application</p></div>
+<div class="paragraph"><p>Les tags <code>&lt;jsp:useBean&gt;</code>, <code>&lt;jsp:getProperty&gt;</code>,  <code>&lt;jsp:setProperty&gt;</code>, <code>&lt;jsp:forward&gt;</code>.</p></div>
+<div class="paragraph"><p>Les <strong>expression language</strong> : <code>${ monEjb.propriete }</code></p></div>
+<div class="ulist"><ul><li><p>JSTL</p></li></ul></div>
+<div class="paragraph"><p>En JSP :</p></div>
+<div class="literalblock"><div class="content"><pre>&lt;%@ page import="java.util.List, java.util.ArrayList" %&gt;
+&lt;%
+List&lt;Integer&gt; list = (ArrayList&lt;Integer&gt;)request.getAttribute("tirage");
+for(int i = 0; i &lt; list.size();i++)
+	out.println(list.get(i));
+%&gt;</pre></div></div>
+<div class="paragraph"><p>EN JSTL :</p></div>
+<div class="literalblock"><div class="content"><pre>&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %&gt;</pre></div></div>
+<div class="literalblock"><div class="content"><pre>...</pre></div></div>
+<div class="literalblock"><div class="content"><pre>&lt;c:forEach var="item" items="${tirage}" &gt;
+	&lt;c:out value="${item}" /&gt;
+&lt;/c:forEach&gt;</pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code>mvn archetype:generate \
+  -DarchetypeGroupId=fr.lteconsulting \
+  -DarchetypeArtifactId=angular2-gwt.archetype \
+  -DarchetypeVersion=1.1
+
+mvn clean install
+
+java -jar target/YOUR_ARTIFACT_ID.jar</code></pre></div></div></section>
+<section id="_ingrédients" data-background="images/ingredients.jpg"><h2>Ingrédients</h2></section>
+<section><section id="_architecture_et_fonctionnement"><h2>Architecture et Fonctionnement</h2></section><section id="_" data-transition="fade" data-background="images/archi-survol.png" data-background-size="contain"><div class="paragraph"><p>Tooo</p></div></section></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script type="text/javascript">// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: false,
+  // Push each slide change to the browser history
+  history: true,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'beige',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'slide',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script></body></html>
