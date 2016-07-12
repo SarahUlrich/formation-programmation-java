@@ -4,23 +4,15 @@ import fr.lteconsulting.bidon.CouleurNB;
 import fr.lteconsulting.bidon.Dame;
 import fr.lteconsulting.bidon.Galet;
 import fr.lteconsulting.bidon.JeuBidon;
-import fr.lteconsulting.puissance4.Puissance4;
 
 public class TestPlateau
 {
 	public static void main( String[] args )
 	{
-		testPuissance4();
 		// testJeuBidon();
 		// testSaisie();
 		// testDames();
 		// testDeBase();
-	}
-
-	private static void testPuissance4()
-	{
-		Puissance4 jeu = new Puissance4();
-		jeu.jouer();
 	}
 
 	private static void testJeuBidon()
