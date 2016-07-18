@@ -9,12 +9,12 @@ LTE Consulting (C) - 2016
 
 toc::[]
 
-== Au préalable
+== A lire pendant le pont du 14 juillet
 
-Vous pouvez consulter ceci :
+Vous consulterez ceci :
 
+- Tutoriel sur les http://blog.paumard.org/cours/servlet/[servlets et JSP] (de José Paumard) à lire *absolument* jusqu'à _Java Server Pages, 4. Utilisation de beans_
 - https://openclassrooms.com/courses/developpez-des-sites-web-avec-java-ee?status=published[Développez des sites Web avec Java EE] chez Open Class Room,
-- http://blog.paumard.org/cours/servlet/[Java Servlet et JSP] de José Paumard.
 - https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML[Mon premier formulaire] de chez Mozilla Developper Network,
 - https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/formulaires-le-b-a-ba[Formulaire B-A BA] sur Open Class Rooms.
 
