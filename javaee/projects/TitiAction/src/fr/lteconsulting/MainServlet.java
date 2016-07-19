@@ -18,6 +18,7 @@ public class MainServlet extends HttpServlet
 	{
 		List<Carte> cartes = new ArrayList<>();
 
+		@SuppressWarnings( "unchecked" )
 		Set<String> main = (Set<String>) request.getSession().getAttribute( "main" );
 		if( main != null )
 		{
@@ -25,6 +26,6 @@ public class MainServlet extends HttpServlet
 				cartes.add( ApplicationData.getCarte( id ) );
 		}
 
-		Rendu.listeCartes( "Cartes dans votre main", cartes, false, false, getServletContext(), request, response );
+		Rendu.listeCartes( "Cartes dans votre main", cartes, true, false, getServletContext(), request, response );
 	}
 }

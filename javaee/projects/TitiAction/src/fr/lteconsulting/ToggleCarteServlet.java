@@ -18,7 +18,9 @@ public class ToggleCarteServlet extends HttpServlet
 		String id = request.getParameter( "id" );
 		if( id != null )
 		{
+			@SuppressWarnings( "unchecked" )
 			Set<String> main = (Set<String>) request.getSession().getAttribute( "main" );
+
 			if( main == null )
 			{
 				main = new HashSet<>();
@@ -36,6 +38,10 @@ public class ToggleCarteServlet extends HttpServlet
 			}
 		}
 
-		response.sendRedirect( "cartes" );
+		String referer = request.getHeader( "referer" );
+		if( referer == null )
+			referer = "cartes";
+
+		response.sendRedirect( referer );
 	}
 }
