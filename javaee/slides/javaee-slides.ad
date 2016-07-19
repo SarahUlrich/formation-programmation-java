@@ -268,12 +268,31 @@ ${ legumes["1"] }
 
 JSP définit quatre _scopes_ (portées ou cycles de vie) pour les objets :
 
-- `application`
-- `session`
-- `request`
-- `page`
+`application`, `session`, `request` et `page`.
 
-Ceci sont implémentés grâce aux sessions, attributs et paramètres de requête.
+Ceux-ci sont implémentés grâce aux attributs de requête, de session, et de contexte applicatif.
+
+=== Scope
+
+|===
+|Portée | Servlet | JSP
+
+|*application*
+|`getServletContext()`
+|`applicationScope[]`
+
+|*session*
+|`request.getSession()`
+|`sessionScope[]`
+
+|*request*
+|`request`
+|`requestScope[]`
+
+|*page*
+|-
+|`pageScope[]`
+|===
 
 == JavaBean
 
