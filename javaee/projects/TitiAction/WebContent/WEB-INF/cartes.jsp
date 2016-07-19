@@ -10,7 +10,7 @@
 
 <div class="row">
 	<c:forEach items="${requestScope['cartes']}" var="carte">
-		<div class="col l2 s12">
+		<div class="col l3 s12">
 			<div class="card">
 				<div class="card-image waves-effect waves-block waves-light">
 					<div class="activator valign-wrapper" style="height:17em; background-color:${carte.couleur};">
@@ -39,7 +39,8 @@
 				</div>
 				<c:if test="${montrerActionsCarte}">
 					<div class="card-action">
-						<a href="deleteCarte?id=${carte.id}">RETIRER</a> <a href="editCarte?ID=${carte.id}">EDITER</a>
+						<a href="deleteCarte?id=${carte.id}">RETIRER</a>
+						<a href="editCarte?ID=${carte.id}">EDITER</a>
 					</div>
 				</c:if>
 				<div class="card-reveal">
