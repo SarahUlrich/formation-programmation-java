@@ -173,7 +173,98 @@ Le meilleur : peu de Java dans la JSP et peu de HTML dans le Java.
 
 On arrive naturellement au pattern _MVC_ ou apparentés.
 
-==== Scope
+=== Les opérations CRUD
+
+En exercice, implémenter sur un type de données :
+
+- l'affichage (**D**isplay),
+- la création de nouveaux éléments (**C**reate),
+- la suppression d'éléments (**R**emove),
+- la modification d'éléments (**U**pdate).
+
+=== Les JSTL
+
+Il est possible d'étendre le _vocabulaire_ des balises utilisables dans un ficher JSP.
+
+Cette fonctionnalité est fournie par les _tag lib_ JSTL.
+
+https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/objectifs-et-configuration[OpenClassRooms]
+
+=== Importation d'une tag lib
+
+_Au préalable, il faut avoir le jar `jstl-1.2.jar` dans le projet_.
+
+Import dans une JSP : `<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>`, ceci définit le _namespace_ XML `c`.
+
+=== JSTL Exemple 1
+
+Ceci est l'équivalent de la directive `<%@ include file="..." %>` :
+
+[source]
+----
+<jsp:include page="<%= jspPageName %>" />
+----
+
+=== JSTL Exemple 2
+
+Nous souhaitons réécrire le code suivant :
+
+[source,language="jsp"]
+----
+<%
+	List<Integer> list = (ArrayList<Integer>) request.getAttribute( "tirage" );
+	for( int i = 0; i < list.size(); i++ ) {
+		out.println( list.get( i ) );
+	}
+%>
+----
+
+=== JSTL Exemple 2
+
+Voici l'équivalent avec la JSTL :
+
+[source,language="jsp"]
+----
+<c:forEach var="i" begin="0" end="7" step="1"> <1>
+  <tr>
+    <td><c:out value="${i}"/></td> <2>
+    <td><c:out value="${i * i * i}"/></td>
+  </tr>
+</c:forEach>
+----
+<1> le noeud `forEach` crée une variable EL `i`.
+<2> la variable `i` est utilisée dans des expressions EL.
+
+=== Expression Language
+
+https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-technologie-jsp-2-2[OpenClassRooms].
+
+Quelques éléments du langage :
+
+- `${ expression }` : _expression_ va être interprêtée...
+- `${ true && true }` : ...
+- `${ 10 mod 4 }` : ...
+- `${ requestScope['nom'] }` : request.getAttribute( "nom" )
+- `${ sessionScope['nom'] }` : session.getAttribute( "nom" )
+- `${ param['id'] }` : request.getParameter( "id" )
+
+=== EL exemple
+
+[source]
+----
+<% 
+List<String> legumes = new ArrayList<String>();
+legumes.add( ... );
+request.setAttribute( "legumes" , legumes );
+%>
+
+${ legumes.get(1) }
+${ legumes[1] }
+${ legumes["1"] }
+----
+
+
+=== Scope
 
 JSP définit quatre _scopes_ (portées ou cycles de vie) pour les objets :
 
@@ -207,7 +298,7 @@ Les directives
 
 
 
-Import d'une tag lib : `<%@ taglib uri="maTagLib.tld" prefix="tagExemple" %>`
+
 
 Import d'un package : `<%@ page import="java.util.List, java.util.Date" %>`
 

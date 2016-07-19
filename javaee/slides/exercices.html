@@ -437,6 +437,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_a_lire_pendant_le_pont_du_14_juillet">A lire pendant le pont du 14 juillet</a></li>
 <li><a href="#_formulaire_de_connexion">Formulaire de connexion</a></li>
+<li><a href="#_projet_gestion_d_un_jeu_de_cartes">Projet : Gestion d&#8217;un jeu de cartes</a>
+<ul class="sectlevel2">
+<li><a href="#_première_partie">Première partie</a></li>
+<li><a href="#_deuxième_partie">Deuxième partie</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -512,10 +518,57 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_projet_gestion_d_un_jeu_de_cartes">Projet : Gestion d&#8217;un jeu de cartes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_première_partie">Première partie</h3>
+<div class="paragraph">
+<p>Faire un CRUD sur une collection (<code>List</code>) de <code>Carte</code>.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;utilisateur peut donc consulter la liste de cartes disponibles, les modifier, les supprimer et en ajouter.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deuxième_partie">Deuxième partie</h3>
+<div class="paragraph">
+<p>Il s&#8217;agit maintenant de permettre à l&#8217;utilisateur de constituer une main.</p>
+</div>
+<div class="paragraph">
+<p>Il a le droit d&#8217;avoir jusqu&#8217;à <code>Constantes.NB_MAX_CARTE_PAR_JEU</code>.</p>
+</div>
+<div class="paragraph">
+<p>Il n&#8217;a pas le droit d&#8217;avoir plusieurs fois la même carte.</p>
+</div>
+<div class="paragraph">
+<p>Donc nous stockerons sa main sous la forme d&#8217;un <code>Set&lt;String&gt;</code> qui contient les identifiants des cartes contenues dans son jeu.</p>
+</div>
+<div class="sect3">
+<h4 id="_préparation">Préparation</h4>
+<div class="paragraph">
+<p>Déclarer la constante,</p>
+</div>
+<div class="paragraph">
+<p>Prévoir le nom de l&#8217;attribut de la session qui va servir à stocker le <code>Set&lt;String&gt;</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_implémentation">Implémentation</h4>
+<div class="paragraph">
+<p>Dans la page qui permet de lister les cartes (celle développée auparavant), ajouter les boutons "AJOUTER A LA MAIN" et "RETIRER DE LA MAIN" qui seront affichés selon les cas (la carte est déjà dans la main ou pas).</p>
+</div>
+<div class="paragraph">
+<p>Ensuite, écrire la page qui permet à l&#8217;utilisateur de visualiser son jeu.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-13 15:26:26 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-19 11:28:16 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">

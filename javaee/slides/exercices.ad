@@ -39,3 +39,32 @@ Sur cette URL est branchée une servlet (que vous écrirez) qui implémente l'al
 
 image::exercice-jee-1.jpg[]
 
+== Projet : Gestion d'un jeu de cartes
+
+=== Première partie
+
+Faire un CRUD sur une collection (`List`) de `Carte`.
+
+L'utilisateur peut donc consulter la liste de cartes disponibles, les modifier, les supprimer et en ajouter.
+
+=== Deuxième partie
+
+Il s'agit maintenant de permettre à l'utilisateur de constituer une main.
+
+Il a le droit d'avoir jusqu'à `Constantes.NB_MAX_CARTE_PAR_JEU`.
+
+Il n'a pas le droit d'avoir plusieurs fois la même carte.
+
+Donc nous stockerons sa main sous la forme d'un `Set<String>` qui contient les identifiants des cartes contenues dans son jeu.
+
+==== Préparation
+
+Déclarer la constante,
+
+Prévoir le nom de l'attribut de la session qui va servir à stocker le `Set<String>`.
+
+==== Implémentation
+
+Dans la page qui permet de lister les cartes (celle développée auparavant), ajouter les boutons "AJOUTER A LA MAIN" et "RETIRER DE LA MAIN" qui seront affichés selon les cas (la carte est déjà dans la main ou pas).
+
+Ensuite, écrire la page qui permet à l'utilisateur de visualiser son jeu.
