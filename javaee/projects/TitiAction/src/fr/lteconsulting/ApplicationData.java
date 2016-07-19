@@ -14,20 +14,28 @@ public class ApplicationData
 		{
 			cartes = new ArrayList<>();
 			for( int i = 1; i < 100; i++ )
-				cartes.add( new Carte( i, nomCarte(), couleur() ) );
+				cartes.add( new Carte( nomCarte(), couleur() ) );
 		}
 
 		return cartes;
 	}
 
-	public static void removeCarte( int id )
+	public static void ajouterCarte( Carte carte )
+	{
+		if( getCarte( carte.getId() ) != null )
+			throw new IllegalArgumentException( "La carte existe déjà !!" );
+		
+		cartes.add( carte );
+	}
+
+	public static void removeCarte( String id )
 	{
 		List<Carte> cartes = getCartes();
 
 		for( int i = 0; i < cartes.size(); i++ )
 		{
 			Carte carte = cartes.get( i );
-			if( carte.getId() == id )
+			if( carte.getId().equals( id ) )
 			{
 				cartes.remove( i );
 				break;
@@ -61,5 +69,13 @@ public class ApplicationData
 		for( int i = 0; i < 6; i++ )
 			res += "" + new Random().nextInt( 10 );
 		return res;
+	}
+
+	public static Carte getCarte( String id )
+	{
+		for( Carte carte : getCartes() )
+			if( carte.getId().equals( id ) )
+				return carte;
+		return null;
 	}
 }
