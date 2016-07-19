@@ -25,11 +25,13 @@ public class Rendu
 		pagePrincipale( "Bienvenue", "/WEB-INF/login.jsp", context, request, response );
 	}
 
-	public static void listeCartes( List<Carte> cartes, ServletContext context, HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException
+	public static void listeCartes( String titrePage, List<Carte> cartes, boolean montrerActionsMain, boolean montrerActionsCarte, ServletContext context, HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException
 	{
 		request.setAttribute( "cartes", cartes );
+		request.setAttribute( "montrerActionsMain", montrerActionsMain );
+		request.setAttribute( "montrerActionsCarte", montrerActionsCarte );
 
-		Rendu.pagePrincipale( "Liste des cartes à jouer", "/WEB-INF/cartes.jsp", context, request, response );
+		Rendu.pagePrincipale( titrePage, "/WEB-INF/cartes.jsp", context, request, response );
 	}
 
 	public static void pagePrincipale( String title, String contentJsp, ServletContext context, HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException

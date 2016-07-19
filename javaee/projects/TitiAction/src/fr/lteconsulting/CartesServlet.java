@@ -20,6 +20,6 @@ public class CartesServlet extends HttpServlet
 			return;
 		}
 
-		Rendu.listeCartes( ApplicationData.getCartes(), getServletContext(), request, response );
+		Rendu.listeCartes( "Liste des cartes à jouer", ApplicationData.getCartes(), true, true, getServletContext(), request, response );
 	}
 }
