@@ -1403,9 +1403,44 @@ StringReader et StringWriter lisent/écrivent depuis/vers une chaîne de caract�
 
 === Communication entre objets (patterns de communication)
 
+== Les principes de la conception objet
+
+=== DRY
+
+**D**on't **R**epeat **Y**ourself !
+
+=== SOLID
+
+Vous pouvez obtenir des détails https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-principles-of-object-oriented-design[ici] et https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)[la]...
+
+- **S**ingle Responsibility principle : a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class).
+- **O**pen/Closed principle : software entities should be open for extension, but closed for modification.
+- **L**iskov Substitution principle : objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program. Reflète l'*importance du contrat*.
+- **I**nterface Segregation principle : many client-specific interfaces are better than one general-purpose interface.
+- **D**ependency Inversion principle : one should “Depend upon Abstractions. Do not depend upon concretions.
+
+=== GRASP
+
+*General responsibility assignment software patterns*.
+
+Article https://en.wikipedia.org/wiki/GRASP_(object-oriented_design)[Wikipedia].
+
+=== KISS
+
+*Keep it simple, stupid*.
+
+Article https://en.wikipedia.org/wiki/KISS_principle[Wikipedia].
+
+Bjarne Stroustrup : "Make Simple Tasks Simple!".
+
+Antoine de Saint-Exupéry : "It seems that perfection is reached not when there is nothing left to add, but when there is nothing left to take away".
+
+Albert Einstein : "Make everything as simple as possible, but not simpler".
+
+=== Les design patterns
+
 == A suivre...
 
-- Design patterns
 - Java EE - Architectures distribuées
 - Java EE - Servlets, JSP, EJB
 - XML, DTD, XSL, XSLT
