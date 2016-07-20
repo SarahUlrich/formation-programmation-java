@@ -26,7 +26,7 @@ public class DeleteCarteServlet extends HttpServlet
 		{
 			e.printStackTrace();
 		}
-		
+
 		response.sendRedirect( "cartes" );
 	}
 }
