@@ -4,6 +4,7 @@
 :toc: macro
 :toc-title: Exercices de programmation orientée objet avec Java
 :source-highlighter: highlightjs
+:imagesdir: images-java
 //// 
 Mercredi 22 juin : implanter l'algorithme de tri naïf et l'algorithme de tri fusion sur un tableau d'entiers.
 Jeudi 23 juin :

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Arnaud Tournier">
-<title>Exercices Programmation Java</title>
+<title>Exercices Programmation Java EE</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -420,7 +420,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>Exercices Programmation Java</h1>
+<h1>Exercices Programmation Java EE</h1>
 <div class="details">
 <span id="author" class="author">Arnaud Tournier</span><br>
 <span id="email" class="email"><a href="mailto:ltearno@gmail.com">ltearno@gmail.com</a></span><br>
@@ -430,490 +430,136 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>QCM DISPONIBLE <a href="http://goo.gl/forms/7l9VP9dY5auWbZtj1">ICI</a> !!!</strong></p>
-</div>
-<div class="paragraph">
 <p>LTE Consulting &#169; - 2016</p>
 </div>
 <div id="toc" class="toc">
-<div id="toctitle" class="title">Exercices de programmation orientée objet avec Java</div>
+<div id="toctitle" class="title">Exercices de programmation avec Java EE</div>
 <ul class="sectlevel1">
-<li><a href="#_exercices_de_base">Exercices de base</a></li>
-<li><a href="#_jeu_de_cartes">Jeu de Cartes</a></li>
-<li><a href="#_créer_une_plateforme_de_jeux_de_plateau">Créer une plateforme de jeux de plateau</a></li>
-<li><a href="#_jeu_bidon_sur_plateau">Jeu bidon sur Plateau</a>
+<li><a href="#_a_lire_pendant_le_pont_du_14_juillet">A lire pendant le pont du 14 juillet</a></li>
+<li><a href="#_formulaire_de_connexion">Formulaire de connexion</a></li>
+<li><a href="#_projet_gestion_d_un_jeu_de_cartes">Projet : Gestion d&#8217;un jeu de cartes</a>
 <ul class="sectlevel2">
-<li><a href="#_première_étape">Première étape</a></li>
-<li><a href="#_deuxième_étape">Deuxième étape</a></li>
-<li><a href="#_etapes_suivantes">Etapes suivantes</a></li>
+<li><a href="#_première_partie">Première partie</a></li>
+<li><a href="#_deuxième_partie">Deuxième partie</a></li>
 </ul>
-</li>
-<li><a href="#_jeu_de_puissance_4">Jeu de Puissance 4</a>
-<ul class="sectlevel2">
-<li><a href="#_etape_1_création_des_classes">Etape 1 : création des classes</a></li>
-<li><a href="#_etape_2_implémentation_de_l_algorithme">Etape 2 : implémentation de l&#8217;algorithme</a></li>
-</ul>
-</li>
-<li><a href="#_exercices_avec_les_collections">Exercices avec les collections</a>
-<ul class="sectlevel2">
-<li><a href="#_exercice_1_code_list_t_code">Exercice 1 : <code>List&lt;T&gt;</code></a></li>
-<li><a href="#_exercice_2_code_set_t_code">Exercice 2 : <code>Set&lt;T&gt;</code></a></li>
-<li><a href="#_exercice_3_code_map_k_v_code">Exercice 3 : <code>Map&lt;K, V&gt;</code></a></li>
-<li><a href="#_exercice_4_les_collections">Exercice 4 : Les collections</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Ces exercices sont Open Source et sont disponibles en ligne : <a href="https://github.com/ltearno/formation-programmation-java">github.com/ltearno/formation-programmation-java</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_exercices_de_base">Exercices de base</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>Connaissances de base du langage de programmation</em></p>
-</div>
-<div class="paragraph">
-<p>Voici un <a href="https://www.infres.telecom-paristech.fr/people/charon/coursJava/exercices/">lien</a> vers différents exercices.</p>
-</div>
-<div class="paragraph">
-<p>Je vous propose de les réaliser dans l&#8217;ordre suivant :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Calculer une factorielle</p>
-</li>
-<li>
-<p>Palindromes</p>
-</li>
-<li>
-<p>Implanter l&#8217;algorithme de tri naîf et l&#8217;algorithme de tri fusion sur un tableau d&#8217;entiers (celui-ci n&#8217;est pas dans le lien précédent).</p>
-</li>
-<li>
-<p>Classe abstraite pour un animal</p>
-</li>
-<li>
-<p>Chaînage des constructeurs</p>
-</li>
-<li>
-<p>Polymorphisme</p>
-</li>
-<li>
-<p>Jeu de Chifoumi</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_jeu_de_cartes">Jeu de Cartes</h2>
+<h2 id="_a_lire_pendant_le_pont_du_14_juillet">A lire pendant le pont du 14 juillet</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>Connaissance des concepts de classe et d&#8217;héritage</em></p>
-</div>
-<div class="paragraph">
-<p>Vous vous intéressez dans cet exercice à décrire les données d&#8217;un jeu simulant des combats de magiciens.</p>
-</div>
-<div class="paragraph">
-<p>Dans ce jeu, il existe trois types de cartes : les terrains, les créatures et les sortilèges.</p>
+<p>Vous consulterez ceci :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Les terrains possèdent une couleur (parmi 5 : <code>Blanc</code>, <code>Bleu</code>, <code>Noir</code>, <code>Rouge</code> et <code>Vert</code>. Pour ceci créez un enum <code>Couleur</code>).</p>
+<p>Tutoriel sur les <a href="http://blog.paumard.org/cours/servlet/">servlets et JSP</a> (de José Paumard) à lire <strong>absolument</strong> jusqu&#8217;à <em>Java Server Pages, 4. Utilisation de beans</em></p>
 </li>
 <li>
-<p>Les créatures possèdent un nom, un nombre de points de dégâts et un nombre de points de vie.</p>
+<p><a href="https://openclassrooms.com/courses/developpez-des-sites-web-avec-java-ee?status=published">Développez des sites Web avec Java EE</a> chez Open Class Room,</p>
 </li>
 <li>
-<p>Les sortilèges possèdent un nom et une explication sous forme de texte.</p>
+<p><a href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">Mon premier formulaire</a> de chez Mozilla Developper Network,</p>
+</li>
+<li>
+<p><a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/formulaires-le-b-a-ba">Formulaire B-A BA</a> sur Open Class Rooms.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_formulaire_de_connexion">Formulaire de connexion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cet exercice vous permettra d&#8217;acquérir et d&#8217;être familier avec les notions suivantes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Servlet,</p>
+</li>
+<li>
+<p>JSP,</p>
+</li>
+<li>
+<p>Dispatch de servlet vers JSP,</p>
+</li>
+<li>
+<p>Attributs de requête,</p>
+</li>
+<li>
+<p>Session,</p>
+</li>
+<li>
+<p>Les formulaires HTML.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>De plus, chaque carte, indépendamment de son type, possède un coût. Celui d&#8217;un terrain est 0.</p>
+<p>Il s&#8217;agit dans cette exercice de construire une mini application Web.</p>
 </div>
 <div class="paragraph">
-<p>Dans un nouveau projet nommé Magic, implémentez une hiérarchie de classes permettant de représenter des cartes de différents types.</p>
+<p>Son unique fonctionnalité est de permettre à l&#8217;utilisateur de renseigner son nom, et que l&#8217;application se souvienne de celui-ci lorsque l&#8217;utilisateur revient sur le site.</p>
 </div>
 <div class="paragraph">
-<p>Chaque classe aura un constructeur permettant de spécifier la/les valeurs de ses attributs.</p>
+<p>Notre application ne propose qu&#8217;une URL à l&#8217;utilisateur : <code>/home</code>.</p>
 </div>
 <div class="paragraph">
-<p>Le programme doit utiliser la conception orientée objet et ne doit pas comporter de duplication de code.</p>
+<p>Sur cette URL est branchée une servlet (que vous écrirez) qui implémente l&#8217;algorithme suivant :</p>
 </div>
-<div class="paragraph">
-<p>Ajoutez ensuite aux cartes une méthode <code>afficher()</code> qui, pour toute carte, affiche son coût et la valeur de ses arguments spécifiques.</p>
-</div>
-<div class="paragraph">
-<p>Créez de plus une classe <code>Jeu</code> pour représenter un jeu de cartes, c&#8217;est-à-dire une collection de telles cartes.</p>
-</div>
-<div class="paragraph">
-<p>Cette classe devra avoir une méthode <code>piocher()</code> permettant d&#8217;ajouter une carte au jeu. On supposera qu&#8217;un jeu comporte au plus 10 cartes. Le jeu comportera également une méthode <code>joue()</code> permettant de jouer une carte. Pour simplifier, on jouera les cartes dans l&#8217;ordre où elles sont stockées dans le jeu, et on mettra la carte jouée à <code>null</code> dans le jeu de cartes.</p>
-</div>
-<div class="paragraph">
-<p>Pour finir, dans la méthode <code>main(String[] args)</code>, constituez un jeu contenant divers types de cartes et faites afficher le jeu grâce à une méthode <code>afficher()</code> propre à cette classe.</p>
-</div>
-<div class="paragraph">
-<p>Par exemple la méthode main pourrait ressembler à quelque chose comme cela  :</p>
-</div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java" data-lang="java">class Magic {
-	public static void main(String[] args) {
-		Jeu maMain = new Jeu(10);
-
-		maMain.piocher(new Terrain(Couleur.Bleu));
-		maMain.piocher(new Creature(6, "Golem", 4, 6));
-		maMain.piocher(new Sortilege(1, "Croissance Gigantesque",
-				"La créature ciblée gagne +3/+3 jusqu'à la fin du tour"));
-
-		System.out.println("Là, j'ai en stock :");
-		maMain.afficher();
-		maMain.joue();
-	}
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>qui produirait quelque chose comme :</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Là, j'ai en stock :
-Un terrain bleu
-Une créature Golem 4/6
-Un sortilège Croissance Gigantesque
-Je joue une carte...
-La carte jouée est :
-Un terrain bleu</pre>
+<img src="images-javaee/exercice-jee-1.jpg" alt="exercice jee 1">
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_créer_une_plateforme_de_jeux_de_plateau">Créer une plateforme de jeux de plateau</h2>
+<h2 id="_projet_gestion_d_un_jeu_de_cartes">Projet : Gestion d&#8217;un jeu de cartes</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Une classe <code>Plateau</code></p>
-</div>
-<div class="paragraph">
-<p>Une classe abstraite ou interface <code>Piece</code></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_jeu_bidon_sur_plateau">Jeu bidon sur Plateau</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>Saisie clavier, conception objet</em></p>
-</div>
 <div class="sect2">
-<h3 id="_première_étape">Première étape</h3>
+<h3 id="_première_partie">Première partie</h3>
 <div class="paragraph">
-<p>Créer une classe JeuBidon :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>un attribut <strong>privé</strong> <code>plateau</code> de type <code>Plateau</code></p>
-</li>
-<li>
-<p>une méthode <strong>public</strong> <code>jouer()</code></p>
-</li>
-</ul>
+<p>Faire un CRUD sur une collection (<code>List</code>) de <code>Carte</code>.</p>
 </div>
 <div class="paragraph">
-<p>Dans la méthode main, écrire</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java" data-lang="java">JeuBidon jeu = new JeuBidon();
-jeu.jouer();</code></pre>
-</div>
+<p>L&#8217;utilisateur peut donc consulter la liste de cartes disponibles, les modifier, les supprimer et en ajouter.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_deuxième_étape">Deuxième étape</h3>
+<h3 id="_deuxième_partie">Deuxième partie</h3>
 <div class="paragraph">
-<p>Implémenter l&#8217;algorithme basique :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Poser la question : "Voulez-vous ajouter une pièce ?"
-Si réponse est NON, fin de la méthode `jouer` (donc on fait return)
-Si la réponse est OUI :
-	Poser la question : "Quelle est l'abscisse ?"
-	Poser la question : "Quelle est l'ordonnée ?"
-	Placer une nouvelle pièce sur le plateau à l'endroit choisi par l'utilisateur.
-	Afficher le tableau
-	Recommencer</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_etapes_suivantes">Etapes suivantes</h3>
-<div class="paragraph">
-<p>Implémenter une méthode <code>Coordonnee saisieCoordonnee( String message )</code> qui renvoie directement un objet de type <code>Coordonnee</code>.</p>
+<p>Il s&#8217;agit maintenant de permettre à l&#8217;utilisateur de constituer une main.</p>
 </div>
 <div class="paragraph">
-<p>Permettre à l&#8217;utilisateur de saisir "5;3".</p>
+<p>Il a le droit d&#8217;avoir jusqu&#8217;à <code>Constantes.NB_MAX_CARTE_PAR_JEU</code>.</p>
 </div>
 <div class="paragraph">
-<p>Permettre à l&#8217;utilisateur de saisir la couleur de la pièce à ajouter.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_jeu_de_puissance_4">Jeu de Puissance 4</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>Saisie clavier, conception objet, algorithmique</em></p>
-</div>
-<div class="sect2">
-<h3 id="_etape_1_création_des_classes">Etape 1 : création des classes</h3>
-<div class="paragraph">
-<p>Créer une énumération <code>CouleurPuissance4</code> possédant deux valeurs : <code>Rouge</code> et <code>Jaune</code>. Cet enum représentera la couleur des jetons</p>
+<p>Il n&#8217;a pas le droit d&#8217;avoir plusieurs fois la même carte.</p>
 </div>
 <div class="paragraph">
-<p>Créer une classe <code>Jeton</code> avec :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>un attribut <strong>privé</strong> <code>nom</code> de type <code>String</code></p>
-</li>
-<li>
-<p>un attribut <strong>privé</strong> <code>couleur</code> de type <code>CouleurPuissance4</code></p>
-</li>
-<li>
-<p>le constructeur et les deux <em>getters</em> des attributs <code>nom</code> et <code>couleur</code>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Créer une classe <code>Puissance4</code> avec :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>un attribut <strong>privé</strong> <code>plateau</code> de type <code>Plateau</code>,</p>
-</li>
-<li>
-<p>une méthode <strong>public</strong> <code>jouer()</code>,</p>
-</li>
-<li>
-<p>une méthode <strong>privée</strong> <code>getPremiereLigneVide( int colonne )</code> qui retourne -1 si aucune cellule n&#8217;est vide dans la colonne passée en paramètre, et qui retourne l&#8217;index de la ligne à laquelle il <em>faudrait</em> insérer le jeton.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_etape_2_implémentation_de_l_algorithme">Etape 2 : implémentation de l&#8217;algorithme</h3>
-<div class="paragraph">
-<p>Dans la méthode <code>jouer()</code> de la classe <code>Puissance4</code>, implémenter l&#8217;algorithme suivant :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Saisir le nom du joueur 1
-Saisir la couleur du joueur 1
-Saisir le nom du joueur 2
-Créer les deux instances de `Joueur` correspondants aux deux joueurs
-TANT QUE (personne n'a gagné) ET QUE (le plateau n'est pas complètement rempli -&gt; penser à implémenter une méthode Plateau.estPlein())
-	Alterner le joueur
-	Déclarer une variable `int ligneInsertion`
-	Déclarer une variable `int colonneInsertion`
-	FAIRE (correspond à une boucle do...while)
-		Saisir la colonne d'insertion, stocker le résultat dans une variable `colonneInsertion`
-		ligneInsertion = getPremiereLigneVide( colonneInsertion )
-		SI ligneInsertion &lt; 0
-			AFFICHER MESSAGE : "La colonne est pleine, choisis-en une autre !"
-		FIN SI
-	TANT QUE( ligneInsertion &lt; 0 )
-	Placer la pièce à la coordonnée [colonneInsertion;ligneInsertion]
-	Afficher le terrain
-FIN TANT QUE
-AFFICHER Math nul ou le gagnant</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_exercices_avec_les_collections">Exercices avec les collections</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>Connaissances des interfaces <code>List&lt;T&gt;</code>, <code>Set&lt;T&gt;</code> et `HashMap&lt;K,V&gt;`</em></p>
-</div>
-<div class="sect2">
-<h3 id="_exercice_1_code_list_t_code">Exercice 1 : <code>List&lt;T&gt;</code></h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Instancier une <code>List&lt;String&gt;</code> avec la classe <code>ArrayList&lt;T&gt;</code>.</p>
-</li>
-<li>
-<p>Y stocker une dizaine de chaines de caractère.</p>
-</li>
-<li>
-<p>Parcourir la liste et afficher chaque chaine.</p>
-</li>
-<li>
-<p>Faire saisir à l&#8217;utilisateur un index, afficher la chaine stockée à l&#8217;index saisi.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_exercice_2_code_set_t_code">Exercice 2 : <code>Set&lt;T&gt;</code></h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Instancier un <code>Set&lt;T&gt;</code> avec la classe <code>HashSet&lt;T&gt;</code>.</p>
-</li>
-<li>
-<p>Y stocker les chaines "bateau", "Bateau", "soleil", "bateau" et "fleur".</p>
-</li>
-<li>
-<p>Parcourir l&#8217;ensemble et afficher chaque chaine.</p>
-</li>
-<li>
-<p>Faire saisir à l&#8217;utilisateur un mot et indiquer si ce mot est présent dans l&#8217;ensemble. S&#8217;il n&#8217;est pas présent, le rajouter. Recommencer jusqu&#8217;à ce que l&#8217;utilisateur saisisse le mote "FIN" (peu importe la casse).</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_exercice_3_code_map_k_v_code">Exercice 3 : <code>Map&lt;K, V&gt;</code></h3>
-<div class="paragraph">
-<p>Le problème est d&#8217;associer une note à chaque exercice pour chaque étudiant.</p>
-</div>
-<div class="paragraph">
-<p>Créez une classe <code>Exercice</code> qui représente un exercice donné (avec les attributs <code>intitule</code> et <code>sujet</code>).</p>
-</div>
-<div class="paragraph">
-<p>Créez une classe <code>Etudiant</code> qui a deux attributs : <code>nom</code> (de l&#8217;étudiant) et <code>notes</code> (ses notes pour chaque exercice, vous aurez à réfléchir sur le type à utiliser).</p>
-</div>
-<div class="paragraph">
-<p>Créez dans la classe <code>Etudiant</code> la méthode <code>void ajouterNote( Exercice exercice, int note )</code> qui enregistrera pour un étudiant la note obtenue à l&#8217;exercice donné.</p>
-</div>
-<div class="paragraph">
-<p>Créez la méthode <code>void afficherNotes()</code> toujours dans la classe <code>Etudiant</code>, qui affiche le nom de l&#8217;étudiant ainsi que les notes obtenues aux exercices auquels il a participé.</p>
-</div>
-<div class="paragraph">
-<p>Ecrire une classe avec une méthode <code>main</code> qui illustre que l&#8217;ensemble fonctionne de la façon attendue.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_exercice_4_les_collections">Exercice 4 : Les collections</h3>
-<div class="paragraph">
-<p><em>Utilisation des collections pour résoudre un problème concret</em></p>
-</div>
-<div class="paragraph">
-<p>On souhaite gérer une bibliothèque de disques audio.</p>
-</div>
-<div class="paragraph">
-<p>Voici le diagramme des classes <em>à minima</em>, vous aurez bien sûr à ajouter des attributs et des méthodes selon la conception que vous aurez choisie !</p>
-</div>
-<div class="paragraph">
-<p>Classe <code>Chanson</code> :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>attribut <strong>privé</strong> <code>nom</code> de type <code>String</code>,</p>
-</li>
-<li>
-<p>attribut <strong>privé</strong> <code>duree</code> de type <code>int</code> (durée de la chanson en secondes),</p>
-</li>
-<li>
-<p>constructeur et accesseurs.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Classe <code>Disque</code> :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>attribut <strong>privé</strong> <code>nom</code> de type <code>String</code>,</p>
-</li>
-<li>
-<p>attribut <strong>privé</strong> <code>codeBarre</code> de type <code>String</code>,</p>
-</li>
-<li>
-<p>attribut <strong>privé</strong> <code>chansons</code> de type <code>List&lt;Chanson&gt;</code>,</p>
-</li>
-<li>
-<p>constructeur et accesseurs,</p>
-</li>
-<li>
-<p><code>addChanson( Chanson chanson )</code>,</p>
-</li>
-<li>
-<p><code>getDuree()</code> retourne la durée totale du disque.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Classe <code>Bibliotheque</code> :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>les attributs nécessaires,</p>
-</li>
-<li>
-<p><code>void ajouterDisque( Disque disque ) throws DisqueDejaPresentException</code>. Cette méthode provoque une exception <code>DisqueDejaPresentException</code> (que vous définirez) lorsqu&#8217;on ajoute un disque dont le code barre est déjà enregistré dans la bibliothèque.</p>
-</li>
-<li>
-<p><code>boolean retirerDisque( String codeBarre )</code> qui retourne <code>true</code> si le disque a bien été retiré,</p>
-</li>
-<li>
-<p><code>getNbDisques()</code>,</p>
-</li>
-<li>
-<p><code>getDisque( String codeBarre )</code>,</p>
-</li>
-<li>
-<p><code>List&lt;Disque&gt; rechercherDisques( String recherche )</code> : retourne la liste des disques dont le nom contient la chaîne <code>recherche</code>, peu importe la casse.</p>
-</li>
-<li>
-<p><code>List&lt;Chanson&gt; rechercherChansons( String recherche )</code> : retourne la liste des chansons dont le titre contient <code>recherche</code> (sans prendre la casse en compte).</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>On considère qu&#8217;une fois ajouté à la bibliothèque, les disques et leurs chansons ne changent pas.</p>
-</div>
-<div class="paragraph">
-<p>Commencez par implémenter les classes ci-dessus.</p>
-</div>
-<div class="paragraph">
-<p>Puis proposez une interface en ligne de commande qui permette à l&#8217;utilisateur :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>de consulter la bibliothèque (chercher les disques par nom). En tapant une recherche il obtiendra la liste des disques correspondant ainsi que leur code barre.</p>
-</li>
-<li>
-<p>de consulter les détails d&#8217;un disque : en tapant le code barre du disque, il obtient la liste des chansons (nom de la chanson + durée).</p>
-</li>
-<li>
-<p>chercher des chansons : en tapant une recherche l&#8217;utilisateur reçoit les chansons avec le titre recherché, ainsi que le code barre du disque qui la contient.</p>
-</li>
-</ul>
+<p>Donc nous stockerons sa main sous la forme d&#8217;un <code>Set&lt;String&gt;</code> qui contient les identifiants des cartes contenues dans son jeu.</p>
 </div>
 <div class="sect3">
-<h4 id="_exercice_5">Exercice 5</h4>
+<h4 id="_préparation">Préparation</h4>
 <div class="paragraph">
-<p>Continuer l&#8217;exercice précedent en chargeant la liste des disques et chansons à partir d&#8217;un fichier.</p>
+<p>Déclarer la constante,</p>
+</div>
+<div class="paragraph">
+<p>Prévoir le nom de l&#8217;attribut de la session qui va servir à stocker le <code>Set&lt;String&gt;</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_implémentation">Implémentation</h4>
+<div class="paragraph">
+<p>Dans la page qui permet de lister les cartes (celle développée auparavant), ajouter les boutons "AJOUTER A LA MAIN" et "RETIRER DE LA MAIN" qui seront affichés selon les cas (la carte est déjà dans la main ou pas).</p>
+</div>
+<div class="paragraph">
+<p>Ensuite, écrire la page qui permet à l&#8217;utilisateur de visualiser son jeu.</p>
 </div>
 </div>
 </div>
@@ -922,7 +568,7 @@ AFFICHER Math nul ou le gagnant</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-07 13:49:34 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-20 08:42:15 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">

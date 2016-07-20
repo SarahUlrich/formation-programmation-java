@@ -5,7 +5,7 @@
 :deckjs_theme: neon
 :revealjs_theme: beige
 :revealjs_history: true
-:imagesdir: images
+:imagesdir: images-javaee
 :source-highlighter: highlightjs
 ////
 :revealjs_transition: zoom
