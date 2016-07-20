@@ -5,3 +5,5 @@ asciidoctor exercices-javaee.ad
 
 asciidoctor cours-java.ad
 asciidoctor exercices-java.ad
+
+asciidoctor index.ad
