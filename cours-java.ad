@@ -1149,6 +1149,13 @@ La séparation modulaire est une motivation suffisante. Le pattern Command perme
 
 Ceci était un extrait de ce http://zenika.developpez.com/tutoriels/java/patterns-command/[site], vous pouvez le consulter pour aller plus loin et comprendre par exemple comment le pattern Commande peut aider à implémenter les fonctions _undo_ et _redo_...
 
+
+
+
+
+
+
+
 === Quelques classes du SDK
 
 ==== `Date`
@@ -1207,6 +1214,12 @@ catch( ParseException e ) {
 }
 ----
 
+
+
+
+
+
+
 ==== `StringBuilder`, ...
 
 ==== `BigDecimal`
@@ -1245,8 +1258,6 @@ System.out.println( "valeur2=" + valeur2 );
 Consultez la section _Utilisation de java.io_ de ce https://openclassrooms.com/courses/apprenez-a-programmer-en-java/les-flux-d-entree-sortie[document] pour connaître l'API de base des fichiers.
 
 Voici trois codes très classiques dans le thème de la gestion des fichiers.
-
-===== 
 
 [source,language="java"]
 ----
@@ -1369,6 +1380,12 @@ static void ecrireFichierTexte( String path )
 }
 ----
 
+
+
+
+
+
+
 http://www.jmdoudoux.fr/java/dej/indexavecframes.htm
 
 Logging
@@ -1381,7 +1398,7 @@ JDBC
 
 JPA
 
-==== java.io
+==== Java IO
 
 Cette extension concerne les flux d'entrées et sorties en général (fichiers, réseau, buffer).
 
@@ -1401,7 +1418,6 @@ FileReader et FileWriter gèrent les fichiers,
 
 StringReader et StringWriter lisent/écrivent depuis/vers une chaîne de caractères.
 
-=== Communication entre objets (patterns de communication)
 
 == Les principes de la conception objet
 
@@ -1438,6 +1454,12 @@ Antoine de Saint-Exupéry : "It seems that perfection is reached not when there 
 Albert Einstein : "Make everything as simple as possible, but not simpler".
 
 === Les design patterns
+
+
+=== Communication entre objets (patterns de communication)
+
+
+
 
 == A suivre...
 
