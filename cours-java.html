@@ -471,6 +471,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_classes_imbriquées">Classes imbriquées</a></li>
 <li><a href="#_classes_anonymes">Classes anonymes</a></li>
 <li><a href="#_les_exceptions">Les exceptions</a></li>
+<li><a href="#_conventions_de_nommage">Conventions de nommage</a></li>
+<li><a href="#_autres_conventions">Autres conventions</a></li>
 <li><a href="#_les_collections">Les collections</a></li>
 <li><a href="#_communication_entre_objets">Communication entre objets</a></li>
 <li><a href="#_le_pattern_commande">Le pattern Commande</a></li>
@@ -1861,6 +1863,137 @@ public class TestSaisieErroneeException {
 </div>
 </div>
 <div class="sect2">
+<h3 id="_conventions_de_nommage">Conventions de nommage</h3>
+<div class="paragraph">
+<p>En Java on respecte des conventions de nommage qui permettent une meilleure <em>lisibilité</em> du code et qui apportent une <em>cohérence</em> utile au travail d&#8217;équipe.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CamelCase</dt>
+<dd>
+<p>Le <em>camelCase</em> est la manière la plus utilisée pour nommer en Java. <em>CamelCase</em> veut dire que chaque première lettre d&#8217;un mot prend une majuscule, que tous les mots sont collés les uns aux autres et petite subtitlité, le premier mot ne prend pas de majuscule. Pourquoi <em>camelCase</em> .</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="_les_packages">Les packages</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>entièrement en minuscules,</p>
+</li>
+<li>
+<p>les caractères autorisés sont alphanumériques (de a à z, de 0 à 9) et peuvent contenir des points (.),</p>
+</li>
+<li>
+<p>tout package doit commencer par <code>com</code>, <code>edu</code>, <code>gov</code>, <code>mil</code>, <code>net</code>, <code>org</code> ou les deux lettres identifiant un pays (<code>fr</code> correspond à la France, <code>en</code> à l&#8217;Angleterre etc).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_les_classes_et_interfaces">Les classes et interfaces</h4>
+<div class="paragraph">
+<p>Les classes et interfaces sont nommées selon la méthode <em>camelCase</em> mais commencent pas une majuscule. Il faut aussi éviter les abréviations et essayer d&#8217;utiliser des mots qui décrivent bien la classe tout en étant pas trop long.</p>
+</div>
+<div class="paragraph">
+<p>Exemple : <code>FenetrePrincipale</code>, <code>SelecteurDeFichiers</code>, etc.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_les_méthodes">Les méthodes</h4>
+<div class="paragraph">
+<p>Les méthodes sont nommées selon la méthode -camelCase- et comportent généralement un verbe d&#8217;action. Cela donne par exemple : <code>fermeLaFenetre()</code>, <code>donnerDeLArgent()</code>, <code>manger()</code>, etc.</p>
+</div>
+<div class="paragraph">
+<p>En plus de cela, il faut savoir que dans une classe on retrouve souvent des méthodes de type <em>getter</em> et <em>setter</em> (accesseur, modificateur), pour récupérer une variable de classe ou la modifier sans toucher directement à la variable. Il se nomme généralement <code>getNomDeLaVariable()</code> et <code>setNomDeLaVariable(Object nomDeLaVariable)</code>. Il existe également d&#8217;autres mot-clés fréquemment utilisés comme <em>add</em> et <em>remove</em> (ajout, supprimer) pour ajouter et supprimer quelque chose : <code>addQuelqueChose(Object quelqueChose)</code>, <code>removeTout()</code>, etc.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_les_attributs_et_variables">Les attributs et variables</h4>
+<div class="paragraph">
+<p>Les attributs et variables se nomment également en <em>camelCase</em> et en commençant par une lettre (a-z). Le nom d&#8217;une variable devrait être court et clair. Les variables à un seul caractère sont à bannir sauf pour un usage temporaire (<code>i</code>, <code>j</code>, <code>k</code>, <code>l</code>, <code>m</code>, <code>n</code> pour les entiers et <code>c</code>, <code>d `, `e</code> pour les caractères).</p>
+</div>
+<div class="paragraph">
+<p>Cela donne par exemple : <code>nombrePopcorn</code>, <code>tailleAppartement</code>, <code>i</code>, etc.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_les_contantes">Les contantes</h4>
+<div class="paragraph">
+<p>Les constantes c&#8217;est-à-dire les attributs <em>static final</em> doivent être écrites en majuscules et pour séparer les mots les <code>_</code> sont à utiliser.</p>
+</div>
+<div class="paragraph">
+<p>Cela donne par exemple : <code>LARGEUR_MAX</code>, <code>ID_COURANT</code>, etc.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_autres_conventions">Autres conventions</h3>
+<div class="sect3">
+<h4 id="__strong_on_n_utilise_jamais_le_package_par_défaut_strong"><strong>On n&#8217;utilise JAMAIS le package par défaut.</strong></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_nommage_explicite">Nommage explicite</h4>
+<div class="paragraph">
+<p>Utilisez un nommage explicite pour vos variables, méthodes et classes.</p>
+</div>
+<div class="paragraph">
+<p>Par exemple <code>indexListeProduits</code> vaut bien mieux que <code>iLP</code>. Surtout quand vous retournez dans un projet six mois après avoir créé cette variable !</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_cohérence_du_nommage">Cohérence du nommage</h4>
+<div class="paragraph">
+<p>On respecte une cohérence dans le nommage des classes. Par exemple on crée deux classes servlet qui s&#8217;appellent : <code>ListeProduitsServlet</code> et <code>AjouterProduitServlet</code>. On fera attention à rester cohérent et ne pas faire deux classes : <code>ListeProduitsServlet</code> et <code>ServletAjouterProduit</code>.</p>
+</div>
+<div class="paragraph">
+<p>En général, dans une équipe on définit au préalable les conventions de nommage à suivre pour les projets. Il faudra donc se conformer à ces conventions, de façon à conserver la cohérence du code.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_organisation_en_package">Organisation en package</h4>
+<div class="paragraph">
+<p>Les package permettent d&#8217;organiser vos classes, utilisez-les ! Dès qu&#8217;un package contient trop de classes avec des fonctionnalités variées on pense à les répartir dans des packages différents.</p>
+</div>
+<div class="paragraph">
+<p>Ceci vous aidera à trouver facilement vos classes (en fonction des fonctionnalités qu&#8217;elles implémentent) et à revenir plus facilement sur le projet plus tard.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_pas_de_warnings">Pas de Warnings !</h4>
+<div class="paragraph">
+<p>Les warnings ne sont certes pas des erreurs mais méritent toutefois d&#8217;attirer votre attention. Ils sont des indicateurs donnés par le compilateur pour vous aider à éviter les problèmes.</p>
+</div>
+<div class="paragraph">
+<p>Il faut donc les éliminer, et un bon projet ne doit avoir <em>aucun</em> warning.</p>
+</div>
+<div class="paragraph">
+<p>Pour les éliminer, on peut :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>soit corriger effectivement la cause de l&#8217;apparition du warning,</p>
+</li>
+<li>
+<p>soit, dans le cas ou le compilateur émet un warning (du genre <em>Unchecked cast warning</em>) mais que vous savez que votre code est correct, vous utiliserez l&#8217;annotation <code>@SuppressWarning</code> pour signaler au compilateur que vous êtes au courant du problème. Le warning n&#8217;apparaîtra plus et vous pourrez vous focaliser sur les warnings suivants.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_les_outils">Les outils</h4>
+<div class="paragraph">
+<p>Il existe des outils automatiques permettant d&#8217;avoir une idée plus ou moins précise de la qualité du code.</p>
+</div>
+<div class="paragraph">
+<p>Sonar, &#8230;&#8203;</p>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_les_collections">Les collections</h3>
 <div class="admonitionblock note">
 <table>
@@ -2595,7 +2728,7 @@ static void ecrireFichierTexte( String path )
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-20 08:44:41 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-20 10:05:03 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">

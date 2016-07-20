@@ -871,6 +871,81 @@ public class TestSaisieErroneeException {
 
 Vous pouvez utiliser cet http://perso.telecom-paristech.fr/~charon/coursJava/exercices/fact+Exc.html[exercice] pour vous familiariser avec la syntaxe des exceptions.
 
+=== Conventions de nommage
+
+En Java on respecte des conventions de nommage qui permettent une meilleure _lisibilité_ du code et qui apportent une _cohérence_ utile au travail d'équipe.
+
+CamelCase:: Le _camelCase_ est la manière la plus utilisée pour nommer en Java. _CamelCase_ veut dire que chaque première lettre d'un mot prend une majuscule, que tous les mots sont collés les uns aux autres et petite subtitlité, le premier mot ne prend pas de majuscule. Pourquoi _camelCase_ .
+
+==== Les packages
+
+- entièrement en minuscules,
+- les caractères autorisés sont alphanumériques (de a à z, de 0 à 9) et peuvent contenir des points (.),
+- tout package doit commencer par `com`, `edu`, `gov`, `mil`, `net`, `org` ou les deux lettres identifiant un pays (`fr` correspond à la France, `en` à l'Angleterre etc).
+
+==== Les classes et interfaces
+
+Les classes et interfaces sont nommées selon la méthode _camelCase_ mais commencent pas une majuscule. Il faut aussi éviter les abréviations et essayer d'utiliser des mots qui décrivent bien la classe tout en étant pas trop long.
+
+Exemple : `FenetrePrincipale`, `SelecteurDeFichiers`, etc.
+
+==== Les méthodes
+
+Les méthodes sont nommées selon la méthode -camelCase- et comportent généralement un verbe d'action. Cela donne par exemple : `fermeLaFenetre()`, `donnerDeLArgent()`, `manger()`, etc.
+
+En plus de cela, il faut savoir que dans une classe on retrouve souvent des méthodes de type _getter_ et _setter_ (accesseur, modificateur), pour récupérer une variable de classe ou la modifier sans toucher directement à la variable. Il se nomme généralement `getNomDeLaVariable()` et `setNomDeLaVariable(Object nomDeLaVariable)`. Il existe également d'autres mot-clés fréquemment utilisés comme _add_ et _remove_ (ajout, supprimer) pour ajouter et supprimer quelque chose : `addQuelqueChose(Object quelqueChose)`, `removeTout()`, etc.
+
+==== Les attributs et variables
+
+Les attributs et variables se nomment également en _camelCase_ et en commençant par une lettre (a-z). Le nom d'une variable devrait être court et clair. Les variables à un seul caractère sont à bannir sauf pour un usage temporaire (`i`, `j`, `k`, `l`, `m`, `n` pour les entiers et `c`, `d `, `e` pour les caractères).
+
+Cela donne par exemple : `nombrePopcorn`, `tailleAppartement`, `i`, etc.
+
+==== Les contantes
+
+Les constantes c'est-à-dire les attributs _static final_ doivent être écrites en majuscules et pour séparer les mots les `_` sont à utiliser.
+
+Cela donne par exemple : `LARGEUR_MAX`, `ID_COURANT`, etc.
+
+=== Autres conventions
+
+==== *On n'utilise JAMAIS le package par défaut.*
+
+==== Nommage explicite
+
+Utilisez un nommage explicite pour vos variables, méthodes et classes.
+
+Par exemple `indexListeProduits` vaut bien mieux que `iLP`. Surtout quand vous retournez dans un projet six mois après avoir créé cette variable !
+
+==== Cohérence du nommage
+
+On respecte une cohérence dans le nommage des classes. Par exemple on crée deux classes servlet qui s'appellent : `ListeProduitsServlet` et `AjouterProduitServlet`. On fera attention à rester cohérent et ne pas faire deux classes : `ListeProduitsServlet` et `ServletAjouterProduit`.
+
+En général, dans une équipe on définit au préalable les conventions de nommage à suivre pour les projets. Il faudra donc se conformer à ces conventions, de façon à conserver la cohérence du code.
+
+==== Organisation en package
+
+Les package permettent d'organiser vos classes, utilisez-les ! Dès qu'un package contient trop de classes avec des fonctionnalités variées on pense à les répartir dans des packages différents.
+
+Ceci vous aidera à trouver facilement vos classes (en fonction des fonctionnalités qu'elles implémentent) et à revenir plus facilement sur le projet plus tard.
+
+==== Pas de Warnings !
+
+Les warnings ne sont certes pas des erreurs mais méritent toutefois d'attirer votre attention. Ils sont des indicateurs donnés par le compilateur pour vous aider à éviter les problèmes.
+
+Il faut donc les éliminer, et un bon projet ne doit avoir _aucun_ warning.
+
+Pour les éliminer, on peut :
+
+- soit corriger effectivement la cause de l'apparition du warning,
+- soit, dans le cas ou le compilateur émet un warning (du genre _Unchecked cast warning_) mais que vous savez que votre code est correct, vous utiliserez l'annotation `@SuppressWarning` pour signaler au compilateur que vous êtes au courant du problème. Le warning n'apparaîtra plus et vous pourrez vous focaliser sur les warnings suivants.
+
+==== Les outils
+
+Il existe des outils automatiques permettant d'avoir une idée plus ou moins précise de la qualité du code.
+
+Sonar, ...
+
 === Les collections
 
 NOTE: Le lecteur avide de précisions supplémentaires pourra lire ce http://www.jmdoudoux.fr/java/dej/chap-collections.htm[document] très complet de JM Doudoux.
