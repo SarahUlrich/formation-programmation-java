@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class ApplicationData
+public class ApplicationData implements IApplicationData
 {
 	private static ApplicationData INSTANCE;
 
-	public static ApplicationData getInstance()
+	public static IApplicationData getInstance()
 	{
 		if( INSTANCE == null )
 			INSTANCE = new ApplicationData();
@@ -18,6 +18,7 @@ public class ApplicationData
 
 	private List<Carte> cartes;
 
+	@Override
 	public List<Carte> getCartes()
 	{
 		if( cartes == null )
@@ -30,6 +31,7 @@ public class ApplicationData
 		return cartes;
 	}
 
+	@Override
 	public void ajouterCarte( Carte carte )
 	{
 		if( getCarte( carte.getId() ) != null )
@@ -38,6 +40,7 @@ public class ApplicationData
 		cartes.add( carte );
 	}
 
+	@Override
 	public void removeCarte( String id )
 	{
 		List<Carte> cartes = getCartes();
@@ -51,6 +54,15 @@ public class ApplicationData
 				break;
 			}
 		}
+	}
+
+	@Override
+	public Carte getCarte( String id )
+	{
+		for( Carte carte : getCartes() )
+			if( carte.getId().equals( id ) )
+				return carte;
+		return null;
 	}
 
 	private String syllabe()
@@ -79,13 +91,5 @@ public class ApplicationData
 		for( int i = 0; i < 6; i++ )
 			res += "" + new Random().nextInt( 10 );
 		return res;
-	}
-
-	public Carte getCarte( String id )
-	{
-		for( Carte carte : getCartes() )
-			if( carte.getId().equals( id ) )
-				return carte;
-		return null;
 	}
 }
