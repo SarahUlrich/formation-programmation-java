@@ -27,7 +27,7 @@ public class MainServlet extends HttpServlet
 		if( main != null )
 		{
 			for( String id : main )
-				cartes.add( ApplicationData.getCarte( id ) );
+				cartes.add( ApplicationData.getInstance().getCarte( id ) );
 		}
 
 		Rendu.listeCartes( "Cartes dans votre main", cartes, true, false, getServletContext(), request, response );

@@ -24,7 +24,7 @@ public class EditCarteServlet extends HttpServlet
 		{
 			String id = request.getParameter( "ID" );
 
-			carte = ApplicationData.getCarte( id );
+			carte = ApplicationData.getInstance().getCarte( id );
 			if( carte == null )
 			{
 				response.sendRedirect( "home" );
@@ -45,12 +45,12 @@ public class EditCarteServlet extends HttpServlet
 
 	protected void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException
 	{
-		Carte carte = ApplicationData.getCarte( request.getParameter( "ID" ) );
+		Carte carte = ApplicationData.getInstance().getCarte( request.getParameter( "ID" ) );
 		if( carte == null )
 		{
 			// Si on ne trouve pas la carte, c'est que l'on est en train de l'ajouter !
 			carte = new Carte( "", "" );
-			ApplicationData.ajouterCarte( carte );
+			ApplicationData.getInstance().ajouterCarte( carte );
 		}
 
 		carte.setNom( request.getParameter( "NOM" ) );

@@ -6,9 +6,19 @@ import java.util.Random;
 
 public class ApplicationData
 {
-	private static List<Carte> cartes;
+	private static ApplicationData INSTANCE;
 
-	public static List<Carte> getCartes()
+	public static ApplicationData getInstance()
+	{
+		if( INSTANCE == null )
+			INSTANCE = new ApplicationData();
+
+		return INSTANCE;
+	}
+
+	private List<Carte> cartes;
+
+	public List<Carte> getCartes()
 	{
 		if( cartes == null )
 		{
@@ -20,15 +30,15 @@ public class ApplicationData
 		return cartes;
 	}
 
-	public static void ajouterCarte( Carte carte )
+	public void ajouterCarte( Carte carte )
 	{
 		if( getCarte( carte.getId() ) != null )
 			throw new IllegalArgumentException( "La carte existe déjà !!" );
-		
+
 		cartes.add( carte );
 	}
 
-	public static void removeCarte( String id )
+	public void removeCarte( String id )
 	{
 		List<Carte> cartes = getCartes();
 
@@ -43,14 +53,14 @@ public class ApplicationData
 		}
 	}
 
-	private static String syllabe()
+	private String syllabe()
 	{
-		String[] mots = { "roi", "da", "me", "pick", "a", "chou", "fou", "bat", "man", "woman", "tra", "tri", "bou", "belz", "crat" };
+		String[] mots = { "jon", "snow", "meli", "sa", "roi", "da", "me", "pick", "a", "chou", "fou", "bat", "man", "woman", "tra", "tri", "bou", "belz", "crat" };
 
 		return mots[new Random().nextInt( mots.length )];
 	}
 
-	private static String nomCarte()
+	private String nomCarte()
 	{
 		int nbSyllabes = 1 + new Random().nextInt( 3 );
 
@@ -63,7 +73,7 @@ public class ApplicationData
 		return res.substring( 0, 1 ).toUpperCase() + res.substring( 1 );
 	}
 
-	private static String couleur()
+	private String couleur()
 	{
 		String res = "#";
 		for( int i = 0; i < 6; i++ )
@@ -71,7 +81,7 @@ public class ApplicationData
 		return res;
 	}
 
-	public static Carte getCarte( String id )
+	public Carte getCarte( String id )
 	{
 		for( Carte carte : getCartes() )
 			if( carte.getId().equals( id ) )

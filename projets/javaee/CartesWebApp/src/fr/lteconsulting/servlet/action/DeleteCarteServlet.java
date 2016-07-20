@@ -20,7 +20,7 @@ public class DeleteCarteServlet extends HttpServlet
 		try
 		{
 			String id = request.getParameter( "id" );
-			ApplicationData.removeCarte( id );
+			ApplicationData.getInstance().removeCarte( id );
 		}
 		catch( Exception e )
 		{
