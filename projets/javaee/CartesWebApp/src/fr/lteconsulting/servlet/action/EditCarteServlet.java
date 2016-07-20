@@ -3,15 +3,14 @@ package fr.lteconsulting.servlet.action;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.lteconsulting.ApplicationData;
 import fr.lteconsulting.Carte;
+import fr.lteconsulting.servlet.DataAccessServlet;
 import fr.lteconsulting.servlet.Rendu;
 
-public class EditCarteServlet extends HttpServlet
+public class EditCarteServlet extends DataAccessServlet
 {
 	private static final long serialVersionUID = 1L;
 
@@ -24,7 +23,7 @@ public class EditCarteServlet extends HttpServlet
 		{
 			String id = request.getParameter( "ID" );
 
-			carte = ApplicationData.getInstance().getCarte( id );
+			carte = getData().getCarte( id );
 			if( carte == null )
 			{
 				response.sendRedirect( "home" );
@@ -45,12 +44,12 @@ public class EditCarteServlet extends HttpServlet
 
 	protected void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException
 	{
-		Carte carte = ApplicationData.getInstance().getCarte( request.getParameter( "ID" ) );
+		Carte carte = getData().getCarte( request.getParameter( "ID" ) );
 		if( carte == null )
 		{
 			// Si on ne trouve pas la carte, c'est que l'on est en train de l'ajouter !
 			carte = new Carte( "", "" );
-			ApplicationData.getInstance().ajouterCarte( carte );
+			getData().ajouterCarte( carte );
 		}
 
 		carte.setNom( request.getParameter( "NOM" ) );

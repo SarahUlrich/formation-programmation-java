@@ -3,14 +3,13 @@ package fr.lteconsulting.servlet.vue;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.lteconsulting.ApplicationData;
+import fr.lteconsulting.servlet.DataAccessServlet;
 import fr.lteconsulting.servlet.Rendu;
 
-public class ListeCartesServlet extends HttpServlet
+public class ListeCartesServlet extends DataAccessServlet
 {
 	private static final long serialVersionUID = 1L;
 
@@ -23,6 +22,6 @@ public class ListeCartesServlet extends HttpServlet
 			return;
 		}
 
-		Rendu.listeCartes( "Liste des cartes à jouer", ApplicationData.getInstance().getCartes(), true, true, getServletContext(), request, response );
+		Rendu.listeCartes( "Liste des cartes à jouer", getData().getCartes(), true, true, getServletContext(), request, response );
 	}
 }

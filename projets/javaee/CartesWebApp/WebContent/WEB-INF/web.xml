@@ -94,6 +94,6 @@
     <url-pattern>/main</url-pattern>
   </servlet-mapping>
   <listener>
-    <listener-class>fr.lteconsulting.WebAppListener</listener-class>
+    <listener-class>fr.lteconsulting.ApplicationDataInitializationListener</listener-class>
   </listener>
 </web-app>

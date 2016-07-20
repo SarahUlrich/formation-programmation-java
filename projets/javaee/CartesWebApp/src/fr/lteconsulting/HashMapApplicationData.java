@@ -1,24 +1,29 @@
 package fr.lteconsulting;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
-public class ApplicationData implements IApplicationData
+public class HashMapApplicationData implements IApplicationData
 {
-	private List<Carte> cartes;
+	private Map<String, Carte> cartes;
 
 	@Override
 	public List<Carte> getCartes()
 	{
 		if( cartes == null )
 		{
-			cartes = new ArrayList<>();
+			cartes = new HashMap<>();
 			for( int i = 1; i < 100; i++ )
-				cartes.add( new Carte( nomCarte(), couleur() ) );
+			{
+				Carte carte = new Carte( nomCarte(), couleur() );
+				cartes.put( carte.getId(), carte );
+			}
 		}
 
-		return cartes;
+		return new ArrayList<>( cartes.values() );
 	}
 
 	@Override
@@ -27,32 +32,19 @@ public class ApplicationData implements IApplicationData
 		if( getCarte( carte.getId() ) != null )
 			throw new IllegalArgumentException( "La carte existe déjà !!" );
 
-		cartes.add( carte );
+		cartes.put( carte.getId(), carte );
 	}
 
 	@Override
 	public void removeCarte( String id )
 	{
-		List<Carte> cartes = getCartes();
-
-		for( int i = 0; i < cartes.size(); i++ )
-		{
-			Carte carte = cartes.get( i );
-			if( carte.getId().equals( id ) )
-			{
-				cartes.remove( i );
-				break;
-			}
-		}
+		cartes.remove( id );
 	}
 
 	@Override
 	public Carte getCarte( String id )
 	{
-		for( Carte carte : getCartes() )
-			if( carte.getId().equals( id ) )
-				return carte;
-		return null;
+		return cartes.get( id );
 	}
 
 	private String syllabe()

@@ -1,17 +1,17 @@
 package fr.lteconsulting.servlet.action;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.lteconsulting.ApplicationData;
+import fr.lteconsulting.servlet.DataAccessServlet;
 
 /**
  * Servlet implementation class DeleteCarteServlet
  */
-public class DeleteCarteServlet extends HttpServlet
+public class DeleteCarteServlet extends DataAccessServlet
 {
 	private static final long serialVersionUID = 1L;
 
@@ -20,7 +20,8 @@ public class DeleteCarteServlet extends HttpServlet
 		try
 		{
 			String id = request.getParameter( "id" );
-			ApplicationData.getInstance().removeCarte( id );
+
+			getData().removeCarte( id );
 		}
 		catch( Exception e )
 		{

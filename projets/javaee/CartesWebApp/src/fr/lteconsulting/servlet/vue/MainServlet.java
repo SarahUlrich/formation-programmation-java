@@ -6,15 +6,14 @@ import java.util.List;
 import java.util.Set;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.lteconsulting.ApplicationData;
 import fr.lteconsulting.Carte;
+import fr.lteconsulting.servlet.DataAccessServlet;
 import fr.lteconsulting.servlet.Rendu;
 
-public class MainServlet extends HttpServlet
+public class MainServlet extends DataAccessServlet
 {
 	private static final long serialVersionUID = 1L;
 
@@ -27,7 +26,7 @@ public class MainServlet extends HttpServlet
 		if( main != null )
 		{
 			for( String id : main )
-				cartes.add( ApplicationData.getInstance().getCarte( id ) );
+				cartes.add( getData().getCarte( id ) );
 		}
 
 		Rendu.listeCartes( "Cartes dans votre main", cartes, true, false, getServletContext(), request, response );
