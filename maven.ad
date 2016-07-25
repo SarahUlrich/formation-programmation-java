@@ -26,6 +26,8 @@ Chaque projet Maven est défini dans un fichier `pom.xml`.
 
 Ce fichier est au format `xml`.
 
+https://maven.apache.org/guides/introduction/introduction-to-the-pom.html[Introduction au modèle Maven].
+
 === Utilisation
 
 Au lieu de créer nos projets dans Eclipse, nous allons déclarer dans un fichier `pom.xml` :
@@ -139,3 +141,7 @@ La commande :
 		mvn site
 
 génèrera un site de documentation dans le sous-répertoire `target/site`.
+
+=== Les phases
+
+https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html[Introduction]
