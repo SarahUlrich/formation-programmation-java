@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
-<head>
-<title>Catégories</title>
-</head>
+<h:head>
+	<h:title>Catégories</h:title>
+	<f:loadBundle basename="fr.lteconsulting.bundle.messages" var="msg"/>
+</h:head>
 
 <body>
 	<h3>Categories</h3>
@@ -38,12 +39,12 @@
 				<legend>#{categoryCrudBean.edition ? "Edition catégorie" : "Ajout catégorie"}</legend>
 				
 				<h:outputLabel for="nom">Nom<span class="requis">*</span></h:outputLabel>
-				<h:inputText id="nom" label="Nom" value="#{categoryCrudBean.item.nom}" required="true" requiredMessage="Veuillez saisir un nom !" size="20" maxlength="60"/>
+				<h:inputText id="nom" label="Nom" value="#{categoryCrudBean.item.nom}" required="true" requiredMessage="#{msg['categorie.nom']}" size="20" maxlength="60"/>
 				<h:message id="nomMessage" for="nom" errorClass="erreur" />
 				<br/>
 				
 				<h:outputLabel for="force">Force<span class="requis">*</span></h:outputLabel>
-				<h:inputText id="force" label="Force" value="#{categoryCrudBean.item.force}" requiredMessage="Veuillez saisir une force !" required="true" size="5" maxlength="6"/>
+				<h:inputText id="force" label="Force" value="#{categoryCrudBean.item.force}" requiredMessage="#{msg['categorie.force']}" required="true" size="5" maxlength="6"/>
 				<h:message id="forceMessage" for="force" errorClass="erreur" />
 				<br/>
 				
