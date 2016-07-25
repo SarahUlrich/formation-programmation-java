@@ -316,15 +316,25 @@ C'est un framework MVC pour simplifier l'écriture d'interface graphiques Web.
 
 Fonctionne au dessus de l'api Servlet. Stable et utilisable depuis la version 2.0 en 2009.
 
+=== FacesServlet
+
 Une seule servlet prend en charge toutes les requêtes et maintient l'état de la vue de _chaque_ client.
+
+`javax.faces.webapp.FacesServlet`
+
+=== Facelet
 
 La programmation des vues repose sur _Facelet_, description XML des composants de la vue.
 
-`javax.faces.webapp.FacesServlet`
+Fichiers `*.xhtml`
+
+=== Controlleur
 
 La programmation des actions (_controlleur_) s'écrit dans des _Java Beans_.
 
 `@ManagedBean`, `@RequestScoped`, `@ViewScoped`, `@SessionScoped`, `@ApplicationScoped`, `@CustomScope` et `@NoneScoped`...
+
+=== Modèle
 
 Les données attachées aux échanges HTTP sont stockées dans des _Java Beans_ attachés aux différents scopes.
 
@@ -336,7 +346,7 @@ Gère par ex. état des vues, maj des modèles, invocation des actions métiers,
 
 === Contrepartie
 
-On ne maîtrise pas vraiment le HTML généré.
+On ne maîtrise pas vraiment le HTML généré car la génération de celui-ci est encapsulée dans le code des composants.
 
 === Structure d'une application JSF
 
@@ -359,8 +369,7 @@ Références des balises JSF : http://docs.oracle.com/javaee/6/javaserverfaces/2
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" 
 	   xmlns:f="http://java.sun.com/jsf/core" 
-	   xmlns:h="http://java.sun.com/jsf/html"
-	   xmlns:ui="http://java.sun.com/jsf/facelets"> 
+	   xmlns:h="http://java.sun.com/jsf/html"> 
 	<h:head>
 		<title>Bienvenue</title>
 		<h:outputStylesheet library="default" name="cartes.css"></h:outputStylesheet>
@@ -384,11 +393,14 @@ On voit donc que `$` est remplacé par `#`. Ceci correspond au fait que l'expres
 
 Depuis Java EE 6, expression language a été unifié et il est maintenant possible d'utiliser `#` dans les JSP.
 
-=== Les 6 étapes du traitement d'une requête
+=== Les 6 étapes du traitement d'une requête (1/2)
 
 - **Restauration de la vue** : si c'est un premier accès JSP crée une donnée de vue (l'arbre des composants) dans `FacesContext`. Sinon JSF recharge simplement les données de la vue.
 - **Application des paramètres** de la requête : JSF fait automatiquement le lien entre les paramètres présents dans la requête et les champs du modèle à modifier.
 - **Validation des données** : si la validation échoue, on passe directement à la dernière étape.
+
+=== Les 6 étapes du traitement d'une requête (2/2)
+
 - **Mise à jour du modèle** : si la validation s'est bien déroulée, cette étape consiste à mettre à jour les données du modèle avec les données validées.
 - **Appel au code métier** de l'application : les actions déclarées dans les formulaires sont exécutées, sous la forme d'appels aux méthodes des Beans.
 - **Rendu de la réponse** : l'arbre des composants est appelé afin de générer le HTML résultat. Il est mémorisé pour la prochaine _Restauration de vue_.
@@ -419,71 +431,3 @@ Dans `web.xml` on ajoute :
 === Tutoriel
 
 https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf
-
-== Annexes
-
-Les directives
-
-
-
-
-
-
-
-
-Import d'un package : `<%@ page import="java.util.List, java.util.Date" %>`
-
-Inclusion : `<%@ include file="uneAutreJSP.jsp" %>`
-
-*Apparte* Scopes de vie : page / requete / session / application
-
-Les tags `<jsp:useBean>`, `<jsp:getProperty>`,  `<jsp:setProperty>`, `<jsp:forward>`.
-
-Les *expression language* : `${ monEjb.propriete }`
-
-- JSTL
-
-En JSP :
-
-		<%@ page import="java.util.List, java.util.ArrayList" %>
-		<%
-		List<Integer> list = (ArrayList<Integer>)request.getAttribute("tirage");
-		for(int i = 0; i < list.size();i++)
-			out.println(list.get(i));
-		%>
-
-EN JSTL :
-
-		<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-		...
-
-		<c:forEach var="item" items="${tirage}" >
-			<c:out value="${item}" />
-		</c:forEach>
-
-
-[source]
-----
-mvn archetype:generate \
-  -DarchetypeGroupId=fr.lteconsulting \
-  -DarchetypeArtifactId=angular2-gwt.archetype \
-  -DarchetypeVersion=1.1
-  
-mvn clean install
-
-java -jar target/YOUR_ARTIFACT_ID.jar
-----
-
-[data-background="images/ingredients.jpg"]
-== Ingrédients
-
-== Architecture et Fonctionnement
-
-[%notitle]
-[data-transition=fade]
-[data-background="images/archi-survol.png"]
-[data-background-size=contain]
-=== .
-
-Tooo

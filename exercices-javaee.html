@@ -435,14 +435,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc">
 <div id="toctitle" class="title">Exercices de programmation avec Java EE</div>
 <ul class="sectlevel1">
-<li><a href="#_a_lire_pendant_le_pont_du_14_juillet">A lire pendant le pont du 14 juillet</a></li>
-<li><a href="#_formulaire_de_connexion">Formulaire de connexion</a></li>
-<li><a href="#_projet_gestion_d_un_jeu_de_cartes">Projet : Gestion d&#8217;un jeu de cartes</a>
+<li><a href="#_servlets_et_jsp">Servlets et JSP</a>
 <ul class="sectlevel2">
-<li><a href="#_description">Description</a></li>
-<li><a href="#_fonctionnalités_à_réaliser">Fonctionnalités à réaliser</a></li>
-<li><a href="#_fonctionnalités_facultatives">Fonctionnalités facultatives</a></li>
-<li><a href="#_etapes_de_développement">Etapes de développement</a></li>
+<li><a href="#_formulaire_de_connexion">Formulaire de connexion</a></li>
+<li><a href="#_projet_gestion_d_un_jeu_de_cartes">Projet : Gestion d&#8217;un jeu de cartes</a></li>
+</ul>
+</li>
+<li><a href="#_maven">Maven</a></li>
+<li><a href="#_jsf">JSF</a>
+<ul class="sectlevel2">
+<li><a href="#_crud_catégories">CRUD Catégories</a></li>
 </ul>
 </li>
 </ul>
@@ -450,7 +452,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_a_lire_pendant_le_pont_du_14_juillet">A lire pendant le pont du 14 juillet</h2>
+<h2 id="_servlets_et_jsp">Servlets et JSP</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Vous consulterez ceci :</p>
@@ -471,11 +473,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_formulaire_de_connexion">Formulaire de connexion</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_formulaire_de_connexion">Formulaire de connexion</h3>
 <div class="paragraph">
 <p>Cet exercice vous permettra d&#8217;acquérir et d&#8217;être familier avec les notions suivantes :</p>
 </div>
@@ -519,12 +518,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_projet_gestion_d_un_jeu_de_cartes">Projet : Gestion d&#8217;un jeu de cartes</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_description">Description</h3>
+<h3 id="_projet_gestion_d_un_jeu_de_cartes">Projet : Gestion d&#8217;un jeu de cartes</h3>
+<div class="sect3">
+<h4 id="_description">Description</h4>
 <div class="paragraph">
 <p>L&#8217;application que nous nous proposons de réaliser permet de gérer un ensemble de cartes à jouer ainsi que l&#8217;ensemble des joueurs participants (on les appelle <em>utilisateur</em>).</p>
 </div>
@@ -540,8 +537,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Le projet intégralement terminé est disponible à cette <a href="https://github.com/ltearno/formation-programmation-java/tree/master/projets/javaee/CartesWebApp">adresse</a>.</p>
 </div>
-<div class="sect3">
-<h4 id="_page_d_accueil_et_de_connexion_code_home_code">Page d&#8217;accueil et de connexion - <code>/home</code></h4>
+<div class="sect4">
+<h5 id="_page_d_accueil_et_de_connexion_code_home_code">Page d&#8217;accueil et de connexion - <code>/home</code></h5>
 <div class="paragraph">
 <p>C&#8217;est la page d&#8217;accueil de l&#8217;application. Lorsque l&#8217;utilisateur n&#8217;est pas connecté, cette page affiche un formulaire de connexion. Lorsque l&#8217;utilisateur est connecté la page affiche un message de bienvenue avec le nom de l&#8217;utilisateur.</p>
 </div>
@@ -565,8 +562,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><em>Notez comme la barre de navigation inclut d&#8217;autres liens une fois l&#8217;utilisateur connecté !</em></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_cartes_disponibles_code_cartes_code">Cartes disponibles - <code>/cartes</code></h4>
+<div class="sect4">
+<h5 id="_cartes_disponibles_code_cartes_code">Cartes disponibles - <code>/cartes</code></h5>
 <div class="paragraph">
 <p>Cette page permet de visualiser l&#8217;ensemble des cartes disponibles dans l&#8217;application. Cette liste de cartes est commune à toute l&#8217;application et à tous les utilisateurs.</p>
 </div>
@@ -604,8 +601,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>De plus, comme illustré avec le numéro (5) sur la copie d&#8217;écran, un bouton <strong>NOUVELLE CARTE</strong> permet à l&#8217;utilisateur de créer une nouvelle carte pour l&#8217;ajouter aux cartes disponibles.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_edition_et_création_d_une_carte">Edition et création d&#8217;une carte</h4>
+<div class="sect4">
+<h5 id="_edition_et_création_d_une_carte">Edition et création d&#8217;une carte</h5>
 <div class="paragraph">
 <p>Lorsque l&#8217;utilisateur crée une nouvelle carte ou désire éditer une carte existante, il est amené vers la page d&#8217;édition.</p>
 </div>
@@ -629,8 +626,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Une fois le formulaire validé par l&#8217;utilisateur, celui-ci est redirigé vers la page <code>/cartes</code> avec les données à jour.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_main_utilisateur_code_main_code">Main utilisateur - <code>/main</code></h4>
+<div class="sect4">
+<h5 id="_main_utilisateur_code_main_code">Main utilisateur - <code>/main</code></h5>
 <div class="paragraph">
 <p>Cette page affiche la liste des cartes qui sont actuellement dans la main de l&#8217;utilisateur. La main est constituée par l&#8217;utilisateur en utilisant les boutons (4) et (5) de la page des <em>Cartes disponibles</em>. Comme illustré sur la copie d&#8217;écran suivante, l&#8217;utilisateur peut aussi retirer une carte de sa main à partir de cette page (avec le bouton <strong>-</strong>).</p>
 </div>
@@ -641,8 +638,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_fonctionnalités_à_réaliser">Fonctionnalités à réaliser</h3>
+<div class="sect3">
+<h4 id="_fonctionnalités_à_réaliser">Fonctionnalités à réaliser</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -672,22 +669,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_fonctionnalités_facultatives">Fonctionnalités facultatives</h3>
+<div class="sect3">
+<h4 id="_fonctionnalités_facultatives">Fonctionnalités facultatives</h4>
 <div class="paragraph">
 <p>A la création d&#8217;une carte, proposer une checkbox qui permette d&#8217;ajouter directement la carte à la main de l&#8217;utilisateur connecté.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_etapes_de_développement">Etapes de développement</h3>
+<div class="sect3">
+<h4 id="_etapes_de_développement">Etapes de développement</h4>
 <div class="paragraph">
 <p>Créez un projet Dynamic Web avec Eclipse.</p>
 </div>
 <div class="paragraph">
 <p>Ce projet utilisera le serveur d&#8217;application Tomcat pour son déploiement.</p>
 </div>
-<div class="sect3">
-<h4 id="_modèle_de_données">Modèle de données</h4>
+<div class="sect4">
+<h5 id="_modèle_de_données">Modèle de données</h5>
 <div class="paragraph">
 <p>Le plus important est de définir le modèle de données :</p>
 </div>
@@ -708,8 +705,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_page_code_home_code">Page <code>/home</code></h4>
+<div class="sect4">
+<h5 id="_page_code_home_code">Page <code>/home</code></h5>
 <div class="paragraph">
 <p>Implémentez une servlet <code>HomeServlet</code> qui va gérer la page de bienvenue.</p>
 </div>
@@ -733,13 +730,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Le formulaire de connexion enverra une requete POST sans changer d&#8217;URL (c&#8217;est-à-dire vers l&#8217;URL <code>home</code>). La servlet <code>HomeServlet</code> recevra donc les données de ce formulaire et procédera au traitement du <em>login</em> (en stockant dans la session le nom de l&#8217;utilisateur reçu avec le formulaire).</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_page_code_cartes_code">Page <code>/cartes</code></h4>
+<div class="sect4">
+<h5 id="_page_code_cartes_code">Page <code>/cartes</code></h5>
 <div class="paragraph">
 <p>Il s&#8217;agit maintenant de gérer une liste de cartes globale à toute l&#8217;application et donc commune à tous les utilisateurs. Sur cette liste l&#8217;utilisateur pourra effectuer les opérations CRUD, c&#8217;est-à-dire <em>consultation</em>, <em>ajout</em>, <em>suppression</em> et <em>édition</em>.</p>
 </div>
-<div class="sect4">
-<h5 id="_préliminaires">Préliminaires</h5>
+<div class="sect5">
+<h6 id="_préliminaires">Préliminaires</h6>
 <div class="paragraph">
 <p>Premièrement il conviendra de définir notre principal classe : la classe <code>Carte</code>. Implémentez cette classe en lui offrant trois attributs de type <code>String</code> : <code>id</code>, <code>nom</code> et <code>couleur</code>. Implémentez également les <em>setters</em> de <code>nom</code> et <code>couleur</code>, ainsi que les <em>getters</em> des trois attributs. Implémentez un constructeur prenant des valeurs pour <code>nom</code> et <code>couleur</code>, et qui génère un identifiant avec la classe <code>UUID</code>.</p>
 </div>
@@ -747,14 +744,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>La liste des cartes est globale à toute l&#8217;application. Afin de pouvoir y accéder depuis n&#8217;importe quel endroit dans l&#8217;application, créez une classe <code>ApplicationData</code> possédant un attribut statique <code>List&lt;Carte&gt; cartes</code>. Implémentez ensuite une méthode <code>public static List&lt;Carte&gt; getCartes()</code> dans cette classe qui permette de récupérer la liste des cartes. Notez que l&#8217;attribut <code>cartes</code> doit être initialisé au moment du premier appel à <code>getCartes()</code>.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_consultation">Consultation</h5>
+<div class="sect5">
+<h6 id="_consultation">Consultation</h6>
 <div class="paragraph">
 <p>Maintenant que notre modèle de données est établi, attachez-vous à implémenter la servlet <code>CartesServlet</code> et la vue <em>JSP</em> associée (<code>WEB-INF/cartes.jsp</code>). La servlet <code>CartesServlet</code> a pour fonction de récupérer la liste des cartes et de la transmettre à la vue <em>JSP</em> sous la forme d&#8217;un attribut de requête (par exemple "cartes").</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_suppression">Suppression</h5>
+<div class="sect5">
+<h6 id="_suppression">Suppression</h6>
 <div class="paragraph">
 <p>Occupons-nous maintenant de l&#8217;opération de suppression.</p>
 </div>
@@ -774,8 +771,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Utilisez cette méthode dans la servlet <code>SuppressionCarteServlet</code>.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_edition">Edition</h5>
+<div class="sect5">
+<h6 id="_edition">Edition</h6>
 <div class="paragraph">
 <p>La page d&#8217;édition d&#8217;une carte est accessible en cliquant sur le bouton "Editer carte" d&#8217;une carte dans la page d&#8217;affichage des cartes. Elle correspond à l&#8217;URL <code>editerCarte?id=5fcdd622</code>, qui prend donc en paramètre l&#8217;identifiant de la carte que l&#8217;on souhaite éditer.</p>
 </div>
@@ -789,14 +786,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Une fois l&#8217;action de modification de la carte effectuée, la servlet peut tout simplement rediriger le navigateur vers l&#8217;url <code>/cartes</code>.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_création_d_une_carte">Création d&#8217;une carte</h5>
+<div class="sect5">
+<h6 id="_création_d_une_carte">Création d&#8217;une carte</h6>
 <div class="paragraph">
 <p>Essayez d&#8217;implémenter cette fonctionnalité en ne créant pas de nouvelle classe ni <em>JSP</em>, mais en modifiant la classe <code>EditerCarteServlet</code>. Petit indice : ceci peut se faire en traitant dans la servlet <code>EditerCarteServlet</code> le cas l&#8217;identifiant est absent.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_bouton_em_ajouter_à_la_main_em">Bouton <em>Ajouter à la main</em></h5>
+<div class="sect5">
+<h6 id="_bouton_em_ajouter_à_la_main_em">Bouton <em>Ajouter à la main</em></h6>
 <div class="paragraph">
 <p>Ce bouton doit déclencher l&#8217;exécution d&#8217;une nouvelle servlet <code>toggleCarteMainServlet</code> que vous écrirez. Vous pouvez la brancher sur l&#8217;URL <code>/toggleCarteMain</code>. Cette servlet recevra en paramètre l&#8217;identifiant de la carte à ajouter ou à retirer de la main. La servlet redirigera ensuite l&#8217;utilisateur vers l&#8217;URL <code>/cartes</code>.</p>
 </div>
@@ -807,15 +804,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Etant donné que la main de l&#8217;utilisateur est stockée en session dans l&#8217;attribut "main" (contenant un objet de la classe <code>Set&lt;String&gt;</code>), la servlet viendra ajouter l&#8217;identifiant de la carte dans le <code>Set&lt;String&gt;</code> représentant la main de l&#8217;utilisateur.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_bouton_em_retirer_de_la_main_em">Bouton <em>Retirer de la main</em></h5>
+<div class="sect5">
+<h6 id="_bouton_em_retirer_de_la_main_em">Bouton <em>Retirer de la main</em></h6>
 <div class="paragraph">
 <p>Ce bouton déclenche l&#8217;exécution de la même servlet (<code>toggleMainServlet</code>). La seule différence avec le bouton "AJOUTER A LA MAIN" est graphique : c&#8217;est son titre ou son icône qui diffère.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_page_code_main_code">Page <code>/main</code></h4>
+<div class="sect4">
+<h5 id="_page_code_main_code">Page <code>/main</code></h5>
 <div class="paragraph">
 <p>Il s&#8217;agit dans cette page d&#8217;afficher les cartes qui sont dans la main du joueur.</p>
 </div>
@@ -832,8 +829,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Il en va de même pour les boutons d&#8217;ajout et de suppression de la main.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_protection_des_vues_em_jsp_em_avec_la_classe_code_rendu_code">Protection des vues <em>JSP</em> avec la classe <code>Rendu</code></h4>
+<div class="sect4">
+<h5 id="_protection_des_vues_em_jsp_em_avec_la_classe_code_rendu_code">Protection des vues <em>JSP</em> avec la classe <code>Rendu</code></h5>
 <div class="paragraph">
 <p>A chaque fois que l&#8217;on veut afficher une <em>JSP</em>, nous procédons aux étapes suivantes :</p>
 </div>
@@ -894,14 +891,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Cette technique est similaire au pattern <em>Facade</em> qui permet d&#8217;obtenir un contrat simple (la méthode statique <code>listeCartes</code>) à partir d&#8217;un contrat plus complexe ou moins "pratique" (l&#8217;enregistrement des attributs et la délégation du traitement à la vue <em>JSP</em>).</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_utilisation_des_constantes_pour_les_noms_des_paramètres_et_attributs">Utilisation des constantes pour les noms des paramètres et attributs</h4>
+<div class="sect4">
+<h5 id="_utilisation_des_constantes_pour_les_noms_des_paramètres_et_attributs">Utilisation des constantes pour les noms des paramètres et attributs</h5>
 <div class="paragraph">
 <p>Créez une interface <code>Constantes</code> qui ne contiendra que des constantes que vous utiliserez à la place des noms de paramètres et attributs. Ceci vous aidera à éviter par exemple d&#8217;envoyer un formulaire avec un champ nommé "nom" alors que la servlet traitant ce formulaire attend le paramètre "NOM". <em>Il est très souvent utile de se donner les moyens de se protéger contre ses propres erreurs !</em></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_utilisation_de_listener_pour_s_intégrer_dans_le_cycle_de_vie_de_java_ee">Utilisation de Listener pour s&#8217;intégrer dans le cycle de vie de Java EE</h4>
+<div class="sect4">
+<h5 id="_utilisation_de_listener_pour_s_intégrer_dans_le_cycle_de_vie_de_java_ee">Utilisation de Listener pour s&#8217;intégrer dans le cycle de vie de Java EE</h5>
 <div class="paragraph">
 <p>Comme la majorité des outils, framework et bibliothèques de développement, il est possible d&#8217;insérer vos traitement à des points précis du cycle de vie de l&#8217;outil que vous utilisez, ici Java EE. C&#8217;est un principe bien connu sous le nom de <em>Open Close Principle</em>.</p>
 </div>
@@ -922,8 +919,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Lorsque Java EE démarre, la méthode <code>public void contextInitialized( ServletContextEvent event )</code> de notre classe va être appelée ! Lorsque le serveur s&#8217;arrête il vous appellera la méthode <code>contextDestroyed</code>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_préparation_au_changement_de_fournisseur_de_données">Préparation au changement de fournisseur de données</h4>
+<div class="sect4">
+<h5 id="_préparation_au_changement_de_fournisseur_de_données">Préparation au changement de fournisseur de données</h5>
 <div class="paragraph">
 <p>A terme notre projet utilisera une base de donnée. En attendant il fonctionne avec la liste stockée en mémoire sous forme d&#8217;un attribut statique de la classe <code>ApplicationData</code> (l&#8217;attribut <code>cartes</code>).</p>
 </div>
@@ -1029,8 +1026,8 @@ public void contextInitialized( ServletContextEvent event )
 <pre class="highlightjs highlight"><code class="language-java" data-lang="java">List&lt;Carte&gt; cartes = DataAccess.get( getServletContext() ).getCartes();</code></pre>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_création_d_une_classe_abstraite_code_vueservlet_code">Création d&#8217;une classe abstraite <code>VueServlet</code></h5>
+<div class="sect5">
+<h6 id="_création_d_une_classe_abstraite_code_vueservlet_code">Création d&#8217;une classe abstraite <code>VueServlet</code></h6>
 <div class="paragraph">
 <p>Comme il est fastidieux de se répéter et de toujours passer la valeur de retour de <code>getServletContext()</code> dans les servlets, vous pouvez créer une classe abstraite <code>VueServlet</code> qui héritera de <code>HttpServlet</code> et fournira une méthode très simple d&#8217;utilisation pour accéder à l&#8217;instance IApplicaionData :</p>
 </div>
@@ -1070,8 +1067,8 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_protection_des_url_nécessitant_d_être_connecté">Protection des URL nécessitant d&#8217;être connecté</h4>
+<div class="sect4">
+<h5 id="_protection_des_url_nécessitant_d_être_connecté">Protection des URL nécessitant d&#8217;être connecté</h5>
 <div class="paragraph">
 <p><strong>ATTENTION : Le filtre de sécurité que nous créons ici n&#8217;est valable qu&#8217;à des fins didactiques. Vous ne devez AUCUNEMENT vous en servir pour sécuriser des projets de production. La sécurité est en effet un problème très complexe et il est impératif se s&#8217;appuyer sur des implémentations matures et correctement testées. Par exemple le standard <em>JAAS</em> avec Java EE ou bien <em>Spring Security</em> avec <em>Spring</em>.</strong></p>
 </div>
@@ -1108,9 +1105,32 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_maven">Maven</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Convertissez le projet en projet Maven <code>war</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jsf">JSF</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Suivez le <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf">tutoriel suivant</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="_crud_catégories">CRUD Catégories</h3>
+<div class="paragraph">
+<p>Continuez avec le projet de la partie Servlets et JSP.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-21 22:07:27 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-24 20:32:12 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
