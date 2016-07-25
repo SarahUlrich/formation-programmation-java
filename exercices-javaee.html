@@ -444,7 +444,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_maven">Maven</a></li>
 <li><a href="#_jsf">JSF</a>
 <ul class="sectlevel2">
-<li><a href="#_crud_catégories">CRUD Catégories</a></li>
+<li><a href="#_crud_utilisateurs">CRUD Utilisateurs</a></li>
+<li><a href="#_intégration_avec_l_existant">Intégration avec l&#8217;existant</a></li>
 </ul>
 </li>
 </ul>
@@ -1120,9 +1121,80 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 <p>Suivez le <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf">tutoriel suivant</a>.</p>
 </div>
 <div class="sect2">
-<h3 id="_crud_catégories">CRUD Catégories</h3>
+<h3 id="_crud_utilisateurs">CRUD Utilisateurs</h3>
 <div class="paragraph">
-<p>Continuez avec le projet de la partie Servlets et JSP.</p>
+<p>Partez du projet que l&#8217;on trouve <a href="http://lteconsulting.fr/java.cartes-webapp.zip">là</a>.</p>
+</div>
+<div class="paragraph">
+<p>Bien lire les <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf">deux</a> <a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-gestion-d-un-formulaire-avec-jsf">tutoriels</a>.</p>
+</div>
+<div class="paragraph">
+<p>Créez une classe <code>Utilisateur</code> (celle-ci sera un <em>Java Bean</em>). Cette classe possède les attributs suivants :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>nom</code> : <code>String</code>,</p>
+</li>
+<li>
+<p><code>prenom</code> : <code>String</code>,</p>
+</li>
+<li>
+<p><code>age</code> : <code>int</code>,</p>
+</li>
+<li>
+<p><code>login</code> : <code>String</code>,</p>
+</li>
+<li>
+<p><code>motDePasse</code> : <code>String</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Chaque attribut à sa pair de getter et setter associée.</p>
+</div>
+<div class="paragraph">
+<p>Implémentez une page <code>users.xhtml</code> qui permet à l&#8217;utilisateur de réaliser les opérations CRUD sur les utilisateurs. Créez pour cette occasion également la classe <code>UtilisateurDao</code> (en s&#8217;inspirant de <code>CategorieDao</code>).</p>
+</div>
+<div class="paragraph">
+<p>Au sujet du formulaire d&#8217;édition et d&#8217;ajout d&#8217;un utilisateur, voici les contraintes à mettre en oeuvre :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nom : <em>ne peut pas être vide</em>,</p>
+</li>
+<li>
+<p>Prénom : <em>ne peut pas être vide</em>,</p>
+</li>
+<li>
+<p>Age : <em>doit être supérieur à 18</em>,</p>
+</li>
+<li>
+<p>Login : <em>ne peut pas être vide</em>, <em>doit avoir au moins 8 caractères</em>,</p>
+</li>
+<li>
+<p>Mot de passe : Le formulaire doit montrer un champ pour saisir le mot de passe et un autre champ pour le confirmer. <em>Les deux champs doivent avoir la même valeur</em>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_intégration_avec_l_existant">Intégration avec l&#8217;existant</h3>
+<div class="paragraph">
+<p>Le reste de l&#8217;exercice s&#8217;attache à utiliser la classe <code>Utilisateur</code> qui vient d&#8217;être créée.</p>
+</div>
+<div class="paragraph">
+<p>Modifiez maintenant l&#8217;écran d&#8217;accueil de l&#8217;application pour demander le <em>login</em> et le <em>mot de passe</em> de l&#8217;utilisateur, au lieu de ne demander que le nom.</p>
+</div>
+<div class="paragraph">
+<p>Dans la servlet correspondante, vérifiez que l&#8217;utilisateur existe bien et que le mot de passe fourni est correct. Considérez ensuite l&#8217;utilisateur comme connecté.</p>
+</div>
+<div class="paragraph">
+<p>Pour les nouveaux utilisateurs, créez en plus une page d&#8217;inscription avec un champ pour chacun des attributs de la classe <code>Utilisateur</code>.</p>
+</div>
+<div class="paragraph">
+<p>Si vous deviez mettre en place la validation Ajax dans le contexte des pages JSP, trouveriez-vous cela plus facile ou plus difficile qu&#8217;avec JSF ?</p>
 </div>
 </div>
 </div>
@@ -1130,7 +1202,7 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-24 20:32:12 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-25 12:52:49 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">

@@ -408,6 +408,40 @@ Convertissez le projet en projet Maven `war`.
 
 Suivez le https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf[tutoriel suivant].
 
-=== CRUD Catégories
+=== CRUD Utilisateurs
 
-Continuez avec le projet de la partie Servlets et JSP.
+Partez du projet que l'on trouve http://lteconsulting.fr/java.cartes-webapp.zip[là].
+
+Bien lire les https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf[deux] https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-gestion-d-un-formulaire-avec-jsf[tutoriels].
+
+Créez une classe `Utilisateur` (celle-ci sera un _Java Bean_). Cette classe possède les attributs suivants :
+
+- `nom` : `String`,
+- `prenom` : `String`,
+- `age` : `int`,
+- `login` : `String`,
+- `motDePasse` : `String`.
+
+Chaque attribut à sa pair de getter et setter associée.
+
+Implémentez une page `users.xhtml` qui permet à l'utilisateur de réaliser les opérations CRUD sur les utilisateurs. Créez pour cette occasion également la classe `UtilisateurDao` (en s'inspirant de `CategorieDao`).
+
+Au sujet du formulaire d'édition et d'ajout d'un utilisateur, voici les contraintes à mettre en oeuvre :
+
+- Nom : _ne peut pas être vide_,
+- Prénom : _ne peut pas être vide_,
+- Age : _doit être supérieur à 18_,
+- Login : _ne peut pas être vide_, _doit avoir au moins 4 caractères_,
+- Mot de passe : Le formulaire doit montrer un champ pour saisir le mot de passe et un autre champ pour le confirmer. _Les deux champs doivent avoir la même valeur_.
+
+=== Intégration avec l'existant
+
+Le reste de l'exercice s'attache à utiliser la classe `Utilisateur` qui vient d'être créée.
+
+Modifiez maintenant l'écran d'accueil de l'application pour demander le _login_ et le _mot de passe_ de l'utilisateur, au lieu de ne demander que le nom.
+
+Dans la servlet correspondante, vérifiez que l'utilisateur existe bien et que le mot de passe fourni est correct. Considérez ensuite l'utilisateur comme connecté.
+
+Pour les nouveaux utilisateurs, créez en plus une page d'inscription avec un champ pour chacun des attributs de la classe `Utilisateur`.
+
+Si vous deviez mettre en place la validation Ajax dans le contexte des pages JSP, trouveriez-vous cela plus facile ou plus difficile qu'avec JSF ?
