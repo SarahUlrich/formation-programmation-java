@@ -4,8 +4,10 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 import fr.lteconsulting.dao.CategorieDao;
 import fr.lteconsulting.model.Categorie;
@@ -49,9 +51,19 @@ public class CategoryCrudBean implements Serializable
 	public void valider()
 	{
 		if( editedItem.getId() == null )
+		{
 			dao.addCategorie( editedItem );
+			
+			FacesMessage message = new FacesMessage( "La catégorie a bien été ajoutée !" );
+	        FacesContext.getCurrentInstance().addMessage( null, message );
+		}
 		else
+		{
 			dao.saveCategorie( editedItem );
+			
+			FacesMessage message = new FacesMessage( "La catégorie a bien été sauvegardée !" );
+	        FacesContext.getCurrentInstance().addMessage( null, message );
+		}
 
 		resetItem();
 	}
