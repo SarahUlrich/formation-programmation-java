@@ -17,7 +17,9 @@
 			<h:column>
 				<f:facet name="header">Nom</f:facet>#{categorie.nom}</h:column>
 			<h:column>
-				<f:facet name="header">Force</f:facet>#{categorie.force}</h:column>
+				<f:facet name="header">Force Min</f:facet>#{categorie.forceMin}</h:column>
+				<h:column>
+				<f:facet name="header">Force Max</f:facet>#{categorie.forceMax}</h:column>
 			<h:column>
 				<h:commandButton value="edit" action="#{categoryCrudBean.edit( categorie )}" />
 			</h:column>
@@ -41,30 +43,36 @@
 				<h:outputLabel for="nom">Nom<span class="requis">*</span></h:outputLabel>
 				<h:inputText id="nom" label="Nom" value="#{categoryCrudBean.item.nom}" required="true" requiredMessage="#{msg['categorie.nom']}" size="20" maxlength="60">
 					<f:ajax event="blur" render="nomMessage" />
+					<f:validator validatorId="categorieExistenceValidator" />
 				</h:inputText>
 				<h:message id="nomMessage" for="nom" errorClass="erreur" />
 				<br/>
 				
-				<h:outputLabel for="force">Force<span class="requis">*</span></h:outputLabel>
-				<h:inputText id="force" label="Force" value="#{categoryCrudBean.item.force}" requiredMessage="#{msg['categorie.force']}" required="true" size="5" maxlength="6">
-					<f:ajax event="blur" render="forceMessage" />
+				<h:outputLabel for="forceMin">Force Min<span class="requis">*</span></h:outputLabel>
+				<h:inputText id="forceMin" label="ForceMin" value="#{categoryCrudBean.item.forceMin}" binding="#{composantForceMin}" requiredMessage="#{msg['categorie.force']}" required="true" size="5" maxlength="6">
+					<f:ajax event="blur" execute="forceMin forceMax" render="forceMinMessage forceMaxMessage" />
 				</h:inputText>
-				<h:message id="forceMessage" for="force" errorClass="erreur" />
+				<h:message id="forceMinMessage" for="forceMin" errorClass="erreur" />
+				<br/>
+				
+				<h:outputLabel for="forceMax">Force Max<span class="requis">*</span></h:outputLabel>
+				<h:inputText id="forceMax" label="ForceMax" value="#{categoryCrudBean.item.forceMax}" requiredMessage="#{msg['categorie.force']}" required="true" size="5" maxlength="6">
+					<f:ajax event="blur" execute="forceMin forceMax" render="forceMinMessage forceMaxMessage" />
+					<f:attribute name="composantForceMin" value="#{composantForceMin}" /> 
+					<f:validator validatorId="categorieForceValidator" />
+				</h:inputText>
+				<h:message id="forceMaxMessage" for="forceMax" errorClass="erreur" />
 				<br/>
 				
 				<h:panelGroup rendered="#{!categoryCrudBean.edition}">
 					<p>
-						<h:commandButton value="Ajouter" action="#{categoryCrudBean.valider}">
-							<f:ajax execute="@form" render="@form" />
-						</h:commandButton>
+						<h:commandButton value="Ajouter" action="#{categoryCrudBean.valider}"/>
 						<h:commandButton value="Annuler" action="#{categoryCrudBean.resetItem}" />
 					</p>
 				</h:panelGroup>
 				<h:panelGroup rendered="#{categoryCrudBean.edition}">
 					<p>
-						<h:commandButton value="Enregistrer" action="#{categoryCrudBean.valider}">
-							<f:ajax execute="@form" render="@form" />
-						</h:commandButton>
+						<h:commandButton value="Enregistrer" action="#{categoryCrudBean.valider}"/>
 						<h:commandButton value="Annuler" action="#{categoryCrudBean.resetItem}" />
 					</p>
 				</h:panelGroup>

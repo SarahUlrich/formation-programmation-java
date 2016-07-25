@@ -18,7 +18,7 @@ public class CategoryCrudBean implements Serializable
 {
 	private static final long serialVersionUID = 1L;
 
-	private CategorieDao dao = new CategorieDao();
+	private CategorieDao dao = CategorieDao.get();
 
 	private Categorie editedItem;
 

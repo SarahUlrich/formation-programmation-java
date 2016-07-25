@@ -7,6 +7,17 @@ import fr.lteconsulting.model.Categorie;
 
 public class CategorieDao
 {
+	private static CategorieDao instance = new CategorieDao();
+	
+	private CategorieDao()
+	{
+	}
+	
+	public static CategorieDao get()
+	{
+		return instance;
+	}
+	
 	private int nextId = 1;
 
 	private List<Categorie> categories = new ArrayList<>();
@@ -33,6 +44,14 @@ public class CategorieDao
 	public void delete( int id )
 	{
 		categories.remove( getCategorie( id ) );
+	}
+
+	public Categorie trouverCategorieParNom( String nom )
+	{
+		for( Categorie c : categories )
+			if( c.getNom().equals( nom ) )
+				return c;
+		return null;
 	}
 
 	private Categorie getCategorie( int id )

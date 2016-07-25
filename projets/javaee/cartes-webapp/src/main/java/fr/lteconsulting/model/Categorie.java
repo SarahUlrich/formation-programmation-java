@@ -4,7 +4,8 @@ public class Categorie
 {
 	private Integer id;
 	private String nom;
-	private int force;
+	private int forceMin;
+	private int forceMax;
 
 	public Integer getId()
 	{
@@ -26,19 +27,29 @@ public class Categorie
 		this.nom = nom;
 	}
 
-	public int getForce()
+	public int getForceMin()
 	{
-		return force;
+		return forceMin;
 	}
 
-	public void setForce( int force )
+	public void setForceMin( int forceMin )
 	{
-		this.force = force;
+		this.forceMin = forceMin;
+	}
+
+	public int getForceMax()
+	{
+		return forceMax;
+	}
+
+	public void setForceMax( int forceMax )
+	{
+		this.forceMax = forceMax;
 	}
 
 	@Override
 	public String toString()
 	{
-		return "Categorie [id=" + id + ", nom=" + nom + ", force=" + force + "]";
+		return "Categorie [id=" + id + ", nom=" + nom + ", forceMin=" + forceMin + ", forceMax=" + forceMax + "]";
 	}
 }
