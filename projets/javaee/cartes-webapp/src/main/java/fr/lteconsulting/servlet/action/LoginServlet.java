@@ -1,10 +1,15 @@
 package fr.lteconsulting.servlet.action;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import fr.lteconsulting.Tools;
+import fr.lteconsulting.dao.UtilisateurDao;
+import fr.lteconsulting.model.Utilisateur;
 
 /**
  * Servlet implementation class LoginServlet
@@ -15,11 +20,16 @@ public class LoginServlet extends HttpServlet
 
 	protected void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException
 	{
-		// Traitement du parametre NOM du formulaire
-		String nom = request.getParameter( "NOM" );
-		if( nom != null && !nom.isEmpty() )
+		String login = request.getParameter( "login" );
+		String password = request.getParameter( "password" );
+
+		if( login != null && !login.isEmpty() && password != null && !password.isEmpty() )
 		{
-			request.getSession().setAttribute( "nom", nom );
+			Utilisateur utilisateur = UtilisateurDao.get().login( login, password );
+			if( utilisateur != null )
+			{
+				Tools.connecterUtilisateur( utilisateur, request.getSession() );
+			}
 		}
 
 		response.sendRedirect( "home" );

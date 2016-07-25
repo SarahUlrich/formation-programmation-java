@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import fr.lteconsulting.model.Utilisateur;
 import fr.lteconsulting.servlet.Rendu;
 
 public class HomeServlet extends HttpServlet
@@ -17,11 +18,11 @@ public class HomeServlet extends HttpServlet
 	protected void doGet( HttpServletRequest req, HttpServletResponse resp ) throws ServletException, IOException
 	{
 		// Je regarde l'objet associé à la clé "nom" dans la session de l'utilisateur
-		String nomUtilisateur = (String) req.getSession().getAttribute( "nom" );
+		Utilisateur utilisateur = (Utilisateur) req.getSession().getAttribute( "utilisateur" );
 
-		if( nomUtilisateur != null )
+		if( utilisateur != null )
 		{
-			Rendu.pageBienvenue( nomUtilisateur, getServletContext(), req, resp );
+			Rendu.pageBienvenue( utilisateur.getNomComplet(), getServletContext(), req, resp );
 		}
 		else
 		{

@@ -11,6 +11,15 @@ public class UtilisateurDao
 
 	private UtilisateurDao()
 	{
+		Utilisateur rootUser = new Utilisateur();
+		rootUser.setId( 1 );
+		rootUser.setNom( "Tournier" );
+		rootUser.setPrenom( "Arnaud" );
+		rootUser.setAge( 24 );
+		rootUser.setLogin( "ltearno" );
+		rootUser.setMotDePasse( "ltearno" );
+
+		utilisateurs.add( rootUser );
 	}
 
 	public static UtilisateurDao get()
@@ -50,6 +59,17 @@ public class UtilisateurDao
 			utilisateurs.remove( index );
 	}
 
+	public Utilisateur login( String login, String motDePasse )
+	{
+		for( Utilisateur u : utilisateurs )
+		{
+			if( u.getLogin().equals( login ) && u.getMotDePasse().equals( motDePasse ) )
+				return u;
+		}
+
+		return null;
+	}
+
 	private int indexOfUtilisateur( int id )
 	{
 		for( int i = 0; i < utilisateurs.size(); i++ )
@@ -57,5 +77,16 @@ public class UtilisateurDao
 				return i;
 
 		return -1;
+	}
+
+	public Utilisateur trouverUtilisateurParLogin( String login )
+	{
+		for( Utilisateur u : utilisateurs )
+		{
+			if( u.getLogin().equals( login ) )
+				return u;
+		}
+
+		return null;
 	}
 }

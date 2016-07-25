@@ -45,6 +45,8 @@ public class SecuriteFilter implements Filter
 		accepteds.add( "fonts/" );
 		accepteds.add( "/login" );
 		accepteds.add( ".xhtml" );
+		accepteds.add( "/subscribe" );
+		accepteds.add( "/inscription" );
 
 		boolean needSecurityCheck = true;
 
@@ -60,6 +62,7 @@ public class SecuriteFilter implements Filter
 		if( needSecurityCheck )
 		{
 			String nomUtilisateur = (String) request.getSession().getAttribute( "nom" );
+			System.out.println( "SECURITY CHECK " + uri + " => " + (nomUtilisateur != null ? "PASS" : "REFUSED") );
 			if( nomUtilisateur == null )
 			{
 				Rendu.pageLogin( context, request, response );

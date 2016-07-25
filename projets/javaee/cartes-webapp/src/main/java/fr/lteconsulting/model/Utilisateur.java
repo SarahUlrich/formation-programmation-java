@@ -27,6 +27,11 @@ public class Utilisateur implements Serializable
 
 	@NotNull
 	private String motDePasse;
+	
+	public String getNomComplet()
+	{
+		return prenom + " " + nom;
+	}
 
 	public Integer getId()
 	{
