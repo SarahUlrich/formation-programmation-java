@@ -7,3 +7,5 @@ asciidoctor cours-java.ad
 asciidoctor exercices-java.ad
 
 asciidoctor index.ad
+
+asciidoctor -T asciidoctor-reveal.js/templates/slim maven.ad
