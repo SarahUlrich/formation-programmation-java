@@ -34,24 +34,32 @@
 		<h3>#{categoryCrudBean.edition ? "Edition catégorie" : "Ajout catégorie"}</h3>
 
 		<h:form>
-			<p>
-				Nom:
-				<h:inputText value="#{categoryCrudBean.item.nom}" /><br/>
-				Force:
-				<h:inputText value="#{categoryCrudBean.item.force}" />
-			</p>
-			<h:panelGroup rendered="#{!categoryCrudBean.edition}">
-				<p>
-					<h:commandButton value="Ajouter" action="#{categoryCrudBean.valider}" />
-					<h:commandButton value="Annuler" action="#{categoryCrudBean.resetItem}" />
-				</p>
-			</h:panelGroup>
-			<h:panelGroup rendered="#{categoryCrudBean.edition}">
-				<p>
-					<h:commandButton value="Enregistrer" action="#{categoryCrudBean.valider}" />
-					<h:commandButton value="Annuler" action="#{categoryCrudBean.resetItem}" />
-				</p>
-			</h:panelGroup>
+			<fieldset>
+				<legend>#{categoryCrudBean.edition ? "Edition catégorie" : "Ajout catégorie"}</legend>
+				
+				<h:outputLabel for="nom">Nom<span class="requis">*</span></h:outputLabel>
+				<h:inputText id="nom" value="#{categoryCrudBean.item.nom}" required="true" size="20" maxlength="60"/>
+				<h:message id="nomMessage" for="nom" errorClass="erreur" />
+				<br/>
+				
+				<h:outputLabel for="force">Force<span class="requis">*</span></h:outputLabel>
+				<h:inputText id="force" value="#{categoryCrudBean.item.force}" required="true" size="5" maxlength="6"/>
+				<h:message id="forceMessage" for="force" errorClass="erreur" />
+				<br/>
+				
+				<h:panelGroup rendered="#{!categoryCrudBean.edition}">
+					<p>
+						<h:commandButton value="Ajouter" action="#{categoryCrudBean.valider}" />
+						<h:commandButton value="Annuler" action="#{categoryCrudBean.resetItem}" />
+					</p>
+				</h:panelGroup>
+				<h:panelGroup rendered="#{categoryCrudBean.edition}">
+					<p>
+						<h:commandButton value="Enregistrer" action="#{categoryCrudBean.valider}" />
+						<h:commandButton value="Annuler" action="#{categoryCrudBean.resetItem}" />
+					</p>
+				</h:panelGroup>
+			</fieldset>
 		</h:form>
 	</h:panelGroup>
 </body>
