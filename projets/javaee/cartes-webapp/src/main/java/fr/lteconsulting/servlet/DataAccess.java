@@ -2,7 +2,6 @@ package fr.lteconsulting.servlet;
 
 import javax.servlet.ServletContext;
 
-import fr.lteconsulting.ApplicationData;
 import fr.lteconsulting.IApplicationData;
 
 public class DataAccess
