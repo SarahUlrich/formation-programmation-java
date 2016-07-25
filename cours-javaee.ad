@@ -308,7 +308,119 @@ void setLongueur( int valeur ) { ... }
 
 Il peut y avoir une notion d'abonnement (pattern _Observer_).
 
+== JSF
 
+=== Introduction
+
+C'est un framework MVC pour simplifier l'écriture d'interface graphiques Web.
+
+Fonctionne au dessus de l'api Servlet. Stable et utilisable depuis la version 2.0 en 2009.
+
+Une seule servlet prend en charge toutes les requêtes et maintient l'état de la vue de _chaque_ client.
+
+La programmation des vues repose sur _Facelet_, description XML des composants de la vue.
+
+`javax.faces.webapp.FacesServlet`
+
+La programmation des actions (_controlleur_) s'écrit dans des _Java Beans_.
+
+`@ManagedBean`, `@RequestScoped`, `@ViewScoped`, `@SessionScoped`, `@ApplicationScoped`, `@CustomScope` et `@NoneScoped`...
+
+Les données attachées aux échanges HTTP sont stockées dans des _Java Beans_ attachés aux différents scopes.
+
+=== Avantage
+
+Facilite la gestion conversationnelle grâce au modèle par composant.
+
+Gère par ex. état des vues, maj des modèles, invocation des actions métiers, génération de la réponse, évènements, validation, internationnalisation...
+
+=== Contrepartie
+
+On ne maîtrise pas vraiment le HTML généré.
+
+=== Structure d'une application JSF
+
+- Vue : Facelet (un fichier *xhtml*),
+- Modèle : entité JPA ou JavaBean,
+- Controlleur : des `@ManagedBean`s
+
+Configuration en plus de `web.xml` dans `faces-config.xml`.
+
+=== Les fichiers Facelet
+
+Ce ne sont que des fichiers XHTML (HTML conforme au XML). On utilise les extensions : **.jsf** ou **.xhtml** ou **.faces**.
+
+Références des balises JSF : http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/[ici], http://www.jsftoolbox.com/documentation/help/12-TagReference/index.jsf[ici] et sur http://stackoverflow.com/tags/jsf/info[stack overflow].
+
+=== Exemple
+
+[source,language="xml"]
+----
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	   xmlns:f="http://java.sun.com/jsf/core" 
+	   xmlns:h="http://java.sun.com/jsf/html"
+	   xmlns:ui="http://java.sun.com/jsf/facelets"> 
+	<h:head>
+		<title>Bienvenue</title>
+		<h:outputStylesheet library="default" name="cartes.css"></h:outputStylesheet>
+	</h:head>
+	<h:body>
+		<h:form>
+			<h:inputText value="#{utilisateur.nom}" />
+			<h:commandButton value="Valider" action="bienvenue" />
+		</h:form>
+	</h:body>
+</html>
+----
+
+=== Expression Language pour JSF
+
+L'évolution technique d'expression language fait que pour JSF, on utilise la syntaxe du type :
+
+		#{inscrireBean.utilisateur.motDePasse}
+		
+On voit donc que `$` est remplacé par `#`. Ceci correspond au fait que l'expression language pour JSF permet d'appeler des *setters* sur les java beans, ce qui n'est pas permis avec `$`.
+
+Depuis Java EE 6, expression language a été unifié et il est maintenant possible d'utiliser `#` dans les JSP.
+
+=== Les 6 étapes du traitement d'une requête
+
+- **Restauration de la vue** : si c'est un premier accès JSP crée une donnée de vue (l'arbre des composants) dans `FacesContext`. Sinon JSF recharge simplement les données de la vue.
+- **Application des paramètres** de la requête : JSF fait automatiquement le lien entre les paramètres présents dans la requête et les champs du modèle à modifier.
+- **Validation des données** : si la validation échoue, on passe directement à la dernière étape.
+- **Mise à jour du modèle** : si la validation s'est bien déroulée, cette étape consiste à mettre à jour les données du modèle avec les données validées.
+- **Appel au code métier** de l'application : les actions déclarées dans les formulaires sont exécutées, sous la forme d'appels aux méthodes des Beans.
+- **Rendu de la réponse** : l'arbre des composants est appelé afin de générer le HTML résultat. Il est mémorisé pour la prochaine _Restauration de vue_.
+
+=== Configuration
+
+Dans `web.xml` on ajoute :
+
+[source,language="xml"]
+----
+<context-param>
+	<!-- autres noms possibles : STATE_SAVING_METHOD, INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL ... -->
+	<param-name>javax.faces.PROJECT_STAGE</param-name>
+	<param-value>Development</param-value>
+</context-param>
+
+<servlet>
+	<servlet-name>FacesServlet</servlet-name>
+	<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+	<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+	<servlet-name>FacesServlet</servlet-name>
+	<url-pattern>*.xhtml</url-pattern>
+</servlet-mapping>
+----
+		
+=== Tutoriel
+
+https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf
+
+== Annexes
 
 Les directives
 

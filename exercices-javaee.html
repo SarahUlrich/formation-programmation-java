@@ -439,8 +439,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_formulaire_de_connexion">Formulaire de connexion</a></li>
 <li><a href="#_projet_gestion_d_un_jeu_de_cartes">Projet : Gestion d&#8217;un jeu de cartes</a>
 <ul class="sectlevel2">
-<li><a href="#_première_partie">Première partie</a></li>
-<li><a href="#_deuxième_partie">Deuxième partie</a></li>
+<li><a href="#_description">Description</a></li>
+<li><a href="#_fonctionnalités_à_réaliser">Fonctionnalités à réaliser</a></li>
+<li><a href="#_fonctionnalités_facultatives">Fonctionnalités facultatives</a></li>
+<li><a href="#_etapes_de_développement">Etapes de développement</a></li>
 </ul>
 </li>
 </ul>
@@ -522,44 +524,584 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_projet_gestion_d_un_jeu_de_cartes">Projet : Gestion d&#8217;un jeu de cartes</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_première_partie">Première partie</h3>
+<h3 id="_description">Description</h3>
 <div class="paragraph">
-<p>Faire un CRUD sur une collection (<code>List</code>) de <code>Carte</code>.</p>
+<p>L&#8217;application que nous nous proposons de réaliser permet de gérer un ensemble de cartes à jouer ainsi que l&#8217;ensemble des joueurs participants (on les appelle <em>utilisateur</em>).</p>
 </div>
 <div class="paragraph">
-<p>L&#8217;utilisateur peut donc consulter la liste de cartes disponibles, les modifier, les supprimer et en ajouter.</p>
+<p>L&#8217;application utilisera la bibliothèque CSS <a href="http://materializecss.com/"><em>materialize</em></a> pour proposer un design moderne.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;application proposera plusieurs pages à l&#8217;utilisateur. Voici leur rôle.</p>
+</div>
+<div class="paragraph">
+<p><strong>Mise à part la page d&#8217;acceuil, aucune page n&#8217;est accessible à l&#8217;utilisateur tant qu&#8217;il ne s&#8217;est pas connecté</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Le projet intégralement terminé est disponible à cette <a href="https://github.com/ltearno/formation-programmation-java/tree/master/projets/javaee/CartesWebApp">adresse</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="_page_d_accueil_et_de_connexion_code_home_code">Page d&#8217;accueil et de connexion - <code>/home</code></h4>
+<div class="paragraph">
+<p>C&#8217;est la page d&#8217;accueil de l&#8217;application. Lorsque l&#8217;utilisateur n&#8217;est pas connecté, cette page affiche un formulaire de connexion. Lorsque l&#8217;utilisateur est connecté la page affiche un message de bienvenue avec le nom de l&#8217;utilisateur.</p>
+</div>
+<div class="paragraph">
+<p>Voici une illustration du résultat attendu :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images-javaee/projet-01.png" alt="Page d'acceuil en mode connexion">
+</div>
+</div>
+<div class="paragraph">
+<p>Lorsque l&#8217;utilisateur saisit son nom et valide le formulaire, la page affiche maintenant le message de bienvenue :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images-javaee/projet-02.png" alt="Page d'accueil une fois l'utilisateur connecté">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Notez comme la barre de navigation inclut d&#8217;autres liens une fois l&#8217;utilisateur connecté !</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_cartes_disponibles_code_cartes_code">Cartes disponibles - <code>/cartes</code></h4>
+<div class="paragraph">
+<p>Cette page permet de visualiser l&#8217;ensemble des cartes disponibles dans l&#8217;application. Cette liste de cartes est commune à toute l&#8217;application et à tous les utilisateurs.</p>
+</div>
+<div class="paragraph">
+<p>Une carte sera modélisée par la classe <code>Carte</code>. Elle possède les attributs suivants : <code>String id</code>, <code>String nom</code> et <code>String couleur</code>. Les identifiants pourront être générés avec la classe Java <code>UUID</code> qui garanti la génération de chaines de caractères uniques (eg <code>new UUID().toString()</code>).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images-javaee/projet-03.png" alt="Affichage de la page des cartes disponibles">
+</div>
+</div>
+<div class="paragraph">
+<p>La page affiche donc la liste des cartes (pour chaque carte elle affiche également tous les attributs de la carte).</p>
+</div>
+<div class="paragraph">
+<p>Pour chaque carte, quatre boutons sont disponibles :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>RETIRER</strong> (1) : ce bouton retire la carte de la liste des cartes disponibles.</p>
+</li>
+<li>
+<p><strong>EDITER</strong> (2) : ce bouton emmène l&#8217;utilisateur vers la page d&#8217;édition d&#8217;une carte, qui permet de modifier les caractéristiques de la carte choisie.</p>
+</li>
+<li>
+<p><strong>+</strong> (4) : ce bouton permet de rajouter la carte à la main de l&#8217;utilisateur connecté.</p>
+</li>
+<li>
+<p><strong>-</strong> (5) : ce bouton permet de retirer la carte de la main de l&#8217;utilisateur connecté.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>De plus, comme illustré avec le numéro (5) sur la copie d&#8217;écran, un bouton <strong>NOUVELLE CARTE</strong> permet à l&#8217;utilisateur de créer une nouvelle carte pour l&#8217;ajouter aux cartes disponibles.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_edition_et_création_d_une_carte">Edition et création d&#8217;une carte</h4>
+<div class="paragraph">
+<p>Lorsque l&#8217;utilisateur crée une nouvelle carte ou désire éditer une carte existante, il est amené vers la page d&#8217;édition.</p>
+</div>
+<div class="paragraph">
+<p>Voici la page d&#8217;édition :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images-javaee/projet-04.png" alt="Edition d'une carte">
+</div>
+</div>
+<div class="paragraph">
+<p>Et la page de création d&#8217;une carte :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images-javaee/projet-05.png" alt="Création d'une carte">
+</div>
+</div>
+<div class="paragraph">
+<p>Une fois le formulaire validé par l&#8217;utilisateur, celui-ci est redirigé vers la page <code>/cartes</code> avec les données à jour.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_main_utilisateur_code_main_code">Main utilisateur - <code>/main</code></h4>
+<div class="paragraph">
+<p>Cette page affiche la liste des cartes qui sont actuellement dans la main de l&#8217;utilisateur. La main est constituée par l&#8217;utilisateur en utilisant les boutons (4) et (5) de la page des <em>Cartes disponibles</em>. Comme illustré sur la copie d&#8217;écran suivante, l&#8217;utilisateur peut aussi retirer une carte de sa main à partir de cette page (avec le bouton <strong>-</strong>).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images-javaee/projet-06.png" alt="Main utilisateur">
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_deuxième_partie">Deuxième partie</h3>
+<h3 id="_fonctionnalités_à_réaliser">Fonctionnalités à réaliser</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Page d&#8217;accueil : formulaire de connexion et message de bienvenue.</p>
+</li>
+<li>
+<p>Page des cartes disponibles : affichage de la liste des cartes.</p>
+</li>
+<li>
+<p>Page des cartes disponibles : implémentation de la suppression d&#8217;une carte.</p>
+</li>
+<li>
+<p>Page des cartes disponibles : implémentation de l&#8217;édition d&#8217;une carte.</p>
+</li>
+<li>
+<p>Page des cartes disponibles : implémentation de l&#8217;ajout d&#8217;une carte.</p>
+</li>
+<li>
+<p>Page des cartes disponibles : ajout d&#8217;une carte à la main de l&#8217;utilisateur.</p>
+</li>
+<li>
+<p>Page des cartes disponibles : retrait d&#8217;une carte à la main de l&#8217;utilisateur.</p>
+</li>
+<li>
+<p>Page de la main utilisateur</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fonctionnalités_facultatives">Fonctionnalités facultatives</h3>
 <div class="paragraph">
-<p>Il s&#8217;agit maintenant de permettre à l&#8217;utilisateur de constituer une main.</p>
+<p>A la création d&#8217;une carte, proposer une checkbox qui permette d&#8217;ajouter directement la carte à la main de l&#8217;utilisateur connecté.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_etapes_de_développement">Etapes de développement</h3>
+<div class="paragraph">
+<p>Créez un projet Dynamic Web avec Eclipse.</p>
 </div>
 <div class="paragraph">
-<p>Il a le droit d&#8217;avoir jusqu&#8217;à <code>Constantes.NB_MAX_CARTE_PAR_JEU</code>.</p>
-</div>
-<div class="paragraph">
-<p>Il n&#8217;a pas le droit d&#8217;avoir plusieurs fois la même carte.</p>
-</div>
-<div class="paragraph">
-<p>Donc nous stockerons sa main sous la forme d&#8217;un <code>Set&lt;String&gt;</code> qui contient les identifiants des cartes contenues dans son jeu.</p>
+<p>Ce projet utilisera le serveur d&#8217;application Tomcat pour son déploiement.</p>
 </div>
 <div class="sect3">
-<h4 id="_préparation">Préparation</h4>
+<h4 id="_modèle_de_données">Modèle de données</h4>
 <div class="paragraph">
-<p>Déclarer la constante,</p>
+<p>Le plus important est de définir le modèle de données :</p>
 </div>
-<div class="paragraph">
-<p>Prévoir le nom de l&#8217;attribut de la session qui va servir à stocker le <code>Set&lt;String&gt;</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>les cartes seront représentées par la classe <code>Carte</code>,</p>
+</li>
+<li>
+<p>la liste des cartes disponible est globale à toute l&#8217;application, elle sera stockée à terme dans le scope (portée) <em>application</em>,</p>
+</li>
+<li>
+<p>la main de l&#8217;utilisateur sera représentée par un <code>Set&lt;String&gt;</code> contenant les identifiants des cartes contenues dans la main de l&#8217;utilisateur. La main de l&#8217;utilisateur sera stockée dans l&#8217;attribut "main" de la <em>session</em> car chaque main est propre à une connexion utilisateur.</p>
+</li>
+<li>
+<p>l&#8217;utilisateur peut avoir un maximum de <code>Constantes.NB_MAX_CARTES_PAR_MAIN</code> cartes en main.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_implémentation">Implémentation</h4>
+<h4 id="_page_code_home_code">Page <code>/home</code></h4>
 <div class="paragraph">
-<p>Dans la page qui permet de lister les cartes (celle développée auparavant), ajouter les boutons "AJOUTER A LA MAIN" et "RETIRER DE LA MAIN" qui seront affichés selon les cas (la carte est déjà dans la main ou pas).</p>
+<p>Implémentez une servlet <code>HomeServlet</code> qui va gérer la page de bienvenue.</p>
 </div>
 <div class="paragraph">
-<p>Ensuite, écrire la page qui permet à l&#8217;utilisateur de visualiser son jeu.</p>
+<p>Cette servlet doit vérifier si l&#8217;utilisateur est connecté ou pas. On garde trace de la connexion de l&#8217;utilisateur en stockant son nom en attribut <code>"nom"</code> de la session. L&#8217;utilisateur est donc considéré comme connecté si on trouve bien une chaine de caractères dans l&#8217;attribut <code>"nom"</code> de la session.</p>
+</div>
+<div class="paragraph">
+<p>Ecrire deux <em>JSP</em> correspondant aux deux vues :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>login.jsp</code> : formulaire de connexion,</p>
+</li>
+<li>
+<p><code>accueil.jsp</code> : écran de bienvenue.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Le formulaire de connexion enverra une requete POST sans changer d&#8217;URL (c&#8217;est-à-dire vers l&#8217;URL <code>home</code>). La servlet <code>HomeServlet</code> recevra donc les données de ce formulaire et procédera au traitement du <em>login</em> (en stockant dans la session le nom de l&#8217;utilisateur reçu avec le formulaire).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_page_code_cartes_code">Page <code>/cartes</code></h4>
+<div class="paragraph">
+<p>Il s&#8217;agit maintenant de gérer une liste de cartes globale à toute l&#8217;application et donc commune à tous les utilisateurs. Sur cette liste l&#8217;utilisateur pourra effectuer les opérations CRUD, c&#8217;est-à-dire <em>consultation</em>, <em>ajout</em>, <em>suppression</em> et <em>édition</em>.</p>
+</div>
+<div class="sect4">
+<h5 id="_préliminaires">Préliminaires</h5>
+<div class="paragraph">
+<p>Premièrement il conviendra de définir notre principal classe : la classe <code>Carte</code>. Implémentez cette classe en lui offrant trois attributs de type <code>String</code> : <code>id</code>, <code>nom</code> et <code>couleur</code>. Implémentez également les <em>setters</em> de <code>nom</code> et <code>couleur</code>, ainsi que les <em>getters</em> des trois attributs. Implémentez un constructeur prenant des valeurs pour <code>nom</code> et <code>couleur</code>, et qui génère un identifiant avec la classe <code>UUID</code>.</p>
+</div>
+<div class="paragraph">
+<p>La liste des cartes est globale à toute l&#8217;application. Afin de pouvoir y accéder depuis n&#8217;importe quel endroit dans l&#8217;application, créez une classe <code>ApplicationData</code> possédant un attribut statique <code>List&lt;Carte&gt; cartes</code>. Implémentez ensuite une méthode <code>public static List&lt;Carte&gt; getCartes()</code> dans cette classe qui permette de récupérer la liste des cartes. Notez que l&#8217;attribut <code>cartes</code> doit être initialisé au moment du premier appel à <code>getCartes()</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_consultation">Consultation</h5>
+<div class="paragraph">
+<p>Maintenant que notre modèle de données est établi, attachez-vous à implémenter la servlet <code>CartesServlet</code> et la vue <em>JSP</em> associée (<code>WEB-INF/cartes.jsp</code>). La servlet <code>CartesServlet</code> a pour fonction de récupérer la liste des cartes et de la transmettre à la vue <em>JSP</em> sous la forme d&#8217;un attribut de requête (par exemple "cartes").</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_suppression">Suppression</h5>
+<div class="paragraph">
+<p>Occupons-nous maintenant de l&#8217;opération de suppression.</p>
+</div>
+<div class="paragraph">
+<p>Cette opération doit être implémentée dans une nouvelle servlet <code>SuppressionCarteServlet</code>. Cette servlet recevra les requêtes faites sur l&#8217;url <code>/supprimerCarte</code>. L&#8217;URL devra contenir l&#8217;identifiant de la carte à supprimer dans sa partie <em>query string</em> (eg : <code><a href="http://localhost:8080/CartesApplication/supprimerCarte?id=e77cb352d" class="bare">http://localhost:8080/CartesApplication/supprimerCarte?id=e77cb352d</a></code>).</p>
+</div>
+<div class="paragraph">
+<p>Assurez-vous que la page d&#8217;affichage des cartes génère bien des liens ou des boutons pointant sur l&#8217;url de suppression correspondant à chaque carte.</p>
+</div>
+<div class="paragraph">
+<p>La servlet <code>SuppressionCarteServlet</code>, comme toutes nos servlet d&#8217;action, se contentera de réaliser l&#8217;action de suppression de la carte et ensuite de rediriger le navigateur de l&#8217;utilisateur vers l&#8217;URL <code>/home</code>.</p>
+</div>
+<div class="paragraph">
+<p>Afin d&#8217;implémenter l&#8217;opération de suppression, ajoutez une méthode <code>supprimerCarte( String id )</code> dans la classe <code>ApplicationData</code> écrite auparavant.</p>
+</div>
+<div class="paragraph">
+<p>Utilisez cette méthode dans la servlet <code>SuppressionCarteServlet</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_edition">Edition</h5>
+<div class="paragraph">
+<p>La page d&#8217;édition d&#8217;une carte est accessible en cliquant sur le bouton "Editer carte" d&#8217;une carte dans la page d&#8217;affichage des cartes. Elle correspond à l&#8217;URL <code>editerCarte?id=5fcdd622</code>, qui prend donc en paramètre l&#8217;identifiant de la carte que l&#8217;on souhaite éditer.</p>
+</div>
+<div class="paragraph">
+<p>Créez donc une servlet <code>EditionCarteServlet</code>. Cette servlet analyse le paramètre de la requête HTTP, utilise une nouvelle méthode <code>Carte getCarte( String id )</code> que vous créerez dans la classe <code>ApplicationData</code> pour obtenir l&#8217;instance <code>Carte</code> possédant l&#8217;identifiant demandé. Elle alimente ensuite la vue <em>JSP</em> du formulaire d&#8217;édition avec cette instance de carte.</p>
+</div>
+<div class="paragraph">
+<p>Le formulaire est écrit dans la <em>JSP</em> <code>editerCarte.jsp</code>. Ce formulaire enverra ses données à sa propre URL (donc <code>editerCarte</code>), la servlet <code>EditerCarteServlet</code> recevra donc ces informations dans l&#8217;appel à la méthode <code>doPost</code>. La servlet aura donc encore une fois besoin d&#8217;obtenir l&#8217;identifiant de la carte à modifier. Vous pouvez utiliser un champ <code>&lt;input type='hidden' name='id'/&gt;</code> pour faire transmettre l&#8217;id dans la requête POST au moment de l&#8217;envoi du formulaire.</p>
+</div>
+<div class="paragraph">
+<p>Une fois l&#8217;action de modification de la carte effectuée, la servlet peut tout simplement rediriger le navigateur vers l&#8217;url <code>/cartes</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_création_d_une_carte">Création d&#8217;une carte</h5>
+<div class="paragraph">
+<p>Essayez d&#8217;implémenter cette fonctionnalité en ne créant pas de nouvelle classe ni <em>JSP</em>, mais en modifiant la classe <code>EditerCarteServlet</code>. Petit indice : ceci peut se faire en traitant dans la servlet <code>EditerCarteServlet</code> le cas l&#8217;identifiant est absent.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_bouton_em_ajouter_à_la_main_em">Bouton <em>Ajouter à la main</em></h5>
+<div class="paragraph">
+<p>Ce bouton doit déclencher l&#8217;exécution d&#8217;une nouvelle servlet <code>toggleCarteMainServlet</code> que vous écrirez. Vous pouvez la brancher sur l&#8217;URL <code>/toggleCarteMain</code>. Cette servlet recevra en paramètre l&#8217;identifiant de la carte à ajouter ou à retirer de la main. La servlet redirigera ensuite l&#8217;utilisateur vers l&#8217;URL <code>/cartes</code>.</p>
+</div>
+<div class="paragraph">
+<p>Ce bouton ne doit être affiché <strong>que si l&#8217;utilisateur n&#8217;a pas cette carte en main et que sa main n&#8217;est pas encore complète</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Etant donné que la main de l&#8217;utilisateur est stockée en session dans l&#8217;attribut "main" (contenant un objet de la classe <code>Set&lt;String&gt;</code>), la servlet viendra ajouter l&#8217;identifiant de la carte dans le <code>Set&lt;String&gt;</code> représentant la main de l&#8217;utilisateur.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_bouton_em_retirer_de_la_main_em">Bouton <em>Retirer de la main</em></h5>
+<div class="paragraph">
+<p>Ce bouton déclenche l&#8217;exécution de la même servlet (<code>toggleMainServlet</code>). La seule différence avec le bouton "AJOUTER A LA MAIN" est graphique : c&#8217;est son titre ou son icône qui diffère.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_page_code_main_code">Page <code>/main</code></h4>
+<div class="paragraph">
+<p>Il s&#8217;agit dans cette page d&#8217;afficher les cartes qui sont dans la main du joueur.</p>
+</div>
+<div class="paragraph">
+<p>Vous écrirez donc une servlet <code>MainServlet</code> mais vous réutiliserez la vue <em>JSP</em> <code>cartes.jsp</code> pour afficher la liste des cartes contenues dans la main de l&#8217;utilisateur.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;astuce consiste ici à partir du <code>Set&lt;String&gt;</code> représentant la main à créer une <code>List&lt;Carte&gt;</code> (en s&#8217;aidant de la classe <code>ApplicationData</code> pour récupérer les cartes en fonction de leur identifiant). La liste ainsi créée peut être passée à la vue <em>JSP</em> <code>cartes.jsp</code> afin de les afficher.</p>
+</div>
+<div class="paragraph">
+<p>Par contre il va falloir rajouter des <em>"paramètres"</em> à la vue <em>JSP</em> <code>cartes</code>. Pour l&#8217;instant celle-ci affiche toujours les boutons "RETIRER LA CARTE" et "EDITER LA CARTE". Ajouter un attribut à la requête et exploitez le dans la <em>JSP</em> pour afficher ou non ces boutons. Demandez leur affichage dans la servlet <code>CartesServlet</code> mais pas dans <code>MainServlet</code>.</p>
+</div>
+<div class="paragraph">
+<p>Il en va de même pour les boutons d&#8217;ajout et de suppression de la main.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_protection_des_vues_em_jsp_em_avec_la_classe_code_rendu_code">Protection des vues <em>JSP</em> avec la classe <code>Rendu</code></h4>
+<div class="paragraph">
+<p>A chaque fois que l&#8217;on veut afficher une <em>JSP</em>, nous procédons aux étapes suivantes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>alimenter la vue JSP avec ses données en les attachant à la requête sous forme d&#8217;attributs,</p>
+</li>
+<li>
+<p><em>forwarder</em> le traitement de la requête à la <em>JSP</em>,</p>
+</li>
+<li>
+<p>dans la <em>JSP</em>, exploiter les attributs attendus.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Comme tout ceci se fait de manière non formalisée, et qui plus est nécessite l&#8217;écriture de plusieurs lignes de code, vous allez créer une classe <code>Rendu</code> qui contiendra autant de méthodes statiques que de vues <em>JSP</em> à afficher.</p>
+</div>
+<div class="paragraph">
+<p>Par exemple pour afficher la vue <em>JSP</em> du formulaire de login, vous écrirez la méthode suivante :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public static void pageLogin( ServletContext context, HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException
+{
+	RequestDispatcher dispatcher = context.getRequestDispatcher( "/WEB-INF/login.jsp" );
+	dispatcher.forward( request, response );
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dans le cas précédent, on voit peut d&#8217;intérêt à cette construction. Par contre dans le cas d&#8217;une vue <em>JSP</em> nécessitant des données en entrées, l&#8217;intérêt sera plus flagrant :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public static void listeCartes( String titrePage, List&lt;Carte&gt; cartes, boolean montrerActionsMain, boolean montrerActionsCarte, ServletContext context, HttpServletRequest request, HttpServletResponse response )
+	throws ServletException, IOException
+{
+	// alimentation des attributs dont la vus JSP a besoin
+	request.setAttribute( "cartes", cartes );
+	request.setAttribute( "montrerActionsMain", montrerActionsMain );
+	request.setAttribute( "montrerActionsCarte", montrerActionsCarte );
+
+	// affichage de la vue JSP
+	RequestDispatcher dispatcher = context.getRequestDispatcher( "/WEB-INF/cartes.jsp" );
+	dispatcher.forward( request, response );
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Maintenant à chaque fois que vous voulez afficher une vue, utilisez la méthode correspondante dans la classe <code>Rendu</code>, vous pouvez transférer tous les codes d&#8217;appels à vos vues <em>JSP</em> en appel de méthode Java normal. Chaque méthode a un prototype Java bien défini et une erreur de compilation vous préviendra si vous oublié un paramètre, ce qui n&#8217;était pas le cas sans mettre en place cette classe (vous aurez probablement une exception dans la vue <em>JSP</em> au moment ou celle-ci essayera d&#8217;exploiter un attribut de requête que vous aurez oublié de fournir).</p>
+</div>
+<div class="paragraph">
+<p>De plus, lorsque le programme évoluera et que les vues auront besoin de plus de données en entrée, il vous suffira de modifier à <strong>un seul endroit</strong> (dans la classe <code>Rendu</code>) l&#8217;appel à la vue <em>JSP</em> (en adaptant les attributs positionnés sur la requête). S&#8217;en suivront quelques erreurs de compilation Java aux endroits des appels à la méthode modifiée. Ceux-ci seront bien plus facile à corriger !</p>
+</div>
+<div class="paragraph">
+<p>Cette technique est similaire au pattern <em>Facade</em> qui permet d&#8217;obtenir un contrat simple (la méthode statique <code>listeCartes</code>) à partir d&#8217;un contrat plus complexe ou moins "pratique" (l&#8217;enregistrement des attributs et la délégation du traitement à la vue <em>JSP</em>).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_utilisation_des_constantes_pour_les_noms_des_paramètres_et_attributs">Utilisation des constantes pour les noms des paramètres et attributs</h4>
+<div class="paragraph">
+<p>Créez une interface <code>Constantes</code> qui ne contiendra que des constantes que vous utiliserez à la place des noms de paramètres et attributs. Ceci vous aidera à éviter par exemple d&#8217;envoyer un formulaire avec un champ nommé "nom" alors que la servlet traitant ce formulaire attend le paramètre "NOM". <em>Il est très souvent utile de se donner les moyens de se protéger contre ses propres erreurs !</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_utilisation_de_listener_pour_s_intégrer_dans_le_cycle_de_vie_de_java_ee">Utilisation de Listener pour s&#8217;intégrer dans le cycle de vie de Java EE</h4>
+<div class="paragraph">
+<p>Comme la majorité des outils, framework et bibliothèques de développement, il est possible d&#8217;insérer vos traitement à des points précis du cycle de vie de l&#8217;outil que vous utilisez, ici Java EE. C&#8217;est un principe bien connu sous le nom de <em>Open Close Principle</em>.</p>
+</div>
+<div class="paragraph">
+<p>Java EE n&#8217;échappe pas à cette règle et vous permet de déclencher un traitement vous appartenant au moment, par exemple, où Java EE s&#8217;initialise et juste avant qu&#8217;il commence à prendre en charge les requête HTTP entrantes.</p>
+</div>
+<div class="paragraph">
+<p>Ceci se fait en créant une classe implémentant l&#8217;interface <code>javax.servlet.ServletContextListener</code> et en déclarant cette classe dans le fichier <code>Web.XML</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml" data-lang="xml">&lt;listener&gt;
+	&lt;listener-class&gt;fr.lteconsulting.ApplicationDataInitializationListener&lt;/listener-class&gt;
+&lt;/listener&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Lorsque Java EE démarre, la méthode <code>public void contextInitialized( ServletContextEvent event )</code> de notre classe va être appelée ! Lorsque le serveur s&#8217;arrête il vous appellera la méthode <code>contextDestroyed</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_préparation_au_changement_de_fournisseur_de_données">Préparation au changement de fournisseur de données</h4>
+<div class="paragraph">
+<p>A terme notre projet utilisera une base de donnée. En attendant il fonctionne avec la liste stockée en mémoire sous forme d&#8217;un attribut statique de la classe <code>ApplicationData</code> (l&#8217;attribut <code>cartes</code>).</p>
+</div>
+<div class="paragraph">
+<p>Ici notre conception a comme un problème :toutes les méthodes de <code>ApplicationData</code> étant statiques, chaque appel à une de ses méthodes se fait ainsi :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">ApplicationData.getCartes()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Le défaut fondamental de ce design est que dans la même ligne nous indiquons la méthode à appeler (ce qui est correct) mais nous désignons aussi l&#8217;implémentation de cette méthode (ici on demande celle de la classe <code>ApplicationData</code>). Le fait de préciser la classe d&#8217;implémentation nous empêche <em>de facto</em> de faire évoluer le code vers une autre implémentation (stockage des cartes en base de données, gestion différente en fonction de la configuration, &#8230;&#8203;).</p>
+</div>
+<div class="paragraph">
+<p>Nous allons réécrire cette partie de façon à rendre notre code plus modulaire (donc plus conforme à la vision <em>objet</em>).</p>
+</div>
+<div class="paragraph">
+<p>Tout d&#8217;abord créez une interface <code>IApplicationData</code> qui reprend les méthodes publiques de <code>ApplicationData</code> mais en les rendant non-statiques.</p>
+</div>
+<div class="paragraph">
+<p>Ensuite déclarez que la classe <code>ApplicationData</code> implémente l&#8217;interface <code>IApplicationData</code>.</p>
+</div>
+<div class="paragraph">
+<p>Puis transformez toutes les méthodes et attributs de <code>ApplicationData</code> de façon à les rendre non-statiques.</p>
+</div>
+<div class="paragraph">
+<p>Il n&#8217;est maintenant plus possible d&#8217;appeler des méthodes de <code>ApplicationData</code> sans avoir à disposition une instance de cette classe. Votre projet doit donc maintenant avoir plusieurs erreurs de compilation Java liées aux appels aux méthodes de la classe <code>ApplicationData</code>. Laissez-les de côté pour l&#8217;instant, nous reviendrons dessus plus tard.</p>
+</div>
+<div class="paragraph">
+<p>Maintenant que nous avons besoin d&#8217;une instance d'`ApplicationData` pour accéder à nos données, se posent les problèmes suivants :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>quand créer l&#8217;unique instance de <code>ApplicationData</code> dont nous avons besoin ?</p>
+</li>
+<li>
+<p>où stocker cette instance ?</p>
+</li>
+<li>
+<p>comment retrouver cette instance au moment où on en a besoin ?</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Nous aurions pu utiliser le pattern Singleton pour résoudre ce problème, mais dans le contexte d&#8217;une application Java EE, il est préférable de mettre à profit les fonctionnalités offertes et <em>garanties</em> par le serveur d&#8217;application.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>La réponse à la première question se trouve dans la section précédente, c&#8217;est-à-dire que l&#8217;on va créer l&#8217;instance d'`ApplicationData` au moment où Java EE s&#8217;initialise, avant de traiter les requêtes HTTP entrantes.</p>
+</div>
+<div class="paragraph">
+<p>Pour la deuxième question, la réponse est simple : puisque nous voulons partager cette liste de cartes dans toute l&#8217;application, nous pouvons utiliser le <em>scope application</em> de Java EE. Ceci revient donc à stocker notre instance en tant qu&#8217;attribut du contexte servlet. Voici un exemple du code réalisant la création et le stockage de l&#8217;instance dans un attribut du contexte applicatif :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">@Override
+public void contextInitialized( ServletContextEvent event )
+{
+	IApplicationData applicationData = new ApplicationData();
+
+	ServletContext context = event.getServletContext();
+	context.setAttribute( "applicationData", applicationData );
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>La réponse à la troisième question est maintenant évidente : pour récupérer notre instance <code>IApplicationData</code>, nous devons avoir accès au contexte servlet et aller chercher l&#8217;objet enregistré en tant qu&#8217;attribut "applicationData". Cela s&#8217;écrira donc :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">IApplicationData applicationData = (IApplicationData) context.getAttribute( "applicationData" );</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Comme nous aurons assez souvent à écrire ce code, il convient de le factoriser dans une méthode statique, par exemple dans une classe <code>DataAccess</code> que nous créons pour l&#8217;occasion :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public class DataAccess
+{
+	public static IApplicationData get( ServletContext context )
+	{
+		return (IApplicationData) context.getAttribute( "applicationData" );
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Nous utiliserons ce code depuis nos servlet ainsi :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">List&lt;Carte&gt; cartes = DataAccess.get( getServletContext() ).getCartes();</code></pre>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_création_d_une_classe_abstraite_code_vueservlet_code">Création d&#8217;une classe abstraite <code>VueServlet</code></h5>
+<div class="paragraph">
+<p>Comme il est fastidieux de se répéter et de toujours passer la valeur de retour de <code>getServletContext()</code> dans les servlets, vous pouvez créer une classe abstraite <code>VueServlet</code> qui héritera de <code>HttpServlet</code> et fournira une méthode très simple d&#8217;utilisation pour accéder à l&#8217;instance IApplicaionData :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public abstract class DataAccessServlet extends HttpServlet
+{
+	protected IApplicationData getData()
+	{
+		return DataAccess.get( getServletContext() );
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Nos servlet de vue peuvent maintenant en hériter à la place de <code>HttpServlet</code> et ainsi utiliser le code suivant pour accéder aux données :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">List&lt;Carte&gt; cartes = getData().getCartes();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Trouvez-vous cela plus agréable ?</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des données et de toutes sortes d&#8217;autres composants applicatif au sein du code. Celles-ci sont appelées <em>Injection de dépendance</em> ou plus généralement liées au pattern d'<em>Inversion de Contrôle</em>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_protection_des_url_nécessitant_d_être_connecté">Protection des URL nécessitant d&#8217;être connecté</h4>
+<div class="paragraph">
+<p><strong>ATTENTION : Le filtre de sécurité que nous créons ici n&#8217;est valable qu&#8217;à des fins didactiques. Vous ne devez AUCUNEMENT vous en servir pour sécuriser des projets de production. La sécurité est en effet un problème très complexe et il est impératif se s&#8217;appuyer sur des implémentations matures et correctement testées. Par exemple le standard <em>JAAS</em> avec Java EE ou bien <em>Spring Security</em> avec <em>Spring</em>.</strong></p>
+</div>
+<div class="paragraph">
+<p>Il arrive souvent que l&#8217;on désire décencher un traitement de façon générique lorsque d&#8217;autres traitements sont déclenchés (ici le traitement des requêtes HTTP). Un exemple frappant est de gérer la sécurisation de nos URLs. En effet, à part la page d&#8217;accueil et les resources statiques (fichiers css, javascript, etc), nous désirons protéger l&#8217;accès aux autres URLs en imposant que l&#8217;utilisateur soit connecté pour y accéder. Cette vérification doit se faire idéalement avant le traitement de chaque requête HTTP que l&#8217;application reçoit.</p>
+</div>
+<div class="paragraph">
+<p>Ceci est possible en implémentant un filtre Java EE (encore une fois le principe <em>Open Close</em>). L&#8217;idée est que ce filtre sera déclenché par Java EE avant les servlets. Le filtre peut alors soit laisser le traitement de la requête se poursuivre, soit effectuer le traitement de son choix, et même émettre une réponse HTTP à la place de la servlet qui devait être déclenchée pour traiter la requête.</p>
+</div>
+<div class="paragraph">
+<p>Implémentez dans un filtre l&#8217;algorithme suivant :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>si l&#8217;URL appelée concerne un fichier statique (c&#8217;est-à-dire que <code>request.getRequestURI()</code> contient "js/", "css/", "font/" ou "fonts/"), laisser le traitement se poursuivre normalement.</p>
+</li>
+<li>
+<p>si l&#8217;URL appelée est l&#8217;URL de la page d&#8217;accueil, laisser le traitement se poursuivre normalement.</p>
+</li>
+<li>
+<p>si l&#8217;URL appelée est l&#8217;URL du traitement du formulaire de login, laisser le traitement se poursuivre normalement.</p>
+</li>
+<li>
+<p>dans tous les autres cas, vérifier que l&#8217;utilisateur est bien connecté pour laisser le traitement se poursuivre normalement. Sinon envoyer au navigateur une redirection vers la page de connexion.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>NOTE : L&#8217;idée d&#8217;appliquer un traitement avant ou après d&#8217;autres traitement est traitée en profondeur dans l'<em>Aspect Oriented Programming</em>.</p>
 </div>
 </div>
 </div>
@@ -568,7 +1110,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-20 08:42:15 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-21 22:07:27 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
