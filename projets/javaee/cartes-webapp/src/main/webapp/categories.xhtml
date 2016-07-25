@@ -38,12 +38,12 @@
 				<legend>#{categoryCrudBean.edition ? "Edition catégorie" : "Ajout catégorie"}</legend>
 				
 				<h:outputLabel for="nom">Nom<span class="requis">*</span></h:outputLabel>
-				<h:inputText id="nom" value="#{categoryCrudBean.item.nom}" required="true" size="20" maxlength="60"/>
+				<h:inputText id="nom" label="Nom" value="#{categoryCrudBean.item.nom}" required="true" size="20" maxlength="60"/>
 				<h:message id="nomMessage" for="nom" errorClass="erreur" />
 				<br/>
 				
 				<h:outputLabel for="force">Force<span class="requis">*</span></h:outputLabel>
-				<h:inputText id="force" value="#{categoryCrudBean.item.force}" required="true" size="5" maxlength="6"/>
+				<h:inputText id="force" label="Force" value="#{categoryCrudBean.item.force}" required="true" size="5" maxlength="6"/>
 				<h:message id="forceMessage" for="force" errorClass="erreur" />
 				<br/>
 				
