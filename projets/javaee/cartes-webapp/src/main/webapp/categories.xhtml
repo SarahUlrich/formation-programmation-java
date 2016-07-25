@@ -64,7 +64,7 @@
 				<h:message id="forceMaxMessage" for="forceMax" errorClass="erreur" />
 				<br/>
 				
-				<h:panelGroup rendered="#{!categoryCrudBean.edition}">
+				<h:panelGroup rendered="#{categoryCrudBean.creation}">
 					<p>
 						<h:commandButton value="Ajouter" action="#{categoryCrudBean.valider}"/>
 						<h:commandButton value="Annuler" action="#{categoryCrudBean.resetItem}" />

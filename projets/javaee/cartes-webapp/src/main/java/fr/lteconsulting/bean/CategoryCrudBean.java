@@ -73,6 +73,11 @@ public class CategoryCrudBean implements Serializable
 		return editedItem != null && editedItem.getId() != null;
 	}
 
+	public boolean isCreation()
+	{
+		return editedItem != null && editedItem.getId() == null;
+	}
+
 	public void delete( Categorie categorie )
 	{
 		dao.delete( categorie.getId() );
