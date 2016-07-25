@@ -39,24 +39,32 @@
 				<legend>#{categoryCrudBean.edition ? "Edition catégorie" : "Ajout catégorie"}</legend>
 				
 				<h:outputLabel for="nom">Nom<span class="requis">*</span></h:outputLabel>
-				<h:inputText id="nom" label="Nom" value="#{categoryCrudBean.item.nom}" required="true" requiredMessage="#{msg['categorie.nom']}" size="20" maxlength="60"/>
+				<h:inputText id="nom" label="Nom" value="#{categoryCrudBean.item.nom}" required="true" requiredMessage="#{msg['categorie.nom']}" size="20" maxlength="60">
+					<f:ajax event="blur" render="nomMessage" />
+				</h:inputText>
 				<h:message id="nomMessage" for="nom" errorClass="erreur" />
 				<br/>
 				
 				<h:outputLabel for="force">Force<span class="requis">*</span></h:outputLabel>
-				<h:inputText id="force" label="Force" value="#{categoryCrudBean.item.force}" requiredMessage="#{msg['categorie.force']}" required="true" size="5" maxlength="6"/>
+				<h:inputText id="force" label="Force" value="#{categoryCrudBean.item.force}" requiredMessage="#{msg['categorie.force']}" required="true" size="5" maxlength="6">
+					<f:ajax event="blur" render="forceMessage" />
+				</h:inputText>
 				<h:message id="forceMessage" for="force" errorClass="erreur" />
 				<br/>
 				
 				<h:panelGroup rendered="#{!categoryCrudBean.edition}">
 					<p>
-						<h:commandButton value="Ajouter" action="#{categoryCrudBean.valider}" />
+						<h:commandButton value="Ajouter" action="#{categoryCrudBean.valider}">
+							<f:ajax execute="@form" render="@form" />
+						</h:commandButton>
 						<h:commandButton value="Annuler" action="#{categoryCrudBean.resetItem}" />
 					</p>
 				</h:panelGroup>
 				<h:panelGroup rendered="#{categoryCrudBean.edition}">
 					<p>
-						<h:commandButton value="Enregistrer" action="#{categoryCrudBean.valider}" />
+						<h:commandButton value="Enregistrer" action="#{categoryCrudBean.valider}">
+							<f:ajax execute="@form" render="@form" />
+						</h:commandButton>
 						<h:commandButton value="Annuler" action="#{categoryCrudBean.resetItem}" />
 					</p>
 				</h:panelGroup>
