@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<title>Catégories</title>
+</head>
+
+<body>
+	<h3>Categories</h3>
+	<h:form rendered="#{not empty categoryCrudBean.categories}">
+		<h:dataTable value="#{categoryCrudBean.categories}" var="categorie">
+			<h:column>
+				<f:facet name="header">ID</f:facet>#{categorie.id}</h:column>
+			<h:column>
+				<f:facet name="header">Nom</f:facet>#{categorie.nom}</h:column>
+			<h:column>
+				<f:facet name="header">Force</f:facet>#{categorie.force}</h:column>
+			<h:column>
+				<h:commandButton value="edit" action="#{categoryCrudBean.edit( categorie )}" />
+			</h:column>
+			<h:column>
+				<h:commandButton value="delete" action="#{categoryCrudBean.delete( categorie )}" />
+			</h:column>
+		</h:dataTable>
+	</h:form>
+
+	<h:panelGroup rendered="#{empty categoryCrudBean.categories}">
+		<p>Il n'y a aucune catégorie !</p>
+	</h:panelGroup>
+
+	<h:panelGroup>
+		<h3>#{categoryCrudBean.edition ? "Edition catégorie" : "Ajout catégorie"}</h3>
+		<h:form>
+			<p>
+				Nom:
+				<h:inputText value="#{categoryCrudBean.item.nom}" /><br/>
+				Force:
+				<h:inputText value="#{categoryCrudBean.item.force}" />
+			</p>
+			<h:panelGroup rendered="#{!categoryCrudBean.edition}">
+				<p>
+					<h:commandButton value="Ajouter" action="#{categoryCrudBean.valider}" />
+					<h:commandButton value="Annuler" action="#{categoryCrudBean.resetItem}" />
+				</p>
+			</h:panelGroup>
+			<h:panelGroup rendered="#{categoryCrudBean.edition}">
+				<p>
+					<h:commandButton value="Enregistrer" action="#{categoryCrudBean.valider}" />
+					<h:commandButton value="Annuler" action="#{categoryCrudBean.resetItem}" />
+				</p>
+			</h:panelGroup>
+		</h:form>
+	</h:panelGroup>
+</body>
+</html>
