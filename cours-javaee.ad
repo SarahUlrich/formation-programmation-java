@@ -435,3 +435,93 @@ https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/prem
 === Gestion de formulaires
 
 https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-gestion-d-un-formulaire-avec-jsf
+
+== JPA
+
+=== Base de données
+
+Un outil pour :
+
+- structurer les données,
+- stocker les données,
+- interroger les données,
+- fournir l'intégrité des données.
+
+=== Table
+
+Nous stockons les **enregistrements** dans des **tables** possédant une ou plusieurs *colonnes* :
+
+[cols=2, options="header"]
+|===
+|Nom
+|Prénom
+
+|Tournier
+|Arnaud
+
+|Dupont
+|Jean
+
+|Serres
+|Mélanie
+|===
+
+=== Clé
+
+Les enregistrements sont repérés de façon sûre grâce aux **identifiants** aussi appelés **clés primaire (PK)**.
+
+Chaque identifiant est **unique**.
+
+[cols=3, options="header"]
+|===
+|ID
+|Nom
+|Prénom
+
+|1
+|Tournier
+|Arnaud
+
+|3
+|Dupont
+|Jean
+
+|4
+|Serres
+|Mélanie
+|===
+
+=== Clé étrangère
+
+Pour relier les enregistrements entre eux, on utilise les **clés étrangères** :
+
+[cols=4, options="header"]
+|===
+|ID
+|Entreprise_ID
+|Nom
+|Prénom
+
+|1
+|44
+|Tournier
+|Arnaud
+
+|3
+|5
+|Dupont
+|Jean
+
+|4
+|44
+|Serres
+|Mélanie
+|===
+
+=== SQL DDL
+
+Langage permettant de définir la structure des données dans la base de données.
+
+=== SQL
+
+Language permettant d'interroger, de créer et de manipuler les données, une fois la structure définie.
