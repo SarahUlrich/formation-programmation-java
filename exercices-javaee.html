@@ -448,13 +448,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_intégration_avec_l_existant">Intégration avec l&#8217;existant</a></li>
 </ul>
 </li>
-<li><a href="#_jpa">JPA</a>
+<li><a href="#_java_ee_full_profile">Java EE Full Profile</a>
 <ul class="sectlevel2">
 <li><a href="#_installation_de_wildfly">Installation de WildFly</a></li>
 <li><a href="#_prise_en_main">Prise en main</a></li>
 <li><a href="#_exécution_de_l_application_cartes_dans_wildfly">Exécution de l&#8217;application Cartes dans WildFly</a></li>
+</ul>
+</li>
+<li><a href="#_jpa">JPA</a>
+<ul class="sectlevel2">
 <li><a href="#_installation_d_un_serveur_mysql">Installation d&#8217;un serveur MySQL</a></li>
-<li><a href="#_configuration_du_datasource">Configuration du DataSource</a></li>
+<li><a href="#_liaison_serveur_mysql_avec_wildfly">Liaison serveur MySQL avec WildFly</a></li>
 </ul>
 </li>
 </ul>
@@ -1209,12 +1213,15 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 </div>
 </div>
 <div class="sect1">
-<h2 id="_jpa">JPA</h2>
+<h2 id="_java_ee_full_profile">Java EE Full Profile</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Avant tou, assurez-vous que le serveur Tomcat est arrêté.</p>
+</div>
 <div class="sect2">
 <h3 id="_installation_de_wildfly">Installation de WildFly</h3>
 <div class="paragraph">
-<p>Nous allons installer WildFly, un serveur Java EE en <em>Full Profile</em> créé par <em>RedHat</em>.</p>
+<p>Nous allons installer WildFly, un serveur Java EE en <em>Full Profile</em> édité par <em>RedHat</em>.</p>
 </div>
 <div class="paragraph">
 <p>Téléchargez WildFly <a href="http://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.zip">ici</a></p>
@@ -1235,16 +1242,22 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 <p>Rendez vous à l&#8217;adresse <a href="http://localhost:8080" class="bare">http://localhost:8080</a>.</p>
 </div>
 <div class="paragraph">
-<p>Exécutez le programme <code>bin/add-user.bat</code> pour créer un utilisateur et ainsi accéder à la console de gestion de WildFly.</p>
+<p>Exécutez le programme <code>bin/add-user.bat</code> pour créer un utilisateur avec accès à la console de gestion de WildFly.</p>
 </div>
 <div class="paragraph">
-<p>Connectez vous à l&#8217;adresse <a href="http://localhost:9990/" class="bare">http://localhost:9990/</a>.</p>
+<p>Connectez vous à l&#8217;adresse <a href="http://localhost:9990/" class="bare">http://localhost:9990/</a> avec cet utilisateur.</p>
+</div>
+<div class="paragraph">
+<p>Explorez la console d&#8217;administration.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_exécution_de_l_application_cartes_dans_wildfly">Exécution de l&#8217;application Cartes dans WildFly</h3>
 <div class="paragraph">
-<p>Pour paramétrer l&#8217;url de base de l&#8217;application dans WildFly, ajoutez un ficher <code>WEB-INF/jboss-web.xml</code> avec comme contenu :</p>
+<p>Retour à l&#8217;application <em>Cartes</em>.</p>
+</div>
+<div class="paragraph">
+<p>Pour paramétrer l&#8217;url de base de l&#8217;application dans WildFly, ajoutez un ficher <code>WEB-INF/jboss-web.xml</code> dans les fichiers de l&#8217;application avec comme contenu :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1257,20 +1270,40 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 <p>L&#8217;application sera (une fois WildFly démarré) accessible à l&#8217;adresse : <a href="http://localhost:8080/cartes-webapp" class="bare">http://localhost:8080/cartes-webapp</a></p>
 </div>
 <div class="paragraph">
-<p>Déployez et exécutez l&#8217;application dans WildFly avec l&#8217;aide d&#8217;Eclipse.</p>
+<p>Déployez et exécutez l&#8217;application dans WildFly avec l&#8217;aide d&#8217;Eclipse. Celle-ci doit fonctionner comme auparavant.</p>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jpa">JPA</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_installation_d_un_serveur_mysql">Installation d&#8217;un serveur MySQL</h3>
 <div class="paragraph">
 <p>Installez le package <em>WAMP</em> disponible à cette <a href="https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/wampserver3.0.4_x64_apache2.4.18_mysql5.7.11_php5.6.19-7.0.4.exe/download">adresse</a> (c&#8217;est la version 64 bits avec MySQL en version 5.6.15 dans le site <a href="http://www.wampserver.com/" class="bare">http://www.wampserver.com/</a>).</p>
 </div>
 <div class="paragraph">
-<p>Avec <a href="http://localhost/phpmyadmin/index.php">phpMyAdmin</a>, créez une base de donnée nommée <code>cartes</code> avec l&#8217;interclassement <em>utf8-bin</em>.</p>
+<p>Avec <a href="http://localhost/phpmyadmin/index.php">phpMyAdmin</a>, créez une base de donnée nommée <code>cartes</code> avec l&#8217;interclassement <em>utf8-bin</em> (onglet <em>Bases de données</em> dans phpMyAdmin).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_configuration_du_datasource">Configuration du DataSource</h3>
+<h3 id="_liaison_serveur_mysql_avec_wildfly">Liaison serveur MySQL avec WildFly</h3>
+<div class="paragraph">
+<p>La connexion entre une application Java EE et une base de données est séparée en deux parties :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>On configure une source de données (<em>Data Source</em>) directement dans le serveur.</p>
+</li>
+<li>
+<p>Celle-ci est alors accessible à l&#8217;application par un nom <em>JNDI</em>. L&#8217;application n&#8217;a donc qu&#8217;à connaître le nom de la source de données, pas besoin de connaître les informations de connexion à la base.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_installation_du_driver_mysql_en_tant_que_module_wildfly">Installation du driver MySQL en tant que module WildFly</h4>
 <div class="paragraph">
 <p>Téléchargez le driver MySQL à cette <a href="http://search.maven.org/remotecontent?filepath=mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar">adresse</a>.</p>
 </div>
@@ -1300,7 +1333,7 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 </div>
 </div>
 <div class="paragraph">
-<p>Une invite doit apparaître vous signifiant que vous n&#8217;êtes pas encore connecté au serveur. Tapez la commande <code>connect</code>.</p>
+<p>Une invite doit apparaître vous signifiant que vous n&#8217;êtes pas encore connecté au serveur. Tapez la commande <code>connect</code>, celle-ci va connecter notre console d&#8217;administration en mode texte au serveur WildFly en cours d&#8217;exécution.</p>
 </div>
 <div class="paragraph">
 <p>Tapez ensuite la commande <code>/subsystem=datasources/jdbc-driver=mysql:add(driver-name=mysql,driver-module-name=com.mysql.driver,driver-class-name=com.mysql.jdbc.Driver)</code>.</p>
@@ -1321,8 +1354,11 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 &lt;/driver&gt;</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_ajout_de_la_data_source">Ajout de la Data Source</h4>
 <div class="paragraph">
-<p>Maintenant, toujours avec WildFly démarré, accédez à l&#8217;adresse <a href="http://localhost:9990/console/App.html#home" class="bare">http://localhost:9990/console/App.html#home</a></p>
+<p>Maintenant, toujours avec WildFly démarré, accédez à l&#8217;adresse <a href="http://localhost:9990/" class="bare">http://localhost:9990/</a></p>
 </div>
 <div class="paragraph">
 <p>Configuration &gt; Subsystem &gt; Data sources &gt; Non-XA &gt; bouton Add.</p>
@@ -1340,7 +1376,28 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 <p>Testez ensuite la connexion comme c&#8217;est proposé, le test doit réussir.</p>
 </div>
 <div class="paragraph">
+<p>Vérifiez que dans le fichier <code>standalone.xml</code>, on a bien :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>&lt;datasource jta="true" jndi-name="java:/CartesDS" pool-name="CartesDS" enabled="true" use-ccm="true"&gt;
+	&lt;connection-url&gt;jdbc:mysql://localhost:3306/cartes&lt;/connection-url&gt;
+	&lt;driver-class&gt;com.mysql.jdbc.Driver&lt;/driver-class&gt;
+	&lt;driver&gt;mysql&lt;/driver&gt;
+	&lt;security&gt;
+		&lt;user-name&gt;root&lt;/user-name&gt;
+	&lt;/security&gt;
+	&lt;validation&gt;
+		&lt;valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"/&gt;
+		&lt;background-validation&gt;true&lt;/background-validation&gt;
+		&lt;exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"/&gt;
+	&lt;/validation&gt;
+&lt;/datasource&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Vous avez ainsi créé une source de données appelée <code>CartesDS</code>, celle-ci est maintenant disponible aux applications qui en ont besoin !</p>
+</div>
 </div>
 </div>
 </div>
@@ -1348,7 +1405,7 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-26 08:24:04 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-26 09:20:53 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">

@@ -451,11 +451,13 @@ Si vous deviez mettre en place la validation Ajax dans le contexte des pages JSP
 
 
 
-== JPA
+== Java EE Full Profile
+
+Avant tou, assurez-vous que le serveur Tomcat est arrêté.
 
 === Installation de WildFly
 
-Nous allons installer WildFly, un serveur Java EE en _Full Profile_ créé par _RedHat_.
+Nous allons installer WildFly, un serveur Java EE en _Full Profile_ édité par _RedHat_.
 
 Téléchargez WildFly http://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.zip[ici]
 
@@ -469,13 +471,17 @@ Démarrez WildFly en exécutant le fichier `bin/standalone.bat`.
 
 Rendez vous à l'adresse http://localhost:8080.
 
-Exécutez le programme `bin/add-user.bat` pour créer un utilisateur et ainsi accéder à la console de gestion de WildFly.
+Exécutez le programme `bin/add-user.bat` pour créer un utilisateur avec accès à la console de gestion de WildFly.
 
-Connectez vous à l'adresse http://localhost:9990/.
+Connectez vous à l'adresse http://localhost:9990/ avec cet utilisateur.
+
+Explorez la console d'administration.
 
 === Exécution de l'application Cartes dans WildFly
 
-Pour paramétrer l'url de base de l'application dans WildFly, ajoutez un ficher `WEB-INF/jboss-web.xml` avec comme contenu :
+Retour à l'application _Cartes_.
+
+Pour paramétrer l'url de base de l'application dans WildFly, ajoutez un ficher `WEB-INF/jboss-web.xml` dans les fichiers de l'application avec comme contenu :
 
 [source,language="xml"]
 ----
@@ -486,15 +492,24 @@ Pour paramétrer l'url de base de l'application dans WildFly, ajoutez un ficher 
 
 L'application sera (une fois WildFly démarré) accessible à l'adresse : http://localhost:8080/cartes-webapp
 
-Déployez et exécutez l'application dans WildFly avec l'aide d'Eclipse.
+Déployez et exécutez l'application dans WildFly avec l'aide d'Eclipse. Celle-ci doit fonctionner comme auparavant.
+
+== JPA
 
 === Installation d'un serveur MySQL
 
 Installez le package _WAMP_ disponible à cette https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/wampserver3.0.4_x64_apache2.4.18_mysql5.7.11_php5.6.19-7.0.4.exe/download[adresse] (c'est la version 64 bits avec MySQL en version 5.6.15 dans le site http://www.wampserver.com/).
 
-Avec http://localhost/phpmyadmin/index.php[phpMyAdmin], créez une base de donnée nommée `cartes` avec l'interclassement _utf8-bin_.
+Avec http://localhost/phpmyadmin/index.php[phpMyAdmin], créez une base de donnée nommée `cartes` avec l'interclassement _utf8-bin_ (onglet _Bases de données_ dans phpMyAdmin).
 
-=== Configuration du DataSource
+=== Liaison serveur MySQL avec WildFly
+
+La connexion entre une application Java EE et une base de données est séparée en deux parties :
+
+- On configure une source de données (_Data Source_) directement dans le serveur.
+- Celle-ci est alors accessible à l'application par un nom _JNDI_. L'application n'a donc qu'à connaître le nom de la source de données, pas besoin de connaître les informations de connexion à la base.
+
+==== Installation du driver MySQL en tant que module WildFly
 
 Téléchargez le driver MySQL à cette http://search.maven.org/remotecontent?filepath=mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar[adresse].
 
@@ -518,7 +533,7 @@ Ensuite assurez vous que WildFly est démarré et lancez en ligne de commande da
 
 		jboss-cli.bat
 
-Une invite doit apparaître vous signifiant que vous n'êtes pas encore connecté au serveur. Tapez la commande `connect`.
+Une invite doit apparaître vous signifiant que vous n'êtes pas encore connecté au serveur. Tapez la commande `connect`, celle-ci va connecter notre console d'administration en mode texte au serveur WildFly en cours d'exécution.
 
 Tapez ensuite la commande `/subsystem=datasources/jdbc-driver=mysql:add(driver-name=mysql,driver-module-name=com.mysql.driver,driver-class-name=com.mysql.jdbc.Driver)`.
 
@@ -535,7 +550,9 @@ Vérifiez que dans le fichier de configuration `standalone/configuration/standal
 </driver>
 ----
 
-Maintenant, toujours avec WildFly démarré, accédez à l'adresse http://localhost:9990/console/App.html#home
+==== Ajout de la Data Source
+
+Maintenant, toujours avec WildFly démarré, accédez à l'adresse http://localhost:9990/
 
 Configuration > Subsystem > Data sources > Non-XA > bouton Add.
 
@@ -547,4 +564,71 @@ Choisir ensuite l'URL de connexion : `jdbc:mysql://localhost:3306/cartes`, et ch
 
 Testez ensuite la connexion comme c'est proposé, le test doit réussir.
 
-Vous avez ainsi créé une source de données appelée `CartesDS`, celle-ci est maintenant disponible aux applications qui en ont besoin !
+Vérifiez que dans le fichier `standalone.xml`, on a bien :
+
+[source]
+----
+<datasource jta="true" jndi-name="java:/CartesDS" pool-name="CartesDS" enabled="true" use-ccm="true">
+	<connection-url>jdbc:mysql://localhost:3306/cartes</connection-url>
+	<driver-class>com.mysql.jdbc.Driver</driver-class>
+	<driver>mysql</driver>
+	<security>
+		<user-name>root</user-name>
+	</security>
+	<validation>
+		<valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"/>
+		<background-validation>true</background-validation>
+		<exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"/>
+	</validation>
+</datasource>
+----
+
+Vous avez ainsi créé une source de données appelée `CartesDS`, celle-ci est maintenant disponible aux applications qui en ont besoin ! La prochaine étape est donc d'utiliser cette base de données dans notre application _Cartes_.
+
+=== Liaison WildFly avec l'application
+
+Dans le fichier `pom.xml` de l'application, ajoutez les dépendances suivantes :
+
+[source]
+----
+<!-- JPA API Persistence -->
+<dependency>
+	<groupId>org.hibernate.javax.persistence</groupId>
+	<artifactId>hibernate-jpa-2.1-api</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.hibernate</groupId>
+	<artifactId>hibernate-annotations</artifactId>
+	<version>3.5.6-Final</version>
+</dependency>
+----
+
+Dans le projet, avec Eclipse, créez un dossier `src/main/java/META-INF/`. Dans celui-ci, créez un fichier `persistence.xml` avec le contenu suivant :
+
+[source]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+	                    http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="Cartes" transaction-type="JTA">
+		<jta-data-source>CartesDS</jta-data-source>
+
+		<properties>
+			<!-- validate, update, create, create-drop -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.use_sql_comments" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>
+----
+
+=== Les entités JPA
+
+Génération des ids avec uuid
+
+Aller dans `Preferences` -> `Java Persistence` -> `JPA` -> `Errors/Warnings` `Queries and Generators` et changer `Generator is not defined in the persistence unit` pour le configurer en _warning_ et non en _erreur_.
