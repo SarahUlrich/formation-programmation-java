@@ -299,7 +299,15 @@ Continuer l'exercice précedent en chargeant la liste des disques et chansons à
 
 == Exercice avec MySQL
 
-Créez un projet java maven de base (l'archétype est `maven-java-quickstart`).
+Créez une base de donnée `exercice_sql` avec une table `cartes` contenant les colonnes suivantes :
+
+- id : type INTEGER, c'est la clé primaire, en mode __AUTO_INCREMENT__,
+- nom : type TEXT
+- couleur : type TEXT
+
+Ajoutez à la main quelques enregistrements dans cette table.
+
+Créez un projet java maven à partir de l'archétype quickstart.
 
 Ajoutez la dépendance suivante :
 
@@ -311,3 +319,24 @@ Ajoutez la dépendance suivante :
     <version>5.1.39</version>
 </dependency>
 ----
+
+Ajouter les propriétés suivantes :
+
+[source]
+----
+<properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<maven.compiler.source>1.8</maven.compiler.source>
+	<maven.compiler.target>1.8</maven.compiler.target>
+</properties>
+----
+
+Dans la classe `App`, implémentez ceci :
+
+- Chargement du driver JDBC,
+- Connexion à la base de donnée créée pour cette application (`cartes`),
+- Une requête `SELECT` qui charge _toutes_ les cartes et qui les affiche,
+- Une méthode qui ajoute une carte aléatoire dans la base de données,
+- Une méthode qui met à jour une ou plusieurs cartes,
+- Reprenez la méthode qui fait le `SELECT`, et faites en sorte que celle-ci retourne maintenant une `List<Carte>` (vous créerez la classe `Carte` pour l'occasion,
+- Une méthode méthode qui prend un objet `Carte` en paramètre et qui met à jour l'enregistrement en base de données à partir des valeurs des attributs de l'objet (on utilise l'attribut `id` pour savoir quel enregistrement mettre à jour...).

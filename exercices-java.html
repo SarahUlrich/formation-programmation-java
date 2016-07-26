@@ -924,7 +924,26 @@ AFFICHER Math nul ou le gagnant</pre>
 <h2 id="_exercice_avec_mysql">Exercice avec MySQL</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Créez un projet java maven de base (l&#8217;archétype est <code>maven-java-quickstart</code>).</p>
+<p>Créez une base de donnée <code>exercice_sql</code> avec une table <code>cartes</code> contenant les colonnes suivantes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>id : type INTEGER, c&#8217;est la clé primaire, en mode <em>AUTO_INCREMENT</em>,</p>
+</li>
+<li>
+<p>nom : type TEXT</p>
+</li>
+<li>
+<p>couleur : type TEXT</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ajoutez à la main quelques enregistrements dans cette table.</p>
+</div>
+<div class="paragraph">
+<p>Créez un projet java maven à partir de l&#8217;archétype quickstart.</p>
 </div>
 <div class="paragraph">
 <p>Ajoutez la dépendance suivante :</p>
@@ -938,12 +957,52 @@ AFFICHER Math nul ou le gagnant</pre>
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Ajouter les propriétés suivantes :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>&lt;properties&gt;
+	&lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+	&lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;
+	&lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;
+&lt;/properties&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dans la classe <code>App</code>, implémentez ceci :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Chargement du driver JDBC,</p>
+</li>
+<li>
+<p>Connexion à la base de donnée créée pour cette application (<code>cartes</code>),</p>
+</li>
+<li>
+<p>Une requête <code>SELECT</code> qui charge <em>toutes</em> les cartes et qui les affiche,</p>
+</li>
+<li>
+<p>Une méthode qui ajoute une carte aléatoire dans la base de données,</p>
+</li>
+<li>
+<p>Une méthode qui met à jour une ou plusieurs cartes,</p>
+</li>
+<li>
+<p>Reprenez la méthode qui fait le <code>SELECT</code>, et faites en sorte que celle-ci retourne maintenant une <code>List&lt;Carte&gt;</code> (vous créerez la classe <code>Carte</code> pour l&#8217;occasion,</p>
+</li>
+<li>
+<p>Une méthode méthode qui prend un objet <code>Carte</code> en paramètre et qui met à jour l&#8217;enregistrement en base de données à partir des valeurs des attributs de l&#8217;objet (on utilise l&#8217;attribut <code>id</code> pour savoir quel enregistrement mettre à jour&#8230;&#8203;).</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-26 11:42:40 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-26 14:57:50 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">

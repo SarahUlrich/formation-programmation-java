@@ -123,7 +123,63 @@ void setLongueur( int valeur ) { ... }</code></pre></div></div>
 <table class="tableblock frame-all grid-all" style="width:100%"><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead><tr><th class="tableblock halign-left valign-top">Nom</th><th class="tableblock halign-left valign-top">Prénom</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">Tournier</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Arnaud</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">Dupont</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Jean</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">Serres</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Mélanie</p></td></tr></tbody></table></section><section id="_clé"><h2>Clé</h2><div class="paragraph"><p>Les enregistrements sont repérés de façon sûre grâce aux <strong>identifiants</strong> aussi appelés <strong>clés primaire (PK)</strong>.</p></div>
 <div class="paragraph"><p>Chaque identifiant est <strong>unique</strong>.</p></div>
 <table class="tableblock frame-all grid-all" style="width:100%"><colgroup><col style="width:33.3333%"><col style="width:33.3333%"><col style="width:33.3334%"></colgroup><thead><tr><th class="tableblock halign-left valign-top">ID</th><th class="tableblock halign-left valign-top">Nom</th><th class="tableblock halign-left valign-top">Prénom</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Tournier</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Arnaud</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Dupont</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Jean</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Serres</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Mélanie</p></td></tr></tbody></table></section><section id="_clé_étrangère"><h2>Clé étrangère</h2><div class="paragraph"><p>Pour relier les enregistrements entre eux, on utilise les <strong>clés étrangères</strong> :</p></div>
-<table class="tableblock frame-all grid-all" style="width:100%"><colgroup><col style="width:25%"><col style="width:25%"><col style="width:25%"><col style="width:25%"></colgroup><thead><tr><th class="tableblock halign-left valign-top">ID</th><th class="tableblock halign-left valign-top">Entreprise_ID</th><th class="tableblock halign-left valign-top">Nom</th><th class="tableblock halign-left valign-top">Prénom</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Tournier</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Arnaud</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Dupont</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Jean</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Serres</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Mélanie</p></td></tr></tbody></table></section><section id="_sql_ddl"><h2>SQL DDL</h2><div class="paragraph"><p>Langage permettant de définir la structure des données dans la base de données.</p></div></section><section id="_sql"><h2>SQL</h2><div class="paragraph"><p>Language permettant d&#8217;interroger, de créer et de manipuler les données, une fois la structure définie.</p></div></section></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script type="text/javascript">// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+<table class="tableblock frame-all grid-all" style="width:100%"><colgroup><col style="width:25%"><col style="width:25%"><col style="width:25%"><col style="width:25%"></colgroup><thead><tr><th class="tableblock halign-left valign-top">ID</th><th class="tableblock halign-left valign-top">Entreprise_ID</th><th class="tableblock halign-left valign-top">Nom</th><th class="tableblock halign-left valign-top">Prénom</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Tournier</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Arnaud</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Dupont</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Jean</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Serres</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Mélanie</p></td></tr></tbody></table></section><section id="_sql_ddl"><h2>SQL DDL</h2><div class="paragraph"><p>Langage permettant de définir la structure des données dans la base de données.</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="sql language-sql">CREATE TABLE IF NOT EXISTS `personne` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` text COLLATE utf8_bin NOT NULL,
+  `prenom` varchar(50) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1;</code></pre></div></div></section><section id="_sql"><h2>SQL</h2><div class="paragraph"><p>Language permettant d&#8217;interroger, de créer et de manipuler les données, une fois la structure définie.</p></div>
+<div class="paragraph"><p>Voyons quelques exemples&#8230;&#8203;</p></div></section><section id="_insert"><h2>Insert</h2><div class="paragraph"><p>Insérer un enregistrement dans une table :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="sql language-sql">INSERT INTO `personne` (`nom`, `prenom`) VALUES ('Tournier', 'Arnaud');</code></pre></div></div>
+<div class="paragraph"><p>Dans cette table, l&#8217;identifiant est généré automatiquement&#8230;&#8203;</p></div></section><section id="_update"><h2>Update</h2><div class="paragraph"><p>Mise à jour d&#8217;un ou des enregistrements :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="sql language-sql">UPDATE `personne` SET `nom`="Toto", `prenom`="Titi" WHERE id=1;</code></pre></div></div></section><section id="_delete"><h2>Delete</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="sql language-sql">DELETE FROM `personne` WHERE nom LIKE "To%";</code></pre></div></div></section><section id="_select"><h2>Select</h2><div class="paragraph"><p>L&#8217;opération la plus utilisée : pour consulter la base de données</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="sql language-sql">SELECT * FROM `personne` WHERE prenom LIKE "a%";</code></pre></div></div></section><section id="_jointure"><h2>Jointure</h2><div class="paragraph"><p>Il est possible de <em>combiner</em> des tables en faisant un select :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="sql language-sql">SELECT * FROM `personne` p LEFT JOIN `entreprise` e ON p.entreprise_id=e.id;
+
+SELECT p.id, p.nom, e.nom, e.adresse FROM `personne` p LEFT JOIN `entreprise` e ON p.entreprise_id=e.id;</code></pre></div></div></section><section id="_transactions"><h2>Transactions</h2><div class="paragraph"><p>On souhaite pouvoir exécuter une suite d&#8217;instruction de manière <strong>atomique</strong> et <strong>cohérente</strong> (voir les propriétés <em>ACID</em>).</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="sql language-sql">START TRANSACTION;
+COMMIT;
+ROLLBACK;</code></pre></div></div>
+<div class="paragraph"><p><em>Interblocage ?</em></p></div></section><section id="_bien_plus"><h2>Bien plus&#8230;&#8203;</h2><div class="paragraph"><p>Le langage SQL est extrêmement riche, nous avons à peine gratté la surface&#8230;&#8203;</p></div>
+<div class="paragraph"><p>Voici un <a href="http://sql.sh/">cours et tutoriel</a> pour aller plus loin.</p></div></section><section id="_quelques_serveurs_sql"><h2>Quelques serveurs SQL</h2><div class="paragraph"><p>De nombreuses implémentations existent, avec parfois quelques variantes dans le <em>dialecte</em> SQL : MySQL, MariaDB, Oracle, PostgreSQL, Microsoft SQL Server, SQLite, &#8230;&#8203;</p></div></section><section id="_accès_depuis_un_programme_java"><h2>Accès depuis un programme Java</h2><div class="paragraph"><p>L&#8217;accès le plus bas niveau avec Java se fait à travers le <em>driver JDBC</em> adapté au serveur auquel on se connecte.</p></div></section><section id="_charger_le_driver_adapté"><h2>Charger le driver adapté</h2><div class="paragraph"><p>La classe doit être présente dans le <em>classpath</em>&#8230;&#8203;</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">try
+{
+	Class.forName( "com.mysql.jdbc.Driver" );
+}
+catch( ClassNotFoundException e )
+{
+	...
+}</code></pre></div></div></section><section id="_se_connecter_au_serveur_sql"><h2>Se connecter au serveur SQL</h2><div class="paragraph"><p>Il faut connaître l&#8217;URL de connexion&#8230;&#8203;</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">try
+{
+	Connection conn = DriverManager.getConnection( "jdbc:mysql://localhost:3306/cartes", "root", "password" );
+}
+catch( SQLException e )
+{
+	...
+}</code></pre></div></div></section><section id="_exécuter_des_requêtes"><h2>Exécuter des requêtes</h2><div class="paragraph"><p>Exemple de <code>SELECT</code> :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">Statement statement = conn.createStatement();
+ResultSet rs = statement.executeQuery( "SELECT id, nom, couleur from carte" ); <b>(1)</b>
+while( rs.next() )
+{
+	String id = rs.getString( "id" );
+	String nom = rs.getString( "nom" );
+	String couleur = rs.getString( "couleur" );
+
+	System.out.printf( "%s %s %s\n", id, nom, couleur );
+}</code></pre></div></div>
+<div class="colist arabic"><ol><li><p>Il existe aussi <code>execute()</code> et <code>executeUpdate()</code></p></li></ol></div></section><section id="_les_transactions"><h2>Les transactions</h2><div class="paragraph"><p>Les instructions de transactions sont accessibles directement en Java :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">// on désactive l'auto-commit
+conn.setAutoCommit( false );
+
+// on joue la transaction...
+Statement statement = conn.createStatement();
+// ...
+
+// on valide la transaction
+conn.commit();
+// on aurait pu l'annuler avec 'conn.rollback()'</code></pre></div></div></section><section id="_plus_de_jdbc"><h2>Plus de JDBC</h2><div class="paragraph"><p>Pour aller plus loin avec JDBC, consulez la <a href="https://docs.oracle.com/javase/tutorial/jdbc/basics/">documentation officielle</a>.</p></div></section></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script type="text/javascript">// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
   controls: true,

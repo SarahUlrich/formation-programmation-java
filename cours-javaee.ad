@@ -522,6 +522,165 @@ Pour relier les enregistrements entre eux, on utilise les **clés étrangères**
 
 Langage permettant de définir la structure des données dans la base de données.
 
+[source,language="sql"]
+----
+CREATE TABLE IF NOT EXISTS `personne` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` text COLLATE utf8_bin NOT NULL,
+  `prenom` varchar(50) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1;
+----
+
 === SQL
 
 Language permettant d'interroger, de créer et de manipuler les données, une fois la structure définie.
+
+Voyons quelques exemples...
+
+=== Insert
+
+Insérer un enregistrement dans une table :
+
+[source,language="sql"]
+----
+INSERT INTO `personne` (`nom`, `prenom`) VALUES ('Tournier', 'Arnaud');
+----
+
+Dans cette table, l'identifiant est généré automatiquement...
+
+=== Update
+
+Mise à jour d'un ou des enregistrements :
+
+[source,language="sql"]
+----
+UPDATE `personne` SET `nom`="Toto", `prenom`="Titi" WHERE id=1;
+----
+
+=== Delete
+
+[source,language="sql"]
+----
+DELETE FROM `personne` WHERE nom LIKE "To%";
+----
+
+=== Select
+
+L'opération la plus utilisée : pour consulter la base de données
+
+[source,language="sql"]
+----
+SELECT * FROM `personne` WHERE prenom LIKE "a%";
+----
+
+=== Jointure
+
+Il est possible de _combiner_ des tables en faisant un select :
+
+[source,language="sql"]
+----
+SELECT * FROM `personne` p LEFT JOIN `entreprise` e ON p.entreprise_id=e.id;
+
+SELECT p.id, p.nom, e.nom, e.adresse FROM `personne` p LEFT JOIN `entreprise` e ON p.entreprise_id=e.id;
+----
+
+=== Transactions
+
+On souhaite pouvoir exécuter une suite d'instruction de manière **atomique** et **cohérente** (voir les propriétés _ACID_).
+
+[source,language="sql"]
+----
+START TRANSACTION;
+COMMIT;
+ROLLBACK;
+----
+
+_Interblocage ?_
+
+=== Bien plus...
+
+Le langage SQL est extrêmement riche, nous avons à peine gratté la surface...
+
+Voici un http://sql.sh/[cours et tutoriel] pour aller plus loin.
+
+=== Quelques serveurs SQL
+
+De nombreuses implémentations existent, avec parfois quelques variantes dans le _dialecte_ SQL : MySQL, MariaDB, Oracle, PostgreSQL, Microsoft SQL Server, SQLite, ...
+
+=== Accès depuis un programme Java
+
+L'accès le plus bas niveau avec Java se fait à travers le _driver JDBC_ adapté au serveur auquel on se connecte.
+
+=== Charger le driver adapté
+
+La classe doit être présente dans le _classpath_...
+
+[source,language="java"]
+----
+try
+{
+	Class.forName( "com.mysql.jdbc.Driver" );
+}
+catch( ClassNotFoundException e )
+{
+	...
+}
+----
+
+=== Se connecter au serveur SQL
+
+Il faut connaître l'URL de connexion...
+
+[source,language="java"]
+----
+try
+{
+	Connection conn = DriverManager.getConnection( "jdbc:mysql://localhost:3306/cartes", "root", "password" );
+}
+catch( SQLException e )
+{
+	...
+}
+----
+
+=== Exécuter des requêtes
+
+Exemple de `SELECT` :
+
+[source,language="java"]
+----
+Statement statement = conn.createStatement();
+ResultSet rs = statement.executeQuery( "SELECT id, nom, couleur from carte" ); <1>
+while( rs.next() )
+{
+	String id = rs.getString( "id" );
+	String nom = rs.getString( "nom" );
+	String couleur = rs.getString( "couleur" );
+
+	System.out.printf( "%s %s %s\n", id, nom, couleur );
+}
+----
+<1> Il existe aussi `execute()` et `executeUpdate()`
+
+=== Les transactions
+
+Les instructions de transactions sont accessibles directement en Java :
+
+[source,language="java"]
+----
+// on désactive l'auto-commit
+conn.setAutoCommit( false );
+
+// on joue la transaction...
+Statement statement = conn.createStatement();
+// ...
+
+// on valide la transaction
+conn.commit();
+// on aurait pu l'annuler avec 'conn.rollback()'
+----
+
+=== Plus de JDBC
+
+Pour aller plus loin avec JDBC, consulez la https://docs.oracle.com/javase/tutorial/jdbc/basics/[documentation officielle].

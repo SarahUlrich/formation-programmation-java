@@ -17,10 +17,11 @@ public class App
 
 			System.out.println( "Ouverture de la connexion à la base de données" );
 			Connection conn = DriverManager.getConnection( "jdbc:mysql://localhost:3306/cartes", "root", null );
+			
+			conn.setAutoCommit( false );
 
-			String selectTableSQL = "SELECT id, nom, couleur from carte";
 			Statement statement = conn.createStatement();
-			ResultSet rs = statement.executeQuery( selectTableSQL );
+			ResultSet rs = statement.executeQuery( "SELECT id, nom, couleur from carte" );
 			while( rs.next() )
 			{
 				String id = rs.getString( "id" );
@@ -29,6 +30,10 @@ public class App
 
 				System.out.printf( "%s %s %s\n", id, nom, couleur );
 			}
+			
+			//conn.createStatement().executeUpdate( "update `carte` set nom='titi'" );
+			
+			conn.rollback();
 
 			System.out.println( "Fermeture de la connexion à la base de données" );
 			conn.close();
