@@ -81,20 +81,20 @@
 
 				<h:outputLabel for="motDePasse">Mot de passe<span class="requis">*</span>
 				</h:outputLabel>
-				<h:inputSecret id="motDePasse" label="Mot de passe" value="#{utilisateurCrudBean.item.motDePasse}" binding="#{composantMotDePasse}" requiredMessage="#{msg['utilisateur.motdepasse']}"
+				<h:inputText id="motDePasse" label="Mot de passe" value="#{utilisateurCrudBean.item.motDePasse}" binding="#{composantMotDePasse}" requiredMessage="#{msg['utilisateur.motdepasse']}"
 					required="true" size="5" maxlength="6">
 					<f:ajax event="blur" execute="motDePasse confirmationMotDePasse" render="motDePasseMessage confirmationMotDePasseMessage" />
-				</h:inputSecret>
+				</h:inputText>
 				<h:message id="motDePasseMessage" for="motDePasse" errorClass="erreur" />
 				<br />
 
 				<h:outputLabel for="confirmationMotDePasse">Confirmation<span class="requis">*</span>
 				</h:outputLabel>
-				<h:inputSecret id="confirmationMotDePasse" label="Confirmation du mot de passe" value="#{utilisateurCrudBean.item.motDePasse}" requiredMessage="#{msg['utilisateur.motdepasse']}" required="true" size="5" maxlength="6">
+				<h:inputText id="confirmationMotDePasse" label="Confirmation du mot de passe" value="#{utilisateurCrudBean.item.motDePasse}" requiredMessage="#{msg['utilisateur.motdepasse']}" required="true" size="5" maxlength="6">
 					<f:ajax event="blur" execute="motDePasse confirmationMotDePasse" render="motDePasseMessage confirmationMotDePasseMessage" />
 					<f:attribute name="composantMotDePasse" value="#{composantMotDePasse}" />
 					<f:validator validatorId="utilisateurMotDePasseValidator" />
-				</h:inputSecret>
+				</h:inputText>
 				<h:message id="confirmationMotDePasseMessage" for="confirmationMotDePasse" errorClass="erreur" />
 				<br />
 
