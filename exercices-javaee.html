@@ -448,6 +448,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_intégration_avec_l_existant">Intégration avec l&#8217;existant</a></li>
 </ul>
 </li>
+<li><a href="#_jpa">JPA</a>
+<ul class="sectlevel2">
+<li><a href="#_installation_de_wildfly">Installation de WildFly</a></li>
+<li><a href="#_prise_en_main">Prise en main</a></li>
+<li><a href="#_exécution_de_l_application_cartes_dans_wildfly">Exécution de l&#8217;application Cartes dans WildFly</a></li>
+<li><a href="#_installation_d_un_serveur_mysql">Installation d&#8217;un serveur MySQL</a></li>
+<li><a href="#_configuration_du_datasource">Configuration du DataSource</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1171,7 +1180,7 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 <p>Age : <em>doit être supérieur à 18</em>,</p>
 </li>
 <li>
-<p>Login : <em>ne peut pas être vide</em>, <em>doit avoir au moins 8 caractères</em>,</p>
+<p>Login : <em>ne peut pas être vide</em>, <em>doit avoir au moins 4 caractères</em>,</p>
 </li>
 <li>
 <p>Mot de passe : Le formulaire doit montrer un champ pour saisir le mot de passe et un autre champ pour le confirmer. <em>Les deux champs doivent avoir la même valeur</em>.</p>
@@ -1199,10 +1208,147 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_jpa">JPA</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_installation_de_wildfly">Installation de WildFly</h3>
+<div class="paragraph">
+<p>Nous allons installer WildFly, un serveur Java EE en <em>Full Profile</em> créé par <em>RedHat</em>.</p>
+</div>
+<div class="paragraph">
+<p>Téléchargez WildFly <a href="http://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.zip">ici</a></p>
+</div>
+<div class="paragraph">
+<p>Extraire l&#8217;archive dans <code>C:\wildfly-10.0.0.Final</code>.</p>
+</div>
+<div class="paragraph">
+<p>Déclarez cette installation dans Eclipse en faisant : <code>Fichier</code>, <code>New&#8230;&#8203;</code>, <code>Server</code>, puis choisir "JBoss Community WildFly 10". Laissez Eclipse télécharger les modules complémentaires puis saisissez les informations demandées pour configurer le serveur (<em>The server is local, controlled by filesystem and shell operations, JDK 8</em>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prise_en_main">Prise en main</h3>
+<div class="paragraph">
+<p>Démarrez WildFly en exécutant le fichier <code>bin/standalone.bat</code>.</p>
+</div>
+<div class="paragraph">
+<p>Rendez vous à l&#8217;adresse <a href="http://localhost:8080" class="bare">http://localhost:8080</a>.</p>
+</div>
+<div class="paragraph">
+<p>Exécutez le programme <code>bin/add-user.bat</code> pour créer un utilisateur et ainsi accéder à la console de gestion de WildFly.</p>
+</div>
+<div class="paragraph">
+<p>Connectez vous à l&#8217;adresse <a href="http://localhost:9990/" class="bare">http://localhost:9990/</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exécution_de_l_application_cartes_dans_wildfly">Exécution de l&#8217;application Cartes dans WildFly</h3>
+<div class="paragraph">
+<p>Pour paramétrer l&#8217;url de base de l&#8217;application dans WildFly, ajoutez un ficher <code>WEB-INF/jboss-web.xml</code> avec comme contenu :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml" data-lang="xml">&lt;jboss-web&gt;
+	&lt;context-root&gt;/cartes-webapp&lt;/context-root&gt;
+&lt;/jboss-web&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;application sera (une fois WildFly démarré) accessible à l&#8217;adresse : <a href="http://localhost:8080/cartes-webapp" class="bare">http://localhost:8080/cartes-webapp</a></p>
+</div>
+<div class="paragraph">
+<p>Déployez et exécutez l&#8217;application dans WildFly avec l&#8217;aide d&#8217;Eclipse.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_d_un_serveur_mysql">Installation d&#8217;un serveur MySQL</h3>
+<div class="paragraph">
+<p>Installez le package <em>WAMP</em> disponible à cette <a href="https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/wampserver3.0.4_x64_apache2.4.18_mysql5.7.11_php5.6.19-7.0.4.exe/download">adresse</a> (c&#8217;est la version 64 bits avec MySQL en version 5.6.15 dans le site <a href="http://www.wampserver.com/" class="bare">http://www.wampserver.com/</a>).</p>
+</div>
+<div class="paragraph">
+<p>Avec <a href="http://localhost/phpmyadmin/index.php">phpMyAdmin</a>, créez une base de donnée nommée <code>cartes</code> avec l&#8217;interclassement <em>utf8-bin</em>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_du_datasource">Configuration du DataSource</h3>
+<div class="paragraph">
+<p>Téléchargez le driver MySQL à cette <a href="http://search.maven.org/remotecontent?filepath=mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar">adresse</a>.</p>
+</div>
+<div class="paragraph">
+<p>Dans le répertoire <code>C:\wildfly-10.0.0.Final\modules\system\layers\base</code>, créez un sous-répertoire <code>com/mysql/driver/main</code>. Dans ce répertoire créez un fichier <code>module.xml</code> avec le contenu suivant :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;module xmlns="urn:jboss:module:1.3" name="com.mysql.driver"&gt;
+	&lt;resources&gt;
+		&lt;resource-root path="mysql-connector-java-5.1.39.jar" /&gt;
+	&lt;/resources&gt;
+	&lt;dependencies&gt;
+		&lt;module name="javax.api"/&gt;
+		&lt;module name="javax.transaction.api"/&gt;
+	&lt;/dependencies&gt;
+&lt;/module&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ensuite assurez vous que WildFly est démarré et lancez en ligne de commande dans le répertoire <code>bin</code> de WildFly la commande :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jboss-cli.bat</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Une invite doit apparaître vous signifiant que vous n&#8217;êtes pas encore connecté au serveur. Tapez la commande <code>connect</code>.</p>
+</div>
+<div class="paragraph">
+<p>Tapez ensuite la commande <code>/subsystem=datasources/jdbc-driver=mysql:add(driver-name=mysql,driver-module-name=com.mysql.driver,driver-class-name=com.mysql.jdbc.Driver)</code>.</p>
+</div>
+<div class="paragraph">
+<p>Le serveur répond normalement avec le message <code>{"outcome" &#8658; "success"}</code>.</p>
+</div>
+<div class="paragraph">
+<p>Vous pouvez quitter la console d&#8217;administration en ligne de commande en tapant <code>exit</code> et en validant ensuite.</p>
+</div>
+<div class="paragraph">
+<p>Vérifiez que dans le fichier de configuration <code>standalone/configuration/standalone.xml</code>, on a bien :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>&lt;driver name="mysql" module="com.mysql.driver"&gt;
+    &lt;driver-class&gt;com.mysql.jdbc.Driver&lt;/driver-class&gt;
+&lt;/driver&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Maintenant, toujours avec WildFly démarré, accédez à l&#8217;adresse <a href="http://localhost:9990/console/App.html#home" class="bare">http://localhost:9990/console/App.html#home</a></p>
+</div>
+<div class="paragraph">
+<p>Configuration &gt; Subsystem &gt; Data sources &gt; Non-XA &gt; bouton Add.</p>
+</div>
+<div class="paragraph">
+<p>Choisir <em>MySQL Datasource</em>. Choisir pour nom <code>CartesDS</code> ainsi que le nom JNDI : <code>java:/CartesDS</code>.</p>
+</div>
+<div class="paragraph">
+<p>Choisir ensuite le driver JDBC concerné, pour ceci sélectionnez l&#8217;onglet <em>Detected driver</em> et choisissez <em>MySQL</em>.</p>
+</div>
+<div class="paragraph">
+<p>Choisir ensuite l&#8217;URL de connexion : <code>jdbc:mysql://localhost:3306/cartes</code>, et choisir l&#8217;utilisateur et mot de passe (<em>root</em> et mot de passe vide par défaut).</p>
+</div>
+<div class="paragraph">
+<p>Testez ensuite la connexion comme c&#8217;est proposé, le test doit réussir.</p>
+</div>
+<div class="paragraph">
+<p>Vous avez ainsi créé une source de données appelée <code>CartesDS</code>, celle-ci est maintenant disponible aux applications qui en ont besoin !</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-25 12:52:49 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-26 08:24:04 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">

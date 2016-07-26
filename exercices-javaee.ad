@@ -445,3 +445,106 @@ Dans la servlet correspondante, vérifiez que l'utilisateur existe bien et que l
 Pour les nouveaux utilisateurs, créez en plus une page d'inscription avec un champ pour chacun des attributs de la classe `Utilisateur`.
 
 Si vous deviez mettre en place la validation Ajax dans le contexte des pages JSP, trouveriez-vous cela plus facile ou plus difficile qu'avec JSF ?
+
+
+
+
+
+
+== JPA
+
+=== Installation de WildFly
+
+Nous allons installer WildFly, un serveur Java EE en _Full Profile_ créé par _RedHat_.
+
+Téléchargez WildFly http://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.zip[ici]
+
+Extraire l'archive dans `C:\wildfly-10.0.0.Final`.
+
+Déclarez cette installation dans Eclipse en faisant : `Fichier`, `New...`, `Server`, puis choisir "JBoss Community WildFly 10". Laissez Eclipse télécharger les modules complémentaires puis saisissez les informations demandées pour configurer le serveur (_The server is local, controlled by filesystem and shell operations, JDK 8_).
+
+=== Prise en main
+
+Démarrez WildFly en exécutant le fichier `bin/standalone.bat`.
+
+Rendez vous à l'adresse http://localhost:8080.
+
+Exécutez le programme `bin/add-user.bat` pour créer un utilisateur et ainsi accéder à la console de gestion de WildFly.
+
+Connectez vous à l'adresse http://localhost:9990/.
+
+=== Exécution de l'application Cartes dans WildFly
+
+Pour paramétrer l'url de base de l'application dans WildFly, ajoutez un ficher `WEB-INF/jboss-web.xml` avec comme contenu :
+
+[source,language="xml"]
+----
+<jboss-web>
+	<context-root>/cartes-webapp</context-root>
+</jboss-web>
+----
+
+L'application sera (une fois WildFly démarré) accessible à l'adresse : http://localhost:8080/cartes-webapp
+
+Déployez et exécutez l'application dans WildFly avec l'aide d'Eclipse.
+
+=== Installation d'un serveur MySQL
+
+Installez le package _WAMP_ disponible à cette https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/wampserver3.0.4_x64_apache2.4.18_mysql5.7.11_php5.6.19-7.0.4.exe/download[adresse] (c'est la version 64 bits avec MySQL en version 5.6.15 dans le site http://www.wampserver.com/).
+
+Avec http://localhost/phpmyadmin/index.php[phpMyAdmin], créez une base de donnée nommée `cartes` avec l'interclassement _utf8-bin_.
+
+=== Configuration du DataSource
+
+Téléchargez le driver MySQL à cette http://search.maven.org/remotecontent?filepath=mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar[adresse].
+
+Dans le répertoire `C:\wildfly-10.0.0.Final\modules\system\layers\base`, créez un sous-répertoire `com/mysql/driver/main`. Dans ce répertoire créez un fichier `module.xml` avec le contenu suivant :
+
+[source]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.3" name="com.mysql.driver">
+	<resources>
+		<resource-root path="mysql-connector-java-5.1.39.jar" />
+	</resources>
+	<dependencies>
+		<module name="javax.api"/>
+		<module name="javax.transaction.api"/>
+	</dependencies>
+</module>
+----
+
+Ensuite assurez vous que WildFly est démarré et lancez en ligne de commande dans le répertoire `bin` de WildFly la commande :
+
+		jboss-cli.bat
+
+Une invite doit apparaître vous signifiant que vous n'êtes pas encore connecté au serveur. Tapez la commande `connect`.
+
+Tapez ensuite la commande `/subsystem=datasources/jdbc-driver=mysql:add(driver-name=mysql,driver-module-name=com.mysql.driver,driver-class-name=com.mysql.jdbc.Driver)`.
+
+Le serveur répond normalement avec le message `{"outcome" => "success"}`.
+
+Vous pouvez quitter la console d'administration en ligne de commande en tapant `exit` et en validant ensuite.
+
+Vérifiez que dans le fichier de configuration `standalone/configuration/standalone.xml`, on a bien :
+
+[source]
+----
+<driver name="mysql" module="com.mysql.driver">
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+</driver>
+----
+
+Maintenant, toujours avec WildFly démarré, accédez à l'adresse http://localhost:9990/console/App.html#home
+
+Configuration > Subsystem > Data sources > Non-XA > bouton Add.
+
+Choisir _MySQL Datasource_. Choisir pour nom `CartesDS` ainsi que le nom JNDI : `java:/CartesDS`.
+
+Choisir ensuite le driver JDBC concerné, pour ceci sélectionnez l'onglet _Detected driver_ et choisissez _MySQL_.
+
+Choisir ensuite l'URL de connexion : `jdbc:mysql://localhost:3306/cartes`, et choisir l'utilisateur et mot de passe (_root_ et mot de passe vide par défaut).
+
+Testez ensuite la connexion comme c'est proposé, le test doit réussir.
+
+Vous avez ainsi créé une source de données appelée `CartesDS`, celle-ci est maintenant disponible aux applications qui en ont besoin !
