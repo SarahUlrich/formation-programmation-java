@@ -1,5 +1,6 @@
 package fr.lteconsulting.validator;
 
+import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -12,14 +13,15 @@ import fr.lteconsulting.dao.CategorieDao;
 @FacesValidator
 public class CategorieExistenceValidator implements Validator
 {
-	private CategorieDao dao = CategorieDao.get();
+	@EJB
+	private CategorieDao dao;
 
 	@Override
 	public void validate( FacesContext context, UIComponent component, Object value ) throws ValidatorException
 	{
 		String nom = (String) value;
 
-		if( dao.trouverCategorieParNom( nom ) != null )
+		if( false && dao.trouverCategorieParNom( nom ) != null )
 		{
 			throw new ValidatorException( new FacesMessage( FacesMessage.SEVERITY_ERROR, "Cette catégorie existe déjà !", null ) );
 		}

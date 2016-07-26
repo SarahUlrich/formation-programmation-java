@@ -110,9 +110,6 @@
     <servlet-name>MainServlet</servlet-name>
     <url-pattern>/main</url-pattern>
   </servlet-mapping>
-  <listener>
-    <listener-class>fr.lteconsulting.ApplicationDataInitializationListener</listener-class>
-  </listener>
   <servlet>
     <description></description>
     <display-name>InscriptionServlet</display-name>
@@ -132,5 +129,15 @@
   <servlet-mapping>
     <servlet-name>SubscribeServlet</servlet-name>
     <url-pattern>/subscribe</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GenererCartesServlet</display-name>
+    <servlet-name>GenererCartesServlet</servlet-name>
+    <servlet-class>fr.lteconsulting.servlet.action.GenererCartesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GenererCartesServlet</servlet-name>
+    <url-pattern>/genererCartes</url-pattern>
   </servlet-mapping>
 </web-app>

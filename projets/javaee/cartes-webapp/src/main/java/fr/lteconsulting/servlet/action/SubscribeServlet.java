@@ -1,6 +1,8 @@
 package fr.lteconsulting.servlet.action;
 
 import java.io.IOException;
+
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +19,9 @@ import fr.lteconsulting.servlet.Rendu;
 public class SubscribeServlet extends HttpServlet
 {
 	private static final long serialVersionUID = 1L;
+	
+	@EJB
+	UtilisateurDao utilisateurDao;
 
 	protected void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException
 	{
@@ -26,7 +31,7 @@ public class SubscribeServlet extends HttpServlet
 		String login = (String) request.getParameter( "login" );
 		String password = (String) request.getParameter( "password" );
 
-		if( UtilisateurDao.get().trouverUtilisateurParLogin( login ) != null )
+		if( utilisateurDao.trouverUtilisateurParLogin( login ) != null )
 		{
 			Rendu.pagePrincipale( "Erreur", "/WEB-INF/erreurUtilisateurExiste.jsp", getServletContext(), request, response );
 			return;
@@ -39,7 +44,7 @@ public class SubscribeServlet extends HttpServlet
 		utilisateur.setLogin( login );
 		utilisateur.setMotDePasse( password );
 
-		UtilisateurDao.get().add( utilisateur );
+		utilisateurDao.add( utilisateur );
 		
 		Tools.connecterUtilisateur( utilisateur, request.getSession() );
 

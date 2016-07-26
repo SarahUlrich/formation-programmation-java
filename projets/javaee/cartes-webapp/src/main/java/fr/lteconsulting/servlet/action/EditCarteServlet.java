@@ -2,17 +2,22 @@ package fr.lteconsulting.servlet.action;
 
 import java.io.IOException;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import fr.lteconsulting.dao.CarteDao;
 import fr.lteconsulting.model.Carte;
-import fr.lteconsulting.servlet.DataAccessServlet;
 import fr.lteconsulting.servlet.Rendu;
 
-public class EditCarteServlet extends DataAccessServlet
+public class EditCarteServlet extends HttpServlet
 {
 	private static final long serialVersionUID = 1L;
+
+	@EJB
+	CarteDao dao;
 
 	protected void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException
 	{
@@ -23,7 +28,7 @@ public class EditCarteServlet extends DataAccessServlet
 		{
 			String id = request.getParameter( "ID" );
 
-			carte = getData().getCarte( id );
+			carte = dao.getCarte( id );
 			if( carte == null )
 			{
 				response.sendRedirect( "home" );
@@ -34,7 +39,7 @@ public class EditCarteServlet extends DataAccessServlet
 		}
 		else
 		{
-			carte = new Carte( "Pas de nom", "#000" );
+			carte = new Carte( "Nouvelle carte", "#000" );
 			titre = "Création d'une carte";
 		}
 
@@ -44,16 +49,25 @@ public class EditCarteServlet extends DataAccessServlet
 
 	protected void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException
 	{
-		Carte carte = getData().getCarte( request.getParameter( "ID" ) );
-		if( carte == null )
-		{
-			// Si on ne trouve pas la carte, c'est que l'on est en train de l'ajouter !
-			carte = new Carte( "", "" );
-			getData().ajouterCarte( carte );
-		}
+		String id = request.getParameter( "ID" );
+		String nom = request.getParameter( "NOM" );
+		String couleur = request.getParameter( "COULEUR" );
 
-		carte.setNom( request.getParameter( "NOM" ) );
-		carte.setCouleur( request.getParameter( "COULEUR" ) );
+		boolean ajout = id == null;
+
+		Carte carte;
+		if( ajout )
+			carte = new Carte();
+		else
+			carte = dao.getCarte( id );
+
+		carte.setNom( nom );
+		carte.setCouleur( couleur );
+
+		if( ajout )
+			dao.ajouterCarte( carte );
+		else
+			dao.sauverCarte( carte );
 
 		response.sendRedirect( "cartes" );
 	}

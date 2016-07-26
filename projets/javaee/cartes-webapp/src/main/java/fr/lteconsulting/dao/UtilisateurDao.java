@@ -1,92 +1,73 @@
 package fr.lteconsulting.dao;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import fr.lteconsulting.model.Utilisateur;
 
+@Stateless
 public class UtilisateurDao
 {
-	private static UtilisateurDao instance = new UtilisateurDao();
-
-	private UtilisateurDao()
-	{
-		Utilisateur rootUser = new Utilisateur();
-		rootUser.setId( 1 );
-		rootUser.setNom( "Tournier" );
-		rootUser.setPrenom( "Arnaud" );
-		rootUser.setAge( 24 );
-		rootUser.setLogin( "ltearno" );
-		rootUser.setMotDePasse( "ltearno" );
-
-		utilisateurs.add( rootUser );
-	}
-
-	public static UtilisateurDao get()
-	{
-		return instance;
-	}
-
-	private List<Utilisateur> utilisateurs = new ArrayList<>();
-
-	private int nextId = 4;
+	@PersistenceContext( name = "Cartes" )
+	EntityManager em;
 
 	public List<Utilisateur> getUtilisateurs()
 	{
-		return utilisateurs;
+		@SuppressWarnings( "unchecked" )
+		List<Utilisateur> result = (List<Utilisateur>) em.createQuery( "from Utilisateur" ).getResultList();
+		return result;
 	}
 
 	public void add( Utilisateur utilisateur )
 	{
-		utilisateur.setId( nextId++ );
-
-		utilisateurs.add( utilisateur );
+		em.persist( utilisateur );
 	}
 
 	public void save( Utilisateur utilisateur )
 	{
-		int index = indexOfUtilisateur( utilisateur.getId() );
-
-		if( index >= 0 )
-			utilisateurs.set( index, utilisateur );
+		em.merge( utilisateur );
 	}
 
 	public void delete( int id )
 	{
-		int index = indexOfUtilisateur( id );
-
-		if( index >= 0 )
-			utilisateurs.remove( index );
+		em.remove( em.find( Utilisateur.class, id ) );
 	}
 
 	public Utilisateur login( String login, String motDePasse )
 	{
-		for( Utilisateur u : utilisateurs )
+		Query query = em.createQuery( "from Utilisateur u where u.login=:login and u.motDePasse=:motDePasse" );
+		query.setParameter( "login", login );
+		query.setParameter( "motDePasse", motDePasse );
+
+		try
 		{
-			if( u.getLogin().equals( login ) && u.getMotDePasse().equals( motDePasse ) )
-				return u;
+			Utilisateur u = (Utilisateur) query.getSingleResult();
+			return u;
 		}
-
-		return null;
-	}
-
-	private int indexOfUtilisateur( int id )
-	{
-		for( int i = 0; i < utilisateurs.size(); i++ )
-			if( utilisateurs.get( i ).getId() == id )
-				return i;
-
-		return -1;
+		catch( NoResultException e )
+		{
+			return null;
+		}
 	}
 
 	public Utilisateur trouverUtilisateurParLogin( String login )
 	{
-		for( Utilisateur u : utilisateurs )
-		{
-			if( u.getLogin().equals( login ) )
-				return u;
-		}
+		Query query = em.createQuery( "from Utilisateur u where u.login=:login" );
+		query.setParameter( "login", login );
 
-		return null;
+		try
+		{
+			Utilisateur u = (Utilisateur) query.getSingleResult();
+			return u;
+		}
+		catch( NoResultException e )
+		{
+			return null;
+		}
 	}
 }

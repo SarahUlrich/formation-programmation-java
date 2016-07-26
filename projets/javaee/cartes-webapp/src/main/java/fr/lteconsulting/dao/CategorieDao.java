@@ -3,21 +3,13 @@ package fr.lteconsulting.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ejb.Stateless;
+
 import fr.lteconsulting.model.Categorie;
 
+@Stateless
 public class CategorieDao
 {
-	private static CategorieDao instance = new CategorieDao();
-	
-	private CategorieDao()
-	{
-	}
-	
-	public static CategorieDao get()
-	{
-		return instance;
-	}
-	
 	private int nextId = 1;
 
 	private List<Categorie> categories = new ArrayList<>();

@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
@@ -18,7 +19,8 @@ public class UtilisateurCrudBean implements Serializable
 {
 	private static final long serialVersionUID = 1L;
 
-	private UtilisateurDao dao = UtilisateurDao.get();
+	@EJB
+	UtilisateurDao utilisateurDao;
 
 	private Utilisateur item;
 
@@ -30,7 +32,7 @@ public class UtilisateurCrudBean implements Serializable
 
 	public List<Utilisateur> getUtilisateurs()
 	{
-		return dao.getUtilisateurs();
+		return utilisateurDao.getUtilisateurs();
 	}
 
 	public Utilisateur getItem()
@@ -52,14 +54,14 @@ public class UtilisateurCrudBean implements Serializable
 	{
 		if( item.getId() == null )
 		{
-			dao.add( item );
+			utilisateurDao.add( item );
 
 			FacesMessage message = new FacesMessage( "L'utilisateur a bien été ajouté !" );
 			FacesContext.getCurrentInstance().addMessage( null, message );
 		}
 		else
 		{
-			dao.save( item );
+			utilisateurDao.save( item );
 
 			FacesMessage message = new FacesMessage( "L'utilisateur a bien été modifié !" );
 			FacesContext.getCurrentInstance().addMessage( null, message );
@@ -80,6 +82,6 @@ public class UtilisateurCrudBean implements Serializable
 
 	public void delete( Utilisateur utilisateur )
 	{
-		dao.delete( utilisateur.getId() );
+		utilisateurDao.delete( utilisateur.getId() );
 	}
 }

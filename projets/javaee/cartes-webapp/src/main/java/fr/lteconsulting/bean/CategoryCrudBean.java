@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
@@ -18,7 +19,8 @@ public class CategoryCrudBean implements Serializable
 {
 	private static final long serialVersionUID = 1L;
 
-	private CategorieDao dao = CategorieDao.get();
+	@EJB
+	private CategorieDao dao;
 
 	private Categorie editedItem;
 

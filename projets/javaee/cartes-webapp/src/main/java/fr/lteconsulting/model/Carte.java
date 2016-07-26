@@ -1,16 +1,29 @@
 package fr.lteconsulting.model;
 
-import java.util.UUID;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
 public class Carte
 {
+	@Id
+	@GeneratedValue( generator = "system-uuid" )
+	@GenericGenerator( name = "system-uuid", strategy = "uuid" )
 	private String id;
+	
 	private String nom;
+	
 	private String couleur;
+	
+	public Carte()
+	{
+	}
 
 	public Carte( String nom, String couleur )
 	{
-		this.id = UUID.randomUUID().toString();
 		this.nom = nom;
 		this.couleur = couleur;
 	}
