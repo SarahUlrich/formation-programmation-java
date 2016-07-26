@@ -295,3 +295,19 @@ Puis proposez une interface en ligne de commande qui permette à l'utilisateur :
 ==== Exercice 5
 
 Continuer l'exercice précedent en chargeant la liste des disques et chansons à partir d'un fichier.
+
+
+== Exercice avec MySQL
+
+Créez un projet java maven de base (l'archétype est `maven-java-quickstart`).
+
+Ajoutez la dépendance suivante :
+
+[source]
+----
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.39</version>
+</dependency>
+----

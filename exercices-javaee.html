@@ -459,6 +459,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_installation_d_un_serveur_mysql">Installation d&#8217;un serveur MySQL</a></li>
 <li><a href="#_liaison_serveur_mysql_avec_wildfly">Liaison serveur MySQL avec WildFly</a></li>
+<li><a href="#_liaison_wildfly_avec_l_application">Liaison WildFly avec l&#8217;application</a></li>
+<li><a href="#_les_entités_jpa">Les entités JPA</a></li>
 </ul>
 </li>
 </ul>
@@ -1396,8 +1398,62 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 </div>
 </div>
 <div class="paragraph">
-<p>Vous avez ainsi créé une source de données appelée <code>CartesDS</code>, celle-ci est maintenant disponible aux applications qui en ont besoin !</p>
+<p>Vous avez ainsi créé une source de données appelée <code>CartesDS</code>, celle-ci est maintenant disponible aux applications qui en ont besoin ! La prochaine étape est donc d&#8217;utiliser cette base de données dans notre application <em>Cartes</em>.</p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_liaison_wildfly_avec_l_application">Liaison WildFly avec l&#8217;application</h3>
+<div class="paragraph">
+<p>Dans le fichier <code>pom.xml</code> de l&#8217;application, ajoutez les dépendances suivantes :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>&lt;!-- JPA API Persistence --&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;org.hibernate.javax.persistence&lt;/groupId&gt;
+	&lt;artifactId&gt;hibernate-jpa-2.1-api&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;org.hibernate&lt;/groupId&gt;
+	&lt;artifactId&gt;hibernate-annotations&lt;/artifactId&gt;
+	&lt;version&gt;3.5.6-Final&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dans le projet, avec Eclipse, créez un dossier <code>src/main/java/META-INF/</code>. Dans celui-ci, créez un fichier <code>persistence.xml</code> avec le contenu suivant :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+	                    http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"&gt;
+	&lt;persistence-unit name="Cartes" transaction-type="JTA"&gt;
+		&lt;jta-data-source&gt;CartesDS&lt;/jta-data-source&gt;
+
+		&lt;properties&gt;
+			&lt;!-- validate, update, create, create-drop --&gt;
+			&lt;property name="hibernate.hbm2ddl.auto" value="update" /&gt;
+			&lt;property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" /&gt;
+
+			&lt;property name="hibernate.show_sql" value="true" /&gt;
+			&lt;property name="hibernate.format_sql" value="true" /&gt;
+			&lt;property name="hibernate.use_sql_comments" value="true" /&gt;
+		&lt;/properties&gt;
+	&lt;/persistence-unit&gt;
+&lt;/persistence&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_les_entités_jpa">Les entités JPA</h3>
+<div class="paragraph">
+<p>Génération des ids avec uuid</p>
+</div>
+<div class="paragraph">
+<p>Aller dans <code>Preferences</code> &#8594; <code>Java Persistence</code> &#8594; <code>JPA</code> &#8594; <code>Errors/Warnings</code> <code>Queries and Generators</code> et changer <code>Generator is not defined in the persistence unit</code> pour le configurer en <em>warning</em> et non en <em>erreur</em>.</p>
 </div>
 </div>
 </div>
@@ -1405,7 +1461,7 @@ Il existe des méthodes plus évoluées pour permettre l&#8217;utilisation des d
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-26 09:20:53 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-26 10:19:08 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
