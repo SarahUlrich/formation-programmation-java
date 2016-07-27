@@ -118,19 +118,20 @@ void setLongueur( int valeur ) { ... }</code></pre></div></div>
 	&lt;servlet-name&gt;FacesServlet&lt;/servlet-name&gt;
 	&lt;url-pattern&gt;*.xhtml&lt;/url-pattern&gt;
 &lt;/servlet-mapping&gt;</code></pre></div></div></section><section id="_tutoriel"><h2>Tutoriel</h2><div class="paragraph"><p><a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf" class="bare">https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/premiers-pas-avec-jsf</a></p></div></section><section id="_gestion_de_formulaires"><h2>Gestion de formulaires</h2><div class="paragraph"><p><a href="https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-gestion-d-un-formulaire-avec-jsf" class="bare">https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-gestion-d-un-formulaire-avec-jsf</a></p></div></section></section>
-<section><section id="_jpa"><h2>JPA</h2></section><section id="_base_de_données"><h2>Base de données</h2><div class="paragraph"><p>Un outil pour :</p></div>
-<div class="ulist"><ul><li><p>structurer les données,</p></li><li><p>stocker les données,</p></li><li><p>interroger les données,</p></li><li><p>fournir l&#8217;intégrité des données.</p></li></ul></div></section><section id="_table"><h2>Table</h2><div class="paragraph"><p>Nous stockons les <strong>enregistrements</strong> dans des <strong>tables</strong> possédant une ou plusieurs <strong>colonnes</strong> :</p></div>
-<table class="tableblock frame-all grid-all" style="width:100%"><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead><tr><th class="tableblock halign-left valign-top">Nom</th><th class="tableblock halign-left valign-top">Prénom</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">Tournier</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Arnaud</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">Dupont</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Jean</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">Serres</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Mélanie</p></td></tr></tbody></table></section><section id="_clé"><h2>Clé</h2><div class="paragraph"><p>Les enregistrements sont repérés de façon sûre grâce aux <strong>identifiants</strong> aussi appelés <strong>clés primaire (PK)</strong>.</p></div>
+<section><section id="_jpa"><h2>JPA</h2></section><section id="_systèmes_de_gestion_de_base_de_données_relationnelles"><h2>Systèmes de gestion de base de données relationnelles</h2><div class="paragraph"><p>Un outil pour :</p></div>
+<div class="ulist"><ul><li><p><strong>structurer</strong>,</p></li><li><p><strong>stocker</strong>,</p></li><li><p><strong>interroger</strong>,</p></li><li><p>et garantir l'<strong>intégrité</strong> des données.</p></li></ul></div></section><section id="_service"><h2>Service</h2><div class="paragraph"><p>Le SGBD est un processus actif sur une machine. Il ouvre des ports de communication.</p></div>
+<div class="paragraph"><p>Et les applications s&#8217;y connectent.</p></div></section><section id="_table"><h2>Table</h2><div class="paragraph"><p>Nous stockons les <strong>enregistrements</strong> dans des <strong>tables</strong> possédant une ou plusieurs <strong>colonnes</strong> :</p></div>
+<table class="tableblock frame-all grid-all" style="width:100%"><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead><tr><th class="tableblock halign-left valign-top">Nom</th><th class="tableblock halign-left valign-top">Prénom</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">Tournier</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Arnaud</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">Dupont</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Jean</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">Serres</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Mélanie</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">Dupont</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Jean</p></td></tr></tbody></table></section><section id="_clé"><h2>Clé</h2><div class="paragraph"><p>Les enregistrements sont repérés de façon sûre grâce aux <strong>identifiants</strong> aussi appelés <strong>clés primaire (PK)</strong>.</p></div>
 <div class="paragraph"><p>Chaque identifiant est <strong>unique</strong>.</p></div>
-<table class="tableblock frame-all grid-all" style="width:100%"><colgroup><col style="width:33.3333%"><col style="width:33.3333%"><col style="width:33.3334%"></colgroup><thead><tr><th class="tableblock halign-left valign-top">ID</th><th class="tableblock halign-left valign-top">Nom</th><th class="tableblock halign-left valign-top">Prénom</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Tournier</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Arnaud</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Dupont</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Jean</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Serres</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Mélanie</p></td></tr></tbody></table></section><section id="_clé_étrangère"><h2>Clé étrangère</h2><div class="paragraph"><p>Pour relier les enregistrements entre eux, on utilise les <strong>clés étrangères</strong> :</p></div>
-<table class="tableblock frame-all grid-all" style="width:100%"><colgroup><col style="width:25%"><col style="width:25%"><col style="width:25%"><col style="width:25%"></colgroup><thead><tr><th class="tableblock halign-left valign-top">ID</th><th class="tableblock halign-left valign-top">Entreprise_ID</th><th class="tableblock halign-left valign-top">Nom</th><th class="tableblock halign-left valign-top">Prénom</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Tournier</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Arnaud</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Dupont</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Jean</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Serres</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Mélanie</p></td></tr></tbody></table></section><section id="_sql_ddl"><h2>SQL DDL</h2><div class="paragraph"><p>Langage permettant de définir la structure des données dans la base de données.</p></div>
+<table class="tableblock frame-all grid-all" style="width:100%"><colgroup><col style="width:33.3333%"><col style="width:33.3333%"><col style="width:33.3334%"></colgroup><thead><tr><th class="tableblock halign-left valign-top">ID</th><th class="tableblock halign-left valign-top">Nom</th><th class="tableblock halign-left valign-top">Prénom</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Tournier</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Arnaud</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Dupont</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Jean</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Serres</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Mélanie</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Dupont</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Jean</p></td></tr></tbody></table></section><section id="_clé_étrangère"><h2>Clé étrangère</h2><div class="paragraph"><p>Pour relier les enregistrements entre eux, on utilise les <strong>clés étrangères</strong> :</p></div>
+<table class="tableblock frame-all grid-all" style="width:100%"><colgroup><col style="width:25%"><col style="width:25%"><col style="width:25%"><col style="width:25%"></colgroup><thead><tr><th class="tableblock halign-left valign-top">ID</th><th class="tableblock halign-left valign-top">Entreprise_ID</th><th class="tableblock halign-left valign-top">Nom</th><th class="tableblock halign-left valign-top">Prénom</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Tournier</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Arnaud</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Dupont</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Jean</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Serres</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Mélanie</p></td></tr></tbody></table></section><section id="_ddl"><h2>DDL</h2><div class="paragraph"><p>Langage permettant de définir la structure des données dans la base de données.</p></div>
 <div class="listingblock"><div class="content"><pre class="highlight"><code class="sql language-sql">CREATE TABLE IF NOT EXISTS `personne` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` text COLLATE utf8_bin NOT NULL,
   `prenom` varchar(50) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1;</code></pre></div></div></section><section id="_sql"><h2>SQL</h2><div class="paragraph"><p>Language permettant d&#8217;interroger, de créer et de manipuler les données, une fois la structure définie.</p></div>
-<div class="paragraph"><p>Voyons quelques exemples&#8230;&#8203;</p></div></section><section id="_insert"><h2>Insert</h2><div class="paragraph"><p>Insérer un enregistrement dans une table :</p></div>
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1;</code></pre></div></div></section><section id="_sql"><h2>SQL</h2><div class="paragraph"><p>Langage permettant d&#8217;interroger, de créer, supprimer et manipuler les données, en fonction de la structure définie.</p></div>
+<div class="paragraph"><p>Quelques exemples&#8230;&#8203;</p></div></section><section id="_insert"><h2>Insert</h2><div class="paragraph"><p>Insérer un enregistrement dans une table :</p></div>
 <div class="listingblock"><div class="content"><pre class="highlight"><code class="sql language-sql">INSERT INTO `personne` (`nom`, `prenom`) VALUES ('Tournier', 'Arnaud');</code></pre></div></div>
 <div class="paragraph"><p>Dans cette table, l&#8217;identifiant est généré automatiquement&#8230;&#8203;</p></div></section><section id="_update"><h2>Update</h2><div class="paragraph"><p>Mise à jour d&#8217;un ou des enregistrements :</p></div>
 <div class="listingblock"><div class="content"><pre class="highlight"><code class="sql language-sql">UPDATE `personne` SET `nom`="Toto", `prenom`="Titi" WHERE id=1;</code></pre></div></div></section><section id="_delete"><h2>Delete</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="sql language-sql">DELETE FROM `personne` WHERE nom LIKE "To%";</code></pre></div></div></section><section id="_select"><h2>Select</h2><div class="paragraph"><p>L&#8217;opération la plus utilisée : pour consulter la base de données</p></div>
@@ -139,10 +140,10 @@ void setLongueur( int valeur ) { ... }</code></pre></div></div>
 
 SELECT p.id, p.nom, e.nom, e.adresse FROM `personne` p LEFT JOIN `entreprise` e ON p.entreprise_id=e.id;</code></pre></div></div></section><section id="_transactions"><h2>Transactions</h2><div class="paragraph"><p>On souhaite pouvoir exécuter une suite d&#8217;instruction de manière <strong>atomique</strong> et <strong>cohérente</strong> (voir les propriétés <em>ACID</em>).</p></div>
 <div class="listingblock"><div class="content"><pre class="highlight"><code class="sql language-sql">START TRANSACTION;
-COMMIT;
-ROLLBACK;</code></pre></div></div>
+COMMIT; // on valide ou...
+ROLLBACK; // on annule</code></pre></div></div>
 <div class="paragraph"><p><em>Interblocage ?</em></p></div></section><section id="_bien_plus"><h2>Bien plus&#8230;&#8203;</h2><div class="paragraph"><p>Le langage SQL est extrêmement riche, nous avons à peine gratté la surface&#8230;&#8203;</p></div>
-<div class="paragraph"><p>Voici un <a href="http://sql.sh/">cours et tutoriel</a> pour aller plus loin.</p></div></section><section id="_quelques_serveurs_sql"><h2>Quelques serveurs SQL</h2><div class="paragraph"><p>De nombreuses implémentations existent, avec parfois quelques variantes dans le <em>dialecte</em> SQL : MySQL, MariaDB, Oracle, PostgreSQL, Microsoft SQL Server, SQLite, &#8230;&#8203;</p></div></section><section id="_accès_depuis_un_programme_java"><h2>Accès depuis un programme Java</h2><div class="paragraph"><p>L&#8217;accès le plus bas niveau avec Java se fait à travers le <em>driver JDBC</em> adapté au serveur auquel on se connecte.</p></div></section><section id="_charger_le_driver_adapté"><h2>Charger le driver adapté</h2><div class="paragraph"><p>La classe doit être présente dans le <em>classpath</em>&#8230;&#8203;</p></div>
+<div class="paragraph"><p>Voici un <a href="http://sql.sh/">cours et tutoriel</a> pour aller plus loin.</p></div></section><section id="_quelques_serveurs_sql"><h2>Quelques serveurs SQL</h2><div class="paragraph"><p>De nombreuses implémentations existent, avec parfois quelques variantes dans le <em>dialecte</em> SQL : MySQL, MariaDB, Oracle, PostgreSQL, Microsoft SQL Server, SQLite, &#8230;&#8203;</p></div></section><section id="_important"><h2>Important !</h2><div class="ulist"><ul><li><p>Un SGBD peut gérer plusieurs <em>bases de données</em>,</p></li><li><p>Une base de données peut contenir plusieurs <em>tables</em>,</p></li><li><p>Une table possède plusieurs <em>colonnes</em>.</p></li><li><p>Les enregistrements sont repérés par leur <em>clé primaire</em>,</p></li><li><p>On référence un enregistrement à partir d&#8217;un autre avec une <em>clé étrangère</em>.</p></li><li><p>SQL garantit la cohérence des données avec les <em>transactions</em>.</p></li></ul></div></section><section id="_accès_depuis_un_programme_java"><h2>Accès depuis un programme Java</h2><div class="paragraph"><p>L&#8217;accès le plus bas niveau avec Java se fait à travers le <em>driver JDBC</em> adapté au serveur auquel on se connecte.</p></div></section><section id="_charger_le_driver_adapté"><h2>Charger le driver adapté</h2><div class="paragraph"><p>La classe doit être présente dans le <em>classpath</em>&#8230;&#8203;</p></div>
 <div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">try
 {
 	Class.forName( "com.mysql.jdbc.Driver" );
@@ -179,7 +180,108 @@ Statement statement = conn.createStatement();
 
 // on valide la transaction
 conn.commit();
-// on aurait pu l'annuler avec 'conn.rollback()'</code></pre></div></div></section><section id="_plus_de_jdbc"><h2>Plus de JDBC</h2><div class="paragraph"><p>Pour aller plus loin avec JDBC, consulez la <a href="https://docs.oracle.com/javase/tutorial/jdbc/basics/">documentation officielle</a>.</p></div></section></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script type="text/javascript">// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+// on aurait pu l'annuler avec 'conn.rollback()'</code></pre></div></div></section><section id="_plus_de_jdbc"><h2>Plus de JDBC</h2><div class="paragraph"><p>Pour aller plus loin avec JDBC, consulez la <a href="https://docs.oracle.com/javase/tutorial/jdbc/basics/">documentation officielle</a>.</p></div></section><section id="_orm"><h2>ORM</h2><div class="paragraph"><p>L&#8217;écriture du code SQL et DDL est fastidieuse et répétitive. Les _ORM_s sont une sur-couche qui permettent un accès au SGBD plus conforme à la vision objet.</p></div>
+<div class="paragraph"><p>L&#8217;ORM prend en charge la communication avec le SGBD et fourni à l&#8217;application une <em>API</em> de plus haut niveau.</p></div></section><section id="_jpa_2"><h2>JPA</h2><div class="ulist"><ul><li><p>Java Persistence API,</p></li><li><p><a href="https://jcp.org/en/jsr/detail?id=317">JSR 317</a>,</p></li><li><p><em>Entity manager</em> et <em>Entités</em>,</p></li><li><p>langage <em>JPQL</em>&#8230;&#8203;</p></li><li><p>package <code>javax.persistence</code>.</p></li></ul></div></section><section id="_fournisseurs"><h2>Fournisseurs</h2><div class="paragraph"><p>Plusieurs implémentations : Hibernate, Toplink, DataNucleus, &#8230;&#8203;</p></div></section><section id="__entity"><h2>@Entity</h2><div class="ulist"><ul><li><p>Classe dont l&#8217;état est sauvegardé dans une <em>table</em>.</p></li><li><p>Chaque instance correspond à un <em>enregistrement</em>.</p></li><li><p>Les attributs correspondent aux colonnes.</p></li><li><p>Les relations sont exprimées avec des annotations (ou xml).</p></li></ul></div></section><section id="__id"><h2>@Id</h2><div class="paragraph"><p>Dénote l&#8217;attribut utilisé comme clé primaire.</p></div>
+<div class="paragraph"><p>On précise la stratégie de génération des identifiants.</p></div></section><section id="_exemple_3"><h2>Exemple</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Entity
+public class Utilisateur implements Serializable
+{
+	@Id
+	@GeneratedValue( strategy = GenerationType.IDENTITY )
+	private Integer id;
+
+	@NotNull
+	private String nom;
+
+	// méthodes, getters, setters
+}</code></pre></div></div></section><section id="_entity_manager"><h2>Entity Manager</h2><div class="paragraph"><p>Une instance de la classe <code>EntityManager</code> fait le lien entre les données de la base et les objets <em>entités</em>.</p></div>
+<div class="paragraph"><p>Opérations essentielles : <code>persist</code>, <code>merge</code>, <code>remove</code>, <code>find</code>, <code>createQuery</code>&#8230;&#8203;</p></div>
+<div class="paragraph"><p>Objets détachés&#8230;&#8203;</p></div></section><section id="_persist"><h2>Persist</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">public void add( Utilisateur utilisateur )
+{
+	em.persist( utilisateur );
+}</code></pre></div></div></section><section id="_merge"><h2>Merge</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">public Utilisateur save( Utilisateur utilisateur )
+{
+	return em.merge( utilisateur );
+}</code></pre></div></div></section><section id="_find"><h2>Find</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">public Utilisateur findById( int id )
+{
+	return em.find( Utilisateur.class, id );
+}</code></pre></div></div></section><section id="_remove"><h2>Remove</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">public void delete( Utilisateur utilisateur )
+{
+	em.remove( utilisateur );
+}</code></pre></div></div></section><section id="_jpql"><h2>JPQL</h2><div class="paragraph"><p>Langage inspiré par SQL qui est pensé avec le paradigme objet.</p></div></section><section id="_create_query"><h2>Create Query</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">public Utilisateur findByLogin( String login, String motDePasse )
+{
+	Query query = em.createQuery( "from Utilisateur u where u.login=:login and u.motDePasse=:motDePasse" );
+
+	query.setParameter( "login", login );
+	query.setParameter( "motDePasse", motDePasse );
+
+	Utilisateur u = (Utilisateur) query.getSingleResult();
+	return u;
+}</code></pre></div></div></section><section id="_create_query_2"><h2>Create Query</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">public List&lt;Utilisateur&gt; getUtilisateurs()
+{
+	Query query = em.createQuery( "from Utilisateur" );
+
+	List&lt;Utilisateur&gt; result = (List&lt;Utilisateur&gt;) query.getResultList();
+
+	return result;
+}</code></pre></div></div></section><section id="_criteria_api"><h2>Criteria API</h2><div class="paragraph"><p>Il y a aussi une <a href="http://docs.oracle.com/javaee/6/tutorial/doc/gjitv.html">API</a> pour éviter le <em>JPQL</em> et construire les requêtes programmatiquement.</p></div></section><section id="_requêtes_nommées"><h2>Requêtes nommées</h2></section><section id="_relations"><h2>Relations</h2><div class="paragraph"><p>JPA gère les relations entre enregistrements et donc entre entités.</p></div>
+<div class="paragraph"><p><a href="http://docs.oracle.com/javaee/7/tutorial/persistence-intro001.htm#BNBQA">voir ce site</a></p></div></section><section id="__onetoone"><h2>@OneToOne</h2></section><section id="__onetomany"><h2>@OneToMany</h2></section><section id="__manytoone"><h2>@ManyToOne</h2></section><section id="__manytomany"><h2>@ManyToMany</h2></section><section id="_utilisation_standalone"><h2>Utilisation standalone</h2><div class="paragraph"><p>Il est possible d&#8217;utiliser JPA indépendamment d&#8217;un serveur d&#8217;application Java EE.</p></div></section><section id="_dans_une_application_javaee"><h2>Dans une application JavaEE</h2><div class="paragraph"><p>JPA est totalement intégré au fonctionnement d&#8217;une application Java EE.</p></div>
+<div class="paragraph"><p>Plusieurs éléments de configuration sont nécessaires&#8230;&#8203;</p></div></section><section id="_sources_de_données"><h2>Sources de données</h2><div class="paragraph"><p>Les <em>Data source</em> sont configurées dans le serveur d&#8217;application. On y précise le <em>driver</em>, l'<em>url de connexion</em> et les information d'<em>authentification</em>.</p></div>
+<div class="paragraph"><p>Chaque implémentation se configure différemment.</p></div></section><section id="_fichier_persistence"><h2>Fichier persistence</h2><div class="paragraph"><p><code>META-INF/persistence.xml</code></p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="xml language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"&gt;
+	&lt;persistence-unit name="Cartes" transaction-type="JTA"&gt; <b>(1)</b>
+		&lt;jta-data-source&gt;CartesDS&lt;/jta-data-source&gt;
+
+		&lt;properties&gt;
+			&lt;property name="hibernate.hbm2ddl.auto" value="update" /&gt;
+			&lt;property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" /&gt;
+		&lt;/properties&gt;
+	&lt;/persistence-unit&gt;
+&lt;/persistence&gt;</code></pre></div></div>
+<div class="colist arabic"><ol><li><p>Type de transaction JTA</p></li></ol></div></section><section id="_ejb"><h2>EJB</h2><div class="ulist"><ul><li><p><strong>Composants</strong> logiciels (métier) de base de Java EE.</p></li><li><p>Naturellement <strong>distribué</strong>.</p></li><li><p>Evoluent dans un milieu <strong>transactionnel</strong>.</p></li></ul></div></section><section id="_plusieurs_types"><h2>Plusieurs types</h2><div class="ulist"><ul><li><p><code>@Local</code> ou <code>@Remote</code>,</p></li><li><p><code>@Stateful</code> ou <code>@Stateless</code>,</p></li><li><p>EJB Message.</p></li><li><p>Enregistré dans JNDI.</p></li></ul></div></section><section id="_création_d_un_ejb"><h2>Création d&#8217;un EJB</h2><div class="paragraph"><p>Soit une interface (<code>@Remote</code> ou <code>@Local</code>) et une classe, soit depuis EJB 3 une seule classe :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">// un EJB de session sans état
+@Stateless
+public class MonEJB {
+	// par exemple :
+	@PostConstruct
+	void onInit() {
+	}
+}</code></pre></div></div></section><section id="_injection_de_dépendances"><h2>Injection de dépendances</h2><div class="paragraph"><p>Le serveur d&#8217;application peut injecter des composants en utilisant les annotations :</p></div>
+<div class="ulist"><ul><li><p><code>@EJB</code> : un autre EJB,</p></li><li><p><code>@Resource</code> : une resource JNDI (EntityManager, UserTransaction, SessionContext, &#8230;&#8203;),</p></li></ul></div></section><section id="_exemple_4"><h2>Exemple</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Stateless( mappedName = "MarinService" )
+public class MarinServiceImpl implements MarinService {
+	@Resource
+	private UserTransaction transaction;
+
+	@Resource( mappedName = "jdbc/CartesDS" )
+	private DataSource dataSource;
+
+	@PersistenceContext( unitName = "CartesDS" )
+	private EntityManager em;
+
+	// ...
+}</code></pre></div></div></section><section id="_injection_de_l_unité_de_persistence"><h2>Injection de l&#8217;unité de persistence</h2><div class="paragraph"><p>Au sein d&#8217;un <em>EJB</em>, on peut injecter une instance de l'`EntityManager` :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Stateless
+public class ProduitDao
+{
+	@PersistenceContext( name = "SiteDeVente" )
+	EntityManager em;
+
+	// ...
+	// utilisation de l'EntityManager
+}</code></pre></div></div></section><section id="_injection_du_dao"><h2>Injection du DAO</h2><div class="paragraph"><p>Au sein d&#8217;une servlet ou d&#8217;un <em>Managed Bean</em>, il est possible d&#8217;injecter une instance de l&#8217;EJB :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@ManagedBean
+@ViewScoped
+public class ProduitsBean implements Serializable
+{
+	@EJB
+	ProduitDao produitDao;
+
+	// ...
+	// utilisation du DAO
+}</code></pre></div></div></section><section id="_gestion_de_la_transaction"><h2>Gestion de la transaction</h2><div class="paragraph"><p>Les méthodes EJB s&#8217;exécutent dans un contexte <em>transactionnel</em>. Une transaction est (toujours) ouverte (automatiquement).</p></div>
+<div class="paragraph"><p>Le comportement est modifiable avec <code>@TransactionAttribute</code>.</p></div>
+<div class="paragraph"><p>Si une exception surgit hors de la méthode, la transaction est abandonnée (<em>rollback</em>).</p></div></section><section id="_pattern_dao"><h2>Pattern DAO</h2><div class="dlist"><dl><dt class="hdlist1">DAO</dt><dd><p>Data Access Object ayant la responsabilité de fournir les données.
+C&#8217;est lui qui accède à l'`EntityManager`.</p></dd></dl></div></section><section id="_organisation_en_couches"><h2>Organisation en couches</h2><div class="paragraph"><p>Données, Métier, Présentation&#8230;&#8203;</p></div></section></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script type="text/javascript">// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
   controls: true,

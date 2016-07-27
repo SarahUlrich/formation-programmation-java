@@ -305,38 +305,15 @@ Créez une base de donnée `exercice_sql` avec une table `cartes` contenant les 
 - nom : type TEXT
 - couleur : type TEXT
 
-Ajoutez à la main quelques enregistrements dans cette table.
-
-Créez un projet java maven à partir de l'archétype quickstart.
-
-Ajoutez la dépendance suivante :
-
-[source]
-----
-<dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-java</artifactId>
-    <version>5.1.39</version>
-</dependency>
-----
-
-Ajouter les propriétés suivantes :
-
-[source]
-----
-<properties>
-	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<maven.compiler.source>1.8</maven.compiler.source>
-	<maven.compiler.target>1.8</maven.compiler.target>
-</properties>
-----
+Partez du projet `mysql-java` (http://lteconsulting.fr/java/mysql-java.zip).
 
 Dans la classe `App`, implémentez ceci :
 
 - Chargement du driver JDBC,
-- Connexion à la base de donnée créée pour cette application (`cartes`),
+- Connexion à la base de donnée créée pour cette application (`exercice_sql`),
+- Une méthode `ajouterCarte( String nom, String couleur, Connection conn )` qui ajoute une carte dans la base de données,
 - Une requête `SELECT` qui charge _toutes_ les cartes et qui les affiche,
-- Une méthode qui ajoute une carte aléatoire dans la base de données,
-- Une méthode qui met à jour une ou plusieurs cartes,
+- Une classe `Carte` avec les attributs `id`, `nom` et `couleur`, setters et getters,
 - Reprenez la méthode qui fait le `SELECT`, et faites en sorte que celle-ci retourne maintenant une `List<Carte>` (vous créerez la classe `Carte` pour l'occasion,
+- Une méthode qui met à jour une carte (elle prend l'id de la carte à mettre à jour en paramètre),
 - Une méthode méthode qui prend un objet `Carte` en paramètre et qui met à jour l'enregistrement en base de données à partir des valeurs des attributs de l'objet (on utilise l'attribut `id` pour savoir quel enregistrement mettre à jour...).

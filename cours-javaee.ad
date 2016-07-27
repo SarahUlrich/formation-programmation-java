@@ -438,14 +438,20 @@ https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-g
 
 == JPA
 
-=== Base de données
+=== Systèmes de gestion de base de données relationnelles
 
 Un outil pour :
 
-- structurer les données,
-- stocker les données,
-- interroger les données,
-- fournir l'intégrité des données.
+- **structurer**,
+- **stocker**,
+- **interroger**,
+- et garantir l'**intégrité** des données.
+
+=== Service
+
+Le SGBD est un processus actif sur une machine. Il ouvre des ports de communication.
+
+Et les applications s'y connectent.
 
 === Table
 
@@ -464,6 +470,9 @@ Nous stockons les **enregistrements** dans des **tables** possédant une ou plus
 
 |Serres
 |Mélanie
+
+|Dupont
+|Jean
 |===
 
 === Clé
@@ -486,9 +495,13 @@ Chaque identifiant est **unique**.
 |Dupont
 |Jean
 
-|4
+|7
 |Serres
 |Mélanie
+
+|4
+|Dupont
+|Jean
 |===
 
 === Clé étrangère
@@ -518,7 +531,7 @@ Pour relier les enregistrements entre eux, on utilise les **clés étrangères**
 |Mélanie
 |===
 
-=== SQL DDL
+=== DDL
 
 Langage permettant de définir la structure des données dans la base de données.
 
@@ -534,9 +547,9 @@ CREATE TABLE IF NOT EXISTS `personne` (
 
 === SQL
 
-Language permettant d'interroger, de créer et de manipuler les données, une fois la structure définie.
+Langage permettant d'interroger, de créer, supprimer et manipuler les données, en fonction de la structure définie.
 
-Voyons quelques exemples...
+Quelques exemples...
 
 === Insert
 
@@ -592,8 +605,8 @@ On souhaite pouvoir exécuter une suite d'instruction de manière **atomique** e
 [source,language="sql"]
 ----
 START TRANSACTION;
-COMMIT;
-ROLLBACK;
+COMMIT; // on valide ou...
+ROLLBACK; // on annule
 ----
 
 _Interblocage ?_
@@ -607,6 +620,15 @@ Voici un http://sql.sh/[cours et tutoriel] pour aller plus loin.
 === Quelques serveurs SQL
 
 De nombreuses implémentations existent, avec parfois quelques variantes dans le _dialecte_ SQL : MySQL, MariaDB, Oracle, PostgreSQL, Microsoft SQL Server, SQLite, ...
+
+=== Important !
+
+- Un SGBD peut gérer plusieurs _bases de données_,
+- Une base de données peut contenir plusieurs _tables_,
+- Une table possède plusieurs _colonnes_.
+- Les enregistrements sont repérés par leur _clé primaire_,
+- On référence un enregistrement à partir d'un autre avec une _clé étrangère_.
+- SQL garantit la cohérence des données avec les _transactions_.
 
 === Accès depuis un programme Java
 
@@ -684,3 +706,297 @@ conn.commit();
 === Plus de JDBC
 
 Pour aller plus loin avec JDBC, consulez la https://docs.oracle.com/javase/tutorial/jdbc/basics/[documentation officielle].
+
+=== ORM
+
+L'écriture du code SQL et DDL est fastidieuse et répétitive. Les _ORM_s sont une sur-couche qui permettent un accès au SGBD plus conforme à la vision objet.
+
+L'ORM prend en charge la communication avec le SGBD et fourni à l'application une _API_ de plus haut niveau.
+
+=== JPA
+
+- Java Persistence API,
+- https://jcp.org/en/jsr/detail?id=317[JSR 317],
+- _Entity manager_ et _Entités_,
+- langage _JPQL_...
+- package `javax.persistence`.
+
+=== Fournisseurs
+
+Plusieurs implémentations : Hibernate, Toplink, DataNucleus, ...
+
+=== @Entity
+
+- Classe dont l'état est sauvegardé dans une _table_.
+- Chaque instance correspond à un _enregistrement_.
+- Les attributs correspondent aux colonnes.
+- Les relations sont exprimées avec des annotations (ou xml).
+
+=== @Id
+
+Dénote l'attribut utilisé comme clé primaire.
+
+On précise la stratégie de génération des identifiants.
+
+=== Exemple
+
+[source,language="java"]
+----
+@Entity
+public class Utilisateur implements Serializable
+{
+	@Id
+	@GeneratedValue( strategy = GenerationType.IDENTITY )
+	private Integer id;
+
+	@NotNull
+	private String nom;
+	
+	// méthodes, getters, setters
+}
+----
+
+=== Entity Manager
+
+Une instance de la classe `EntityManager` fait le lien entre les données de la base et les objets _entités_.
+
+Opérations essentielles : `persist`, `merge`, `remove`, `find`, `createQuery`...
+
+Objets détachés...
+
+=== Persist
+
+[source,language="java"]
+----
+public void add( Utilisateur utilisateur )
+{
+	em.persist( utilisateur );
+}
+----
+
+=== Merge
+
+[source,language="java"]
+----
+public Utilisateur save( Utilisateur utilisateur )
+{
+	return em.merge( utilisateur );
+}
+----
+
+=== Find
+
+[source,language="java"]
+----
+public Utilisateur findById( int id )
+{
+	return em.find( Utilisateur.class, id );
+}
+----
+
+=== Remove
+
+[source,language="java"]
+----
+public void delete( Utilisateur utilisateur )
+{
+	em.remove( utilisateur );
+}
+----
+
+=== JPQL
+
+Langage inspiré par SQL qui est pensé avec le paradigme objet.
+
+=== Create Query
+
+[source,language="java"]
+----
+public Utilisateur findByLogin( String login, String motDePasse )
+{
+	Query query = em.createQuery( "from Utilisateur u where u.login=:login and u.motDePasse=:motDePasse" );
+	
+	query.setParameter( "login", login );
+	query.setParameter( "motDePasse", motDePasse );
+
+	Utilisateur u = (Utilisateur) query.getSingleResult();
+	return u;
+}
+----
+
+=== Create Query
+
+[source,language="java"]
+----
+public List<Utilisateur> getUtilisateurs()
+{
+	Query query = em.createQuery( "from Utilisateur" );
+	
+	List<Utilisateur> result = (List<Utilisateur>) query.getResultList();
+	
+	return result;
+}
+----
+
+=== Criteria API
+
+Il y a aussi une http://docs.oracle.com/javaee/6/tutorial/doc/gjitv.html[API] pour éviter le _JPQL_ et construire les requêtes programmatiquement.
+
+=== Requêtes nommées
+
+=== Relations
+
+JPA gère les relations entre enregistrements et donc entre entités.
+
+http://docs.oracle.com/javaee/7/tutorial/persistence-intro001.htm#BNBQA[voir ce site]
+
+=== @OneToOne
+
+=== @OneToMany
+
+=== @ManyToOne
+
+=== @ManyToMany
+
+=== Utilisation standalone
+
+Il est possible d'utiliser JPA indépendamment d'un serveur d'application Java EE.
+
+=== Dans une application JavaEE
+
+JPA est totalement intégré au fonctionnement d'une application Java EE.
+
+Plusieurs éléments de configuration sont nécessaires...
+
+=== Sources de données
+
+Les _Data source_ sont configurées dans le serveur d'application. On y précise le _driver_, l'_url de connexion_ et les information d'_authentification_.
+
+Chaque implémentation se configure différemment.
+
+=== Fichier persistence
+
+`META-INF/persistence.xml`
+
+[source,language="xml"]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="Cartes" transaction-type="JTA"> <1>
+		<jta-data-source>CartesDS</jta-data-source>
+
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+		</properties>
+	</persistence-unit>
+</persistence>
+----
+<1> Type de transaction JTA
+
+=== EJB
+
+- **Composants** logiciels (métier) de base de Java EE.
+- Naturellement **distribué**.
+- Evoluent dans un milieu **transactionnel**.
+
+=== Plusieurs types
+
+- `@Local` ou `@Remote`,
+- `@Stateful` ou `@Stateless`,
+- EJB Message.
+- Enregistré dans JNDI.
+
+=== Création d'un EJB
+
+Soit une interface (`@Remote` ou `@Local`) et une classe, soit depuis EJB 3 une seule classe :
+
+[source,language="java"]
+----
+// un EJB de session sans état
+@Stateless
+public class MonEJB {
+	// par exemple :
+	@PostConstruct
+	void onInit() {
+	}
+}
+----
+
+=== Injection de dépendances
+
+Le serveur d'application peut injecter des composants en utilisant les annotations :
+
+- `@EJB` : un autre EJB,
+- `@Resource` : une resource JNDI (EntityManager, UserTransaction, SessionContext, ...),
+
+=== Exemple
+
+[source,language="java"]
+----
+@Stateless( mappedName = "MarinService" )
+public class MarinServiceImpl implements MarinService {
+	@Resource
+	private UserTransaction transaction;
+
+	@Resource( mappedName = "jdbc/CartesDS" )
+	private DataSource dataSource;
+
+	@PersistenceContext( unitName = "CartesDS" )
+	private EntityManager em;
+
+	// ...
+}
+----
+
+=== Injection de l'unité de persistence
+
+Au sein d'un _EJB_, on peut injecter une instance de l'`EntityManager` :
+
+[source,language="java"]
+----
+@Stateless
+public class ProduitDao
+{
+	@PersistenceContext( name = "SiteDeVente" )
+	EntityManager em;
+	
+	// ...
+	// utilisation de l'EntityManager
+}
+----
+
+=== Injection du DAO
+
+Au sein d'une servlet ou d'un _Managed Bean_, il est possible d'injecter une instance de l'EJB :
+
+[source,language="java"]
+----
+@ManagedBean
+@ViewScoped
+public class ProduitsBean implements Serializable
+{
+	@EJB
+	ProduitDao produitDao;
+
+	// ...
+	// utilisation du DAO
+}
+----
+
+=== Gestion de la transaction
+
+Les méthodes EJB s'exécutent dans un contexte _transactionnel_. Une transaction est (toujours) ouverte (automatiquement).
+
+Le comportement est modifiable avec `@TransactionAttribute`.
+
+Si une exception surgit hors de la méthode, la transaction est abandonnée (_rollback_).
+
+=== Pattern DAO
+
+DAO:: Data Access Object ayant la responsabilité de fournir les données.
+C'est lui qui accède à l'`EntityManager`.
+
+=== Organisation en couches
+
+Données, Métier, Présentation...

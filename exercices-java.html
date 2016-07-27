@@ -940,34 +940,7 @@ AFFICHER Math nul ou le gagnant</pre>
 </ul>
 </div>
 <div class="paragraph">
-<p>Ajoutez à la main quelques enregistrements dans cette table.</p>
-</div>
-<div class="paragraph">
-<p>Créez un projet java maven à partir de l&#8217;archétype quickstart.</p>
-</div>
-<div class="paragraph">
-<p>Ajoutez la dépendance suivante :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code>&lt;dependency&gt;
-    &lt;groupId&gt;mysql&lt;/groupId&gt;
-    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
-    &lt;version&gt;5.1.39&lt;/version&gt;
-&lt;/dependency&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Ajouter les propriétés suivantes :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code>&lt;properties&gt;
-	&lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
-	&lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;
-	&lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;
-&lt;/properties&gt;</code></pre>
-</div>
+<p>Partez du projet <code>mysql-java</code> (<a href="http://lteconsulting.fr/java/mysql-java.zip" class="bare">http://lteconsulting.fr/java/mysql-java.zip</a>).</p>
 </div>
 <div class="paragraph">
 <p>Dans la classe <code>App</code>, implémentez ceci :</p>
@@ -978,19 +951,22 @@ AFFICHER Math nul ou le gagnant</pre>
 <p>Chargement du driver JDBC,</p>
 </li>
 <li>
-<p>Connexion à la base de donnée créée pour cette application (<code>cartes</code>),</p>
+<p>Connexion à la base de donnée créée pour cette application (<code>exercice_sql</code>),</p>
+</li>
+<li>
+<p>Une méthode <code>ajouterCarte( String nom, String couleur, Connection conn )</code> qui ajoute une carte dans la base de données,</p>
 </li>
 <li>
 <p>Une requête <code>SELECT</code> qui charge <em>toutes</em> les cartes et qui les affiche,</p>
 </li>
 <li>
-<p>Une méthode qui ajoute une carte aléatoire dans la base de données,</p>
-</li>
-<li>
-<p>Une méthode qui met à jour une ou plusieurs cartes,</p>
+<p>Une classe <code>Carte</code> avec les attributs <code>id</code>, <code>nom</code> et <code>couleur</code>, setters et getters,</p>
 </li>
 <li>
 <p>Reprenez la méthode qui fait le <code>SELECT</code>, et faites en sorte que celle-ci retourne maintenant une <code>List&lt;Carte&gt;</code> (vous créerez la classe <code>Carte</code> pour l&#8217;occasion,</p>
+</li>
+<li>
+<p>Une méthode qui met à jour une carte (elle prend l&#8217;id de la carte à mettre à jour en paramètre),</p>
 </li>
 <li>
 <p>Une méthode méthode qui prend un objet <code>Carte</code> en paramètre et qui met à jour l&#8217;enregistrement en base de données à partir des valeurs des attributs de l&#8217;objet (on utilise l&#8217;attribut <code>id</code> pour savoir quel enregistrement mettre à jour&#8230;&#8203;).</p>
@@ -1002,7 +978,7 @@ AFFICHER Math nul ou le gagnant</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-26 14:57:50 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-07-27 12:37:50 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
