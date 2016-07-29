@@ -20,6 +20,8 @@ public class App
 			System.out.println( "Ouverture de la connexion à la base de données" );
 			Connection conn = DriverManager.getConnection( "jdbc:mysql://localhost:3306/exercice_sql", "root", null );
 
+			conn.setAutoCommit( false );
+			
 			// Ajout de 10 cartes à la BDD
 			for( int i = 0; i < 10; i++ )
 				ajouterCarte( "lkjhlkj" + i, i + "jhkjh", conn );
@@ -44,11 +46,11 @@ public class App
 			if( cartes.size() > 2 )
 			{
 				Carte carte = cartes.get( 1 );
-				
+
 				// on modifie la carte
 				carte.setCouleur( "EHEH" + Math.random() );
 				carte.setNom( "OHOH" + Math.random() );
-				
+
 				// et on enregistre en base de données
 				updateCarte( carte, conn );
 			}
@@ -60,6 +62,8 @@ public class App
 			{
 				System.out.println( "- " + carte );
 			}
+			
+			conn.commit();
 
 			System.out.println( "Fermeture de la connexion à la base de données" );
 			conn.close();
@@ -101,13 +105,18 @@ public class App
 	{
 		System.out.println( "AJOUT CARTE " + nom + " " + couleur );
 
+		String sql = String.format( "insert into cartes (`nom`, `couleur`) values ('%s', '%s')",
+				nom,
+				couleur );
+
 		Statement statement = conn.createStatement();
-		statement.execute( "insert into cartes (`nom`, `couleur`) values ('" + nom + "', '" + couleur + "')" );
+		statement.execute( sql );
 	}
 
 	static void updateCarte( int id, String nom, String couleur, Connection conn ) throws SQLException
 	{
-		conn.createStatement().executeUpdate( "update `cartes` set nom='" + nom + "', couleur='" + couleur + "' where id=" + id );
+		String sql = String.format( "update `cartes` set nom='%s', couleur='%s' where id=%d", nom, couleur, id );
+		conn.createStatement().executeUpdate( sql );
 	}
 
 	static void updateCarte( Carte carte, Connection conn ) throws SQLException
