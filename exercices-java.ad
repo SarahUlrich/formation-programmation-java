@@ -315,5 +315,5 @@ Dans la classe `App`, implémentez ceci :
 - Une requête `SELECT` qui charge _toutes_ les cartes et qui les affiche,
 - Une classe `Carte` avec les attributs `id`, `nom` et `couleur`, setters et getters,
 - Reprenez la méthode qui fait le `SELECT`, et faites en sorte que celle-ci retourne maintenant une `List<Carte>` (vous créerez la classe `Carte` pour l'occasion,
-- Une méthode qui met à jour une carte (elle prend l'id de la carte à mettre à jour en paramètre),
+- Une méthode qui met à jour une carte : `static void updateCarte( int id, String nom, String couleur, Connection conn ) throws SQLException`,
 - Une méthode méthode qui prend un objet `Carte` en paramètre et qui met à jour l'enregistrement en base de données à partir des valeurs des attributs de l'objet (on utilise l'attribut `id` pour savoir quel enregistrement mettre à jour...).

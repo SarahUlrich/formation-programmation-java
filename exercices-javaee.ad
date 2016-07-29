@@ -513,7 +513,7 @@ La connexion entre une application Java EE et une base de données est séparée
 
 Téléchargez le driver MySQL à cette http://search.maven.org/remotecontent?filepath=mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar[adresse].
 
-Dans le répertoire `C:\wildfly-10.0.0.Final\modules\system\layers\base`, créez un sous-répertoire `com/mysql/driver/main`. Dans ce répertoire créez un fichier `module.xml` avec le contenu suivant :
+Dans le répertoire `C:\wildfly-10.0.0.Final\modules\system\layers\base`, créez un sous-répertoire `com/mysql/driver/main`. Y copier le fichier `mysql-connector-java-5.1.39.jar` téléchargé auparavant. Toujours dans ce répertoire créez un fichier `module.xml` avec le contenu suivant :
 
 [source]
 ----
@@ -529,7 +529,7 @@ Dans le répertoire `C:\wildfly-10.0.0.Final\modules\system\layers\base`, créez
 </module>
 ----
 
-Ensuite assurez vous que WildFly est démarré et lancez en ligne de commande dans le répertoire `bin` de WildFly la commande :
+Ensuite assurez vous que WildFly est démarré (`bin\standalone.bat`) et lancez en ligne de commande dans le répertoire `bin` de WildFly la commande :
 
 		jboss-cli.bat
 
