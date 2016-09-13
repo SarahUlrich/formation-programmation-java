@@ -93,7 +93,7 @@ public class CustomerControllerTest
 		mockMvc.perform( post( "/customers" )
 				.contentType( contentType )
 				.content( bookmarkJson ) )
-				.andExpect( status().isOk() );
+				.andExpect( status().isCreated() );
 	}
 
 	protected String json( Object o ) throws IOException
