@@ -117,4 +117,24 @@
     <servlet-name>ExportQuizzsServlet</servlet-name>
     <url-pattern>/exportQuizzs</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ResultatsServlet</display-name>
+    <servlet-name>ResultatsServlet</servlet-name>
+    <servlet-class>fr.lteconsulting.servlet.ResultatsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResultatsServlet</servlet-name>
+    <url-pattern>/resultats</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProcessReponses</display-name>
+    <servlet-name>ProcessReponses</servlet-name>
+    <servlet-class>fr.lteconsulting.servlet.ProcessReponses</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProcessReponses</servlet-name>
+    <url-pattern>/processReponses</url-pattern>
+  </servlet-mapping>
 </web-app>
