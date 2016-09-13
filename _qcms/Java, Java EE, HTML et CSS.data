@@ -89,7 +89,7 @@
 -Hibernate est un framework de mapping objet/relationnel.
 -Hibernate est un framework utilisé coté web.
 
-18. Comment définir le dialect de la base de données dans un fichier de configuration ?
+18. Comment définir le dialecte de la base de données dans un fichier de configuration ?
 -`<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />`
 -`<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />`
 
@@ -126,7 +126,7 @@
 -`fetch = FetchType.LAZY`
 -`fetch = FetchType.EAGER`
 
-26. Par qui java est-t-il été développé ?
+26. Par qui java a-t-il été développé ?
 -Google
 -Oracle
 -Microsoft
@@ -134,8 +134,8 @@
 27. Que peut-on mettre dans une interface ?
 -Des définitions de variables et des méthodes abstraites
 -Au moins une méthode abstraite
--Des méthodes abstraites et des constantes
--Des méthodes abstraites
+-Des prototypes de méthodes et des constantes
+-Des prototypes de méthodes
 
 28. Qu’affichera le code suivant ?
 
@@ -179,7 +179,7 @@
 -La classe abstraite peut être instanciée contrairement à l’interface
 -Il n’y a pas de différence entre ces deux classes
 
-32. En SQL, quelle requête permet d’effectuer une jointure entre premiere_table et seconde_table en affichant toutes les entrées de table2 ?
+32. En SQL, quelle requête permet d’effectuer une jointure entre premiere_table et seconde_table en affichant toutes les entrées de seconde_table ?
 -`SELECT * FROM premiere_table pt INNER JOIN seconde_table st ON pt.id_prem=st.id_prem;`
 -`SELECT * FROM premiere_table pt LEFT OUTER JOIN seconde_table st ON pt.id_prem=st.id_prem;`
 -`SELECT * FROM premiere_table pt RIGHT JOIN seconde_table st ON pt.id_prem=st.id_prem;`
@@ -205,7 +205,7 @@
 
 36. Quelle est l’erreur de cette boucle for ?
 
-	for( x = 10; x == 0; x++­­ ) {
+	for( x = 10; x == 0; x++ ) {
 		x­­;
 	}
 -On ne peut pas modifier `x` dans le corps de la boucle
@@ -336,7 +336,7 @@ que vaut
 -Via la méthode lookup()
 -Via l’annotation @EJB
 -Via un new Ejb()
--L’instanciation des Ejb est gérée par le serveur
+-L’instanciation des Ejb est gérée par le conteneur
 
 57. En EJB, quelle annotation faut-il sur une interface pour qu’elle soit accessible sur un serveur distant ?
 -`@Local`
@@ -411,18 +411,6 @@ que vaut
 -6060
 -225
 -80
-
-71. Cochez la phrase valide
--Une classe peut implémenter plusieurs interfaces mais doit ´etendre une seule classe
--Une classe peut implémenter plusieurs classes mais doit ´etendre une seule interface
--Une classe peut implémenter plusieurs classes et peut ´etendre plusieurs interfaces
--Une classe doit implémenter une seule interface et ´etendre une seule classe
-
-72. Etant donné que la classe Grande étend la classe Petite, trouvez une ligne correcte parmi les suivantes
--`Petite y =new Petite(); Grande x= (Grande)y; Petite z=x;`
--`Grande x= new Grande(); Petite y = x; Grande z=(Grande)y;`
--`Grande x= new Grande(); Petite y = x; Grande z=y;`
--`Petite y =new Petite(); Grande x= (Grande)y; Petite z=(Petite)x;`
 
 73. Pour transformer un code lisible en code compréhensible par la machine, on utilise :
 -Un compilateur
@@ -583,7 +571,7 @@ Quel code ne compile pas ?
 -`myChild = (MyChild)myParent;`
 
 96. Une interface en Java peut contenir :
--Des déclarations de méthodes
+-Des déclarations de méthodes et des constantes
 -Des déclarations de méthodes et de méthodes statiques
 -Des décalarations de méthodes et de constructeurs
 
