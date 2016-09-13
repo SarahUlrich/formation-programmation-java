@@ -24,6 +24,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.mock.http.MockHttpInputMessage;
 import org.springframework.mock.http.MockHttpOutputMessage;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -41,7 +42,7 @@ public class CustomerControllerTest
 
 	private MockMvc mockMvc;
 
-	private HttpMessageConverter mappingJackson2HttpMessageConverter;
+	private HttpMessageConverter<Object> mappingJackson2HttpMessageConverter;
 
 	private List<Customer> customersList = new ArrayList<>();
 
@@ -52,9 +53,10 @@ public class CustomerControllerTest
 	private WebApplicationContext webApplicationContext;
 
 	@Autowired
+	@SuppressWarnings( "unchecked" )
 	void setConverters( HttpMessageConverter<?>[] converters )
 	{
-		mappingJackson2HttpMessageConverter = Arrays.asList( converters )
+		mappingJackson2HttpMessageConverter = (HttpMessageConverter<Object>) Arrays.asList( converters )
 				.stream()
 				.filter( hmc -> hmc instanceof MappingJackson2HttpMessageConverter )
 				.findAny()
@@ -88,12 +90,23 @@ public class CustomerControllerTest
 	@Test
 	public void createCustomer() throws Exception
 	{
-		String bookmarkJson = json( new Customer( "Prenom", "Nom" ) );
+		String customerJson = json( new Customer( "Prenom", "Nom" ) );
 
-		mockMvc.perform( post( "/customers" )
+		byte[] response = mockMvc.perform( post( "/customers" )
 				.contentType( contentType )
-				.content( bookmarkJson ) )
-				.andExpect( status().isCreated() );
+				.content( customerJson ) )
+				.andExpect( status().isCreated() )
+				.andReturn()
+				.getResponse()
+				.getContentAsByteArray();
+
+		MockHttpInputMessage inputMessage = new MockHttpInputMessage( response );
+
+		Customer customer = (Customer) mappingJackson2HttpMessageConverter.read( Customer.class, inputMessage );
+
+		Assert.assertNotNull( customer );
+		Assert.assertEquals( "Prenom", customer.getFirstName() );
+		Assert.assertEquals( "Nom", customer.getLastName() );
 	}
 
 	protected String json( Object o ) throws IOException

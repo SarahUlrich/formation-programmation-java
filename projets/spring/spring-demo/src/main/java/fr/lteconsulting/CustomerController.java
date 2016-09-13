@@ -1,19 +1,15 @@
 package fr.lteconsulting;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -23,18 +19,13 @@ public class CustomerController
 	@Autowired
 	CustomerRepository customerRepository;
 
-	@RequestMapping( method = RequestMethod.GET )
-	public Collection<Customer> getAllCustomers()
+	@GetMapping
+	public Iterable<Customer> getAllCustomers()
 	{
-		List<Customer> all = new ArrayList<>();
-
-		for( Customer c : customerRepository.findAll() )
-			all.add( c );
-
-		return all;
+		return customerRepository.findAll();
 	}
 
-	@RequestMapping( path = "/{id}", method = RequestMethod.GET )
+	@GetMapping( "/{id}" )
 	public Customer getCustomer( @PathVariable( "id" ) long id )
 	{
 		return customerRepository.findOne( id );
