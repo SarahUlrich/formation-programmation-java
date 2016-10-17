@@ -21,8 +21,26 @@ public class FunkoPopService
 		return pops;
 	}
 
+	public List<FunkoPop> search( String name, String universe )
+	{
+		List<FunkoPop> result = new ArrayList<>();
+
+		for( FunkoPop pop : pops )
+		{
+			if( isValid( pop.getName(), name ) && isValid( pop.getUniverse(), universe ) )
+				result.add( pop );
+		}
+
+		return result;
+	}
+
 	public void addFunkoPop( String name, String universe )
 	{
 		this.pops.add( new FunkoPop( name, universe ) );
+	}
+
+	private boolean isValid( String value, String criteria )
+	{
+		return criteria == null || (value != null && value.contains( criteria ));
 	}
 }

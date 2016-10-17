@@ -23,6 +23,14 @@ public class FunkoPopWs
 		return service.findAll();
 	}
 
+	@Path( "search" )
+	@GET
+	@Produces( MediaType.APPLICATION_JSON )
+	public List<FunkoPop> search( @QueryParam( "name" ) String name, @QueryParam( "universe" ) String universe )
+	{
+		return service.search( name, universe );
+	}
+
 	@Path( "monPop" )
 	@GET
 	@Produces( MediaType.APPLICATION_JSON )
