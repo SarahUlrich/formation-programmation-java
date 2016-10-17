@@ -2,7 +2,6 @@ package com.sopra.rest;
 
 import java.util.List;
 
-import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -31,21 +30,11 @@ public class FunkoPopWs
 		return service.search( name, universe );
 	}
 
-	@Path( "monPop" )
+	@Path( "urgence" )
 	@GET
 	@Produces( MediaType.APPLICATION_JSON )
-	public FunkoPop getMonFunko()
+	public List<FunkoPop> getFunkosSousLaPluie()
 	{
-		return new FunkoPop( "nom", "test" );
-	}
-
-	@Path( "tonPop" )
-	@GET
-	@Produces( MediaType.APPLICATION_JSON )
-	public FunkoPop getTonFunko(
-			@QueryParam( "name" ) String nom,
-			@QueryParam( "universe" ) @DefaultValue( "standard" ) String universe )
-	{
-		return new FunkoPop( nom, universe );
+		return service.getFunkoPopsToShelter();
 	}
 }

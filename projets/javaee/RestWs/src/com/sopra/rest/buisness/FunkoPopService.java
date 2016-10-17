@@ -2,7 +2,13 @@ package com.sopra.rest.buisness;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.jboss.resteasy.client.jaxrs.ResteasyClient;
+import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
+import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
+
 import com.sopra.rest.FunkoPop;
+import com.sopra.rest.IWeatherWs;
 
 public class FunkoPopService
 {
@@ -10,10 +16,10 @@ public class FunkoPopService
 
 	public FunkoPopService()
 	{
-		pops.add( new FunkoPop( "Gandalf", "Lord of the Ring" ) );
-		pops.add( new FunkoPop( "Alf", "Alf" ) );
-		pops.add( new FunkoPop( "Joey Tempest", "Europe" ) );
-		pops.add( new FunkoPop( "ZombiGirl", "Walking Dead" ) );
+		pops.add( new FunkoPop( "Gandalf", "Lord of the Ring", true ) );
+		pops.add( new FunkoPop( "Alf", "Alf", false ) );
+		pops.add( new FunkoPop( "Joey Tempest", "Europe", false ) );
+		pops.add( new FunkoPop( "ZombiGirl", "Walking Dead", true ) );
 	}
 
 	public List<FunkoPop> findAll()
@@ -34,9 +40,31 @@ public class FunkoPopService
 		return result;
 	}
 
-	public void addFunkoPop( String name, String universe )
+	public List<FunkoPop> getFunkoPopsToShelter()
 	{
-		this.pops.add( new FunkoPop( name, universe ) );
+		ResteasyClient client = new ResteasyClientBuilder().build();
+		ResteasyWebTarget target = client.target( "http://localhost:8080/RestWs/funko/weather" );
+
+		IWeatherWs simple = target.proxy( IWeatherWs.class );
+		boolean weatherGood = simple.isWeatherGood();
+
+		List<FunkoPop> result = new ArrayList<>();
+
+		if( !weatherGood )
+		{
+			for( FunkoPop pop : pops )
+			{
+				if( !pop.isWaterproof() )
+					result.add( pop );
+			}
+		}
+
+		return result;
+	}
+
+	public void addFunkoPop( String name, String universe, boolean waterproof )
+	{
+		this.pops.add( new FunkoPop( name, universe, waterproof ) );
 	}
 
 	private boolean isValid( String value, String criteria )
