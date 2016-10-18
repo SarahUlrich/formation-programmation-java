@@ -8,7 +8,9 @@ import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
 
 import com.sopra.rest.FunkoPop;
+import com.sopra.rest.IGoogleMapsDirectionsWS;
 import com.sopra.rest.IWeatherWs;
+import com.sopra.rest.directions.DirectionsResult;
 
 public class FunkoPopService
 {
@@ -16,10 +18,10 @@ public class FunkoPopService
 
 	public FunkoPopService()
 	{
-		pops.add( new FunkoPop( "Gandalf", "Lord of the Ring", true ) );
-		pops.add( new FunkoPop( "Alf", "Alf", false ) );
-		pops.add( new FunkoPop( "Joey Tempest", "Europe", false ) );
-		pops.add( new FunkoPop( "ZombiGirl", "Walking Dead", true ) );
+		pops.add( new FunkoPop( 1, "Gandalf", "Lord of the Ring", true, 43.635191, 1.481871 ) );
+		pops.add( new FunkoPop( 2, "Alf", "Alf", false, 43.641092, 1.447453 ) );
+		pops.add( new FunkoPop( 3, "Joey Tempest", "Europe", false, 43.607603, 1.403164 ) );
+		pops.add( new FunkoPop( 4, "ZombiGirl", "Walking Dead", true, 43.551469, 1.244615 ) );
 	}
 
 	public List<FunkoPop> findAll()
@@ -62,9 +64,36 @@ public class FunkoPopService
 		return result;
 	}
 
-	public void addFunkoPop( String name, String universe, boolean waterproof )
+	public int getTravelTime( int fromFunkoPopId, int toFunkoPopId )
 	{
-		this.pops.add( new FunkoPop( name, universe, waterproof ) );
+		FunkoPop from = findFunkoPopById( fromFunkoPopId );
+		if( from == null )
+			return -1;
+
+		FunkoPop to = findFunkoPopById( toFunkoPopId );
+		if( to == null )
+			return -1;
+
+		ResteasyClient client = new ResteasyClientBuilder().build();
+		ResteasyWebTarget target = client.target( "https://maps.googleapis.com/maps/api" );
+		IGoogleMapsDirectionsWS directions = target.proxy( IGoogleMapsDirectionsWS.class );
+
+		String origin = from.getLatitude() + ", " + from.getLongitude();
+		String destination = to.getLatitude() + ", " + to.getLongitude();
+
+		DirectionsResult result = directions.getTravelTime( 
+				origin, destination, "AIzaSyDJluJ1olY-2KLGOqU9YDXs67wsCmIZkng" );
+
+		return (int) result.routes[0].legs[0].duration.value;
+	}
+
+	public FunkoPop findFunkoPopById( int funkoPopId )
+	{
+		for( FunkoPop pop : pops )
+			if( pop.getId() == funkoPopId )
+				return pop;
+		
+		return null;
 	}
 
 	private boolean isValid( String value, String criteria )

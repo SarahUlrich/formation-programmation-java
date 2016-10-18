@@ -10,23 +10,26 @@ Intégration avec Google Maps Directions API
 
 		https://developers.google.com/maps/documentation/directions/?hl=fr
 
-
 		Classes modélisant les résultats de Directions API :
 
-		Piocher dans ce dépot à partir de DirectionsResults.java
+		S'inspirer dans ce dépot à partir de DirectionsResults.java
 		https://github.com/googlemaps/google-maps-services-java/tree/master/src/main/java/com/google/maps/model
-
-- Integration de la bibliothèque Joda Time
-
-		Les classes issues de Directions API nécessitent la bibliothèque Joda Time
-
-		https://github.com/JodaOrg/joda-time/releases
 		
-		Cliquer pour télécharger le fichier 'joda-time-2.9.4-dist.tar.gz'
+		L'objectif ici est de modéliser la réponse du service web avec des classes que vous créerez (vous pouvez vous inspirer des classes présentes dans le dépot mentionné ci-dessus).
+
+- Integration de la bibliothèque Jackson Annotations
+
+		Vous aurez besoin de l'annotation @JsonIgnoreProperties lorsque vous modéliserez les résultats produits par le service web Google Directions.
 		
-		A partir du fichier téléchargé, extraire le fichier 'joda-time-2.9.4.jar' dans le répertoire 'WebContent/WEB-INF/lib/' de votre projet.
+		Cette annotation se trouve dans la bibliothèque jackson-annotations-2.7.4.jar.
 		
-		Dans Eclipse, rafraichir le projet. Puis dans WebContent/WEB-INF/lib/, faire bouton droit sur le fichier 'joda-time-2.9.4.jar' et choisir Build Path > Add to Build path
+		Voici comment la récupérer et comment l'intégrer dans votre projet :
+		
+		- Trouver le fichier 'jackson-annotations-2.7.4.jar' dans le répertoire de WildFly
+		
+		- Copier ce fichier dans votre projet dans WEB-INF/lib/
+		
+		- Dans Eclipse, rafraichir le projet. Puis dans WebContent/WEB-INF/lib/, faire bouton droit sur le fichier 'jackson-annotations-2.7.4.jar' et choisir Build Path > Add to Build path
 		
 		
 		

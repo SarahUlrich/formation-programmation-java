@@ -37,4 +37,12 @@ public class FunkoPopWs
 	{
 		return service.getFunkoPopsToShelter();
 	}
+
+	@Path( "travelTime" )
+	@GET
+	@Produces( MediaType.APPLICATION_JSON )
+	public int getTravelTime( @QueryParam( "from" ) int fromFunkoPopId, @QueryParam( "to" ) int toFunkoPopId )
+	{
+		return service.getTravelTime( fromFunkoPopId, toFunkoPopId );
+	}
 }

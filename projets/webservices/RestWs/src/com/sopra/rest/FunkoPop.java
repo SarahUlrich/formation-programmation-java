@@ -2,19 +2,25 @@ package com.sopra.rest;
 
 public class FunkoPop
 {
+	private int id;
 	private String name;
 	private String universe;
 	private boolean waterproof;
+	private double latitude;
+	private double longitude;
 
 	public FunkoPop()
 	{
 	}
 
-	public FunkoPop( String name, String universe, boolean waterproof )
+	public FunkoPop( int id, String name, String universe, boolean waterproof, double latitude, double longitude )
 	{
+		this.id = id;
 		this.name = name;
 		this.universe = universe;
 		this.waterproof = waterproof;
+		this.latitude = latitude;
+		this.longitude = longitude;
 	}
 
 	public String getName()
@@ -45,5 +51,35 @@ public class FunkoPop
 	public void setWaterproof( boolean waterproof )
 	{
 		this.waterproof = waterproof;
+	}
+
+	public int getId()
+	{
+		return id;
+	}
+
+	public void setId( int id )
+	{
+		this.id = id;
+	}
+
+	public double getLatitude()
+	{
+		return latitude;
+	}
+
+	public void setLatitude( double latitude )
+	{
+		this.latitude = latitude;
+	}
+
+	public double getLongitude()
+	{
+		return longitude;
+	}
+
+	public void setLongitude( double longitude )
+	{
+		this.longitude = longitude;
 	}
 }
