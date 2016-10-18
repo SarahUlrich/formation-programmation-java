@@ -15,6 +15,20 @@ Intégration avec Google Maps Directions API
 
 		Piocher dans ce dépot à partir de DirectionsResults.java
 		https://github.com/googlemaps/google-maps-services-java/tree/master/src/main/java/com/google/maps/model
+
+- Integration de la bibliothèque Joda Time
+
+		Les classes issues de Directions API nécessitent la bibliothèque Joda Time
+
+		https://github.com/JodaOrg/joda-time/releases
+		
+		Cliquer pour télécharger le fichier 'joda-time-2.9.4-dist.tar.gz'
+		
+		A partir du fichier téléchargé, extraire le fichier 'joda-time-2.9.4.jar' dans le répertoire 'WebContent/WEB-INF/lib/' de votre projet.
+		
+		Dans Eclipse, rafraichir le projet. Puis dans WebContent/WEB-INF/lib/, faire bouton droit sur le fichier 'joda-time-2.9.4.jar' et choisir Build Path > Add to Build path
+		
+		
 		
 - Ajouter au service web funko/pop une méthode getFunkoPopsDistanceInTime( int idFunkoPopOrigin, int idFunkoPopDestination )
 
