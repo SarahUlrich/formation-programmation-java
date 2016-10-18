@@ -33,7 +33,7 @@ public class FunkoPopWs
 	@Path( "urgence" )
 	@GET
 	@Produces( MediaType.APPLICATION_JSON )
-	public List<FunkoPop> getFunkosSousLaPluie()
+	public List<FunkoPop> getFunkoPopsToShelter()
 	{
 		return service.getFunkoPopsToShelter();
 	}

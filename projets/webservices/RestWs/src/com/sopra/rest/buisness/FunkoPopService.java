@@ -42,9 +42,9 @@ public class FunkoPopService
 
 	public List<FunkoPop> getFunkoPopsToShelter()
 	{
+		// savoir s'il fait beau ou pas
 		ResteasyClient client = new ResteasyClientBuilder().build();
 		ResteasyWebTarget target = client.target( "http://localhost:8080/WeatherWS/weather/isWeatherGood" );
-
 		IWeatherWs simple = target.proxy( IWeatherWs.class );
 		boolean weatherGood = simple.isWeatherGood();
 

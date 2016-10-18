@@ -1,0 +1,21 @@
+Intégration avec Google Maps Directions API
+
+- Les FunkoPop ont maintenant chacun un identifiant unique et une position sur la terre. Ajouter ces champs :
+
+		int id;
+		double longitude;
+		double latitude;
+
+- Consulter cette page pour savoir comment appeler les web services google.
+
+		https://developers.google.com/maps/documentation/directions/?hl=fr
+
+
+		Classes modélisant les résultats de Directions API :
+
+		Piocher dans ce dépot à partir de DirectionsResults.java
+		https://github.com/googlemaps/google-maps-services-java/tree/master/src/main/java/com/google/maps/model
+		
+- Ajouter au service web funko/pop une méthode getFunkoPopsDistanceInTime( int idFunkoPopOrigin, int idFunkoPopDestination )
+
+		Cette méthode WS doit renvoyer le temps nécessaire pour faire voyager le FunkyPop idFunkoPopOrigin jusqu'au FunkyPop idFunkoPopDestination.
