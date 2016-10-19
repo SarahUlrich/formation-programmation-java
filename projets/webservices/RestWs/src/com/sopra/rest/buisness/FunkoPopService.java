@@ -29,6 +29,13 @@ public class FunkoPopService
 		return pops;
 	}
 
+	public void delete( int id )
+	{
+		FunkoPop pop = findFunkoPopById( id );
+		if( pop != null )
+			pops.remove( pop );
+	}
+
 	public List<FunkoPop> search( String name, String universe )
 	{
 		List<FunkoPop> result = new ArrayList<>();
@@ -81,7 +88,7 @@ public class FunkoPopService
 		String origin = from.getLatitude() + ", " + from.getLongitude();
 		String destination = to.getLatitude() + ", " + to.getLongitude();
 
-		DirectionsResult result = directions.getTravelTime( 
+		DirectionsResult result = directions.getTravelTime(
 				origin, destination, "AIzaSyDJluJ1olY-2KLGOqU9YDXs67wsCmIZkng" );
 
 		return (int) result.routes[0].legs[0].duration.value;
@@ -92,7 +99,7 @@ public class FunkoPopService
 		for( FunkoPop pop : pops )
 			if( pop.getId() == funkoPopId )
 				return pop;
-		
+
 		return null;
 	}
 
