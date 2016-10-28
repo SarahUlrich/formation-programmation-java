@@ -9,3 +9,5 @@ asciidoctor exercices-java.ad
 asciidoctor index.ad
 
 asciidoctor -T asciidoctor-reveal.js/templates/slim maven.ad
+
+asciidoctor -T asciidoctor-reveal.js/templates/slim uml-profils.ad
