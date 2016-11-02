@@ -157,7 +157,7 @@
 									<pluginExecutionFilter>
 										<groupId>org.codehaus.mojo</groupId>
 										<artifactId>gwt-maven-plugin</artifactId>
-										<versionRange>[2.8.0-rc2,)</versionRange>
+										<versionRange>[2.8.0,)</versionRange>
 										<goals>
 											<goal>compile</goal>
 										</goals>
