@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script>
+		var request = new XMLHttpRequest();
+		request.open('GET', 'funko/pop');
+		request.onload = function() {
+			let
+			response = this.responseText;
+			let
+			data = JSON.parse(response);
+
+			alert("TYPE OF RESPONSE " + typeof response + " LENGTH "
+					+ response.length);
+			alert("TYPE OF DATA " + typeof data + " LENGTH " + data.length);
+			alert(response);
+			alert(data);
+		}
+		request.send();
+	</script>
+
+</body>
+</html>
