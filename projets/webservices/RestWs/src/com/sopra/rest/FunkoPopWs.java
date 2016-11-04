@@ -2,6 +2,7 @@ package com.sopra.rest;
 
 import java.util.List;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -41,19 +42,21 @@ public class FunkoPopWs
 	// CREATE
 
 	@PUT
+	@Consumes( MediaType.APPLICATION_JSON )
 	@Produces( MediaType.APPLICATION_JSON )
-	public FunkoPop create()
+	public FunkoPop create( FunkoPop pop )
 	{
-		return null;
+		return service.createOrUpdate( pop );
 	}
 
 	// UPDATE
 
 	@POST
+	@Consumes( MediaType.APPLICATION_JSON )
 	@Produces( MediaType.APPLICATION_JSON )
-	@Path( "{id}" )
-	public void update( @PathParam( "id" ) int id )
+	public FunkoPop update( FunkoPop pop )
 	{
+		return service.createOrUpdate( pop );
 	}
 
 	// DELETE

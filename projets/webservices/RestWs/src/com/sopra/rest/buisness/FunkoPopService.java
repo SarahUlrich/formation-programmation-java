@@ -14,14 +14,15 @@ import com.sopra.rest.directions.DirectionsResult;
 
 public class FunkoPopService
 {
-	List<FunkoPop> pops = new ArrayList<>();
+	private List<FunkoPop> pops = new ArrayList<>();
+	private int nextId = 1;
 
 	public FunkoPopService()
 	{
-		pops.add( new FunkoPop( 1, "Gandalf", "Lord of the Ring", true, 43.635191, 1.481871 ) );
-		pops.add( new FunkoPop( 2, "Alf", "Alf", false, 43.641092, 1.447453 ) );
-		pops.add( new FunkoPop( 3, "Joey Tempest", "Europe", false, 43.607603, 1.403164 ) );
-		pops.add( new FunkoPop( 4, "ZombiGirl", "Walking Dead", true, 43.551469, 1.244615 ) );
+		pops.add( new FunkoPop( nextId++, "Gandalf", "Lord of the Ring", true, 43.635191, 1.481871 ) );
+		pops.add( new FunkoPop( nextId++, "Alf", "Alf", false, 43.641092, 1.447453 ) );
+		pops.add( new FunkoPop( nextId++, "Joey Tempest", "Europe", false, 43.607603, 1.403164 ) );
+		pops.add( new FunkoPop( nextId++, "ZombiGirl", "Walking Dead", true, 43.551469, 1.244615 ) );
 	}
 
 	public List<FunkoPop> findAll()
@@ -34,6 +35,28 @@ public class FunkoPopService
 		FunkoPop pop = findFunkoPopById( id );
 		if( pop != null )
 			pops.remove( pop );
+	}
+
+	public FunkoPop createOrUpdate( FunkoPop pop )
+	{
+		FunkoPop existing = findFunkoPopById( pop.getId() );
+		if( existing != null )
+		{
+			existing.setName( pop.getName() );
+			existing.setUniverse( pop.getUniverse() );
+			existing.setWaterproof( pop.isWaterproof() );
+			existing.setLongitude( pop.getLongitude() );
+			existing.setLatitude( pop.getLatitude() );
+
+			return existing;
+		}
+		else
+		{
+			pop.setId( nextId++ );
+			pops.add( pop );
+
+			return pop;
+		}
 	}
 
 	public List<FunkoPop> search( String name, String universe )
