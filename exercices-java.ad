@@ -57,6 +57,68 @@ Ces exercices sont Open Source et sont disponibles en ligne : https://github.com
 
 _Connaissances de base du langage de programmation_
 
+=== Calcul d'une somme
+
+Ecrire le corps de la méthode `somme` qui renvoie la somme des nombres entre 0 et n. Voici sa signature :
+
+[source,language="java"]
+----
+int somme( int n )
+----
+
+Appeler cette méthode et afficher son résultat pour les nombres de 0 à 1000.
+
+=== Calcul de l'aire d'un rectangle
+
+Ecrire le corps de la méthode `aireRectangle` qui calcule l'aire d'un rectangle en fonction de ses largeur et longueur. Voici sa signature :
+
+[source,language="java"]
+----
+int aireRectangle( int longueur, int largeur )
+----
+
+Calculer et afficher l'aire d'un rectangle avec largeur 254 et de longueur 1032.
+
+=== Calcul de la racine carrée d'un nombre entier
+
+Trouver la racine carrée entiere d'un nombre entier.
+
+(de 1 à n on calcule le carré et on s'arrête quand on a dépassé)
+
+=== Calcul de la racine carrée d'un nombre flottant avec la formule de Newton
+
+Trouver la racine carrée d'un nombre flottant grâce à la formule de Newton.
+
+v : valeur dont on calcule la racine carrée
+s: la valeur approchée de la raince carrée
+
+Ecrire une méthode 'approche' qui calcule `(s + v / s) / 2`, une meilleure approximation que `s` de la racine carrée de `v`.
+
+	double approche( double v, double approximation )
+
+Ecrire une méthode `racineCarree` qui:
+- définit une approximation initiale de la racine carrée
+- fait X fois l'appel à la méthode 'approche'
+- retourne la valeur calculée.
+
+	double racineCarree( double v, int nbIterations )
+
+=== Calcul de la somme des premiers entiers de façon récursive
+
+=== Calcul de la suite de Fibonacci.
+
+La suite de Fibonacci est définie comme suit:
+
+- F(0) : 0
+- F(1) : 1
+- F(n) : F(n-1) + F(n-2)
+
+Ecrire une méthode récursive `fibonacci` calculant le terme `n` de la suite.
+
+
+
+=== Série d'exercices
+
 Voici un https://www.infres.telecom-paristech.fr/people/charon/coursJava/exercices/[lien] vers différents exercices.
 
 Je vous propose de les réaliser dans l'ordre suivant :

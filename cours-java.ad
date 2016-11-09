@@ -194,6 +194,54 @@ int valeurCellule = tableauEntiers[5];
 tableauEntiers[0] = -2;
 ----
 
+=== Les méthodes
+
+Une méthode est un bloc de code avec un nom, éventuellement des paramètres d'entrée et éventuellement un type de retour.
+
+La déclaration d'une méthode peut être préfixée par des 'modificateurs' (`public`, `private`, `static`, `final`) dont le sens est lié au concept des classes, étudié plus loin.
+
+==== Exemples
+
+[source,language="java"]
+----
+int somme( int a, int b ) // signature de la méthode
+{
+	return a + b;
+}
+----
+
+[source,language="java"]
+----
+int nombreAleatoire()
+{
+	// ...
+}
+----
+
+Une méthode peut ne pas retourner de valeur, on utilise alors le mot clé 'void'
+
+[source,language="java"]
+----
+void affiche( String texte )
+{
+	// ...
+	// on peut utiliser le mot-clé 'return' pour arrêter l'exécution de la méthode.
+}
+----
+
+==== Appel d'une méthode
+
+On écrit simplement le nom de la méthode suivi de parenthèses contenant la valeur des paramètres. L'expression ainsi écrite est évaluée à la valeur de reoutr de la méthode.
+
+[source,language="java"]
+----
+// on appelle la méthode somme avec les paramètres 3 et 6
+// a va valoir la valeur de retour de la méthode (9)
+int a = somme( 3, 6 );
+----
+
+Lorsqu'on appelle une méthode, on donne une valeur à chacun des paramètres. L'exécution de la méthode se fait jusqu'à rencontrer l'instruction `return`. On obtient ainsi du côté du code _appelant_ la valeur de retour de l'appel de méthode.
+
 === La classe `String`
 
 La classe `String` sert à représenter des chaînes de caractères (qui ont le plus souvent comme objectif d'être présentées à l'utilisateur, à un moment où un autre).

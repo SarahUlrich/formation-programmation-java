@@ -436,7 +436,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc">
 <div id="toctitle" class="title">Exercices de programmation orientée objet avec Java</div>
 <ul class="sectlevel1">
-<li><a href="#_exercices_de_base">Exercices de base</a></li>
+<li><a href="#_exercices_de_base">Exercices de base</a>
+<ul class="sectlevel2">
+<li><a href="#_calcul_d_une_somme">Calcul d&#8217;une somme</a></li>
+<li><a href="#_calcul_de_l_aire_d_un_rectangle">Calcul de l&#8217;aire d&#8217;un rectangle</a></li>
+<li><a href="#_calcul_de_la_racine_carrée_d_un_nombre_entier">Calcul de la racine carrée d&#8217;un nombre entier</a></li>
+<li><a href="#_calcul_de_la_racine_carrée_d_un_nombre_flottant_avec_la_formule_de_newton">Calcul de la racine carrée d&#8217;un nombre flottant avec la formule de Newton</a></li>
+<li><a href="#_calcul_de_la_somme_des_premiers_entiers_de_façon_récursive">Calcul de la somme des premiers entiers de façon récursive</a></li>
+<li><a href="#_calcul_de_la_suite_de_fibonacci">Calcul de la suite de Fibonacci.</a></li>
+<li><a href="#_série_d_exercices">Série d&#8217;exercices</a></li>
+</ul>
+</li>
 <li><a href="#_jeu_de_cartes">Jeu de Cartes</a></li>
 <li><a href="#_créer_une_plateforme_de_jeux_de_plateau">Créer une plateforme de jeux de plateau</a></li>
 <li><a href="#_jeu_bidon_sur_plateau">Jeu bidon sur Plateau</a>
@@ -474,6 +484,100 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p><em>Connaissances de base du langage de programmation</em></p>
 </div>
+<div class="sect2">
+<h3 id="_calcul_d_une_somme">Calcul d&#8217;une somme</h3>
+<div class="paragraph">
+<p>Ecrire le corps de la méthode <code>somme</code> qui renvoie la somme des nombres entre 0 et n. Voici sa signature :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">int somme( int n )</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Appeler cette méthode et afficher son résultat pour les nombres de 0 à 1000.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_calcul_de_l_aire_d_un_rectangle">Calcul de l&#8217;aire d&#8217;un rectangle</h3>
+<div class="paragraph">
+<p>Ecrire le corps de la méthode <code>aireRectangle</code> qui calcule l&#8217;aire d&#8217;un rectangle en fonction de ses largeur et longueur. Voici sa signature :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">int aireRectangle( int longueur, int largeur )</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Calculer et afficher l&#8217;aire d&#8217;un rectangle avec largeur 254 et de longueur 1032.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_calcul_de_la_racine_carrée_d_un_nombre_entier">Calcul de la racine carrée d&#8217;un nombre entier</h3>
+<div class="paragraph">
+<p>Trouver la racine carrée entiere d&#8217;un nombre entier.</p>
+</div>
+<div class="paragraph">
+<p>(de 1 à n on calcule le carré et on s&#8217;arrête quand on a dépassé)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_calcul_de_la_racine_carrée_d_un_nombre_flottant_avec_la_formule_de_newton">Calcul de la racine carrée d&#8217;un nombre flottant avec la formule de Newton</h3>
+<div class="paragraph">
+<p>Trouver la racine carrée d&#8217;un nombre flottant grâce à la formule de Newton.</p>
+</div>
+<div class="paragraph">
+<p>v : valeur dont on calcule la racine carrée
+s: la valeur approchée de la raince carrée</p>
+</div>
+<div class="paragraph">
+<p>Ecrire une méthode 'approche' qui calcule <code>(s + v / s) / 2</code>, une meilleure approximation que <code>s</code> de la racine carrée de <code>v</code>.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>double approche( double v, double approximation )</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ecrire une méthode <code>racineCarree</code> qui:
+- définit une approximation initiale de la racine carrée
+- fait X fois l&#8217;appel à la méthode 'approche'
+- retourne la valeur calculée.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>double racineCarree( double v, int nbIterations )</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_calcul_de_la_somme_des_premiers_entiers_de_façon_récursive">Calcul de la somme des premiers entiers de façon récursive</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_calcul_de_la_suite_de_fibonacci">Calcul de la suite de Fibonacci.</h3>
+<div class="paragraph">
+<p>La suite de Fibonacci est définie comme suit:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>F(0) : 0</p>
+</li>
+<li>
+<p>F(1) : 1</p>
+</li>
+<li>
+<p>F(n) : F(n-1) + F(n-2)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ecrire une méthode récursive <code>fibonacci</code> calculant le terme <code>n</code> de la suite.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_série_d_exercices">Série d&#8217;exercices</h3>
 <div class="paragraph">
 <p>Voici un <a href="https://www.infres.telecom-paristech.fr/people/charon/coursJava/exercices/">lien</a> vers différents exercices.</p>
 </div>
@@ -504,6 +608,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Jeu de Chifoumi</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -976,7 +1081,7 @@ AFFICHER Math nul ou le gagnant</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-25 01:22:52 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-11-09 16:35:14 Paris, Madrid
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">

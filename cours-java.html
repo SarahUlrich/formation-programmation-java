@@ -458,6 +458,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_variables">Variables</a></li>
 <li><a href="#_les_types_primitifs">Les types primitifs</a></li>
 <li><a href="#_les_tableaux">Les tableaux</a></li>
+<li><a href="#_les_méthodes">Les méthodes</a></li>
 <li><a href="#_la_classe_code_string_code">La classe <code>String</code></a></li>
 <li><a href="#_structures_de_controle">Structures de controle</a></li>
 <li><a href="#_ecrire_une_classe">Ecrire une classe</a></li>
@@ -841,6 +842,62 @@ int valeurCellule = tableauEntiers[5];
 // écriture dans la première cellule
 tableauEntiers[0] = -2;</code></pre>
 </div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_les_méthodes">Les méthodes</h3>
+<div class="paragraph">
+<p>Une méthode est un bloc de code avec un nom, éventuellement des paramètres d&#8217;entrée et éventuellement un type de retour.</p>
+</div>
+<div class="paragraph">
+<p>La déclaration d&#8217;une méthode peut être préfixée par des 'modificateurs' (<code>public</code>, <code>private</code>, <code>static</code>, <code>final</code>) dont le sens est lié au concept des classes, étudié plus loin.</p>
+</div>
+<div class="sect3">
+<h4 id="_exemples">Exemples</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">int somme( int a, int b ) // signature de la méthode
+{
+	return a + b;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">int nombreAleatoire()
+{
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Une méthode peut ne pas retourner de valeur, on utilise alors le mot clé 'void'</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">void affiche( String texte )
+{
+	// ...
+	// on peut utiliser le mot-clé 'return' pour arrêter l'exécution de la méthode.
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_appel_d_une_méthode">Appel d&#8217;une méthode</h4>
+<div class="paragraph">
+<p>On écrit simplement le nom de la méthode suivi de parenthèses contenant la valeur des paramètres. L&#8217;expression ainsi écrite est évaluée à la valeur de reoutr de la méthode.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">// on appelle la méthode somme avec les paramètres 3 et 6
+// a va valoir la valeur de retour de la méthode (9)
+int a = somme( 3, 6 );</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Lorsqu&#8217;on appelle une méthode, on donne une valeur à chacun des paramètres. L&#8217;exécution de la méthode se fait jusqu&#8217;à rencontrer l&#8217;instruction <code>return</code>. On obtient ainsi du côté du code <em>appelant</em> la valeur de retour de l&#8217;appel de méthode.</p>
 </div>
 </div>
 </div>
@@ -1913,7 +1970,7 @@ public class TestSaisieErroneeException {
 </div>
 </div>
 <div class="sect3">
-<h4 id="_les_méthodes">Les méthodes</h4>
+<h4 id="_les_méthodes_2">Les méthodes</h4>
 <div class="paragraph">
 <p>Les méthodes sont nommées selon la méthode -camelCase- et comportent généralement un verbe d&#8217;action. Cela donne par exemple : <code>fermeLaFenetre()</code>, <code>donnerDeLArgent()</code>, <code>manger()</code>, etc.</p>
 </div>
@@ -2803,7 +2860,7 @@ static void ecrireFichierTexte( String path )
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-25 01:22:52 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2016-11-09 13:48:30 Paris, Madrid
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
