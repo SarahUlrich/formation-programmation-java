@@ -1,3 +1,5 @@
+"use strict";
+
 function RestService(baseUrl) {
 	this.baseUrl = baseUrl
 }
@@ -29,6 +31,8 @@ RestService.prototype = {
 		}
 }
 
+// Mémorise le FunkoPop actuellement édité
+// Si c'est à null, ca veut dire qu'on est en train de créer un FP
 let editedPop = null
 
 function getTableRowForPop(pop) {
@@ -89,7 +93,7 @@ $(function() {
 		let tableRow = $(this).closest("tr[data-id]")
 		let id = tableRow.attr("data-id")
 		
-		service.delete(id, () => tableRow.remove())
+		service.delete(id, () => tableRow.hide("slow", ()=> tableRow.remove()))
 	})
 	
 	$("table.funkoPops").on("click", ".editButton", function() {
@@ -102,7 +106,7 @@ $(function() {
 	$('#createButton').click(showCreateForm)
 	
 	$('#okButton').click(function() {
-		pop = editedPop
+		let pop = editedPop
 		if( !pop )
 			pop = { id: -1 }
 		
