@@ -85,6 +85,28 @@ Trouver la racine carrée entiere d'un nombre entier.
 
 (de 1 à n on calcule le carré et on s'arrête quand on a dépassé)
 
+Implémenter la méthode `racineCarree` qui calcule le nombre entier inférieur le plus proche de la racine carrée du nombre entier passé en paramètre. Voici sa signature :
+
+int racineCarree( int valeur )
+
+exemples :
+
+racineCarre( 4 ); // 2
+racinneCarre( 5 ); // 2
+
+algorithme
+
+
+FONCTION racineCarre( n : entier )
+FAIRE
+	POUR i de 1 a n
+		carre = i * i
+		SI carre == n
+			RETOURNER i
+		SINON SI carre > n
+			RETOURNER i-1
+FIN_FAIRE
+
 === Calcul de la racine carrée d'un nombre flottant avec la formule de Newton
 
 Trouver la racine carrée d'un nombre flottant grâce à la formule de Newton.
