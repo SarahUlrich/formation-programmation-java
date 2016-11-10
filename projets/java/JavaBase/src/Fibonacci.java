@@ -15,10 +15,16 @@ public class Fibonacci
 		{
 			System.out.println( "Le " + i + "ème terme de la série de Fibonacci vaut " + fibonacci( i ) );
 		}
+		
+		int a = 0;
+
+		int[] t;
+
+		t = new int[] { 3, 4, a };
 	}
 
 	// calcul du n-ième terme de la suite de fibonacci
-	static int fibonacci( int n )
+	static long fibonacci( long n )
 	{
 		/*
 		 * Définition de la suite de Fibonacci:

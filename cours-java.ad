@@ -231,7 +231,7 @@ void affiche( String texte )
 
 ==== Appel d'une méthode
 
-On écrit simplement le nom de la méthode suivi de parenthèses contenant la valeur des paramètres. L'expression ainsi écrite est évaluée à la valeur de reoutr de la méthode.
+On écrit simplement le nom de la méthode suivi de parenthèses contenant la valeur des paramètres. L'expression ainsi écrite est évaluée à la valeur de retour de la méthode.
 
 [source,language="java"]
 ----

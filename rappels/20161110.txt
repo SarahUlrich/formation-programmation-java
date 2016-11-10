@@ -118,3 +118,167 @@ uneMethode( i );
 
 
 
+
+
+
+LES TABLEAUX
+
+Permet de stocker plusieurs valeurs dans une zone contigue de mémoire.
+
+Au niveau de la mémoire, si je crée un tableau de 5 int, on a en mémoire :
+
+index de la cellule:		Cellule du tableau
+0: 							valeur 1
+1: 							valeur 2
+2: 							valeur 3
+3: 							valeur 4
+4: 							valeur 5
+
+En java, on peut créer des tableaux en spécifiant la taille désirée, mais une fois créé un tableau ne peut pas changer de taille.
+
+Les cases du tableau sont appelées 'cellules'. Elles sont numérotées à partir de 0. Donc un tableau de taille N contient N cellules numérotées de 0 à N-1. Chaque cellule contient une valeur.
+
+Dans un tableau toutes les cellules sont du même type.
+
+Les tableaux sont un type en Java.
+
+DECLARATION D'UNE VARIABLE DE TYPE TABLEAU
+
+Toutes les cellules d'un tableau ont le même type, c'est le type du tableau :
+
+TYPE_DU_TABLEAU[] NOM_DE_LA_VARIABLE;
+
+// tableauEntiers est une variable de type tableau d'`int`.
+int[] tableauEntiers; 
+
+long[] tableauDeLongs;
+
+CREATION D'UN TABLEAU
+
+Maintenant qu'on a une variable prête à réceptionner un tableau, il faut créer ce tableau.
+
+- Première façon :
+
+		new TYPE_DU_TABLEAU[TAILLE_DU_TABLEAU];
+
+		// les cellules sont initialisées à 0
+		tableauEntiers = new int[50];
+
+- Deuxième façon :
+
+		// crée un tableau d'entiers avec 4 cellules contenant
+		// successivement les valeurs 3, 5, 2 et 6
+		tableauEntiers = new int[] { 3, 5, 2, 6 };
+
+ECRITURE DANS UN TABLEAU
+
+	NOM_DE_LA_VARIABLE[INDEX DE LA CELLULE] = VALEUR;
+
+	// affecte la valeur de la 4ème cellulle à 3
+	tableauEntiers[3] = 3;
+
+	// affecte la valeur de la 3ème cellulle
+	tableauEntiers[2] = somme( max( 3, 5 ), 8 );
+
+LIRE DANS UN TABLEAU
+
+C'est la même syntaxe :
+
+	NOM_DE_LA_VARIABLE[INDEX DE LA CELLULE]
+
+Exemple :
+
+	for( int i=0; i<5; i++ )
+		System.out.println( i + ": " + tableauEntiers[i] )
+
+TAILLE D'UN TABLEAU
+
+Le type d'une variable tableau ne spécifie pas la taille du tableau (int[] maVariable).
+
+Si on veut connaitre la taille du tableau, on utilise sa méthode `length()` :
+
+		int[] tableau = new ....
+		int tailleTableau = tableau.length;
+
+POINT D'ATTENTION
+
+Si on essaie d'accéder à des cellules qui n'existent pas (index < 0  ou index >= TAILLE_DU_TABLEAU), une "exception" est levée, ce qui a pour effet d'arrêter l'exécution du programme. C'est une erreur critique!
+
+	int[] t = new int[4];
+	
+	// OK
+	t[0] = 4;
+	
+	// ERREUR ! La cellule 4 n'existe pas
+	t[4] = 0;
+	
+	// ERREUR ! La numérotation commence TOUJOURS à zéro
+	t[-1] = 3;
+	
+	// ERREUR, on ne peut affecter à une variable
+	// que des valeurs du type de celle-ci
+	int[] f = new long[10];
+
+	
+	EXERCICE
+	
+	Dans la méthode `main` :
+	
+	- définir une variable `t` du type tableau de long.
+	- l'affecter à un nouveau tableau de taille 13.
+	- remplir ce tableau : la valeur de chaque cellule doit être égal à deux fois son index.
+	- lire chaque cellule du tableau et afficher son contenu.
+	
+	
+	
+	
+	EXERCICE : CODEX
+	
+	Il s'agit de transmettre des messages secrets entre deux parties.
+	
+	Algorithme de chiffrement CODEX
+
+	Le principe est très simple :
+		- on souhaite chiffrer une chaine de caractères.
+		- pour cela on dispose d'une table de correspondance :
+			a => g
+			b => h
+			c => i
+			...
+			z => f
+		- on crée un chaine de caractère dans laquelle chaque caractère de la chaine initiale est remplacé par son correspondant dans la table.
+		
+		- ecrire au moins deux méthodes:
+		
+				// chiffre le message et le retourne
+				String chiffrer( String messageEnClair )
+				{
+					...
+				}
+				
+				// déchiffre le message et le retourne
+				String dechiffrer( String messageChiffre )
+				{
+					...
+				}
+			
+		- dans la méthode `main`, écrire un programme du style :
+
+				String clair = "Bonjour mon général";
+				
+				String chiffre = chiffrer( clair );
+				
+				// afficher le texte chiffré
+				// afficher le texte déchiffré
+				System.out.println( dechiffrer( chiffre ) );
+	
+
+	
+
+
+	
+	
+	TABLEAU MULTIDIMENSIONNELS
+
+
+
