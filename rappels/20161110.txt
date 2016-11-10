@@ -280,7 +280,7 @@ En entrée : un tableau d'entiers, par exemple :
 
 int[] t = new int[] { 12, 4, 6, 2, 88, 12, 14 };
 
-On veu obtenir un tableau comme ceci :
+On veut obtenir un tableau comme ceci :
 
 { 2, 4, 6, 12, 12, 14, 88 }
 
@@ -292,13 +292,29 @@ ALGORITHME :
 	// renvoie l'index de la cellule avec la plus petite valeur
 	int indexCelluleMin( int[] tableau, int indexDebutRecherche )
 	
+	ALGO :
+	
+		iMin = indexDebutRecherche
+		POUR i: indexDebutRecherche+1 JUSQU'A t.length()
+			SI t[i] < t[iMin]
+				iMin = i
+		RETOURNER iMin
+	
 	// échange les valeurs de deux cellules dans un tableau
 	void echange( int[] tableau, int pos1, int pos2 )
 
 
 
+	
+	EXERCICE : TRI PAR DICHOTOMIE
 
 	
+Illustration
+
+https://fr.wikipedia.org/wiki/Algorithme_de_tri
+https://www.toptal.com/developers/sorting-algorithms/
+https://www.youtube.com/watch?v=lyZQPjUT5B4
+
 	
 	
 

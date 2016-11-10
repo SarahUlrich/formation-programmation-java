@@ -11,19 +11,18 @@ public class Test
 {
 	public static void main( String[] args )
 	{
-		max( 2, 3 );
 	}
 
-	static long max( long a, long b )
+	static int indexCelluleMin( int[] t, int indexDebutRecherche )
 	{
-		if( a > b )
-			return a;
-		else if( b > a )
-			return b;
-		else if( a == b )
-			return a;
+		int iMin = indexDebutRecherche;
 		
-		// 
-		return a;
+		for( int i = indexDebutRecherche + 1; i < t.length; i++ )
+		{
+			if( t[i] < t[iMin] )
+				iMin = i;
+		}
+		
+		return iMin;
 	}
 }
