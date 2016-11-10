@@ -1,0 +1,120 @@
+
+
+
+
+
+
+
+SYNTAXE
+
+- Définition
+
+[modificateurs] TYPE_RETOUR NOM ( PARAMETRES )
+{
+	// code de la méthode
+}
+
+PARAMETRES : TYPE_DU_PARAMETRES NOM, ...
+
+exemples
+
+public static int max( int a, int b )
+{
+	if( a > b )
+		return a;
+	else if( b > a )
+		return b;
+		
+	// ERREUR : tous les chemins d'exécution de la
+	// méthode ne retournent pas de valeur.
+	
+	// on rajoute
+	return b;
+}
+
+
+APPELER UNE METHODE
+
+
+Pour appeler une méthode, on utilise son NOM et on fournit la valeur des paramètres (avec le bon type) requis par la méthode.
+
+Le corps de la méthode est exécuté, les paramètres ayant pris les valeurs données par l'"appelant".
+
+L'expression de l'appel de la méthode est évalué à la valeur de retour de celle-ci.
+
+exemple :
+
+int a = 3;
+// ...
+a = 5;
+int m = max( 2, a );
+
+La variable `a` est déclarée est affectée à la valeur 3.
+La variable `a` esr affectée à la valeur 5.
+La méthode `max` est appelée avec en paramètre les valeurs suivantes : 2 et 5.
+	Le corps de la méthode `max` s'exécute avec `a`=2 et `b`=5 dans le corps de la méthode.
+	Quand l'instruction `return` est rencontrée, l'exécution de la méthode s'arrête et la valeur de retour est produite. C'est la valeur juste à droite du `return`.
+L'expression `max( 2, a )` dans le code appelant est évaluée à la valeur de retour, c'est-à-dire dans ce cas : 5.
+La variable `m` est donc affectée à la valeur 5.
+
+Pendant l'exécution de la méthode `max`, voici ce qui se passe :
+
+// le code appelant : max( 2, a [vaut 5] )	
+	
+public static int max( int a [vaut 2], int b [vaut 5] )
+{
+	// on commence l'exécution
+	if( a > b ) 			// 2 > 5 ? FAUX, on passe au `else` suivant
+		return a;
+	else if( b > a ) 	// 5 > 2 ? VRAI, on exécute l'instruction suivante
+		return b; 		// on arrête l'exécution et on produit la valeur 5 (valeur de `b`)
+	return b;
+}
+
+METHODES RECURSIVES
+
+Méthode qui s'appelle elle-même.
+
+Exemple :
+
+int somme( int n )
+{
+	// cas de terminaison
+	if( n == 0 )
+		return 0;
+	
+	// cas général
+	return n + somme( n - 1 );
+}
+
+
+POINT D'ATTENTION
+
+Lors de l'appel d'une méthode, ses paramètres sont **passés par valeur**.
+
+Exemple : 
+
+void uneMethode( int i )
+{
+	i = 5;
+}
+
+int i = 3;
+uneMethode( i );
+// i vaut 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

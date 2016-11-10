@@ -17,15 +17,24 @@ public class Fibonacci
 		}
 	}
 
-	static long fibonacci( long n )
+	// calcul du n-ième terme de la suite de fibonacci
+	static int fibonacci( int n )
 	{
-		// on écrit d'abord les cas bien définis ...
+		/*
+		 * Définition de la suite de Fibonacci:
+		 * 
+		 * - F(0) : 0
+		 * - F(1) : 1
+		 * - F(n) : F(n-1) + F(n-2)
+		 */
+
+		// cas terminaux
 		if( n == 0 )
 			return 0;
 		else if( n == 1 )
 			return 1;
 
-		// ... puis la récursion
+		// cas général
 		return fibonacci( n - 1 ) + fibonacci( n - 2 );
 	}
 }
