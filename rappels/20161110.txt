@@ -307,6 +307,31 @@ ALGORITHME :
 
 	
 	EXERCICE : TRI PAR DICHOTOMIE
+	
+Au lieu de trier un tableau complet, on coupe le tableau en deux (récursivement) et on recombine les tableaux triés.
+
+ALGO :
+
+	METHODE TRIER_TABLEAU( int[] t ), retourne un tableau trié
+		SI t.length() <= 1
+		ALORS
+			// le tableau est déjà trié, on le retourne
+			RETOURNER t;
+		FIN_SI
+		
+		tA = TRIER_TABLEAU( premierMoitie( t ) );
+		tB = TRIER_TABLEAU( deuxiemeMoitie( t ) );
+		
+		resultat = RECOMBINER( tA, tB );
+		
+		RETOURNER resultat;
+
+	Il faut donc écrire aussi les méthodes :
+	
+		- premiereMoitie et deuxiemeMoitie
+		- RECOMBINER
+	
+	
 
 	
 Illustration
