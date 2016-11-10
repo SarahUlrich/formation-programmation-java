@@ -1,5 +1,5 @@
 
-public class Test
+public class TriNaif
 {
 	public static void main( String[] args )
 	{
