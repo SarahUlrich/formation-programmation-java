@@ -273,6 +273,33 @@ Si on essaie d'accéder à des cellules qui n'existent pas (index < 0  ou index 
 				System.out.println( dechiffrer( chiffre ) );
 	
 
+
+EXERCICE : TRI NAIF D'UN TABLEAU
+
+En entrée : un tableau d'entiers, par exemple :
+
+int[] t = new int[] { 12, 4, 6, 2, 88, 12, 14 };
+
+On veu obtenir un tableau comme ceci :
+
+{ 2, 4, 6, 12, 12, 14, 88 }
+
+ALGORITHME :
+
+- on considère que le tableau est trié jusqu'à la cellule `i`. Sachant qu'au départ, i vaut 0.
+
+- écrire les méthodes suivantes :
+	// renvoie l'index de la cellule avec la plus petite valeur
+	int indexCelluleMin( int[] tableau, int indexDebutRecherche )
+	
+	// échange les valeurs de deux cellules dans un tableau
+	void echange( int[] tableau, int pos1, int pos2 )
+
+
+
+
+	
+	
 	
 
 
