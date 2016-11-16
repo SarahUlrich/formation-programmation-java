@@ -20,13 +20,13 @@ public class Personne
 	// si j'écit new Personne( "toto", "titi" )
 	// -> une zone mémoire est allouée pour contenir les données du nouvel objet
 	// -> le constructeur est appelé pour initialiser l'objet
-	Personne( String nomPersonne, String prenomPersonne, int codePostalPersonne )
+	Personne( String nom, String prenom, int codePostal )
 	{
-		nom = nomPersonne;
-		prenom = prenomPersonne;
-		codePostal = codePostalPersonne;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.codePostal = codePostal;
 	}
-	
+
 	// en Java on appelle ça un 'getter' ('accesseur')
 	int getCodePostal()
 	{
