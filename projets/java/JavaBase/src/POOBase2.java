@@ -58,19 +58,18 @@ public class POOBase2
 		int i2 = 0;
 
 		Personne[] resultat = new Personne[moitieUn.length + moitieDeux.length];
-		int iR = 0;
 
-		while( iR < resultat.length )
+		for( int iR = 0; iR < resultat.length; iR++ )
 		{
 			if( i2 == moitieDeux.length
 					|| (i1 < moitieUn.length
 							&& moitieUn[i1].getCodePostal() < moitieDeux[i2].getCodePostal()) )
 			{
-				resultat[iR++] = moitieUn[i1++];
+				resultat[iR] = moitieUn[i1++];
 			}
 			else
 			{
-				resultat[iR++] = moitieDeux[i2++];
+				resultat[iR] = moitieDeux[i2++];
 			}
 		}
 
