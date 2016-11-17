@@ -80,11 +80,11 @@ Programme principal :
 
 	Car car = new Car();
 	
-	car.start();
-	car.start();
+	car.turnKeyOn();
+	car.turnKeyOn();
 	
-	car.stop();
-	car.stop();
+	car.turnKeyOff();
+	car.turnKeyOff();
 
 
 
