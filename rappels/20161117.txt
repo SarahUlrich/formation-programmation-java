@@ -62,7 +62,29 @@ System.out.println( volumeVide + " cl sont tombés du verre" );
 
 
 
+Exercice Voiture 1
 
+Car
+	engine: Engine
+	
+	turnKeyOn(): void // affiche 'la voiture démarre' puis démarre le moteur
+	turnKeyOff(): void // affiche 'la voiture 'éteint' puis éteint le moteur
+
+Engine
+	started: boolean
+	
+	start(): void // affiche 'Le moteur démarre' ou 'CRRRR' s'il est déjà démarré
+	stop(): void // affiche 'Le moteur s'arrête' ou 'Moteur déjà éteint' s'il est déjà éteint
+
+Programme principal :
+
+	Car car = new Car();
+	
+	car.start();
+	car.start();
+	
+	car.stop();
+	car.stop();
 
 
 
