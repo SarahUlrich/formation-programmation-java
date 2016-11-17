@@ -52,8 +52,8 @@ Le programme principal
 Verre v = new Verre( 50 );
 v.ajouter( 150 );
 v.ajouter( 150 );
-int volumeVide = v.vider( 25 );
-System.out.println( volumeVide + " cl sont tombés du verre" );
+int volumeVidé = v.vider( 25 );
+System.out.println( volumeVidé + " cl sont tombés du verre" );
 
 volumeVide = v.vider( 50 );
 System.out.println( volumeVide + " cl sont tombés du verre" );
