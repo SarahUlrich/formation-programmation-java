@@ -30,7 +30,10 @@ public class Ordinateur
 			disquesDurs[i].demarrer();
 
 		// - on lit dans le premier disque dur
-		disquesDurs[0].lire();
+		if( disquesDurs.length > 0 )
+			disquesDurs[0].lire();
+		else
+			System.out.println( "NO BOOT DISK!! Please insert a drive" );
 	}
 
 	void eteindre()

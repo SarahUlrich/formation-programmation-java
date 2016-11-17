@@ -10,16 +10,21 @@ public class DisqueDur
 
 	void demarrer()
 	{
-		System.out.println( "Démarrage DisqueDur de capacité " + capacite );
+		System.out.println( "Démarrage " + getDescription() );
 	}
 
 	void lire()
 	{
-		System.out.println( "Lecture DisqueDur de capacité " + capacite );
+		System.out.println( "Lecture " + getDescription() );
 	}
 
 	void eteindre()
 	{
-		System.out.println( "Extinction DisqueDur de capacité " + capacite );
+		System.out.println( "Extinction " + getDescription() );
+	}
+
+	String getDescription()
+	{
+		return "DisqueDur de capacité " + capacite;
 	}
 }

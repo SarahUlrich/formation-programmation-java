@@ -3,7 +3,7 @@ public class MemoireVive
 {
 	int capacite;
 
-	public MemoireVive( int capacite )
+	MemoireVive( int capacite )
 	{
 		this.capacite = capacite;
 	}
