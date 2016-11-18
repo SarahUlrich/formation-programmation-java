@@ -279,7 +279,18 @@ Parcours d'une liste
 	}
 
 
+Exercice
 
+Ecrire un programme qui :
+
+ - demande à l'utilisateur combien de personnes il souhaite saisir
+ - autant de fois que l'utilisateur l'a demandé, on demande à celui-ci :
+		- le nom,
+		- le prénom,
+		- le codePostal
+		
+		A chaque fois, on crée une nouvelle Personne, que l'on rajoute à une liste de personnes.
+ - à la fin, on affiche la liste des personnes.
 
 
 
