@@ -1,9 +1,10 @@
 package fr.lteconsulting.formations;
 
-import java.io.FileReader;
-import java.io.Reader;
+import java.io.File;
+import java.nio.charset.StandardCharsets;
 
 import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.junit.Assert;
 import org.junit.Test;
@@ -17,16 +18,15 @@ public class CSVReaderTest
 	{
 		try
 		{
-			Reader in = new FileReader( "sopra-modified.csv" );
-			Iterable<CSVRecord> records = CSVFormat.RFC4180
-					.withDelimiter( ';' )
-					.withQuote( '"' )
-					.withFirstRecordAsHeader()
-					.parse( in );
-			for( CSVRecord record : records )
-			{
-				// record.get( "Mois" );
+			CSVParser parser = CSVParser.parse( new File( "sopra-modified.csv" ),
+					StandardCharsets.UTF_8,
+					CSVFormat.RFC4180
+							.withDelimiter( ';' )
+							.withQuote( '"' )
+							.withFirstRecordAsHeader() );
 
+			for( CSVRecord record : parser )
+			{
 				Collaborateur collaborateur = new Collaborateur();
 				collaborateur.setCodeAgence( record.get( "Agence" ) );
 				collaborateur.setNom( record.get( "Nom du collaborateur" ) );
